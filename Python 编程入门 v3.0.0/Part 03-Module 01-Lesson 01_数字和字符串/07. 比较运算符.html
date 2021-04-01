@@ -1,0 +1,515 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   比较运算符
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          07. 比较运算符
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="布尔值和比较运算符">
+          布尔值和比较运算符
+         </h1>
+         <p>
+          到目前为止，我们已经学习了两种类型的数值，整数与浮点数，而且我们使用算术运算符（如
+          <code>
+           +
+          </code>
+          和
+          <code>
+           **
+          </code>
+          ）来计算这些数值。而我们现在要学习的数值类型是
+          <code>
+           bool
+          </code>
+          ，它用于表示 True 和 False 值。"bool" 是 "boolean" 的缩写。
+          <a href="https://en.wikipedia.org/wiki/Boolean_algebra" target="_blank">
+           布尔代数
+          </a>
+          是代数的一个分支，用于处理值为 True 或 False 的变量。布尔代数以其发明人
+          <a href="https://en.wikipedia.org/wiki/George_Boole" target="_blank">
+           George Boole
+          </a>
+          的名字命名。
+         </p>
+         <p>
+          我们可以这样将布尔值赋给变量：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; the_sun_is_up = True
+&gt;&gt;&gt; the_sky_is_blue = False</code></pre>
+         <p>
+          单看这两个句子并不直观。我们可以使用
+          <code>
+           &lt;
+          </code>
+          和
+          <code>
+           &gt;
+          </code>
+          等比较运算符来比较值，这将产生一个布尔值结果：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(1 &lt; 2)
+True
+&gt;&gt;&gt; print(42 &gt; 43)
+False</code></pre>
+         <p>
+          以下是比较运算符：
+         </p>
+         <table>
+          <thead>
+           <tr>
+            <th id="**运算符名称**">
+             <strong>
+              运算符名称
+             </strong>
+            </th>
+            <th id="**符号**">
+             <strong>
+              符号
+             </strong>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             小于
+            </td>
+            <td>
+             <code>
+              &lt;
+             </code>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             大于
+            </td>
+            <td>
+             <code>
+              &gt;
+             </code>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             小于等于
+            </td>
+            <td>
+             <code>
+              &lt;=
+             </code>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             大于等于
+            </td>
+            <td>
+             <code>
+              &gt;=
+             </code>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             等于
+            </td>
+            <td>
+             <code>
+              ==
+             </code>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             不等于
+            </td>
+            <td>
+             <code>
+              !=
+             </code>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：里约热内卢和旧金山相比，哪个城市的人口密度更高？">
+          练习：里约热内卢和旧金山相比，哪个城市的人口密度更高？
+         </h1>
+         <p>
+          请在这个练习中尝试使用比较运算符！下面的代码计算了里约热内卢和旧金山的人口密度。
+         </p>
+         <p>
+          请编写代码来比较这些密度。旧金山的人口密度比里约热内卢更高吗？如果是，请打印
+          <code>
+           True
+          </code>
+          ，否则打印
+          <code>
+           False
+          </code>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346910-CompareDensities-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346910-CompareDensities-py" id="tab-346910-CompareDensities-py" role="tab">
+            CompareDensities.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346910-CompareDensities-py" class="tab-pane active show" id="346910-CompareDensities-py" role="tabpanel">
+            <pre><code></code>sf_population, sf_area = 864816, 231.89
+rio_population, rio_area = 6453682, 486.5
+
+san_francisco_pop_density = sf_population/sf_area
+rio_de_janeiro_pop_density = rio_population/rio_area
+
+# Write code that prints True if San Francisco is denser than Rio, and False otherwise
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="答案：">
+          答案：
+         </h1>
+         <pre><code>print(san_francisco_pop_density &gt; rio_de_janeiro_pop_density)</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          为什么用
+          <code>
+           ==
+          </code>
+          ？
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             你认为为什么 Python 使用
+             <code>
+              ==
+             </code>
+             检查相等性，而不是使用
+             <code>
+              =
+             </code>
+             ？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483482240115" name="346911" type="radio" value="a1483482240115"/>
+           <label for="a1483482240115">
+            <p>
+             因为这有两个字符长，跟
+             <code>
+              !=
+             </code>
+             类似
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483482303034" name="346911" type="radio" value="a1483482303034"/>
+           <label for="a1483482303034">
+            <p>
+             因为
+             <code>
+              =
+             </code>
+             用于变量赋值
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483482303730" name="346911" type="radio" value="a1483482303730"/>
+           <label for="a1483482303730">
+            <p>
+             <code>
+              =
+             </code>
+             和
+             <code>
+              ==
+             </code>
+             都可以
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483482304458" name="346911" type="radio" value="a1483482304458"/>
+           <label for="a1483482304458">
+            <p>
+             因为
+             <code>
+              =
+             </code>
+             用于检查两个值是否大约相等
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          因为 `=` 用于变量赋值
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="08. 字符串.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. 比较运算符')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

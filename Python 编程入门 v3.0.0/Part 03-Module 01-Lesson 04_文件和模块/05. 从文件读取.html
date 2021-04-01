@@ -1,0 +1,825 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   从文件读取
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      文件和模块
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 元组.html">
+       02. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 默认参数.html">
+       03. 默认参数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量作用域.html">
+       04. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 从文件读取.html">
+       05. 从文件读取
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 演员表解决方案.html">
+       06. 演员表解决方案
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 标准库.html">
+       07. 标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 密码生成器解决方案.html">
+       08. 密码生成器解决方案
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 第三方库.html">
+       09. 第三方库
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 使用在线资源.html">
+       10. 使用在线资源
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          05. 从文件读取
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="使用文件">
+          使用文件
+         </h1>
+         <p>
+          为了使程序真正有用，需要与真实数据交互。图像、网页、数据库都是文件的示例，我们在日常的数字化生活中定期创建、移动、操作和阅读这些文件。
+         </p>
+         <p>
+          迄今为止，我们所使用的所有数据都是已经在 Python 解释器或 Python 脚本中定义了的。接下来，我们将通过介绍如何在 Python 中打开和读取文件，提高 Python 编程功能的多样化。这将使我们可以处理任何来源的大量信息，并与其进行交互。
+         </p>
+         <p>
+          所有不同类型的文件在计算机上均具有相似的结构 —— 这些文件都是编码某些信息的字符串。特定的文件格式（通常由文件名的扩展名（例如 .txt 或 .mp3）表示）表示这些字符的组织方式。我们使用处理字符的各种程序解释文件中的字符 —— 例如，图像编辑程序会解释数字照片文件的信息并显示图像。如果在程序中编辑图像，则表示我们正在使用程序更改文件中的字符。
+         </p>
+         <p>
+          我们可以在 Python 里直接读取这些文件，但这看起来与在桌面应用程序中打开文件大不相同。在 Python 中打开文件为我们提供了一个通用的编程界面，而不需要图形用户界面，这就意味着 Python 程序可以自动执行涉及文件的任务！
+         </p>
+         <p>
+          以下是一个将文件信息读取到 Python 的代码示例。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h2 id="打开和读取文件">
+          打开和读取文件
+         </h2>
+         <p>
+          要读取文件，必须先打开文件，我们可以使用
+          <code>
+           open
+          </code>
+          函数。我们提供一个文件所在的路径，也可以指定几个可选参数。然后将该函数返回的值赋给一个变量。例如：
+         </p>
+         <pre><code class="python language-python">f = open('/my_path/my_file.txt','r')</code></pre>
+         <p>
+          <code>
+           open
+          </code>
+          函数将返回一个文件对象 —— 一种 Python 对象，通过该对象 Python 可以与文件交互。
+         </p>
+         <p>
+          在该示例中，第二个参数
+          <code>
+           r
+          </code>
+          指定了打开文件的模式，在该示例中以只读模式打开（原因是我们只想读取文件，不改变文件内容）。我们不需要指定这个参数，因为默认情况下（如果未指定模式）
+          <code>
+           open
+          </code>
+          将以只读模式打开文件。
+         </p>
+         <p>
+          接下来，为了访问文件的内容，我们可以使用
+          <code>
+           read
+          </code>
+          。
+          <code>
+           f.read()
+          </code>
+          创建一个包含文件文本的字符串对象。使用该字符串为名为
+          <code>
+           file_data
+          </code>
+          的变量赋值：
+         </p>
+         <pre><code class="python language-python">file_data = f.read()</code></pre>
+         <p>
+          使用文件
+          <code>
+           f
+          </code>
+          完成操作后，应关闭文件。这可释放出该文件所占用的系统资源：
+         </p>
+         <pre><code class="python language-python">f.close()</code></pre>
+         <p>
+          如果不再需要，则应务必关闭打开的文件。如果打开大量的文件，却不关闭，我们可能会耗尽文件句柄（file handle），而无法打开任何新文件（在耗尽文件句柄之前，能够打开的文件数量完全取决于你的操作系统）。
+         </p>
+         <p>
+          如果不信，可以尝试在 python 解释器中运行以下内容：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; files = []
+&gt;&gt;&gt; for i in range(100000):
+...     files.append(open('somefile.txt'))</code></pre>
+         <p>
+          尝试在
+          <code>
+           for
+          </code>
+          循环中编辑
+          <code>
+           range
+          </code>
+          中的数字。有时候，对于较大的数字，可能会出现一个错误提示。
+         </p>
+         <pre><code class="python language-python">Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 2, in &lt;module&gt;
+OSError: [Errno 24] Too many open files: 'somefile.txt'
+&gt;&gt;&gt; i
+7164</code></pre>
+         <p>
+          我们可以看到，在打开 7164 个文件后，系统不再具有打开任何新文件的可用资源。为了避免这种情况，最好关闭任何不需要的文件。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h2 id="写入文件">
+          写入文件
+         </h2>
+         <p>
+          除了读取外，还可以写入文件，这样将更改文件内容。为此，必须以写入模式打开文件：
+         </p>
+         <pre><code class="python language-python">f = open('/my_path/my_file.txt','w')</code></pre>
+         <p>
+          注意：一旦以写入模式打开文件，文件之前的任何内容将被删除。如果你对在现有的文件中添加内容感兴趣（不删除文件内容），应该使用
+          <code>
+           append
+          </code>
+          ，而不是
+          <code>
+           write
+          </code>
+          ，并以添加模式打开（使用
+          <code>
+           a
+          </code>
+          ，而不是
+          <code>
+           w
+          </code>
+          ）。请访问
+          <a href="https://docs.python.org/3/library/functions.html#open" target="_blank">
+           python 文档
+          </a>
+          ，了解关于文件不同打开模式的更多信息。
+         </p>
+         <p>
+          如果文件不存在，python 将为你创建一个文件。
+         </p>
+         <p>
+          现在我们可以写入文件：
+         </p>
+         <pre><code class="python language-python">f.write("Hello World!")</code></pre>
+         <p>
+          完成后，关闭文件，利人利己。
+         </p>
+         <pre><code class="python language-python">f.close()</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="with">
+          <code>
+           with
+          </code>
+         </h1>
+         <p>
+          Python 中使用
+          <code>
+           with
+          </code>
+          可以允许你打开一个文件，对其进行各种操作，然后自动关闭该文件。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; with open('/my_path/my_file.txt','r') as f:
+&gt;&gt;&gt;   file_data = f.read()</code></pre>
+         <p>
+          在上面的示例中，我们打开了一个文件，在
+          <code>
+           with
+          </code>
+          语句下的程序块中进行操作（在这个例子中是读取文件操作），Python 稍后将为我们关闭该文件，不需要再调用
+          <code>
+           f.close()
+          </code>
+          ！
+         </p>
+         <p>
+          我们将在下文对此进行更详细地解释。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/intropy-l4-reading-from-a-file.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <pre><code class="python language-python">with open('/my_path/my_file.txt','r') as f:
+    file_data = f.read()</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          在这段代码中，函数
+          <code>
+           open
+          </code>
+          将一个文件路径 (
+          <code>
+           '/my_path/my_file.txt'
+          </code>
+          ) 作为输入用于文件系统，并创建一个文件对象。正如我们所见，
+          <code>
+           'r'
+          </code>
+          表示这个对象只能用于
+          <strong>
+           只读
+          </strong>
+          模式。
+          <code>
+           'r'
+          </code>
+          实际上是默认模式，所以调用
+          <code>
+           open
+          </code>
+          时，并不一定要启用该参数。
+         </p>
+         <p>
+          代码
+          <code>
+           as f
+          </code>
+          将通过调用
+          <code>
+           open
+          </code>
+          创建的文件对象为变量名
+          <code>
+           f
+          </code>
+          赋值 —— 类似于
+          <code>
+           f = open('/my_path/my_file.txt','r')
+          </code>
+          。
+         </p>
+         <p>
+          调用
+          <code>
+           f.read()
+          </code>
+          时，文件对象
+          <code>
+           f
+          </code>
+          读取文件
+          <code>
+           /my_path/my_file.txt
+          </code>
+          中的全部内容，所以
+          <code>
+           f.read()
+          </code>
+          可创建一个包含该文件文本的字符串对象，并使用该字符串为名为
+          <code>
+           file_data
+          </code>
+          的变量赋值。
+         </p>
+         <p>
+          编码时很容易忘记关闭文件，但 Python 提供了自动关闭文件的特殊语法：即关键字
+          <code>
+           with
+          </code>
+          。
+         </p>
+         <p>
+          在
+          <code>
+           with open(filename) as f:
+          </code>
+          语句（不要忘记结尾的冒号）之后编写一个缩进的代码块，在其中你可以根据需要任意使用打开的文件对象
+          <code>
+           f
+          </code>
+          。一旦执行完缩进的代码块，文件将自动关闭。这是另一种作用域（scope） —— 只能通过该缩进代码块中的
+          <code>
+           f
+          </code>
+          访问文件中的数据。关闭文件后，将无法与其再进行交互。
+         </p>
+         <p>
+          <code>
+           open
+          </code>
+          和文件对象的官方文档见
+          <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" target="_blank">
+           此处
+          </a>
+          ，其中提供了更多示例和解释。
+         </p>
+         <p>
+          执行示例代码之后，字符串
+          <code>
+           file_data
+          </code>
+          即为包含整个文件文本的单个字符串。你可以对该字符串使用所有常用的字符串方法来处理其中的内容。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="如何读取">
+          如何读取
+         </h1>
+         <p>
+          打开一个文件对象查看文件时，就像打开了通往该文件的一扇窗口。更准确地说，这是一个只有一个字符那么宽，始终从文件最开头开始的字符窗口。这与阅读书籍或文档截然不同，可以一次查看多个单词甚至多个页面。将文件看作一个很长的字符串，文件对象只能按顺序一次查看一个字符。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/lesson4animation.gif"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          在前面的代码中，调用
+          <code>
+           f.read()
+          </code>
+          时没有传送参数，该函数默认从当前位置读取文件的所有剩余部分 —— 也就是整个文档。如果向
+          <code>
+           .read()
+          </code>
+          传送一个整数参数，该函数将读取与参数数量相等的字符数，输出它们，并确保“窗口”在当前位置，可以继续往下读取。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; with open(camelot.txt) as song:
+…        print(song.read(2))
+…        print(song.read(8))
+…        print(song.read())
+We
+'re the 
+knights of the round table
+We dance whenever we're able</code></pre>
+         <p>
+          这使得在打开的文件中来回读取有些麻烦，原因是没有多个用于导航的标记。
+         </p>
+         <p>
+          文本中的
+          <code>
+           \n
+          </code>
+          是换行符。换行符标记一行的结尾，提醒程序（如文本编辑器）移到下一行。但是从文件中的字符串来看，
+          <code>
+           \n
+          </code>
+          只是另一种字符。幸好 Python 知道这些是特殊字符，所以可以一次性请求读取一整行。让我们试试吧！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          读取下一行
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            使用
+            <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" target="_blank">
+             Python 文档的相关部分
+            </a>
+            查找读取文件下一行的函数。将函数名称填入方框中。
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          方便的是，Python 使用语法
+          <code>
+           for line in file
+          </code>
+          循环读取文件中的行。我可以用该语法来创建文件中的行列表。由于每行仍然有自己的换行符，所以我使用
+          <code>
+           .strip()
+          </code>
+          将其删除。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; camelot_lines = []
+&gt;&gt;&gt; with open("camelot.txt") as f:
+...     for line in f:
+...         camelot_lines.append(line.strip())
+... 
+&gt;&gt;&gt; print(camelot_lines)
+["We're the knights of the round table", "We dance whenever we're able"]</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：飞行马戏团演员表">
+          练习：飞行马戏团演员表
+         </h1>
+         <p>
+          你将要为电视节目 Monty Python 飞行马戏团的演员创建一个演员表。
+         </p>
+         <p>
+          编写一个名为
+          <code>
+           create_cast_list
+          </code>
+          的函数，该函数将文件名作为输入，并返回一个演员姓名列表。
+          <br/>
+          该函数将在文件
+          <code>
+           flying_circus_cast.txt
+          </code>
+          （信息源自 imdb.com）上运行。该文件的每一行都包含一个演员名字、一个逗号以及一些他们在节目中所扮演角色的（凌乱）相关信息。你
+          <em>
+           仅
+          </em>
+          需要提取名称并将其添加到列表中。也可以使用
+          <a href="https://docs.python.org/3/library/stdtypes.html#str.split" target="_blank">
+           <code>
+            .split()
+           </code>
+           method
+          </a>
+          处理每一行。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347147-cast_list-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347147-cast_list-py" id="tab-347147-cast_list-py" role="tab">
+            cast_list.py
+           </a>
+           <a aria-controls="347147-flying_circus_cast-txt" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#347147-flying_circus_cast-txt" id="tab-347147-flying_circus_cast-txt" role="tab">
+            flying_circus_cast.txt
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347147-cast_list-py" class="tab-pane active show" id="347147-cast_list-py" role="tabpanel">
+            <pre><code></code>def create_cast_list(filename):
+    cast_list = []
+    #use with to open the file filename
+    #use the for loop syntax to process each line
+    #and add the actor name to cast_list
+
+    return cast_list</pre>
+           </div>
+           <div aria-labelledby="tab-347147-flying_circus_cast-txt" class="tab-pane" id="347147-flying_circus_cast-txt" role="tabpanel">
+            <pre><code></code>Graham Chapman,  Various / ... (46 episodes, 1969-1974)
+Eric Idle,  Various / ... (46 episodes, 1969-1974)
+Terry Jones,  Various / ... (46 episodes, 1969-1974)
+Michael Palin,  It's Man / ... (46 episodes, 1969-1974)
+Terry Gilliam,  Various / ... (46 episodes, 1969-1974)
+John Cleese,  Announcer / ... (40 episodes, 1969-1973)
+Carol Cleveland,  Various / ... (34 episodes, 1969-1974)
+Ian Davidson,  Algy Braithwaite / ... (8 episodes, 1969-1970)
+John Hughman,  Alfred Lord Tennyson / ... (8 episodes, 1970-1974)
+The Fred Tomlinson Singers,  Amantillado Chorus / ... (7 episodes, 1969-1973)
+Connie Booth,  Animated Mother / ... (6 episodes, 1969-1974)
+Bob Raymond,  'Dad' / ... (5 episodes, 1974)
+Lyn Ashley,  Algon Girl / ... (5 episodes, 1970-1972)
+Rita Davies,  Argument Secretary / ... (4 episodes, 1969-1972)
+Stanley Mason,  Clapper Man / ... (4 episodes, 1970-1971)
+David Ballantyne,  Ivan the Terrible / ... (3 episodes, 1970-1971)
+Donna Reading,  Girl in Bikini with Its Man / ... (3 episodes, 1969)
+Peter Brett,  Door-to-Door Martial Arts Salesman (2 episodes, 1974)
+Maureen Flanagan,  Anona Winn / ... (2 episodes, 1969-1970)
+Katya Wyeth,  Elsie / ... (2 episodes, 1969)
+Frank Lester,  The Late Professor Thynne (2 episodes, 1972-1974)
+Neil Innes,  Hesitant guitarist / ... (2 episodes, 1974)
+Dick Vosburgh,  Van der Berg (1 episode, 1969)
+Sandra Richards,  'Semprini' Girl / ... (1 episode, 1970)
+Julia Breck,  Puss In Boots / ... (1 episode, 1972)
+Nicki Howorth,  Miss Bladder (1 episode, 1972)
+Jimmy Hill,  Himself (1 episode, 1974)
+Barry Cryer,  Herman Rodrigues (1 episode, 1969)
+Jeannette Wild,  Second Secretary (1 episode, 1970)
+Marjorie Wilde,  Dear Old Lady (1 episode, 1970)
+Marie Anderson,  Girl interviewing the announcer (1 episode, 1972)
+Caron Gardner,  Mary (1 episode, 1973)
+Nosher Powell,  Jack Bodell (1 episode, 1973)
+Carolae Donoghue,  Vera's Husband's Mistress (1 episode, 1969)
+Vincent Wong,  Mr. Kamikaze (1 episode, 1970)
+Helena Clayton,  Various Roles (1 episode, 1971)
+Nigel Jones,  Various (1 episode, 1972)
+Roy Gunson, (1 episode, 1970)
+Daphne Davey,  Various Roles (1 episode, 1971)
+Stenson Falke, (1 episode, 1974)
+Alexander Curry,  Various (1 episode, 1970)
+Frank Williams,  Clerk of the Court (1 episode, 1972)
+Ralph Wood, (1 episode, 1970)
+Rosalind Bailey,  Elizabethan Girl (1 episode, 1972)
+Marion Mould, (1 episode, 1974)
+Sheila Sands,  Stripper / ... (uncredited) (2 episodes, 1969)
+Richard Baker,  Himself - BBC News Anchor (uncredited) (3 episodes, 1972-1973)
+Douglas Adams,  Dr. Emile Koning - Surgeon / ... (uncredited) (2 episodes, 1974)
+Ewa Aulin,  Harrassed Woman (uncredited) (1 episode, 1969)
+Reginald Bosanquet,  Himself (uncredited) (1 episode, 1970)
+Barbara Lindley,  Bride (uncredited) (1 episode, 1970)
+Roy Brent,  Armoured Knight (uncredited) (1 episode, 1972)
+Jonas Card,  Armoured Knight (uncredited) (1 episode, 1972)
+Tony Christopher,  Armoured Knight (uncredited) (1 episode, 1972)
+Beulah Hughes, (uncredited) (1 episode, 1972)
+Peter Kodak,  Armoured Knight (uncredited) (1 episode, 1972)
+Lulu,  Herself (uncredited) (1 episode, 1972)
+Jay Neill,  Armoured Knight (uncredited) (1 episode, 1972)
+Graham Skidmore,  Armoured Knight (uncredited) (1 episode, 1972)
+Ringo Starr,  Himself (uncredited) (1 episode, 1972)
+Fred Tomlinson,  Superintendent McGough (uncredited) (1 episode, 1972)
+David Hamilton,  Himself - Thames TV Announcer (uncredited) (1 episode, 1973)
+Suzy Mandel,  German Girl (uncredited) (1 episode, 1974)
+Peter Woods,  BBC Presenter (uncredited) (1 episode, 1974)</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="06. 演员表解决方案.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 从文件读取')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

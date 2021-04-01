@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:04.629
+A seguir, você praticará
+a leitura de código Python.
+
+00:00:05.032 --> 00:00:09.430
+Ao programar, deve-se pensar
+nos futuros leitores do código.
+
+00:00:09.766 --> 00:00:12.767
+Nesta seção, você não modificará
+o que o código faz,
+
+00:00:12.801 --> 00:00:15.934
+mas tentará entendê-lo
+em seu estado atual.
+
+00:00:15.968 --> 00:00:19.601
+Você o tornará mais fácil de usar,
+ler e manter.
+
+00:00:19.634 --> 00:00:23.367
+Leitura e refatoração de código são
+habilidades muito importantes.
+
+00:00:23.868 --> 00:00:25.834
+O que quer dizer
+com "refatoração"?
+
+00:00:25.868 --> 00:00:31.033
+Fatoração é quando se decompõe
+um problema em partes menores.
+
+00:00:31.067 --> 00:00:34.000
+Praticamos isso no problema
+de notas e médias.
+
+00:00:34.033 --> 00:00:39.300
+Refatoração é fazer isso
+num código já existente.
+
+00:00:39.334 --> 00:00:41.534
+É como reorganizar a oficina
+
+00:00:41.567 --> 00:00:43.801
+para trabalhar
+de forma eficiente
+
+00:00:43.834 --> 00:00:46.267
+e encontrar as ferramentas
+quando precisar.
+
+00:00:46.300 --> 00:00:49.501
+Em geral,
+um código organizado
+
+00:00:49.534 --> 00:00:51.467
+é mais fácil de manter.
+
+00:00:51.501 --> 00:00:52.801
+Você agradecerá depois.
+
+00:00:52.835 --> 00:00:53.835
+*END*
+

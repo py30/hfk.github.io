@@ -1,0 +1,440 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   变量 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          06. 变量 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习答案：赋值和修改变量">
+          练习答案：赋值和修改变量
+         </h1>
+         <p>
+          以下是我们对之前练习提供的答案：
+         </p>
+         <pre><code class="python language-python"># The current volume of a water reservoir (in cubic metres)
+reservoir_volume = 4.445e8
+# The amount of rainfall from a storm (in cubic metres)
+rainfall = 5e6
+
+# decrease the rainfall variable by 10% to account for runoff
+rainfall *= .9
+
+# add the rainfall variable to the reservoir_volume variable
+reservoir_volume += rainfall
+
+# increase reservoir_volume by 5% to account for stormwater that flows
+# into the reservoir in the days following the storm
+reservoir_volume *= 1.05
+
+# decrease reservoir_volume by 5% to account for evaporation
+reservoir_volume *= 0.95
+
+# subtract 2.5e5 cubic metres from reservoir_volume to account for water
+# that's piped to arid regions.
+reservoir_volume -= 2.5e5 
+
+# print the new value of the reservoir_volume variable
+print(reservoir_volume)</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="多重赋值">
+          多重赋值
+         </h1>
+         <p>
+          我们也可以在一行代码中同时为两个变量赋值：
+         </p>
+         <pre><code class="python language-python">#These two assignments can be abbreviated
+savings = 514.86
+salary = 320.51
+
+#Using multiple assignment
+savings, salary = 514.86, 320.51</code></pre>
+         <p>
+          第一个变量被赋值为
+          <code>
+           =
+          </code>
+          之后的第一个值，第二个变量则接收第二个值。对于两个紧密相关的变量，如某物体的宽度和高度、或某物体的 x 轴和 y 轴坐标，在进行赋值时我们可以使用多重赋值。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="更改变量">
+          更改变量
+         </h1>
+         <p>
+          当我们更改一个变量时，会对另一个根据其定义的变量造成怎样的影响？我们来看一个例子。
+         </p>
+         <p>
+          以下是马尼拉人口和人口密度的初步数据。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1780148
+&gt;&gt;&gt; manila_area = 16.56
+&gt;&gt;&gt; manila_pop_density = manila_pop/manila_area
+&gt;&gt;&gt; print(int(manila_pop_density))
+107496</code></pre>
+         <p>
+          现在我们重新定义
+          <code>
+           manila_pop
+          </code>
+          变量：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1781573</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          变量更改
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             根据上面的代码，猜测这个表达式的输出是什么。
+             <br/>
+             ```python
+            </p>
+            <blockquote>
+             <blockquote>
+              <blockquote>
+               <p>
+                print(int(manila_pop_density))
+                <br/>
+                ```
+               </p>
+              </blockquote>
+             </blockquote>
+            </blockquote>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483481276199" name="346906" type="radio" value="a1483481276199"/>
+           <label for="a1483481276199">
+            <p>
+             107448
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483481341200" name="346906" type="radio" value="a1483481341200"/>
+           <label for="a1483481341200">
+            <p>
+             107496
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483481341949" name="346906" type="radio" value="a1483481341949"/>
+           <label for="a1483481341949">
+            <p>
+             107582
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483481342723" name="346906" type="radio" value="a1483481342723"/>
+           <label for="a1483481342723">
+            <p>
+             108496
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          107496
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          正确的答案是
+          <code>
+           int(manila_pop_density)
+          </code>
+          的值没有改变。这是因为一个变量被赋值时，其被赋予的是
+          <em>
+           右侧表达式的值
+          </em>
+          ，而不是表达式本身。在代码行
+          <br/>
+          ```python
+         </p>
+         <blockquote>
+          <blockquote>
+           <blockquote>
+            <p>
+             manila_pop_density = manila_pop/manila_area
+            </p>
+           </blockquote>
+          </blockquote>
+         </blockquote>
+         <pre><code>Python 实际上是计算右侧表达式 `manila_pop/manila_area`，然后将该表达式的值赋值给变量 `manila_pop_density`。在将表达式的结果赋值之后，它将马上忘记这个公式。
+要依据 `manila_pop` 更新 `manila_pop_density` 的值，我们需要再次运行这行代码：</code></pre>
+         <pre><code></code></pre>
+         <blockquote>
+          <blockquote>
+           <blockquote>
+            <p>
+             manila_pop_density = manila_pop/manila_area
+             <br/>
+             print(int(manila_pop_density))
+             <br/>
+             107582
+             <br/>
+             ```
+             <br/>
+             这就是考虑到人口新增和减少之后的新人口密度 —— 为了考虑到这一点，我们已经更新了所有变量。
+            </p>
+           </blockquote>
+          </blockquote>
+         </blockquote>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="07. 比较运算符.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 变量 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

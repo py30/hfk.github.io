@@ -1,0 +1,560 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字符串
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          08. 字符串
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字符串和文本">
+          字符串和文本
+         </h1>
+         <p>
+          编程不仅涉及数字和算术，有时还需要处理文本。为了在 Python 中使用文本，我们需要借助于
+          <code>
+           string
+          </code>
+          （字符串），它表示一个字符的序列。字符串是文本的一种呈现类型。
+         </p>
+         <p>
+          <strong>
+           注意：
+          </strong>
+          如果大家之前编写过代码，那么可能对字符串的概念并不陌生。但除非你非常了解 Python 的字符串，否则仍需要仔细学习这一部分课程，因为在不同的编程语言中，字符串运行的规则也不相同。
+         </p>
+         <p>
+          我们可以使用引号创建一个字符串，单引号或双引号均可。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print("hello") #used double-quotes here
+hello
+&gt;&gt;&gt; print ('hello') #used single-quotes on this one
+hello</code></pre>
+         <p>
+          在上面这个例子中，我分别使用了单引号和双引号来打印字符串
+          <code>
+           "hello"
+          </code>
+          ，并且都得到了输出
+          <code>
+           hello
+          </code>
+          。
+         </p>
+         <p>
+          我们可以采用与数字相同的方式将变量设置为一个字符串。字符串可以包括任何字符，甚至是空格、标点符号和数字。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; welcome_message = "Hello, welcome to Udacity!"
+&gt;&gt;&gt; print(welcome_message)
+Hello, welcome to Udacity!</code></pre>
+         <p>
+          尽管字符串不是数字，但有一些适用于整数和浮点数的运算也同样适用于字符串。例如，我们可以使用
+          <code>
+           +
+          </code>
+          来将字符串放在一起，这被称为
+          <em>
+           连接
+          </em>
+          字符串。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; instructor_1 = "Philip"
+&gt;&gt;&gt; instructor_2 = "Charlie"
+&gt;&gt;&gt; print(instructor_1 + instructor_2)
+PhilipCharlie</code></pre>
+         <p>
+          在上面这个例子中，有两个储存导师姓名的变量。我们使用
+          <code>
+           +
+          </code>
+          将两个字符串连接在一起并打印，但这与数字的加法有本质区别。
+          <br/>
+          但你还需要注意的是，我们在这里打印出的两个姓名连在一起，中间没有空格。在使用字符串时，Python 将完全遵循字面形式。因此，如果你希望你编写的内容具有意义，就需要在代码内明确添加空格和标点符号。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; instructor_1 = "Philip"
+&gt;&gt;&gt; instructor_2 = "Charlie"
+&gt;&gt;&gt; print(instructor_1 + " and " + instructor_2)
+Philip and Charlie</code></pre>
+         <p>
+          这次我们得到了一个有意义的字符串，成功将两位导师的姓名连在一起。请注意，中间加入的字符串
+          <code>
+           and
+          </code>
+          前后都有一个空格，以便留出适当的间距。
+         </p>
+         <p>
+          这样看来，使用
+          <code>
+           +
+          </code>
+          运行字符串似乎可行。现在我们来试试另一个数学运算：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(instructor_1 / instructor_2)
+TypeError: unsupported operand type(s) for /: 'str' and 'str'</code></pre>
+         <p>
+          请注意，这里出现了一种新错误！运算符
+          <code>
+           /
+          </code>
+          不适用于字符串 (
+          <code>
+           str
+          </code>
+          ) 类型。这样可再好不过了，因为我不想看到两个导师相除时出现混乱的场面！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="引号中的引号">
+          引号中的引号
+         </h1>
+         <p>
+          使用引号来定义字符串将会导致一个问题：我们该如何定义一个含有引号的字符串？下面这行代码无法运行，因为字符串本身含有一个引号：
+         </p>
+         <pre><code class="text language-text">pet_halibut = "Why should I be tarred with the epithet "loony" merely because I have a pet halibut?"</code></pre>
+         <p>
+          Python 为这个问题提供了两个解决方案。一是将字符串放在单引号 (
+          <code>
+           '
+          </code>
+          )，而不使用双引号 (
+          <code>
+           "
+          </code>
+          ) ，如下所示：
+         </p>
+         <pre><code class="python language-python">pet_halibut = 'Why should I be tarred with the epithet "loony" merely because I have a pet halibut?'</code></pre>
+         <p>
+          大家也可以使用另一种类型的引号来定义字符串。但有时候我们也需要定义一个同时包含单引号和双引号的字符串，那应该怎么办呢？在出现这种情况时，我们可以使用一个反斜杠
+          <code>
+           \
+          </code>
+          来转义引号。例如：
+         </p>
+         <pre><code class="python language-python">salesman = '"I think you\'re an encyclopaedia salesman"'</code></pre>
+         <p>
+          在这个例子里，我们在定义字符串时使用了单引号，同时在字符串中的单引号前加上了一个反斜杠，因此 Python 知道应该将这个单引号解释为字符串的一部分，而不是结束字符串的引号。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：修复引号">
+          练习：修复引号
+         </h1>
+         <p>
+          在下方练习的代码中，由于引号使用不当导致了语法错误。请你使用“测试答案”来运行代码，查看错误信息，并为变量
+          <code>
+           messiah
+          </code>
+          选择正确的引号来修改这个错误。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346915-quotes-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346915-quotes-py" id="tab-346915-quotes-py" role="tab">
+            quotes.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346915-quotes-py" class="tab-pane active show" id="346915-quotes-py" role="tabpanel">
+            <pre><code></code># TODO: Fix this string!
+ford_quote = 'Whether you think you can, or you think you can't--you're right.'</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="答案：">
+          答案：
+         </h1>
+         <ol>
+          <li>
+           双引号解决方案：
+          </li>
+         </ol>
+         <pre><code>ford_quote = "Whether you think you can, or you think you can't--you're right."</code></pre>
+         <ol start="2">
+          <li>
+           反斜杠解决方案：
+          </li>
+         </ol>
+         <pre><code>ford_quote = 'Whether you think you can, or you think you can\'t--you\'re right.'</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          数字字符串
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             我们已经看到，对象的类型会影响运算符的意义。那么下面这段代码的输出是什么？
+            </p>
+            <pre><code class="python language-python">coconut_count = "34"
+mango_count = "15"
+tropical_fruit_count = coconut_count + mango_count
+print(tropical_fruit_count)</code></pre>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483483707678" name="346916" type="radio" value="a1483483707678"/>
+           <label for="a1483483707678">
+            <p>
+             49（并且 Tropical_fruit_count 是一个字符串）
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483483732175" name="346916" type="radio" value="a1483483732175"/>
+           <label for="a1483483732175">
+            <p>
+             49（并且 Tropical_fruit_count 是一个整数）
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483483732917" name="346916" type="radio" value="a1483483732917"/>
+           <label for="a1483483732917">
+            <p>
+             3415（并且 Tropical_fruit_count 是一个字符串）
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483483733666" name="346916" type="radio" value="a1483483733666"/>
+           <label for="a1483483733666">
+            <p>
+             3415（并且 Tropical_fruit_count 是一个整数）
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          3415（并且 Tropical_fruit_count 是一个字符串）
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：编写服务器日志信息">
+          练习：编写服务器日志信息
+         </h1>
+         <p>
+          在下面这个编程练习中，大家将使用我们刚刚学习的关于字符串的内容来编写服务器日志信息。
+         </p>
+         <p>
+          我们将为大家提供用户的示例数据、访问时间和访问的网站。你们应该使用所提供的变量和所学技巧打印如下所示的日志消息（用相应变量的值替换用户名、url 和时间）：
+         </p>
+         <p>
+          <code>
+           Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.
+          </code>
+         </p>
+         <p>
+          在编写代码时，你可以随时使用“测试答案”按钮查看代码的运行结果。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346919-Logs-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346919-Logs-py" id="tab-346919-Logs-py" role="tab">
+            Logs.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346919-Logs-py" class="tab-pane active show" id="346919-Logs-py" role="tabpanel">
+            <pre><code></code>username = "Kinari"
+timestamp = "04:50"
+url = "http://petshop.com/pets/mammals/cats"
+
+# TODO: print a log message incorporating the strings above.
+# The message should be use the same format as this one:
+# "Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20."
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          答案：
+         </p>
+         <pre><code>message = username + " accessed the site " + url + " at " + timestamp + "."
+print(message)</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="09. 内置函数.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 字符串')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

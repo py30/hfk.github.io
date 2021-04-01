@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.434
+Você aprendeu muito de Python
+até agora.
+
+00:00:02.534 --> 00:00:05.033
+Sabe como representar
+dados numéricos e textuais
+
+00:00:05.300 --> 00:00:07.634
+e sabe como armazenar
+bibliotecas de dados em listas,
+
+00:00:07.701 --> 00:00:09.534
+conjuntos e dicionários.
+
+00:00:09.567 --> 00:00:11.667
+Sim, você reuniu
+um conjunto de ferramentas
+
+00:00:11.701 --> 00:00:13.200
+para trabalhar com dados.
+
+00:00:13.234 --> 00:00:15.734
+Você sabe usar os métodos
+e funções integrados do Python
+
+00:00:16.133 --> 00:00:18.133
+e consegue escrever
+as funções sozinho.
+
+00:00:18.300 --> 00:00:19.801
+Você sabe iterar com loops
+
+00:00:20.267 --> 00:00:23.033
+e tomar decisões condicionais
+com "if-else".
+
+00:00:23.202 --> 00:00:24.310
+Com essas ferramentas,
+
+00:00:24.344 --> 00:00:26.404
+resolverá a maioria
+dos problemas de programação.
+
+00:00:26.501 --> 00:00:29.367
+Claro, há mais sobre Python
+do que tudo que vimos até agora,
+
+00:00:29.534 --> 00:00:31.334
+e teremos mais tópicos em breve.
+
+00:00:31.400 --> 00:00:33.501
+Mas agora é hora de aplicar
+as habilidades que aprendeu
+
+00:00:33.567 --> 00:00:35.667
+para que possa praticar
+a arte da programação.
+
+00:00:35.834 --> 00:00:39.067
+É isso mesmo. Programar é mais
+do que apenas uma sintaxe.
+
+00:00:39.367 --> 00:00:41.734
+Para resolver um problema,
+você primeiro precisa defini-lo.
+
+00:00:42.200 --> 00:00:45.067
+Por exemplo, você precisará pensar
+sobre as entradas para o programa
+
+00:00:45.133 --> 00:00:47.434
+e os resultados
+que deve dar como saída.
+
+00:00:47.701 --> 00:00:49.467
+Depois de pensar
+nos objetivos do seu programa,
+
+00:00:49.667 --> 00:00:53.234
+precisa pensar sobre como
+dividi-lo em pedaços menores.
+
+00:00:53.601 --> 00:00:55.534
+Então você precisa avaliar
+o seu plano
+
+00:00:55.667 --> 00:00:57.667
+para se certificar de que ele
+resolve o problema.
+
+00:00:57.734 --> 00:01:00.067
+Muitas vezes descubro,
+ao planejar um novo programa,
+
+00:01:00.234 --> 00:01:02.801
+que o problema é
+mais complicado do que presumi.
+
+00:01:03.167 --> 00:01:04.400
+Planejar antes de codificar
+
+00:01:04.434 --> 00:01:06.133
+me ajuda a entender melhor
+o problema.
+
+00:01:06.634 --> 00:01:09.634
+Há outras coisas para ter em mente
+quando você começa a codificar.
+
+00:01:10.067 --> 00:01:11.767
+Você deve escrever
+casos de teste
+
+00:01:11.901 --> 00:01:14.667
+para verificar se o código
+faz o que deve fazer.
+
+00:01:15.234 --> 00:01:17.367
+Você também precisa tornar
+o seu código legível.
+
+00:01:17.634 --> 00:01:22.200
+Se o seu código for tão complicado
+que só faz sentido na hora,
+
+00:01:22.267 --> 00:01:24.667
+pode não conseguir entendê-lo
+mais tarde.
+
+00:01:25.300 --> 00:01:27.200
+Antes de irmos
+para os próximos tópicos,
+
+00:01:27.234 --> 00:01:29.701
+teremos um laboratório
+para praticar essas habilidades.
+
+00:01:29.801 --> 00:01:31.601
+Boa sorte.
+Enquanto você trabalha,
+
+00:01:31.667 --> 00:01:34.000
+lembre-se de quebrar os problemas
+em pedaços menores,
+
+00:01:34.067 --> 00:01:36.501
+planejar e se concentrar
+na legibilidade.
+
+00:01:36.569 --> 00:01:37.734
+Nos vemos em breve.
+

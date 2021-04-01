@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:04.400
+Já usamos vários métodos
+de string, mas de onde vieram?
+
+00:00:04.433 --> 00:00:08.633
+Você pode aprender os métodos
+na documentação do Python.
+
+00:00:08.667 --> 00:00:11.100
+Este é o método count
+que usamos.
+
+00:00:11.133 --> 00:00:14.067
+Note que a documentação cita
+dois argumentos opcionais:
+
+00:00:14.100 --> 00:00:16.067
+start e end.
+
+00:00:16.100 --> 00:00:18.733
+Você pode usá-los
+para limitar os counts
+
+00:00:18.767 --> 00:00:21.267
+em seções específicas
+de uma string.
+
+00:00:21.300 --> 00:00:24.100
+Na documentação, há indicação
+de argumentos opcionais
+
+00:00:24.133 --> 00:00:26.067
+entre colchetes, como este.
+
+00:00:26.100 --> 00:00:29.233
+Qualquer argumento
+entre colchetes é opcional.
+
+00:00:29.267 --> 00:00:31.933
+A documentação costuma ser
+sucinta e precisa,
+
+00:00:31.967 --> 00:00:33.900
+mas é o seu recurso
+mais valioso.
+
+00:00:33.933 --> 00:00:35.367
+Não tenha medo de usá-la!
+
+00:00:35.400 --> 00:00:38.667
+Tente os outros métodos
+que estão na documentação.
+
+00:00:38.700 --> 00:00:41.400
+Incluí um link para esta seção
+no fim do vídeo.
+

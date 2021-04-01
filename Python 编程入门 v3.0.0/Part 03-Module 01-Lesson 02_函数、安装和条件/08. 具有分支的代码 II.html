@@ -1,0 +1,960 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   具有分支的代码 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          08. 具有分支的代码 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习解决方案：获得哪种奖励？">
+          练习解决方案：获得哪种奖励？
+         </h1>
+         <p>
+          以下是我们的执行解决方案：
+         </p>
+         <pre><code class="python language-python">def which_prize(points):
+    """
+    Returns the prize-winning message, given a number of points
+    """
+    if points &lt;= 50:
+        return "Congratulations! You have won a wooden rabbit!"
+    elif points &lt;= 150:
+        return "Oh dear, no prize this time."
+    elif points &lt;= 180:
+        return "Congratulations! You have won a wafer-thin mint!"
+    else:
+        return "Congratulations! You have won a penguin!"</code></pre>
+         <p>
+          我们根据积分数量的顺序逐个检查了每个案例，因为没有其他的奖励值了，因此我们使用
+          <code>
+           else
+          </code>
+          子句包括最后一个案例。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="编写布尔表达式">
+          编写布尔表达式
+         </h1>
+         <p>
+          到目前为止，我们所看到的所有
+          <code>
+           if
+          </code>
+          和
+          <code>
+           elif
+          </code>
+          语句都紧跟一个检查单个条件的简单布尔表达式。然而，有些情况需要更复杂的条件。如果有太阳，又下着雨，那么可能会有彩虹！
+         </p>
+         <p>
+          这里有一个比较复杂的案例。假使客户仍在促销邮件的收件人列表里同时位于可以享受折扣优惠的区域，我就给他发促销邮件。否则，我不会打扰他们。
+         </p>
+         <p>
+          如需在条件表达式中检查此类复合条件，我们可以在 Python 中使用
+          <a href="https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not" target="_blank">
+           布尔运算
+          </a>
+          - 如
+          <code>
+           and
+          </code>
+          、
+          <code>
+           or
+          </code>
+          以及
+          <code>
+           not
+          </code>
+          关键字 —— 组合较简单的布尔表达式。
+         </p>
+         <p>
+          所以可将这些示例编入代码：
+         </p>
+         <pre><code class="python language-python">if is_raining and is_sunny:
+    print("Is there a rainbow?")</code></pre>
+         <pre><code class="python language-python">if (not do_not_email) and (location == "USA" or location == "CAN"):
+    send_email()</code></pre>
+         <p>
+          我们遵循常用的逻辑规则，使用
+          <code>
+           and
+          </code>
+          、
+          <code>
+           or
+          </code>
+          以及
+          <code>
+           not
+          </code>
+          组合和更改布尔表达式。组合所有布尔表达式后的最终结果用于确定是否运行缩进的
+          <code>
+           if
+          </code>
+          块中的代码。
+         </p>
+         <p>
+          <code>
+           and
+          </code>
+          和
+          <code>
+           or
+          </code>
+          分别用于两个布尔表达式，一个在之前，一个在之后。
+          <br/>
+          当且仅当两个表达式*都为
+          <code>
+           True
+          </code>
+          时，
+          <code>
+           and
+          </code>
+          给出的结果为
+          <code>
+           True
+          </code>
+          ，否则将为
+          <code>
+           False
+          </code>
+          。
+         </p>
+         <p>
+          如果两个表达式中至少有一个是
+          <code>
+           True
+          </code>
+          ，
+          <code>
+           or
+          </code>
+          给出的结果为
+          <code>
+           True
+          </code>
+          - 只有当两个表达式都为
+          <code>
+           False
+          </code>
+          时，结果才为
+          <code>
+           False
+          </code>
+          。 （注意，如果两者都是
+          <code>
+           True
+          </code>
+          ，
+          <code>
+           or
+          </code>
+          的结果将是
+          <code>
+           True
+          </code>
+          ）。
+         </p>
+         <p>
+          布尔运算
+          <code>
+           not
+          </code>
+          用于在一个布尔运算中进行交换：所以
+          <code>
+           not True
+          </code>
+          是
+          <code>
+           False
+          </code>
+          ，反之亦然。
+         </p>
+         <p>
+          对于真正复杂的条件，可能需要将
+          <code>
+           and
+          </code>
+          、
+          <code>
+           or
+          </code>
+          以及
+          <code>
+           not
+          </code>
+          组合在一起，如果需要使组合明确，可使用括号
+          <code>
+           (
+          </code>
+          and
+          <code>
+           )
+          </code>
+          ！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          练习：计算组合布尔表达式
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUIZ QUESTION:
+          </strong>
+          :
+          <p>
+           设想一下，一个空中交通管制程序可以跟踪三个变量：
+           <code>
+            altitude
+           </code>
+           、
+           <code>
+            speed
+           </code>
+           和
+           <code>
+            propulsion
+           </code>
+           ，某一飞机具有以下变量值。
+          </p>
+          <pre><code class="python language-python">altitude = 10000
+speed = 250
+propulsion = "Propeller"</code></pre>
+          <p>
+           对于以下每个布尔表达式，求出结果是否为
+           <code>
+            True
+           </code>
+           或
+           <code>
+            False
+           </code>
+           ，并匹配正确的值。
+          </p>
+         </p>
+         <p>
+          <strong>
+           ANSWER CHOICES:
+          </strong>
+         </p>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            altitude &lt; 1000 and speed &gt; 100
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            (propulsion == "Jet" or propulsion == "Turboprop") and speed &lt; 300 and altitude &gt; 20000
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            not (speed &gt; 400 and propulsion == "Propeller")
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            (altitude &gt; 500 and speed &gt; 100) or not propulsion == "Propeller"
+           </code>
+          </p>
+         </button>
+         <br/>
+         <br/>
+         <table class="table">
+          <tr class="thead-dark table-hover">
+           <th>
+            <p>
+             表达式
+            </p>
+           </th>
+           <th>
+            <p>
+             <code>
+              True
+             </code>
+             或
+             <code>
+              False
+             </code>
+            </p>
+           </th>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              False
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              False
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              True
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              False
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              True
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              True
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              True
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             <code>
+              False
+             </code>
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+         </table>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <table class="table">
+           <tr class="thead-dark table-hover">
+            <th>
+             <p>
+              表达式
+             </p>
+            </th>
+            <th>
+             <p>
+              <code>
+               True
+              </code>
+              或
+              <code>
+               False
+              </code>
+             </p>
+            </th>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                altitude &lt; 1000 and speed &gt; 100
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (propulsion == "Jet" or propulsion == "Turboprop") and speed &lt; 300 and altitude &gt; 20000
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                altitude &lt; 1000 and speed &gt; 100
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (propulsion == "Jet" or propulsion == "Turboprop") and speed &lt; 300 and altitude &gt; 20000
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                not (speed &gt; 400 and propulsion == "Propeller")
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (altitude &gt; 500 and speed &gt; 100) or not propulsion == "Propeller"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                altitude &lt; 1000 and speed &gt; 100
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (propulsion == "Jet" or propulsion == "Turboprop") and speed &lt; 300 and altitude &gt; 20000
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                not (speed &gt; 400 and propulsion == "Propeller")
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (altitude &gt; 500 and speed &gt; 100) or not propulsion == "Propeller"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                not (speed &gt; 400 and propulsion == "Propeller")
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (altitude &gt; 500 and speed &gt; 100) or not propulsion == "Propeller"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                not (speed &gt; 400 and propulsion == "Propeller")
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               True
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (altitude &gt; 500 and speed &gt; 100) or not propulsion == "Propeller"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                altitude &lt; 1000 and speed &gt; 100
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              <code>
+               False
+              </code>
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                (propulsion == "Jet" or propulsion == "Turboprop") and speed &lt; 300 and altitude &gt; 20000
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+          </table>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="09. 具有分支的代码 III.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 具有分支的代码 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

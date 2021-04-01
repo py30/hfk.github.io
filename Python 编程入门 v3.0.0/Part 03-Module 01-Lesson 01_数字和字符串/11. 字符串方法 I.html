@@ -1,0 +1,563 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字符串方法 I
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          11. 字符串方法 I
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          到目前为止，我们已经学习了使用 Python 处理数据的两种不同方式。我们使用像
+          <code>
+           +
+          </code>
+          、
+          <code>
+           &lt;=
+          </code>
+          和
+          <code>
+           =
+          </code>
+          这样的运算符，处理运算符两边的值。我们也使用了像
+          <code>
+           print
+          </code>
+          和
+          <code>
+           len
+          </code>
+          这样的函数。函数与运算符非常相似，实际上唯一的区别就是它们的外观：函数输入放在括号中，而不是置于运算符旁边，函数具有描述性名称而不是短符号。
+         </p>
+         <p>
+          <diagram and="" functions="" of="" operators="" rearranged="" showing="" syntax="" the="">
+          </diagram>
+         </p>
+         <p>
+          处理值还有第三种方式：方法（method）。比如 title 方法：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; "charlotte hippopotamus turner".title()
+'Charlotte Hippopotamus Turner'</code></pre>
+         <p>
+          方法（method）与函数（function）相关，但又与函数不同，方法与特定类型的对象相关。在这个示例中，对象是一个值为 "charlotte hippopotamus turner" 的字符串，我们调用了它的
+          <code>
+           title
+          </code>
+          方法。该方法返回首字母大写的字符串，即每个单词的第一个字母都被大写。
+         </p>
+         <p>
+          我们来试试另一个字符串方法，islower：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; full_name = "charlotte hippopotamus turner"
+&gt;&gt;&gt; full_name.islower()
+True</code></pre>
+         <p>
+          <code>
+           islower
+          </code>
+          方法查看调用它的字符串对象。在此例中，字符串对象是 "charlotte hippopotamus turner"。
+          <code>
+           islower
+          </code>
+          返回一个布尔值，说明该字符串对象中的字母是否都是小写字母（不区分大小写的字符不计算在内，比如标点符号）。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          方法和类型
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             对浮点对象调用字符串方法，如
+             <code>
+              islower
+             </code>
+             时会出现什么结果？例如，
+             <code>
+              13.37.islower
+             </code>
+             。
+            </p>
+            <p>
+             该页面下方还有一个练习场，大家可以体验一下。
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483487360674" name="346944" type="radio" value="a1483487360674"/>
+           <label for="a1483487360674">
+            <p>
+             浮点数被返回且保持不变
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483487531654" name="346944" type="radio" value="a1483487531654"/>
+           <label for="a1483487531654">
+            <p>
+             <code>
+              islower
+             </code>
+             返回 True
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483487532387" name="346944" type="radio" value="a1483487532387"/>
+           <label for="a1483487532387">
+            <p>
+             <code>
+              islower
+             </code>
+             返回 False
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483487533037" name="346944" type="radio" value="a1483487533037"/>
+           <label for="a1483487533037">
+            <p>
+             发生错误
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          发生错误
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          可以通过查看
+          <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" target="_blank">
+           https://docs.python.org/3/library/stdtypes.html#string-methods
+          </a>
+          中的字符串方法文档来了解有关字符串和字符串方法的更多信息。
+          <br/>
+          大家将会发现文档是编写代码最有价值的资源之一，不仅仅是指字符串或在 Python 中编写代码！阅读和搜索文档时，还可以了解数据类型、内置函数以及相关使用方法。
+         </p>
+         <p>
+          现在试试吧！查找几个字符串方法（使用上面的链接），并在下面的编程练习中（使用测试答案按钮）进行测试。
+         </p>
+         <h1 id="字符串方法练习区">
+          字符串方法练习区
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346946-string_playground-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346946-string_playground-py" id="tab-346946-string_playground-py" role="tab">
+            string_playground.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346946-string_playground-py" class="tab-pane active show" id="346946-string_playground-py" role="tabpanel">
+            <pre><code></code>#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods
+#and try them out here</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="count-方法">
+          <code>
+           count
+          </code>
+          方法
+         </h1>
+         <p>
+          大家可能已经注意到，调用
+          <code>
+           islower
+          </code>
+          和
+          <code>
+           title
+          </code>
+          方法时，会使用到括号，但我们并没有像调用函数那样在括号中放置任何内容。这并不是因为方法不引用参数，而是目前为止用到的方法根本不需要参数。让我们尝试一个
+          <strong>
+           需要
+          </strong>
+          引入参数的
+          <code>
+           count
+          </code>
+          的方法。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; "One fish, two fish, red fish, blue fish.".count('fish')
+4</code></pre>
+         <p>
+          在该示例中，
+          <code>
+           count
+          </code>
+          方法返回字符串中子字符串 "fish" 出现的次数。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：元音计数">
+          练习：元音计数
+         </h1>
+         <p>
+          使用 count 方法来确定字符串
+          <code>
+           prophecy
+          </code>
+          中有多少个元音。将此计数存储在 vowel_count 变量中。
+         </p>
+         <p>
+          注意：元音是 a、e、i、o 和 u。
+         </p>
+         <p>
+          提示：可能需要多次调用
+          <code>
+           count
+          </code>
+          方法，并且多次增加
+          <code>
+           vowel_count
+          </code>
+          的值。
+         </p>
+         <p>
+          如果出现问题，请查看
+          <em>
+           solution.py
+          </em>
+          选项卡。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346949-vowels-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346949-vowels-py" id="tab-346949-vowels-py" role="tab">
+            vowels.py
+           </a>
+           <a aria-controls="346949-solution-py" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#346949-solution-py" id="tab-346949-solution-py" role="tab">
+            solution.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346949-vowels-py" class="tab-pane active show" id="346949-vowels-py" role="tabpanel">
+            <pre><code></code>prophecy = "And there shall in that time be rumours of things going astray, and there will be a great confusion as to where things really are, and nobody will really know where lieth those little things with the sort of raffia work base, that has an attachment…at this time, a friend shall lose his friends’s hammer and the young shall not know where lieth the things possessed by their fathers that their fathers put there only just the night before around eight o’clock…"
+
+vowel_count = 0
+
+# TODO: set the value of vowel_count to be the number of vowels in prophecy
+
+
+
+# Print the final count
+print(vowel_count)</pre>
+           </div>
+           <div aria-labelledby="tab-346949-solution-py" class="tab-pane" id="346949-solution-py" role="tabpanel">
+            <pre><code></code># This is my vowel counting code:
+
+vowel_count += prophecy.count('a')
+vowel_count += prophecy.count('A')
+vowel_count += prophecy.count('e')
+vowel_count += prophecy.count('E')
+vowel_count += prophecy.count('i')
+vowel_count += prophecy.count('I')
+vowel_count += prophecy.count('o')
+vowel_count += prophecy.count('O')
+vowel_count += prophecy.count('u')
+vowel_count += prophecy.count('U')
+
+'''
+Looking at this first attempt, I think I can make it better. Counting 
+both lower-case 'a' and upper-case 'A', seems unnecessary. I'll convert 
+everything to lower-case, and then I only need to count each vowel once!
+'''
+
+vowel_count = 0
+lower_prophecy = prophecy.lower()
+vowel_count += lower_prophecy.count('a')
+vowel_count += lower_prophecy.count('e')
+vowel_count += lower_prophecy.count('i')
+vowel_count += lower_prophecy.count('o')
+vowel_count += lower_prophecy.count('u')
+print(vowel_count)
+
+'''
+It's easy to check that I got the same result with my new, shorter version. 
+There was nothing especially wrong with the first version, but it was only 
+after I had written my first idea that I realised the efficiency I could make
+in the second attempt. Getting started with a simple idea and then improving 
+my work from there is a common pattern I use when programming, I recommend 
+you try it too.
+'''</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="12. 字符串方法 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 字符串方法 I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

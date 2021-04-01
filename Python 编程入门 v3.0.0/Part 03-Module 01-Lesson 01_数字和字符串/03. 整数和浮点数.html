@@ -1,0 +1,419 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   整数和浮点数
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          03. 整数和浮点数
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="整数和浮点数">
+          整数和浮点数
+         </h1>
+         <p>
+          到目前为止，我们看到的所有数值例子都是整数，即 int 型。但实际上 Python 中还存在其他数值类型，我们需要学习如何使用它们进行计算，以及如何在 Python 中生成它们。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(3/4)
+0.75</code></pre>
+         <p>
+          在上面这个示例中，我们使用一个整数除以另一个整数，而得到的结果并不是整数，即 0.75。在 Python（和一般计算）中，我们将此类数字称为
+          <strong>
+           浮点数
+          </strong>
+          （float），其英文全称是
+          <strong>
+           floating-point number
+          </strong>
+          。
+         </p>
+         <p>
+          即使一个整数可以整除另一个整数，其结果也将是一个浮点数，比如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(16/4)
+4.0</code></pre>
+         <p>
+          [注意：我们课程中用到的是 Python 3。目前常用的 Python 有两种版本，即 Python 2 和 Python 3。在 Python 2 中，一个整数除以另一个整数将产生一个
+          <code>
+           int
+          </code>
+          ，即使预期的结果不是整数！Python 2 的这个概念与 Python 3 中的整数除法 (
+          <code>
+           //
+          </code>
+          ) 类似。]
+         </p>
+         <p>
+          一个整数和一个浮点数的运算将生成一个浮点数，比如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 3 + 2.5
+5.5</code></pre>
+         <p>
+          要生成一个整数，只要给出一个没有小数点的整数即可。下面是一个整数：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 387</code></pre>
+         <p>
+          如果需要生成一个浮点数，添加一个小数点即可！即使数字本身是一个整数也没有关系，你甚至不必在小数点之后添加任何内容。下面是几个浮点数：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 213.13
+&gt;&gt;&gt; 341.</code></pre>
+         <p>
+          有时我们可能需要手动将一个数值类型转换为另一个数值类型，要想实现这一点，你可以通过
+          <code>
+           int()
+          </code>
+          和
+          <code>
+           float()
+          </code>
+          来构造这些类型的新对象，比如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; int(49.7)
+49
+&gt;&gt;&gt; int(16/4)
+4
+&gt;&gt;&gt; float(3520+3239)
+6759.0</code></pre>
+         <p>
+          将一个浮点数转换成整数时，小数点后的部分会被去除。
+         </p>
+         <p>
+          所以我们看到 Python 具有两个主要的数值
+          <strong>
+           类型
+          </strong>
+          —— 整数 (int) 和浮点数 (float)。那么这两种数值类型有什么用处呢？
+         </p>
+         <ul>
+          <li>
+           int —— 大家可能经常需要对物品进行计数，或者需要一个整数的计算结果。int 类型在这方面正好可以派上用场。
+          </li>
+          <li>
+           float —— 如果你正在使用的数字不一定是一个整数，那么 float 可能就是你需要的类型！
+          </li>
+         </ul>
+         <p>
+          浮点数是它们所表示的数字的
+          <strong>
+           近似值
+          </strong>
+          。了解这一点十分重要，因为浮点数可以表示很大范围内的数字，因此为了在计算机内存中存储数字，Python 必须使用近似值。这有时会产生惊人的结果：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(0.1)
+0.1
+&gt;&gt;&gt; print(0.1 + 0.2)
+0.30000000000000004</code></pre>
+         <p>
+          因为
+          <code>
+           0.1
+          </code>
+          的浮点数（即近似值）实际上略超过 0.1，所以当我们将其中几个值加到一起时，可以看到数学上的正确答案与 Python 输出的答案之间的区别。在大多数情况下，这些小差异无关紧要，但了解这些差异的存在十分必要！
+         </p>
+         <p>
+          如果你想更加深入地了解差异的原因，可以查看 Python
+          <a href="https://docs.python.org/3/tutorial/floatingpoint.html" target="_blank">
+           官方文档
+          </a>
+          中的解释，你也可以参考这个
+          <a href="https://www.cnblogs.com/mooncher/p/5145571.html" target="_blank">
+           中文博客
+          </a>
+          。简单来说，是因为 Python 是二进制的系统。二进制中，1/2、1/4 和 1/8 都可以被精确表示。但是，1/5 或者 1/10 就变成了循环小数。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             在捕鱼时，你可能会接触到下面这些数值，其中一些数值的类型为
+             <code>
+              int
+             </code>
+             ，一些类型为
+             <code>
+              float
+             </code>
+             。请选出所有
+             <code>
+              float
+             </code>
+             类型的选项
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1490717598573" name="346899" type="checkbox" value="a1490717598573"/>
+           <label for="a1490717598573">
+            <p>
+             有多少人参加此次捕鱼活动？
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1490717693610" name="346899" type="checkbox" value="a1490717693610"/>
+           <label for="a1490717693610">
+            <p>
+             你捕获的鱼的长度，单位：米。
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1490717706252" name="346899" type="checkbox" value="a1490717706252"/>
+           <label for="a1490717706252">
+            <p>
+             捕获的鱼数量。
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1490717762760" name="346899" type="checkbox" value="a1490717762760"/>
+           <label for="a1490717762760">
+            <p>
+             捕获第一条鱼所用的时间，单位：小时。
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <ul>
+           <li>
+            你捕获的鱼的长度，单位：米。
+           </li>
+           <li>
+            捕获第一条鱼所用的时间，单位：小时。
+           </li>
+          </ul>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="04. 错误.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 整数和浮点数')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

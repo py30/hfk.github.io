@@ -1,0 +1,412 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字符串方法 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          12. 字符串方法 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字符串方法的文档">
+          字符串方法的文档
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Python 文档
+         </p>
+        </h3>
+        <video controls="">
+         <source src="12. Python 文档-lBtG0DO_KqM.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="12. Python 文档-lBtG0DO_KqM.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="12. Python 文档-lBtG0DO_KqM.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="ar" src="12. Python 文档-lBtG0DO_KqM.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="12. Python 文档-lBtG0DO_KqM.en.vtt" srclang="en"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          字符串方法的文档见
+          <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" target="_blank">
+           https://docs.python.org/3/library/stdtypes.html#string-methods
+          </a>
+         </p>
+         <p>
+          大家可以在下面的编程练习中使用测试答案按钮进行一些测试。
+         </p>
+         <h1 id="字符串方法练习区">
+          字符串方法练习区
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346953-strings-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346953-strings-py" id="tab-346953-strings-py" role="tab">
+            strings.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346953-strings-py" class="tab-pane active show" id="346953-strings-py" role="tabpanel">
+            <pre><code></code>#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods
+#and try them out here</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字符串格式化">
+          字符串格式化
+         </h1>
+         <p>
+          一个特别有用的字符串方法是
+          <code>
+           format
+          </code>
+          。
+          <code>
+           format
+          </code>
+          方法将值插入到模板字符串中来构建字符串。我们来看一个示例，为一个虚拟的 Web 服务器生成日志信息。
+         </p>
+         <pre><code class="python language-python">log_message = "IP address {} accessed {} at {}".format(user_ip, url, now)</code></pre>
+         <p>
+          如果变量
+          <code>
+           user_ip
+          </code>
+          、
+          <code>
+           url
+          </code>
+          和
+          <code>
+           now
+          </code>
+          已经被定义了，那么它们的值将替代作为占位符的
+          <code>
+           {}
+          </code>
+          ：
+         </p>
+         <pre><code class="python language-python">&gt; print(log_message)
+IP address 208.94.117.90 accessed /bears/koala at 16:20</code></pre>
+         <p>
+          你可以将任何类型传递到
+          <code>
+           format
+          </code>
+          方法。
+          <code>
+           format
+          </code>
+          将根据需求将值转换为字符串。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：使用字符串格式化简化代码">
+          练习：使用字符串格式化简化代码
+         </h1>
+         <p>
+          本练习中的代码可生成天气报告警报。之前的程序员使用字符串连接来组合警报，这会导致一些代码难以阅读。使用
+          <code>
+           format
+          </code>
+          方法重写代码。你的新代码应该产生与被替换的旧代码相同的字符串。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346956-weather-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346956-weather-py" id="tab-346956-weather-py" role="tab">
+            weather.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346956-weather-py" class="tab-pane active show" id="346956-weather-py" role="tabpanel">
+            <pre><code></code>city = "Seoul"
+high_temperature = 18
+low_temperature = 9
+temperature_unit = "degrees Celsius"
+weather_conditions = "light rain"
+
+#todo rewrite this line to use the format method rather than string concatenation
+alert = "Today's forecast for " + city + ": The temperature will range from " + str(low_temperature) + " to " + str(high_temperature) + " " + temperature_unit + ". Conditions will be " + weather_conditions + "."
+
+# print the alert
+print(alert)</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          第 1 课完成了！
+         </p>
+        </h3>
+        <video controls="">
+         <source src="12. 第 1 课完成了！-y3dstGZWPgc.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="12. 第 1 课完成了！-y3dstGZWPgc.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="12. 第 1 课完成了！-y3dstGZWPgc.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="12. 第 1 课完成了！-y3dstGZWPgc.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="true" kind="subtitles" label="en" src="12. 第 1 课完成了！-y3dstGZWPgc.en.vtt" srclang="en"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. 字符串方法 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

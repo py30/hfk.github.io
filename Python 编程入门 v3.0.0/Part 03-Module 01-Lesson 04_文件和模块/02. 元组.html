@@ -1,0 +1,397 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   元组
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      文件和模块
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 元组.html">
+       02. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 默认参数.html">
+       03. 默认参数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量作用域.html">
+       04. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 从文件读取.html">
+       05. 从文件读取
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 演员表解决方案.html">
+       06. 演员表解决方案
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 标准库.html">
+       07. 标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 密码生成器解决方案.html">
+       08. 密码生成器解决方案
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 第三方库.html">
+       09. 第三方库
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 使用在线资源.html">
+       10. 使用在线资源
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 元组
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="元组简介">
+          元组简介
+         </h1>
+         <p>
+          Python 提供了另一个有用的内置类型：元组。元组用于存储相关信息。我们来看一下有关纬度和经度的示例：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; AngkorWat = (13.4125, 103.866667)
+&gt;&gt;&gt; print(type(AngkorWat))
+&lt;class 'tuple'&gt;
+&gt;&gt;&gt; print("Angkor Wat is at latitude: {}".format(AngkorWat[0]))
+Angkor Wat is at latitude: 13.4125
+&gt;&gt;&gt; print("Angkor Wat is at longitude: {}".format(AngkorWat[1]))
+Angkor Wat is at longitude: 103.866667</code></pre>
+         <p>
+          元组与列表相似，用于存储有序对象的集合，可以通过其索引进行访问（例如
+          <code>
+           AngkorWat[0]
+          </code>
+          和
+          <code>
+           AngkorWat[1]
+          </code>
+          ）。不同于列表，元组具有
+          <em>
+           不可变性
+          </em>
+          。所以不能添加和删除元组中的项，或对其进行排序。
+         </p>
+         <h2 id="为什么需要元组？">
+          为什么需要元组？
+         </h2>
+         <p>
+          如果元组与列表类似，但功能又少，为什么我们还需要元组？当有两个或更多密切相关的值，而且通常一起使用时，如纬度和经度坐标，元组就会派上用场。
+         </p>
+         <p>
+          元组可用于适当为多个变量赋值
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; dimensions = 52, 40, 100 
+&gt;&gt;&gt; length, width, height = dimensions 
+&gt;&gt;&gt; print("The dimensions are {}x{}x{}".format(length, width, height))
+The dimensions are 52x40x100</code></pre>
+         <p>
+          注意，赋给元组
+          <code>
+           dimensions
+          </code>
+          的值与之前的示例不一样，没有使用括号。编写元组时，也可以选择使用括号，如果括号不用于明确代码，程序员会经常会将其省略。
+         </p>
+         <h2 id="元组解包">
+          元组解包
+         </h2>
+         <p>
+          在第二行中，将元组
+          <code>
+           dimensions
+          </code>
+          的内容赋值给三个变量。我们将这称为
+          <em>
+           元组解包
+          </em>
+          。大家可以使用元组拆包，将元组中的信息赋值给多个变量，而不必逐个访问和编写多个赋值语句。
+         </p>
+         <p>
+          在该示例中，如果不需要直接使用
+          <code>
+           dimensions
+          </code>
+          ，我们可以将这两行代码缩短为一行，一次为三个变量赋值！
+         </p>
+         <pre><code class="python language-python">length, width, height = 52, 40, 100</code></pre>
+         <h2 id="元组不变性">
+          元组不变性
+         </h2>
+         <p>
+          另外一方面，元组的不变性也是一个重要属性。与列表不同，元组可以存储在集合（set）中，或用作字典的键（key）。由于这两种数据结构需要不可变的键，所以不可以使用列表。（如果好奇为什么集合和字典需要不可变的键，可以查阅 CS101 第 5 课。在该课程中，你将从头开始重新构建一个字典，了解字典的运行原理。）
+          <br/>
+          在下面的例子中，我们创建一个字典
+          <code>
+           world_heritage_locations
+          </code>
+          ，该字典具有
+          <code>
+           (latitude, longitude)
+          </code>
+          形式的元组作为键（key），以及表示相应地名的字符串作为值（value）。
+         </p>
+         <pre><code class="python language-python">world_heritage_locations = {(13.4125, 103.866667): "Angkor Wat",
+                            (25.73333, 32.6): "Ancient Thebes",
+                            (30.330556, 35.4433330): "Petra",
+                            (-13.116667, -72.583333): "Machu Picchu"}</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="返回元组">
+          返回元组
+         </h1>
+         <p>
+          元组的常见用法是函数返回多个值：
+         </p>
+         <pre><code class="python language-python">def first_and_last(sequence):
+    """returns the first and last elements of a sequence"""
+    return sequence[0], sequence[-1]</code></pre>
+         <p>
+          函数
+          <code>
+           first_and_last
+          </code>
+          的使用方法如下：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; first_and_last(["Spam", "egg", "sausage", "Spam"])
+('Spam', 'Spam')</code></pre>
+         <p>
+          返回一个元组的函数也可以用于为多个变量赋值：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; start, end = first_and_last(["Spam", "egg", "sausage", "Spam"])
+&gt;&gt;&gt; print(start)
+Spam
+&gt;&gt;&gt; print(end)
+Spam</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：天和小时">
+          练习：天和小时
+         </h1>
+         <p>
+          尝试编写一个使用元组返回多个值的函数。编写
+          <code>
+           hours2days
+          </code>
+          函数，传入一个整数类型的参数，该参数表示一个以小时为单位的时间段。该函数应该返回一个元组，用天和小时为单位表示传入的时间段，不足一天的时间用小时表示。例如，39 个小时表示 1 天 15 个小时，所以函数返回的应该是 (1,15)。
+         </p>
+         <p>
+          这些例子演示了该函数的使用：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; hours2days(24) # 24 hours is one day and zero hours
+(1, 0)
+&gt;&gt;&gt; hours2days(25) # 25 hours is one day and one hour
+(1, 1)
+&gt;&gt;&gt; hours2days(10000)
+(416, 16)</code></pre>
+         <p>
+          你可以用它们测试你的代码。该函数不需要处理负数的输入。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347126-hours2days-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347126-hours2days-py" id="tab-347126-hours2days-py" role="tab">
+            hours2days.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347126-hours2days-py" class="tab-pane active show" id="347126-hours2days-py" role="tabpanel">
+            <pre><code></code> </pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 默认参数.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 元组')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,35 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.868
+Bem-vindo de volta. A seguir,
+falaremos sobre estrutura de dados.
+
+00:00:03.901 --> 00:00:08.734
+Nossos programas usaram inteiros,
+pontos flutuantes e strings.
+
+00:00:08.767 --> 00:00:11.198
+Agora, veremos como armazenar
+conjuntos de dados.
+
+00:00:11.534 --> 00:00:15.634
+Também aprenderemos a iterar
+conjuntos de dados usando loops.
+
+00:00:15.667 --> 00:00:17.934
+Aprenderemos
+sobre refatoração,
+
+00:00:17.968 --> 00:00:19.667
+mais uma habilidade
+importante.
+
+00:00:19.701 --> 00:00:22.099
+Divirta-se e boa programação
+em Python!
+
+00:00:22.133 --> 00:00:23.232
+*END*
+

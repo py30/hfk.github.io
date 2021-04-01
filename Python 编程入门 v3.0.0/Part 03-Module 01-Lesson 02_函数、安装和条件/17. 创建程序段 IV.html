@@ -1,0 +1,380 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   创建程序段 IV
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          17. 创建程序段 IV
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习解决方案：构建帮助函数-score_to_rating_string">
+          练习解决方案：构建帮助函数
+          <code>
+           score_to_rating_string
+          </code>
+         </h1>
+         <p>
+          我们按照以下方法编写此函数：
+         </p>
+         <pre><code class="python language-python">def score_to_rating_string(av_score):
+    """
+    Convert the average score, which should be between 0 and 5, 
+    into a rating.
+    """
+    if av_score &lt; 0:
+        rating = None
+    elif av_score &lt; 1:
+        rating = "Terrible"
+    elif av_score &lt; 2:
+        rating = "Bad"
+    elif av_score &lt; 3:
+        rating = "OK"
+    elif av_score &lt; 4:
+        rating = "Good"
+    elif av_score &lt;= 5:
+        rating = "Excellent"
+    else:          #Using else at the end, every possible case gets caught
+        rating = None
+    if rating == None:
+        return "Error: not in correct range."
+    else:
+        return rating</code></pre>
+         <p>
+          还有另外一个解决方案是，在实际运行中使用多个返回语句：针对每一个不同情况返回不同语句。在该解决方案中，使用
+          <code>
+           else
+          </code>
+          意味着这个函数始终可返回值。
+         </p>
+         <pre><code class="python language-python">def score_to_rating_string(av_score): 
+    """
+    Convert the average score, which should be between 0 and 5, 
+    into a rating.
+    """
+    if  av_score &lt; 0:
+        return "Error"
+    elif av_score &lt; 1:
+        return "Terrible"
+    elif av_score &lt; 2:
+        return "Bad"
+    elif av_score &lt; 3:
+        return "OK"
+    elif av_score &lt; 4:
+        return "Good"
+    elif av_score &lt;=5:
+        return "Excellent"
+    else:
+        return "Error"</code></pre>
+         <p>
+          你的解决方案与我们的比较有何差异？
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：组合-scores_to_rating-函数">
+          练习：组合
+          <code>
+           scores_to_rating
+          </code>
+          函数
+         </h1>
+         <p>
+          先前所有帮助函数都构建得不错！现在可以将所有这些函数组合到一起，使其成为一个整体进行运行。
+         </p>
+         <p>
+          在该编程练习中，将编写的每个帮助函数放入编码窗口，然后在编写函数
+          <code>
+           scores_to_rating
+          </code>
+          时使用。请注意，此函数以五个分数（可能不是数字）开始，取中间三个分数的平均值，并将该平均值转换为返回的书面评分。
+         </p>
+         <p>
+          需要确保将一个函数的输出正确传递到
+          <code>
+           scores_to_rating
+          </code>
+          函数体的下一个输入。一次添加一个，同时还需添加有用的注释，而且调用
+          <code>
+           print
+          </code>
+          进进行测试，将有助于控制错误！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347027-scores_to_rating_final-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347027-scores_to_rating_final-py" id="tab-347027-scores_to_rating_final-py" role="tab">
+            scores_to_rating_final.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347027-scores_to_rating_final-py" class="tab-pane active show" id="347027-scores_to_rating_final-py" role="tabpanel">
+            <pre><code></code> </pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="18. 组合程序段.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. 创建程序段 IV')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

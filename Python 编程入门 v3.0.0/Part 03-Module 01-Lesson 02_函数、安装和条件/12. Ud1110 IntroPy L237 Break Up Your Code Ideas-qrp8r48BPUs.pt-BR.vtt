@@ -1,0 +1,80 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.534 --> 00:00:04.634
+Ao programar, é tentador querer
+criar um programa que faz tudo.
+
+00:00:04.667 --> 00:00:08.066
+Em geral, você escreve um código
+para algo que achou que era simples,
+
+00:00:08.100 --> 00:00:09.968
+até que surge uma nova ideia.
+
+00:00:10.000 --> 00:00:13.434
+Você a insere, porque faz sentido
+naquele momento.
+
+00:00:13.467 --> 00:00:17.300
+Antes que você perceba,
+seu código está enorme, complicado
+
+00:00:17.334 --> 00:00:20.234
+e praticamente impossível
+de depurar.
+
+00:00:20.267 --> 00:00:23.200
+Você não vai querer criar
+um bloco tão grande de código.
+
+00:00:23.234 --> 00:00:26.767
+O programa pode ter boas ideias
+e implementações bacanas,
+
+00:00:26.801 --> 00:00:31.667
+mas é impossível de ler e não dá
+para usar o código em outro lugar.
+
+00:00:31.701 --> 00:00:35.667
+Por isso, é importante planejar
+antes de começar a programar.
+
+00:00:35.701 --> 00:00:38.701
+A ótima ideia que você
+quer implementar
+
+00:00:38.734 --> 00:00:41.167
+certamente tem várias partes,
+
+00:00:41.200 --> 00:00:44.667
+diversas etapas ou casos diferentes,
+que podem ser separados,
+
+00:00:44.701 --> 00:00:47.000
+trabalhados
+e unidos novamente.
+
+00:00:47.033 --> 00:00:49.634
+Pensar nas partes do problema
+que quer resolver
+
+00:00:49.667 --> 00:00:52.300
+antes mesmo
+de encostar no teclado
+
+00:00:52.334 --> 00:00:54.701
+significa criar planos,
+dividir o trabalho
+
+00:00:54.734 --> 00:00:57.167
+e pensar em como testar o código
+bem no começo.
+
+00:00:57.200 --> 00:00:58.499
+Vamos testar um exemplo.
+
+00:00:58.533 --> 00:00:59.534
+*END*
+

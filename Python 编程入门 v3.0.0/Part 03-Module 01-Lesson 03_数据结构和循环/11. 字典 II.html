@@ -1,0 +1,1412 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字典 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          11. 字典 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="解决方案：定义一个字典">
+          解决方案：定义一个字典
+         </h1>
+         <p>
+          可以按照如下所示的方法定义字典，
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; population = {'Shanghai': 17.8,
+              'Istanbul': 13.3,
+              'Karachi': 13.0,
+              'Mumbai': 12.5}</code></pre>
+         <p>
+          我选择把每个键值对都放在其自身的行中，因此更易读取字典的定义，但是放在何处以及是否使用换行符只是一种风格选择。下面这段代码也一样：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0, 'Mumbai': 12.5}</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          不变键
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             哪些可以用作字典的键？提示：字典的键必须具有不可变性，也就是说，它们必须是不可修改的类型。
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484003318866" name="347100" type="checkbox" value="a1484003318866"/>
+           <label for="a1484003318866">
+            <p>
+             <code>
+              str
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003333525" name="347100" type="checkbox" value="a1484003333525"/>
+           <label for="a1484003333525">
+            <p>
+             <code>
+              list
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003334280" name="347100" type="checkbox" value="a1484003334280"/>
+           <label for="a1484003334280">
+            <p>
+             <code>
+              int
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003335062" name="347100" type="checkbox" value="a1484003335062"/>
+           <label for="a1484003335062">
+            <p>
+             <code>
+              float
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <ul>
+           <li>
+            `str`
+           </li>
+           <li>
+            `int`
+           </li>
+           <li>
+            `float`
+           </li>
+          </ul>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          练习：查找哪些值不存在
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             如果查找字典中不存在的值，会出现什么结果？在自己的计算机上创建一个测试字典，并使用方括号来查找尚未定义的值。看看会出现什么结果？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484003471533" name="347101" type="radio" value="a1484003471533"/>
+           <label for="a1484003471533">
+            <p>
+             查找返回
+             <code>
+              None
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003504254" name="347101" type="radio" value="a1484003504254"/>
+           <label for="a1484003504254">
+            <p>
+             将默认值为 None 的键添加到字典
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003504878" name="347101" type="radio" value="a1484003504878"/>
+           <label for="a1484003504878">
+            <p>
+             出现
+             <code>
+              KeyError
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484003505578" name="347101" type="radio" value="a1484003505578"/>
+           <label for="a1484003505578">
+            <p>
+             Python 在互联网上搜索合适的值
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          出现 `KeyError`
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字典中是什么内容？">
+          字典中是什么内容？
+         </h1>
+         <p>
+          我们可以使用与通过
+          <code>
+           in
+          </code>
+          关键字检查列表或集合中是否存在一个值的方法来查看字典中是否存在值。
+         </p>
+         <pre><code class="python language-python">if 'mithril' in elements:
+    print("That's a real element!")
+else:
+    print("There's no such element!')</code></pre>
+         <p>
+          如果集合中可能没有键，在查找之前可以使用
+          <code>
+           in
+          </code>
+          验证字典中是否存在这个键。
+         </p>
+         <p>
+          字典还有一个有用的相关方法，即
+          <code>
+           get
+          </code>
+          。
+          <code>
+           get
+          </code>
+          用于在字典中查找值，但不同于方括号，如果不存在这个键，
+          <code>
+           get
+          </code>
+          返回
+          <code>
+           None
+          </code>
+          (或选择的默认值)。如果预料查找可能会失败，则相对于普通方括号来说，
+          <code>
+           get
+          </code>
+          可能是一个更好的工具。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; elements.get('dilithium')
+None
+&gt;&gt;&gt; elements['dilithium']
+KeyError: 'dilithium'
+&gt;&gt;&gt; elements.get('kryptonite', 'There\'s no such element!')
+"There's no such element!"</code></pre>
+         <p>
+          在最后一个示例中，当未找到键时，我们指定返回一个默认值 (
+          <code>
+           string
+          </code>
+          <code>
+           'There\'s no such element!'
+          </code>
+          )，而不是
+          <code>
+           None
+          </code>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：用户（按国家--地区）">
+          练习：用户（按国家 / 地区）
+         </h1>
+         <p>
+          我们重新回顾一下此前的调查信息。在我们使用集合来确定数据集中有多少个国家之前，先假设该数据集实际上包含有关下载和安装某个应用程序的用户信息：对于每个下载和安装该应用程序的用户，其国家将出现在列表中。现在让我们用一个字典来进行更复杂的分析：每个国家有多少名用户？
+         </p>
+         <p>
+          创建一个字典，
+          <code>
+           country_counts
+          </code>
+          ，其键是国家名称，其值是国家/地区在
+          <code>
+           countries
+          </code>
+          列表中出现的次数。将自己的代码写在 app.py 文件中。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347109-countries-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347109-countries-py" id="tab-347109-countries-py" role="tab">
+            countries.py
+           </a>
+           <a aria-controls="347109-app-py" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#347109-app-py" id="tab-347109-app-py" role="tab">
+            app.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347109-countries-py" class="tab-pane active show" id="347109-countries-py" role="tabpanel">
+            <pre><code></code>country_list = ['Malta',
+ 'Sudan',
+ 'Oman',
+ 'Jamaica',
+ 'Pakistan',
+ 'Netherlands',
+ 'Venezuela',
+ 'Tuvalu',
+ 'Kazakhstan',
+ 'Namibia',
+ 'Congo {Democratic Rep}',
+ 'Qatar',
+ 'El Salvador',
+ 'Macedonia',
+ 'Morocco',
+ 'Albania',
+ 'Netherlands',
+ 'Namibia',
+ 'Moldova',
+ 'Djibouti',
+ 'Malaysia',
+ 'Belarus',
+ 'Niger',
+ 'Thailand',
+ 'Burkina',
+ 'Panama',
+ 'Libya',
+ 'Kuwait',
+ 'Dominican Republic',
+ 'Andorra',
+ 'Nauru',
+ 'Guyana',
+ 'Austria',
+ 'Germany',
+ 'Morocco',
+ 'Sudan',
+ 'Lebanon',
+ 'Bahamas',
+ 'Austria',
+ 'Chad',
+ 'Canada',
+ 'Ivory Coast',
+ 'Papua New Guinea',
+ 'Mali',
+ 'Marshall Islands',
+ 'Morocco',
+ 'Angola',
+ 'New Zealand',
+ 'Mali',
+ 'Moldova',
+ 'Libya',
+ 'Bulgaria',
+ 'Honduras',
+ 'Comoros',
+ 'Tunisia',
+ 'Peru',
+ 'Greece',
+ 'Montenegro',
+ 'Austria',
+ 'Cambodia',
+ 'St Lucia',
+ 'Ecuador',
+ 'Taiwan',
+ 'Colombia',
+ 'Liechtenstein',
+ 'Monaco',
+ 'Iraq',
+ 'Zambia',
+ 'Sri Lanka',
+ 'Poland',
+ 'Vanuatu',
+ 'Barbados',
+ 'Mauritius',
+ 'Turkmenistan',
+ 'Taiwan',
+ 'Israel',
+ 'Mali',
+ 'United Arab Emirates',
+ 'Zimbabwe',
+ 'Sao Tome &amp; Principe',
+ 'Kuwait',
+ 'Canada',
+ 'Vietnam',
+ 'Zambia',
+ 'Rwanda',
+ 'Kosovo',
+ 'Nepal',
+ 'Indonesia',
+ 'Suriname',
+ 'Mali',
+ 'Chile',
+ 'Luxembourg',
+ 'Papua New Guinea',
+ 'Norway',
+ 'Brunei',
+ 'Ecuador',
+ 'Turkey',
+ 'Pakistan',
+ 'Mozambique',
+ 'Senegal',
+ 'Algeria',
+ 'Laos',
+ 'Vietnam',
+ 'Kosovo',
+ 'Belize',
+ 'Bhutan',
+ 'Andorra',
+ 'Russian Federation',
+ 'Cambodia',
+ 'Madagascar',
+ 'Slovenia',
+ 'Malaysia',
+ 'Belgium',
+ 'Sweden',
+ 'Nepal',
+ 'Germany',
+ 'Fiji',
+ 'Australia',
+ 'Kenya',
+ 'Sudan',
+ 'Nepal',
+ 'Niger',
+ 'Palau',
+ 'Serbia',
+ 'Chad',
+ 'Bhutan',
+ 'Poland',
+ 'Nicaragua',
+ 'Barbados',
+ 'Hungary',
+ 'Algeria',
+ 'Ukraine',
+ 'China',
+ 'Latvia',
+ 'Panama',
+ 'Papua New Guinea',
+ 'Sweden',
+ 'Zimbabwe',
+ 'Jordan',
+ 'Sao Tome &amp; Principe',
+ 'Mexico',
+ 'Sudan',
+ 'Czech Republic',
+ 'New Zealand',
+ 'Uruguay',
+ 'Kuwait',
+ 'Liberia',
+ 'Canada',
+ 'Seychelles',
+ 'Liberia',
+ 'Saudi Arabia',
+ 'Sierra Leone',
+ 'South Sudan',
+ 'Bolivia',
+ 'Philippines',
+ 'Mauritania',
+ 'United States',
+ 'Hungary',
+ 'Bhutan',
+ 'Netherlands',
+ 'Burkina',
+ 'Congo {Democratic Rep}',
+ 'Central African Rep',
+ 'Burkina',
+ 'Poland',
+ 'Guinea',
+ 'United States',
+ 'Luxembourg',
+ 'Chile',
+ 'Kuwait',
+ 'Vatican City',
+ 'Maldives',
+ 'Ethiopia',
+ 'France',
+ 'Mozambique',
+ 'Nicaragua',
+ 'Portugal',
+ 'United States',
+ 'South Sudan',
+ 'Bangladesh',
+ 'Belize',
+ 'Mozambique',
+ 'Pakistan',
+ 'Sao Tome &amp; Principe',
+ 'Israel',
+ 'Antigua &amp; Deps',
+ 'Equatorial Guinea',
+ 'Grenada',
+ 'Liberia',
+ 'Nauru',
+ 'St Kitts &amp; Nevis',
+ 'Armenia',
+ 'Italy',
+ 'San Marino',
+ 'Congo {Democratic Rep}',
+ 'Suriname',
+ 'Mauritius',
+ 'Albania',
+ 'Samoa',
+ 'Bosnia Herzegovina',
+ 'South Sudan',
+ 'Trinidad &amp; Tobago',
+ 'Nigeria',
+ 'Bolivia',
+ 'South Africa',
+ 'Qatar',
+ 'South Sudan',
+ 'Morocco',
+ 'Benin',
+ 'Kuwait',
+ 'Tajikistan',
+ 'Guyana',
+ 'Indonesia',
+ 'Turkmenistan',
+ 'Sierra Leone',
+ 'Mali',
+ 'Antigua &amp; Deps',
+ 'Turkmenistan',
+ 'Seychelles',
+ 'Bulgaria',
+ 'Rwanda',
+ 'Czech Republic',
+ 'Philippines',
+ 'Norway',
+ 'Germany',
+ 'Tonga',
+ 'United Arab Emirates',
+ 'Syria',
+ 'Bahamas',
+ 'Armenia',
+ 'Paraguay',
+ 'Zambia',
+ 'Samoa',
+ 'Senegal',
+ 'Kiribati',
+ 'Taiwan',
+ 'Gabon',
+ 'Cuba',
+ 'Comoros',
+ 'Bhutan',
+ 'Seychelles',
+ 'Mexico',
+ 'Bhutan',
+ 'El Salvador',
+ 'Tunisia',
+ 'Liechtenstein',
+ 'Czech Republic',
+ 'Congo',
+ 'Jordan',
+ 'Djibouti',
+ 'Macedonia',
+ 'Finland',
+ 'Denmark',
+ 'San Marino',
+ 'Cuba',
+ 'Botswana',
+ 'Equatorial Guinea',
+ 'United Kingdom',
+ 'Tanzania',
+ 'Bosnia Herzegovina',
+ 'Algeria',
+ 'El Salvador',
+ 'Senegal',
+ 'Myanmar, {Burma}',
+ 'Pakistan',
+ 'Malaysia',
+ 'Oman',
+ 'Tanzania',
+ 'Gabon',
+ 'Tonga',
+ 'Vietnam',
+ 'Sudan',
+ 'Slovakia',
+ 'Tajikistan',
+ 'Kyrgyzstan',
+ 'Kiribati',
+ 'Zambia',
+ 'San Marino',
+ 'Saudi Arabia',
+ 'South Sudan',
+ 'Mexico',
+ 'Uruguay',
+ 'Cyprus',
+ 'Syria',
+ 'Panama',
+ 'Sierra Leone',
+ 'Finland',
+ 'Iraq',
+ 'United States',
+ 'Dominican Republic',
+ 'Czech Republic',
+ 'Latvia',
+ 'Bolivia',
+ 'Korea North',
+ 'Angola',
+ 'Germany',
+ 'Malawi',
+ 'Guinea-Bissau',
+ 'Ghana',
+ 'Lithuania',
+ 'East Timor',
+ 'Honduras',
+ 'Bahamas',
+ 'Algeria',
+ 'Luxembourg',
+ 'Eritrea',
+ 'Gabon',
+ 'Mauritania',
+ 'Cambodia',
+ 'Solomon Islands',
+ 'Haiti',
+ 'Jamaica',
+ 'Kyrgyzstan',
+ 'Tanzania',
+ 'Marshall Islands',
+ 'Lithuania',
+ 'Bahrain',
+ 'East Timor',
+ 'Botswana',
+ 'Marshall Islands',
+ 'Grenada',
+ 'France',
+ 'St Lucia',
+ 'Eritrea',
+ 'Azerbaijan',
+ 'Ghana',
+ 'New Zealand',
+ 'El Salvador',
+ 'Cape Verde',
+ 'Hungary',
+ 'Botswana',
+ 'Bosnia Herzegovina',
+ 'Kuwait',
+ 'Saudi Arabia',
+ 'Indonesia',
+ 'Qatar',
+ 'Germany',
+ 'Argentina',
+ 'Georgia',
+ 'Fiji',
+ 'Tajikistan',
+ 'Vanuatu',
+ 'Samoa',
+ 'Togo',
+ 'Gambia',
+ 'Sudan',
+ 'Cambodia',
+ 'Argentina',
+ 'Canada',
+ 'Nepal',
+ 'Grenada',
+ 'Vietnam',
+ 'Cameroon',
+ 'Cameroon',
+ 'Lebanon',
+ 'Rwanda',
+ 'United Kingdom',
+ 'Cambodia',
+ 'Paraguay',
+ 'Guinea',
+ 'Kosovo',
+ 'Switzerland',
+ 'Mauritius',
+ 'Fiji',
+ 'Paraguay',
+ 'Thailand',
+ 'Eritrea',
+ 'Guatemala',
+ 'Suriname',
+ 'Palau',
+ 'Mozambique',
+ 'Bangladesh',
+ 'Australia',
+ 'South Africa',
+ 'Yemen',
+ 'India',
+ 'Peru',
+ 'Korea North',
+ 'Oman',
+ 'Moldova',
+ 'St Kitts &amp; Nevis',
+ 'Benin',
+ 'India',
+ 'Grenada',
+ 'Taiwan',
+ 'Madagascar',
+ 'Paraguay',
+ 'Angola',
+ 'Saudi Arabia',
+ 'Antigua &amp; Deps',
+ 'Marshall Islands',
+ 'Micronesia',
+ 'Benin',
+ 'Monaco',
+ 'Cuba',
+ 'Kuwait',
+ 'Serbia',
+ 'Oman',
+ 'Bahamas',
+ 'Norway',
+ 'Thailand',
+ 'Malawi',
+ 'Guyana',
+ 'Denmark',
+ 'South Africa',
+ 'China',
+ 'Oman',
+ 'New Zealand',
+ 'Austria',
+ 'Venezuela',
+ 'Syria',
+ 'Rwanda',
+ 'Dominican Republic',
+ 'Algeria',
+ 'Honduras',
+ 'Solomon Islands',
+ 'Palau',
+ 'Cape Verde',
+ 'Ghana',
+ 'Algeria',
+ 'Pakistan',
+ 'Morocco',
+ 'Kenya',
+ 'Switzerland',
+ 'Malta',
+ 'China',
+ 'South Sudan',
+ 'Jamaica',
+ 'East Timor',
+ 'Malta',
+ 'Benin',
+ 'China',
+ 'Algeria',
+ 'United Kingdom',
+ 'Palau',
+ 'Ireland {Republic}',
+ 'Maldives',
+ 'Swaziland',
+ 'Guinea',
+ 'Haiti',
+ 'Lesotho',
+ 'Korea South',
+ 'Italy',
+ 'Nigeria',
+ 'Kiribati',
+ 'Kyrgyzstan',
+ 'Antigua &amp; Deps',
+ 'Saint Vincent &amp; the Grenadines',
+ 'United States',
+ 'Mongolia',
+ 'Saudi Arabia',
+ 'Haiti',
+ 'Czech Republic',
+ 'Portugal',
+ 'Mauritius',
+ 'Samoa',
+ 'Honduras',
+ 'Vietnam',
+ 'Algeria',
+ 'Marshall Islands',
+ 'Kiribati',
+ 'Fiji',
+ 'Ivory Coast',
+ 'Tajikistan',
+ 'Nicaragua',
+ 'Portugal',
+ 'Equatorial Guinea',
+ 'Ivory Coast',
+ 'Zambia',
+ 'New Zealand',
+ 'Somalia',
+ 'Senegal',
+ 'Mongolia',
+ 'Montenegro',
+ 'Ghana',
+ 'Bahrain',
+ 'Laos',
+ 'Paraguay',
+ 'Guinea-Bissau',
+ 'Bosnia Herzegovina',
+ 'Tanzania',
+ 'Gambia',
+ 'Sierra Leone',
+ 'Canada',
+ 'Bolivia',
+ 'Iraq',
+ 'Ivory Coast',
+ 'Zimbabwe',
+ 'Turkmenistan',
+ 'Bhutan',
+ 'Venezuela',
+ 'Ghana',
+ 'Panama',
+ 'Philippines',
+ 'Kenya',
+ 'Mali',
+ 'Tunisia',
+ 'Turkmenistan',
+ 'Ukraine',
+ 'Egypt',
+ 'Burundi',
+ 'Qatar',
+ 'Latvia',
+ 'Slovenia',
+ 'Gambia',
+ 'Algeria',
+ 'Poland',
+ 'Myanmar, {Burma}',
+ 'Panama',
+ 'Myanmar, {Burma}',
+ 'Central African Rep',
+ 'United Kingdom',
+ 'Comoros',
+ 'Yemen',
+ 'Liechtenstein',
+ 'Gambia',
+ 'Ethiopia',
+ 'Malaysia',
+ 'Italy',
+ 'Brazil',
+ 'Brazil',
+ 'Russian Federation',
+ 'Nicaragua',
+ 'Switzerland',
+ 'Georgia',
+ 'Georgia',
+ 'Dominica',
+ 'Liberia',
+ 'Tonga',
+ 'St Kitts &amp; Nevis',
+ 'Vatican City',
+ 'Luxembourg',
+ 'Barbados',
+ 'Croatia',
+ 'Samoa',
+ 'St Lucia',
+ 'Comoros',
+ 'Burundi',
+ 'Philippines',
+ 'Mali',
+ 'Yemen',
+ 'Singapore',
+ 'Brazil',
+ 'Benin',
+ 'Slovenia',
+ 'Qatar',
+ 'Tajikistan',
+ 'Qatar',
+ 'Seychelles',
+ 'Somalia',
+ 'Zimbabwe',
+ 'Marshall Islands',
+ 'Ukraine',
+ 'Japan',
+ 'Sudan',
+ 'St Kitts &amp; Nevis',
+ 'Botswana',
+ 'Slovakia',
+ 'Azerbaijan',
+ 'Philippines',
+ 'United States',
+ 'Nauru',
+ 'Albania',
+ 'Burundi',
+ 'Dominican Republic',
+ 'Bolivia',
+ 'France',
+ 'Antigua &amp; Deps',
+ 'Georgia',
+ 'Finland',
+ 'Benin',
+ 'Oman',
+ 'Dominica',
+ 'Belize',
+ 'South Africa',
+ 'Libya',
+ 'Cyprus',
+ 'Ecuador',
+ 'France',
+ 'Namibia',
+ 'Zimbabwe',
+ 'Dominica',
+ 'Belgium',
+ 'United Arab Emirates',
+ 'Pakistan',
+ 'Colombia',
+ 'Vatican City',
+ 'Chad',
+ 'Algeria',
+ 'Malaysia',
+ 'Cambodia',
+ 'Equatorial Guinea',
+ 'Slovenia',
+ 'Bolivia',
+ 'Kazakhstan',
+ 'Japan',
+ 'New Zealand',
+ 'Morocco',
+ 'Romania',
+ 'Mexico',
+ 'Tonga',
+ 'Eritrea',
+ 'Senegal',
+ 'Belize',
+ 'Kosovo',
+ 'Benin',
+ 'Eritrea',
+ 'Egypt',
+ 'Korea North',
+ 'Taiwan',
+ 'Taiwan',
+ 'Guatemala',
+ 'Slovenia',
+ 'Somalia',
+ 'Spain',
+ 'Libya',
+ 'Dominica',
+ 'Togo',
+ 'Taiwan',
+ 'Morocco',
+ 'Finland',
+ 'Iraq',
+ 'Albania',
+ 'Hungary',
+ 'Angola',
+ 'St Lucia',
+ 'Seychelles',
+ 'Seychelles',
+ 'Andorra',
+ 'Serbia',
+ 'Mauritius',
+ 'Jamaica',
+ 'Ivory Coast',
+ 'Sudan',
+ 'Bahrain',
+ 'Australia',
+ 'France',
+ 'China',
+ 'United Kingdom',
+ 'Marshall Islands',
+ 'Guinea',
+ 'Japan',
+ 'Cuba',
+ 'Sierra Leone',
+ 'Sri Lanka',
+ 'Antigua &amp; Deps',
+ 'Georgia',
+ 'India',
+ 'Germany',
+ 'Congo',
+ 'Cameroon',
+ 'Brunei',
+ 'Uganda',
+ 'South Africa',
+ 'Ecuador',
+ 'St Lucia',
+ 'Congo {Democratic Rep}',
+ 'Bahamas',
+ 'Syria',
+ 'Czech Republic',
+ 'Pakistan',
+ 'Tanzania',
+ 'Sao Tome &amp; Principe',
+ 'Burkina',
+ 'Nigeria',
+ 'Mali',
+ 'Greece',
+ 'Vatican City',
+ 'South Sudan',
+ 'Morocco',
+ 'Burkina',
+ 'Switzerland',
+ 'Kosovo',
+ 'Gabon',
+ 'Paraguay',
+ 'Romania',
+ 'Mongolia',
+ 'Zambia',
+ 'Syria',
+ 'Netherlands',
+ 'Zambia',
+ 'Dominican Republic',
+ 'Iceland',
+ 'Libya',
+ 'Lebanon',
+ 'Antigua &amp; Deps',
+ 'Albania',
+ 'Turkey',
+ 'New Zealand',
+ 'Somalia',
+ 'Guinea-Bissau',
+ 'El Salvador',
+ 'Israel',
+ 'Central African Rep',
+ 'Korea North',
+ 'Zambia',
+ 'Switzerland',
+ 'Taiwan',
+ 'Namibia',
+ 'Mauritania',
+ 'Sudan',
+ 'Ghana',
+ 'Moldova',
+ 'East Timor',
+ 'Brunei',
+ 'Swaziland',
+ 'Cambodia',
+ 'Saint Vincent &amp; the Grenadines',
+ 'Netherlands',
+ 'Papua New Guinea',
+ 'Georgia',
+ 'Tonga',
+ 'Mauritius',
+ 'Canada',
+ 'Guinea-Bissau',
+ 'Norway',
+ 'Singapore',
+ 'Morocco',
+ 'Cape Verde',
+ 'Pakistan',
+ 'Central African Rep',
+ 'Myanmar, {Burma}',
+ 'United Arab Emirates',
+ 'Maldives',
+ 'Ghana',
+ 'Saudi Arabia',
+ 'Netherlands',
+ 'Albania',
+ 'Bahamas',
+ 'Papua New Guinea',
+ 'Kosovo',
+ 'Lesotho',
+ 'Panama',
+ 'Argentina',
+ 'India',
+ 'Kazakhstan',
+ 'Angola',
+ 'Guinea',
+ 'Ukraine',
+ 'Congo',
+ 'Bahrain',
+ 'Israel',
+ 'Sudan',
+ 'Qatar',
+ 'Belarus',
+ 'Ghana',
+ 'Algeria',
+ 'Macedonia',
+ 'Grenada',
+ 'Spain',
+ 'Antigua &amp; Deps',
+ 'Comoros',
+ 'Egypt',
+ 'Belize',
+ 'Haiti',
+ 'Eritrea',
+ 'Poland',
+ 'Bhutan',
+ 'Cape Verde',
+ 'Uganda',
+ 'Syria',
+ 'Libya',
+ 'Thailand',
+ 'Bahrain',
+ 'Slovenia',
+ 'Luxembourg',
+ 'Tunisia',
+ 'Guinea-Bissau',
+ 'Bhutan',
+ 'Uzbekistan',
+ 'Togo',
+ 'Madagascar',
+ 'Greece',
+ 'Guinea-Bissau',
+ 'Afghanistan',
+ 'Zambia',
+ 'Hungary',
+ 'Albania',
+ 'India',
+ 'Sao Tome &amp; Principe',
+ 'Honduras',
+ 'Albania',
+ 'Cape Verde',
+ 'Turkmenistan',
+ 'Antigua &amp; Deps']</pre>
+           </div>
+           <div aria-labelledby="tab-347109-app-py" class="tab-pane" id="347109-app-py" role="tabpanel">
+            <pre><code></code>from countries import country_list # Note: since the list is so large, it's tidier
+                                   # to put in in a separate file. We'll learn more
+                                   # about "import" later on.
+
+country_counts = {}
+for country in country_list:
+    #todo: insert countries into the country_count dict.
+    # If the country isn't in the dict already, add it and set the value to 1
+    # If the country is in the dict, increment its value by one to keep count
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="迭代字典和集合">
+          迭代字典和集合
+         </h1>
+         <p>
+          可以使用 for 循环迭代集合和字典，这与迭代列表的方法大体相同。采用如下所示的方法迭代集合：
+         </p>
+         <pre><code class="Python language-Python">&gt;&gt;&gt; colors = set(['Pthalo Blue', 'Indian Yellow', 'Sap Green'])
+&gt;&gt;&gt; for color in colors:
+...    print(color)
+...
+Indian Yellow
+Sap Green
+Pthalo Blue</code></pre>
+         <p>
+          请注意，for 循环没有以与插入集合相同的顺序打印颜色。集合不跟踪列表的排序方式，因此迭代集合会以任意顺序生成值。
+         </p>
+         <p>
+          用于迭代字典的语法非常相似。不同的是字典存储键值对，循环字典时，可迭代键：
+         </p>
+         <pre><code class="python language-python">Beatles_Discography = {"Please Please Me": 1963, "With the Beatles": 1963, 
+    "A Hard Day's Night": 1964, "Beatles for Sale": 1964, "Twist and Shout": 1964,
+    "Help": 1965, "Rubber Soul": 1965, "Revolver": 1966,
+    "Sgt. Pepper's Lonely Hearts Club Band": 1967,
+    "Magical Mystery Tour": 1967, "The Beatles": 1968,
+    "Yellow Submarine": 1969 ,'Abbey Road': 1969,
+    "Let It Be": 1970}
+
+for album_title in Beatles_Discography:
+    print("title: {}, year: {}".format(album_title, Beatles_Discography[album_title]))</code></pre>
+         <p>
+          我们可以使用键
+          <code>
+           album_title
+          </code>
+          获取字典
+          <code>
+           Beatles_Discography[album_title]
+          </code>
+          中的每个值。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：多产的一年">
+          练习：多产的一年
+         </h1>
+         <p>
+          编写一个函数
+          <code>
+           most_prolific
+          </code>
+          ，其将采用与上述
+          <code>
+           Beatles_Discography
+          </code>
+          示例相同的字典格式，并返回发布最多专辑的年份。如果在
+          <code>
+           Beatles_Discography
+          </code>
+          中调用该函数，那么应返回 1964 年，这一年相对于其他年份发行的唱片数量较多一些。
+         </p>
+         <p>
+          如果多个年份的最大发行量相同，则该函数将返回一个年份列表。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347106-prolificyear-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347106-prolificyear-py" id="tab-347106-prolificyear-py" role="tab">
+            prolificyear.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347106-prolificyear-py" class="tab-pane active show" id="347106-prolificyear-py" role="tabpanel">
+            <pre><code></code></pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="12. 复合数据结构.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 字典 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

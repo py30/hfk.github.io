@@ -1,0 +1,521 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   定义函数 I
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 定义函数 I
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="圆柱体积函数">
+          圆柱体积函数
+         </h1>
+         <p>
+          我们以前使用过几种 Python 内置函数。现在，我们可以尝试自己编写函数。
+         </p>
+         <p>
+          我们将编写一个计算圆柱体积的函数：圆柱的高乘以其半径的平方，再乘以 pi。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="已标明圆柱的半径 (r) 和高 (h)。
+图片改编自 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Circular_cylinder_rh.svg)" class="img img-fluid" src="img/intropy-l2-circular-cylinder-rh.svg"/>
+          <figcaption class="figure-caption">
+           <p>
+            已标明圆柱的半径 (r) 和高 (h)。
+            <br/>
+            图片改编自
+            <a href="https://commons.wikimedia.org/wiki/File:Circular_cylinder_rh.svg" target="_blank">
+             Wikimedia Commons
+            </a>
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          下面是一个计算圆柱体积的函数定义：
+         </p>
+         <pre><code class="python language-python">def cylinder_volume(height, radius):
+    pi = 3.14159
+    return height * pi * radius ** 2</code></pre>
+         <p>
+          在定义
+          <code>
+           cylinder_volume
+          </code>
+          函数后，可以按如下方法使用该函数：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; cylinder_volume(10, 3)
+282.7431</code></pre>
+         <p>
+          现在我们来仔细分析一下这个函数的定义：
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="分析函数定义">
+          分析函数定义
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="函数定义的元素" class="img img-fluid" src="img/intropy-l1-elements-of-function-definition2.png"/>
+          <figcaption class="figure-caption">
+           <p>
+            函数定义的元素
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h2 id="函数头">
+          函数头
+         </h2>
+         <ul>
+          <li>
+           <strong>
+            (1)
+           </strong>
+           <code>
+            def
+           </code>
+           关键字表示以下代码即函数定义。
+          </li>
+          <li>
+           <strong>
+            (2)
+           </strong>
+           <code>
+            def
+           </code>
+           后跟的是函数的名称，在这个例子中是
+           <code>
+            cylinder_volume
+           </code>
+           。函数名称应该是一个单词，可使用下划线连接两个单词。
+          </li>
+          <li>
+           <strong>
+            (3)
+           </strong>
+           函数定义第一行的最后一个元素是函数所需的参数（函数名的命名规则与变量名相同）。函数的参数是调用函数时传入的值；在函数体中将使用这些参数。请用逗号隔开参数，并将它们放在一对括号中。如果编写一个不带参数的函数，应使用一对空括号
+           <code>
+            ()
+           </code>
+           。函数定义的第一行以冒号
+           <code>
+            :
+           </code>
+           结尾。
+          </li>
+         </ul>
+         <p>
+          下面是一个不带参数的函数示例：
+         </p>
+         <pre><code class="python language-python">def print_greeting():
+    print('Hello World!')</code></pre>
+         <p>
+          该函数将打印出 "Hello World"。由于这个函数没有参数，因此我们使用一对空括号。
+         </p>
+         <h2 id="函数体">
+          函数体
+         </h2>
+         <ul>
+          <li>
+           <strong>
+            (4)
+           </strong>
+           使用四个空格缩进函数体。函数体是函数发挥作用的载体。我们可以在函数体内引用参数变量，以及定义新的变量。在此定义的
+           <code>
+            pi
+           </code>
+           变量是一个局部变量，这意味着它只能在
+           <code>
+            cylinder_volume
+           </code>
+           函数的函数体中使用。在其他地方尝试访问该变量会导致错误。
+          </li>
+          <li>
+           <strong>
+            (5)
+           </strong>
+           使用
+           <code>
+            return
+           </code>
+           关键字可获取函数结果。
+           <code>
+            return
+           </code>
+           之后的表达式值是函数的输出值。
+          </li>
+          <li>
+           <strong>
+            (6)
+           </strong>
+           在这个示例中，我们返回一个表达式（即圆柱体积的公式）的值。请注意，该表达式先计算
+           <code>
+            radius ** 2
+           </code>
+           ，这是因为在数学运算中，先计算乘方，再计算乘法。（有时为了避免混淆，在涉及大量运算的数学表达式中，你也可以添加括号，如
+           <code>
+            height * pi * (radius ** 2)
+           </code>
+           。）如果你不想在设置返回值时使用表达式，也可以提前在函数体中计算体积，然后将其存储在名为
+           <code>
+            volume
+           </code>
+           的变量中，这将使我们可以
+           <code>
+            return volume
+           </code>
+           。
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：人口密度函数">
+          练习：人口密度函数
+         </h1>
+         <p>
+          请编写一个名为
+          <code>
+           population_density
+          </code>
+          的函数，该函数有两个参数，
+          <code>
+           population
+          </code>
+          和
+          <code>
+           land_area
+          </code>
+          （以平方公里计），并返回一个根据这些值计算出的人口密度。下面的练习中有两个测试案例，你可以使用这两个案例验证自己的函数是否可用。编写函数后，请使用测试答案按钮测试代码。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346966-pop_density-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346966-pop_density-py" id="tab-346966-pop_density-py" role="tab">
+            pop_density.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346966-pop_density-py" class="tab-pane active show" id="346966-pop_density-py" role="tabpanel">
+            <pre><code></code># todo: define a function named `population_density` that takes two arguments, 
+# `population` and `land_area` (in square kilometres), and returns a population 
+# density calculated from those values.
+
+# Your code goes here!
+
+
+
+
+# Here are test cases to verify that your function works as expected:
+test1 = population_density(10, 1)
+expected_result1 = 10
+print("expected result: {}, actual result: {}".format(expected_result1, test1))
+
+test2 = population_density(864816, 121.4)
+expected_result2 = 7123.6902801
+print("expected result: {}..., actual result: {}".format(expected_result2, test2))</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 定义函数 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 定义函数 I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

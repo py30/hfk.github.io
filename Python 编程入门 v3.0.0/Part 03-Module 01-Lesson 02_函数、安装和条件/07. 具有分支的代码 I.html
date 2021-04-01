@@ -1,0 +1,731 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   具有分支的代码 I
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          07. 具有分支的代码 I
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="python-中的-if">
+          Python 中的
+          <code>
+           if
+          </code>
+         </h1>
+         <p>
+          具有分支的代码（在某种或某些条件下分支中的代码才能够执行），这类代码在许多编程情况下非常有用。我们使用
+          <strong>
+           条件表达式
+          </strong>
+          或
+          <strong>
+           <code>
+            if
+           </code>
+           语句
+          </strong>
+          控制是否运行代码块。我们来看一下 Python 中条件表达式的示例。
+         </p>
+         <p>
+          这是付费即用手机计费系统的一部分。客户可以设置一个到他们银行帐户的链接，在他们的电话信用余额低于阈值金额时，可以为手机充值额度，银行扣费。
+         </p>
+         <h1 id="条件表达式分析">
+          条件表达式分析
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="```python
+if phone_balance &lt; 10:
+    phone_balance += 10
+   bank_balance -= 10
+```" class="img img-fluid" src="img/intropy-l2-if-example.png"/>
+          <figcaption class="figure-caption">
+           <pre><code class="python language-python">if phone_balance &lt; 10:
+    phone_balance += 10
+   bank_balance -= 10</code></pre>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <ol>
+          <li>
+           <code>
+            if
+           </code>
+           关键字表示此行是条件表达式。
+          </li>
+          <li>
+           <code>
+            if
+           </code>
+           之后是
+           <code>
+            phone_balance &lt; 10
+           </code>
+           ，即要检查的条件。这部分是
+           <strong>
+            布尔表达式
+           </strong>
+           —— 一个计算结果为
+           <code>
+            True
+           </code>
+           或
+           <code>
+            False
+           </code>
+           的表达式。
+          </li>
+          <li>
+           条件表达式（或 "
+           <code>
+            if
+           </code>
+           语句"）以冒号结尾。
+          </li>
+          <li>
+           该行后面是一个缩进的代码块，在此种情况中：
+          </li>
+         </ol>
+         <pre><code class="python language-python">    phone_balance += 10
+    bank_balance -= 10</code></pre>
+         <p>
+          如果布尔表达式的计算结果为
+          <code>
+           True
+          </code>
+          ，那么将执行该缩进的代码块。如果布尔表达式的计算结果为
+          <code>
+           False
+          </code>
+          ，则不会执行缩进的代码块。
+         </p>
+         <p>
+          <strong>
+           布尔表达式
+          </strong>
+          的值 —— 计算条件表达式的结果，等于
+          <code>
+           True
+          </code>
+          或
+          <code>
+           False
+          </code>
+          ，是运行代码时决定接下来会发生什么的部分。布尔表达式的一种常见格式是使用
+          <strong>
+           比较运算符
+          </strong>
+          ，例如 &gt;、&lt;=、== 或 !=。在该示例中，如果
+          <code>
+           phone_balance
+          </code>
+          的值小于 10，则将执行缩进块中的代码。更复杂的布尔表达式也很有用。如果条件为数值，则可能需要检查值是否在一定范围内，或者甚至需要进行一些计算，以进行比较。
+         </p>
+         <pre><code class="python language-python">if 18.5 &lt;= weight_in_kg / (height_in_m)**2 &lt; 25:
+    print("BMI is considered 'normal'.")</code></pre>
+         <p>
+          但是不管简单或复杂，布尔表达式的值必须为
+          <code>
+           True
+          </code>
+          或
+          <code>
+           False
+          </code>
+          ，该值用于决定是否执行缩进块。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="具有更多分支的代码：if、elif-和-else">
+          具有更多分支的代码：
+          <code>
+           if
+          </code>
+          、
+          <code>
+           elif
+          </code>
+          和
+          <code>
+           else
+          </code>
+         </h1>
+         <p>
+          有时候我们会想要：如果条件为真，则执行一项指令，如果条件为假，则执行另一项指令。如果
+          <code>
+           if
+          </code>
+          语句后的布尔表达式计算结果为
+          <code>
+           True
+          </code>
+          ，则运行其下的缩进代码块。我们可以使用
+          <code>
+           else
+          </code>
+          关键字来给出替代方法：如果布尔表达式是
+          <code>
+           False
+          </code>
+          ，应该执行的操作。
+         </p>
+         <p>
+          此代码打印一则消息，表示一个整数（变量名为
+          <code>
+           number
+          </code>
+          ）的奇偶性。
+         </p>
+         <pre><code class="python language-python">if number % 2 == 0:
+    print("The number " + str(number) + " is even.")
+else:
+    print("The number " + str(number) + " is odd.")</code></pre>
+         <p>
+          <code>
+           else
+          </code>
+          关键字后面总是跟一个冒号，不需要布尔表达式 ——
+          <code>
+           if
+          </code>
+          语句后的布尔表达式计算结果为
+          <code>
+           False
+          </code>
+          时，即可运行。
+         </p>
+         <p>
+          如果可能的情况超过两种，则将另外一个条件表达式与
+          <code>
+           else
+          </code>
+          条件一起使用将比较有用。Python 有一个特殊的关键字
+          <code>
+           elif
+          </code>
+          （
+          <code>
+           else - if
+          </code>
+          的缩写），可处理此种情况。如果我们使用
+          <code>
+           else
+          </code>
+          ，而且
+          <code>
+           else
+          </code>
+          块中还有另一个
+          <code>
+           if
+          </code>
+          语句，就可以使用
+          <code>
+           elif
+          </code>
+          来省去多层代码块缩进。
+         </p>
+         <p>
+          在该示例中，条件语句位于一个名为
+          <code>
+           garden_calendar
+          </code>
+          的函数中。
+         </p>
+         <pre><code class="python language-python">def garden_calendar(season):
+    if season == "spring":
+        print("time to plant the garden!")
+    elif season == "summer":
+        print("time to water the garden!")
+    elif season == "autumn" or season == "fall":
+        print("time to harvest the garden!")
+    elif season == "winter":
+        print("time to stay indoors and drink tea!")
+    else:
+        print("I don't recognize that season")</code></pre>
+         <p>
+          与
+          <code>
+           if
+          </code>
+          一样，
+          <code>
+           elif
+          </code>
+          语句也始终需要一个条件表达式。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：按流程操作！">
+          练习：按流程操作！
+         </h1>
+         <p>
+          尝试运行以下使用
+          <code>
+           if
+          </code>
+          和
+          <code>
+           else
+          </code>
+          的代码。尝试不同的输入，并使用
+          <code>
+           print
+          </code>
+          查看输出。你可否按照逻辑流程找出哪些代码可以运行？如果不确定，请添加其他
+          <code>
+           print
+          </code>
+          语句，以帮助你了解其原理。不论你是在开发新代码或试图理解已编写的代码，这都是一个好方法。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346994-control_flow_playground-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346994-control_flow_playground-py" id="tab-346994-control_flow_playground-py" role="tab">
+            control_flow_playground.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346994-control_flow_playground-py" class="tab-pane active show" id="346994-control_flow_playground-py" role="tabpanel">
+            <pre><code></code>#First Example - uncomment lines or change values to test the code
+phone_balance = 7.62
+bank_balance = 104.39
+#phone_balance = 12.34
+#bank_balance = 25
+if phone_balance &lt; 10:
+    phone_balance += 10
+    bank_balance -= 10
+print(phone_balance)
+print(bank_balance)
+
+#Second Example
+
+#change the number to experiment!
+number = 145346334
+#number = 5 #3 sir
+if number % 2 == 0:
+    print("The number " + str(number) + " is even.")
+else:
+    print("The number " + str(number) + " is odd.")
+
+#Third Example 
+
+#change the age to experiment with the pricing
+age = 35
+
+#set the age limits for bus fares
+free_up_to_age = 4
+child_up_to_age = 18
+senior_from_age = 65
+
+#set bus fares
+concession_ticket = 1.25
+adult_ticket = 2.50
+
+#ticket price logic
+if age &lt;= free_up_to_age:
+    ticket_price = 0
+elif age &lt;= child_up_to_age:
+    ticket_price = concession_ticket
+elif age &gt;= senior_from_age:
+    ticket_price = concession_ticket
+else:
+    ticket_price = adult_ticket
+message = "Somebody who is {} years old will pay ${} to ride the bus.".format(age,ticket_price)
+print(message)</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：获得哪种奖励？">
+          练习：获得哪种奖励？
+         </h1>
+         <p>
+          在本次练习中，运行一个名为
+          <code>
+           which_prize()
+          </code>
+          的函数，该函数用于通知参赛者他们在游戏中根据积分所赢得的奖励。
+         </p>
+         <table>
+          <thead>
+           <tr>
+            <th id="points">
+             Points
+            </th>
+            <th id="prize">
+             Prize
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             0 - 50
+            </td>
+            <td>
+             wooden rabbit
+            </td>
+           </tr>
+           <tr>
+            <td>
+             51 - 150
+            </td>
+            <td>
+             No prize
+            </td>
+           </tr>
+           <tr>
+            <td>
+             151 - 180
+            </td>
+            <td>
+             wafer-thin mint
+            </td>
+           </tr>
+           <tr>
+            <td>
+             181 - 200
+            </td>
+            <td>
+             penguin
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+          <code>
+           which_prize()
+          </code>
+          的输入将是积分数（整数）。函数
+          <code>
+           which_prize()
+          </code>
+          应该返回文本
+          <code>
+           "恭喜！你赢得了 [奖品名称]!"
+          </code>
+          ，如果他们赢得了奖品，还应包括奖品名称，如果没有获奖，文本内容应为
+          <code>
+           "哦，亲爱的，这次没有奖品"
+          </code>
+          。和往常一样，测试函数，检查一下它是否能正常执行
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346996-which_prize-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346996-which_prize-py" id="tab-346996-which_prize-py" role="tab">
+            which_prize.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346996-which_prize-py" class="tab-pane active show" id="346996-which_prize-py" role="tabpanel">
+            <pre><code></code></pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="08. 具有分支的代码 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. 具有分支的代码 I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

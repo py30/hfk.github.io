@@ -1,0 +1,684 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   算术
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 算术
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="算术运算符">
+          算术运算符
+         </h1>
+         <p>
+          我们将从数字开始学习 Python。你可以滚动到下方使用代码编辑器来自己尝试这些示例，并点击测试答案按钮来运行代码 ，运行结果将显示在下方的窗口中。在 Python 中，你可以使用基础的数学运算符，Python 将遵循常规数学规则来运行算数计算。
+         </p>
+         <p>
+          下面是一个 Python 计算：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(3 + 1)
+4</code></pre>
+         <p>
+          上面这行代码可以打印出结果 4。我们也可以在不打印的情况下完成该计算，但这样一来就无法看到结果。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 3 + 1</code></pre>
+         <p>
+          在这些示例中，
+          <code>
+           &gt;&gt;&gt;
+          </code>
+          是 Python 提示符。我们将使用这个符号来区分输入（提示符后面的内容）与下面一行的输出。
+         </p>
+         <p>
+          Python 中表示加法和减法的符号就是我们通常使用的
+          <code>
+           +
+          </code>
+          和
+          <code>
+           -
+          </code>
+          ，乘法是星号
+          <code>
+           *
+          </code>
+          （注意，不是
+          <code>
+           x
+          </code>
+          ），除法是斜杠
+          <code>
+           /
+          </code>
+          ，数学括号是圆括号
+          <code>
+           (
+          </code>
+          和
+          <code>
+           )
+          </code>
+          。
+          <br/>
+          在使用
+          <code>
+           print
+          </code>
+          打印计算结果时，我们也必须在调用内容两侧添加括号，如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(1 + 2 + 3 * 3)
+12
+&gt;&gt;&gt; print((1 + 2 + 3) * 3)
+18</code></pre>
+         <p>
+          以上代码证明了括号的重要性！
+         </p>
+         <p>
+          我们也可以使用更高级的运算。比如，你可以用两个星号
+          <code>
+           **
+          </code>
+          计算出一个数字的乘方。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(3**2)
+9</code></pre>
+         <p>
+          注意：还有一个运算符有时被误认为是幂运算符，即插入符号
+          <code>
+           ^
+          </code>
+          ，但这并不是某些程序员期望的幂运算。事实上，该符号执行一个更加复杂的运算，也就是
+          <a href="https://en.wikipedia.org/wiki/Bitwise_operation#XOR" target="_blank">
+           按位异或
+          </a>
+          。如果你习惯于使用插入符号，可能会不小心写错代码，最终导致结果混乱！
+         </p>
+         <p>
+          另一个有用的运算符号是
+          <code>
+           %
+          </code>
+          —— 即模运算。使用该符号将计算数字一除以数字二的余数，比如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(9 % 2)
+1</code></pre>
+         <p>
+          你也可以使用符号
+          <code>
+           //
+          </code>
+          进行整除。它将一个整数除以另一个整数，但并不给出准确结果，而是向下取整返回商的整数部分。（注意：即使答案为负数也可取商的整数部分。）
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(15 // 4)
+3
+&gt;&gt;&gt; print(16 // 4)
+4
+&gt;&gt;&gt; print(-5//4)
+-2</code></pre>
+         <p>
+          注意：Python 2 的除法运算 (
+          <code>
+           /
+          </code>
+          ) 有别于 Python 3。由于该课程主要针对 Python 3，所以我们现在不对这些区别做详细讨论，而是重点学习 Python 3 中的除法运算。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="arithmetic-playground">
+          Arithmetic Playground
+         </h1>
+         <p>
+          请在下面练习算术运算，以体验 int 型字符（整数）的计算，并使用
+          <code>
+           print()
+          </code>
+          函数来查看运算结果。
+         </p>
+         <p>
+          请注意，下方的代码中有一条新的语法，即 "#"。"#" 后面的文本是一个注释，用于注解其余代码。在运行代码时，Python 解释器会忽略注释，并不执行其中的内容。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346889-playground-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346889-playground-py" id="tab-346889-playground-py" role="tab">
+            playground.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346889-playground-py" class="tab-pane active show" id="346889-playground-py" role="tabpanel">
+            <pre><code></code># Test this code to see the results, then write your own expressions
+print(3 + 1)
+
+print(1 + 2 + 3 * 3)
+print((1 + 2 + 3) * 3)
+print(3**2)
+print(9 % 2)
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：平均电费">
+          练习：平均电费
+         </h1>
+         <p>
+          现在我们尝试一下在 Python 中进行数学运算吧！
+         </p>
+         <p>
+          我在过去三个月的电费分别是 $23、$32 和 $64 。那么我这三个月的平均月电费是多少？请编写一个表达式来计算平均值，并使用
+          <code>
+           print()
+          </code>
+          查看结果，最后提交答案。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346891-electric_average-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346891-electric_average-py" id="tab-346891-electric_average-py" role="tab">
+            electric_average.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346891-electric_average-py" class="tab-pane active show" id="346891-electric_average-py" role="tabpanel">
+            <pre><code></code># Write an expression that calculates the average of 23, 32 and 64.
+# Place the expression in this print statement.
+print()</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="答案：平均电费">
+          答案：平均电费
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Python 中的算术表达式
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. Python 中的算术表达式-Iq3ovQqBj1M.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="02. Python 中的算术表达式-Iq3ovQqBj1M.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="02. Python 中的算术表达式-Iq3ovQqBj1M.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="02. Python 中的算术表达式-Iq3ovQqBj1M.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="false" kind="subtitles" label="ar" src="02. Python 中的算术表达式-Iq3ovQqBj1M.ar.vtt" srclang="ar"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="算术和空格">
+          算术和空格
+         </h1>
+         <p>
+          大家可能已经注意到在 Python 的单行代码中，空格并不会对代码的运行造成影响。例如，
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(4+5)
+9</code></pre>
+         <p>
+          而以下代码将给出完全相同的输出：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print (                 4+  5)
+9</code></pre>
+         <p>
+          但这并不意味着这些代码都一样好。下面是一些有用的写法指导：
+         </p>
+         <ul>
+          <li>
+           当调用像 print 这样的函数时，将左括号直接放在函数名称之后，如
+           <code>
+            print(8)
+           </code>
+           。
+          </li>
+          <li>
+           不要在括号内添加多余空格，应为
+           <code>
+            print(3*7)
+           </code>
+           。
+          </li>
+          <li>
+           如果将不同优先级的运算符（如乘法和减法）混合在一起，为了使代码更容易阅读，可能需要在较低优先级（本例中为加法和减法）运算符周围添加空格。例如
+           <code>
+            1 + 2*3
+           </code>
+           。
+          </li>
+          <li>
+           不要使代码行过长，否则会很难理解。人们通常将一行代码的长度限制在 79 或 99 个字符以内。如果你觉得需要编写更长的代码行，请考虑重写并简化代码。
+          </li>
+         </ul>
+         <p>
+          这些规定出自 “Python 开发者指南”，其中包含一个名为
+          <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">
+           PEP 8
+          </a>
+          的风格指南。如果目前不了解 PEP 8 的所有内容，也不要担心。
+         </p>
+         <p>
+          为什么这很重要？
+          <br/>
+          虽然代码格式并不影响其
+          <em>
+           运行
+          </em>
+          ，但会影响代码
+          <em>
+           阅读
+          </em>
+          。遵循代码风格的标准指南有助于使大多数代码更易读。因此，即使你编写的代码只有一行，我们也建议你遵循指南规范。从长远来看，它将帮助你编写可读性更高的代码。在每次学习新内容时，你可以参考 PEP 8，以编写风格规范的 Python 代码。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：计算和格式">
+          练习：计算和格式
+         </h1>
+         <p>
+          在这个练习中，大家将帮助一个泥瓦工进行计算。他需要为地板的两个部分铺上瓷砖，一部分是** 9 砖宽， 7 砖长
+          <strong>
+           ，另一部分是
+          </strong>
+          5 砖宽， 7 砖长**，而一包瓷砖装有 6 片砖。
+         </p>
+         <ol>
+          <li>
+           这个泥瓦工一共需要多少片瓷砖？
+          </li>
+          <li>
+           他购买了** 17 包瓷砖，每包装有 6 片瓷砖**，最后还能剩下多少片瓷砖？
+          </li>
+         </ol>
+         <p>
+          编写代码时，请注意遵循上面提到的格式指南。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346896-tiles-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346896-tiles-py" id="tab-346896-tiles-py" role="tab">
+            tiles.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346896-tiles-py" class="tab-pane active show" id="346896-tiles-py" role="tabpanel">
+            <pre><code></code># Fill this in with an expression that calculates how many tiles are needed.
+print()
+
+# Fill this in with an expression that calculates how many tiles will be left over.
+print()</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="答案：计算与格式">
+          答案：计算与格式
+         </h1>
+         <pre><code>print(9*7 + 5*7)
+
+print((17*6) - (9*7 + 5*7))</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          代码格式
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             下面哪一行代码的格式是正确的？你将如何改善格式杂乱的代码？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483472039425" name="346897" type="checkbox" value="a1483472039425"/>
+           <label for="a1483472039425">
+            <p>
+             <code>
+              print(((3+  32))+ -15//2)
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483472071150" name="346897" type="checkbox" value="a1483472071150"/>
+           <label for="a1483472071150">
+            <p>
+             <code>
+              print((17 - 6)%(5 + 2))
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483472086944" name="346897" type="checkbox" value="a1483472086944"/>
+           <label for="a1483472086944">
+            <p>
+             <code>
+              print ((1 + 2 + 4) / 13)
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483472087692" name="346897" type="checkbox" value="a1483472087692"/>
+           <label for="a1483472087692">
+            <p>
+             <code>
+              print(4/2 - 7*7)
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <ul>
+           <li>
+            `print((17 - 6)%(5 + 2))`
+           </li>
+           <li>
+            `print(4/2 - 7*7)`
+           </li>
+          </ul>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 整数和浮点数.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 算术')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

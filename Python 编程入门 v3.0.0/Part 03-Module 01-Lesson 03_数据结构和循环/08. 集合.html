@@ -1,0 +1,462 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   集合
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          08. 集合
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="删除列表中的重复项">
+          删除列表中的重复项
+         </h1>
+         <p>
+          假设你在运行一个热门搜索引擎，并且为了了解用户是从哪里浏览，你已经对他们进行了调查。你已经收到了 785 个回复，并将这些回复编制成了一个国家列表：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; len(countries)
+785
+&gt;&gt;&gt; countries[:5]
+['Angola', 'Maldives', 'India', 'United States', 'India']</code></pre>
+         <p>
+          <br/>
+          世界上没有 785 个国家，这说明
+          <code>
+           countries
+          </code>
+          列表中可能有重复的条目。对列表进行切片，查看前几个元素证明了这一点。删除重复项，生成一个用户所浏览的全部国家/地区的列表将比较有用。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：删除重复数据">
+          练习：删除重复数据
+         </h1>
+         <p>
+          编写一个函数
+          <code>
+           remove_duplicates
+          </code>
+          ，该函数将列表作为参数，并返回一个包含源列表中唯一元素的新列表。新列表中未重复出现的元素可采用任何顺序。
+         </p>
+         <p>
+          建议的测试用例：
+          <br/>
+          尝试输入一个没有重复元素的列表。输出列表应与原始列表的大小相同。
+          <br/>
+          尝试输入一个已知唯一元素和重复元素数量的列表。验证没有重复元素的列表是否长度适当。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347089-deduplicate-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347089-deduplicate-py" id="tab-347089-deduplicate-py" role="tab">
+            deduplicate.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347089-deduplicate-py" class="tab-pane active show" id="347089-deduplicate-py" role="tabpanel">
+            <pre><code></code> # Define the remove_duplicates function</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="重复数据删除练习的解决方案：">
+          重复数据删除练习的解决方案：
+         </h1>
+         <p>
+          以下是我们的解决方案：
+         </p>
+         <pre><code class="python language-python">def remove_duplicates(source):
+    target = []
+
+    for element in source:
+        if element not in target:
+            target.append(element)
+
+    return target</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="集合">
+          集合
+         </h1>
+         <p>
+          可以使用
+          <code>
+           for
+          </code>
+          循环从列表中删除重复项，但是还有一种替代技术。Python 用于存储集合的数据结构除了列表之外还有几个，其中一个非常适合存储唯一的元素：集合。
+         </p>
+         <p>
+          集合是唯一元素的集合，没有任何特定的排序。我们可以从这样的列表中创建一个集合：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; country_ set = set(countries)
+&gt;&gt;&gt; len(country_set)
+196</code></pre>
+         <p>
+          集合与列表一样支持
+          <code>
+           in
+          </code>
+          运算符：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 'Mauritius' in countries
+True
+&gt;&gt;&gt; 'Mauritius' in country_set
+True</code></pre>
+         <p>
+          可以添加元素到集合，但列表不同，不使用
+          <code>
+           append
+          </code>
+          方法，而是
+          <code>
+           add
+          </code>
+          方法：
+         </p>
+         <pre><code class="python language-python">country_set.add("Florin")</code></pre>
+         <p>
+          集合也有一个与列表一样的
+          <code>
+           pop
+          </code>
+          方法。从集合
+          <code>
+           pop
+          </code>
+          一个元素时，一个随机元素被删除（记住，集合不同于列表，是无序的，所以没有 "最后一个元素"。
+         </p>
+         <p>
+          可以使用与迭代列表一样的方法通过 for 循环迭代集合。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：构建集合">
+          练习：构建集合
+         </h1>
+         <p>
+          就像构建一个
+          <code>
+           my_list = []
+          </code>
+          的空列表一样，你可以用
+          <code>
+           my_set = set()
+          </code>
+          构建一个空集合。
+          <br/>
+          用这个方法以及
+          <code>
+           add
+          </code>
+          方法，构建一个包含所有大于 0 小于 2000 的平方数集合。我在我的实施代码中包括了之前练习中的
+          <code>
+           nearest_square
+          </code>
+          函数以便参考。你可以在你的代码中调用它，或者也可以直接忽视它。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347093-squareset-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347093-squareset-py" id="tab-347093-squareset-py" role="tab">
+            squareset.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347093-squareset-py" class="tab-pane active show" id="347093-squareset-py" role="tabpanel">
+            <pre><code></code>squares = set()
+
+# todo: populate "squares" with the set of all of the integers less 
+# than 2000 that are square numbers
+
+
+# Note: If you want to call the nearest_square function, you must define
+# the function on a line before you call it. Feel free to move this code up!
+def nearest_square(limit):
+    answer = 0
+    while (answer+1)**2 &lt; limit:
+        answer += 1
+    return answer**2</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          单击“下一项”查看该练习的解决方案。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="09. 集合 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 集合')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

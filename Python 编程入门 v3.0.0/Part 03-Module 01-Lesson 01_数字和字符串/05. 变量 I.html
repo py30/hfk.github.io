@@ -1,0 +1,644 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   变量 I
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数字和字符串
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎！.html">
+       01. 欢迎！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术.html">
+       02. 算术
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 整数和浮点数.html">
+       03. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 错误.html">
+       04. 错误
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量 I.html">
+       05. 变量 I
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量 II.html">
+       06. 变量 II
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 比较运算符.html">
+       07. 比较运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 字符串.html">
+       08. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 内置函数.html">
+       09. 内置函数
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 类型和类型转换.html">
+       10. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串方法 I.html">
+       11. 字符串方法 I
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 字符串方法 II.html">
+       12. 字符串方法 II
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          05. 变量 I
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          Python 完全可以进行算术运算，但变量的使用使 Python 不仅仅是一个计算器。
+         </p>
+         <p>
+          我们将在这部分课程中学习关于变量的内容。我们将使用马尼拉（Manila，菲律宾首都）的人口数据进行一些计算，并使用变量完成这些计算。使用变量（相对于使用原始数字进行计算）具有许多优点，比如我们可以更高效地说明数据的转换，我们将在后面的内容中体验这一优点。现在先开始计算吧！
+         </p>
+         <p>
+          在 Python 中创建一个新变量很简单，我们这里创建了一个表示马尼拉人口的变量。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1780148</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="
+此示例中的变量名为 `manila_pop`。等号 `=` 是赋值运算符。变量 `manila_pop` 的值为 1780148。
+" class="img img-fluid" src="img/l1-diagrams.001.jpeg"/>
+          <figcaption class="figure-caption">
+           <p>
+            此示例中的变量名为
+            <code>
+             manila_pop
+            </code>
+            。等号
+            <code>
+             =
+            </code>
+            是赋值运算符。变量
+            <code>
+             manila_pop
+            </code>
+            的值为 1780148。
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="赋值和打印变量">
+          赋值和打印变量
+         </h1>
+         <p>
+          该赋值表达式的顺序非常重要！我们应始终按照相同的顺序，即变量名 = 值。左侧的变量名是右侧表达式给出值的名称。赋值运算符
+          <code>
+           =
+          </code>
+          将右侧的值赋给左侧的变量名。（注意，这与数学中的表达式不同，在数学表达式中
+          <code>
+           x = y
+          </code>
+          等同于
+          <code>
+           y = x
+          </code>
+          ）
+         </p>
+         <p>
+          请注意，Python 中没有某些语言中关于变量赋值的关键字，无需指定变量的类型 ，只需直接使用等号为变量赋值即可。
+         </p>
+         <p>
+          如果要访问该值，仅需使用变量名。例如，我们可以将它打印出来：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(manila_pop)
+1780148</code></pre>
+         <p>
+          我们在这节课中多次使用了
+          <code>
+           print
+          </code>
+          函数。当需要知道某个变量的值是什么时，只用简单地
+          <code>
+           print
+          </code>
+          这个变量即可。如果没有
+          <code>
+           print
+          </code>
+          ，Python 中发生的事情只会停留在 Python 内部。在大多数情况下，Python 程序中的大部分内容都在内部运行，数据只是被使用或传递，直到用户需要看到某些结果的时候为止。
+          <code>
+           print
+          </code>
+          有助于大家看到正在执行的内容，这对出现问题时的调试非常有用。
+         </p>
+         <p>
+          <code>
+           print
+          </code>
+          是 Python 的一个内置函数，大家将在后面遇到更多内置函数。Python 中的函数调用始终带有一对括号，如果有参数，那么参数放在括号内。
+          <br/>
+          所以
+          <code>
+           print
+          </code>
+          函数的语法需要一对括号，并将参数放在括号内。如大家所见，如果在括号里放置的是一个变量，那么打印的结果就是该变量的值，而不是变量的名称。
+         </p>
+         <p>
+          注意：在 Python 2 中打印时不需要使用括号，但是在 Python 3 中需要，所以请勿忘记括号！
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print manila_pop
+  File "&lt;stdin&gt;", line 1
+    print manila_pop
+                    ^
+SyntaxError: Missing parentheses in call to 'print'</code></pre>
+         <p>
+          这里出现了一个 SyntaxError（语法错误），这是关于错误原因的明确信息。在学习的过程中，你可能会经常犯类似的错误，而使用错误信息将有助于改正错误。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="名称中出现了哪些错误？">
+          名称中出现了哪些错误？
+         </h1>
+         <p>
+          我们一直在研究马尼拉的人口，但是假如我们真的想了解人口密度，那么首先需要创建一个作为计算结果的变量。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1780148
+&gt;&gt;&gt; manila_pop_density = manila_pop / manila_area
+NameError: name 'manila_area' is not defined</code></pre>
+         <p>
+          呃哦 —— 好像又出错了。到底怎么回事？
+          <br/>
+          好吧，我试着除以变量
+          <code>
+           manila_area
+          </code>
+          ，但还没有将其作为变量名并给它进行赋值，所以导致了一个 NameError。错误信息中清楚说明了问题出在是名称的部分。如果你要使用变量名，首先必须为其赋值！
+         </p>
+         <p>
+          现在我再试一次：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1780148
+&gt;&gt;&gt; manila_area = 16.56
+&gt;&gt;&gt; manila_pop_density = manila_pop/manila_area
+&gt;&gt;&gt; print(manila_pop_density)
+107496.85990338166</code></pre>
+         <p>
+          这次没有出现 NameError，并且我们成功计算了马尼拉的人口密度。马尼拉地区的面积为 16.56 平方英里，人口密度是每平方英里的人口数。
+         </p>
+         <p>
+          给变量命名时，需要注意以下几点：
+         </p>
+         <ul>
+          <li>
+           有一些不能用于变量名的保留字，如
+           <code>
+            False
+           </code>
+           和
+           <code>
+            class
+           </code>
+           ，这些词汇在 Python 中有重要的作用。
+           <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords" target="_blank">
+            保留字列表见此
+           </a>
+           。尝试为某个保留字赋值将导致一个
+           <code>
+            SyntaxError
+           </code>
+           。
+          </li>
+          <li>
+           变量名中只能使用普通字母、数字和下划线，且以字母或下划线开头。
+          </li>
+          <li>
+           虽然在变量名中使用任何内置的标识符不会立即导致错误，但我们也不建议你使用。例如，为
+           <code>
+            int
+           </code>
+           赋值时不会引发错误，但当你想要将某数字转换成整数时，一定会出现问题。
+          </li>
+         </ul>
+         <pre><code class="python language-python">&gt;&gt;&gt; int = 7
+&gt;&gt;&gt; int(3.0)
+TypeError: 'int' object is not callable</code></pre>
+         <ul>
+          <li>
+           最好使用英文单词作为变量名，并尽可能地描述变量内容。如果你想要一个多词变量名，请使用下划线分隔单词。例如
+           <code>
+            coconut_counter = 2
+           </code>
+           。
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="再次给一个变量赋值！">
+          再次给一个变量赋值！
+         </h1>
+         <p>
+          我们已经将
+          <code>
+           manila_pop
+          </code>
+          变量设置为马尼拉的人口，即 1780148。但如果马尼拉的人口出现变化，我们可以更新人口数据吗？人口现在达到了 1781573。我们可以通过为同一个变量名重新赋值来更新 Python 中存储的数据，这将改变该变量的值。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1781573
+&gt;&gt;&gt; print(manila_pop)
+1781573</code></pre>
+         <p>
+          这样一来，旧数据已经被遗忘，取而代之的是
+          <code>
+           manila_pop
+          </code>
+          的新值。
+         </p>
+         <p>
+          我们也可以使用另一种方式，使用 Python 计算来更新数值。假设这个城市新增了 1675 个人，减少了 250 个人。我们可以在 Python 中通过计算求出新值，并在同一步中为变量赋值。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = 1780148
+&gt;&gt;&gt; print(manila_pop)
+1780148</code></pre>
+         <pre><code class="python language-python">&gt;&gt;&gt; manila_pop = manila_pop + 1675 - 250</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="位于等号左侧的变量 `manila_pop`，被赋值为整个右侧表达式的值。等号的右侧是表达式 `manila_pop + 1675 - 250`。所以 `manila_pop` 的当前值为 1780148。
+" class="img img-fluid" src="img/l1-diagrams.002.jpeg"/>
+          <figcaption class="figure-caption">
+           <p>
+            位于等号左侧的变量
+            <code>
+             manila_pop
+            </code>
+            ，被赋值为整个右侧表达式的值。等号的右侧是表达式
+            <code>
+             manila_pop + 1675 - 250
+            </code>
+            。所以
+            <code>
+             manila_pop
+            </code>
+            的当前值为 1780148。
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="再次赋值的结果">
+          再次赋值的结果
+         </h1>
+         <p>
+          我们现在可以检查输出：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(manila_pop)
+1781573</code></pre>
+         <p>
+          在数学计算中，
+          <code>
+           manila_pop = manila_pop + 1675 - 250
+          </code>
+          这条赋值语句是完全错误的，因为变量名
+          <code>
+           manila_pop
+          </code>
+          同时位于等号的两边。但由于等号
+          <code>
+           =
+          </code>
+          在 Python 中用于赋值，所以这行代码在 Python 中可以正常运行。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="重新赋值运算符">
+          重新赋值运算符
+         </h1>
+         <p>
+          由于这种增量和重新赋值的运算非常普遍，Python 中也包括专门用于重新赋值运算的特殊运算符：
+         </p>
+         <p>
+          ```python
+         </p>
+         <blockquote>
+          <blockquote>
+           <blockquote>
+            <p>
+             manila_pop += 1675 # increase the value of manila_pop by 1675
+             <br/>
+             manila_pop -= 250 # decrease the value of manila_pop by 250
+             <br/>
+             manila_pop *= 0.9 # decimate manila_pop
+             <br/>
+             manila_area /=  2 # half the area of Manila```
+            </p>
+           </blockquote>
+          </blockquote>
+         </blockquote>
+         <p>
+          <code>
+           manila_pop += 1675
+          </code>
+          是
+          <code>
+           manila_pop = manila_pop + 1675
+          </code>
+          的简写。其他重新赋值运算符也是相同的模式。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：赋值和修改变量">
+          练习：赋值和修改变量
+         </h1>
+         <p>
+          现在该你来尝试一下使用变量了，该练习中的注释（以
+          <code>
+           #
+          </code>
+          开头的代码行）具有创建和修改变量的说明。请在每条注释后，编写代码来实现注释要求的指令。
+         </p>
+         <p>
+          请注意，此代码使用
+          <a href="https://en.wikipedia.org/wiki/Scientific_notation" target="_blank">
+           科学计数法
+          </a>
+          来表示数值极大的数字。
+          <code>
+           4.445e8
+          </code>
+          等于
+          <code>
+           4.445 * 10 ** 8
+          </code>
+          ，也等于
+          <code>
+           444500000.0
+          </code>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346932-variables-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346932-variables-py" id="tab-346932-variables-py" role="tab">
+            variables.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346932-variables-py" class="tab-pane active show" id="346932-variables-py" role="tabpanel">
+            <pre><code></code># The current volume of a water reservoir (in cubic metres)
+reservoir_volume = 4.445e8
+# The amount of rainfall from a storm (in cubic metres)
+rainfall = 5e6
+
+# decrease the rainfall variable by 10% to account for runoff
+
+# add the rainfall variable to the reservoir_volume variable
+
+# increase reservoir_volume by 5% to account for stormwater that flows
+# into the reservoir in the days following the storm
+
+# decrease reservoir_volume by 5% to account for evaporation
+
+# subtract 2.5e5 cubic metres from reservoir_volume to account for water
+# that's piped to arid regions.
+
+# print the new value of the reservoir_volume variable
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="06. 变量 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 变量 I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

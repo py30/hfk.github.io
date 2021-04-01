@@ -1,0 +1,381 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   创建程序段 III
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          16. 创建程序段 III
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习解决方案：创建帮助函数-size_of_middle_three">
+          练习解决方案：创建帮助函数
+          <code>
+           size_of_middle_three
+          </code>
+         </h1>
+         <p>
+          以下是我们实现这个函数的方法。
+         </p>
+         <pre><code class="python language-python">def sum_of_middle_three(score1,score2,score3,score4,score5):
+    """
+    Find the sum of the middle three numbers out of the five given.
+    """
+    max_score = max(score1,score2,score3,score4,score5)
+    min_score = min(score1,score2,score3,score4,score5)
+    sum = score1 + score2 + score3 + score4 + score5 - max_score - min_score
+    return sum</code></pre>
+         <p>
+          为了实现可读性，我们计算单独行上的最大值和最小值，然后将其从总得分中减掉。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：创建帮助函数-score_to_rating_string">
+          练习：创建帮助函数
+          <code>
+           score_to_rating_string
+          </code>
+         </h1>
+         <p>
+          完成最后一个帮助函数
+          <code>
+           score_to_rating_string
+          </code>
+          的时间！下表指导大家如何将得分映射到评分。
+         </p>
+         <table>
+          <thead>
+           <tr>
+            <th id="average_score">
+             Average Score
+            </th>
+            <th id="rating">
+             Rating
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             0 &lt;= score &lt; 1
+            </td>
+            <td>
+             Terrible
+            </td>
+           </tr>
+           <tr>
+            <td>
+             1 &lt;= score &lt; 2
+            </td>
+            <td>
+             Bad
+            </td>
+           </tr>
+           <tr>
+            <td>
+             2 &lt;= score &lt; 3
+            </td>
+            <td>
+             OK
+            </td>
+           </tr>
+           <tr>
+            <td>
+             3 &lt;= score &lt; 4
+            </td>
+            <td>
+             Good
+            </td>
+           </tr>
+           <tr>
+            <td>
+             4 &lt;= score &lt;= 5
+            </td>
+            <td>
+             Excellent
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+          需要单独检查和处理每个案例。但不要忘记使用一些打印语句来测试你的函数。可以回顾一下之前编写的框架。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347022-score_to_rating_string-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347022-score_to_rating_string-py" id="tab-347022-score_to_rating_string-py" role="tab">
+            score_to_rating_string.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347022-score_to_rating_string-py" class="tab-pane active show" id="347022-score_to_rating_string-py" role="tabpanel">
+            <pre><code></code> </pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="17. 创建程序段 IV.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. 创建程序段 III')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

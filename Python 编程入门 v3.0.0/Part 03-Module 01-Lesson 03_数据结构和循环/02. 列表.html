@@ -1,0 +1,1314 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   列表
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 列表
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="列表">
+          列表
+         </h1>
+         <p>
+          到目前为止，我们一直在处理各种单独的数据，比如字符串和数字。但当我们使用数据集合时，还可以编写出更强大的程序。现在我们先介绍一下第一种数据集合：列表。
+         </p>
+         <pre><code class="python language-python">python_versions = [1.0, 1.5, 1.6, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6]</code></pre>
+         <p>
+          上面这行代码定义了一个变量
+          <code>
+           python_versions
+          </code>
+          ，其中包含一系列浮点数。列表中的每个元素都表示 Python 的一个版本号（Python 的版本一直在升级，因此有很多不同的版本号）。列表使用方括号（
+          <code>
+           [
+          </code>
+          和
+          <code>
+           ]
+          </code>
+          ）定义，列表内的元素用逗号分开。
+         </p>
+         <p>
+          我们可以通过索引来查找列表中的各个元素，比如针对上面这个列表，我们可以按照如下所示的方法查找版本号：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; python_versions[0]
+1.0
+
+&gt;&gt;&gt; python_versions[1]
+1.5
+
+&gt;&gt;&gt; python_versions[7]
+2.4</code></pre>
+         <p>
+          请注意列表中的第一个元素
+          <code>
+           1.0
+          </code>
+          的索引编号为 0 ，而不是 1。有许多编程语言都遵循这个惯例，我们将其称为"零索引"。如果这种说法让你难以理解，你也可以这样理解：元素的索引编号代表元素与列表开头的距离。第一个元素距离开头有 0 个元素，第二个元素有一个元素，以此类推。
+         </p>
+         <p>
+          当然，除了这种从列表开头进行索引的方法，我们也可以从列表的末尾进行索引。
+          <br/>
+          要从列表的末尾索引需要使用负索引。以我们在上方定义的列表为例，我们可以通过下面这种方法得到最新的 Python 版本：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; python_versions[-1]
+3.6</code></pre>
+         <p>
+          索引
+          <code>
+           -1
+          </code>
+          是指列表的最后一个元素，
+          <code>
+           -2
+          </code>
+          是倒数第二个，以此类推。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="索引错误">
+          索引错误
+         </h1>
+         <p>
+          如果尝试索引列表中不存在的元素，将导致列表索引异常（List Index Exception）。这条信息表示 Python 提醒你正在尝试访问一个列表中不存在的元素。
+         </p>
+         <p>
+          例如，我们定义以下列表：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; my_list = ['a','b','c','d','e']</code></pre>
+         <p>
+          这个列表中有五个元素，索引编号分别是 0、1、2、3 和 4
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; my_list[4]
+'e'</code></pre>
+         <p>
+          如大家所见，
+          <code>
+           my_list [4]
+          </code>
+          返回这个列表的最后一个元素。但是当我们尝试访问索引编号为 5 的元素时，会出现什么结果？
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; my_list[5]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range</code></pre>
+         <p>
+          因为列表中只包含 5 个元素，尝试访问索引编号为 5 的元素其实是要求 Python 给出该列表中的第 6 个元素。由于这个元素并不存在，所以导致了一个
+          <code>
+           IndexError
+          </code>
+          。
+         </p>
+         <p>
+          索引错误十分常见，尤其是当你还不习惯在 Python 中进行索引的时候。刚开始你可能会经常收到这些错误信息，但在慢慢熟悉 Python 后，这样的错误就会很少出现了。导致索引错误最常见的一个原因是在进行索引时编号差 1（比如在上方的例子中，
+          <code>
+           my_list[5]
+          </code>
+          会导致索引错误，因为列表中最后一个元素的编号实际上是 4），但也存在一些其他原因。因此我们建议你使用
+          <code>
+           print
+          </code>
+          函数来打印你想要索引的元素，以此进行纠错，这可以提醒你的索引是否有差，差是多少。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：列表索引">
+          练习：列表索引
+         </h1>
+         <p>
+          请完成函数
+          <code>
+           how_many_days
+          </code>
+          ，其将输入一个表示月份的数字，并返回该月份的天数。我们定义的
+          <code>
+           days_in_month
+          </code>
+          是一个包含各月天数的列表。例如，
+          <code>
+           how_many_days(8)
+          </code>
+          应该返回 31，因为第八个月，即八月，有 31 天。
+         </p>
+         <p>
+          记住索引编号从零开始！
+         </p>
+         <p>
+          （提示：目前函数还没有学过，你可以参考下一课：
+          <strong>
+           函数
+          </strong>
+          来了解一些基本知识。本节中编程习题的解决方案可以在下一小节：
+          <strong>
+           解决方案：列表
+          </strong>
+          中查看。）
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347035-HowManyDays-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347035-HowManyDays-py" id="tab-347035-HowManyDays-py" role="tab">
+            HowManyDays.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347035-HowManyDays-py" class="tab-pane active show" id="347035-HowManyDays-py" role="tabpanel">
+            <pre><code></code>def how_many_days(month_number):
+    """Returns the number of days in a month.
+    WARNING: This function doesn't account for leap years!
+    """
+    days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]
+    #todo: return the correct value
+    
+# This test case should print 31, the number of days in the eighth month, August
+print(how_many_days(8))</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="列表切片">
+          列表切片
+         </h1>
+         <p>
+          除了从列表访问各个元素外，我们还可以使用 Python 的切片符号来访问列表的子序列。大家来看一下这个月份列表，
+         </p>
+         <pre><code class="python language-python">months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</code></pre>
+         <p>
+          我们可以从月份列表中切片出一年的第三季度，如下所示：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; q3 = months[6:9]
+&gt;&gt;&gt; print(q3)
+['July', 'August', 'September']
+&gt;&gt;&gt; print(months)
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="`q3 = months[6:9]`" class="img img-fluid" src="img/slicing.png"/>
+          <figcaption class="figure-caption">
+           <p>
+            <code>
+             q3 = months[6:9]
+            </code>
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          冒号左侧的索引编号 6 是切片开始的位置。切片持续到第二个索引编号 9（请注意，切片不包括索引编号为 9 的元素，但包括编号为 6 的元素，以此类推）。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="切片简化方式">
+          切片简化方式
+         </h1>
+         <p>
+          当然我们也有一些简化切片代码的方法。如果你想获得一个从原始列表开头开始的子列表，或者一个在原始列表的末尾结束的子列表，可以采用如下所示的方法来快捷开始或结束索引：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; first_half = months[:6]
+&gt;&gt;&gt; print(first_half)
+['January', 'February', 'March', 'April', 'May', 'June']
+&gt;&gt;&gt; second_half = months[6:]
+&gt;&gt;&gt; print(second_half)
+['July', 'August', 'September', 'October', 'November', 'December']</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：列表切片">
+          练习：列表切片
+         </h1>
+         <p>
+          请使用列表切片符号从下面这个列表中选择三个最近的日期。提示：负索引也适用于列表切片。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347041-slicing-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347041-slicing-py" id="tab-347041-slicing-py" role="tab">
+            slicing.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347041-slicing-py" class="tab-pane active show" id="347041-slicing-py" role="tabpanel">
+            <pre><code></code>eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',
+                 'March 29, 2006', 'August 1, 2008', 'July 22, 2009',
+                 'July 11, 2010', 'November 13, 2012', 'March 20, 2015',
+                 'March 9, 2016']
+                 
+                 
+# TODO: Modify this line so it prints the last three elements of the list
+print(eclipse_dates)</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="列表、字符串和可变性">
+          列表、字符串和可变性
+         </h1>
+         <p>
+          与
+          <code>
+           string
+          </code>
+          、
+          <code>
+           float
+          </code>
+          和
+          <code>
+           int
+          </code>
+          一样，
+          <code>
+           list
+          </code>
+          也是一种类型。在我们看到的所有类型中，列表与字符串最为相似：这两种类型都支持索引、切片、
+          <code>
+           len
+          </code>
+          函数和
+          <code>
+           in
+          </code>
+          运算符。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; sample_string = "And Now For Something Completely Different"
+&gt;&gt;&gt; sample_list = ['Graham', 'John', 'Terry', 'Eric', 'Terry', 'Michael']
+&gt;&gt;&gt; sample_string[4]
+'N'
+&gt;&gt;&gt; sample_list[4]
+'Terry'
+&gt;&gt;&gt; sample_string[12:21]
+'Something'
+&gt;&gt;&gt; sample_list[2:4]
+['Terry', 'Eric']
+&gt;&gt;&gt; len(sample_string)
+42
+&gt;&gt;&gt; len(sample_list)
+6
+&gt;&gt;&gt; 'thing' in sample_string
+True
+&gt;&gt;&gt; 'Rowan' in sample_list
+False</code></pre>
+         <p>
+          那么列表与字符串有什么不同？其中最明显的区别是字符串为字母序列，而列表的元素可以是
+          <strong>
+           任何
+          </strong>
+          类型的对象。更细微的区别是列表可以被修改，但字符串不能：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; sample_list[3] = 'Eric'
+&gt;&gt;&gt; print(sample_list)
+['Graham', 'John', 'Terry', 'Eric', 'Terry', 'Michael']
+&gt;&gt;&gt; sample_string[8] = 'f'
+TypeError: 'str' object does not support item assignment</code></pre>
+         <p>
+          表示对象可否修改的术语是
+          <strong>
+           可变性
+          </strong>
+          （Mutability）。列表是可变的，而字符串不可变。接下来，我们将探讨可以在列表中使用的方法和函数，同时将在程序中利用列表的可变性。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          可变性匹配练习
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUIZ QUESTION:
+          </strong>
+          :
+          <p>
+           假设我们有以下两个表达式，
+           <code>
+            sentence1
+           </code>
+           和
+           <code>
+            sentence2
+           </code>
+           ：
+          </p>
+          <pre><code class="python language-python">sentence1 = "I wish to register a complaint."
+sentence2 = ["I", "wish", "to", "register", "a", "complaint", "."]</code></pre>
+          <p>
+           将下面的 python 代码与修改后的
+           <code>
+            sentence1
+           </code>
+           或
+           <code>
+            sentence2
+           </code>
+           值相匹配。如果代码导致错误，则与
+           <br/>
+           Error 匹配。
+          </p>
+         </p>
+         <p>
+          <strong>
+           ANSWER CHOICES:
+          </strong>
+         </p>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            sentence2[6]="!"
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            sentence2[0]= "Our Majesty"
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            sentence1[30]="!"
+           </code>
+          </p>
+         </button>
+         <button class="btn btn-primary">
+          <p>
+           <code>
+            sentence2[0:2] = ["We", "want"]
+           </code>
+          </p>
+         </button>
+         <br/>
+         <br/>
+         <table class="table">
+          <tr class="thead-dark table-hover">
+           <th>
+            <p>
+             Python code
+            </p>
+           </th>
+           <th>
+            <p>
+             <code>
+              sentence1
+             </code>
+             或
+             <code>
+              sentence2
+             </code>
+             的值
+            </p>
+           </th>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             ["We", "want", "to", "register", "a", “complaint”, "."]
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             “I wish to register a complaint！”
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             ["I", "wish", "to", "register", "a", "complaint", "!"]
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             Error
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <p>
+             ["Our Majesty", "wish", "to", "register", "a", "complaint", "."]
+            </p>
+           </td>
+           <td>
+           </td>
+          </tr>
+         </table>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <table class="table">
+           <tr class="thead-dark table-hover">
+            <th>
+             <p>
+              Python code
+             </p>
+            </th>
+            <th>
+             <p>
+              <code>
+               sentence1
+              </code>
+              或
+              <code>
+               sentence2
+              </code>
+              的值
+             </p>
+            </th>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              ["We", "want", "to", "register", "a", “complaint”, "."]
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                sentence2[0:2] = ["We", "want"]
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              ["I", "wish", "to", "register", "a", "complaint", "!"]
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                sentence2[6]="!"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              Error
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                sentence1[30]="!"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <p>
+              ["Our Majesty", "wish", "to", "register", "a", "complaint", "."]
+             </p>
+            </td>
+            <td>
+             <button class="btn btn-primary">
+              <p>
+               <code>
+                sentence2[0]= "Our Majesty"
+               </code>
+              </p>
+             </button>
+            </td>
+           </tr>
+          </table>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="保存列表的变量">
+          保存列表的变量
+         </h1>
+         <p>
+          之前，当创建一个具有不可变对象的变量时，该不可变对象的值即被保存在内存中。例如在下面这个示例中，我们创建了一个值为
+          <code>
+           "Old Woman"
+          </code>
+          的变量
+          <code>
+           name
+          </code>
+          ，并将其赋值给另一个变量
+          <code>
+           person
+          </code>
+          。
+         </p>
+         <pre><code>&gt;&gt;&gt; name = "Old Woman"
+&gt;&gt;&gt; person = name
+&gt;&gt;&gt; name = "Dennis"
+&gt;&gt;&gt; print(name)
+Dennis
+&gt;&gt;&gt; print(person)
+Old Woman</code></pre>
+         <p>
+          在第二行代码中，字符串 "Old Woman" 已经为
+          <code>
+           person
+          </code>
+          赋值。因此当我们在后面为
+          <code>
+           name
+          </code>
+          重新赋值，将其更新为
+          <code>
+           "Dennis"
+          </code>
+          时，并不会影响到
+          <code>
+           person
+          </code>
+          的值。
+         </p>
+         <p>
+          列表与字符串不同，它们是可变的。在下面这个示例中，我们创建了一个名为
+          <code>
+           dish
+          </code>
+          的列表，列表中包含了一家咖啡厅的菜肴。我们将这个列表赋值给变量
+          <code>
+           mr_buns_order
+          </code>
+          。当我们由于一种食材不可用而更改（转变）列表
+          <code>
+           dish
+          </code>
+          时，会同时影响
+          <code>
+           dish
+          </code>
+          和
+          <code>
+           mr_buns_order
+          </code>
+          ：
+         </p>
+         <pre><code>&gt;&gt;&gt; dish = ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "baked beans", "Spam", "Spam", "Spam", "Spam"]
+&gt;&gt;&gt; mr_buns_order = dish
+&gt;&gt;&gt; print(dish)
+['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'baked beans', 'Spam', 'Spam', 'Spam', 'Spam']
+&gt;&gt;&gt; print(mr_buns_order)
+['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'baked beans', 'Spam', 'Spam', 'Spam', 'Spam']
+&gt;&gt;&gt; dish[6] = "Spam" #baked beans are off
+&gt;&gt;&gt; print(mr_buns_order)
+['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']
+&gt;&gt;&gt; print(dish)
+['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']</code></pre>
+         <p>
+          <code>
+           dish
+          </code>
+          和
+          <code>
+           mr_buns_order
+          </code>
+          是同一底层列表的两个变量名，我们可以使用任一名称来访问和更改该列表。
+         </p>
+         <p>
+          包含可变和不可变对象的变量运行方式非常不同，你必须十分注意这一点。
+          <br>
+           你需要不断进行试验，通过
+           <code>
+            print
+           </code>
+           函数来检查你的代码，以确保程序可以正确处理数据。
+          </br>
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="使用列表">
+          使用列表
+         </h1>
+         <p>
+          下面是一些可以与列表一起使用的函数：
+         </p>
+         <h2 id="len（some_list）">
+          <code>
+           len（some_list）
+          </code>
+         </h2>
+         <p>
+          返回
+          <code>
+           some_list
+          </code>
+          中的元素个数
+         </p>
+         <h2 id="maxsome_list">
+          <code>
+           max(some_list)
+          </code>
+         </h2>
+         <p>
+          返回列表中的最大元素。最大元素的确定取决于列表中的对象类型。数字列表中的最大元素是最大的数字：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; batch_sizes = [15, 6, 89, 34, 65, 35]
+&gt;&gt;&gt; max(batch_sizes)
+89</code></pre>
+         <p>
+          字符串列表的最大元素是首字母顺序排在最后的一个元素：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; python_varieties = ['Burmese Python', 'African Rock Python', 'Ball Python', 'Reticulated Python', 'Angolan Python']
+&gt;&gt;&gt; max(python_varieties)
+'Reticulated Python'</code></pre>
+         <p>
+          这是因为
+          <code>
+           max
+          </code>
+          函数采用比较运算符
+          <code>
+           &gt;
+          </code>
+          定义。有许多非数字类型都可以使用
+          <code>
+           &gt;
+          </code>
+          运算符进行比较。如果正在处理的对象可以用
+          <code>
+           &gt;
+          </code>
+          比较，那么在这类对象的列表中便可以使用
+          <code>
+           max
+          </code>
+          函数。对于字符串来说，比较标准是首字母顺序，因此上面示例中列表的最大值就是首字母顺序排在最后的元素。
+         </p>
+         <p>
+          当一个列表中包含不同类型的元素，并且这些类型无法进行比较时，
+          <code>
+           max
+          </code>
+          函数也将无法使用：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; max([42, 'African Swallow'])
+TypeError: unorderable types: str() &gt; int()</code></pre>
+         <p>
+          <br>
+           这是因为
+           <code>
+            max
+           </code>
+           函数采用
+           <code>
+            &gt;
+           </code>
+           定义，如果无法比较列表中的两个对象，则无法确定最大元素。
+          </br>
+         </p>
+         <h2 id="minsome_list">
+          <code>
+           min(some_list)
+          </code>
+         </h2>
+         <p>
+          返回列表中的最小元素。
+          <code>
+           min
+          </code>
+          与
+          <code>
+           max
+          </code>
+          相反。
+         </p>
+         <h2 id="sorted（some_list）">
+          <code>
+           sorted（some_list）
+          </code>
+         </h2>
+         <p>
+          按从小到大的顺序返回
+          <code>
+           some_list
+          </code>
+          的副本，同时保持
+          <code>
+           some_list
+          </code>
+          不变。可以通过添加可选参数
+          <code>
+           reverse = True
+          </code>
+          按从大到小的顺序排序。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; sorted(batch_sizes)
+[6, 15, 34, 35, 65, 89]
+&gt;&gt;&gt; sorted(batch_sizes, reverse=True)
+[89, 65, 35, 34, 15, 6]
+&gt;&gt;&gt; print(batch_sizes)
+[15, 6, 89, 34, 65, 35]</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="连接列表">
+          连接列表
+         </h1>
+         <p>
+          下面我们来介绍一个新的字符串方法
+          <code>
+           join
+          </code>
+          ，使用示例如下：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; nautical_directions = "\n".join(["fore", "aft", "starboard", "port"])
+&gt;&gt;&gt; print(nautical_directions)
+fore
+aft
+starboard
+port</code></pre>
+         <p>
+          join 将一个列表作为参数，返回一个由分隔符字符串连接列表元素组成的字符串。在这个示例中，我们使用字符串
+          <code>
+           \n
+          </code>
+          作为分隔符，以便使每个元素之间有一个换行符。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/join.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          我们也可以和
+          <code>
+           .join
+          </code>
+          配合使用其他字符串（而不是
+          <code>
+           '\n'
+          </code>
+          ）。例如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; names = ["García", "O'Kelly", "Davis"]
+&gt;&gt;&gt; "-".join(names)
+"García-O'Kelly-Davis"</code></pre>
+         <p>
+          注意，务必用逗号 (
+          <code>
+           ,
+          </code>
+          ) 隔开连接列表中的每个元素。如果忘记隔开，尽管不会导致错误，但也会使你无法获得理想的结果。下面的例子中，"García” 和 "O'Kelly” 之间没有逗号，所以出现了以下结果：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; names = ["García" "O'Kelly", "Davis"]
+&gt;&gt;&gt; "-".join(names)
+"GarcíaO'Kelly-Davis"</code></pre>
+         <p>
+          你有没有注意到 "García" 和 "O'Kelly" 之间的 '-' 分隔符消失了？这是因为 Python 默认按字符串的字面形式进行连接。如果
+          <code>
+           .join
+          </code>
+          返回的结果与你的预期不同，那么你最好检查是否丢失了逗号。
+         </p>
+         <p>
+          你还要注意的是，如果你尝试在列表中加入字符串以外的其他任何内容，
+          <code>
+           join
+          </code>
+          会触发错误。例如：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; stuff = ["thing", 42, "nope"]
+&gt;&gt;&gt; " and ".join(stuff)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: sequence item 1: expected str instance, int found</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="追加到列表">
+          追加到列表
+         </h1>
+         <p>
+          列表对象的
+          <code>
+           append
+          </code>
+          方法在列表末尾添加一个元素。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; python_varieties.append('Blood Python')
+&gt;&gt;&gt; print(python_varieties)
+['Burmese Python', 'African Rock Python', 'Ball Python', 'Reticulated Python', 'Angolan Python', 'Blood Python']</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：前三名">
+          练习：前三名
+         </h1>
+         <p>
+          编写一个函数
+          <code>
+           top_three
+          </code>
+          ，该函数以列表为参数，返回三个最大元素的列表。例如，
+          <code>
+           top_three([2,3,5,6,8,4,2,1]) == [8, 6, 5]
+          </code>
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347051-top3-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347051-top3-py" id="tab-347051-top3-py" role="tab">
+            top3.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347051-top3-py" class="tab-pane active show" id="347051-top3-py" role="tabpanel">
+            <pre><code></code>def top_three(input_list):
+    """Returns a list of the three largest elements input_list in order from largest to smallest.
+
+    If input_list has fewer than three elements, return input_list element sorted largest to smallest/
+    """
+    # TODO: implement this function</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：中位数（median）">
+          练习：中位数（Median）
+         </h1>
+         <p>
+          此练习中的函数
+          <code>
+           median
+          </code>
+          返回输入列表的中值。但该函数只适用于具有奇数个元素的列表。现在请你修改函数，当为
+          <code>
+           median
+          </code>
+          输入具有偶数个元素的列表时，该函数可返回两个中心元素的平均值。练习中提供的用例可以使你测试预期结果。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347053-median-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347053-median-py" id="tab-347053-median-py" role="tab">
+            median.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347053-median-py" class="tab-pane active show" id="347053-median-py" role="tabpanel">
+            <pre><code></code>def median(numbers):
+    numbers.sort() #The sort method sorts a list directly, rather than returning a new sorted list
+    middle_index = int(len(numbers)/2)
+    return numbers[middle_index]
+
+test1 = median([1,2,3])
+print("expected result: 2, actual result: {}".format(test1))
+
+test2 = median([1,2,3,4])
+print("expected result: 2.5, actual result: {}".format(test2))
+
+test3 = median([53, 12, 65, 7, 420, 317, 88])
+print("expected result: 65, actual result: {}".format(test3))
+
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          单击“下一项”查看该练习的解决方案。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 列表 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 列表')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

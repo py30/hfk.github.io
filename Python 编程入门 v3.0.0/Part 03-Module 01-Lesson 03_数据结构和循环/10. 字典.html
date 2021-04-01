@@ -1,0 +1,375 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字典
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          10. 字典
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字典">
+          字典
+         </h1>
+         <p>
+          集合是简单的数据结构，具有一个主要用途：收集唯一的元素。我们要学习的下一个数据结构是字典，这个数据结构更灵活。字典不像列表和集合存储单个对象，而是存储元素对：
+          <strong>
+           键（Key）
+          </strong>
+          和
+          <strong>
+           值（Value）
+          </strong>
+          。我们在该示例中定义了一个字典，其中键是元素名称，值是它们对应的原子序数。
+         </p>
+         <pre><code class="python language-python">elements = {'hydrogen': 1, 'helium': 2, 'carbon': 6}</code></pre>
+         <p>
+          可以用方括号括住键来查找字典中的值：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(elements['carbon'])
+6</code></pre>
+         <p>
+          也可以使用方括号将新值插入字典：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; elements['lithium'] = 3
+&gt;&gt;&gt; print(elements['lithium'])
+3</code></pre>
+         <p>
+          字典键与列表索引类似：我们可以通过将索引 / 键放入方括号，从数据结构中选择元素。与列表不同，字典可以具有任何不可变类型的键，而不仅仅是整数。
+          <code>
+           elements
+          </code>
+          字典使用
+          <strong>
+           字符串
+          </strong>
+          作为键。但是不必使每个键都具有相同的类型！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：定义词典">
+          练习：定义词典
+         </h1>
+         <p>
+          定义一个名为
+          <code>
+           population
+          </code>
+          ，且包含以下数据的字典：
+         </p>
+         <table>
+          <thead>
+           <tr>
+            <th id="**keys**">
+             <strong>
+              Keys
+             </strong>
+            </th>
+            <th id="**values**">
+             <strong>
+              Values
+             </strong>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             Shanghai
+            </td>
+            <td>
+             17.8
+            </td>
+           </tr>
+           <tr>
+            <td>
+             Istanbul
+            </td>
+            <td>
+             13.3
+            </td>
+           </tr>
+           <tr>
+            <td>
+             Karachi
+            </td>
+            <td>
+             13.0
+            </td>
+           </tr>
+           <tr>
+            <td>
+             Mumbai
+            </td>
+            <td>
+             12.5
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347098-popdict-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347098-popdict-py" id="tab-347098-popdict-py" role="tab">
+            popdict.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347098-popdict-py" class="tab-pane active show" id="347098-popdict-py" role="tabpanel">
+            <pre><code></code># Define a Dictionary, population,
+# that provides information
+# on the world's largest cities.
+# The key is the name of a city
+# (a string), and the associated
+# value is its population in
+# millions of people.
+
+#   Key     |   Value
+# Shanghai  |   17.8
+# Istanbul  |   13.3
+# Karachi   |   13.0
+# Mumbai    |   12.5</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="11. 字典 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 字典')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

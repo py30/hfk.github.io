@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:04.467
+Até agora, você usou uma versão
+do Python dentro da aula da Udacity.
+
+00:00:04.501 --> 00:00:10.033
+Em breve, vai precisar rodar scripts
+e usar um interpretador de Python.
+
+00:00:10.067 --> 00:00:13.400
+-É a hora da instalação. Pronta?
+-Manda ver.
+
+00:00:14.400 --> 00:00:17.567
+Python é uma linguagem popular
+e de código aberto.
+
+00:00:17.601 --> 00:00:20.338
+"Código aberto" significa
+que é grátis para baixar,
+
+00:00:20.372 --> 00:00:21.634
+modificar e utilizar.
+
+00:00:21.667 --> 00:00:26.167
+Como é popular, há instruções online
+para ajudar você a instalá-lo
+
+00:00:26.200 --> 00:00:28.534
+nos sistemas operacionais
+mais comuns.
+
+00:00:28.567 --> 00:00:31.234
+Por ser popular
+e ter o código aberto,
+
+00:00:31.267 --> 00:00:34.634
+há uma grande comunidade mundial
+trabalhando em seu desenvolvimento.
+
+00:00:34.667 --> 00:00:36.734
+Para você,
+como usuário de Python,
+
+00:00:36.767 --> 00:00:39.300
+isso significa que haverá
+novas versões disponíveis
+
+00:00:39.334 --> 00:00:42.067
+conforme o Python for aprimorado
+pela comunidade.
+
+00:00:42.100 --> 00:00:44.100
+-Devemos tentar esta?
+-Pode ser.
+
+00:00:45.367 --> 00:00:48.033
+Talvez precise atualizar
+o Python às vezes,
+
+00:00:48.067 --> 00:00:50.232
+principalmente se trabalhar
+com outras pessoas,
+
+00:00:50.266 --> 00:00:54.234
+já que precisam usar
+versões de Python compatíveis.
+
+00:00:54.267 --> 00:00:56.634
+A seguir, mostraremos
+a versão que usamos,
+
+00:00:56.667 --> 00:00:58.833
+para que nosso código
+seja compatível com o seu,
+
+00:00:58.867 --> 00:01:01.501
+e ajudaremos a instalá-lo
+e rodá-lo corretamente.
+
+00:01:01.534 --> 00:01:03.534
+-Precisa de ajuda?
+-Sim, por favor.
+
+00:01:04.701 --> 00:01:06.868
+Um, dois, três...
+
+00:01:08.701 --> 00:01:10.834
+Certo, instalamos esta.
+
+00:01:10.868 --> 00:01:12.066
+Agora é a sua vez.
+
+00:01:12.100 --> 00:01:13.101
+*END*
+

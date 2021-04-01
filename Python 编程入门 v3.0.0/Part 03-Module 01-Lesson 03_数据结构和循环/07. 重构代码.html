@@ -1,0 +1,573 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   重构代码
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          07. 重构代码
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Ud1110 IntroPy L3 37 Reading Existing Code
+         </p>
+        </h3>
+        <video controls="">
+         <source src="07. Ud1110 IntroPy L3 37 Reading Existing Code-0Pg3HryU9Z4.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="07. Ud1110 IntroPy L3 37 Reading Existing Code-0Pg3HryU9Z4.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="ar" src="07. Ud1110 IntroPy L3 37 Reading Existing Code-0Pg3HryU9Z4.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="07. Ud1110 IntroPy L3 37 Reading Existing Code-0Pg3HryU9Z4.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="true" kind="subtitles" label="en" src="07. Ud1110 IntroPy L3 37 Reading Existing Code-0Pg3HryU9Z4.en.vtt" srclang="en"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          思考
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUESTION:
+          </strong>
+         </p>
+         <p>
+          下面的函数
+          <code>
+           check_answers()
+          </code>
+          设计在练习中作为一个具有五个答案的列表以及五个正确解决方案的列表的输入。该函数根据解决方案和输出消息检查答案。代码当前正在按预期的方式运行，但这不是理想的实现。随意在自己的电脑上运行代码，以进行测试。
+         </p>
+         <p>
+          在本练习中，大家应该确定完善此函数的实现方式，但又无需删除其当前的使用情况。这里有一些问题有助于你们开始思考这个问题，但大家应该有自己的判断！
+         </p>
+         <ul>
+          <li>
+           阅读代码，清楚每个代码的作用？以及如何让代码读取更容易？
+          </li>
+          <li>
+           如果需要更改部分功能，容易操作吗？需要在几个地方做同样的修改吗？
+          </li>
+          <li>
+           如果将函数的目的分解为多个步骤，需要几个步骤？最好让每个函数执行一个目的。
+          </li>
+          <li>
+           是否存在不必要的重复？每一段代码都发挥作用了吗？能否在简洁的同时确保良好的可读性？我们将这称为
+           <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">
+            DRY（不要重复自己）原则
+           </a>
+           。
+          </li>
+         </ul>
+         <pre><code class="python language-python">def check_answers(my_answers,answers):
+    """
+    Checks the five answers provided to a multiple choice quiz and returns the results.
+    """
+    results= [None, None, None, None, None]
+    if my_answers[0] == answers[0]:
+        results[0] = True
+    elif my_answers[0] != answers[0]:
+        results[0] = False
+    if my_answers[1] == answers[1]:
+        results[1] = True
+    elif my_answers[1] != answers[0]:
+        results[1] = False
+    if my_answers[2] == answers[2]:
+        results[2] = True
+    elif my_answers[2] != answers[2]:
+        results[2] = False
+    if my_answers[3] == answers[3]:
+        results[3] = True
+    elif my_answers[3] != answers[3]:
+        results[3] = False
+    if my_answers[4] == answers[4]:
+        results[4] = True
+    elif my_answers[4] != answers[4]:
+        results[4] = False
+    count_correct = 0
+    count_incorrect = 0
+    for result in results:
+        if result == True:
+            count_correct += 1
+        if result != True:
+            count_incorrect += 1
+    if count_correct/5 &gt; 0.7:
+        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of 5."
+    elif count_incorrect/5 &gt;= 0.3:
+        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of 5."</code></pre>
+         <details>
+          <summary>
+           <strong>
+            ANSWER:
+           </strong>
+          </summary>
+          <p>
+           <p>
+            大家在思考这个问题方面做得不错！
+           </p>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          以下是一些我们不喜欢的代码，我们已经为发现的问题点添加了注释。
+         </p>
+         <pre><code class="python language-python">def check_answers(my_answers,answers):
+    #1 variable names are not easy to tell apart
+    """
+    Checks the five answers provided to a multiple choice quiz and returns the results.
+    """
+    #2 Code will only work if there are exactly five answers
+    results= [None, None, None, None, None]
+    #3 Repeated code would be better as a separate function
+    if my_answers[0] == answers[0]:
+        results[0] = True
+    elif my_answers[0] != answers[0]:
+        results[0] = False
+    #4 if and elif could be clearer with if and else
+    if my_answers[1] == answers[1]:
+        results[1] = True
+    elif my_answers[1] != answers[0]:
+        results[1] = False
+    if my_answers[2] == answers[2]:
+        results[2] = True
+    elif my_answers[2] != answers[2]:
+        results[2] = False
+    if my_answers[3] == answers[3]:
+        results[3] = True
+    elif my_answers[3] != answers[3]:
+        results[3] = False
+    if my_answers[4] == answers[4]:
+        results[4] = True
+    elif my_answers[4] != answers[4]:
+        results[4] = False
+    #6 this function does several things in one long block
+    count_correct = 0
+    count_incorrect = 0
+    for result in results:
+    #7 The code counts both correct and incorrect answers.
+        if result == True:
+            count_correct += 1
+        if result != True:
+            count_incorrect += 1
+    if count_correct/5 &gt; 0.7:
+    #8 The pass rate has been hard-coded into the function
+        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of 5."
+    elif count_incorrect/5 &gt;= 0.3:
+        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of 5."</code></pre>
+         <p>
+          <strong>
+           1：
+          </strong>
+          名称
+          <code>
+           my_answers
+          </code>
+          和
+          <code>
+           answers
+          </code>
+          非常相似，这有点混乱。为这些参数设置更好的名称，并将其定义放在文档字符串中以供参考。
+         </p>
+         <p>
+          <strong>
+           2：
+          </strong>
+          练习中的五个问题对运行代码至关重要。虽然这个约束不能阻止其正常运行，但如果将来我们有一个包括十个问题的练习，可以重复使用同样的代码就好了。
+         </p>
+         <p>
+          <strong>
+           3：
+          </strong>
+          此部分用于检查答案
+         </p>
+         <pre><code class="python language-python">    if my_answers[1] == answers[1]:
+        results[1] = True
+    elif my_answers[1] != answers[0]:
+        results[1] = False</code></pre>
+         <p>
+          重复五次！使用一个单独的函数检查答案将更好。
+         </p>
+         <p>
+          <strong>
+           4：
+          </strong>
+          有几处使用
+          <code>
+           if
+          </code>
+          和
+          <code>
+           elif
+          </code>
+          ，但是
+          <code>
+           elif
+          </code>
+          子句中的布尔表达式只是
+          <code>
+           if
+          </code>
+          之后的内容。此种情况下，如果我们使用
+          <code>
+           if
+          </code>
+          和
+          <code>
+           else
+          </code>
+          ，该程序可正常运行，但是更容易阅读。
+         </p>
+         <p>
+          <strong>
+           5：
+          </strong>
+          没有解释代码作用的行内注释。
+         </p>
+         <p>
+          <strong>
+           6：
+          </strong>
+          该函数的作用不止一点 —— 检查每个答案，然后总计正确和错误答案的数量，然后输出一则消息。但至少应将某些作用分开。
+         </p>
+         <p>
+          <strong>
+           7：
+          </strong>
+          如果每个问题非对即错，而且我们知道有多少个问题，那么就不需要计数正确答案和错误答案的数量。也可以通过使用
+          <code>
+           sum
+          </code>
+          计数
+          <code>
+           results
+          </code>
+          中的正确答案，使代码更短。
+         </p>
+         <p>
+          <strong>
+           8：
+          </strong>
+          在通过练习的边缘中，正确答案的比例是硬编码的，也不需要。
+         </p>
+         <p>
+          完善该函数的方法很多！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：重构代码">
+          练习：重构代码
+         </h1>
+         <p>
+          完善该代码的列表较长！但不要害怕，我们不必一次完成全部列表内容 —— 事实上，最好一次完善一个内容，然后测试结果。
+         </p>
+         <p>
+          在这个练习中，对程序进行两处修改：
+         </p>
+         <ol>
+          <li>
+           将检查答案的代码移动（重构）到一个单独的函数，并明确命名。使用循环针对每个答案调用函数，避免五次调用该函数。
+          </li>
+          <li>
+           完善文档字符串并添加注释，使代码更容易理解。
+          </li>
+         </ol>
+         <p>
+          这不包括整个完善清单，但这是一个很好的开始！大家还可以自行进行其他完善。将在某些测试用例中测试你的代码，因此只需确保代码可正常运行即可！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347086-refactor-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347086-refactor-py" id="tab-347086-refactor-py" role="tab">
+            refactor.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347086-refactor-py" class="tab-pane active show" id="347086-refactor-py" role="tabpanel">
+            <pre><code></code>def check_answers(my_answers,answers):
+    """
+    Checks the five answers provided to a multiple choice quiz and returns the results.
+    """
+    results= [None, None, None, None, None]
+    if my_answers[0] == answers[0]:
+        results[0] = True
+    elif my_answers[0] != answers[0]:
+        results[0] = False
+    if my_answers[1] == answers[1]:
+        results[1] = True
+    elif my_answers[1] != answers[1]:
+        results[1] = False
+    if my_answers[2] == answers[2]:
+        results[2] = True
+    elif my_answers[2] != answers[2]:
+        results[2] = False
+    if my_answers[3] == answers[3]:
+        results[3] = True
+    elif my_answers[3] != answers[3]:
+        results[3] = False
+    if my_answers[4] == answers[4]:
+        results[4] = True
+    elif my_answers[4] != answers[4]:
+        results[4] = False
+    count_correct = 0
+    count_incorrect = 0
+    for result in results:
+        if result == True:
+            count_correct += 1
+        if result != True:
+            count_incorrect += 1
+    if count_correct/5 &gt; 0.7:
+        return "Congratulations, you passed the test! You scored " + str(count_correct) + " out of 5."
+    elif count_incorrect/5 &gt;= 0.3:
+        return "Unfortunately, you did not pass. You scored " + str(count_correct) + " out of 5."</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="08. 集合.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. 重构代码')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

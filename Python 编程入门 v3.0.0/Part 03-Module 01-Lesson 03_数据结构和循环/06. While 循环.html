@@ -1,0 +1,657 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   While 循环
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          06. While 循环
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="while-循环">
+          While 循环
+         </h1>
+         <p>
+          For 循环是 "定迭代" 的一种，它表示循环主体将执行指定次数。列表的 for 循环针对列表中的每个元素执行一次主体。使用
+          <code>
+           range
+          </code>
+          函数的 for 循环，其执行次数将由 range 函数调用指定。
+          <br/>
+          这种迭代与 "不定迭代" 不同，后者指循环重复未知次数，直到满足某些条件时循环才会结束。下面这个示例将模拟二十一点发牌，使用 while 循环将卡片牌堆拖到手牌中，在手牌的值大于或等于 17 时停止。
+         </p>
+         <pre><code class="python language-python">card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
+hand = []
+
+while sum(hand) &lt;= 17:
+    hand.append(card_deck.pop())
+
+print(hand)</code></pre>
+         <p>
+          这个示例中有一个新的函数
+          <code>
+           sum
+          </code>
+          和一个新的列表方法
+          <code>
+           pop
+          </code>
+          。
+          <code>
+           sum
+          </code>
+          非常直观，它用于计算列表中元素的总和。
+          <code>
+           pop
+          </code>
+          方法与
+          <code>
+           append
+          </code>
+          方法相反，
+          <code>
+           pop
+          </code>
+          从列表中移除一个元素并返回它。大家可以在
+          <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists" target="_blank">
+           官方文档
+          </a>
+          中阅读更多关于 pop 方法的内容。
+         </p>
+         <p>
+          下面我们来看一下 while 循环的语法：
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/screen-shot-2017-01-09-at-1.08.23-pm.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <ol>
+          <li>
+           关键字
+           <code>
+            While
+           </code>
+           表示这是一个 while 循环
+          </li>
+          <li>
+           接下来是一个测试表达式，在该示例中表达式为
+           <code>
+            sum(hand) &lt;= 21
+           </code>
+           。如果表达式为真，将执行循环主体，之后将再次判断该表达式是否为真。这一过程重复判断测试表达式的真假，并运行循环主体，直到表达式变为 false。
+          </li>
+          <li>
+           循环主体前需要缩进四个空格。循环主体应该以某种方式修改测试表达式中的变量。如果测试表达式的值没有改变，这将导致一个无限循环！在上面的示例中，循环主体将数字追加到了
+           <code>
+            hand
+           </code>
+           列表中，因此增加了
+           <code>
+            sum(hand)
+           </code>
+           的值。
+          </li>
+         </ol>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：最大平方数">
+          练习：最大平方数
+         </h1>
+         <p>
+          请在下面的练习中完成 nearest_square 函数。该函数取一个整数参数
+          <code>
+           limit
+          </code>
+          ，并返回一个小于
+          <code>
+           limit
+          </code>
+          的最大平方数。平方数是整数乘以自身的乘积，例如 6*6 等于 36，所以 36 是一个平方数。
+         </p>
+         <p>
+          这个代码有多种编写方法，但是我建议大家使用一个 while 循环！
+         </p>
+         <p>
+          下面是一个测试用例，在函数编写完成后，你可以使用它来测试自己的代码。当然你也可以随意使用其他数据进行测试。
+         </p>
+         <pre><code class="python language-python">test1 = nearest_square(40)
+print("expected result: 36, actual result: {}".format(test1))</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347077-nearestsquare-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347077-nearestsquare-py" id="tab-347077-nearestsquare-py" role="tab">
+            nearestsquare.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347077-nearestsquare-py" class="tab-pane active show" id="347077-nearestsquare-py" role="tabpanel">
+            <pre><code></code>#TODO: Implement the nearest_square function</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="break-停止">
+          <code>
+           break
+          </code>
+          停止
+         </h1>
+         <p>
+          For 循环迭代序列中的每个元素，而 while 循环在满足条件时停止迭代。在大多数情况下，这两种用法就已经足够了，但我们有时候需要更精确地控制循环何时结束。这时我们就需要使用关键字
+          <code>
+           break
+          </code>
+          了。
+         </p>
+         <p>
+          循环在遇到 break 时便会立即停止。如果检测到已经满足某些条件，那么我们可以使用这些条件来结束循环。在
+          <code>
+           for
+          </code>
+          循环和
+          <code>
+           while
+          </code>
+          循环中，我们都可以使用
+          <code>
+           break
+          </code>
+          。
+         </p>
+         <p>
+          我们将通过下面的示例学习如何使用
+          <code>
+           break
+          </code>
+          。
+          <br/>
+          假设你想按照一个货物列表来装载货船。每个货物都具有一定的重量，但货船有最大载重限制。在理想情况下，我们希望能够装载所有货物，同时避免货船超载。因此，当货物达到货船的额定载重时，应停止装载。所以在这里我们将使用一个
+          <code>
+           for
+          </code>
+          循环，来记录装载的货物以及总重量。一旦所装载的货物达到了货船的最大载重，应使用
+          <code>
+           break
+          </code>
+          语句停止装载。
+         </p>
+         <p>
+          <strong>
+           注意：
+          </strong>
+          下方示例中的
+          <code>
+           manifest
+          </code>
+          是一个由列表组成的列表。我们以前接触过列表，也知道有些列表元素本身就是列表，而
+          <code>
+           manifest
+          </code>
+          变量就是这种情况。
+          <code>
+           manifest
+          </code>
+          列表中的每个元素本身就是一个列表，它包含两个元素：货物名称和货物重量。
+         </p>
+         <pre><code class="python language-python"># each item in the manifest is an item and its weight
+manifest = [["bananas", 15], ["mattresses", 34], ["dog kennels",42], ["machine that goes ping!", 120], ["tea chests", 10], ["cheeses", 0]]
+
+cargo_weight = 0
+cargo_hold = []
+
+for cargo in manifest:
+    if cargo_weight &gt;= 100:
+        break
+    else:
+        cargo_hold.append(cargo[0])
+        cargo_weight += cargo[1]</code></pre>
+         <p>
+          上方这段代码旨在避免船上货物的重量超过规定的限值 100。现在我们来检查一下装载在船上的货物重量。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(cargo_weight)
+211
+&gt;&gt;&gt; print(cargo_hold)
+['bananas', 'mattresses', 'dog kennels', 'machine that goes ping!']</code></pre>
+         <p>
+          上方的结果好像不太对劲，货船装载的货物严重超过了重量限制。尽管 break 语句阻止了我们将每一件货物都放在船上，但最后仍然超过了限制。
+         </p>
+         <p>
+          单看上方的代码我们很难判断哪里出了问题。在这里我们可以在代码中使用
+          <code>
+           print
+          </code>
+          函数来查看问题出在哪里。这是一个非常方便的方法，因为随着代码的逐步运行，它可以让我们深入了解数据状态。如果打印的提示正确（并给出上下文），这可能有助于我们找到错误。
+         </p>
+         <p>
+          我们在下方的代码中添加了调试语句：
+         </p>
+         <pre><code class="python language-python">cargo_weight = 0
+cargo_hold = []
+
+for cargo in manifest:
+    print("debug: the weight is currently: {}".format(cargo_weight))
+    if cargo_weight &gt;= 100:
+        print("debug: breaking loop now!")
+        break
+    else:
+        print("debug: adding item: {}".format(cargo[0]))
+        print("debug: with weight: {}".format(cargo[1]))
+        cargo_hold.append(cargo[0])
+        cargo_weight += cargo[1]</code></pre>
+         <p>
+          以下是带标注循环的输出：
+         </p>
+         <pre><code class="text language-text">debug: the weight is currently: 0
+debug: adding item: bananas
+debug: with weight: 15
+debug: the weight is currently: 15
+debug: adding item: mattresses
+debug: with weight: 34
+debug: the weight is currently: 49
+debug: adding item: dog kennels
+debug: with weight: 42
+debug: the weight is currently: 91
+debug: adding item: machine that goes ping!
+debug: with weight: 120
+debug: the weight is currently: 211
+debug: breaking loop now!</code></pre>
+         <p>
+          通过这些调试日志，我们可以看到循环正确地将货物添加到货船中，但是在满足重量限制之后，还增加了一个额外货物。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          思考
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUESTION:
+          </strong>
+         </p>
+         <p>
+          大家知道为什么列表中添加了一个额外的货物吗？请告诉我们你的想法，并查看我们的想法。
+         </p>
+         <details>
+          <summary>
+           <strong>
+            ANSWER:
+           </strong>
+          </summary>
+          <p>
+           <p>
+            感谢大家思考！问题是导致循环
+            <code>
+             break
+            </code>
+            的
+            <code>
+             if
+            </code>
+            条件只有在
+            <em>
+             当前
+            </em>
+            重量超过限制时才会触发。相反，应该检查添加下一个货物后的
+            <em>
+             新
+            </em>
+            重量是否超过限制。
+           </p>
+           <p>
+            这段新代码将解决问题：
+           </p>
+           <pre><code class="python language-python">for cargo in manifest:
+    if cargo_weight + cargo[1] &gt;= 100:
+        break
+    else:
+        cargo_hold.append(cargo[0])
+        cargo_weight += cargo[1]</code></pre>
+           <p>
+            可以再次添加
+            <code>
+             print
+            </code>
+            语句，并看看其如何运行。
+           </p>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：断开字符串">
+          练习：断开字符串
+         </h1>
+         <p>
+          请在下方的练习中使用 break 语句来编写自己的循环。你的任务是创建一个长度为 140 个字符的字符串
+          <code>
+           news_ticker
+          </code>
+          。你可以从
+          <code>
+           headlines
+          </code>
+          列表添加标题，并在每个标题之间插入一个空格。当
+          <code>
+           news_ticker
+          </code>
+          的长度超过 140 个字符时，你可以从中间截断最后一个标题，使字符长度保持在 140。
+         </p>
+         <p>
+          请记住，在 for 循环和 while 循环中均可使用
+          <code>
+           break
+          </code>
+          。请在下方练习中使用你心目中最合适的循环，你也可以考虑在代码中添加
+          <code>
+           print
+          </code>
+          语句来帮助你解决错误。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347081-ticker-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347081-ticker-py" id="tab-347081-ticker-py" role="tab">
+            ticker.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347081-ticker-py" class="tab-pane active show" id="347081-ticker-py" role="tabpanel">
+            <pre><code></code>headlines = ["Local Bear Eaten by Man",
+             "Legislature Announces New Laws",
+             "Peasant Discovers Violence Inherent in System",
+             "Cat Rescues Fireman Stuck in Tree",
+             "Brave Knight Runs Away",
+             "Papperbok Review: Totally Triffic"]
+
+news_ticker = ""
+# TODO: set news_ticker to a string that contains no more than 140 characters long.
+# HINT: modify the headlines list to verify your loop works with different inputs</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="07. 重构代码.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. While 循环')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

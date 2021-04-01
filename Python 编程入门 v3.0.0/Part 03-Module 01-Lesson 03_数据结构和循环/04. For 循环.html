@@ -1,0 +1,767 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   For 循环
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据结构和循环
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 列表.html">
+       02. 列表
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 列表 II.html">
+       03. 列表 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. For 循环.html">
+       04. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="05. For 循环 II.html">
+       05. For 循环 II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. While 循环.html">
+       06. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 重构代码.html">
+       07. 重构代码
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 集合.html">
+       08. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 集合 II.html">
+       09. 集合 II
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 字典.html">
+       10. 字典
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字典 II.html">
+       11. 字典 II
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 复合数据结构.html">
+       12. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 问题解决能力.html">
+       13. 问题解决能力
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          04. For 循环
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="for-循环">
+          For 循环
+         </h1>
+         <p>
+          在 Python 中，我们可以使用列表来存储数据序列，并使用 for 循环来遍历列表。下面的代码中包含一个循环，可以将列表中每个名字的首字母大写（将字符串的首字母大写可以通过字符串的
+          <a href="https://www.tutorialspoint.com/python/string_title.htm" target="_blank">
+           title()
+          </a>
+          方法来实现），并打印：
+         </p>
+         <pre><code class="python language-python">names = ['charlotte hippopotamus turner', 'oliver st. john-mollusc',
+         'nigel incubator-jones', 'philip diplodocus mallory']
+
+for name in names:
+    print(name.title())</code></pre>
+         <p>
+          运行该代码可输出：
+         </p>
+         <pre><code class="text language-text">Charlotte Hippopotamus Turner
+Oliver St. John-Mollusc
+Nigel Incubator-Jones
+Philip Diplodocus Mallory</code></pre>
+         <p>
+          现在我们来具体看看 for 循环的语法：
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/for-loop.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <ol>
+          <li>
+           关键字
+           <code>
+            for
+           </code>
+           表示这是一个 for 循环。
+          </li>
+          <li>
+           该行的其余部分表示正在迭代的内容。
+           <code>
+            names
+           </code>
+           是这个 for 循环迭代的列表。
+           <code>
+            name
+           </code>
+           是该循环的迭代变量。针对
+           <code>
+            names
+           </code>
+           中的每个元素， for 循环的主体都会被执行一次，迭代变量
+           <code>
+            name
+           </code>
+           可用于循环体，从而指代循环当前处理的元素。
+          </li>
+          <li>
+           for 循环的主体部分需要缩进四个空格，并针对列表中的每个元素执行一次。
+          </li>
+         </ol>
+         <p>
+          <strong>
+           关于命名的注释
+          </strong>
+          ：你可以采用自己喜欢的任何方式命名迭代变量。但是上面这个例子展现了一个常见模式，即列表
+          <code>
+           names
+          </code>
+          的名称是以 "s" 结尾的复数，而迭代变量是没有 "s" 的单数。以此模式命名列表和迭代变量，可以使其他程序员更轻松地了解不同的变量。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：列表的总和">
+          练习：列表的总和
+         </h1>
+         <p>
+          请在下面的练习中定义一个函数
+          <code>
+           list_sum
+          </code>
+          ，该函数将一个列表作为参数，并返回列表中元素的总和。你可以使用 for 循环迭代列表。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347061-sum-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347061-sum-py" id="tab-347061-sum-py" role="tab">
+            sum.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347061-sum-py" class="tab-pane active show" id="347061-sum-py" role="tabpanel">
+            <pre><code></code>def list_sum(input_list):
+    sum = 0
+    # todo: Write a for loop that adds the elements
+    # of input_list to the sum variable
+    
+    return sum
+
+
+
+#These test cases check that list_sum works correctly
+test1 = list_sum([1, 2, 3])
+print("expected result: 6, actual result: {}".format(test1))
+
+test2 = list_sum([-1, 0, 1])
+print("expected result: 0, actual result: {}".format(test2))
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：xml-标签计数器">
+          练习：XML 标签计数器
+         </h1>
+         <p>
+          请在下面的练习中编写函数
+          <code>
+           tag_count
+          </code>
+          ，其参数以字符串列表的形式列出。该函数应该返回字符串中有多少个
+          <a href="https://en.wikipedia.org/wiki/XML" target="_blank">
+           XML 标签
+          </a>
+          。XML 是类似于 HTML 的数据语言，它以左尖括号 "&lt;" 开始，以右尖括号 "&gt;" 结尾。你可以通过检查列表中的字符串是否以 "&lt;" 开始，以 "&gt;" 结尾来判断它是否为 XML 标签。
+         </p>
+         <p>
+          你可以假设作为输入的字符串列表不包含空字符串。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347063-XMLTagCounter-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347063-XMLTagCounter-py" id="tab-347063-XMLTagCounter-py" role="tab">
+            XMLTagCounter.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347063-XMLTagCounter-py" class="tab-pane active show" id="347063-XMLTagCounter-py" role="tabpanel">
+            <pre><code></code>"""Write a function, `tag_count`, that takes as its argument a list
+of strings. It should return a count of how many of those strings
+are XML tags. You can tell if a string is an XML tag if it begins
+with a left angle bracket "&lt;" and ends with a right angle bracket "&gt;".
+"""
+#TODO: Define the tag_count function
+def tag_count(list1):
+    # Your code goes here!
+    return count
+
+# Test for the tag_count function:
+list1 = ['&lt;greeting&gt;', 'Hello World!', '&lt;/greeting&gt;']
+count = tag_count(list1)
+print("Expected result: 2, Actual result: {}".format(count))</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="使用循环构建列表">
+          使用循环构建列表
+         </h1>
+         <p>
+          除了利用循环从列表中提取信息之外，我们还可以使用 for 循环创建和修改列表。以我们在这一节开头看到的名单列表为例（注意所有首字母均为小写）：
+         </p>
+         <pre><code class="python language-python">names = ['charlotte hidppopotamus turner', 'oliver st. john-mollusc',
+         'nigel incubator-jones', 'philip diplodocus mallory']</code></pre>
+         <p>
+          通过下面的代码，我们可以使用循环生成一个首字母大写的名单：
+         </p>
+         <pre><code class="python language-python"># create a new list of capitalized names without modifying the original list
+capitalized_names = [] #create a new, empty list
+for name in names:
+    capitalized_names.append(name.title()) #add elements to the new list</code></pre>
+         <p>
+          如果你不想保留首字母小写的名单列表，你也可以将其覆盖，而不是创建一个新列表。
+         </p>
+         <pre><code class="python language-python"># modify the names list in place
+for index in range(len(names)): # iterate over the index numbers of the names list
+    names[index] = names[index].title() # modify each element of names</code></pre>
+         <p>
+          如需创建一个新列表，可以从一个空列表 (
+          <code>
+           []
+          </code>
+          ) 开始，然后使用
+          <code>
+           append
+          </code>
+          方法添加新元素。修改列表更复杂一些，需要使用一个新的函数：
+          <code>
+           range
+          </code>
+          。
+          <code>
+           range
+          </code>
+          函数需要一个参数，即整数 n，并返回一个从零到 n-1 的数字序列。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; for number in range(4):
+&gt;&gt;&gt;     print(number)
+0
+1
+2
+3</code></pre>
+         <p>
+          使用 range 函数为名单列表中的每个值生成索引。这样我们可以使用
+          <code>
+           names[index]
+          </code>
+          访问列表的元素，以便更新
+          <code>
+           names
+          </code>
+          列表中的值。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Why
+          <code>
+           range
+          </code>
+          ?
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             使用
+             <code>
+              range
+             </code>
+             生成索引以修改列表似乎相当于迂回，为什么这是必要的？试一试这个更简单的方法看看会出现什么结果：
+            </p>
+            <pre><code class="python language-python">names = ['charlotte hippopotamus turner', 'oliver st. john-mollusc', 'nigel incubator-jones', 'philip diplodocus mallory']
+
+for name in names:
+    name = name.title()
+
+print(names)</code></pre>
+            <p>
+             这段代码有什么用？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1483994414451" name="347065" type="radio" value="a1483994414451"/>
+           <label for="a1483994414451">
+            <p>
+             修改名单列表，使得每个名字都大写
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483994485416" name="347065" type="radio" value="a1483994485416"/>
+           <label for="a1483994485416">
+            <p>
+             导致运行时错误
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483994486263" name="347065" type="radio" value="a1483994486263"/>
+           <label for="a1483994486263">
+            <p>
+             代码没有任何作用
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1483994487103" name="347065" type="radio" value="a1483994487103"/>
+           <label for="a1483994487103">
+            <p>
+             删除列表
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          代码没有任何作用
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：创建-html-列表">
+          练习：创建 HTML 列表
+         </h1>
+         <p>
+          请在下面的练习中编写
+          <code>
+           html_list
+          </code>
+          函数。该函数需要一个参数，即一个字符串列表，并返回一个 HTML 列表形式的单个字符串。例如，如果为函数提供列表
+          <code>
+           ['first string', 'second string']
+          </code>
+          作为参数，则该函数将返回以下字符串。
+         </p>
+         <pre><code class="text language-text">&lt;ul&gt;
+&lt;li&gt;first string&lt;/li&gt;
+&lt;li&gt;second string&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+         <p>
+          也就是说，字符串的第一行应该是开始标签
+          <code>
+           &lt;ul&gt;
+          </code>
+          。继第一行之后是源列表中的两个元素（各占一行），前后带有
+          <code>
+           &lt;li&gt;
+          </code>
+          和
+          <code>
+           &lt;/li&gt;
+          </code>
+          标签。字符串的最后一行应该是结束标签
+          <code>
+           &lt;/ul&gt;
+          </code>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347067-htmllist-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347067-htmllist-py" id="tab-347067-htmllist-py" role="tab">
+            htmllist.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347067-htmllist-py" class="tab-pane active show" id="347067-htmllist-py" role="tabpanel">
+            <pre><code></code>#define the  html_list function
+def html_list(list_of_strings):
+    # Your code goes here!
+    return
+
+print(html_list(['First element', 'Second element', 'Third element']))</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="range-函数的其他应用">
+          <code>
+           range
+          </code>
+          函数的其他应用
+         </h1>
+         <p>
+          虽然
+          <code>
+           range
+          </code>
+          可以用于修改列表，但这并不是它的唯一用处。我们也可以使用该函数将某个操作重复一定次数。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; for i in range(3):
+...     print("Camelot!")
+... 
+Camelot!
+Camelot!
+Camelot!
+&gt;&gt;&gt; print("It's only a model.")
+It's only a model.</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：starbox">
+          练习：Starbox
+         </h1>
+         <p>
+          在下面的练习中，
+          <code>
+           starbox
+          </code>
+          函数将打印出一个由星号组成的框。该函数有两个参数，即宽度和高度，其单位为字符数量。
+          <br/>
+          这个函数并不完整，尽管它打印了正确宽度的框，但忽略了参数高度。现在请你将函数补充完整，以便根据我们提供的两个测试用例打印出正确大小的框。
+          <strong>
+           提示：
+          </strong>
+          在这个练习中，
+          <code>
+           range
+          </code>
+          函数也许可以派上用场！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347070-starbox-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347070-starbox-py" id="tab-347070-starbox-py" role="tab">
+            starbox.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347070-starbox-py" class="tab-pane active show" id="347070-starbox-py" role="tabpanel">
+            <pre><code></code>def starbox(width, height):
+    """print a box made up of asterisks.
+
+    width: width of box in characters, must be at least 2
+    height: height of box in lines, must be at least 2
+    """
+    print("*" * width) #print top edge of box
+   
+    # print sides of box
+    # todo: print this line height-2 times, instead of three times
+    print("*" + " " * (width-2) + "*") 
+    print("*" + " " * (width-2) + "*")
+    print("*" + " " * (width-2) + "*")
+
+    print("*" * width) #print bottom edge of box
+
+# Test Cases
+print("Test 1:")
+starbox(5, 5) # this prints correctly
+
+print("Test 2:")
+starbox(2, 3)  # this currently prints two lines too tall - fix it!
+</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          单击“下一项”查看该练习的解决方案。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="05. For 循环 II.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. For 循环')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

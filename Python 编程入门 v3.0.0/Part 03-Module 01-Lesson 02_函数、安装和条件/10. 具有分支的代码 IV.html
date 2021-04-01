@@ -1,0 +1,445 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   具有分支的代码 IV
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          10. 具有分支的代码 IV
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习解决方案：用多个返回值编写自己的函数">
+          练习解决方案：用多个返回值编写自己的函数
+         </h1>
+         <p>
+          以下是我们重新编写的代码：
+         </p>
+         <pre><code class="python language-python">def cylinder_surface_area(radius, height, has_top_and_bottom):
+    side_area = height * 6.28 * radius
+    if has_top_and_bottom:
+        top_area = 3.14 * radius ** 2
+        return top_area*2 + side_area
+    else:
+        return side_area</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="非布尔对象的真值">
+          非布尔对象的真值
+         </h1>
+         <p>
+          到目前为止，条件表达式的结构如下所示：
+         </p>
+         <pre><code class="python language-python">if boolean_expression:
+    indented_code</code></pre>
+         <p>
+          我们已经看到的
+          <code>
+           boolean_expression
+          </code>
+          已经是计算结果布尔对象为
+          <code>
+           True
+          </code>
+          或
+          <code>
+           False
+          </code>
+          的表达式。
+         </p>
+         <p>
+          如果我们在
+          <code>
+           if
+          </code>
+          语句中放置一些不是布尔值的其他对象代替布尔表达式，Python 将检查其是否为
+          <em>
+           真值
+          </em>
+          ，并根据检查结果来决定是否运行缩进代码。
+         </p>
+         <p>
+          在此种情况下，[Python 文档](
+          <a href="https://docs.python.org/3/library/stdtypes.html#truth-value-testing" target="_blank">
+           https://docs.python.org/3/library/stdtypes.html#truth-value-testing
+          </a>
+          <br/>
+          ) 列出了所有被认为是
+          <code>
+           False
+          </code>
+          的对象。（请勿担心，部分内容还暂未涉及，稍后将为大家介绍。）任何为
+          <code>
+           0
+          </code>
+          的数字、一个是
+          <code>
+           None
+          </code>
+          的对象或一个空字符串将具有
+          <code>
+           False
+          </code>
+          真值。任何未被列为具有真值
+          <code>
+           False
+          </code>
+          的对象将被视为
+          <code>
+           True
+          </code>
+          。
+         </p>
+         <pre><code class="python language-python">errors = 3
+if errors:
+    print("There are " + str(errors) + " mistakes. Please correct.")
+else:
+    print("No mistakes here!")</code></pre>
+         <p>
+          在这段代码中，
+          <code>
+           errors
+          </code>
+          具有真值
+          <code>
+           True
+          </code>
+          ，因为它是一个非零数字，所以打印出错误信息。
+          <code>
+           if
+          </code>
+          语句简洁明了。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：在-which_prize-中使用对象的真值">
+          练习：在
+          <code>
+           which_prize()
+          </code>
+          中使用对象的真值
+         </h1>
+         <p>
+          运用所学的关于真值的内容，重写以前的
+          <a href="58b6ab9c-d283-4c00-bbe5-f8a518787088" target="_blank">
+           <code>
+            which_prize()
+           </code>
+           函数
+          </a>
+          。
+          <br/>
+          以根据积分设置变量
+          <code>
+           prize = None
+          </code>
+          ，更改
+          <code>
+           prize
+          </code>
+          编写函数，然后根据是否获得
+          <code>
+           prize
+          </code>
+          使用另一个条件表达式返回消息。这将避免代码
+          <code>
+           return
+          </code>
+          部分多次重复。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="347008-which_prize2-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#347008-which_prize2-py" id="tab-347008-which_prize2-py" role="tab">
+            which_prize2.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-347008-which_prize2-py" class="tab-pane active show" id="347008-which_prize2-py" role="tabpanel">
+            <pre><code></code></pre>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+         <h3>
+          INSTRUCTOR NOTE:
+         </h3>
+         <p>
+          可以参考该函数之前的相关内容（
+          <a href="58b6ab9c-d283-4c00-bbe5-f8a518787088" target="_blank">
+           此处
+          </a>
+          ）开始编写。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="11. 具有分支的代码 V.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 具有分支的代码 IV')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

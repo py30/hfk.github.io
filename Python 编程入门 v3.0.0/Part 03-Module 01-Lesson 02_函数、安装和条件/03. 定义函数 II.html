@@ -1,0 +1,492 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   定义函数 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数、安装和条件
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 欢迎回来！.html">
+       01. 欢迎回来！
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数 I.html">
+       02. 定义函数 I
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 定义函数 II.html">
+       03. 定义函数 II
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 定义函数 III.html">
+       04. 定义函数 III
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 在电脑中安装 Python.html">
+       05. 在电脑中安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. Python 编程设置.html">
+       06. Python 编程设置
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 具有分支的代码 I.html">
+       07. 具有分支的代码 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 具有分支的代码 II.html">
+       08. 具有分支的代码 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 具有分支的代码 III.html">
+       09. 具有分支的代码 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 具有分支的代码 IV.html">
+       10. 具有分支的代码 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 具有分支的代码 V.html">
+       11. 具有分支的代码 V
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 分解程序.html">
+       12. 分解程序
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 搭建程序框架与构建程序.html">
+       13. 搭建程序框架与构建程序
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 创建程序段 I.html">
+       14. 创建程序段 I
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 创建程序段 II.html">
+       15. 创建程序段 II
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 创建程序段 III.html">
+       16. 创建程序段 III
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 创建程序段 IV.html">
+       17. 创建程序段 IV
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 组合程序段.html">
+       18. 组合程序段
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          03. 定义函数 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习解决方案：人口密度函数">
+          练习解决方案：人口密度函数
+         </h1>
+         <p>
+          下面是我的解决方案：
+         </p>
+         <pre><code class="python language-python">def population_density(population, land_area):
+    return population/land_area</code></pre>
+         <p>
+          此处函数体只有一行，原因是在代码不混乱的前提下，我个人偏向于保持函数简单。你也可以将计算语句和返回语句分为两行来编写函数。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="缩进">
+          缩进
+         </h1>
+         <p>
+          正如大家刚刚所见，缩进十分重要。这可以用来提醒我们 Python 函数体中存在什么代码、以及哪些代码在函数体之外。缩进不仅仅在函数定义中重要，在其他情况下也经常出现。在其他语言中，会使用
+          <code>
+           {
+          </code>
+          和
+          <code>
+           }
+          </code>
+          等符号表示代码块开始和结束位置，而在 Python 中，我们使用缩进来包含代码块。
+         </p>
+         <p>
+          在 Python 中，缩进字符数通常是四个空格的倍数。请务必遵守此规定，因为更改缩进将会完全改变代码的含义。每位 Python 程序员都务必要遵循相同的缩进规定！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="记录函数">
+          记录函数
+         </h1>
+         <p>
+          函数有助于将程序分解成更小的块。这样不仅易于编写，而且函数可重复使用，也使读取更加容易。如果一个程序需要计算多个人口密度，那么该程序可以多次调用
+          <code>
+           population_density
+          </code>
+          ，而不需要频繁写出公式，这样更加简便。
+         </p>
+         <p>
+          由于函数有可读名称，所以我们在运行时更容易读懂代码。虽然人口密度公式本身并不复杂，但一个命名清晰的函数显然更容易识别。
+         </p>
+         <p>
+          还有一种便于读取函数的方法，即文档字符串（也称为 "docstrings"）。Docstrings 是一种用于解释函数目的以及使用方法的注释。下面是一个 population_density 函数，函数中包含一个 docstring：
+         </p>
+         <pre><code class="python language-python">def population_density(population, land_area):
+    """Calculate the population density of an area.
+
+    population: int. The population of the area
+    land_area: int or float. This function is unit-agnostic, if you pass
+               in values in terms of square km or square miles the
+               function will return a density in those units.
+    """
+    return population / land_area</code></pre>
+         <p>
+          Docstrings 外是三重引号，即
+          <code>
+           """
+          </code>
+          。docstring 字符串的第一行简要解释函数目的。如果你觉得这样的说明就够了，即可在此结束 docstring，单行 docstrings 也是完全可以的。但如果函数十分复杂，为了确保说明清晰，可以在一行总结后添加一段更详细的描述段落。
+         </p>
+         <p>
+          另外一种 docstring 元素则用于解释函数参数。可以在此列出参数，说明参数目的以及参数类型。
+         </p>
+         <p>
+          docstring 的每一部分都是可选的，docstring 本身也是如此。但请记得，编写代码始终比阅读代码更加容易。如果能使合作伙伴（包括未来的你！）更易读懂你的代码，那么应该尽可能地为他人、为自己提供便利。
+         </p>
+         <p>
+          你可以在
+          <a href="https://www.python.org/dev/peps/pep-0257/" target="_blank">
+           https://www.python.org/dev/peps/pep-0257/
+          </a>
+          上阅读更详细的 docstring 规定解释。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="一个不返回任何值的函数">
+          一个不返回任何值的函数
+         </h1>
+         <p>
+          可以将函数想象为一台接收输入（参数），然后进行处理，最后输出结果（返回值）的小型机器。这是一个很好的比喻，但是不太确切。有一些函数根本不返回任何值，比如
+          <code>
+           print
+          </code>
+          ，：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; return_value = print("I wish to register a complaint.")
+I wish to register a complaint.
+&gt;&gt;&gt; print(return_value)
+None </code></pre>
+         <p>
+          <code>
+           print
+          </code>
+          在控制台上
+          <strong>
+           显示
+          </strong>
+          文本，但是我们看到的其
+          <strong>
+           返回值
+          </strong>
+          是
+          <code>
+           None
+          </code>
+          。
+          <code>
+           None
+          </code>
+          是 Python 中的一个特殊值，表示值的缺失。如果函数没有明确返回任何其他内容，则
+          <code>
+           None
+          </code>
+          是其默认返回值。
+         </p>
+         <p>
+          我们来看一则示例。这是此前练习中用到的测试代码，我们将其编写为一组可复用的函数：
+         </p>
+         <pre><code class="python language-python">def print_testcase(expected_value, actual_value):
+    print("expected value: {}, actual value: {}".format(expected_value, actual_value))</code></pre>
+         <p>
+          这个函数不像之前的示例，它没有返回语句，但它仍然是一个有效的函数。我们来试一下：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; return_value = print_testcase(42, 42)
+expected value: 42, actual value: 42</code></pre>
+         <p>
+          调用函数时，输出是
+          <code>
+           print
+          </code>
+          打印出的内容。但是给
+          <code>
+           return_value
+          </code>
+          的赋值是什么？我们可以用
+          <code>
+           print
+          </code>
+          打印
+          <br/>
+          <code>
+           return_value
+          </code>
+          来进行检查！
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; print(return_value)
+None</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：readable_timedelta">
+          练习：
+          <code>
+           readable_timedelta
+          </code>
+         </h1>
+         <p>
+          请编写一个名为
+          <code>
+           readable_timedelta
+          </code>
+          的函数。该函数接收一个参数（一个整数型变量
+          <code>
+           days
+          </code>
+          ），并返回一个字符串，表示传入的天数有几星期零几天。例如，
+          <code>
+           readable_timedelta(10)
+          </code>
+          应返回
+          <code>
+           1 week(s) and 3 day(s).
+          </code>
+          。
+         </p>
+         <p>
+          编写时请加上一个 docstring，用于说明该函数的目的。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="346972-student-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#346972-student-py" id="tab-346972-student-py" role="tab">
+            student.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-346972-student-py" class="tab-pane active show" id="346972-student-py" role="tabpanel">
+            <pre><code></code># Write your code for readable_timedelta here.
+
+
+# Uncomment this function call to test it:
+# print(readable_timedelta(10))</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="04. 定义函数 III.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 定义函数 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>
