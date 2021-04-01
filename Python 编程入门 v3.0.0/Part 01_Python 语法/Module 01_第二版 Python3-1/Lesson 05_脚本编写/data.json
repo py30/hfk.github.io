@@ -1,0 +1,1679 @@
+{
+  "data": {
+    "lesson": {
+      "id": 534387,
+      "key": "09be9405-95aa-4a89-b800-9b60ccde5476",
+      "title": "脚本编写",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "你将学习用来开发程序的不同环境。要分享你的代码并与其他开发者合作，必须了解这些环境。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/09be9405-95aa-4a89-b800-9b60ccde5476/534387/1544952607394/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/09be9405-95aa-4a89-b800-9b60ccde5476/534387/1544952602987/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 782304,
+          "key": "bdc6f32e-e0fe-4939-9822-7565877c173e",
+          "title": "脚本",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bdc6f32e-e0fe-4939-9822-7565877c173e",
+            "completed_at": "2018-11-16T18:54:14.196Z",
+            "last_viewed_at": "2019-02-23T11:15:07.916Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 782305,
+              "key": "947e6326-e867-4d6b-ba79-81c4d898916d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 什么是脚本\n\nPython 是一种“脚本语言”。脚本，对应的英文是：script。一般人看到script这个英文单词，或许想到的更多的是：电影的剧本，就是一段段的脚本，所组成的。电影剧本的脚本，决定了电影中的人和物，都做哪些事情，怎么做。而计算机中的脚本，决定了：计算机中的操作系统和各种软件工具，要做哪些事情，以及具体怎么做。\n\n<div align=\"center\"><img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7d5c9_download/download.jpeg\"><div>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 782307,
+              "key": "30f4cda5-bec6-4353-ba08-d9e67cce4c33",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 脚本 vs 程序\n\n你可能想要了解脚本与一般程序的区别是什么。\n\n脚本与一般程序的主要区别在于是否编译。相对于程序而言，脚本更加随性。写完了脚本，直接就可以在某种具有解释功能的环境中运行。（我们将会在本课学习如何写和运行 Python 脚本。）\n\n而非脚本语言（编译语言），比如 C、Java 语言。我们需要通过编译（Compile）和链接（link）等步骤，生成可执行文件。然后通过可执行文件在计算机上运行。\n\n<div align=\"center\"><img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7d732_code-script/code-script.png\"><div>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534284,
+          "key": "14e5c73b-a4c2-4bc3-8f1d-af3e2a7a36e4",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "14e5c73b-a4c2-4bc3-8f1d-af3e2a7a36e4",
+            "completed_at": "2018-06-15T04:12:41.725Z",
+            "last_viewed_at": "2019-02-23T12:39:47.900Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534026,
+              "key": "0ef0f0d6-1f3a-426f-bc47-266558a81298",
+              "title": "脚本编写",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Qxe_gCiXUDg",
+                "china_cdn_id": "Qxe_gCiXUDg.mp4"
+              }
+            },
+            {
+              "id": 534027,
+              "key": "59391a39-2ed4-43e9-a85b-7e3abb6df42e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 脚本编写\n欢迎学习这节关于脚本编写的课程！你将学习：\n- Python 安装和环境设置\n- 运行和修改 Python 脚本\n- 与用户输入交互\n- 处理异常\n- 读写文件\n- 导入本地、标准和第三方模块\n- 在解释器中进行实验",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534292,
+          "key": "fe3a8be9-705f-4c40-9c62-4ef6a3925bd4",
+          "title": "安装 Python",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fe3a8be9-705f-4c40-9c62-4ef6a3925bd4",
+            "completed_at": "2018-06-15T07:13:39.639Z",
+            "last_viewed_at": "2019-02-23T12:40:12.603Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534033,
+              "key": "ab683acd-9cf9-4fe2-a135-bc54d2877d55",
+              "title": "L5 02 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2_P05aYChqQ",
+                "china_cdn_id": "2_P05aYChqQ.mp4"
+              }
+            },
+            {
+              "id": 534034,
+              "key": "54249c89-ef66-4f89-afb6-8202015277be",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 安装 Python 3\n\n我们将使用最新版 Python - Python 3。虽然 Python 2 在很多场合依然会用到，但是已经不再接受更新。为了与后续 Python 改进保持兼容，建议使用 Python 3。\n\n为了完成这一步骤，你需要使用命令行。我们将详细介绍所有细节部分，因此如果你从未使用过命令行，也没关系！如果你想深入了解命令行，请参阅我们的 [Shell 讲习班](https://classroom.udacity.com/courses/ud206)，详细了解 Unix Shell。\n\n## 你的计算机上已经有 Python 吗？\n\nMac OS X 和 Linux 通常已经自带了一个版本号比较老的 Python 2，请**不要**对该 Python 做出任何修改或者删除，因为操作系统的部分组件依赖它，修改或者删除它可能会影响到操作系统的某些功能。但是单独安装 Python 3，也不会对系统有任何影响。\n\nWindows 通常没有自带 Python，但是你可以在安装之前，先检查下系统是否安装了 Python。首先检查是否已经安装了 Python 3。\n\n打开终端或命令行。在 Windows 上，进入命令提示符窗口的方式是转到`运行…`(同时按下带有windows图标的`win键`+字母`r`)，然后输入 `cmd` 并按下 `Enter` 键。\n\n在新的终端或命令提示符窗口中，输入 `python --version` 或者 `python3 --version`\n```bash\n$ python --version\n```\n然后按下 `Enter` 键。\n\n*注意：这里的`$`符号在这里只是一个提示，表示命令行的开始，它会自动显示在屏幕上。这不是命令的一部分。*\n\n系统可能会显示已安装的 Python 版本是 `Python 2.7.9`。在这种情况下，表明你已经安装了 Python 2，你需要按照下面几个部分中的步骤操作，更新到 Python 3。\n\n如果版本号以 3 开头，则表明你已经安装了 Python 3！请勿再次安装 Python！ \n\n此外，你可能会看到错误消息。暂时不用管该错误，直接尝试下面几个部分中的步骤。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534293,
+          "key": "6883edc1-1c33-4506-9731-54ce104a1e14",
+          "title": "方法 1：安装 Anaconda",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6883edc1-1c33-4506-9731-54ce104a1e14",
+            "completed_at": "2018-06-15T04:12:43.182Z",
+            "last_viewed_at": "2019-02-23T12:53:21.424Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534035,
+              "key": "97d388c0-bb7c-4688-8850-2fc71a6bf9ee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 方法 1：安装 Anaconda\n__对于数据分析学员，强烈建议采用这种 Python 安装方式。__\n\n如果你对数据科学方面的 Python 感兴趣，强烈建议安装 [Anaconda](https://www.continuum.io/downloads)，即使你已经在计算机上安装了 Python。如果你尚未设置计算机，请参阅我们的 [Anaconda 和 Jupyter notebook](https://classroom.udacity.com/courses/ud1111) 简短课程设置计算机。你将学习如何为这门课程设置环境，需要安装 Python 3.6、Jupyter Notebook、NumPy、pandas、Matplotlib 和 Seaborn。\n\n Anaconda 包含大量专门针对数据科学的库和软件分发版本，某些库和软件比较难安装。同时，你可以很轻松地在计算机上[设置不同的环境](https://conda.io/docs/user-guide/tasks/manage-environments.html)，以便在不同版本的 Python 和软件包之间快速切换！例如，如果你正在处理的某个项目需要 Python 3.6 以及不同的依赖项，那么 Anaconda 的环境管理功能可以提供帮助。上面给出链接的 Anaconda 和 Jupyter notebook 免费课程讲授了如何处理这类情形。\n\n如果你的英语不是很熟练，你也可以在中文网站上搜索安装Anaconda的教程，比如[这个知乎帖子](https://www.zhihu.com/question/58033789)。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534265,
+          "key": "38830f5d-9e7c-43c9-a6f3-929c8bed38fe",
+          "title": "方法 2：安装 Python",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "38830f5d-9e7c-43c9-a6f3-929c8bed38fe",
+            "completed_at": "2018-06-15T04:26:01.319Z",
+            "last_viewed_at": "2019-02-23T12:53:37.612Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534011,
+              "key": "eaeb6f60-c9da-46e3-b32a-caf5c46d9505",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 方法 2：安装 Python\n__对使用 Python 进行数据分析不感兴趣的学员建议采用此方法。__\n\n如果你对学习面向数据科学的 Python 不感兴趣，并且你的计算机尚未安装 Python 3，那么现在该安装 Python 3 了！请转到 [Python 下载页面](https://www.python.org/downloads/)并找到适用于你的操作系统、以 3 开头的最新版本（例如 Python 3.5.2）。\n\n对于 Windows 和 Mac，我们发现最简单的方法是直接从 Python 下载网站下载安装程序并运行。如果你使用的是 Linux，Python 下载页面提供了进行下载和编译的源代码。此外，你可以使用 APT 等安装工具安装 Python 3。\n\n如果你使用的是 Windows 设备，确保在安装过程中选中 `Add Python 3.5 to PATH` 或 `Add Python to environment variables` 选项，这样可以确保从命令行提示符窗口中访问 Python。 \n\n如果你使用的是 Windows 设备，并且已经安装了 Python，但是未选中上述选项，则需要将 Python 添加到 PATH。这样的话，当你输入 `python` 时，可以告诉命令行运行 Python 3。如果你未选中上述选项，或者转到下一阶段时似乎不可行，请按照 [Python 文档中的这些说明](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables)将 Python 添加到 PATH。\n\n完成安装程序中的所有步骤操作或编译了源代码后，则安装完毕，你可以在自己的计算机上使用 Python 3 了！\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534283,
+          "key": "0e540dbc-0ab3-4c44-a2d1-548385081110",
+          "title": "运行 Python 脚本",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0e540dbc-0ab3-4c44-a2d1-548385081110",
+            "completed_at": "2018-06-15T04:12:50.891Z",
+            "last_viewed_at": "2019-03-28T04:53:46.456Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "first_script.py",
+                "uri": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a6b919d_first-script/first-script.py"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 534024,
+              "key": "8635f469-5176-4611-a744-2b45890c7ad9",
+              "title": "05 运行 Python 脚本 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vMKemwCderg",
+                "china_cdn_id": "vMKemwCderg.mp4"
+              }
+            },
+            {
+              "id": 534025,
+              "key": "bcec3215-b631-4157-8496-28e96a6eaf13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 运行 Python 脚本！!\n1. 下载在本页面底部给出链接的文件 `first_script.py`（需要右击它，并存储为文件），然后将该文件移到计算机上的相应目录下。如果你还没有为这门课程创建一个目录的话，建议创建一个目录。\n2. 打开终端并使用 cd 命令转到包含所下载文件的目录。\n3. 现在你已经位于该文件所在的目录，可以运行该文件了，方法是输入 `python first_script.py`，然后按下 Enter 键。\n\n提示：文件下载后，_ 会变成- ，需要改成`python first-script.py`。\n\n如果你看到终端输出了以下消息，则表明你成功地运行了脚本：\n```txt\nCongratulations on running this script!!\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534294,
+          "key": "f411e93c-03f8-4d45-b60f-d4c2832b63d6",
+          "title": "编程环境设置",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f411e93c-03f8-4d45-b60f-d4c2832b63d6",
+            "completed_at": "2018-06-15T04:14:31.901Z",
+            "last_viewed_at": "2019-02-24T10:25:20.255Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534036,
+              "key": "12aa6983-949f-4907-935d-08b2a8b8da21",
+              "title": "06 编程环境设置（第一部分）V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EKxDnCK0NAk",
+                "china_cdn_id": "EKxDnCK0NAk.mp4"
+              }
+            },
+            {
+              "id": 534037,
+              "key": "fe5bb07d-bedf-461b-9af3-4934bec9410a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 配置 Python 编程环境\n你已经看到我的设置，现在花时间在你自己的计算机上熟悉下界面。\n下面是一些我们推荐的文本编辑器，你可以尝试一个看看。\n\n### 对于 Mac：\n* [Visual Studio Code](https://code.visualstudio.com/download)\n* [Sublime Text](http://www.sublimetext.com/)  \n* [TextWrangler](http://www.barebones.com/products/textwrangler/)  \n* [Atom](https://atom.io/)  \n* [emacs](https://www.gnu.org/software/emacs/)  \n* [vim](http://www.vim.org/)\n\n### 对于 Windows：\n* [Visual Studio Code](https://code.visualstudio.com/download)\n* [Sublime Text](http://www.sublimetext.com/)  \n* [Notepad++](https://notepad-plus-plus.org/)  \n* [Atom](https://atom.io/)  \n\n### 对于 Linux：\n* [Visual Studio Code](https://code.visualstudio.com/download)\n* [Sublime Text](http://www.sublimetext.com/)  \n* [Atom](https://atom.io/)  \n* [emacs](https://www.gnu.org/software/emacs/)  \n* [vim](http://www.vim.org/)  \n\n设置好屏幕，打开文本编辑器、终端/命令行，并在网络浏览器中打开优达学城课堂，以便与你的 Python 脚本交互。调整显示器选项，找到你觉得最舒适的显示效果，并看看能否找到 tab-to-four-spaces 选项 - 该选项对于 Python 缩进来说非常有用。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534297,
+          "key": "e59b3000-02a4-45e0-8855-4fea925c0534",
+          "title": "修改 Python 脚本",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e59b3000-02a4-45e0-8855-4fea925c0534",
+            "completed_at": "2018-06-15T04:30:16.100Z",
+            "last_viewed_at": "2019-02-24T10:39:50.792Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534043,
+              "key": "c0590631-5b72-4b53-8c3a-bd134219444a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 自己编写脚本\n在文本编辑器中打开全新的空文件，命名该文件并将其保存到放置 Python 课程文件的文件夹中。将以下代码放入该文件里。\n\n```python\nhow_many_snakes = 1\nsnake_string = \"\"\"\nWelcome to Python3!\n\n             ____\n            / . .\\\\\n            \\  ---<\n             \\  /\n   __________/ /\n-=:___________/\n\n<3, Juno\n\"\"\"\n\n\nprint(snake_string * how_many_snakes)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534044,
+              "key": "31050be8-cbba-4043-a4a7-df8faf06a04d",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "31050be8-cbba-4043-a4a7-df8faf06a04d",
+                "completed_at": "2018-06-15T07:53:07.625Z",
+                "last_viewed_at": "2019-02-24T10:37:54.656Z",
+                "unstructured": "{\"answer\":\"Welcome to Python3!\\n\\n             ____\\n            / . .\\\\\\n            \\\\  ---<\\n             \\\\  /\\n   __________/ /\\n-=:___________/\\n\\n<3, Juno\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "在 Python 3 中运行该文件，并将输出放入练习方框中。",
+                "matchers": [
+                  {
+                    "expression": "\\n?Welcome to Python3!\\n\\n             ____\\n            \\/ \\. \\.\\\\\\n            \\\\  ---<\\n             \\\\  \\/\\n   __________\\/ \\/\\n-=:___________\\/\\n\\n<3, Juno\\n?"
+                  },
+                  {
+                    "expression": "\\n?Welcome to Python3!\\n\\n             ____\\n            \\/ \\. \\.\\\\\\\\\\n            \\\\  ---<\\n             \\\\  \\/\\n   __________\\/ \\/\\n-=:___________\\/\\n\\n<3, Juno\\n?"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534299,
+          "key": "622bcf85-e02b-4ed1-a6b1-bc6629c8fcf7",
+          "title": "在脚本中接受原始输入",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "622bcf85-e02b-4ed1-a6b1-bc6629c8fcf7",
+            "completed_at": "2018-06-15T07:53:14.996Z",
+            "last_viewed_at": "2019-02-24T10:40:14.157Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534045,
+              "key": "1e8b764e-0f4a-4b32-ac2d-b037fef4f6d0",
+              "title": "08 在脚本中接受原始输入 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Fs9uLV2qfgI",
+                "china_cdn_id": "Fs9uLV2qfgI.mp4"
+              }
+            },
+            {
+              "id": 534046,
+              "key": "94acf78d-c214-4f92-ade8-837a83110f35",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 在脚本中接受原始输入\n我们可以使用内置函数 `input` 获取用户的原始输入，该函数接受一个可选字符串参数，用于指定在要求用户输入时向用户显示的消息。\n```python\nname = input(\"Enter your name: \")\nprint(\"Hello there, {}!\".format(name.title()))\n```\n这段代码提示用户输入姓名，然后在问候语中使用该输入。`input` 函数获取用户输入的任何内容并将其存储为字符串。如果你想将输入解析为字符串之外的其他类型，例如整数（如以下示例所示），需要用新的类型封装结果并从字符串转换为该类型。\n```python\nnum = int(input(\"Enter an integer\"))\nprint(\"hello\" * num)\n```\n我们还可以使用内置函数 `eval` 将用户输入解析为 Python 表达式。该函数会将字符串评估为一行 Python 代码。\n```python\nresult = eval(input(\"Enter an expression: \"))\nprint(result)\n```\n如果用户输入 `2 * 3`，输出为 `6`。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534306,
+          "key": "ccfbdda9-5ab9-4933-8292-be528b1458e5",
+          "title": "练习：在脚本中接受原始输入",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ccfbdda9-5ab9-4933-8292-be528b1458e5",
+            "completed_at": "2018-06-15T08:04:02.564Z",
+            "last_viewed_at": "2019-02-24T10:51:28.710Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534053,
+              "key": "3fddfce6-97e7-4c24-8c0a-c2b5fc49c980",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：生成消息\n假设你是一名老师，需要向每位学生发一条消息，提醒他们未交的作业和分数是多少。你知道每名学生的姓名，没交的作业份数和分数，这些数据保存在了电子表格中，你只需将这些输入插入你想到的以下消息中即可：\n\n>Hi __[insert student name]__,\n\n>This is a reminder that you have __[insert number of missing assignments]__ assignments left to submit before you can graduate. Your current grade is __[insert current grade]__ and can increase to __[insert potential grade]__ if you submit all assignments before the due date.\n\n你可以将此消息复制粘贴后发送给每位学生，并且每次手动插入相应的值。但是你要写一个程序来帮助你完成这一流程。\n\n写一个完成以下操作的脚本：\n1. 请求用户输入三次。一次是名字列表，一次是未交作业数量列表，一次是分数列表。使用该输入创建 `names`、`assignments` 和 `grades` 列表。\n2. 使用循环为每个学生输出一条信息并包含正确的值。潜在分数是 2 乘以未交作业数加上当前分数。\n\n下面是在终端内成功运行该脚本的示例。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534054,
+              "key": "4ffc1487-a593-4619-807a-957de90dfa89",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a714426_generate-messages-output/generate-messages-output.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4ffc1487-a593-4619-807a-957de90dfa89",
+              "caption": "",
+              "alt": "",
+              "width": 2352,
+              "height": 1352,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 534308,
+          "key": "86ea73de-9e88-41d7-9089-1bfd0ec0c93d",
+          "title": "解决方案：在脚本中接受原始输入",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "86ea73de-9e88-41d7-9089-1bfd0ec0c93d",
+            "completed_at": "2018-06-15T08:06:47.345Z",
+            "last_viewed_at": "2019-02-24T10:53:48.495Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534055,
+              "key": "688592bc-49da-4957-8266-01319b2208f1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：生成消息\n下面是实现该程序的一种方式！\n```python\nnames = input(\"Enter names separated by commas: \").title().split(\",\")\nassignments = input(\"Enter assignment counts separated by commas: \").split(\",\")\ngrades = input(\"Enter grades separated by commas: \").split(\",\")\n\nmessage = \"Hi {},\\n\\nThis is a reminder that you have {} assignments left to \\\nsubmit before you can graduate. You're current grade is {} and can increase \\\nto {} if you submit all assignments before the due date.\\n\\n\"\n\nfor name, assignment, grade in zip(names, assignments, grades):\n    print(message.format(name, assignment, grade, int(grade) + int(assignment)*2))\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534312,
+          "key": "f0b74936-746b-46e5-a002-815f293d81a3",
+          "title": "错误和异常",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f0b74936-746b-46e5-a002-815f293d81a3",
+            "completed_at": "2018-06-15T08:17:23.819Z",
+            "last_viewed_at": "2019-02-24T11:08:38.875Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534060,
+              "key": "86d05e15-beb5-44d5-baac-35b73cd48184",
+              "title": "10 错误和异常 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DmthSiy2d0U",
+                "china_cdn_id": "DmthSiy2d0U.mp4"
+              }
+            },
+            {
+              "id": 534061,
+              "key": "d87e995a-f0c4-4fb1-b3f2-32d46ad848da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 错误和异常\n- 当 Python 无法解析代码时，就会发生__语法错误__，因为我们没有遵守正确的 Python 语法。当你出现拼写错误或第一次开始学习 Python 时，可能会遇到这些错误。\n\n- 当在程序执行期间出现意外情况时，就会发生__异常__，即使代码在语法上正确无误。Python 有不同类型的内置异常，你可以在错误消息中查看系统抛出了什么异常。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534310,
+          "key": "8ddf22a0-4f66-4f4f-9dbb-500ebcb583a6",
+          "title": "练习：错误和异常",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ddf22a0-4f66-4f4f-9dbb-500ebcb583a6",
+            "completed_at": "2018-06-15T08:19:24.945Z",
+            "last_viewed_at": "2019-02-24T11:10:18.688Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534066,
+              "key": "7753a3fb-442f-4eb6-94d4-314ba0ae543c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7753a3fb-442f-4eb6-94d4-314ba0ae543c",
+                "completed_at": "2018-06-15T08:20:14.849Z",
+                "last_viewed_at": "2019-02-24T11:08:26.056Z",
+                "unstructured": "{\"selected_ids\":[\"a1517374437441\",\"a1517374555000\",\"a1517374598291\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下哪些表述正确？（请选中所有适用项。）",
+                "answers": [
+                  {
+                    "id": "a1517374321464",
+                    "text": "如果你正确地遵守了 Python 语法，你的程序将不会遇到错误。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517374437441",
+                    "text": "在运行程序之前，可以检测语法错误。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1517374442376",
+                    "text": "在运行程序之前，可以检测异常。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517374481114",
+                    "text": "异常是一种语法错误。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517374555000",
+                    "text": "异常发生在运行时期间。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1517374598291",
+                    "text": "异常有很多类型。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534067,
+              "key": "859e5912-77da-4943-9c63-b05147f2fcba",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "859e5912-77da-4943-9c63-b05147f2fcba",
+                "completed_at": "2018-06-15T08:22:39.856Z",
+                "last_viewed_at": "2019-02-24T11:11:31.531Z",
+                "unstructured": "{\"answer_ids\":[\"a1517375370472\",\"a1517375762002\",\"a1517375988944\",\"a1517376044905\",\"a1517376281945\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "下面是程序员在 Python 中会遇到的一些常见异常。请在网络上调查研究，将每种异常与相应的描述相匹配。"
+                },
+                "concepts_label": "内置异常",
+                "answers_label": "描述",
+                "concepts": [
+                  {
+                    "text": "ValueError",
+                    "correct_answer": {
+                      "id": "a1517375370472",
+                      "text": "向内置操作或函数中传入类型正确但是值不合适的对象作为输入。"
+                    }
+                  },
+                  {
+                    "text": "AssertionError",
+                    "correct_answer": {
+                      "id": "a1517375762002",
+                      "text": "断言语句失败了。"
+                    }
+                  },
+                  {
+                    "text": "IndexError",
+                    "correct_answer": {
+                      "id": "a1517375988944",
+                      "text": "序列下标超出了范围。"
+                    }
+                  },
+                  {
+                    "text": "KeyError",
+                    "correct_answer": {
+                      "id": "a1517376044905",
+                      "text": "在字典中找不到某个键。"
+                    }
+                  },
+                  {
+                    "text": "TypeError",
+                    "correct_answer": {
+                      "id": "a1517376281945",
+                      "text": "向操作或函数中传入类型不受支持的对象作为输入。"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1517376281945",
+                    "text": "向操作或函数中传入类型不受支持的对象作为输入。"
+                  },
+                  {
+                    "id": "a1517375370472",
+                    "text": "向内置操作或函数中传入类型正确但是值不合适的对象作为输入。"
+                  },
+                  {
+                    "id": "a1517375988944",
+                    "text": "序列下标超出了范围。"
+                  },
+                  {
+                    "id": "a1517376044905",
+                    "text": "在字典中找不到某个键。"
+                  },
+                  {
+                    "id": "a1517375762002",
+                    "text": "断言语句失败了。"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534317,
+          "key": "d99ae312-d4cb-4f5a-9e0c-3e84550c8cc8",
+          "title": "处理错误",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d99ae312-d4cb-4f5a-9e0c-3e84550c8cc8",
+            "completed_at": "2018-06-15T08:22:43.252Z",
+            "last_viewed_at": "2019-02-24T11:16:51.761Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534068,
+              "key": "a08cb722-fe39-4e0c-a767-0b9bc893284a",
+              "title": "121 处理错误 - Try Except Finally V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "S6hwBZG0KwM",
+                "china_cdn_id": "S6hwBZG0KwM.mp4"
+              }
+            },
+            {
+              "id": 534075,
+              "key": "ddddc408-3e33-4e5c-9280-060f037ba04e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Try 语句\n我们可以使用 try 语句处理异常。你可以使用 4 个子句（除了视频中显示的子句之外还有一个子句）。\n- `try`：这是 `try` 语句中的唯一必需子句。该块中的代码是 Python 在 `try` 语句中首先运行的代码。\n- `except`：如果 Python 在运行 `try` 块时遇到异常，它将跳到处理该异常的 `except` 块。\n- `else`：如果 Python 在运行 `try` 块时没有遇到异常，它将在运行 `try` 块后运行该块中的代码。\n- `finally`：在 Python 离开此 `try` 语句之前，在任何情形下它都将运行此 `finally` 块中的代码，即使要结束程序，例如：如果 Python 在运行 `except` 或 `else` 块中的代码时遇到错误，在停止程序之前，依然会执行此`finally` 块。\n\n[为何在 Python 中需要 `finally` 子句？](https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534076,
+              "key": "00840182-1854-4c15-90ec-5bbecffb68f4",
+              "title": "122 处理错误 - 指定异常 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EHW5I7shdJg",
+                "china_cdn_id": "EHW5I7shdJg.mp4"
+              }
+            },
+            {
+              "id": 534077,
+              "key": "edb1d9ac-f0b0-434d-b7c4-a85f43ba4ba2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 指定异常\n我们实际上可以指定要在 `except` 块中处理哪个错误，如下所示：\n```python\ntry:\n    # some code\nexcept ValueError:\n    # some code\n```\n现在它会捕获 ValueError 异常，但是不会捕获其他异常。如果我们希望该处理程序处理多种异常，我们可以在 `except` 后面添加异常元组。\n```python\ntry:\n    # some code\nexcept (ValueError, KeyboardInterrupt):\n    # some code\n```\n或者，如果我们希望根据异常执行不同的代码块，可以添加多个 `except` 块。\n```python\ntry:\n    # some code\nexcept ValueError:\n    # some code\nexcept KeyboardInterrupt:\n    # some code\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534318,
+          "key": "1b4ee003-e838-47ad-b69f-147bb52033d1",
+          "title": "练习：处理错误",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1b4ee003-e838-47ad-b69f-147bb52033d1",
+            "completed_at": "2018-06-15T08:45:56.591Z",
+            "last_viewed_at": "2019-02-24T11:23:37.221Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534078,
+              "key": "49d8ff2e-64f4-486e-bf8a-4b1e7a653ca2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：处理除以零的情形\n现在运行下面的代码将在第二次调用 `handle_zero` 函数时导致错误，因为它遇到了 ZeroDivisionError 异常。\n\n请修改下面的函数以处理该异常。如果在函数的第一行遇到该异常，应该输出警告消息并返回空列表。否则，应该运行函数的剩余代码。最后，该函数应该始终输出返回了多少组。 \n\n```python\ndef create_groups(items, num_groups):\n    size = len(items) // num_groups\n    \n    groups = []\n    for i in range(0, len(items), size):\n        groups.append(items[i:i + size])\n        \n    print(\"{} groups returned.\".format(num_groups))\n    return groups\n\nprint(\"Creating 6 groups...\")\nfor group in create_groups(range(32), 6):\n    print(list(group))\n\nprint(\"\\nCreating 0 groups...\")\nfor group in create_groups(range(32), 0):\n    print(list(group))\n```\n修改上面的脚本以处理除以零错误。正确修改的话，应该会输出：\n```txt\nCreating 6 groups...\n6 groups returned.\n[0, 1, 2, 3, 4]\n[5, 6, 7, 8, 9]\n[10, 11, 12, 13, 14]\n[15, 16, 17, 18, 19]\n[20, 21, 22, 23, 24]\n[25, 26, 27, 28, 29]\n[30, 31]\n\nCreating 0 groups...\nWARNING: Returning empty list. Please use a nonzero number.\n0 groups returned.\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534325,
+          "key": "ec0ff44b-ca65-45b0-a8e0-69f0703465b6",
+          "title": "解决方案：处理错误",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ec0ff44b-ca65-45b0-a8e0-69f0703465b6",
+            "completed_at": "2018-06-15T08:50:05.783Z",
+            "last_viewed_at": "2019-02-24T11:24:16.904Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534084,
+              "key": "8e0e7c0e-6567-4666-bfb5-ee7fc7b3e372",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：处理除以零的情形\n```python\ndef create_groups(items, num_groups):\n    try:\n        size = len(items) // num_groups\n    except ZeroDivisionError:\n        print(\"WARNING: Returning empty list. Please use a nonzero number.\")\n        return []\n    else:\n        groups = []\n        for i in range(0, len(items), size):\n            groups.append(items[i:i + size])\n        return groups\n    finally:\n        print(\"{} groups returned.\".format(num_groups))\n\nprint(\"Creating 6 groups...\")\nfor group in create_groups(range(32), 6):\n    print(list(group))\n\nprint(\"\\nCreating 0 groups...\")\nfor group in create_groups(range(32), 0):\n    print(list(group))\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534326,
+          "key": "5911f6e3-7edd-40a5-a1ed-78909116b291",
+          "title": "访问错误消息",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5911f6e3-7edd-40a5-a1ed-78909116b291",
+            "completed_at": "2018-06-15T09:44:40.790Z",
+            "last_viewed_at": "2019-02-24T11:41:00.661Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534085,
+              "key": "b90b8bb1-890c-421b-9892-dc113f26bc83",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 访问错误消息\n在处理异常时，依然可以如下所示地访问其错误消息：\n```python\ntry:\n    # some code\nexcept ZeroDivisionError as e:\n   # some code\n   print(\"ZeroDivisionError occurred: {}\".format(e))\n```\n应该会输出如下所示的结果：\n```txt\nZeroDivisionError occurred: division by zero\n```\n因此依然可以访问错误消息，即使已经处理异常以防止程序崩溃！\n\n如果没有要处理的具体错误，依然可以如下所示地访问消息：\n```python\ntry:\n    # some code\nexcept Exception as e:\n   # some code\n   print(\"Exception occurred: {}\".format(e))\n```\n`Exception` 是所有内置异常的基础类。你可以在[此处](https://docs.python.org/3/library/exceptions.html#bltin-exceptions)详细了解 Python 的异常。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534333,
+          "key": "43991399-3df7-48cf-a10c-792921e1b6bf",
+          "title": "读写文件",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43991399-3df7-48cf-a10c-792921e1b6bf",
+            "completed_at": "2018-06-15T09:45:25.828Z",
+            "last_viewed_at": "2019-03-03T07:14:12.330Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534086,
+              "key": "65df8588-c6b6-4071-9fdf-48ae04638c2a",
+              "title": "L5 14 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "w-ZG6DMkVi4",
+                "china_cdn_id": "w-ZG6DMkVi4.mp4"
+              }
+            },
+            {
+              "id": 534087,
+              "key": "4d73d2ff-ff87-4101-b3b1-2c3945c1eefb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 使用文件",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534088,
+              "key": "6b33b3eb-9981-455b-8ae9-6cfc48be2bfb",
+              "title": "142 读写文件 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1GRv1S6K8gQ",
+                "china_cdn_id": "1GRv1S6K8gQ.mp4"
+              }
+            },
+            {
+              "id": 534097,
+              "key": "476644e5-52ab-42c8-a178-3ef11c3e05ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 读写文件\n以下是如何在 Python 中读写文件的方式。\n### 读取文件\n```python\nf = open('my_path/my_file.txt', 'r')\nfile_data = f.read()\nf.close()\n```\n1. 首先使用内置函数 `open` 打开文件。需要文件路径字符串。`open` 函数会返回文件对象，它是一个 Python 对象，Python 通过该对象与文件本身交互。在此示例中，我们将此对象赋值给变量 `f`。\n2. 你可以在 `open` 函数中指定可选参数。参数之一是打开文件时采用的模式。在此示例中，我们使用 `r`，即只读模式。这实际上是模式参数的默认值。\n3. 使用 `read` 访问文件对象的内容。该 `read` 方法会接受文件中包含的文本并放入字符串中。在此示例中，我们将该方法返回的字符串赋值给变量 `file_data`。\n4. 当我们处理完文件后，使用 `close` 方法释放该文件占用的系统资源。\n\n### 写入文件\n```python\nf = open('my_path/my_file.txt', 'w')\nf.write(\"Hello there!\")\nf.close()\n```\n1. 以写入 ('w') 模式打开文件。如果文件不存在，Python 将为你创建一个文件。如果以写入模式打开现有文件，该文件中之前包含的所有内容将被删除。如果你打算向现有文件添加内容，但是不删除其中的内容，可以使用附加 ('a') 模式，而不是写入模式。\n2. 使用 write 方法向文件中添加文本。\n3. 操作完毕后，关闭文件。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534098,
+              "key": "ce78a1c5-8633-45aa-9b77-71c5add0f102",
+              "title": "143 读写文件 - With V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OQ-Y0mMjm00",
+                "china_cdn_id": "OQ-Y0mMjm00.mp4"
+              }
+            },
+            {
+              "id": 534099,
+              "key": "2bc1acfb-9be3-46a1-8c64-b8b9899e957b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# With\nPython 提供了一个特殊的语法，该语法会在你使用完文件后自动关闭该文件。\n```python\nwith open('my_path/my_file.txt', 'r') as f:\n    file_data = f.read()\n```\n该 `with` 关键字使你能够打开文件，对文件执行操作，并在缩进代码（在此示例中是读取文件）执行之后自动关闭文件。现在，我们不需要调用 f.close() 了！你只能在此缩进块中访问文件对象 f。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534335,
+          "key": "8712ff09-9fb7-42fa-bb36-098b2b2ad8af",
+          "title": "练习：读写文件",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8712ff09-9fb7-42fa-bb36-098b2b2ad8af",
+            "completed_at": "2018-06-15T10:10:33.917Z",
+            "last_viewed_at": "2019-02-24T12:39:48.634Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534100,
+              "key": "d21621eb-233d-4766-90b6-bedc063707b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在你之前看到的代码中，`f.read()` 调用没有传入参数。它自动变成从当前位置读取文件的所有剩余内容，即整个文件。如果向 `.read()` 传入整型参数，它将读取长度是这么多字符的内容，输出所有内容，并使 'window' 保持在该位置以准备继续读取。\n\n```python\nwith open(camelot.txt) as song:\n    print(song.read(2))\n    print(song.read(8))\n    print(song.read())\n```\n输出：\n```txt\nWe\n're the \nknights of the round table\nWe dance whenever we're able\n```\n这样的话，在打开的文件中到处移动会很困难，因为没有太多可以导航的标记。 \n\n文本块中的 `\\n` 是换行符。换行符表示一行的结束，告诉程序（例如文本编辑器）转到下一行。但是，对于文件中的一系列字符来说，`\\n` 只是另一个字符。\n幸运的是，Python 知道这些是特殊字符，你可以要求 Python 每次读取一行。我们来试试！\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534142,
+              "key": "44a216c8-d477-44da-a714-5a6d33e8a8fa",
+              "title": "读取下一行",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "44a216c8-d477-44da-a714-5a6d33e8a8fa",
+                "completed_at": "2018-07-13T08:40:15.683Z",
+                "last_viewed_at": "2019-02-24T13:09:35.782Z",
+                "unstructured": "{\"answer\":\"f.readline()\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "请参阅 [Python 文档的相关部分](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)，找到读取文件下一行的方法。将方法的名称填入方框中。\n",
+                "matchers": [
+                  {
+                    "expression": "readline"
+                  },
+                  {
+                    "expression": "readline()"
+                  },
+                  {
+                    "expression": ".readline"
+                  },
+                  {
+                    "expression": ".readline()"
+                  },
+                  {
+                    "expression": "read line"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534147,
+              "key": "0fdbc0c5-ac8b-450d-adbf-f935720c027d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "很方便的是，Python 将使用语法 `for line in file` 循环访问文件中的各行内容。 \n我可以使用该语法创建列表中的行列表。因为每行依然包含换行符，因此我使用 `.strip()` 删掉换行符。\n\n```python\ncamelot_lines = []\nwith open(\"camelot.txt\") as f:\n    for line in f:\n        camelot_lines.append(line.strip())\n\nprint(camelot_lines)\n```\n输出：\n```txt\n[\"We're the knights of the round table\", \"We dance whenever we're able\"]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534148,
+              "key": "48d49897-98d9-42a8-9aea-51c7c710f888",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：《飞翔的马戏团》 演员名单\n你将创建一个演员名单，列出参演电视剧《巨蟒剧团之飞翔的马戏团》的演员。 \n\n写一个叫做 `create_cast_list` 的函数，该函数会接受文件名作为输入，并返回演员姓名列表。\n它将运行文件 `flying_circus_cast.txt`（信息收集自 imdb.com）。文件的每行包含演员姓名、逗号，以及关于节目角色的一些（凌乱）信息。你*只需*提取姓名，并添加到列表中。你可以使用 [`.split()` 方法](https://docs.python.org/3/library/stdtypes.html#str.split)处理每行。 \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534145,
+              "key": "d7a7f519-14e6-48a1-a98f-aa66dd78ed1d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "d7a7f519-14e6-48a1-a98f-aa66dd78ed1d",
+                "completed_at": "2018-06-15T10:22:23.142Z",
+                "last_viewed_at": "2019-02-24T13:40:44.564Z",
+                "unstructured": "{\"cast_list.py\":\"def create_cast_list(filename):\\n    cast_list = []\\n    #use with to open the file filename\\n    with open(\\\"flying_circus_cast.txt\\\") as f:\\n    #use the for loop syntax to process each line\\n        for line in f:\\n            actor_name = line.split(\\\",\\\")[0]\\n    #and add the actor name to cast_list\\n            cast_list.append(actor_name)\\n\\n    return cast_list\\n\\ncast_list = create_cast_list('flying_circus_cast.txt')\\nfor actor in cast_list:\\n    print(actor)\",\"flying_circus_cast.txt\":\"Graham Chapman,  Various / ... (46 episodes, 1969-1974)\\nEric Idle,  Various / ... (46 episodes, 1969-1974)\\nTerry Jones,  Various / ... (46 episodes, 1969-1974)\\nMichael Palin,  It's Man / ... (46 episodes, 1969-1974)\\nTerry Gilliam,  Various / ... (46 episodes, 1969-1974)\\nJohn Cleese,  Announcer / ... (40 episodes, 1969-1973)\\nCarol Cleveland,  Various / ... (34 episodes, 1969-1974)\\nIan Davidson,  Algy Braithwaite / ... (8 episodes, 1969-1970)\\nJohn Hughman,  Alfred Lord Tennyson / ... (8 episodes, 1970-1974)\\nThe Fred Tomlinson Singers,  Amantillado Chorus / ... (7 episodes, 1969-1973)\\nConnie Booth,  Animated Mother / ... (6 episodes, 1969-1974)\\nBob Raymond,  'Dad' / ... (5 episodes, 1974)\\nLyn Ashley,  Algon Girl / ... (5 episodes, 1970-1972)\\nRita Davies,  Argument Secretary / ... (4 episodes, 1969-1972)\\nStanley Mason,  Clapper Man / ... (4 episodes, 1970-1971)\\nDavid Ballantyne,  Ivan the Terrible / ... (3 episodes, 1970-1971)\\nDonna Reading,  Girl in Bikini with Its Man / ... (3 episodes, 1969)\\nPeter Brett,  Door-to-Door Martial Arts Salesman (2 episodes, 1974)\\nMaureen Flanagan,  Anona Winn / ... (2 episodes, 1969-1970)\\nKatya Wyeth,  Elsie / ... (2 episodes, 1969)\\nFrank Lester,  The Late Professor Thynne (2 episodes, 1972-1974)\\nNeil Innes,  Hesitant guitarist / ... (2 episodes, 1974)\\nDick Vosburgh,  Van der Berg (1 episode, 1969)\\nSandra Richards,  'Semprini' Girl / ... (1 episode, 1970)\\nJulia Breck,  Puss In Boots / ... (1 episode, 1972)\\nNicki Howorth,  Miss Bladder (1 episode, 1972)\\nJimmy Hill,  Himself (1 episode, 1974)\\nBarry Cryer,  Herman Rodrigues (1 episode, 1969)\\nJeannette Wild,  Second Secretary (1 episode, 1970)\\nMarjorie Wilde,  Dear Old Lady (1 episode, 1970)\\nMarie Anderson,  Girl interviewing the announcer (1 episode, 1972)\\nCaron Gardner,  Mary (1 episode, 1973)\\nNosher Powell,  Jack Bodell (1 episode, 1973)\\nCarolae Donoghue,  Vera's Husband's Mistress (1 episode, 1969)\\nVincent Wong,  Mr. Kamikaze (1 episode, 1970)\\nHelena Clayton,  Various Roles (1 episode, 1971)\\nNigel Jones,  Various (1 episode, 1972)\\nRoy Gunson, (1 episode, 1970)\\nDaphne Davey,  Various Roles (1 episode, 1971)\\nStenson Falke, (1 episode, 1974)\\nAlexander Curry,  Various (1 episode, 1970)\\nFrank Williams,  Clerk of the Court (1 episode, 1972)\\nRalph Wood, (1 episode, 1970)\\nRosalind Bailey,  Elizabethan Girl (1 episode, 1972)\\nMarion Mould, (1 episode, 1974)\\nSheila Sands,  Stripper / ... (uncredited) (2 episodes, 1969)\\nRichard Baker,  Himself - BBC News Anchor (uncredited) (3 episodes, 1972-1973)\\nDouglas Adams,  Dr. Emile Koning - Surgeon / ... (uncredited) (2 episodes, 1974)\\nEwa Aulin,  Harrassed Woman (uncredited) (1 episode, 1969)\\nReginald Bosanquet,  Himself (uncredited) (1 episode, 1970)\\nBarbara Lindley,  Bride (uncredited) (1 episode, 1970)\\nRoy Brent,  Armoured Knight (uncredited) (1 episode, 1972)\\nJonas Card,  Armoured Knight (uncredited) (1 episode, 1972)\\nTony Christopher,  Armoured Knight (uncredited) (1 episode, 1972)\\nBeulah Hughes, (uncredited) (1 episode, 1972)\\nPeter Kodak,  Armoured Knight (uncredited) (1 episode, 1972)\\nLulu,  Herself (uncredited) (1 episode, 1972)\\nJay Neill,  Armoured Knight (uncredited) (1 episode, 1972)\\nGraham Skidmore,  Armoured Knight (uncredited) (1 episode, 1972)\\nRingo Starr,  Himself (uncredited) (1 episode, 1972)\\nFred Tomlinson,  Superintendent McGough (uncredited) (1 episode, 1972)\\nDavid Hamilton,  Himself - Thames TV Announcer (uncredited) (1 episode, 1973)\\nSuzy Mandel,  German Girl (uncredited) (1 episode, 1974)\\nPeter Woods,  BBC Presenter (uncredited) (1 episode, 1974)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5334311121846272",
+                "initial_code_files": [
+                  {
+                    "text": "def create_cast_list(filename):\n    cast_list = []\n    #use with to open the file filename\n    #use the for loop syntax to process each line\n    #and add the actor name to cast_list\n\n    return cast_list\n\ncast_list = create_cast_list('flying_circus_cast.txt')\nfor actor in cast_list:\n    print(actor)",
+                    "name": "cast_list.py"
+                  },
+                  {
+                    "text": "Graham Chapman,  Various / ... (46 episodes, 1969-1974)\nEric Idle,  Various / ... (46 episodes, 1969-1974)\nTerry Jones,  Various / ... (46 episodes, 1969-1974)\nMichael Palin,  It's Man / ... (46 episodes, 1969-1974)\nTerry Gilliam,  Various / ... (46 episodes, 1969-1974)\nJohn Cleese,  Announcer / ... (40 episodes, 1969-1973)\nCarol Cleveland,  Various / ... (34 episodes, 1969-1974)\nIan Davidson,  Algy Braithwaite / ... (8 episodes, 1969-1970)\nJohn Hughman,  Alfred Lord Tennyson / ... (8 episodes, 1970-1974)\nThe Fred Tomlinson Singers,  Amantillado Chorus / ... (7 episodes, 1969-1973)\nConnie Booth,  Animated Mother / ... (6 episodes, 1969-1974)\nBob Raymond,  'Dad' / ... (5 episodes, 1974)\nLyn Ashley,  Algon Girl / ... (5 episodes, 1970-1972)\nRita Davies,  Argument Secretary / ... (4 episodes, 1969-1972)\nStanley Mason,  Clapper Man / ... (4 episodes, 1970-1971)\nDavid Ballantyne,  Ivan the Terrible / ... (3 episodes, 1970-1971)\nDonna Reading,  Girl in Bikini with Its Man / ... (3 episodes, 1969)\nPeter Brett,  Door-to-Door Martial Arts Salesman (2 episodes, 1974)\nMaureen Flanagan,  Anona Winn / ... (2 episodes, 1969-1970)\nKatya Wyeth,  Elsie / ... (2 episodes, 1969)\nFrank Lester,  The Late Professor Thynne (2 episodes, 1972-1974)\nNeil Innes,  Hesitant guitarist / ... (2 episodes, 1974)\nDick Vosburgh,  Van der Berg (1 episode, 1969)\nSandra Richards,  'Semprini' Girl / ... (1 episode, 1970)\nJulia Breck,  Puss In Boots / ... (1 episode, 1972)\nNicki Howorth,  Miss Bladder (1 episode, 1972)\nJimmy Hill,  Himself (1 episode, 1974)\nBarry Cryer,  Herman Rodrigues (1 episode, 1969)\nJeannette Wild,  Second Secretary (1 episode, 1970)\nMarjorie Wilde,  Dear Old Lady (1 episode, 1970)\nMarie Anderson,  Girl interviewing the announcer (1 episode, 1972)\nCaron Gardner,  Mary (1 episode, 1973)\nNosher Powell,  Jack Bodell (1 episode, 1973)\nCarolae Donoghue,  Vera's Husband's Mistress (1 episode, 1969)\nVincent Wong,  Mr. Kamikaze (1 episode, 1970)\nHelena Clayton,  Various Roles (1 episode, 1971)\nNigel Jones,  Various (1 episode, 1972)\nRoy Gunson, (1 episode, 1970)\nDaphne Davey,  Various Roles (1 episode, 1971)\nStenson Falke, (1 episode, 1974)\nAlexander Curry,  Various (1 episode, 1970)\nFrank Williams,  Clerk of the Court (1 episode, 1972)\nRalph Wood, (1 episode, 1970)\nRosalind Bailey,  Elizabethan Girl (1 episode, 1972)\nMarion Mould, (1 episode, 1974)\nSheila Sands,  Stripper / ... (uncredited) (2 episodes, 1969)\nRichard Baker,  Himself - BBC News Anchor (uncredited) (3 episodes, 1972-1973)\nDouglas Adams,  Dr. Emile Koning - Surgeon / ... (uncredited) (2 episodes, 1974)\nEwa Aulin,  Harrassed Woman (uncredited) (1 episode, 1969)\nReginald Bosanquet,  Himself (uncredited) (1 episode, 1970)\nBarbara Lindley,  Bride (uncredited) (1 episode, 1970)\nRoy Brent,  Armoured Knight (uncredited) (1 episode, 1972)\nJonas Card,  Armoured Knight (uncredited) (1 episode, 1972)\nTony Christopher,  Armoured Knight (uncredited) (1 episode, 1972)\nBeulah Hughes, (uncredited) (1 episode, 1972)\nPeter Kodak,  Armoured Knight (uncredited) (1 episode, 1972)\nLulu,  Herself (uncredited) (1 episode, 1972)\nJay Neill,  Armoured Knight (uncredited) (1 episode, 1972)\nGraham Skidmore,  Armoured Knight (uncredited) (1 episode, 1972)\nRingo Starr,  Himself (uncredited) (1 episode, 1972)\nFred Tomlinson,  Superintendent McGough (uncredited) (1 episode, 1972)\nDavid Hamilton,  Himself - Thames TV Announcer (uncredited) (1 episode, 1973)\nSuzy Mandel,  German Girl (uncredited) (1 episode, 1974)\nPeter Woods,  BBC Presenter (uncredited) (1 episode, 1974)",
+                    "name": "flying_circus_cast.txt"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534336,
+          "key": "72e1001a-3061-4f38-9c5f-883465049852",
+          "title": "解决方案：读写文件",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "72e1001a-3061-4f38-9c5f-883465049852",
+            "completed_at": "2018-06-15T10:22:47.535Z",
+            "last_viewed_at": "2019-02-24T13:43:41.566Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534149,
+              "key": "a8999e1f-5e3f-4a09-8624-2cc274e6623d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：《飞翔的马戏团》演员名单\n\n```python\ndef create_cast_list(filename):\n    cast_list = []\n    # use with to open the file filename\n    with open(filename) as f:\n    # use the for loop syntax to process each line        \n    # and add the actor name to cast_list\n        for line in f:\n            line_data = line.split(',')\n            cast_list.append(line_data[0])\n    return cast_list\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534344,
+          "key": "a3dc7153-8f26-4ac9-b5b5-8631600c3563",
+          "title": "导入本地脚本",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a3dc7153-8f26-4ac9-b5b5-8631600c3563",
+            "completed_at": "2018-06-15T10:23:41.295Z",
+            "last_viewed_at": "2019-02-24T13:44:06.907Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534185,
+              "key": "c71a5b19-4b49-4d7d-a63c-cc21d0df4183",
+              "title": "16 导入文件 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qjeSn6zZbR0",
+                "china_cdn_id": "qjeSn6zZbR0.mp4"
+              }
+            },
+            {
+              "id": 534189,
+              "key": "6bf6ba6b-3300-4b47-89d1-be5568f153d8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 导入本地脚本\n我们实际上可以导入其他脚本中的 Python，如果你处理的是大型项目，需要将代码整理成多个文件并重复利用这些文件中的代码，则导入脚本很有用。如果你要导入的 Python 脚本与当前脚本位于同一个目录下，只需输入 `import`，然后是文件名，无需扩展名 .py。\n```python\nimport useful_functions\n```\n`Import` 语句写在 Python 脚本的顶部，每个导入语句各占一行。该 `import` 语句会创建一个__模块__对象，叫做 `useful_functions`。模块是包含定义和语句的 Python 文件。要访问导入模块中的对象，需要使用点记法。\n```python\nimport useful_functions\nuseful_functions.add_five([1, 2, 3, 4])\n```\n我们可以为导入模块添加别名，以使用不同的名称引用它。\n```python\nimport useful_functions as uf\nuf.add_five([1, 2, 3, 4])\n```\n### 使用 `if main` 块\n为了避免运行从其他脚本中作为模块导入的脚本中的可执行语句，将这些行包含在 `if __name__ == \"__main__\"` 块中。或者，将它们包含在函数 main() 中并在 `if main` 块中调用该函数。\n\n每当我们运行此类脚本时，Python 实际上会为所有模块设置一个特殊的内置变量 `__name__`。当我们运行脚本时，Python 会将此模块识别为主程序，并将此模块的 `__name__` 变量设为字符串 `\"__main__\"`。对于该脚本中导入的任何模块，这个内置 `__name__` 变量会设为该模块的名称。因此，条件 `if __name__ == \"__main__\"`会检查该模块是否为主程序。 \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534187,
+              "key": "6a638174-2a2b-4efd-95e0-68a1fffd8557",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 尝试一下！\n下面是我在上述视频中使用的代码。请在同一目录下创建这些脚本，并在终端里运行这些脚本！实验 `if main` 块并访问导入模块中的对象！\n\n```python\n# demo.py\n\nimport useful_functions as uf\n\nscores = [88, 92, 79, 93, 85]\n\nmean = uf.mean(scores)\ncurved = uf.add_five(scores)\n\nmean_c = uf.mean(curved)\n\nprint(\"Scores:\", scores)\nprint(\"Original Mean:\", mean, \" New Mean:\", mean_c)\n\nprint(__name__)\nprint(uf.__name__)\n```\n\n\n```python\n# useful_functions.py\n\ndef mean(num_list):\n    return sum(num_list) / len(num_list)\n\ndef add_five(num_list):\n    return [n + 5 for n in num_list]\n\ndef main():\n    print(\"Testing mean function\")\n    n_list = [34, 44, 23, 46, 12, 24]\n    correct_mean = 30.5\n    assert(mean(n_list) == correct_mean)\n\n    print(\"Testing add_five function\")\n    correct_list = [39, 49, 28, 51, 17, 29]\n    assert(add_five(n_list) == correct_list)\n\n    print(\"All tests passed!\")\n\nif __name__ == '__main__':\n    main()\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534345,
+          "key": "4815cc2c-fe70-490a-8412-6b223eba93ea",
+          "title": "标准库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4815cc2c-fe70-490a-8412-6b223eba93ea",
+            "completed_at": "2018-06-18T10:40:37.949Z",
+            "last_viewed_at": "2019-02-25T11:10:05.089Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534190,
+              "key": "cfbe7e94-b945-47cd-bc42-db9e433f4998",
+              "title": "18 The Standard Library V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Fw3vf0tDrJM",
+                "china_cdn_id": "Fw3vf0tDrJM.mp4"
+              }
+            },
+            {
+              "id": 534191,
+              "key": "f4ea514c-bed1-4674-8caa-ee01abb7d0b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 标准库\n\n你可以在 [Python 一周模块](https://pymotw.com/3/)博客中发现新的模块。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534353,
+          "key": "206c580e-6364-4f85-8cdc-7ef8c8294ba3",
+          "title": "练习：标准库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "206c580e-6364-4f85-8cdc-7ef8c8294ba3",
+            "completed_at": "2018-06-18T10:46:42.347Z",
+            "last_viewed_at": "2019-02-25T12:43:40.341Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534204,
+              "key": "4decb42d-9326-4edd-9408-8a66a4e23da8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：计算指数 \n\n该你来导入并使用 `math` 模块了。使用 `math` 模块计算 `e` 的 3 次幂，然后 `print` 答案。\n\n请参阅 [math 模块的文档](https://docs.python.org/3.6/library/math.html?highlight=math%20module#module-math)，找到你需要的函数！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534205,
+              "key": "626086d2-4560-45fd-8ad0-224dbc73d7ed",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "626086d2-4560-45fd-8ad0-224dbc73d7ed",
+                "completed_at": "2018-07-13T08:42:36.592Z",
+                "last_viewed_at": "2019-02-25T11:11:37.117Z",
+                "unstructured": "{\"expquiz.py\":\"# print e to the power of 3 using the math module\\nimport math\\noutcome = math.exp(3)\\nprint(outcome)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6112165266849792",
+                "initial_code_files": [
+                  {
+                    "text": "# print e to the power of 3 using the math module",
+                    "name": "expquiz.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534207,
+              "key": "34399f67-1ef2-4fcb-a581-b49129957c5d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：密码生成器\n写一个叫做 `generate_password` 的函数，该函数会从提供的单词文件中随机选择三个单词，并将它们连接成一个字符串。我们已经在起始代码中提供了从文件中读取数据的代码，你需要利用这些部分构建一个密码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534206,
+              "key": "4be08baa-9dbb-424e-a8c1-7dd4f019ddcd",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4be08baa-9dbb-424e-a8c1-7dd4f019ddcd",
+                "completed_at": "2018-08-01T07:23:43.776Z",
+                "last_viewed_at": "2019-02-25T12:27:52.641Z",
+                "unstructured": "{\"password_generator.py\":\"# Use an import statement at the top\\nimport random\\nword_file = \\\"words.txt\\\"\\nword_list = []\\n\\n#fill up the word_list\\nwith open(word_file,'r') as words:\\n\\tfor line in words:\\n\\t\\t# remove white space and make everything lowercase\\n\\t\\tword = line.strip().lower()\\n\\t\\t# don't include words that are too long or too short\\n\\t\\tif 3 < len(word) < 8:\\n\\t\\t\\tword_list.append(word)\\n\\n# Add your function generate_password here\\n# It should return a string consisting of three random words \\n# concatenated together without spaces\\ndef generate_password():\\n    return ''.join(random.sample(word_list,3))\\n\\n# test your function\\nprint(generate_password())\",\"words.txt\":\"Alice\\nwas\\nbeginning\\nto\\nget\\nvery\\ntired\\nof\\nsitting\\nby\\nher\\nsister\\nbank\\nhaving\\nnothing\\nOnce\\ntwice\\nshe\\nhad\\npeeped\\ninto\\nthe\\nbook\\nher\\nsister\\nwas\\nreading\\nbut\\nit\\nhad\\nno\\npictures\\nor\\nconversations\\nin\\nit\\nand\\nwhat\\nis\\nthe\\nuse\\nof\\na\\nbook\\nthought\\nAlice\\nwithout\\npictures\\nor\\nconversations\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5822776276025344",
+                "initial_code_files": [
+                  {
+                    "text": "# Use an import statement at the top\n\nword_file = \"words.txt\"\nword_list = []\n\n#fill up the word_list\nwith open(word_file,'r') as words:\n\tfor line in words:\n\t\t# remove white space and make everything lowercase\n\t\tword = line.strip().lower()\n\t\t# don't include words that are too long or too short\n\t\tif 3 < len(word) < 8:\n\t\t\tword_list.append(word)\n\n# Add your function generate_password here\n# It should return a string consisting of three random words \n# concatenated together without spaces\n\n\n\n# test your function\nprint(generate_password())",
+                    "name": "password_generator.py"
+                  },
+                  {
+                    "text": "Alice\nwas\nbeginning\nto\nget\nvery\ntired\nof\nsitting\nby\nher\nsister\nbank\nhaving\nnothing\nOnce\ntwice\nshe\nhad\npeeped\ninto\nthe\nbook\nher\nsister\nwas\nreading\nbut\nit\nhad\nno\npictures\nor\nconversations\nin\nit\nand\nwhat\nis\nthe\nuse\nof\na\nbook\nthought\nAlice\nwithout\npictures\nor\nconversations",
+                    "name": "words.txt"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534208,
+              "key": "5d8e92db-6c31-4b31-921e-51b3c9a44b86",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 探索标准库\n在下面的练习中，请输入解决每个问题的模块名称。注意，大小写很重要！标准库中的每个模块都是全小写形式。[你可以在此处浏览库文档](https://docs.python.org/3/library/)。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534216,
+              "key": "5af4eb73-0011-4f4d-be1c-30a049ddc305",
+              "title": "哪个模块 ？(1)",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5af4eb73-0011-4f4d-be1c-30a049ddc305",
+                "completed_at": "2018-08-13T13:37:26.494Z",
+                "last_viewed_at": "2019-02-25T12:30:50.909Z",
+                "unstructured": "{\"answer\":\"datetime\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以告诉你当前时间和日期？",
+                "matchers": [
+                  {
+                    "expression": "datetime"
+                  },
+                  {
+                    "expression": "datetime\\.datetime"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534217,
+              "key": "d7c1a811-33db-4e6c-ab48-e42afae68e58",
+              "title": "哪个模块？(2)",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d7c1a811-33db-4e6c-ab48-e42afae68e58",
+                "completed_at": "2018-08-13T13:39:39.115Z",
+                "last_viewed_at": "2019-02-25T12:32:57.117Z",
+                "unstructured": "{\"answer\":\"os.path\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块具有更改当前工作目录的方法？",
+                "matchers": [
+                  {
+                    "expression": "os"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534218,
+              "key": "adda29d1-3fb8-4ecf-a3f3-2d8b07e4dce0",
+              "title": "哪个模块？(3)",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "adda29d1-3fb8-4ecf-a3f3-2d8b07e4dce0",
+                "completed_at": "2018-08-13T13:40:40.910Z",
+                "last_viewed_at": "2019-02-25T12:33:19.681Z",
+                "unstructured": "{\"answer\":\"csv\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以将逗号分隔 (.csv) 文件中的每行数据读取到 Python 中？",
+                "matchers": [
+                  {
+                    "expression": "csv"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534220,
+              "key": "82d40c88-b404-48c8-a8e5-10b1b327ee0b",
+              "title": "哪个模块？(4)",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "82d40c88-b404-48c8-a8e5-10b1b327ee0b",
+                "completed_at": "2018-08-13T13:41:00.285Z",
+                "last_viewed_at": "2019-02-25T12:41:36.917Z",
+                "unstructured": "{\"answer\":\"zipfile\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以帮助我们从 zip 文件中提取所有文件？",
+                "matchers": [
+                  {
+                    "expression": "zipfile"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534219,
+              "key": "c148a603-4667-43a5-8d2c-d89560315d5b",
+              "title": "哪个模块？(5)",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c148a603-4667-43a5-8d2c-d89560315d5b",
+                "completed_at": "2018-08-13T13:41:08.158Z",
+                "last_viewed_at": "2019-02-25T12:40:26.896Z",
+                "unstructured": "{\"answer\":\"time\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以显示代码的运行时间？\n",
+                "matchers": [
+                  {
+                    "expression": "timeit"
+                  },
+                  {
+                    "expression": "profile"
+                  },
+                  {
+                    "expression": "cProfile"
+                  },
+                  {
+                    "expression": "time"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534230,
+              "key": "6627103e-e046-490c-90a6-a115b85ece48",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们的推荐模块\n============\nPython 标准库包含大量模块！为了帮助你熟悉那些实用的模块，我们在下面筛选了一些我们推荐的 Python 标准库模块并解释为何我们喜欢使用它们！ \n\n* [`csv`](https://docs.python.org/3/library/csv.html)：对于读取 csv 文件来说非常便利  \n* [`collections`](https://docs.python.org/3/library/collections.html)：常见数据类型的实用扩展，包括 `OrderedDict`、`defaultdict` 和 `namedtuple`  \n* [`random`](https://docs.python.org/3/library/random.html)：生成假随机数字，随机打乱序列并选择随机项  \n* [`string`](https://docs.python.org/3/library/string.html)：关于字符串的更多函数。此模块还包括实用的字母集合，例如 `string.digits`（包含所有字符都是有效数字的字符串）。 \n* [`re`](https://docs.python.org/3/library/re.html)：通过正则表达式在字符串中进行模式匹配  \n* [`math`](https://docs.python.org/3/library/math.html)：一些标准数学函数  \n* [`os`](https://docs.python.org/3/library/os.html)：与操作系统交互  \n* [`os.path`](https://docs.python.org/3/library/os.path.html)：`os` 的子模块，用于操纵路径名称  \n* [`sys`](https://docs.python.org/3/library/sys.html)：直接使用 Python 解释器  \n* [`json`](https://docs.python.org/3/library/json.html)：适用于读写 json 文件（面向网络开发）\n\n希望你能用上这些模块！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534352,
+          "key": "e29dc3ee-b0fc-47dd-af4a-288cf51985bb",
+          "title": "解决方案：标准库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e29dc3ee-b0fc-47dd-af4a-288cf51985bb",
+            "completed_at": "2018-06-19T00:25:29.327Z",
+            "last_viewed_at": "2019-02-25T12:44:18.443Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 568394,
+              "key": "da0a70b3-27ae-4a6b-8090-a5077ad277ea",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：计算指数\n\n我们使用`math`模块中的`.exp()`函数来计算 `e` 的 3 次幂:\n```\nimport math\nprint(math.exp(3))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534226,
+              "key": "951e88a0-e58d-4c88-8418-47bc6c007069",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：密码生成器 \n为了创建随机密码，我们使用了 `import random`。该函数的定义很简单：\n```python\ndef generate_password():\n\treturn random.choice(word_list) + random.choice(word_list) + random.choice(word_list)\n```\n此外，你可以使用 `random.sample` 函数和针对字符串的 `.join` 方法：\n```python\ndef generate_password():\n    return ''.join(random.sample(word_list,3))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 571915,
+              "key": "d937089f-997a-46aa-bf5b-1f0404700476",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：探索标准库\n```\n(1) datetime\n(2) os\n(3) csv\n(4) zipfile\n(5) time\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534359,
+          "key": "3e8c6ff5-48d9-4a60-b747-bfc46f36732f",
+          "title": "导入模块技巧",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3e8c6ff5-48d9-4a60-b747-bfc46f36732f",
+            "completed_at": "2018-06-19T00:30:15.465Z",
+            "last_viewed_at": "2019-02-25T12:46:29.762Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534227,
+              "key": "0ab8a765-74d4-4fcc-9252-ae4bd64d052f",
+              "title": "201 导入模块技巧 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jPGyFgcIvsM",
+                "china_cdn_id": "jPGyFgcIvsM.mp4"
+              }
+            },
+            {
+              "id": 534231,
+              "key": "38d41e0c-6aa4-488d-8970-fc62da12cf8e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 导入模块技巧\n还有一些在不同情形下很有用的其他形式的 `import` 语句。\n\n1. 要从模块中导入单个函数或类：\n```python\nfrom module_name import object_name\n```\n2. 要从模块中导入多个单个对象：\n```python\nfrom module_name import first_object, second_object\n```\n3. 要重命名模块：\n```python\nimport module_name as new_name\n```\n4. 要从模块中导入对象并重命名：\n```python\nfrom module_name import object_name as new_name\n```\n5. 要从模块中单个地导入所有对象（请勿这么做）：\n```python\nfrom module_name import *\n```\n6. 如果你真的想使用模块中的所有对象，请使用标准导入 module_name 语句并使用点记法访问每个对象。\n```python\nimport module_name\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534228,
+              "key": "f7504ec7-e386-424d-89e9-ad8989e95fdf",
+              "title": "202 导入模块技巧 - 软件包和名称 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "aASigWQ_XU0",
+                "china_cdn_id": "aASigWQ_XU0.mp4"
+              }
+            },
+            {
+              "id": 534244,
+              "key": "b18d9e93-de21-41bd-90f9-37dec6c8011b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 模块、软件包和名称\n为了更好地管理代码，Standard 标准库中的模块被拆分成了子模块并包含在软件包中。__软件包__是一个包含子模块的模块。子模块使用普通的点记法指定。\n\n子模块的指定方式是软件包名称、点，然后是子模块名称。你可以如下所示地导入子模块。\n```python\nimport package_name.submodule_name\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534354,
+          "key": "79434913-a869-4ce5-9b0e-f1589c83b1c7",
+          "title": "练习：导入模块技巧",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79434913-a869-4ce5-9b0e-f1589c83b1c7",
+            "completed_at": "2018-07-13T08:46:04.227Z",
+            "last_viewed_at": "2019-02-25T12:46:33.101Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534245,
+              "key": "197c38bc-b30c-4599-bb25-52fc1b76a2fd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 导入模块和访问模块\n在此练习中，你将使用不同的方法从 `random` 模块中导入并使用 `random.randint()` 函数。你的任务是将 `import` 语句与调用函数本身的方式相匹配。 ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534247,
+              "key": "9d8b491b-d38d-4431-94f8-78f8a5c120dc",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9d8b491b-d38d-4431-94f8-78f8a5c120dc",
+                "completed_at": "2018-07-13T08:46:32.331Z",
+                "last_viewed_at": "2018-09-20T15:27:56.444Z",
+                "unstructured": "{\"answer_ids\":[\"a1516996569120\",\"a1516996590244\",\"a1516996602411\",\"a1516996611325\",\"a1516996623566\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "将导入语句与调用 `random.randint()` 的方式相匹配。"
+                },
+                "concepts_label": " 导入语句",
+                "answers_label": "调用函数",
+                "concepts": [
+                  {
+                    "text": "`import random`",
+                    "correct_answer": {
+                      "id": "a1516996569120",
+                      "text": "`random.randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import randint`",
+                    "correct_answer": {
+                      "id": "a1516996590244",
+                      "text": "`randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`import random as rd`",
+                    "correct_answer": {
+                      "id": "a1516996602411",
+                      "text": "`rd.randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import randint as rint`",
+                    "correct_answer": {
+                      "id": "a1516996611325",
+                      "text": "`rint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import *`",
+                    "correct_answer": {
+                      "id": "a1516996623566",
+                      "text": "Don't use this import statement!"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1516996590244",
+                    "text": "`randint(0,10)`"
+                  },
+                  {
+                    "id": "a1516996623566",
+                    "text": "Don't use this import statement!"
+                  },
+                  {
+                    "id": "a1516996611325",
+                    "text": "`rint(0,10)`"
+                  },
+                  {
+                    "id": "a1516996602411",
+                    "text": "`rd.randint(0,10)`"
+                  },
+                  {
+                    "id": "a1516996569120",
+                    "text": "`random.randint(0,10)`"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534361,
+          "key": "45252bd7-50b1-41f0-bed5-cef100501c12",
+          "title": "第三方库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "45252bd7-50b1-41f0-bed5-cef100501c12",
+            "completed_at": "2018-07-13T08:46:00.570Z",
+            "last_viewed_at": "2019-02-25T12:48:26.214Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534249,
+              "key": "05bfee5b-deed-465d-a2a9-324230076197",
+              "title": "22 第三方库和软件包管理器 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "epOze9gC6T4",
+                "china_cdn_id": "epOze9gC6T4.mp4"
+              }
+            },
+            {
+              "id": 534250,
+              "key": "b0be2c2b-1aa9-4a6b-acc1-6d586e3db619",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 第三方库\n独立开发者编写了成千上万的第三方库！你可以使用 pip 安装这些库。pip 是在 Python 3 中包含的软件包管理器，它是标准 Python 软件包管理器，但并不是唯一的管理器。另一个热门的管理器是 Anaconda，该管理器专门针对数据科学。\n\n要使用 pip 安装软件包，在命令行中输入“pip install”，然后是软件包名称，如下所示：`pip install package_name`。该命令会下载并安装该软件包，以便导入你的程序中。安装完毕后，你可以使用从标准库中导入模块时用到的相同语法导入第三方软件包。\n\n### 使用 `requirements.txt` 文件\n大型 Python 程序可能依赖于十几个第三方软件包。为了更轻松地分享这些程序，程序员经常会在叫做 requirements.txt 的文件中列出项目的依赖项。下面是一个 requirements.txt 文件示例。\n```txt\nbeautifulsoup4==4.5.1\nbs4==0.0.1\npytz==2016.7\nrequests==2.11.1\n```\n该文件的每行包含软件包名称和版本号。版本号是可选项，但是通常都会包含。不同版本的库之间可能变化不大，可能截然不同，因此有必要使用程序作者在写程序时用到的库版本。\n\n你可以使用 pip 一次性安装项目的所有依赖项，方法是在命令行中输入 `pip install -r requirements.txt`。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534257,
+              "key": "2187a263-cc57-4654-a0f2-d4c82d72ab1f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 实用的第三方软件包\n能够安装并导入第三方库很有用，但是要成为优秀的程序员，还需要知道有哪些库可以使用。大家通常通过在线推荐或同事介绍了解实用的新库。如果你是一名 Python 编程新手，可能没有很多同事，因此为了帮助你了解入门信息，下面是优达学城工程师很喜欢使用的软件包列表。（可能部分网站在国内网络中无法打开）\n\n* [IPython](https://ipython.org/) - 更好的交互式 Python 解释器  \n* [requests](http://docs.python-requests.org/) - 提供易于使用的方法来发出网络请求。适用于访问网络 API。  \n* [Flask](http://flask.pocoo.org/) - 一个小型框架，用于构建网络应用和 API。\n* [Django](https://www.djangoproject.com/) - 一个功能更丰富的网络应用构建框架。Django 尤其适合设计复杂、内容丰富的网络应用。  \n* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) - 用于解析 HTML 并从中提取信息。适合网页数据抽取。  \n* [pytest](http://doc.pytest.org/) - 扩展了 Python 的内置断言，并且是最具单元性的模块。  \n* [PyYAML](http://pyyaml.org/wiki/PyYAML) -  用于读写 [YAML](https://en.wikipedia.org/wiki/YAML) 文件。 \n* [NumPy](http://www.numpy.org/) - 用于使用 Python 进行科学计算的最基本软件包。它包含一个强大的 N 维数组对象和实用的线性代数功能等。  \n* [pandas](http://pandas.pydata.org/) - 包含高性能、数据结构和数据分析工具的库。尤其是，pandas 提供 dataframe！  \n* [matplotlib](http://matplotlib.org/) - 二维绘制库，会生成达到发布标准的高品质图片，并且采用各种硬拷贝格式和交互式环境。  \n* [ggplot](http://ggplot.yhathq.com/) - 另一种二维绘制库，基于 R's ggplot2 库。\n* [Pillow](https://python-pillow.org/) - Python 图片库可以向你的 Python 解释器添加图片处理功能。  \n* [pyglet](http://www.pyglet.org/) - 专门面向游戏开发的跨平台应用框架。  \n* [Pygame](http://www.pygame.org/) - 用于编写游戏的一系列 Python 模块。  \n* [pytz](http://pytz.sourceforge.net/) - Python 的世界时区定义。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534364,
+          "key": "7753beb8-ad05-431a-a4dc-2bce9151914f",
+          "title": "在解释器中进行实验",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7753beb8-ad05-431a-a4dc-2bce9151914f",
+            "completed_at": "2018-07-13T08:45:59.188Z",
+            "last_viewed_at": "2019-02-25T12:54:43.285Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534258,
+              "key": "bee3c39c-9fd8-4925-93b9-2bd4ef8fe4dc",
+              "title": "24 在解释器中进行实验 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hspPtnQwMPg",
+                "china_cdn_id": "hspPtnQwMPg.mp4"
+              }
+            },
+            {
+              "id": 534266,
+              "key": "f0991138-2bfe-4e29-8876-76bddb913819",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 在解释器中进行实验\n\n通过在终端里输入 `python` 启动 python 交互式解释器。你可以接着输入内容，直接与 Python 交互。这是每次实验和尝试一段 Python 代码的很棒工具。只需输入 Python 代码，输出将出现在下一行。\n\n```\n>>> type(5.23)\n<class 'float'>\n```\n在解释器中，提示符窗口中最后一行的值将自动输出。如果有多行代码需要输出值，依然需要使用 print。\n\n如果你开始定义函数，你将在提示符窗口中看到变化，表示这是可以继续的行。在定义函数时，你需要自己添加缩进。\n\n```\n>>> def cylinder_volume(height, radius):\n...         pi = 3.14159\n...         return height * pi * radius ** 2\n```\n\n解释器的不足之处是修改代码比较麻烦。如果你在输入该函数时出现了拼写错误，或者忘记缩进函数的主体部分，无法使用鼠标将光标点到要点击的位置。需要使用箭头键在代码行中来回移动。有必要了解一些实用的快捷方式，例如移到一行的开头或结尾。\n\n注意，我可以引用我在解释器中之前定义的任何对象！\n\n```\n>>> cylinder_volume(10, 3)\n282.7431\n```\n一个实用技巧是在交互式提示符窗口中使用上下箭头键循环浏览最近的命令。这样可以重新运行或修改已经尝试的代码。\n\n要退出 Python 交互式解释器，使用命令 `exit()` 或在 mac/linux 上按下 `ctrl+D`，在 windows 上按下 `ctrl+Z`，然后按下 `Enter` 键。\n\n### IPython\n实际上有一个代替默认 python 交互式解释器的强大解释器 IPython，它具有很多其他功能。\n- Tab 键补充完整\n- `?`：关于对象的详细信息\n- `!`：执行系统 shell 命令\n-  语法突出显示\n\n你可以在[此处](https://ipython.org/ipython-doc/3/interactive/tutorial.html)查看更多其他功能！ \n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534367,
+          "key": "396f3428-881e-410f-bde5-4cb0ea22c4a0",
+          "title": "在线资源",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "396f3428-881e-410f-bde5-4cb0ea22c4a0",
+            "completed_at": "2018-07-13T08:45:37.457Z",
+            "last_viewed_at": "2019-02-25T12:57:45.848Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534267,
+              "key": "4a76701b-e829-425b-bf56-1be505188d0f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 获取所需的信息\n要想成为熟练的程序员，需要掌握大量知识。需要了解库、记住语法以及其他细节。此外，让这一切更具挑战的是，技术在不断革新，因为新的技巧和工具会不断出现。\n\n对于编程新手来说，学习所有这些细节并及时获悉新的发展动态似乎是一项不可能完成的任务。的确是这样！具有多年经验的编程专业人士实际上并不是在脑中记下百科全书一样的知识，而是掌握了快速查找信息的技巧。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534268,
+              "key": "317d1ca9-2c48-4e46-9a23-883777cd48b8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如何搜索\n=============\n下面是高效网络搜索的一些技巧：\n\n* 在查询时，尝试使用 Python 或要使用的库的名称作为第一个字词。这样会告诉搜索引擎优先显示与你要使用的工具明确相关的结果。\n* 创建良好的搜索查询需要多次尝试。如果第一次尝试时没有找到有用的结果，再试一遍。 \n* 尝试使用在一开始搜索时发现的网页上发现的关键字，使搜索引擎在后续搜索中转到更好的资源。\n* 复制粘贴错误消息作为搜索字词。这样会出现错误解释性信息和潜在原因。错误消息可能包括你所写的特定行号引用。只在搜索中包含这些信息之前的错误消息部分。\n* 如果找不到问题答案，自己提出问题！StackOverflow 等社区有一些行为规则，如果你要加入该社区，必须了解这些规则，但是别因为这些规则而不愿意使用这些资源。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534269,
+              "key": "151b6b28-b8d2-4728-8826-2d215e65e24a",
+              "title": "练习：最佳搜索字词",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "151b6b28-b8d2-4728-8826-2d215e65e24a",
+                "completed_at": "2018-07-13T08:45:54.302Z",
+                "last_viewed_at": "2019-02-25T12:56:36.011Z",
+                "unstructured": "{\"selected_id\":\"a1516997357276\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "在编程时，我遇到了下面的错误消息。\n\n```python\nUnboundLocalError: local variable 'egg_count' referenced before assignment\n```\n\n哪个搜索字词最有可能生成实用的结果？",
+                "answers": [
+                  {
+                    "id": "a1516997159998",
+                    "text": "赋值前引用的 `egg_count`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1516997356197",
+                    "text": "用 Python 计数",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1516997356748",
+                    "text": " 赋值前的引用",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1516997357276",
+                    "text": "Python UnboundLocalError：局部变量",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534275,
+              "key": "47e8a8eb-c4a6-438b-9a65-cd70dd3f58f5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 在线资源的优先级\n虽然有很多关于编程的在线资源，但是并非所有资源都是同等水平的。下面的资源列表按照大致的可靠性顺序排序。\n\n1. **[Python 教程](https://docs.python.org/3/tutorial/)** - 这部分官方文档给出了 Python 的语法和标准库。它会举例讲解，并且采用的语言比主要文档的要浅显易懂。确保阅读该文档的 Python 3 版本！\n2. **[Python 语言和库参考资料](https://docs.python.org/3/index.html)** - 语言参考资料和库参考资料比教程更具技术性，但肯定是可靠的信息来源。当你越来越熟悉 Python 时，应该更频繁地使用这些资源。\n3. **第三方库文档** - 第三方库会在自己的网站上发布文档，通常发布于 https://readthedocs.org/ 。你可以根据文档质量判断第三方库的质量。如果开发者没有时间编写好的文档，很可能也没时间完善库。\n4. **非常专业的网站和博客** - 前面的资源都是主要资源，他们是编写相应代码的同一作者编写的文档。主要资源是最可靠的资源。次要资源也是非常宝贵的资源。次要资源比较麻烦的是需要判断资源的可信度。[Doug Hellmann](https://doughellmann.com/blog/) 等作者和 [Eli Bendersky](http://eli.thegreenplace.net/) 等开发者的网站很棒。不出名作者的博客可能很棒，也可能很糟糕。\n5. **[StackOverflow](http://stackoverflow.com/)** - 这个问答网站有很多用户访问，因此很有可能有人之前提过相关的问题，并且有人回答了！但是，答案是大家自愿提供的，质量参差不齐。在将解决方案应用到你的程序中之前，始终先理解解决方案。如果答案只有一行，没有解释，则值得怀疑。你可以在此网站上查找关于你的问题的更多信息，或发现替代性搜索字词。\n6. **Bug 跟踪器** - 有时候，你可能会遇到非常罕见的问题或者非常新的问题，没有人在 StackOverflow 上提过。例如，你可能会在 GitHub 上的 bug 报告中找到关于你的错误的信息。这些 bug 报告很有用，但是你可能需要自己开展一些工程方面的研究，才能解决问题。\n7. **随机网络论坛** - 有时候，搜索结果可能会生成一些自 2004 年左右就不再活跃的论坛。如果这些资源是唯一解决你的问题的资源，那么你应该重新思考下寻找解决方案的方式。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534371,
+          "key": "54b598b3-4c5a-4863-aa0d-592d47f1cd8f",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54b598b3-4c5a-4863-aa0d-592d47f1cd8f",
+            "completed_at": "2018-08-01T02:59:29.872Z",
+            "last_viewed_at": "2019-03-03T07:13:58.299Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534276,
+              "key": "562adb21-9f7a-479c-aae3-5b1620178c45",
+              "title": "L5 10 总结 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rEMrswkLvh8",
+                "china_cdn_id": "rEMrswkLvh8.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

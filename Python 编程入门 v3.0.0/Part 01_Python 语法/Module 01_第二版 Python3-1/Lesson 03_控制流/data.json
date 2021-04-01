@@ -1,0 +1,1646 @@
+{
+  "data": {
+    "lesson": {
+      "id": 534363,
+      "key": "e91dc8c3-aed0-4c0c-9a43-438c36df7b0f",
+      "title": "控制流",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这节课，你将开始通过控制流为你的程序创建逻辑！",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/e91dc8c3-aed0-4c0c-9a43-438c36df7b0f/534363/1553050223181/%E6%8E%A7%E5%88%B6%E6%B5%81+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/e91dc8c3-aed0-4c0c-9a43-438c36df7b0f/534363/1553050218619/%E6%8E%A7%E5%88%B6%E6%B5%81+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 782294,
+          "key": "adecab54-2eae-4b5c-aa03-37ced81b766d",
+          "title": "什么是控制流",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "adecab54-2eae-4b5c-aa03-37ced81b766d",
+            "completed_at": "2018-11-16T16:40:41.946Z",
+            "last_viewed_at": "2019-02-15T09:09:00.140Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 782295,
+              "key": "5e9a315f-1b89-43ce-8fa0-cf85218ff02a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "编程语言中的控制流(Control flow)语句用于控制各操作执行的顺序。\n\n一段没有控制流的程序的操作顺序应当是这样的： \n\n<div align=\"center\"><img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7a9a5_flow/flow.png\"></div> ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 782299,
+              "key": "0d3b592f-f67d-4dce-843d-821efbe5e91b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "但是实际生活中，顺序操作并不总是能够满足我们的需求，我们可能需要对流程中的一些步骤加入控制。\n\n举个例子，当我们在揉面团的时候，我们首先加入面粉，再倒入一点点水，之后我们还要 **判断** 目前的加入的水量是否合适，如果过干，需要再加入一点点水，**循环** 这个步骤，直到我们认为面粉和水的配比合适为止。\n\n<div align=\"center\"><img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7cc53_control-flow-2/control-flow-2.png\"></div> \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 782301,
+              "key": "eaf843a6-a801-457c-bd5b-01dc53452ccd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "上面的这个流程中就包含了 **判断** 和 **循环** 两种控制流处理。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534224,
+          "key": "01fe69bf-0fa1-4afe-860a-d3932485c91c",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "01fe69bf-0fa1-4afe-860a-d3932485c91c",
+            "completed_at": "2018-05-28T03:28:25.614Z",
+            "last_viewed_at": "2018-09-27T10:41:06.045Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534041,
+              "key": "a9982d3b-ef65-441e-a8d1-9491dbe07e3f",
+              "title": "L3 01 简介 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eUrvACMMJ5w",
+                "china_cdn_id": "eUrvACMMJ5w.mp4"
+              }
+            },
+            {
+              "id": 534042,
+              "key": "930d34bd-3d1a-4bee-b019-25457afbe3ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 控制流\n欢迎学习这节关于控制流的课程！你将学习以下知识：\n- 条件语句\n- 布尔表达式\n- For 和 While 循环\n- Break 和 Continue\n- Zip 和 Enumerate\n- 列表推导式",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534236,
+          "key": "c2a30770-e445-40c8-bce6-45bb55140544",
+          "title": "条件语句",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c2a30770-e445-40c8-bce6-45bb55140544",
+            "completed_at": "2018-05-29T09:32:06.411Z",
+            "last_viewed_at": "2019-03-02T07:06:47.610Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534048,
+              "key": "1382ce60-08e1-4480-b53c-aa8118cf3562",
+              "title": "L3 02a If 语句 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jWiIUMrwPqA",
+                "china_cdn_id": "jWiIUMrwPqA.mp4"
+              }
+            },
+            {
+              "id": 534049,
+              "key": "566c4532-5d99-49b0-b6c1-09fd75a29747",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# If 语句\n`if` 语句是是一种条件语句，根据条件为 true 还是 false 运行或执行相关代码。下面是一个简单的示例：\n```python\nif phone_balance < 5:\n    phone_balance += 10\n    bank_balance -= 10\n```\n我们来详细讲解下每部分。\n1. `if` 语句以关键字 `if` 开始，然后是要检查的条件，在此例中是 `phone_balance < 5`，接着是英文冒号。条件用布尔表达式指定，结果为 True 或 False。\n2. 这行之后是一个条件为 true 时将执行的缩进代码块。在此例中，仅在 `phone_balance` 小于 5 时才执行使 `phone_balance` 递增和使 `bank_balance` 递减的行。如果不小于 5，这个 `if` 块中的代码将被跳过。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534051,
+              "key": "5a25307e-f33a-45b8-b48c-766cc700b122",
+              "title": "L3 02b If Elif Else V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "KZubH5XT0eU",
+                "china_cdn_id": "KZubH5XT0eU.mp4"
+              }
+            },
+            {
+              "id": 534052,
+              "key": "9bbd4704-9524-45dc-8f40-3b240ea1f94a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# If、Elif、Else\n除了 `if` 条件之外，`if` 语句经常还会使用另外两个可选条件。例如：\n```python\nif season == 'spring':\n    print('plant the garden!')\nelif season == 'summer':\n    print('water the garden!')\nelif season == 'fall':\n    print('harvest the garden!')\nelif season == 'winter':\n    print('stay indoors!')\nelse:\n    print('unrecognized season')\n```\n1. `if`：`if` 语句必须始终以 `if` 条件开始，其中包含第一个要检查的条件。如果该条件为 True，Python 将运行这个 `if` 块中的缩进代码，然后跳到 `if` 语句之后的剩余代码。\n2. `elif`：`elif` 条件用来检查其他条件（前提是 `if` 语句中之前的条件结果为 False）。可以从示例中看出，可以使用多个 `elif` 块处理不同的情形。\n3. `else`：最后是 `else` 条件，它必须位于 `if` 语句的末尾。该条件语句不需要条件。如果 `if` 语句中所有前面的语句结果都为 False 时，将运行 `else` 块中的代码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534056,
+              "key": "d0be8807-cabb-439c-889e-20d9ef93c633",
+              "title": "L3 02c 缩进 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "G8qUNOTHtrM",
+                "china_cdn_id": "G8qUNOTHtrM.mp4"
+              }
+            },
+            {
+              "id": 534057,
+              "key": "30f13b45-8963-4e45-954f-25efafc560f4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 缩进\n一些其他语言使用花括号来表示代码块从哪开始，从哪结束。在 Python 中，我们使用缩进来封装代码块。例如，`if` 语句使用缩进告诉 Python 哪些代码位于不同条件语句里面，哪些代码位于外面。\n\n在 Python 中，缩进通常是四个空格一组。请严格遵守该惯例，因为更改缩进会完全更改代码的含义。如果你是 Python 程序员团队的成员，则所有人都必须遵守相同的缩进惯例！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534058,
+              "key": "4481ae35-4ec5-492c-95ff-58e875d80c51",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 尝试一下！\n请尝试运行以下代码，其中包含若干个 `if` 语句。请尝试不同的输入并使用输出语句查看输出结果。你能理清逻辑规律并判断出哪个代码将运行吗？如果不确定，请添加其他输出语句以帮助你理解代码的运行方式。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534063,
+              "key": "8901cb1a-77d7-4b68-bd29-e838859baefa",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8901cb1a-77d7-4b68-bd29-e838859baefa",
+                "completed_at": "2018-05-29T09:42:56.609Z",
+                "last_viewed_at": "2019-03-02T06:54:13.584Z",
+                "unstructured": "{\"conditional_statements_playground.py\":\"#First Example - try changing the value of phone_balance\\nphone_balance = 10\\nbank_balance = 50\\n\\nif phone_balance < 10:\\n    phone_balance += 10\\n    bank_balance -= 10\\n\\nprint(phone_balance)\\nprint(bank_balance)\\n\\n#Second Example - try changing the value of number\\n\\nnumber = 145\\nif number % 2 == 0:\\n    print(\\\"Number \\\" + str(number) + \\\" is even.\\\")\\nelse:\\n    print(\\\"Number \\\" + str(number) + \\\" is odd.\\\")\\n\\n#Third Example - try to change the value of age\\nage = 35\\n\\n# Here are the age limits for bus fares\\nfree_up_to_age = 4\\nchild_up_to_age = 18\\nsenior_from_age = 65\\n\\n# These lines determine the bus fare prices\\nconcession_ticket = 1.25\\nadult_ticket = 2.50\\n\\n# Here is the logic for bus fare prices\\nif age <= free_up_to_age:\\n    ticket_price = 0\\nelif age <= child_up_to_age:\\n    ticket_price = concession_ticket\\nelif age >= senior_from_age:\\n    ticket_price = concession_ticket\\nelse:\\n    ticket_price = adult_ticket\\n\\nmessage = \\\"Somebody who is {} years old will pay ${} to ride the bus.\\\".format(age, ticket_price)\\nprint(message)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4894651157446656",
+                "initial_code_files": [
+                  {
+                    "text": "#First Example - try changing the value of phone_balance\nphone_balance = 10\nbank_balance = 50\n\nif phone_balance < 10:\n    phone_balance += 10\n    bank_balance -= 10\n\nprint(phone_balance)\nprint(bank_balance)\n\n#Second Example - try changing the value of number\n\nnumber = 145\nif number % 2 == 0:\n    print(\"Number \" + str(number) + \" is even.\")\nelse:\n    print(\"Number \" + str(number) + \" is odd.\")\n\n#Third Example - try to change the value of age\nage = 35\n\n# Here are the age limits for bus fares\nfree_up_to_age = 4\nchild_up_to_age = 18\nsenior_from_age = 65\n\n# These lines determine the bus fare prices\nconcession_ticket = 1.25\nadult_ticket = 2.50\n\n# Here is the logic for bus fare prices\nif age <= free_up_to_age:\n    ticket_price = 0\nelif age <= child_up_to_age:\n    ticket_price = concession_ticket\nelif age >= senior_from_age:\n    ticket_price = concession_ticket\nelse:\n    ticket_price = adult_ticket\n\nmessage = \"Somebody who is {} years old will pay ${} to ride the bus.\".format(age, ticket_price)\nprint(message)",
+                    "name": "conditional_statements_playground.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534237,
+          "key": "5a45f230-6087-4d0e-9e1a-3ddd4fc664e3",
+          "title": "练习：条件语句",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5a45f230-6087-4d0e-9e1a-3ddd4fc664e3",
+            "completed_at": "2018-05-29T09:43:14.327Z",
+            "last_viewed_at": "2019-03-02T07:06:39.958Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534064,
+              "key": "7dea1655-af52-4f3b-bc39-d6a167a4876e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：哪个奖品\n请编写一个 `if` 语句，使竞争者能够根据自己的得分知道获得了哪个奖品，得分存储在整型变量 `points` 中。\n\n| __得分__ | __奖励__ | __Prize in English__ |\n| --- | --- | --- |\n| 1 - 50 | 木质兔子玩偶| wooden rabbit|\n| 51 - 150 | 没有奖品 | no prize |\n| 151 - 180 | 极薄薄荷 | wafer-thin mint |\n| 181 - 200| 企鹅 | penguin |\n\n所有的上下限都包含在内，`points` 只能是正整数，最大值为 200。\n\n在你的 `if` 语句中，将一个根据 `points` 的值存储相应消息的字符串赋值给 `result` 变量。如果赢得了奖品，消息内容应该是 `\"Congratulations! You won a [prize name]!\"`，“[prize name]”应替换成相应的奖品。如果没有赢得奖品，消息内容应该是 `\"Oh dear, no prize this time.\"`\n\n**注意：**由于练习题的测试代码是用英文作为判定，所以最终代码中请用英文奖品名称，否则始终会被判错。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534069,
+              "key": "e9939999-c2b6-410d-8e3a-edf247e66411",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e9939999-c2b6-410d-8e3a-edf247e66411",
+                "completed_at": "2018-05-29T09:50:36.394Z",
+                "last_viewed_at": "2019-03-02T06:55:20.267Z",
+                "unstructured": "{\"which_prize.py\":\"points = 174  # use this input to make your submission\\n\\n# write your if statement here\\nif 1<=points<=50:\\n    result = \\\"Congratulations! You won a wooden rabbit!\\\"\\nelif 51<=points<=150:\\n    result = \\\"Oh dear, no prize this time.\\\"\\nelif 151<=points<=180:\\n    result = \\\"Congratulations! You won a wafer-thin mint!\\\"\\nelif 181<=points<=200:\\n    result = \\\"Congratulations! You won a penguin!\\\"\\n\\nprint(result)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6396300719947776",
+                "initial_code_files": [
+                  {
+                    "text": "points = 174  # use this input to make your submission\n\n# write your if statement here\n\n\nprint(result)",
+                    "name": "which_prize.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534248,
+          "key": "8be1fc4b-a32b-4d4d-a57b-b4c6b2e34cc1",
+          "title": "解决方案：条件语句",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8be1fc4b-a32b-4d4d-a57b-b4c6b2e34cc1",
+            "completed_at": "2018-05-29T10:03:56.844Z",
+            "last_viewed_at": "2019-03-02T07:31:26.787Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534083,
+              "key": "3ec5fd99-c9b3-4711-9ece-eff96c951c80",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：哪个奖品\n以下是这道练习中我的解决方案！\n```python\npoints = 174\n\nif points <=0:\n  result = \" Invalid score.\"\nelif points <= 50:\n  result = \"Congratulations! You won a wooden rabbit!\"\nelif points <= 150:\n  result = \"Oh dear, no prize this time.\"\nelif points <= 180:\n  result = \"Congratulations! You won a wafer-thin mint!\"\nelif points <= 200:\n  result = \"Congratulations! You won a penguin!\"\nelse:\n  result = \" Invalid score.\"\n\nprint(result)\n```\n### 输出：\n```txt\nCongratulations! You won a wafer-thin mint!\n```\n最后一种情况用 `else` 条件语句捕获，因为在检查了其他条件后，没有其他可能的奖品值了。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534264,
+          "key": "1f50b981-fa99-4737-adc8-fc01bf7a4b01",
+          "title": "条件布尔表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f50b981-fa99-4737-adc8-fc01bf7a4b01",
+            "completed_at": "2018-05-29T10:06:51.471Z",
+            "last_viewed_at": "2019-03-02T07:07:33.233Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534090,
+              "key": "e517a179-fd82-4b0a-95e8-d9b63977d129",
+              "title": "L3 04a 复杂的布尔表达式 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gWmIKWgzFqI",
+                "china_cdn_id": "gWmIKWgzFqI.mp4"
+              }
+            },
+            {
+              "id": 534091,
+              "key": "3a6fe7a7-8ce8-4408-ba1b-3af99d037342",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 复杂的布尔表达式\n`If` 语句有时候会使用更加复杂的条件布尔表达式。可能包括多个比较运算符、逻辑运算符，甚至包括算式。例如：\n```python\nif 18.5 <= weight / height**2 < 25:\n    print(\"BMI is considered 'normal'\")\n\nif is_raining and is_sunny:\n    print(\"Is there a rainbow?\")\n\nif (not unsubscribed) and (location == \"USA\" or location == \"CAN\"):\n    print(\"send email\")\n```\n对于非常复杂的条件，你可能需要结合使用 `and`、`or` 和 `not`。使用括号可以使运算符组合更清晰。\n\n无论是简单还是复杂的条件，`if` 语句中的条件都必须是结果为 True 或 False 的布尔表达式，该值决定了 `if` 语句中的缩进代码块是否执行。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534093,
+              "key": "62d66ef5-885b-4fe7-8453-740d896108ed",
+              "title": "L3 04b 正反面示例 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "95oLh3WtdhY",
+                "china_cdn_id": "95oLh3WtdhY.mp4"
+              }
+            },
+            {
+              "id": 534094,
+              "key": "deab233d-6355-4a1a-9327-43a721d9ab61",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 正反面示例\n在为 `if` 语句编写布尔表达式时，需要注意以下几个事项。\n\n### 1. 请勿使用 `True` 或 `False` 作为条件\n```python\n# Bad example\nif True:\n    print(\"This indented code will always get run.\")\n```\n虽然“True”是一个有效的布尔表达式，但不是有用的条件，因为它始终为 True，因此缩进代码将始终运行。同样，`if False` 也不应使用，该 `if` 语句之后的语句将从不运行。 \n```python\n# Another bad example\nif is_cold or not is_cold:\n    print(\"This indented code will always get run.\")\n```\n同样，使用你知道将始终结果为 True 的条件（例如上述示例）也是毫无用途的。布尔表达式只能为 True 或 False，因此 `is_cold` 或 `not is_cold` 将始终为 True，缩进代码将始终运行。\n\n### 2. 在使用逻辑运算符编写表达式时，要谨慎\n逻辑运算符 `and`、`or` 和 `not` 具有特定的含义，与字面英文意思不太一样。确保布尔表达式的结果和你预期的一样。 \n```python\n# Bad example\nif weather == \"snow\" or \"rain\":\n    print(\"Wear boots!\")\n```\n这段代码在 Python 中是有效的，但不是布尔表达式，虽然读起来像。原因是 `or` 运算符右侧的表达式 `\"rain\"` 不是布尔表达式，它是一个字符串。稍后我们将讨论当你使用非布尔型对象替换布尔表达式时，会发生什么。\n\n### 3. 请勿使用 `== True` 或 `== False` 比较布尔变量\n这种比较没必要，因为布尔变量本身是布尔表达式。\n```python\n# Bad example\nif is_cold == True:\n    print(\"The weather is cold!\")\n```\n这是一个有效的条件，但是我们可以使用变量本身作为条件，使代码更容易读懂，如下所示。\n```python\n# Good example\nif is_cold:\n    print(\"The weather is cold!\")\n```\n如果你想检查布尔表达式是否为 False，可以使用 `not` 运算符。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534095,
+              "key": "81d50475-7990-4cdd-a721-3e9ccea4df0a",
+              "title": "L3 04c 真假值测试 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "e52uw7ejV8k",
+                "china_cdn_id": "e52uw7ejV8k.mp4"
+              }
+            },
+            {
+              "id": 534102,
+              "key": "e729aa79-48ab-4231-b820-973efca3f182",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 真假值测试\n如果我们在`if` 语句中使用非布尔对象代替布尔表达式，Python 将检查其真假值，判断是否运行缩进代码。默认情况下，Python 中对象的真假值被视为 True，除非在文档中被指定为 False。\n\n以下是在 Python 中被视为 False 的大多数内置对象：\n- 定义为 false 的常量：`None` 和 `False`\n- 任何数字类型的零：`0`、`0.0`、`0j`、`Decimal(0)`、`Fraction(0, 1)`\n- 空序列和空集合：`””`、`()`、`[]`、`{}`、`set()`、`range(0)`\n\n示例：\n```python\nerrors = 3\nif errors:\n    print(\"You have {} errors to fix!\".format(errors))\nelse:\n    print(\"No errors to fix!\")\n```\n在上述代码中，errors 的真假值为 True，因为它是非零数字，因此输出了错误消息。这是一个编写 `if` 语句的简练方式。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534243,
+          "key": "69bfbde2-3f63-41ed-8793-aabf0f6a4bab",
+          "title": "练习：条件布尔表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "69bfbde2-3f63-41ed-8793-aabf0f6a4bab",
+            "completed_at": "2018-05-29T10:21:04.562Z",
+            "last_viewed_at": "2019-03-02T07:31:38.610Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534070,
+              "key": "9d12631e-4f3c-4f57-b52f-1ded1d36a355",
+              "title": "练习：评估复合布尔表达式",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9d12631e-4f3c-4f57-b52f-1ded1d36a355",
+                "completed_at": "2018-05-29T10:23:24.135Z",
+                "last_viewed_at": "2019-03-02T07:24:57.680Z",
+                "unstructured": "{\"answer_ids\":[\"a1516598690171\",\"a1516598690856\",\"a1516598692021\",\"a1516598691506\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": " 假设有一个跟踪以下三个变量的空中交通管制程序：`altitude`、`speed` 和 `propulsion`，其中某个飞机的值如下所示。\n\n```python\naltitude = 10000\nspeed = 250\npropulsion = \"Propeller\"\n```\n对于以下每个布尔表达式，请判断结果为 True 或 False，并与正确的值相匹配。\n"
+                },
+                "concepts_label": "表达式",
+                "answers_label": "`True` 或 `False`",
+                "concepts": [
+                  {
+                    "text": "`altitude < 1000 and speed > 100`",
+                    "correct_answer": {
+                      "id": "a1516598636120",
+                      "text": "`False`"
+                    }
+                  },
+                  {
+                    "text": "`(propulsion == \"Jet\" or propulsion == \"Turboprop\") and speed < 300 and altitude > 20000`",
+                    "correct_answer": {
+                      "id": "a1516598663031",
+                      "text": "`False`"
+                    }
+                  },
+                  {
+                    "text": "`not (speed > 400 and propulsion == \"Propeller\")`",
+                    "correct_answer": {
+                      "id": "a1516598663753",
+                      "text": "`True`"
+                    }
+                  },
+                  {
+                    "text": "`(altitude > 500 and speed > 100) or not propulsion == \"Propeller\"`",
+                    "correct_answer": {
+                      "id": "a1516598664464",
+                      "text": "`True`"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1516598692021",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1516598664464",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1516598663753",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1516598690171",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1516598663031",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1516598691506",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1516598636120",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1516598690856",
+                    "text": "`False`"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534071,
+              "key": "e3545482-ca8b-4fe1-bceb-880e73ebb19a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：使用对象的真假值\n请使用所学的真假值知识重写上一道练习_哪个奖品_的代码。\n先将变量 `prize` 设为 None，然后使用 if 语句将相应的奖品名称重新赋值给 'prize（如果赢得奖品）。接着，使用另一个 `if` 语句根据 `prize` 的真假值将 `result` 赋给正确的字符串。这样可以避免有多个结果赋值。\n\n下面是上一道练习的解决方案，供你参考：\n```python\npoints = 174\n\nif points <= 50:\n    result = \"Congratulations! You won a wooden rabbit!\"\nelif points <= 150:\n    result = \"Oh dear, no prize this time.\"\nelif points <= 180:\n    result = \"Congratulations! You won a wafer-thin mint!\"\nelse:\n    result = \"Congratulations! You won a penguin!\"\n\nprint(result)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534072,
+              "key": "5d16b85b-c7b6-47ad-8b08-db99ade92c6d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5d16b85b-c7b6-47ad-8b08-db99ade92c6d",
+                "completed_at": "2018-06-11T07:28:52.093Z",
+                "last_viewed_at": "2019-02-22T13:50:08.968Z",
+                "unstructured": "{\"which_prize2.py\":\"points = 174  # use this as input for your submission\\n\\n# establish the default prize value to None\\nprize = None\\n\\n# use the points value to assign prizes to the correct prize names\\nif points <= 50:\\n    prize = \\\"wooden rabbit\\\"\\nelif 151<= points <= 180:\\n    prize = \\\"wafer-thin mint\\\"\\nelif 181<=points<=200:\\n    prize = \\\"penguin\\\"\\n\\n# use the truth value of prize to assign result to the correct prize\\nif prize==None:\\n    result = \\\"Oh dear, no prize this time.\\\"\\nelse:\\n    result = \\\"Congratulations! You won a \\\"+str(prize)+ \\\"!\\\"\\n\\nprint(result)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4904222961827840",
+                "initial_code_files": [
+                  {
+                    "text": "points = 174  # use this as input for your submission\n\n# establish the default prize value to None\n\n\n# use the points value to assign prizes to the correct prize names\n\n\n# use the truth value of prize to assign result to the correct prize\n\n\nprint(result)",
+                    "name": "which_prize2.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534246,
+          "key": "0dc5b22c-4b87-4ce4-b23f-b35b0d5fa996",
+          "title": "解决方案：条件布尔表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0dc5b22c-4b87-4ce4-b23f-b35b0d5fa996",
+            "completed_at": "2018-06-09T12:47:43.933Z",
+            "last_viewed_at": "2019-03-02T07:31:40.944Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534073,
+              "key": "9123482a-fc43-4446-90b9-6aba26287a3b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：评估复合布尔表达式\n```python\naltitude < 1000 and speed > 100\n```\n`altitude < 1000` 为 `False`，因此我们甚至不需要检查第二个条件，整个表达式为 `False`。\n\n```python\n(propulsion == \"Jet\" or propulsion == \"Turboprop\") and speed < 300 and altitude > 20000\n```\n`propulsion == \"Jet\"` 为 `False`，并且 `propulsion == \"Turboprop\"` 为 `False`，因此括号内的整个表达式为 `False`。它使用 `and` 与另一个表达式相结合，因此我们甚至不需要检查这些表达式，整个表达式肯定为 `False`，因为第一部分为 `False`。\n\n```python\nnot (speed > 400 and propulsion == \"Propeller\")\n```\n要判断这道练习，我们需要首先查看括号里的内容，然后向其应用 `not`。`speed > 400` 为 False，因为我们使用 `and`，这使得括号里的整个表达式为 `False`。应用 `not` 使该表达式变成 `True`。\n\n```python\n(altitude > 500 and speed > 100) or not propulsion == \"Propeller\"\n```\n我们先看看括号里的表达式。`altitude > 500` 为 `True`，并且 `speed` 大于 `100`，因此括号里的表达式为 `True`。无论其他表达式的值是什么，因为它们是用 `or` 连接起来的，整个表达式将为 `True`。\n\n这里我们还要介绍一个布尔表达式求值所用的技术——**短路求值**\n\n如果`a = False`，对于`a and b`求值时，将直接得到结果为`False`，不会再对`b`的值做考核，不论它是`True`或`False`。\n\n如果`a = True`，对于`a or b`求值时，将直接得到结果为`True`，不会再对`b`的值做考核，不论它是`True`或`False`。\n\n你能思考一下这是为什么吗？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534079,
+              "key": "122c6e5e-2a49-4454-a028-6d3c0d275259",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：使用对象的真假值\n我们首先设置 `prize = None`，如果得分能够获得奖品，则更新 `prize`。然后如果有奖品的话，使用 `prize` 的真假值输出消息，如果没有奖品，则输出另一条消息。\n```python\nprize = None\nif points <= 50:\n    prize = \"a wooden rabbit\"\nelif 151 <= points <= 180:\n    prize = \"a wafer-thin mint\"\nelif points >= 181:\n    prize = \"a penguin\"\n\nif prize:\n    result = \"Congratulations! You won \" + prize + \"!\"\nelse:\n    result = \"Oh dear, no prize this time.\"\n\nprint(result)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534251,
+          "key": "5c057e68-4556-4f47-885b-1c964003df27",
+          "title": "For 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5c057e68-4556-4f47-885b-1c964003df27",
+            "completed_at": "2018-05-29T10:32:42.025Z",
+            "last_viewed_at": "2019-03-02T07:33:39.678Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534080,
+              "key": "cd52fe8f-1beb-4c8d-a363-046288b95012",
+              "title": "L3 06 For Loop",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UtX0PXSUCdY",
+                "china_cdn_id": "UtX0PXSUCdY.mp4"
+              }
+            },
+            {
+              "id": 534082,
+              "key": "870200a7-a722-42b0-a648-8ac74cccea24",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# For 循环\nPython 有两种类型的循环：`for` 循环和 `while` 循环。`for` 循环用来遍历**可迭代**对象。\n\n__可迭代对象__是每次可以返回其中一个元素的对象，包括字符串、列表和元组等序列类型，以及字典和文件等非序列类型。你还可以使用[迭代器和生成器](https://anandology.com/python-practice-book/iterators.html)定义可迭代对象，我们将在这门课程的稍后阶段详细了解迭代器和生成器。\n\n我们来了解下 `for` 循环的各个组成部分。请看下面的示例：\n```python\n# iterable of cities\ncities = ['new york city', 'mountain view', 'chicago', 'los angeles']\n\n# for loop that iterates over the cities list\nfor city in cities:\n    print(city.title())\n```\n### For 循环的组成部分\n1. 循环的第一行以关键字 `for` 开始，表示这是一个 `for` 循环\n2. 然后是 `iteration_variable in iterable`，表示正在被遍历的是可迭代的对象，并且用迭代变量表示当前正在被处理的可迭代对象的元素。在此示例中，迭代变量 `city` 在第一次迭代时将是“new york city”，在第二次迭代时将是“mountain view。\n3. `for` 循环头部始终以英文冒号 `:` 结束。\n4. `for` 循环头部之后的是在此 `for` 循环的每次迭代时运行的缩进代码块。在此块中，我们可以使用迭代变量访问当前正在被处理的元素的值。\n\n你可以随意命名迭代变量。常见模式是为迭代变量和可迭代对象指定相同的名称，但是分别使用单复数形式（例如 'city' 和 'cities）\n\n### 创建和修改列表\n除了从列表中提取信息之外，你还可以使用 `for` 循环创建和修改列表。你可以在 `for` 循环的每次迭代时向新列表中添加元素，创建一个列表。如下所示。\n```python\n# Creating a new list\ncities = ['new york city', 'mountain view', 'chicago', 'los angeles']\ncapitalized_cities = []\n\nfor city in cities:\n    capitalized_cities.append(city.title())\n```\n修改列表稍微复杂些，需要使用新的函数：`range()`。\n\n`range()` 是一个内置函数，用于创建不可变的数字序列。它有三个参数，必须都为整数。\n\n### `range(start=0, stop, step=1)`\n `Start`是该序列的第一个数字，`stop`比该序列的最后一个数字大 1，`step`是该序列中每个数字之间的差。如果未指定的话，`start`默认为 0，`step` 默认为 1（即上述 `=0`和 `=1`）。\n\n- 如果你在 `range()` 的括号里指定一个参数，它将用作 'stop' 的值，另外两个参数使用默认值。  \n__E.g.__ `list(range(4))` 返回 `[0, 1, 2, 3]`\n- 如果你在 `range()` 的括号里指定两个参数，它们将用作 'start' 和 'stop' 的值，'step' 将使用默认值。\n__E.g.__ `list(range(2, 6))` 返回 `[2, 3, 4, 5]`\n- 或者你可以为三个参数 'start、stop' 和 'step' 均指定一个值。\n__E.g.__ `list(range(1, 10, 2))` 返回 `[1, 3, 5, 7, 9]`\n\n注意，在这些示例中，我们将 `range` 封装在列表中。因为 `range` 本身的输出是一个 `range` 对象。我们可以通过将其转换为列表或在 `for` 循环中遍历它，查看 `range` 对象中的值集合。\n\n我们可以使用 `range` 函数为 `cities` 列表中的每个值生成索引。这样我们便可以使用 `cities[index]` 访问列表中的元素，以便直接修改 `cities` 列表中的值。\n```python\ncities = ['new york city', 'mountain view', 'chicago', 'los angeles']\n\nfor index in range(len(cities)):\n    cities[index] = cities[index].title()\n```\n虽然修改列表是 `range` 函数的一个用途，但是并非只有这一个用途。你将经常使用 `range` 和 `for` 循环重复某个操作一定的次数。\n```python\nfor i in range(3):\n    print(\"Hello!\")\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534282,
+          "key": "90abdb2f-ca75-4290-a5db-8942822f9d48",
+          "title": "练习：For 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "90abdb2f-ca75-4290-a5db-8942822f9d48",
+            "completed_at": "2018-05-29T10:53:53.603Z",
+            "last_viewed_at": "2019-03-02T08:25:27.640Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534103,
+              "key": "79b60a4d-fe49-4252-9848-3c922fd8687b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：创建用户名\n写一个遍历 `names` 列表以创建 `usernames` 列表的 `for` 循环。要为每个姓名创建用户名，使姓名全小写并用下划线代替空格。对以下列表运行 `for` 循环： \n\n`names = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]` \n\n应该会创建列表：\n\n`usernames = [\"joey_tribbiani\", \"monica_geller\", \"chandler_bing\", \"phoebe_buffay\"]`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534104,
+              "key": "32841013-ac5a-48e5-9bb0-7a0ada7e6d00",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "32841013-ac5a-48e5-9bb0-7a0ada7e6d00",
+                "completed_at": "2018-05-29T11:08:41.530Z",
+                "last_viewed_at": "2019-02-23T03:45:06.400Z",
+                "unstructured": "{\"usernames.py\":\"names = [\\\"Joey Tribbiani\\\", \\\"Monica Geller\\\", \\\"Chandler Bing\\\", \\\"Phoebe Buffay\\\"]\\nusername = []\\nfor name in names:\\n    username.append(name.lower().replace(\\\" \\\", \\\"_\\\"))\\nprint(username)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4775915859607552",
+                "initial_code_files": [
+                  {
+                    "text": "names = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]\nusernames = []\n\n# write your for loop here\n\n\nprint(usernames)",
+                    "name": "usernames.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534105,
+              "key": "89c89700-90fd-4c13-a127-8a2d603fafd9",
+              "title": "为何要使用 `range`？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "89c89700-90fd-4c13-a127-8a2d603fafd9",
+                "completed_at": "2018-05-29T11:03:20.358Z",
+                "last_viewed_at": "2019-03-02T15:55:40.892Z",
+                "unstructured": "{\"selected_id\":\"a1516599471265\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "假设我们不想创建新的列表，而是修改 `names` 列表本身，并编写以下代码。下面的代码有什么作用？\n\n```python\nnames = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]\n\nfor name in names:\n    name = name.lower().replace(\" \", \"_\")\n\nprint(names)\n```",
+                "answers": [
+                  {
+                    "id": "a1516599455045",
+                    "text": "修改 `names` 列表，使每个姓名全小写并用下划线分隔",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1516599470763",
+                    "text": "导致运行时错误",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1516599471265",
+                    "text": "代码没有效果",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1516599471869",
+                    "text": "删除列表",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534106,
+              "key": "7b148d40-872f-4a1e-b0a1-3a9255fbdc31",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：使用 Range 修改用户名\n写一个使用 `range()` 遍历 `usernames` 中的职位以修改该列表的 for 循环。和上一道练习一样，将每个姓名改成全小写形式并用下划线代替空格。运行 for 循环后，以下列表\n\n`usernames = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]` \n\n应该更改为：\n\n`usernames = [\"joey_tribbiani\", \"monica_geller\", \"chandler_bing\", \"phoebe_buffay\"]`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534111,
+              "key": "a6fa7c39-1ac0-4783-a66a-4e095df8c354",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "a6fa7c39-1ac0-4783-a66a-4e095df8c354",
+                "completed_at": "2018-05-29T11:10:38.043Z",
+                "last_viewed_at": "2019-02-23T03:37:52.182Z",
+                "unstructured": "{\"usernames_range.py\":\"usernames = [\\\"Joey Tribbiani\\\", \\\"Monica Geller\\\", \\\"Chandler Bing\\\", \\\"Phoebe Buffay\\\"]\\n\\n# write your for loop here\\nfor i in range(len(usernames)):\\n    usernames[i] = usernames[i].lower().replace(\\\" \\\",\\\"_\\\")\\n\\nprint(usernames)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4933889588592640",
+                "initial_code_files": [
+                  {
+                    "text": "usernames = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]\n\n# write your for loop here\n\n\nprint(usernames)",
+                    "name": "usernames_range.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534112,
+              "key": "621d8252-cc74-405f-b078-4a0263aad26d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：标记计数器\n写一个 `for` 循环，用于遍历字符串列表 `tokens` 并数一下有多少个 [XML 标记](https://en.wikipedia.org/wiki/XML)。XML 是一种类似于 HTML 的数据语言。如果某个字符串以左尖括号“<”开始并以右尖括号“>”结束，则是 XML 标记。使用 `count` 记录这种标记的数量。\n\n你可以假设该字符串列表不包含空字符串。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534113,
+              "key": "b34ef347-f30b-4440-a39b-642824b1116e",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "b34ef347-f30b-4440-a39b-642824b1116e",
+                "completed_at": "2018-05-29T11:15:32.230Z",
+                "last_viewed_at": "2019-02-23T03:46:40.849Z",
+                "unstructured": "{\"xml_tag_counter.py\":\"tokens = ['<greeting>', 'Hello World!', '</greeting>']\\ncount = 0\\n\\n# write your for loop here\\nfor name in tokens:\\n    if name[0]==\\\"<\\\" and name[-1]==\\\">\\\":\\n        count+=1\\nprint(count)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5001739871322112",
+                "initial_code_files": [
+                  {
+                    "text": "tokens = ['<greeting>', 'Hello World!', '</greeting>']\ncount = 0\n\n# write your for loop here\n\n\nprint(count)",
+                    "name": "xml_tag_counter.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534114,
+              "key": "0ef31bb9-0058-4565-94e5-438e018b80a3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：创建 HTML 列表\n写一个 `for` 循环，用于遍历字符串列表并创建单个字符串 `html_str`，它是一个 HTML 列表。例如，如果列表是 `items = ['first string', 'second string]`，输出 `html_str` 应该会输出：\n```txt\n<ul>\n<li>first string</li>\n<li>second string</li>\n</ul>\n```\n即该字符串的第一行应该是起始标记 `<ul>`。然后是源列表中的每个元素各占一行，两边是 `<li>` 和 `</li>` 标记。该字符串的最后一行应该是结束标记 `</ul>`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534116,
+              "key": "e946c005-cdb0-4b10-add2-f837181cb67e",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e946c005-cdb0-4b10-add2-f837181cb67e",
+                "completed_at": "2018-06-10T00:13:30.970Z",
+                "last_viewed_at": "2019-02-23T04:22:50.672Z",
+                "unstructured": "{\"htmllist.py\":\"items = ['first string', 'second string']\\nhtml_str = \\\"<ul>\\\\n\\\"  # \\\"\\\\ n\\\" is the character that marks the end of the line, it does\\n                     # the characters that are after it in html_str are on the next line\\n\\n# write your code here\\nfor i in items:\\n    html_str += \\\"<li>{}</li>\\\\n\\\".format(i)  \\nhtml_str = html_str +\\\"</ul>\\\"\\nprint(html_str)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4971793266376704",
+                "initial_code_files": [
+                  {
+                    "text": "items = ['first string', 'second string']\nhtml_str = \"<ul>\\n\"  # \"\\ n\" is the character that marks the end of the line, it does\n                     # the characters that are after it in html_str are on the next line\n\n# write your code here\n\n\nprint(html_str)",
+                    "name": "htmllist.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534286,
+          "key": "c9176070-5c31-445e-b6f6-56343c51a9e8",
+          "title": "解决方案：For 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c9176070-5c31-445e-b6f6-56343c51a9e8",
+            "completed_at": "2018-05-29T11:23:08.094Z",
+            "last_viewed_at": "2019-03-02T16:18:44.385Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534117,
+              "key": "fb3e7c64-9506-47d2-9639-3ed8b9135b43",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：创建用户名\n```python\nnames = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]\nusernames = []\n\nfor name in names:\n    usernames.append(name.lower().replace(\" \", \"_\"))\n\nprint(usernames)\n```\n### 输出：\n```txt\n['joey_tribbiani', 'monica_geller', 'chandler_bing', 'phoebe_buffay']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534118,
+              "key": "f1b814fe-1f57-4634-904a-256483b9935d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：使用 Range 修改用户名\n```python\nusernames = [\"Joey Tribbiani\", \"Monica Geller\", \"Chandler Bing\", \"Phoebe Buffay\"]\n\nfor i in range(len(usernames)):\n    usernames[i] = usernames[i].lower().replace(\" \", \"_\")\n\nprint(usernames)\n```\n### 输出：\n```txt\n['joey_tribbiani', 'monica_geller', 'chandler_bing', 'phoebe_buffay']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534121,
+              "key": "2bd09bff-6878-4f54-b928-7c7ab00d11a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：标记计数器\n你可以使用字符串索引判断每个令牌是否以尖括号开始和结束。\n```python\ntokens = ['<greeting>', 'Hello World!', '</greeting>']\n\ncount = 0\nfor token in tokens:\n    if token[0] == '<' and token[-1] == '>':\n        count += 1\n\nprint(count)\n```\n### 输出：\n```txt\n2\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534122,
+              "key": "5d6a314d-5b90-446b-b6d2-6135851e33b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：创建 HTML 列表\n```python\nitems = ['first string', 'second string']\n\nhtml_str = \"<ul>\\n\"\nfor item in items:\n    html_str += \"<li>{}</li>\\n\".format(item)\nhtml_str += \"</ul>\"\n\nprint(html_str)\n```\n### 输出：\n```txt\n<ul>\n<li>first string</li>\n<li>second string</li>\n</ul>\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534288,
+          "key": "dd92659f-e3d1-4997-b865-d61416a30f9c",
+          "title": "While 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dd92659f-e3d1-4997-b865-d61416a30f9c",
+            "completed_at": "2018-06-10T01:26:23.206Z",
+            "last_viewed_at": "2019-03-02T16:19:24.982Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534123,
+              "key": "707a2b6b-cd58-4abb-8096-f6eef87fc57f",
+              "title": "L3 08 While 循环 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ioLPuSGw1Ig",
+                "china_cdn_id": "ioLPuSGw1Ig.mp4"
+              }
+            },
+            {
+              "id": 572105,
+              "key": "85d46a7c-d08c-4f70-9e44-9b7e737fb009",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注： 视频 02:07s 处里的代码，print(sum)应为print(sum(hand))",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534124,
+              "key": "f06ec8de-f7bd-45d6-a203-9ca37a0a463c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# `While` 循环\n`For` 循环是一种“有限迭代”，意味着循环主体将运行预定义的次数。这与“无限迭代”循环不同，无限迭代循环是指循环重复未知次数，并在满足某个条件时结束，`while` 循环正是这种情况。下面是一个 `while` 循环的示例。\n```python\ncard_deck = [4, 11, 8, 5, 13, 2, 8, 10]\nhand = []\n\n# adds the last element of the card_deck list to the hand list\n# until the values in hand add up to 17 or more\nwhile sum(hand)  <= 17:\n    hand.append(card_deck.pop())\n```\n这个示例包含两个函数。`sum` 返回列表中的元素之和，`pop` 是一个列表方法，它会从列表中删除最后一个元素并返回该元素。\n\n### `While` 循环的组成部分\n1. 第一行以关键字 `while` 开始，表示这是一个 `while` 循环。\n2. 然后是要检查的条件。在此示例中是 `sum(hand) <= 17`。\n3. `while` 循环头部始终以冒号 `:` 结束。\n4. 该头部之后的缩进部分是 `while` 循环的主体。如果 `while` 循环的条件为 true，该循环的主体将被执行。每次运行循环主体时，条件将被重新评估。这个检查条件然后运行循环的流程将重复，直到该表达式变成 false。\n\n循环的缩进主体应该至少修改测试表达式中的一个变量。如果测试表达式的值始终不变，就会变成无限循环！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534295,
+          "key": "6305f6e8-d28d-4120-856b-a6cb612f110e",
+          "title": "练习：While 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6305f6e8-d28d-4120-856b-a6cb612f110e",
+            "completed_at": "2018-06-10T01:26:19.173Z",
+            "last_viewed_at": "2019-03-03T06:32:09.322Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534128,
+              "key": "83a1b8aa-a35b-4249-a3a0-d38c4f0d07ab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：最接近的平方数\n写一个 `while` 循环，用于计算比整数 `limit` 小的最大平方数，并将其存储在变量 `nearest_square` 中。平方数是整数乘以自己后的积，例如 36 是一个平方数，因为它等于 6*6。\n\n例如，如果 `limit` 是 40，你的代码应该将 `nearest_square` 设为 36。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534129,
+              "key": "2883cc0e-4036-432f-bab0-57d6b95ce211",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2883cc0e-4036-432f-bab0-57d6b95ce211",
+                "completed_at": "2018-06-10T01:33:21.380Z",
+                "last_viewed_at": "2019-02-23T04:38:36.756Z",
+                "unstructured": "{\"nearestsquare.py\":\"limit = 40\\n\\n# write your while loop here\\ni = 1\\nwhile i**2 < limit:\\n    nearest_square = i**2\\n    i += 1\\nprint(nearest_square)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5455964661219328",
+                "initial_code_files": [
+                  {
+                    "text": "limit = 40\n\n# write your while loop here\n\n\nprint(nearest_square)",
+                    "name": "nearestsquare.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534296,
+          "key": "ac07f48e-590a-4da0-995b-9b8eb6eceaef",
+          "title": "解决方案：While 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ac07f48e-590a-4da0-995b-9b8eb6eceaef",
+            "completed_at": "2018-06-10T01:28:09.589Z",
+            "last_viewed_at": "2019-03-03T06:39:09.671Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534130,
+              "key": "c1c3d9b8-e20f-4d78-9731-b6244970349a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：最接近的平方数\n```python\nlimit = 40\n\nnum = 0\nwhile (num+1)**2 < limit:\n    num += 1\nnearest_square = num**2\n\nprint(nearest_square)\n```\n### 输出：\n```txt\n36\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534298,
+          "key": "27cafe73-8971-45d2-a950-48ed8e2c8d38",
+          "title": "Break、Continue",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "27cafe73-8971-45d2-a950-48ed8e2c8d38",
+            "completed_at": "2018-06-10T01:41:39.761Z",
+            "last_viewed_at": "2019-03-03T07:16:26.363Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 571917,
+              "key": "be07dc63-e916-475e-bdae-1b2c46e80fe3",
+              "title": "Pausa e continuação",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "F6qJAv9ts9Y",
+                "china_cdn_id": "F6qJAv9ts9Y.mp4"
+              }
+            },
+            {
+              "id": 534133,
+              "key": "a7f9a7a5-3756-454b-b5b4-9c1bdd1a2125",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "备注：在2:03处下方的第四行应该修改为`adding mattresses(34)`.\n\n# Break、Continue\n有时候我们需要更精准地控制何时循环应该结束，或者跳过某个迭代。在这些情况下，我们使用关键字 `break` 和 `continue`，这两个关键字可以用于 `for` 和 `while` 循环。\n\n- `break` 使循环终止\n- `continue` 跳过循环的一次迭代\n\n请观看视频并尝试下面的示例，看看这两个关键字的作用。\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534137,
+              "key": "2ebb42cd-4b37-482b-9f18-cdb2f84da53e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 尝试一下！\n你将在下面找到解决视频中的货物装载问题的两个方法。第一个方法是视频中提到的方法，当重量达到上限时，终止循环。但是，我们发现该方法存在多个问题。第二个方法通过修改条件语句并添加 `continue` 解决了这些问题。请运行下面的代码，看看结果如何，你可以随意实验该代码！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534138,
+              "key": "5305da54-ce09-4b3c-923c-2f11b5bcd56a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5305da54-ce09-4b3c-923c-2f11b5bcd56a",
+                "completed_at": "2018-06-10T01:50:54.111Z",
+                "last_viewed_at": "2019-02-23T04:44:31.120Z",
+                "unstructured": "{\"manifest.py\":\"manifest = [(\\\"bananas\\\", 15), (\\\"mattresses\\\", 24), (\\\"dog kennels\\\", 42), (\\\"machine\\\", 120), (\\\"cheeses\\\", 5)]\\n\\n# the code breaks the loop when weight exceeds or reaches the limit\\nprint(\\\"METHOD 1\\\")\\nweight = 0\\nitems = []\\nfor cargo_name, cargo_weight in manifest:\\n    print(\\\"current weight: {}\\\".format(weight))\\n    if weight >= 100:\\n        print(\\\"  breaking loop now!\\\")\\n        break\\n    else:\\n        print(\\\"  adding {} ({})\\\".format(cargo_name, cargo_weight))\\n        items.append(cargo_name)\\n        weight += cargo_weight\\n\\nprint(\\\"\\\\nFinal Weight: {}\\\".format(weight))\\nprint(\\\"Final Items: {}\\\".format(items))\\n\\n# skips an iteration when adding an item would exceed the limit\\n# breaks the loop if weight is exactly the value of the limit\\nprint(\\\"\\\\nMETHOD 2\\\")\\nweight = 0\\nitems = []\\nfor cargo_name, cargo_weight in manifest:\\n    print(\\\"current weight: {}\\\".format(weight))\\n    if weight >= 100:\\n        print(\\\"  breaking from the loop now!\\\")\\n        break\\n    elif weight + cargo_weight > 100:\\n        print(\\\"  skipping {} ({})\\\".format(cargo_name, cargo_weight))\\n        continue\\n    else:\\n        print(\\\"  adding {} ({})\\\".format(cargo_name, cargo_weight))\\n        items.append(cargo_name)\\n        weight += cargo_weight\\n\\nprint(\\\"\\\\nFinal Weight: {}\\\".format(weight))\\nprint(\\\"Final Items: {}\\\".format(items))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6454598726975488",
+                "initial_code_files": [
+                  {
+                    "text": "manifest = [(\"bananas\", 15), (\"mattresses\", 24), (\"dog kennels\", 42), (\"machine\", 120), (\"cheeses\", 5)]\n\n# the code breaks the loop when weight exceeds or reaches the limit\nprint(\"METHOD 1\")\nweight = 0\nitems = []\nfor cargo_name, cargo_weight in manifest:\n    print(\"current weight: {}\".format(weight))\n    if weight >= 100:\n        print(\"  breaking loop now!\")\n        break\n    else:\n        print(\"  adding {} ({})\".format(cargo_name, cargo_weight))\n        items.append(cargo_name)\n        weight += cargo_weight\n\nprint(\"\\nFinal Weight: {}\".format(weight))\nprint(\"Final Items: {}\".format(items))\n\n# skips an iteration when adding an item would exceed the limit\n# breaks the loop if weight is exactly the value of the limit\nprint(\"\\nMETHOD 2\")\nweight = 0\nitems = []\nfor cargo_name, cargo_weight in manifest:\n    print(\"current weight: {}\".format(weight))\n    if weight >= 100:\n        print(\"  breaking from the loop now!\")\n        break\n    elif weight + cargo_weight > 100:\n        print(\"  skipping {} ({})\".format(cargo_name, cargo_weight))\n        continue\n    else:\n        print(\"  adding {} ({})\".format(cargo_name, cargo_weight))\n        items.append(cargo_name)\n        weight += cargo_weight\n\nprint(\"\\nFinal Weight: {}\".format(weight))\nprint(\"Final Items: {}\".format(items))",
+                    "name": "manifest.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534305,
+          "key": "be60eb0d-24ff-4c74-b9bf-1246e1c05a50",
+          "title": "练习：Break、Continue",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "be60eb0d-24ff-4c74-b9bf-1246e1c05a50",
+            "completed_at": "2018-06-10T01:57:02.136Z",
+            "last_viewed_at": "2019-03-03T07:28:47.530Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534139,
+              "key": "108f66a1-19d2-435a-b63d-40b98f10c487",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：截断字符串\n用 `break` 语句写一个循环，用于创建刚好长 140 个字符的字符串 `news_ticker`。你应该通过添加 `headlines` 列表中的新闻标题创建新闻提醒，在每个新闻标题之间插入空格。如果有必要的话，将最后一个新闻标题从中间截断，使 `news_ticker` 刚好长 140 个字符。\n\n注意，`break` 同时适用于 `for` 和 `while` 循环。使用你认为最合适的循环。考虑向代码中添加 `print` 语句以帮助你解决 bug。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534143,
+              "key": "fe463d21-af09-4b38-8a45-53aadd33c274",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "fe463d21-af09-4b38-8a45-53aadd33c274",
+                "completed_at": "2018-06-10T02:03:59.274Z",
+                "last_viewed_at": "2019-02-23T06:14:14.563Z",
+                "unstructured": "{\"ticker.py\":\"# HINT: modify the headlines list to verify your loop works with different inputs\\nheadlines = [\\\"Local Bear Eaten by Man\\\",\\n             \\\"Legislature Announces New Laws\\\",\\n             \\\"Peasant Discovers Violence Inherent in System\\\",\\n             \\\"Cat Rescues Fireman Stuck in Tree\\\",\\n             \\\"Brave Knight Runs Away\\\",\\n             \\\"Papperbok Review: Totally Triffic\\\"]\\n\\nnews_ticker = \\\"\\\"\\n# write your loop here\\nfor title in headlines:\\n    news_ticker += title + \\\" \\\"\\n    if len(news_ticker)>140:\\n        news_ticker = news_ticker[:140]\\n        break\\nprint(news_ticker)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5484009086386176",
+                "initial_code_files": [
+                  {
+                    "text": "# HINT: modify the headlines list to verify your loop works with different inputs\nheadlines = [\"Local Bear Eaten by Man\",\n             \"Legislature Announces New Laws\",\n             \"Peasant Discovers Violence Inherent in System\",\n             \"Cat Rescues Fireman Stuck in Tree\",\n             \"Brave Knight Runs Away\",\n             \"Papperbok Review: Totally Triffic\"]\n\nnews_ticker = \"\"\n# write your loop here\n\n\nprint(news_ticker)",
+                    "name": "ticker.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534307,
+          "key": "a2540c7c-4412-4099-944d-575deb4a88b8",
+          "title": "解决方案：Break、Continue",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a2540c7c-4412-4099-944d-575deb4a88b8",
+            "completed_at": "2018-06-10T02:06:33.704Z",
+            "last_viewed_at": "2019-03-03T07:31:27.237Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534146,
+              "key": "395de9dd-f530-4f12-bec2-8fcaee8d9818",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：截断字符串\n你可以采用以下方式。\n```python\nheadlines = [\"Local Bear Eaten by Man\",\n             \"Legislature Announces New Laws\",\n             \"Peasant Discovers Violence Inherent in System\",\n             \"Cat Rescues Fireman Stuck in Tree\",\n             \"Brave Knight Runs Away\",\n             \"Papperbok Review: Totally Triffic\"]\n\nnews_ticker = \"\"\nfor headline in headlines:\n    news_ticker += headline + \" \"\n    if len(news_ticker) >= 140:\n        news_ticker = news_ticker[:140]\n        break\n\nprint(news_ticker)\n```\n### 输出：\n```txt\nLocal Bear Eaten by Man Legislature Announces New Laws Peasant Discovers Violence Inherent in System Cat Rescues Fireman Stuck in Tree Brave\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534309,
+          "key": "a95d285d-fd94-4a29-ad95-68bf3d13b253",
+          "title": "Zip 和 Enumerate（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a95d285d-fd94-4a29-ad95-68bf3d13b253",
+            "completed_at": "2018-06-10T02:14:19.048Z",
+            "last_viewed_at": "2019-03-03T07:35:24.201Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 571916,
+              "key": "7bc7f1f6-5f71-4834-8cb3-3c757bbe853b",
+              "title": "3 12 Zip and Enumerate V5",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bSJPzVArE7M",
+                "china_cdn_id": "bSJPzVArE7M.mp4"
+              }
+            },
+            {
+              "id": 534151,
+              "key": "835b776f-d5a7-4b6c-aee7-04239612ea06",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Zip 和 Enumerate\n`zip` 和 `enumerate` 是实用的内置函数，可以在处理循环时用到。\n\n### Zip\n`zip` 返回一个将多个可迭代对象组合成一个元组序列的迭代器。每个元组都包含所有可迭代对象中该位置的元素。例如， \n\n`list(zip(['a', 'b', 'c'], [1, 2, 3]))` 将输出 `[('a', 1), ('b', 2), ('c', 3)]`.\n\n正如 `range()` 一样，我们需要将其转换为列表或使用循环进行遍历以查看其中的元素。\n\n你可以如下所示地用 `for` 循环拆分每个元组。\n```python\nletters = ['a', 'b', 'c']\nnums = [1, 2, 3]\n\nfor letter, num in zip(letters, nums):\n    print(\"{}: {}\".format(letter, num))\n```\n除了可以将两个列表组合到一起之外，还可以使用星号拆分列表。\n```python\nsome_list = [('a', 1), ('b', 2), ('c', 3)]\nletters, nums = zip(*some_list)\n```\n这样可以创建正如之前看到的相同 `letters` 和 `nums` 列表。\n\n### Enumerate\n`enumerate` 是一个会返回元组迭代器的内置函数，这些元组包含列表的索引和值。当你需要在循环中获取可迭代对象的每个元素及其索引时，将经常用到该函数。\n```python\nletters = ['a', 'b', 'c', 'd', 'e']\nfor i, letter in enumerate(letters):\n    print(i, letter)\n```\n这段代码将输出：\n```txt\n0 a\n1 b\n2 c\n3 d\n4 e\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534320,
+          "key": "f04a1bda-b2cd-420c-a25d-6e719a268c32",
+          "title": "练习：Zip 和 Enumerate（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f04a1bda-b2cd-420c-a25d-6e719a268c32",
+            "completed_at": "2018-06-10T02:18:01.237Z",
+            "last_viewed_at": "2019-03-03T08:43:48.668Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534152,
+              "key": "ea2d4b1e-f141-4e5c-8454-a2498ca68fe3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：组合坐标\n使用 `zip` 写一个 `for` 循环，该循环会创建一个字符串，指定每个点的标签和坐标，并将其附加到列表 `points`。每个字符串的格式应该为 `label: x, y, z`。例如，第一个坐标的字符串应该为 `F: 23, 677, 4`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534158,
+              "key": "fbc89d2d-2d07-4a81-b9f9-0e3c49b060a9",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "fbc89d2d-2d07-4a81-b9f9-0e3c49b060a9",
+                "completed_at": "2018-06-11T10:33:10.956Z",
+                "last_viewed_at": "2019-02-23T08:28:50.427Z",
+                "unstructured": "{\"zip_coordinates.py\":\"x_coord = [23, 53, 2, -12, 95, 103, 14, -5]\\ny_coord = [677, 233, 405, 433, 905, 376, 432, 445]\\nz_coord = [4, 16, -6, -42, 3, -6, 23, -1]\\nlabels = [\\\"F\\\", \\\"J\\\", \\\"A\\\", \\\"Q\\\", \\\"Y\\\", \\\"B\\\", \\\"W\\\", \\\"X\\\"]\\n\\npoints = []\\n# write your for loop here\\nfor point in zip(labels, x_coord, y_coord, z_coord):\\n    points.append(\\\"{}: {}, {}, {}\\\".format(*point))\\n\\nfor point in points:\\n    print(point)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5674381947305984",
+                "initial_code_files": [
+                  {
+                    "text": "x_coord = [23, 53, 2, -12, 95, 103, 14, -5]\ny_coord = [677, 233, 405, 433, 905, 376, 432, 445]\nz_coord = [4, 16, -6, -42, 3, -6, 23, -1]\nlabels = [\"F\", \"J\", \"A\", \"Q\", \"Y\", \"B\", \"W\", \"X\"]\n\npoints = []\n# write your for loop here\n\n\nfor point in points:\n    print(point)",
+                    "name": "zip_coordinates.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534159,
+              "key": "717931f3-4c44-4a18-9ce9-436b8a6b11d1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：将列表组合成字典\n使用 `zip` 创建一个字典 `cast`，该字典使用 `names` 作为键，并使用 `heights` 作为值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534160,
+              "key": "9ce56bb1-d056-4314-8192-9b44c2cd718b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "9ce56bb1-d056-4314-8192-9b44c2cd718b",
+                "completed_at": "2018-06-11T10:36:29.601Z",
+                "last_viewed_at": "2019-02-23T08:19:51.041Z",
+                "unstructured": "{\"zip_dict.py\":\"cast_names = [\\\"Barney\\\", \\\"Robin\\\", \\\"Ted\\\", \\\"Lily\\\", \\\"Marshall\\\"]\\ncast_heights = [72, 68, 72, 66, 76]\\n\\ncast=dict(zip(cast_names, cast_heights))\\nprint(cast)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5501478643564544",
+                "initial_code_files": [
+                  {
+                    "text": "cast_names = [\"Barney\", \"Robin\", \"Ted\", \"Lily\", \"Marshall\"]\ncast_heights = [72, 68, 72, 66, 76]\n\ncast = # replace with your code\nprint(cast)",
+                    "name": "zip_dict.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534161,
+              "key": "5c1bbba2-b521-47c8-a862-dd2e24092d85",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：拆封元组\n将 `cast` 元组拆封成两个 `names` 和 `heights` 元组。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534162,
+              "key": "38a16fd6-9f4e-4f88-a7c0-7ae43b0ff3a4",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "38a16fd6-9f4e-4f88-a7c0-7ae43b0ff3a4",
+                "completed_at": "2018-06-11T10:38:50.041Z",
+                "last_viewed_at": "2019-02-23T08:32:45.067Z",
+                "unstructured": "{\"unzip.py\":\"cast = ((\\\"Barney\\\", 72), (\\\"Robin\\\", 68), (\\\"Ted\\\", 72), (\\\"Lily\\\", 66), (\\\"Marshall\\\", 76))\\n\\n# define names and heights here\\nnames, heights = zip(*cast)\\n\\nprint(names)\\nprint(heights)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5593265584340992",
+                "initial_code_files": [
+                  {
+                    "text": "cast = ((\"Barney\", 72), (\"Robin\", 68), (\"Ted\", 72), (\"Lily\", 66), (\"Marshall\", 76))\n\n# define names and heights here\n\n\nprint(names)\nprint(heights)",
+                    "name": "unzip.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534168,
+              "key": "755d2b8d-bdeb-464e-bf12-1e7fcbcdeff5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：用 Zip 进行转置\n使用 `zip` 将 `data` 从 4x3 矩阵转置成 3x4 矩阵。实际上有一个很酷的技巧。如果想不出答案的话，可以查看解决方案。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534169,
+              "key": "1a656d83-ceb7-45d4-9729-aabc509102db",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "1a656d83-ceb7-45d4-9729-aabc509102db",
+                "completed_at": "2018-06-12T03:51:26.936Z",
+                "last_viewed_at": "2019-02-23T08:35:14.931Z",
+                "unstructured": "{\"transpose.py\":\"data = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (9, 10, 11))\\n\\ndata_transpose = tuple(zip(*data))\\nprint(data_transpose)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6207814054313984",
+                "initial_code_files": [
+                  {
+                    "text": "data = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (9, 10, 11))\n\ndata_transpose = # replace with your code\nprint(data_transpose)",
+                    "name": "transpose.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534170,
+              "key": "7f4095a2-7768-431a-b509-d5cc5ef046b8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：Enumerate\n使用 `enumerate` 修改列表 `cast`，使每个元素都包含姓名，然后是角色的对应身高。例如，`cast` 的第一个元素应该从 `\"Barney Stinson\"` 更改为 `\"Barney Stinson 72”`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534173,
+              "key": "2fa59f80-5058-4865-b6d2-eee079ef006c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2fa59f80-5058-4865-b6d2-eee079ef006c",
+                "completed_at": "2018-06-11T10:47:22.978Z",
+                "last_viewed_at": "2019-02-23T08:44:47.129Z",
+                "unstructured": "{\"enumerate_cast.py\":\"cast = [\\\"Barney Stinson\\\", \\\"Robin Scherbatsky\\\", \\\"Ted Mosby\\\", \\\"Lily Aldrin\\\", \\\"Marshall Eriksen\\\"]\\nheights = [72, 68, 72, 66, 76]\\n\\n# write your for loop here\\nfor i, height in enumerate(heights):\\n    cast[i] = str(cast[i]) + \\\" \\\" + str(height)\\nprint(cast)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5500523013341184",
+                "initial_code_files": [
+                  {
+                    "text": "cast = [\"Barney Stinson\", \"Robin Scherbatsky\", \"Ted Mosby\", \"Lily Aldrin\", \"Marshall Eriksen\"]\nheights = [72, 68, 72, 66, 76]\n\n# write your for loop here\n\n\nprint(cast)",
+                    "name": "enumerate_cast.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534327,
+          "key": "115ad3cf-995f-4e48-b032-86ba683c9113",
+          "title": "解决方案：Zip 和 Enumerate（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "115ad3cf-995f-4e48-b032-86ba683c9113",
+            "completed_at": "2018-06-11T10:08:28.469Z",
+            "last_viewed_at": "2019-03-03T08:43:45.403Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534174,
+              "key": "bb60407c-2dfe-4e4b-acd0-978ab22355a8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：组合坐标\n```python\nx_coord = [23, 53, 2, -12, 95, 103, 14, -5]\ny_coord = [677, 233, 405, 433, 905, 376, 432, 445]\nz_coord = [4, 16, -6, -42, 3, -6, 23, -1]\nlabels = [\"F\", \"J\", \"A\", \"Q\", \"Y\", \"B\", \"W\", \"X\"]\n\npoints = []\nfor point in zip(labels, x_coord, y_coord, z_coord):\n    points.append(\"{}: {}, {}, {}\".format(*point))\n\nfor point in points:\n    print(point)\n```\n### 输出：\n```txt\nF: 23, 677, 4\nJ: 53, 233, 16\nA: 2, 405, -6\nQ: -12, 433, -42\nY: 95, 905, 3\nB: 103, 376, -6\nW: 14, 432, 23\nX: -5, 445, -1\n```\n注意，元组在 `format` 方法中使用 `*` 进行了拆封。这样可以使代码更整洁！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534177,
+              "key": "085ee18f-7492-4e13-9adc-cdd0e767be94",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：将列表组合成字典\n```python\ncast_names = [\"Barney\", \"Robin\", \"Ted\", \"Lily\", \"Marshall\"]\ncast_heights = [72, 68, 72, 66, 76]\n\ncast = dict(zip(cast_names, cast_heights))\nprint(cast)\n```\n### 输出:\n该输出中的元素顺序可能有变化，因为字典是无序的。\n```txt\n{'Lily': 66, 'Barney': 72, 'Marshall': 76, 'Ted': 72, 'Robin': 68}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534179,
+              "key": "14ee97aa-2a3b-49c7-8f17-34376be924ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：拆封元组\n```python\ncast = ((\"Barney\", 72), (\"Robin\", 68), (\"Ted\", 72), (\"Lily\", 66), (\"Marshall\", 76))\n\nnames, heights = zip(*cast)\nprint(names)\nprint(heights)\n```\n### 输出：\n```txt\n('Barney', 'Robin', 'Ted', 'Lily', 'Marshall')\n(72, 68, 72, 66, 76)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534178,
+              "key": "88aefe96-231d-4d2c-a6af-1f37de43e176",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：用 Zip 进行转置\n```python\ndata = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (9, 10, 11))\n\ndata_transpose = tuple(zip(*data))\nprint(data_transpose)\n```\n### 输出：\n```txt\n((0, 3, 6, 9), (1, 4, 7, 10), (2, 5, 8, 11))\n```\n这是一个很实用的技巧，有必要了解一下！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534181,
+              "key": "d777c198-a111-453c-ba3f-2f0957bcc60e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：Enumerate\n```python\ncast = [\"Barney Stinson\", \"Robin Scherbatsky\", \"Ted Mosby\", \"Lily Aldrin\", \"Marshall Eriksen\"]\nheights = [72, 68, 72, 66, 76]\n\nfor i, character in enumerate(cast):\n    cast[i] = character + \" \" + str(heights[i])\n\nprint(cast)\n```\n### 输出：\n```txt\n['Barney Stinson 72', 'Robin Scherbatsky 68', 'Ted Mosby 72', 'Lily Aldrin 66', 'Marshall Eriksen 76']\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534334,
+          "key": "41c9267a-c9bd-42c8-9897-78e49b376471",
+          "title": "列表推导式（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "41c9267a-c9bd-42c8-9897-78e49b376471",
+            "completed_at": "2018-06-12T00:38:02.679Z",
+            "last_viewed_at": "2019-05-21T08:14:16.133Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534182,
+              "key": "c061ef5a-3f7a-452e-80c3-8bbf3fee8c81",
+              "title": "L3 14 列表推导式 V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "6qxo-NV9v_s",
+                "china_cdn_id": "6qxo-NV9v_s.mp4"
+              }
+            },
+            {
+              "id": 534186,
+              "key": "af893985-a0d8-4de3-96ea-f143c487942b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 列表推导式\n在 Python 中，你可以使用列表推导式快速简练地创建列表。下面是之前的一个示例：\n```python\ncapitalized_cities = []\nfor city in cities:\n    capitalized_cities.append(city.title())\n```\n可以简写为：\n```python\ncapitalized_cities = [city.title() for city in cities]\n```\n借助列表推导式，我们可以使用 `for` 循环用一步创建一个列表。\n\n\n我们使用方括号 `[]` 创建列表推导式，括号里包含要对可迭代对象中的每个元素进行评估的条件。上述列表推导式对 `cities` 中的每个元素 `city` 调用 `city.title()`，以为新列表 `capitalized_cities` 创建每个元素。 \n\n### 列表推导式中的条件语句\n你还可以向列表推导式添加条件语句。在可迭代对象之后，你可以使用关键字 `if` 检查每次迭代中的条件。\n```python\nsquares = [x**2 for x in range(9) if x % 2 == 0]\n```\n上述代码将 `squares` 设为等于列表 [0, 4, 16, 36, 64]，因为仅在 x 为偶数时才评估 x 的 2 次幂。如果你想添加 `else`，将遇到语法错误。 \n```python\nsquares = [x**2 for x in range(9) if x % 2 == 0 else x + 3]\n```\n如果你要添加 `else`，则需要将条件语句移到列表推导式的开头，直接放在表达式后面，如下所示。 \n```python\nsquares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]\n```\n列表推导式并没有在其他语言中出现，但是在 python 中很常见。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534342,
+          "key": "be839dbf-f02a-4a51-b708-8e54f4b4f7e6",
+          "title": "练习：列表推导式（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "be839dbf-f02a-4a51-b708-8e54f4b4f7e6",
+            "completed_at": "2018-06-12T00:45:47.541Z",
+            "last_viewed_at": "2019-05-21T08:16:45.776Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534188,
+              "key": "0bcd0159-bcef-49d4-84a6-c27d1689ab05",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：提取名字\n使用列表推导式创建新的列表 `first_names`，其中仅包含 `names` 中的名字（小写形式）。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534192,
+              "key": "38240c7a-5291-48fb-939b-ae8e832945af",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "38240c7a-5291-48fb-939b-ae8e832945af",
+                "completed_at": "2018-06-12T00:46:20.439Z",
+                "last_viewed_at": "2019-02-23T08:54:11.573Z",
+                "unstructured": "{\"extract_first.py\":\"names = [\\\"Rick Sanchez\\\", \\\"Morty Smith\\\", \\\"Summer Smith\\\", \\\"Jerry Smith\\\", \\\"Beth Smith\\\"]\\n\\nfirst_names = [name.split()[0].lower() for name in names]\\n# write your list comprehension here\\nprint(first_names)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5004408388190208",
+                "initial_code_files": [
+                  {
+                    "text": "names = [\"Rick Sanchez\", \"Morty Smith\", \"Summer Smith\", \"Jerry Smith\", \"Beth Smith\"]\n\nfirst_names = # write your list comprehension here\nprint(first_names)",
+                    "name": "extract_first.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534193,
+              "key": "d6e5c488-3639-4cdd-956b-fa9df0c68585",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：multiples_3\n使用列表推导式创建一个列表 `multiples_3`，能够计算出 1 - 20 这 20 个整数中分别乘以 3 之后的结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534194,
+              "key": "45308c60-ee96-4951-86f2-4436f211f401",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "45308c60-ee96-4951-86f2-4436f211f401",
+                "completed_at": "2018-06-12T00:57:38.526Z",
+                "last_viewed_at": "2019-02-23T09:01:24.813Z",
+                "unstructured": "{\"multiples_3.py\":\"multiples_3 = [i*3 for i in range(1,21)]\\nprint(multiples_3)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4549938290229248",
+                "initial_code_files": [
+                  {
+                    "text": "multiples_3 = # write your list comprehension here\nprint(multiples_3)",
+                    "name": "multiples_3.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534197,
+              "key": "4ea4c48e-0e6d-43a0-ba68-5769f28230b7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：按得分过滤姓名\n使用列表推导式创建一个 passed 的姓名列表，其中仅包含得分至少为 65 分的名字。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534201,
+              "key": "ecebc8ce-05c1-46b4-ae0a-5bafb4614807",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ecebc8ce-05c1-46b4-ae0a-5bafb4614807",
+                "completed_at": "2018-06-12T01:02:06.109Z",
+                "last_viewed_at": "2019-02-23T09:06:43.792Z",
+                "unstructured": "{\"filter_scores.py\":\"scores = {\\n             \\\"Rick Sanchez\\\": 70,\\n             \\\"Morty Smith\\\": 35,\\n             \\\"Summer Smith\\\": 82,\\n             \\\"Jerry Smith\\\": 23,\\n             \\\"Beth Smith\\\": 98\\n          }\\n\\npassed = [name for name, score in scores.items() if score >=65]\\n\\nprint(passed)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5524058897252352",
+                "initial_code_files": [
+                  {
+                    "text": "scores = {\n             \"Rick Sanchez\": 70,\n             \"Morty Smith\": 35,\n             \"Summer Smith\": 82,\n             \"Jerry Smith\": 23,\n             \"Beth Smith\": 98\n          }\n\npassed = # write your list comprehension here\nprint(passed)",
+                    "name": "filter_scores.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534343,
+          "key": "05416928-6a1e-425f-b967-2eeb87a78c64",
+          "title": "解决方案：列表推导式（选学）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05416928-6a1e-425f-b967-2eeb87a78c64",
+            "completed_at": "2018-06-12T00:48:22.484Z",
+            "last_viewed_at": "2019-02-23T09:09:31.537Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534203,
+              "key": "9ae529a5-3694-4010-b0c2-2cd15199926d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：提取名字\n```python\nnames = [\"Rick Sanchez\", \"Morty Smith\", \"Summer Smith\", \"Jerry Smith\", \"Beth Smith\"]\n\nfirst_names = [name.split()[0].lower() for name in names]\nprint(first_names)\n```\n### 输出：\n```txt\n['rick', 'morty', 'summer', 'jerry', 'beth']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534202,
+              "key": "cf90743f-d585-48a9-8e1a-af9f1a5cb8d4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：3 的倍数\n```python\nmultiples_3 = [x * 3 for x in range(1, 21)]\nprint(multiples_3)\n```\n### 输出：\n```txt\n[3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534209,
+              "key": "68e4bf43-bcdf-4644-b699-92204b1b13af",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：按得分过滤姓名\n```python\nscores = {\n             \"Rick Sanchez\": 70,\n             \"Morty Smith\": 35,\n             \"Summer Smith\": 82,\n             \"Jerry Smith\": 23,\n             \"Beth Smith\": 98\n          }\n\npassed = [name for name, score in scores.items() if score >= 65]\nprint(passed)\n```\n### 输出：\n该输出中的元素顺序可能有变化，因为字典是无序的。\n```txt\n['Beth Smith', 'Summer Smith', 'Rick Sanchez']\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534346,
+          "key": "59f33be8-d583-49de-a1bc-4f5d723f253f",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "59f33be8-d583-49de-a1bc-4f5d723f253f",
+            "completed_at": "2018-06-12T01:06:30.639Z",
+            "last_viewed_at": "2019-03-03T08:45:15.762Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534212,
+              "key": "fe54e277-6d09-4ef9-8d3f-471a9e768677",
+              "title": "L3 15 恭喜 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vDoqpwCHxs4",
+                "china_cdn_id": "vDoqpwCHxs4.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

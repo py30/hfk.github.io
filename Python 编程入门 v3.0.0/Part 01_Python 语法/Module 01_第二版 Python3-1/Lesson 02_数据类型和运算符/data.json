@@ -1,0 +1,3017 @@
+{
+  "data": {
+    "lesson": {
+      "id": 534418,
+      "key": "ebd93cf2-9329-4415-9bc2-7281e2aa9e13",
+      "title": "数据类型和运算符",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这节课，你将学习 Python 中用到的所有数据类型和运算符。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/ebd93cf2-9329-4415-9bc2-7281e2aa9e13/534418/1544952662413/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/ebd93cf2-9329-4415-9bc2-7281e2aa9e13/534418/1544952656092/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 534388,
+          "key": "2cc7d900-a68a-4565-b98e-41ba13a3ac88",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2cc7d900-a68a-4565-b98e-41ba13a3ac88",
+            "completed_at": "2018-05-11T03:00:01.978Z",
+            "last_viewed_at": "2019-05-27T06:39:03.952Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534126,
+              "key": "c15471d6-45aa-401d-99e4-9e0feb679861",
+              "title": "简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4F7SC0C6tfQ",
+                "china_cdn_id": "4F7SC0C6tfQ.mp4"
+              }
+            },
+            {
+              "id": 534131,
+              "key": "3242bf0e-47fd-4d63-a9b2-000289913f84",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 数据类型和运算符\n\n欢迎学习数据类型和运算符课程！你将学习：\n\n- 数据类型：整型、浮点型、布尔型、字符串、列表、元组、集合、字典\n- 运算符：算术、赋值、比较、逻辑、成员、恒等运算符  \n- 内置函数、复合数据结构、类型转换\n- 空格和样式指南",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534389,
+          "key": "861222b2-49d8-40c5-8e6c-9880f0044504",
+          "title": "算术运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "861222b2-49d8-40c5-8e6c-9880f0044504",
+            "completed_at": "2018-05-11T03:02:07.754Z",
+            "last_viewed_at": "2019-05-27T06:47:39.482Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534134,
+              "key": "6f0939d0-35fd-4c21-a336-18f530ee21c4",
+              "title": "算术运算符",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "M8TIOK2P2yw",
+                "china_cdn_id": "M8TIOK2P2yw.mp4"
+              }
+            },
+            {
+              "id": 534135,
+              "key": "a8c31a47-0001-4c9f-aca2-e703dc95bb3a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 算术运算符\n\n算术运算\n\n* `+` 加\n* `-` 减\n* `*` 乘\n* `/` 除\n* `%` 取模（相除后的余数）\n* `**` 取幂（注意 `^` 并不执行该运算，你可能在其他语言中见过这种情形）\n* `//` 相除后向下取整到最接近的整数\n\n关于按位运算符的更多信息请参阅[此处](https://wiki.python.org/moin/BitwiseOperators)。Python 也遵守一般的数学运算顺序，你可以访问以下网页以复习这方面的知识：https://en.wikipedia.org/wiki/Operation_(mathematics)。\n\n关于取模运算，更多信息请参考[这里](https://en.wikipedia.org/wiki/Modulo_operation)。值得注意的是，取模运算和取余运算是一个非常容易混淆的概念。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534392,
+          "key": "b83e017f-e464-4bf9-8b31-6a1136384ba4",
+          "title": "练习：算术运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b83e017f-e464-4bf9-8b31-6a1136384ba4",
+            "completed_at": "2018-05-11T03:06:00.983Z",
+            "last_viewed_at": "2019-05-24T13:02:48.224Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534156,
+              "key": "900238ae-0755-4670-a05b-0d0babd684ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：平均电费\n\n我们用 Python 尝试运算操作吧！\n\n我在过去三个月的电费是 23 美元、32 美元和 64 美元。这三个月的每月平均电费是多少？请写一个表达式来计算均值，并使用 `print()` 查看结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534157,
+              "key": "7fdbeb0c-429a-4440-9ad6-da9d51fd8e50",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "7fdbeb0c-429a-4440-9ad6-da9d51fd8e50",
+                "completed_at": "2018-05-11T03:07:00.274Z",
+                "last_viewed_at": "2019-05-24T13:02:40.134Z",
+                "unstructured": "{\"electric_average.py\":\"# Write an expression that calculates the average of 23, 32 and 64\\n# Place the expression in this print statement\\navg=(23+32+64)/3\\nprint(avg)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6000978780880896",
+                "initial_code_files": [
+                  {
+                    "text": "# Write an expression that calculates the average of 23, 32 and 64\n# Place the expression in this print statement\nprint()",
+                    "name": "electric_average.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534163,
+              "key": "c0c897e3-9a91-4db1-a909-f5feb2fa06d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：计算\n\n在这道练习中，你需要通过编写 Python 程序来帮助一位铺瓦工做一些计算。\n地面上有两个区域需要贴砖，其中一个区域的大小为**宽 9 块砖，长 7 块砖**，另一个区域的大小为**宽 5 块砖，长 7 块砖**。此外，6块砖头组成一包。\n请编写程序计算以下问题：\n1. 这位铺瓦工贴完这两个区域一共需要多少块砖？\n2. 如果购买 **17 包砖，且每包有 6 块砖**。铺完两个区域之后，还剩下多少块砖？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534164,
+              "key": "ad99ad40-46b7-4bf1-bbc2-2805c5f40fd0",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ad99ad40-46b7-4bf1-bbc2-2805c5f40fd0",
+                "completed_at": "2018-05-11T03:12:46.517Z",
+                "last_viewed_at": "2019-05-03T16:06:30.094Z",
+                "unstructured": "{\"tiles.py\":\"# Fill this in with an expression that calculates how many tiles are needed.\\nprint((9*7)+(5*7))\\n\\n# Fill this in with an expression that calculates how many tiles will be left over.\\nprint(17*6-(9*7)-(5*7))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5178122371203072",
+                "initial_code_files": [
+                  {
+                    "text": "# Fill this in with an expression that calculates how many tiles are needed.\nprint()\n\n# Fill this in with an expression that calculates how many tiles will be left over.\nprint()",
+                    "name": "tiles.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534165,
+              "key": "75c65353-8967-4676-89e3-31fff0cfb49c",
+              "title": "代码格式",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "75c65353-8967-4676-89e3-31fff0cfb49c",
+                "completed_at": "2018-05-11T03:28:39.255Z",
+                "last_viewed_at": "2019-05-03T16:08:19.137Z",
+                "unstructured": "{\"selected_ids\":[\"a1512590162015\",\"a1512590160985\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下哪几行代码格式是合理的？思考一下如何改进看起来格式糟糕且不易读的代码;)",
+                "answers": [
+                  {
+                    "id": "a1512590145398",
+                    "text": "`print(((3+  32))+ -15//2)`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512590160985",
+                    "text": "`print((17 - 6)%(5 + 2))`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512590161481",
+                    "text": "`print ((1 + 2 + 4) / 13)`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512590162015",
+                    "text": "`print(4/2 - 7*7)`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534393,
+          "key": "cf20e9f1-9b19-4bea-b2e1-d5c591e20877",
+          "title": "变量和赋值运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cf20e9f1-9b19-4bea-b2e1-d5c591e20877",
+            "completed_at": "2018-05-11T03:31:58.258Z",
+            "last_viewed_at": "2019-05-24T13:28:36.596Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534166,
+              "key": "066dd712-7551-444a-9b14-93de0f0814b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 变量和赋值运算符\n\n从现在开始，你将开始学习 python 中的变量。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534171,
+              "key": "4eb93735-679b-4c5c-a604-cddb9330abde",
+              "title": "变量",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7pxpUot4x0w",
+                "china_cdn_id": "7pxpUot4x0w.mp4"
+              }
+            },
+            {
+              "id": 534172,
+              "key": "ec710ae6-719d-4249-aff0-d274ff359da7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 变量 I\n\npython 中经常会用到变量！下面是你在视频中看到的示例：\n\n`mv_population = 74728`\n\n`mv_population` 是变量，负责存储 `74728` 的值。该表达式将右侧的项目赋值给左侧的名称，实际上和数学等式有所不同，因为 `74728` 不存储 `mv_population` 的值。\n\n在任何情况下，无论左侧项是什么，在赋值后，都是右侧值的变量名称。一旦将变量值赋值给变量名称，你便可以通过该名称访问这个值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534175,
+              "key": "93a80227-745c-4ede-b14d-aa5a5ec53daf",
+              "title": "L2 04b 变量 II V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4IJqbP8vi6A",
+                "china_cdn_id": "4IJqbP8vi6A.mp4"
+              }
+            },
+            {
+              "id": 534176,
+              "key": "a2e714c8-fba1-4039-baed-3c3c3de51649",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 变量 II\n\n在此视频中，你发现以下两个表达式在赋值方面是对等的：\n\n```\nx = 3\ny = 4\nz = 5\n```\n\n以及\n\n```\nx, y, z = 3, 4, 5\n```\n\n但是，在大多数情况下，上面的表达式并不是很好的赋值方式，因为变量名称应该要能够描述所存储的值。\n\n除了要设定具有描述性的变量名称之外，在 Python 中命名变量时，还需要注意以下几个事项：\n\n`1`. 只能在变量名称中使用常规字母、数字和下划线。不能包含空格，并且需要以字母或下划线开头。\n\n`2`. **不能使用保留字或内置标识符**，它们在 Python 中具有重要含义，你将在整个这门课程中学到这些知识。python 保留字列表请参阅[此处](https://pentangle.net/python/handbook/node52.html)。创建对值清晰描述的名称可以帮助你避免使用这些保留字。下面是这些保留字的简要表格。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534180,
+              "key": "b7be01d4-ce73-42ce-9c2b-877d2620879c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a71131d_screen-shot-2018-01-30-at-4.39.42-pm/screen-shot-2018-01-30-at-4.39.42-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b7be01d4-ce73-42ce-9c2b-877d2620879c",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 534183,
+              "key": "4850a026-0636-4499-99f4-67c1b2f2d70b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n`3`. 在 python 中，变量名称的命名方式是全部使用小写字母，并用下划线区分单词。\n\n**正确**\n\n```\nmy_height = 58\nmy_lat = 40\nmy_long = 105\n```\n**错误**\n\n```\nmy height = 58\nMYLONG = 40\nMyLat = 105\n```\n\n虽然最后两个在 python 中可以运行，但是它们并不是在 python 中命名变量的推荐方式。我们命名变量的方式称之为 snake case，因为我们用下划线连接单词。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534184,
+              "key": "cf9b0deb-9286-4a39-b095-43154e2f0f85",
+              "title": "赋值运算符",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "p_qfzL-x3Cs",
+                "china_cdn_id": "p_qfzL-x3Cs.mp4"
+              }
+            },
+            {
+              "id": 534195,
+              "key": "f6052b71-fe23-429e-b9b1-6b905f3cdd87",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 赋值运算符\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534196,
+              "key": "7b6bb637-28b7-41c0-bf94-213fd56e82c7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是视频中的赋值运算符。你还可以按照类似的方式使用 `*=`，但是与下方所示的运算符相比不太常见。你可以在[此处](https://pentangle.net/python/handbook/node20.html)找到我们已经介绍的大部分知识的实践内容：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534198,
+              "key": "6ad1dd66-bd25-4151-9ec9-9aa3f9cfb81c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a7118b3_screen-shot-2018-01-30-at-5.14.39-pm/screen-shot-2018-01-30-at-5.14.39-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6ad1dd66-bd25-4151-9ec9-9aa3f9cfb81c",
+              "caption": "",
+              "alt": "Assignment Operators",
+              "width": 300,
+              "height": 200,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 534394,
+          "key": "0edf3cc8-5c35-43a9-bd6e-d410f0ad2978",
+          "title": "练习：变量和赋值运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0edf3cc8-5c35-43a9-bd6e-d410f0ad2978",
+            "completed_at": "2018-05-11T09:34:40.190Z",
+            "last_viewed_at": "2019-05-27T06:27:04.122Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534199,
+              "key": "341a77b5-d737-482d-97aa-2172bc21cc0e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：赋值和修改变量\n\n现在该你来使用变量了。这道练习的注释（以 `#` 开头的行）提供了创建和修改变量的说明。请在每条注释后面根据说明写一行代码。\n\n注意，这段代码使用了[科学记数法](https://en.wikipedia.org/wiki/Scientific_notation)来定义很大的数字。`4.445e8` 等于 `4.445 * 10 ** 8`，也就是 `444500000.0`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 842202,
+              "key": "b401bca2-c041-4a08-a180-b8cc697f790a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#代码注释 - 中英对照\n\n单词表：water reservoir 水库；volume：体积；rainfall 降雨；cubic metre 立方米\n\nThe current volume of a water reservoir (in cubic metres)  目前水库的蓄水量（单位：立方米）\nreservoir_volume = 4.445e8\n\nThe amount of rainfall from a storm (in cubic metres) 一场暴雨的降雨量（单位：立方米）\nrainfall = 5e6\n\ndecrease the rainfall variable by 10% to account for runoff 考虑到流失的水量，将降雨量这个变量降低10%\n\nadd the rainfall variable to the reservoir_volume variable 将降雨量与蓄水量相加\n\nincrease reservoir_volume by 5% to account for stormwater that flows into the reservoir in the days following the storm 暴雨后的一段时间内，雨水会不断流入水库，考虑这部分水量，需要将水库的蓄水量变量增加 5%\n\ndecrease reservoir_volume by 5% to account for evaporation 考虑到雨水蒸发情况，将蓄水量变量减小5%\nsubtract 2.5e5 cubic metres from reservoir_volume to account for water that's piped to arid regions. 水库里的水会用来浇灌干涸地区，所以需要将蓄水量减少 2.5e5 立方米\n\nprint the new value of the reservoir_volume variable 打印蓄水量变量的最新值",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534200,
+              "key": "72894335-c4ce-492c-8c4e-4ebcd1062b03",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "72894335-c4ce-492c-8c4e-4ebcd1062b03",
+                "completed_at": "2018-05-11T09:46:48.674Z",
+                "last_viewed_at": "2019-05-24T13:32:46.759Z",
+                "unstructured": "{\"variables.py\":\"# The current volume of a water reservoir (in cubic metres)\\nreservoir_volume = 4.445e8\\n# The amount of rainfall from a storm (in cubic metres)\\nrainfall = 5e6\\n\\n# decrease the rainfall variable by 10% to account for runoff\\nb=90%*rainfall\\n\\n# add the rainfall variable to the reservoir_volume variable\\nc=b+reservoir_volume\\n\\n# increase reservoir_volume by 5% to account for stormwater that flows\\n# into the reservoir in the days following the storm\\nd=c*105%\\n# decrease reservoir_volume by 5% to account for evaporation\\ne=d*0.95\\n\\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\\n# that's piped to arid regions.\\nf=e-2.5e5\\n# print the new value of the reservoir_volume variable\\nprint(f)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6284466486640640",
+                "initial_code_files": [
+                  {
+                    "text": "# The current volume of a water reservoir (in cubic metres)\nreservoir_volume = 4.445e8\n# The amount of rainfall from a storm (in cubic metres)\nrainfall = 5e6\n\n# decrease the rainfall variable by 10% to account for runoff\n\n# add the rainfall variable to the reservoir_volume variable\n\n# increase reservoir_volume by 5% to account for stormwater that flows\n# into the reservoir in the days following the storm\n\n# decrease reservoir_volume by 5% to account for evaporation\n\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\n# that's piped to arid regions.\n\n# print the new value of the reservoir_volume variable",
+                    "name": "variables.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534210,
+              "key": "0bd7620a-7a1e-417e-b153-90f02ff685ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 更改变量\n\n更改变量会如何影响到用该变量定义的另一个变量？我们来看一个示例。\n\n这是关于山景城人口和人口密度的原始数据。\t\n\n```python\n>>> mv_population = 74728\n>>> mv_area = 11.995\n>>> mv_density = mv_population/mv_area\n\n```\n\n现在我们重新定义 `mv_population` 变量：\n\n（**注意**：后续代码跟在上面三行代码后面，而非重新开始）\n```python\n>>> mv_population = 75000\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534211,
+              "key": "ffcd10c2-e7e1-4ead-b9f0-d0668184d410",
+              "title": "变量更改",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ffcd10c2-e7e1-4ead-b9f0-d0668184d410",
+                "completed_at": "2018-05-11T10:23:39.801Z",
+                "last_viewed_at": "2019-05-03T16:22:25.206Z",
+                "unstructured": "{\"selected_id\":\"a1512600903905\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "思考一下上方的代码，下面的表达式输出会是什么？\n```python\t\n>>> print(int(mv_density))\t\n```",
+                "answers": [
+                  {
+                    "id": "a1512600840986",
+                    "text": "6252.60525219",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512600903321",
+                    "text": "6229.92913714",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512600903905",
+                    "text": "6229",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512600904472",
+                    "text": "6246.92823723",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1517362145093",
+                    "text": "以上都不对。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534213,
+              "key": "6807bec1-696b-4813-a219-5e7ed635e07c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6807bec1-696b-4813-a219-5e7ed635e07c",
+                "completed_at": "2018-05-11T10:26:36.099Z",
+                "last_viewed_at": "2019-05-03T16:22:48.672Z",
+                "unstructured": "{\"selected_ids\":[\"a1512605224095\",\"a1512605225200\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是[美国的州列表，按照加入联邦的日期排序](https://en.wikipedia.org/wiki/List_of_U.S._states_by_date_of_admission_to_the_Union)。假设你想为特拉华州创建一个变量并赋一个值，表示它首先加入了联邦。以下哪些项是有效的 Python 变量名和赋值？",
+                "answers": [
+                  {
+                    "id": "a1512605014850",
+                    "text": "`del = 1`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512605224095",
+                    "text": "`delaware = 1`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512605224634",
+                    "text": "`1 de = first`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512605225200",
+                    "text": "`de = 1`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534390,
+          "key": "e968300b-6d70-4898-b1e6-fd39952cb186",
+          "title": "解决方案：变量和赋值运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e968300b-6d70-4898-b1e6-fd39952cb186",
+            "completed_at": "2018-05-11T10:26:55.917Z",
+            "last_viewed_at": "2019-05-03T16:27:45.604Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534136,
+              "key": "3a7b879d-736b-46df-ac89-eefb0def5e67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 解决方案：赋值和修改变量\n\n下面是上道练习的解决方案：\n```python\n# The current volume of a water reservoir (in cubic metres)\nreservoir_volume = 4.445e8\n# The amount of rainfall from a storm (in cubic metres)\nrainfall = 5e6\n\n# decrease the rainfall variable by 10% to account for runoff\nrainfall *= .9\n\n# add the rainfall variable to the reservoir_volume variable\nreservoir_volume += rainfall\n\n# increase reservoir_volume by 5% to account for stormwater that flows\n# into the reservoir in the days following the storm\nreservoir_volume *= 1.05\n\n# decrease reservoir_volume by 5% to account for evaporation\nreservoir_volume *= 0.95\n\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\n# that's piped to arid regions.\nreservoir_volume -= 2.5e5 \n\n# print the new value of the reservoir_volume variable\nprint(reservoir_volume)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534140,
+              "key": "acd1cb5f-1a30-4900-b6e2-a6c8bd2a35f1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 解决方案：更改变量\n\n对于第一个多选题练习，正确答案是 `int(mv_density)` 的值没有变化。它依然是 6229。\n\n因为当变量被赋值时，赋给了右侧的*表达式的值*，而不是表达式本身。在下面的行中：\n```python\t\n>>> mv_density = mv_population/mv_area\t\n```\t\nPython 实际上计算了右侧表达式 `mv_population/mv_area` 的结果，然后将变量 `mv_density` 赋为该表达式的值。它立即忘记该公式，仅将结果保存到变量中。\n\n考虑到 `mv_population` 的变化，为了更新 `mv_density` 的值。我们需要再次运行下面这行：\n```\t\n>>> mv_density = mv_population/mv_area\n>>> print(int(mv_density))\t\n6252\n```\t\n这是人们往返城市后，出现的新人口密度。所有变量都已更新为 `mv_population`  变化后的对应结果。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534391,
+          "key": "0056decd-35dc-41d0-9d58-22b3752fb20f",
+          "title": "整数和浮点数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0056decd-35dc-41d0-9d58-22b3752fb20f",
+            "completed_at": "2018-05-11T10:36:26.764Z",
+            "last_viewed_at": "2019-05-21T10:51:34.870Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534141,
+              "key": "4fa3360b-0121-4d95-9939-b535bd45ffd6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 整数和浮点数\n\n该页面上有两个讨论整数和浮点数的视频，还有一些其他实用的注释！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 568465,
+              "key": "b5065dd9-7c0f-4de9-9b81-579444e0cd37",
+              "title": "整数和浮点数",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MiJ1vfWp-Ts",
+                "china_cdn_id": "MiJ1vfWp-Ts.mp4"
+              }
+            },
+            {
+              "id": 534153,
+              "key": "4b1271bc-2457-42ed-b25d-6ef68a838ca0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 整数和浮点数\n\n数字值可以用到两种 python 数据类型：\n\n* **int** - 表示整数值\n* **float** - 表示小数或浮点数值\n\n你可以通过以下语法创建具有某个数据类型的值：\n\n```\nx = int(4.7)   # x is now an integer 4\ny = float(4)   # y is now a float of 4.0\n```\n\n你可以使用函数 `type` 检查数据类型：\n\n```\n>>> print(type(x))\nint\n>>> print(type(y))\nfloat\n```\n\n因为 0.1 的浮点数（或近似值）实际上比 0.1 稍微大些，当我们将好几个这样的值相加时，可以看出在数学上正确的答案与 Python 生成的答案之间有区别。\n\n```\n>>> print(.1 + .1 + .1 == .3)\nFalse\n```\n\n你可以在[此处](https://docs.python.org/3/tutorial/floatingpoint.html)了解详情。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 568466,
+              "key": "da3fc080-78f8-456c-8341-b5f966a9dd32",
+              "title": "Whitespace",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UxkIwcOczQQ",
+                "china_cdn_id": "UxkIwcOczQQ.mp4"
+              }
+            },
+            {
+              "id": 534155,
+              "key": "99a4feef-bb8b-4491-badf-8b7978738a20",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Python 最佳做法\n\n要了解所有的最佳做法，请参阅 [PEP8 指南](https://www.python.org/dev/peps/pep-0008/)。\n\n你可以使用 atom 软件包 [linter-python-pep8](https://atom.io/packages/linter-python-pep8) 在 Atom 文本编辑器中自己的编程环境中使用 pep8，稍后我们会详细讲解这方面的知识。如果你不熟悉文本编辑器，并且在课堂上完成了所有编程任务，暂时就不用担心这一点。\n\n请遵守以下指南，使其他程序员和你自己日后能轻松地读懂这些代码！\n\n### 正确\n\n```\nprint(4 + 5)\n```\n\n### 错误\n\n```\nprint(                       4 + 5)\n```\n\n每行代码应该不超过 **80** 个字符，虽然在某些使用情况下，**99** 个字符也可以。[此规则是由 IBM 制定的](https://softwareengineering.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width)。\n\n这些惯例为何很重要？虽然代码格式不会影响到运行效果，但是遵守标准样式指南使代码更容易阅读，并且在团队内的不同开发者之间保持一致。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534395,
+          "key": "f514f263-56be-41a9-a5be-28dde3b669bd",
+          "title": "练习：整数和浮点数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f514f263-56be-41a9-a5be-28dde3b669bd",
+            "completed_at": "2018-05-11T10:46:20.683Z",
+            "last_viewed_at": "2019-02-19T08:35:15.249Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534214,
+              "key": "7c2f360e-6bed-4213-a36e-721b76ca4cdf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## `整型`与`浮点型`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534215,
+              "key": "82b0d691-3c80-41dc-9aba-8bcf2e3bef4f",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "82b0d691-3c80-41dc-9aba-8bcf2e3bef4f",
+                "completed_at": "2018-05-11T10:47:28.369Z",
+                "last_viewed_at": "2018-12-24T06:06:12.937Z",
+                "unstructured": "{\"selected_ids\":[\"a1512606305845\",\"a1512606307039\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "在下面的钓鱼情境中，某些量是`整型`，某些量是`浮点型`。请选中所有应该是`浮点型`的选项。",
+                "answers": [
+                  {
+                    "id": "a1512606294049",
+                    "text": "有多少人参加了你的钓鱼之旅",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512606305845",
+                    "text": "钓到的鱼的长度（以米计）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512606306417",
+                    "text": "在钓鱼之旅中钓到的鱼条数",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512606307039",
+                    "text": "钓到第一条鱼所花费的时间（以小时计）",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534221,
+              "key": "8a39e671-507d-4ed2-a2fe-01429826b722",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 除以零呢？\n\n如果在 Python 中除以零，会发生什么？自己试试看！测试运行这段代码，看看会发生什么。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534222,
+              "key": "cb54b024-50c9-4819-9d08-4406b5579430",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "cb54b024-50c9-4819-9d08-4406b5579430",
+                "completed_at": "2018-05-11T10:47:46.712Z",
+                "last_viewed_at": "2019-02-19T08:35:42.721Z",
+                "unstructured": "{\"quiz.py\":\"print(5/0)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6591216809017344",
+                "initial_code_files": [
+                  {
+                    "text": "print(5/0)",
+                    "name": "quiz.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534223,
+              "key": "9849840e-ef0c-4b63-8fa2-cfd08e6f7625",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面是提交上述除以零代码后应该会看到的结果：\n\n```text\nTraceback (most recent call last):\n  File \"/tmp/vmuser_tnryxwdmhw/quiz.py\", line 1, in <module>\n    print(5/0)\n\nZeroDivisionError: division by zero```\n\nTraceback 表示“程序崩溃时正在干什么”！这部分通常没有错误的最后一行代码有用。虽然可以调查错误的剩余部分，但是直接查看最后一行代码 `ZeroDivisionError`，消息提醒我们除以了零。Python 也需要遵守数学规则！ \n\n通常，我们需要注意两种类型的错误\n\n* **异常**\n* **语法错误**\n\n**异常**是代码运行时发生的问题，而语法错误是 Python 在运行代码之前检查代码时发现的问题。要了解详情，请参阅关于[错误和异常](https://docs.python.org/3/tutorial/errors.html)的 Python 教程页面。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534397,
+          "key": "68a84b8b-a33b-4f94-8b4b-0d4cb1022757",
+          "title": "布尔型运算符、比较运算符和逻辑运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "68a84b8b-a33b-4f94-8b4b-0d4cb1022757",
+            "completed_at": "2018-05-11T10:48:04.977Z",
+            "last_viewed_at": "2019-02-19T08:36:10.105Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534225,
+              "key": "37f57f8d-4b20-4a23-a18b-eb4110d19a51",
+              "title": "布尔型比较运算符和逻辑运算符",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iNNsUJIDtVU",
+                "china_cdn_id": "iNNsUJIDtVU.mp4"
+              }
+            },
+            {
+              "id": 534229,
+              "key": "9d88b9a7-7787-4b93-a2f9-fbc48e349c43",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 布尔型运算符、比较运算符和逻辑运算符\n\n布尔数据类型存储的是值 `True` 或 `False`，通常分别表示为 `1` 或 `0`。 \n\n通常有 6 个比较运算符会获得`布尔`值：\n\n### 比较运算符\n\n| **符号使用情况**  | **布尔型**  | **运算符** |\n|---|---|---|\n| 5  <  3  |  False  | 小于\n| 5 > 3  | True  | 大于\n|  3 <= 3 | True   |  小于或等于\n|  3 >= 5 | False   | 大于或等于\n|  3 == 5 | False   | 等于\n|  3 != 5 | True  | 不等于\n\n你需要熟悉三个逻辑运算符：\n\n| **逻辑使用情况**  | **布尔型**  | **运算符** |\n|---|---|---|\n| 5  <  3 `and` 5 == 5  |  False  | `and` - 检查提供的所有语句是否都为 True\n| 5  <  3 `or` 5 == 5  | True  | `or` - 检查是否至少有一个语句为 True\n| `not` 5  <  3  | True   |  `not` - 翻转布尔值\n\n要详细了解 George Bool 如何改变了这个世界，请参阅[这篇文章](https://www.irishtimes.com/news/science/how-george-boole-s-zeroes-and-ones-changed-the-world-1.2014673)！\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534396,
+          "key": "cb14b840-11e9-4ea0-a0b2-ae04c8b73fec",
+          "title": "练习：布尔型运算符、比较运算符和逻辑运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cb14b840-11e9-4ea0-a0b2-ae04c8b73fec",
+            "completed_at": "2018-05-11T11:53:34.597Z",
+            "last_viewed_at": "2019-02-19T08:43:14.529Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534232,
+              "key": "d2614780-c127-46bb-a9b9-a3c73462a1d0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：哪个地区人口密度更高？里约还是旧金山？\n\n请在这道练习中尝试比较运算符！这段代码会计算里约和旧金山的人口密度。\n\n请编写代码来比较这两个密度。旧金山的人口密度比里约的高吗？如果高，则输出 `True`，否则输出 `False`。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534233,
+              "key": "289f922c-3d85-4f22-8db5-5101a10e5144",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "289f922c-3d85-4f22-8db5-5101a10e5144",
+                "completed_at": "2018-05-11T11:56:28.932Z",
+                "last_viewed_at": "2019-02-19T08:43:01.957Z",
+                "unstructured": "{\"CompareDensities.py\":\"sf_population, sf_area = 864816, 231.89\\nrio_population, rio_area = 6453682, 486.5\\n\\nsan_francisco_pop_density = sf_population/sf_area\\nrio_de_janeiro_pop_density = rio_population/rio_area\\n\\n# Write code that prints True if San Francisco is denser than Rio, and False otherwise\\nif san_francisco_pop_density > rio_de_janeiro_pop_density:\\n    print(\\\"True\\\")\\nelse: \\n    print(\\\"False\\\")\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5022304044711936",
+                "initial_code_files": [
+                  {
+                    "text": "sf_population, sf_area = 864816, 231.89\nrio_population, rio_area = 6453682, 486.5\n\nsan_francisco_pop_density = sf_population/sf_area\nrio_de_janeiro_pop_density = rio_population/rio_area\n\n# Write code that prints True if San Francisco is denser than Rio, and False otherwise\n",
+                    "name": "CompareDensities.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534234,
+              "key": "9cdae96a-69d4-4ee7-bb3c-b417988fe522",
+              "title": "为何是 `==`？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9cdae96a-69d4-4ee7-bb3c-b417988fe522",
+                "completed_at": "2018-05-11T12:01:03.450Z",
+                "last_viewed_at": "2018-12-24T07:15:29.106Z",
+                "unstructured": "{\"selected_id\":\"a1512607171275\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "为何 Python 使用 `==` 检查是否相等，而不是 `=`？",
+                "answers": [
+                  {
+                    "id": "a1512607159680",
+                    "text": "这样长度就是 2 个字符，和 `!=` 一样",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512607171275",
+                    "text": "因为 `=` 用来为变量赋值",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512607171815",
+                    "text": "二者都可行",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512607172268",
+                    "text": "因为 `=` 用来检查两个值是否近似相等",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534398,
+          "key": "d3aee112-7e2f-4adc-9a59-bb03e5a84531",
+          "title": "字符串",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d3aee112-7e2f-4adc-9a59-bb03e5a84531",
+            "completed_at": "2018-05-11T12:01:06.029Z",
+            "last_viewed_at": "2019-02-19T08:43:16.666Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534235,
+              "key": "ab59a884-883c-4606-b48b-c5ea6af841dd",
+              "title": "字符串",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ySZDrs-nNqg",
+                "china_cdn_id": "ySZDrs-nNqg.mp4"
+              }
+            },
+            {
+              "id": 690699,
+              "key": "4221d17e-3b84-4917-95fe-4556ec93833a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注：视频1:49处代码部分应为`salesman = \"'I think you\\'re an encyclopardia salesman'\"`.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534238,
+              "key": "add14be3-5945-4edb-a8cd-bb8e98b6ef17",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 字符串\n\n在 python 中，字符串的变量类型显示为 `str`。你可以使用双引号 `\"` 或单引号 `'` 定义字符串。如果你要创建的字符串包含其中一种引号，你需要确保代码不会出错。  \n\n```\n>>> my_string = 'this is a string!'\n>>> my_string2 = \"this is also a string!!!\"\n```\n\n你还可以在字符串中使用 `\\`，以包含其中一种引号：\n\n```\n>>> this_string = 'Simon\\'s skateboard is in the garage.'\n>>> print(this_string)\n```\n```text\nSimon's skateboard is in the garage.\n```\n\n如果不使用 `\\`，注意我们遇到了以下错误：\n\n```\n>>> this_string = 'Simon's skateboard is in the garage.'\n```\n```text\n  File \"<ipython-input-20-e80562c2a290>\", line 1\n    this_string = 'Simon's skateboard is in the garage.'\n                         ^\nSyntaxError: invalid syntax\n```\n颜色高亮部分也表示第二种情形中的字符串有什么错误。你还可以对字符串执行其他多种操作。在此视频中，你看到了一些操作：\n\n```\n>>> first_word = 'Hello'\n>>> second_word = 'There'\n>>> print(first_word + second_word)\n\nHelloThere\n\n>>> print(first_word + ' ' + second_word)\n\nHello There\n\n>>> print(first_word * 5)\n\nHelloHelloHelloHelloHello\n\n>>> print(len(first_word))\n\n5\n```\n与你到目前为止见到的其他数据类型不同，你还可以使用字符串索引，稍后我们将详细讲解！暂时先看下面这个小示例。注意，Python 索引以 0 开始——稍后，我们将在这节课详细讲解。\n\n```\n>>> first_word[0]\n\nH\n\n>>> first_word[1]\n\ne\n```\n\n\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534399,
+          "key": "a9fa5602-6d7c-4e8a-b3e3-58b481798ab0",
+          "title": "练习：字符串",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9fa5602-6d7c-4e8a-b3e3-58b481798ab0",
+            "completed_at": "2018-05-11T12:08:16.768Z",
+            "last_viewed_at": "2019-02-19T09:05:36.525Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534239,
+              "key": "b4c7309a-4b2f-4ab6-ab9d-d534f5790bd1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：修正引言\n\n以下练习中的代码将因为错误地使用引号而导致 SyntaxError。首先请点击“测试答案”查看错误消息。然后解决该问题，将（[Henry Ford](https://www.goodreads.com/author/quotes/203714.Henry_Ford)）的引言正确地赋值给变量 `ford_quote`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534240,
+              "key": "80346a72-7238-4ed2-a674-867c27797e4b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "80346a72-7238-4ed2-a674-867c27797e4b",
+                "completed_at": "2018-05-11T12:09:09.721Z",
+                "last_viewed_at": "2019-02-19T09:06:29.125Z",
+                "unstructured": "{\"quotes.py\":\"# TODO: Fix this string!\\nford_quote = 'Whether you think you can, or you think you can\\\\'t--you\\\\'re right.'\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5051368222621696",
+                "initial_code_files": [
+                  {
+                    "text": "# TODO: Fix this string!\nford_quote = 'Whether you think you can, or you think you can't--you're right.'",
+                    "name": "quotes.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534241,
+              "key": "620bdcd9-df81-4ec6-b56b-a2d73b3f75c3",
+              "title": "运算符和字符串",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "620bdcd9-df81-4ec6-b56b-a2d73b3f75c3",
+                "completed_at": "2018-05-11T12:10:23.320Z",
+                "last_viewed_at": "2018-12-29T05:26:17.036Z",
+                "unstructured": "{\"selected_id\":\"a1512672202413\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们已经知道对象类型会影响到运算符对对象的影响。下面这段代码的输出是什么？\n\n```python\ncoconut_count = \"34\"\nmango_count = \"15\"\ntropical_fruit_count = coconut_count + mango_count\nprint(tropical_fruit_count)\n```",
+                "answers": [
+                  {
+                    "id": "a1512672161756",
+                    "text": "49 (并且 tropical_fruit_count 是字符串)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512672201829",
+                    "text": "49 (并且 tropical_fruit_count 是整数)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512672202413",
+                    "text": "3415 (并且 tropical_fruit_count 是字符串)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512672202889",
+                    "text": "3415 (并且 tropical_fruit_count 是整数)",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534242,
+              "key": "05ef35ab-4358-4fd1-ae6e-da02251c902d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：编写服务器日志消息\n\n在此编程练习中，你将运用所学的字符串知识编写服务器日志消息。 \n\n你将获得用户示例数据、他们的访问时间和访问的网站。你应该使用提供的变量和所学的技能输出如下所示的日志消息（将用户名、网址和时间戳替换为相应变量的值）：\n\n`Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.`\n\n当你在编写这段代码时，可以点击 `测试答案`按钮，看看结果如何。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534252,
+              "key": "a4f4e576-00a1-49dc-9206-5fe6fb8c2cca",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "a4f4e576-00a1-49dc-9206-5fe6fb8c2cca",
+                "completed_at": "2018-05-11T12:12:49.055Z",
+                "last_viewed_at": "2019-02-19T09:44:00.057Z",
+                "unstructured": "{\"Logs.py\":\"username = \\\"Kinari\\\"\\ntimestamp = \\\"04:50\\\"\\nurl = \\\"http://petshop.com/pets/mammals/cats\\\"\\n\\n# TODO: print a log message using the variables above.\\n# The message should have the same format as this one:\\n# \\\"Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.\\\"\\nprint(username + \\\" \\\" + \\\"accessed the site\\\" + \\\" \\\" + url + \\\" \\\" + \\\"at\\\" + \\\" \\\" + timestamp + \\\".\\\")\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6409228038832128",
+                "initial_code_files": [
+                  {
+                    "text": "username = \"Kinari\"\ntimestamp = \"04:50\"\nurl = \"http://petshop.com/pets/mammals/cats\"\n\n# TODO: print a log message using the variables above.\n# The message should have the same format as this one:\n# \"Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.\"\n",
+                    "name": "Logs.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534253,
+              "key": "56aa32f2-2d60-4975-ba45-3f4e3124e4b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`len`\n\n使用字符串连接和 `len` 函数计算某些电影明星的实际完整姓名的长度。将该长度存储在变量 `name_length` 中。注意，姓名不同部分之间有空格！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534254,
+              "key": "7a52103a-a0bd-4f56-be54-0ea2cfe3fd0f",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "7a52103a-a0bd-4f56-be54-0ea2cfe3fd0f",
+                "completed_at": "2018-05-11T12:17:35.469Z",
+                "last_viewed_at": "2019-02-19T09:48:09.177Z",
+                "unstructured": "{\"bradley.py\":\"given_name = \\\"William\\\"\\nmiddle_names = \\\"Bradley\\\"\\nfamily_name = \\\"Pitt\\\"\\n\\nname_length = len(given_name + middle_names + family_name) + 2#todo: calculate how long this name is\\nprint(name_length)\\n# Now we check to make sure that the name fits within the driving license character limit\\n# Nothing you need to do here\\ndriving_license_character_limit = 28\\nprint(name_length <= driving_license_character_limit)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4510864036724736",
+                "initial_code_files": [
+                  {
+                    "text": "given_name = \"William\"\nmiddle_names = \"Bradley\"\nfamily_name = \"Pitt\"\n\nname_length = #todo: calculate how long this name is\n\n# Now we check to make sure that the name fits within the driving license character limit\n# Nothing you need to do here\ndriving_license_character_limit = 28\nprint(name_length <= driving_license_character_limit)",
+                    "name": "bradley.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534255,
+              "key": "a5fca67b-9746-46f3-a01b-dfd4225f2f62",
+              "title": "`len` 和整数",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a5fca67b-9746-46f3-a01b-dfd4225f2f62",
+                "completed_at": "2018-05-11T12:18:33.517Z",
+                "last_viewed_at": "2018-09-22T09:37:08.470Z",
+                "unstructured": "{\"selected_id\":\"a1512675552721\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们刚刚使用函数 `len` 计算出字符串的长度。当我们向其提供整数 835 而不是字符串时，函数 `len` 会返回什么？",
+                "answers": [
+                  {
+                    "id": "a1512675531720",
+                    "text": "835",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512675551716",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512675552214",
+                    "text": "2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512675552721",
+                    "text": "Error",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534400,
+          "key": "c0fc67d1-178b-4162-8c79-e4c834d1d5d3",
+          "title": "类型和类型转换",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c0fc67d1-178b-4162-8c79-e4c834d1d5d3",
+            "completed_at": "2018-05-11T12:19:38.647Z",
+            "last_viewed_at": "2019-02-19T09:48:26.776Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 569245,
+              "key": "23a62272-efab-429e-90cc-a12c23b884ca",
+              "title": "Type & Type Conversion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yN6Fam_vZrU",
+                "china_cdn_id": "yN6Fam_vZrU.mp4"
+              }
+            },
+            {
+              "id": 534259,
+              "key": "bf6bb8a8-1a6b-4fe6-b7d6-8217c0391b66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 类型和类型转换\n\n你到目前为止，已经见过四种数据类型：\n\n1. `整型` \n2. `浮点型`\n3. `布尔型`\n4.  `字符串`\n\n你在之前的视频中，简单了解了 `type()`，它可以用来检查你所处理的任何变量的数据类型。\n\n```\n>>> print(type(4))\nint\n>>> print(type(3.7))\nfloat\n>>> print(type('this'))\nstr\n>>> print(type(True))\nbool\n```\n\n你发现，你可以更改变量类型以执行各种不同的操作。例如\n\n```\n\"0\" + \"5\"\n```\n\n结果完全与以下代码的不一样 \n\n```\n0 + 5\n```\n\n你认为以下代码的结果是什么？\n\n```\n\"0\" + 5\n```\n\n下面的代码呢：\n\n```\n0 + \"5\"\n```\n\n检查变量类型非常重要，可以确保在编程时你所获的结果是你想要的结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691693,
+              "key": "ab8c79fd-1ef4-40bb-9d06-2f06c65c8006",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "  ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534401,
+          "key": "d4b580e8-95e2-42b4-bbcd-2ba1118634a9",
+          "title": "练习：类型和类型转换",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d4b580e8-95e2-42b4-bbcd-2ba1118634a9",
+            "completed_at": "2018-05-11T12:22:49.726Z",
+            "last_viewed_at": "2019-02-19T09:54:00.412Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534260,
+              "key": "710b53bf-43d2-4313-86c1-d5e804ae8a3d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：这些对象的类型是什么？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534261,
+              "key": "24b2d59b-178f-48b1-baa1-1259f1bb044e",
+              "title": "哪个类型？（第一部分）",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "24b2d59b-178f-48b1-baa1-1259f1bb044e",
+                "completed_at": "2018-05-11T12:23:02.008Z",
+                "last_viewed_at": "2018-09-22T09:40:25.270Z",
+                "unstructured": "{\"selected_id\":\"a1512676199072\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下对象是什么类型：`\"12\"`？该页面的靠下部分有一个编程环境，你可以用该环境进行实验。请输入你的代码，然后点击“测试答案”按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1512676199072",
+                    "text": "str",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512676210194",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676210662",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676211111",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534262,
+              "key": "1172687e-d152-4997-84aa-94812cec46c1",
+              "title": "哪个类型？（第二部分）",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1172687e-d152-4997-84aa-94812cec46c1",
+                "completed_at": "2018-05-11T12:24:13.723Z",
+                "last_viewed_at": "2018-09-22T09:40:52.227Z",
+                "unstructured": "{\"selected_id\":\"a1512676421553\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下对象是什么类型：`12.3`？该页面的靠下部分有一个编程环境，你可以用该环境进行实验。请输入你的代码，然后点击“测试答案”按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1512676371616",
+                    "text": "str",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676421553",
+                    "text": "float",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512676422101",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676422657",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534263,
+              "key": "4b44fa2e-1cdd-44a8-b5d3-f81b4ba564df",
+              "title": "哪个类型？（第三部分）",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4b44fa2e-1cdd-44a8-b5d3-f81b4ba564df",
+                "completed_at": "2018-05-11T12:24:56.678Z",
+                "last_viewed_at": "2018-09-22T09:41:55.823Z",
+                "unstructured": "{\"selected_id\":\"a1512676588723\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下对象是什么类型：`len(\"my_string\")`？该页面的靠下部分有一个编程环境，你可以用该环境进行实验。请输入你的代码，然后点击“测试答案”按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1512676566033",
+                    "text": "str",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676588230",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676588723",
+                    "text": "int",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512676589198",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534270,
+              "key": "eee47422-daa8-4a36-95c6-6f8dfa70da34",
+              "title": "哪个类型？（第四部分）",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "eee47422-daa8-4a36-95c6-6f8dfa70da34",
+                "completed_at": "2018-05-11T12:26:31.827Z",
+                "last_viewed_at": "2018-09-22T09:42:39.163Z",
+                "unstructured": "{\"selected_id\":\"a1512676669887\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下对象是什么类型：`\"hippo\" *12`？该页面的靠下部分有一个编程环境，你可以用该环境进行实验。请输入你的代码，然后点击“测试答案”按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1512676669887",
+                    "text": "str",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512676701253",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676701852",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512676702353",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534271,
+              "key": "d9e6d36e-8798-45cd-b716-aa24e478bbec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习\n\n请使用此编程练习实验对象类型。别忘了使用 `print` 查看代码结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534272,
+              "key": "26b9fa18-24d7-4ac9-804c-30697036fe5e",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "26b9fa18-24d7-4ac9-804c-30697036fe5e",
+                "completed_at": "2018-05-11T12:25:32.903Z",
+                "last_viewed_at": "2019-02-17T08:40:46.685Z",
+                "unstructured": "{\"play.py\":\"a = \\\"7\\\" +'12'\\nprint(a)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6070019306422272",
+                "initial_code_files": [
+                  {
+                    "text": "",
+                    "name": "play.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534273,
+              "key": "50e5a4a7-5b6d-4b1a-8b7b-7478446d0ce9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：总销量\n\n在此练习中，你需要更改输入和输出的类型，以便获得你想要的结果。\n\n请使用提供的数据计算一周的总效率。请输出以下格式的字符串`\"This week's total sales: xxx\"`，其中 xxx 将是所有数字的实际总计。你需要更改输入数据的类型，以便计算总计。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534274,
+              "key": "e74a87e8-a376-4c33-b7a1-5368042ff949",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e74a87e8-a376-4c33-b7a1-5368042ff949",
+                "completed_at": "2018-05-11T12:38:15.032Z",
+                "last_viewed_at": "2019-02-19T09:57:44.395Z",
+                "unstructured": "{\"sales.py\":\"mon_sales = \\\"121\\\"\\ntues_sales = \\\"105\\\"\\nwed_sales = \\\"110\\\"\\nthurs_sales = \\\"98\\\"\\nfri_sales = \\\"95\\\"\\n\\n#TODO: Print a string with this format: This week's total sales: xxx\\n# You will probably need to write some lines of code before the print statement.\\ntotal_sales = int(mon_sales) + int(tues_sales) + int(wed_sales) + int(thurs_sales) + int(fri_sales)\\nprint(\\\"This week's total sales:\\\" + \\\" \\\" + str(total_sales))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6632793166184448",
+                "initial_code_files": [
+                  {
+                    "text": "mon_sales = \"121\"\ntues_sales = \"105\"\nwed_sales = \"110\"\nthurs_sales = \"98\"\nfri_sales = \"95\"\n\n#TODO: Print a string with this format: This week's total sales: xxx\n# You will probably need to write some lines of code before the print statement.",
+                    "name": "sales.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534402,
+          "key": "e2ecaf07-5c9a-4ec9-be9e-e4faae40ac37",
+          "title": "字符串方法",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e2ecaf07-5c9a-4ec9-be9e-e4faae40ac37",
+            "completed_at": "2018-05-11T12:53:53.313Z",
+            "last_viewed_at": "2019-02-19T09:57:55.488Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534277,
+              "key": "e996f7a0-c0fc-48e6-932e-22af87c503d8",
+              "title": "字符串方法",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Bv7CAxVOONs",
+                "china_cdn_id": "Bv7CAxVOONs.mp4"
+              }
+            },
+            {
+              "id": 534278,
+              "key": "96f94cd6-8ee7-4021-8fbf-b30ee594f30e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 字符串方法\n\n在此视频中，我们介绍了**方法**。**方法**就像某些你已经见过的**函数**：\n\n1. `len`(\"this\")\n2. `type`(12)\n3. `print`(\"Hello world\")\n\n上述三项都是**函数**。注意，它们使用了小括号并接受一个参数。  \n\n`type` 和 `print` 函数可以接收字符串、浮点型、整型和很多其他数据类型的参数，函数 `len` 也可以接受多种不同数据类型的参数，稍后你将在这节课中详细了解。 \n\npython 中的**方法**和函数相似，但是它针对的是你已经创建的变量。**方法**与特定变量中的数据类型相关。 方法相当于通过`.`来调用的一种函数。例如，`lower()`是一个字符串方法，对于一个叫 \"sample string\" 的字符串，它可以这样使用：`sample_string.lower()`。\n\n下图显示了任何字符串都可以使用的方法。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534279,
+              "key": "0f8956e4-5f32-4710-ae99-24b5afd01c06",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a72cb8c_screen-shot-2018-02-01-at-12.10.40-am/screen-shot-2018-02-01-at-12.10.40-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f8956e4-5f32-4710-ae99-24b5afd01c06",
+              "caption": "",
+              "alt": "",
+              "width": 1246,
+              "height": 228,
+              "instructor_notes": null
+            },
+            {
+              "id": 534280,
+              "key": "75791e5a-2c01-4c9b-9799-94ba686331d0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "每个方法都接受字符串本身作为该方法的第一个参数。但是，它们还可以接收其他参数。我们来看看几个示例的输出。\n\n```\n>>> my_string.islower()\nTrue\n>>> my_string.count('a')\n2\n>>> my_string.find('a')\n3\n```\n\n可以看出，`count` 和 `find` 方法都接受另一个参数。但是，`islower` 方法不接受参数。如果我们要在变量中存储浮点数、整数或其他类型的数据，可用的方法可能完全不同！  \n\n任何专业人士都无法记住所有方法，因此知道如何通过文档查询答案非常重要。掌握扎实的编程基础使你能够利用这些基础知识查询文档，并且构建的程序比死记硬背所有 python 可用函数的人士构建的程序强大得多。  ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534403,
+          "key": "4000d14c-bd24-4e8c-8cdc-1ae8ee0b9731",
+          "title": "字符串方法",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4000d14c-bd24-4e8c-8cdc-1ae8ee0b9731",
+            "completed_at": "2018-05-13T02:58:16.623Z",
+            "last_viewed_at": "2019-02-19T10:53:00.886Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534281,
+              "key": "b614b694-ef9d-49de-b89d-ef7dd0a8dee4",
+              "title": "方法和类型",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b614b694-ef9d-49de-b89d-ef7dd0a8dee4",
+                "completed_at": "2018-05-13T02:59:40.164Z",
+                "last_viewed_at": "2018-09-28T14:22:02.083Z",
+                "unstructured": "{\"selected_id\":\"a1512678315705\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "对浮点型对象调用 `islower` 等方法会发生什么？例如 `13.37.islower()`。\n\n此页面的靠下部分有一个 playground 练习，你可以在此练习中进行实验。",
+                "answers": [
+                  {
+                    "id": "a1512678287946",
+                    "text": "原封不动地返回该浮点数",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512678314716",
+                    "text": "`islower` 返回 True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512678315232",
+                    "text": "`islower`返回 False",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512678315705",
+                    "text": "出现错误",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534285,
+              "key": "6f2bad5e-2903-49b6-82d5-61199d59730b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "要详细了解字符串和字符串方法，请参阅[字符串方法文档](https://docs.python.org/3/library/stdtypes.html#string-methods)。\n\n你将发现，文档是编写代码时最宝贵的资源之一，而不仅仅是处理字符串或编写 Python 代码！通过阅读和搜索文档，你可以了解数据类型和内置函数，以及如何使用它们。 \n\n立即尝试下吧！（使用上述链接）查询几个字符串方法，并在下面的练习中尝试这些方法（使用“测试答案”按钮）。\n\n## 字符串方法 ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534287,
+              "key": "c9cb72e6-0cd2-4cde-af64-792781714a40",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "c9cb72e6-0cd2-4cde-af64-792781714a40",
+                "completed_at": "2018-05-13T02:47:12.881Z",
+                "last_viewed_at": "2019-02-19T10:17:20.890Z",
+                "unstructured": "{\"string_playground.py\":\"# Browse the complete list of string methods at:\\n# https://docs.python.org/3/library/stdtypes.html#string-methods\\n# and try them out here\\nprint(\\\"36\\\".islower())\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5030898651758592",
+                "initial_code_files": [
+                  {
+                    "text": "# Browse the complete list of string methods at:\n# https://docs.python.org/3/library/stdtypes.html#string-methods\n# and try them out here",
+                    "name": "string_playground.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534404,
+          "key": "15635d7c-ee7f-43c7-a91c-b35ad8066a6c",
+          "title": "列表和成员运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "15635d7c-ee7f-43c7-a91c-b35ad8066a6c",
+            "completed_at": "2018-05-13T02:58:15.655Z",
+            "last_viewed_at": "2019-05-21T10:45:57.014Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534289,
+              "key": "17133d65-9126-46cc-af14-42fd0d131df5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 列表和成员运算符\n\n此页面包含三个视频。请观看这些视频并查看其他帮助提醒！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 831011,
+              "key": "f6a8cc84-cdf0-4567-9273-cb0eab48e514",
+              "title": "L2 16a Listgs And Membership Operators V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Tg58Z58m2Lo",
+                "china_cdn_id": "Tg58Z58m2Lo.mp4"
+              }
+            },
+            {
+              "id": 534291,
+              "key": "b15187cd-b334-46fe-aa58-424b3537d4d5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 列表！\n\n你在本视频中发现，你可以使用方括号创建列表。列表可以包含我们到目前为止所学的任何数据类型并且可以混合到一起。\n\n\n```\nlst_of_random_things = [1, 3.4, 'a string', True]\n```\n\n这是一个包含 4 个元素的类别。在 python 中，所有有序容器（例如列表）的起始索引都是 0。因此，要从上述列表中获取第一个值，我们可以编写以下代码：\n\n```\n>>> lst_of_random_things[0]\n1\n```\n\n似乎你可以使用以下代码获取最后一个元素，但实际上不可行：\n\n```\n>>> lst_of_random_things[len(lst_of_random_things)] \n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\n<ipython-input-34-f88b03e5c60e> in <module>()\n----> 1 list[len(list)]\n\nIndexError: list index out of range\n```\n\n但是，你可以通过使索引减一获取最后一个元素。因此，你可以执行以下操作：\n\n```\n>>> lst_of_random_things[len(lst_of_random_things) - 1] \nTrue\n```\n此外，你可以使用负数从列表的末尾开始编制索引，其中 -1 表示最后一个元素，-2 表示倒数第二个元素，等等。\n```\n>>> lst_of_random_things[-1] \nTrue\n>>> lst_of_random_things[-2] \na string\n\n```\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 831012,
+              "key": "4192be22-ee31-4ee7-807e-1657df4c4a73",
+              "title": "L2 16b Lists And Membership Operators V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "f4OF9XtXUR8",
+                "china_cdn_id": "f4OF9XtXUR8.mp4"
+              }
+            },
+            {
+              "id": 534301,
+              "key": "879491e8-90b2-4e79-9c8d-76ee4feaaa7f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 列表切片\n\n你发现，我们可以使用**切片功能**从列表中提取多个值。在使用切片功能时，务必注意，`起始`索引`包含在内`，`终止`索引`排除在外`。（即，在上述视频示例中，6 是起始索引，9是终止索引）\n\n因此：\n\n```\n>>> lst_of_random_things = [1, 3.4, 'a string', True]\n>>> lst_of_random_things[1:2]\n[3.4]\n```\n\n仅返回列表中的 **3.4**。注意，这与单个元素索引依然不同，因为你通过这种索引获得了一个列表。冒号表示从冒号左侧的起始值开始，到右侧的元素（不含）结束。\n\n如果你要从列表的开头开始，也可以省略起始值。\n\n```\n>>> lst_of_random_things[:2]\n[1, 3.4]\n```\n或者你要返回到列表结尾的所有值，可以忽略最后一个元素。\n\n```\n>>> lst_of_random_things[1:]\n[3.4, 'a string', True]\n```\n\n这种索引和字符串索引完全一样，返回的值将是字符串。\n\n# `在`列表里还是`不在`列表里？\n\n你发现，我们还可以使用 `in` 和 `not in` 返回一个**布尔值**，表示某个元素是否存在于列表中，或者某个字符串是否为另一个字符串的子字符串。\n\n```python\n>>> 'this' in 'this is a string'\nTrue\n>>> 'in' in 'this is a string'\nTrue\n>>> 'isa' in 'this is a string'\nFalse\n>>> 5 not in [1, 2, 3, 4, 6]\nTrue\n>>> 5 in [1, 2, 3, 4, 6]\nFalse\n```\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 831013,
+              "key": "096f057a-9605-4a77-bf06-8ca268ede85d",
+              "title": "L2 16c Lists And Membership Operators II V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "dVsJ9yzbSHE",
+                "china_cdn_id": "dVsJ9yzbSHE.mp4"
+              }
+            },
+            {
+              "id": 534303,
+              "key": "4204b33c-27c3-4887-ad7a-a6fbccce76af",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 可变性和顺序\n\n**可变性**是指对象创建完毕后，我们是否可以更改该对象。如果对象（例如列表）可以更改，则是**可变的**。但是，如果无法更改对象以创建全新的对象（例如字符串），则该对象是**不可变的**。\n\n```\n>>> my_lst = [1, 2, 3, 4, 5]\n>>> my_lst[0] = 'one'\n>>> print(my_lst)\n['one', 2, 3, 4, 5]\n```\n\n正如上述代码所显示的，你可以将上述列表中的 1 替换为 'one。这是因为，列表是**可变的**。\n\n但是，以下代码不可行：\n\n```\n>>> greeting = \"Hello there\"\n>>> greeting[0] = 'M'\n```\n\n这是因为，字符串是**不可变的**。意味着如果要更改该字符串，你需要创建一个全新的字符串。\n\n对于你要使用的每种数据类型，你都需要注意两个事项：\n\n1. **可变**吗？\n2. **有序**吗？\n\n字符串和列表都是有序的。但是，你将在后续部分看到某些数据类型是无序的。对于接下来要遇到的每种数据类型，有必要理解如何设定索引，可变吗，有序吗。了解数据结构的这些信息很有用！  \n\n此外，你将发现每种数据类型有不同的方法，因此为何使用一种数据类型（而不是另一种）在很大程度上取决于这些特性，以及如何轻松地利用这些特性！\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534405,
+          "key": "2aa94895-d620-4d00-9d91-43771844cdcf",
+          "title": "练习：列表和成员运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2aa94895-d620-4d00-9d91-43771844cdcf",
+            "completed_at": "2018-05-13T03:19:11.319Z",
+            "last_viewed_at": "2019-05-21T10:45:57.308Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534304,
+              "key": "9e95767f-e954-4960-bb43-a7380e3100f6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：列表索引\n\n请使用列表索引根据整型变量 `month` 判断特定月份有多少天，并将该值存储在整型变量 `num_days` 中。例如，如果 `month` 是 8，`num_days` 应该设为 31，因为第八个月份八月应该有 31 天。\n\n请记得索引以 0 开始！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534311,
+              "key": "5fb219a3-c37d-4b1c-84b4-aa88a58a74e8",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5fb219a3-c37d-4b1c-84b4-aa88a58a74e8",
+                "completed_at": "2018-05-13T03:21:22.812Z",
+                "last_viewed_at": "2019-05-21T10:46:12.896Z",
+                "unstructured": "{\"HowManyDays.py\":\"month = 8\\ndays_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]\\n\\n# use list indexing to determine the number of days in month\\nnum_days=days_in_month[8]\\n\\nprint(num_days)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5332051021135872",
+                "initial_code_files": [
+                  {
+                    "text": "month = 8\ndays_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]\n\n# use list indexing to determine the number of days in month\n\n\nprint(num_days)",
+                    "name": "HowManyDays.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534313,
+              "key": "782acf46-c6ee-434b-a892-2a10a3f243a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：列表切片\n\n请使用列表切片记法从此列表中选择列表中的最后三个元素。提示：切片可以使用负索引！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534314,
+              "key": "0bcee82d-4675-41f4-ab01-7089b143cd9c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "0bcee82d-4675-41f4-ab01-7089b143cd9c",
+                "completed_at": "2018-05-13T03:28:05.916Z",
+                "last_viewed_at": "2019-02-19T14:04:53.159Z",
+                "unstructured": "{\"slicing.py\":\"eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',\\n                 'March 29, 2006', 'August 1, 2008', 'July 22, 2009',\\n                 'July 11, 2010', 'November 13, 2012', 'March 20, 2015',\\n                 'March 9, 2016']\\n                 \\n                 \\n# TODO: Modify this line so it prints the last three elements of the list\\n\\nprint(eclipse_dates[-3:])\\n\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6670217070116864",
+                "initial_code_files": [
+                  {
+                    "text": "eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',\n                 'March 29, 2006', 'August 1, 2008', 'July 22, 2009',\n                 'July 11, 2010', 'November 13, 2012', 'March 20, 2015',\n                 'March 9, 2016']\n                 \n                 \n# TODO: Modify this line so it prints the last three elements of the list\nprint(eclipse_dates)",
+                    "name": "slicing.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534315,
+              "key": "8bb64e5e-9326-45eb-83f4-bee95af63d54",
+              "title": "可变性练习",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8bb64e5e-9326-45eb-83f4-bee95af63d54",
+                "completed_at": "2018-05-13T03:57:31.455Z",
+                "last_viewed_at": "2019-02-17T10:04:33.737Z",
+                "unstructured": "{\"answer_ids\":[\"a1512679606414\",\"a1512679627455\",\"a1512679628537\",\"a1512679629607\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "假设有以下两个表达式：`sentence1` 和 `sentence2`\n```python\nsentence1 = \"I wish to register a complaint.\"\nsentence2 = [\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]\n```\n请将以下 Python 代码与修改后的 `sentence1` 或 `sentence2` 的值相匹配。如果代码会出错，请与“Error”匹配。"
+                },
+                "concepts_label": "Python 代码",
+                "answers_label": "`sentence1` 或 `sentence2`的值",
+                "concepts": [
+                  {
+                    "text": "`sentence2[6]=\"!\"`",
+                    "correct_answer": {
+                      "id": "a1512679606414",
+                      "text": "[\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \"!\"]"
+                    }
+                  },
+                  {
+                    "text": "`sentence2[0]= \"Our Majesty\"`",
+                    "correct_answer": {
+                      "id": "a1512679627455",
+                      "text": "[\"Our Majesty\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]"
+                    }
+                  },
+                  {
+                    "text": "`sentence1[30]=\"!\"`",
+                    "correct_answer": {
+                      "id": "a1512679628537",
+                      "text": "Error"
+                    }
+                  },
+                  {
+                    "text": "`sentence2[0:2] = [\"We\", \"want\"]`",
+                    "correct_answer": {
+                      "id": "a1512679629607",
+                      "text": "[\"We\", \"want\", \"to\", \"register\", \"a\", “complaint”, \".\"]"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1512679628537",
+                    "text": "Error"
+                  },
+                  {
+                    "id": "a1512679629607",
+                    "text": "[\"We\", \"want\", \"to\", \"register\", \"a\", “complaint”, \".\"]"
+                  },
+                  {
+                    "id": "a1512679606414",
+                    "text": "[\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \"!\"]"
+                  },
+                  {
+                    "id": "a1512679627455",
+                    "text": "[\"Our Majesty\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]"
+                  },
+                  {
+                    "id": "a1512679677178",
+                    "text": "\"I wish to register a complaint!\""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534406,
+          "key": "b4777f6e-7e26-48da-9fc9-93191829b5ed",
+          "title": "列表方法",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b4777f6e-7e26-48da-9fc9-93191829b5ed",
+            "completed_at": "2018-05-13T03:57:59.270Z",
+            "last_viewed_at": "2019-02-19T14:12:04.898Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 831014,
+              "key": "36ce5e62-b5aa-4b18-9d86-947564187f6a",
+              "title": "L2 06 Lists Methods V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tz2Ja1Eaeqo",
+                "china_cdn_id": "tz2Ja1Eaeqo.mp4"
+              }
+            },
+            {
+              "id": 831029,
+              "key": "0aa64d2a-51dd-4b42-8778-cc916ccc72af",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "备注：视频 00:28 处右侧的 print(\"scores: \" + scores) 函数应改为 print(\"scores: \" + str(scores))； print(\"grades: \" + grades) 函数应改为 print(\"grades: \" + str(grades))。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534319,
+              "key": "aa279a2e-0eed-49a2-8868-9cb6747b41c1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 实用的列表函数（第一部分）\n\n1. `len()` 返回列表中的元素数量。\n2. `max()` 返回列表中的最大元素。最大元素的判断依据是列表中的对象类型。数字列表中的最大元素是最大的数字。字符串列表中的最大元素是按照字母顺序排序时排在最后一位的元素。因为 max() 函数的定义依据是大于比较运算符。如果列表包含不同的无法比较类型的元素，则 max() 的结果是 undefined。\n3. `min()` 返回列表中的最小元素。它是 max() 函数的对立面，返回列表中的最小元素。\n4. `sorted()` 返回一个从最小到最大排序的列表副本，并使原始列表保持不变。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 831015,
+              "key": "4f905acd-fa77-48a3-91ed-bfe788ac1903",
+              "title": "L2 05 Lists Methods V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WXkPm4rv6ng",
+                "china_cdn_id": "WXkPm4rv6ng.mp4"
+              }
+            },
+            {
+              "id": 534322,
+              "key": "23c6beff-5235-47b6-a747-b12a5cfe0926",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 实用的列表函数（第二部分）\n\n### `join` 方法\nJoin 是一个字符串方法，将字符串列表作为参数，并返回一个由列表元素组成并由分隔符字符串分隔的字符串。\n```python\nnew_str = \"\\n\".join([\"fore\", \"aft\", \"starboard\", \"port\"])\nprint(new_str)\n```\n输出:\n```txt\nfore\naft\nstarboard\nport\n```\n在此示例中，我们使用字符串 `\"\\n\"` 作为分隔符，以便每个元素之间都有一个换行符。我们还可以在 .join 中使用其他字符串作为分隔符。以下代码使用的是连字符。\n```python\nname = \"-\".join([\"García\", \"O'Kelly\"])\nprint(name)\n```\n输出:\n```txt\nGarcía-O'Kelly\n```\n请务必注意，用英文逗号 (,) 将要连接的列表中的每项分隔开来。忘记分隔的话，不会触发错误，但是会产生意外的结果。\n\n### `append` 方法\n实用方法 `append` 会将元素添加到列表末尾。\n```python\nletters = ['a', 'b', 'c', 'd']\nletters.append('z')\nprint(letters)\n```\n输出:\n```txt\n['a', 'b', 'c', 'd', 'z']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534323,
+              "key": "856be0f7-3418-4b32-946a-993273d7450e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 尝试一下！\n在第一个视频的开头部分，你发现包含可变和不可变对象的行为截然不同，甚至有时候会产生令人惊讶的结果！请多多尝试并使用输出函数尽量再次检查你的代码，确保你的程序正确地记录了数据。在尝试列表时，请尝试一些上述实用函数。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534407,
+          "key": "9c1c1885-9a78-4108-bbdc-2bfd283f1fb4",
+          "title": "练习：列表方法",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9c1c1885-9a78-4108-bbdc-2bfd283f1fb4",
+            "completed_at": "2018-05-13T04:06:42.638Z",
+            "last_viewed_at": "2019-02-22T11:23:19.404Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534324,
+              "key": "79dfbdec-78b8-43ee-93f0-a62f29cf2e3a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`len`、`max`、`min` 和列表\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534328,
+              "key": "566e2d8a-79b7-461e-8048-d1942a9df825",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "此页面底部有一个 python 环境，你可以利用该环境运行与此页面上的任何练习相关的测试代码！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534330,
+              "key": "a290e384-5700-4f69-a4ea-4176ce3e2f01",
+              "title": "len、max 和 min",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a290e384-5700-4f69-a4ea-4176ce3e2f01",
+                "completed_at": "2018-05-13T04:09:01.068Z",
+                "last_viewed_at": "2018-09-23T06:35:46.629Z",
+                "unstructured": "{\"selected_id\":\"a1512771446108\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）\n\n```python\na = [1, 5, 8]\nb = [2, 6, 9, 10]\nc = [100, 200]\n\nprint(max([len(a), len(b), len(c)]))\nprint(min([len(a), len(b), len(c)]))\n```",
+                "answers": [
+                  {
+                    "id": "a1512771406715",
+                    "text": "200, 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512771446108",
+                    "text": "4, 2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512771446870",
+                    "text": "300, 14",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512771447383",
+                    "text": "2, 3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534329,
+              "key": "d3befada-35cb-4517-885c-fa7e0ec04251",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`sorted`、`join` 和列表\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534331,
+              "key": "0904a1d7-6e54-487c-a151-da22ad17bbd8",
+              "title": "sorted 和 join",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0904a1d7-6e54-487c-a151-da22ad17bbd8",
+                "completed_at": "2018-05-13T04:10:08.527Z",
+                "last_viewed_at": "2018-11-19T00:59:56.838Z",
+                "unstructured": "{\"selected_id\":\"a1512772329475\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）\n\n```python\nnames = [\"Carol\", \"Albert\", \"Ben\", \"Donna\"]\nprint(\" & \".join(sorted(names)))\n```",
+                "answers": [
+                  {
+                    "id": "a1512772225346",
+                    "text": "Albert, Ben, Carol, Donna",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512772328231",
+                    "text": "Carol & Albert & Ben & Donna",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512772328827",
+                    "text": " & Albert & Ben & Carol & Donna & ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512772329475",
+                    "text": "Albert & Ben & Carol & Donna",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534332,
+              "key": "c96894d5-acc6-4d47-816a-d170f0dd095a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`append` 和列表\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534337,
+              "key": "dd01f54b-41e3-4706-a306-d51330a9c5e5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dd01f54b-41e3-4706-a306-d51330a9c5e5",
+                "completed_at": "2018-05-13T04:10:05.223Z",
+                "last_viewed_at": "2018-09-23T06:38:53.368Z",
+                "unstructured": "{\"selected_id\":\"a1512774029663\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）\n\n```python\nnames = [\"Carol\", \"Albert\", \"Ben\", \"Donna\"]\nnames.append(\"Eugenia\")\nprint(sorted(names))\n```",
+                "answers": [
+                  {
+                    "id": "a1512773974679",
+                    "text": "Albert & Ben & Carol & Donna & Eugenia",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512774029176",
+                    "text": "[\"Carol\", \"Albert\", \"Ben\", \"Donna\"]",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512774029663",
+                    "text": "['Albert', 'Ben', 'Carol', 'Donna', 'Eugenia']",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512774030095",
+                    "text": "[\"Eugenia\", \"Carol\", \"Albert\", \"Ben\", \"Donna\"]",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534338,
+              "key": "b32c89cc-4ecd-4cf6-b921-a325fc610994",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 列表方法",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534339,
+              "key": "10671926-6940-424d-9209-b34d9b7d7ded",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "10671926-6940-424d-9209-b34d9b7d7ded",
+                "completed_at": "2018-09-05T02:50:41.404Z",
+                "last_viewed_at": "2019-02-22T11:24:31.755Z",
+                "unstructured": "{\"list_methods.py\":\"# Use this playground to experiment with list methods, using Test Run\\nname = [\\\"A\\\",\\\"B\\\",\\\"C\\\"]\\nprint(\\\"-\\\".join(name))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5264629320777728",
+                "initial_code_files": [
+                  {
+                    "text": "# Use this playground to experiment with list methods, using Test Run\n",
+                    "name": "list_methods.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534408,
+          "key": "e043295e-2639-4d17-a8c0-c3824811ad13",
+          "title": "元组",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e043295e-2639-4d17-a8c0-c3824811ad13",
+            "completed_at": "2018-05-28T01:51:10.874Z",
+            "last_viewed_at": "2019-02-22T11:28:32.358Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 831016,
+              "key": "acab4261-b6c7-4468-a394-394bdcd3afe5",
+              "title": "L2 04 Tuplas V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "33xN-AbTMoc",
+                "china_cdn_id": "33xN-AbTMoc.mp4"
+              }
+            },
+            {
+              "id": 534341,
+              "key": "5bf0ca9e-0e26-40d3-ab23-9dd2f728c248",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 元组\n\n元组是另一个实用容器。它是一种不可变有序元素数据类型。通常用来存储相关的信息。请看看下面这个关于纬度和经度的示例：\n```python\nlocation = (13.4125, 103.866667)\nprint(\"Latitude:\", location[0])\nprint(\"Longitude:\", location[1])\n```\n元组和列表相似，它们都存储一个有序的对象集合，并且可以通过索引访问这些对象。但是与列表不同的是，元组不可变，你无法向元组中添加项目或从中删除项目，或者直接对元组排序。\n\n元组还可以用来以紧凑的方式为多个变量赋值。\n```python\ndimensions = 52, 40, 100\nlength, width, height = dimensions\nprint(\"The dimensions are {} x {} x {}\".format(length, width, height))\n```\n在定义元组时，小括号是可选的，如果小括号并没有对解释代码有影响，程序员经常会忽略小括号。\n\n在第二行，我们根据元组 dimensions 的内容为三个变量赋了值。这叫做__元组解包__。你可以通过元组解包将元组中的信息赋值给多个变量，而不用逐个访问这些信息，并创建多个赋值语句。\n\n如果我们不需要直接使用 `dimensions`，可以将这两行代码简写为一行，一次性为三个变量赋值！\n```python\nlength, width, height = 52, 40, 100\nprint(\"The dimensions are {} x {} x {}\".format(length, width, height))\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534409,
+          "key": "7e05f190-288e-476d-b114-5dab6eeabca0",
+          "title": "练习：元组",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7e05f190-288e-476d-b114-5dab6eeabca0",
+            "completed_at": "2018-05-28T01:56:45.261Z",
+            "last_viewed_at": "2019-03-21T01:06:49.845Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534347,
+              "key": "a866f228-7644-4c08-9c79-33ee671c42f0",
+              "title": "元组",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a866f228-7644-4c08-9c79-33ee671c42f0",
+                "completed_at": "2018-05-28T01:57:15.923Z",
+                "last_viewed_at": "2019-02-22T11:28:58.481Z",
+                "unstructured": "{\"answer_ids\":[\"a1512775162355\",\"a1512775222470\",\"a1512775223223\",\"a1512775223803\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请将以下数量与数据结构相匹配。"
+                },
+                "concepts_label": "数据结构",
+                "answers_label": "数量",
+                "concepts": [
+                  {
+                    "text": "元组（顺序）",
+                    "correct_answer": {
+                      "id": "a1512775162355",
+                      "text": "有序"
+                    }
+                  },
+                  {
+                    "text": "元组（可变性）",
+                    "correct_answer": {
+                      "id": "a1512775222470",
+                      "text": "不可变"
+                    }
+                  },
+                  {
+                    "text": "列表（顺序）",
+                    "correct_answer": {
+                      "id": "a1512775223223",
+                      "text": "有序"
+                    }
+                  },
+                  {
+                    "text": "列表（可变性）",
+                    "correct_answer": {
+                      "id": "a1512775223803",
+                      "text": "可变"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1512775222470",
+                    "text": "不可变"
+                  },
+                  {
+                    "id": "a1512775223223",
+                    "text": "有序"
+                  },
+                  {
+                    "id": "a1512775162355",
+                    "text": "有序"
+                  },
+                  {
+                    "id": "a1512775223803",
+                    "text": "可变"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534348,
+              "key": "844820f2-8706-4396-a686-1eddec8d20b8",
+              "title": "元组",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "844820f2-8706-4396-a686-1eddec8d20b8",
+                "completed_at": "2018-05-28T01:57:46.663Z",
+                "last_viewed_at": "2019-02-15T01:30:47.835Z",
+                "unstructured": "{\"selected_id\":\"a1512774788701\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）\n\n```python\ntuple_a = 1, 2\ntuple_b = (1, 2)\n\nprint(tuple_a == tuple_b)\nprint(tuple_a[1])\n```",
+                "answers": [
+                  {
+                    "id": "a1512774728026",
+                    "text": "True, 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512774788040",
+                    "text": "False, 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512774788701",
+                    "text": "True, 2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512774789338",
+                    "text": "False, 2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512775648766",
+                    "text": "Error",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534349,
+              "key": "5b740f21-7c82-4114-861e-855f9ca12207",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 元组 ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534350,
+              "key": "2cae0dd7-8614-404f-adf8-433a474beb08",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2cae0dd7-8614-404f-adf8-433a474beb08",
+                "completed_at": "2018-07-27T23:33:43.103Z",
+                "last_viewed_at": "2019-02-22T11:29:03.719Z",
+                "unstructured": "{\"tuples.py\":\"## You may test any code out here. Use Test Run to see your output\\ntuple_a = 1,2\\ntuple_b = (1,2)\\nprint(tuple_a == tuple_b)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4880871308525568",
+                "initial_code_files": [
+                  {
+                    "text": "## You may test any code out here. Use Test Run to see your output",
+                    "name": "tuples.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534410,
+          "key": "38fa80cd-03b6-4003-9f57-b4f055649f6a",
+          "title": "集合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "38fa80cd-03b6-4003-9f57-b4f055649f6a",
+            "completed_at": "2018-05-28T01:57:55.192Z",
+            "last_viewed_at": "2019-03-28T01:23:04.097Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 831017,
+              "key": "54a46a1c-5988-4612-b44b-acaeca3e6769",
+              "title": "L2 03 Sets V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eIHNFgTFfnA",
+                "china_cdn_id": "eIHNFgTFfnA.mp4"
+              }
+            },
+            {
+              "id": 534355,
+              "key": "edebc9cc-6015-4c60-8954-dad6a690347e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 集合\n\n__集合__是一个包含唯一元素的可变无序集合数据类型。集合的一个用途是快速删除列表中的重复项。\n```python\nnumbers = [1, 2, 6, 3, 1, 1, 6]\nunique_nums = set(numbers)\nprint(unique_nums)\n```\n输出为：\n```txt\n{1, 2, 3, 6}\n```\n集合和列表一样支持 `in` 运算符。和列表相似，你可以使用 `add` 方法将元素添加到集合中，并使用 `pop` 方法删除元素。但是，当你从集合中拿出元素时，会随机删除一个元素。注意和列表不同，集合是无序的，因此没有“最后一个元素”。\n\n```python\nfruit = {\"apple\", \"banana\", \"orange\", \"grapefruit\"}  # define a set\n\nprint(\"watermelon\" in fruit)  # check for element\n\nfruit.add(\"watermelon\")  # add an element\nprint(fruit)\n\nprint(fruit.pop())  # remove a random element\nprint(fruit)\n```\n输出结果为：\n```txt\nFalse\n{'grapefruit', 'orange', 'watermelon', 'banana', 'apple'}\ngrapefruit\n{'orange', 'watermelon', 'banana', 'apple'}\n```\n你可以对集合执行的其他操作包括可以对数学集合执行的操作。可以对集合轻松地执行 union、intersection 和 difference 等方法，并且与其他容器相比，速度快了很多。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534411,
+          "key": "364dcf34-3ad9-4be2-a376-933dd5250805",
+          "title": "练习：集合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "364dcf34-3ad9-4be2-a376-933dd5250805",
+            "completed_at": "2018-05-28T02:06:11.908Z",
+            "last_viewed_at": "2019-02-22T11:33:41.280Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534356,
+              "key": "4a713ce8-7155-40f2-8010-deeee69deed5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：将`列表`转换为`集合`\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534357,
+              "key": "6eb869da-e8c0-4a14-b6f0-b53d0c3742ba",
+              "title": "集合 I",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6eb869da-e8c0-4a14-b6f0-b53d0c3742ba",
+                "completed_at": "2018-05-28T02:06:36.421Z",
+                "last_viewed_at": "2018-11-19T01:27:37.995Z",
+                "unstructured": "{\"selected_id\":\"a1512776458072\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "下面的代码输出是什么？\n\n```python\na = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nb = set(a)\nprint(len(a) - len(b))\n```",
+                "answers": [
+                  {
+                    "id": "a1512776345045",
+                    "text": "10",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512776458072",
+                    "text": "6",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512776458627",
+                    "text": "4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512776459144",
+                    "text": "Error",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534358,
+              "key": "678a1adc-6fcc-482a-a7f0-b98f3d3160f7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`add` 和 `pop`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534360,
+              "key": "2d35c8cf-6e83-4f11-87d6-f55938b1e9e0",
+              "title": "Sets II",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2d35c8cf-6e83-4f11-87d6-f55938b1e9e0",
+                "completed_at": "2018-05-28T02:07:29.013Z",
+                "last_viewed_at": "2018-11-10T07:56:30.651Z",
+                "unstructured": "{\"selected_id\":\"a1512776657972\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "请看看以下代码：\n\n```python\na = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\nb = set(a)\nb.add(5)\nb.pop()\n```\n执行这段代码后，数字 5 会在集合 `b` 中吗？",
+                "answers": [
+                  {
+                    "id": "a1512776640767",
+                    "text": "在",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512776657470",
+                    "text": "不在",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512776657972",
+                    "text": "可能在",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512776658466",
+                    "text": "会产生错误",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534362,
+              "key": "8a385194-8ffe-43da-803c-97f97dce4221",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 集合",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534365,
+              "key": "57044c16-97de-444b-a72e-8ea65829e0f2",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "57044c16-97de-444b-a72e-8ea65829e0f2",
+                "completed_at": "2018-08-07T12:19:40.345Z",
+                "last_viewed_at": "2019-02-22T11:36:02.391Z",
+                "unstructured": "{\"set.py\":\"## You may test any code out here. Use Test Run to see your output\\na = [1,2,3,4,5,5]\\nb = set(a)\\nb.pop()\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5064046672478208",
+                "initial_code_files": [
+                  {
+                    "text": "## You may test any code out here. Use Test Run to see your output",
+                    "name": "set.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534412,
+          "key": "3c4e9f14-b09e-4224-ab71-da42753f4340",
+          "title": "字典和恒等运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3c4e9f14-b09e-4224-ab71-da42753f4340",
+            "completed_at": "2018-05-28T02:07:44.718Z",
+            "last_viewed_at": "2019-02-22T11:37:31.101Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 831018,
+              "key": "d5399722-0978-4ddd-9889-263c8b77c79d",
+              "title": "L2 02 Dictionaries And Identiy Operators V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QR8HTxCTWi0",
+                "china_cdn_id": "QR8HTxCTWi0.mp4"
+              }
+            },
+            {
+              "id": 534368,
+              "key": "1b139b38-e8cb-4c3e-9c48-e307777a2054",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 字典和恒等运算符\n\n### 字典\n__字典__是可变数据类型，其中存储的是唯一键到值的映射。下面是存储元素和相应原子序数的字典。\n```python\nelements = {\"hydrogen\": 1, \"helium\": 2, \"carbon\": 6}\n```\n字典的键可以是任何不可变类型，例如整数或元组，而不仅仅是字符串。甚至每个键都不一定要是相同的类型！我们可以使用方括号并在括号里放入键，查询字典中的值或向字典中插入新值。\n```python\nprint(elements[\"helium\"])  # print the value mapped to \"helium\"\nelements[\"lithium\"] = 3  # insert \"lithium\" with a value of 3 into the dictionary\n```\n我们可以像检查某个值是否在列表或集合中一样，使用关键字 `in` 检查值是否在字典中。字典有一个也很有用的相关方法，叫做 `get`。get 会在字典中查询值，但是和方括号不同，如果没有找到键，get 会返回 None（或者你所选的默认值）。\n```python\nprint(\"carbon\" in elements)\nprint(elements.get(\"dilithium\"))\n```\n输出结果为：\n```txt\nTrue\nNone\n```\nCarbon 位于该字典中，因此输出 True。Dilithium 不在字典中，因此 `get` 返回 None，然后系统输出 None。如果你预计查询有时候会失败，`get` 可能比普通的方括号查询更合适，因为错误可能会使程序崩溃。\n\n### 恒等运算符\n|关键字|运算符|\n|--|--|\n|`is`|检查两边是否恒等|\n|`is not`|检查两边是否不恒等|\n\n你可以使用运算符 `is` 检查某个键是否返回了 None。或者使用 `is not` 检查是否没有返回 None。\n```python\nn = elements.get(\"dilithium\")\nprint(n is None)\nprint(n is not None)\n```\n会输出：\n```txt\nTrue\nFalse\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534413,
+          "key": "59aed96b-4ee7-4623-b520-3cd5e6ae82e7",
+          "title": "练习：字典和恒等运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "59aed96b-4ee7-4623-b520-3cd5e6ae82e7",
+            "completed_at": "2018-05-28T02:17:20.871Z",
+            "last_viewed_at": "2019-02-22T13:06:31.578Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534369,
+              "key": "9a3cecb9-e5d2-4b45-b4b5-dfeeee29f3e4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：定义字典\n\n请定义一个叫做 `population` 的字典，其中包含以下数据：\n\n|  **键** | **值**  |\n|---|---|\n|  Shanghai | 17.8  |\n|  Istanbul | 13.3  |\n|  Karachi |  13.0 |\n|  Mumbai | 12.5  |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534370,
+              "key": "19c8f2bc-efa4-4c3c-86c1-c07ef46e8c32",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "19c8f2bc-efa4-4c3c-86c1-c07ef46e8c32",
+                "completed_at": "2018-05-28T02:19:30.818Z",
+                "last_viewed_at": "2019-02-22T13:07:16.850Z",
+                "unstructured": "{\"popdict.py\":\"# Define a Dictionary, population,\\n# that provides information\\n# on the world's largest cities.\\n# The key is the name of a city\\n# (a string), and the associated\\n# value is its population in\\n# millions of people.\\n\\n#   Key     |   Value\\n# Shanghai  |   17.8\\n# Istanbul  |   13.3\\n# Karachi   |   13.0\\n# Mumbai    |   12.5\\npopulation = {\\\"Shanghai\\\":17.8, \\\"Istanbul\\\":13.3, \\\"Karachi\\\":13.0, \\\"Mumbai\\\":12.5}\\nprint(population)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4639544478138368",
+                "initial_code_files": [
+                  {
+                    "text": "# Define a Dictionary, population,\n# that provides information\n# on the world's largest cities.\n# The key is the name of a city\n# (a string), and the associated\n# value is its population in\n# millions of people.\n\n#   Key     |   Value\n# Shanghai  |   17.8\n# Istanbul  |   13.3\n# Karachi   |   13.0\n# Mumbai    |   12.5",
+                    "name": "popdict.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534372,
+              "key": "5a561aad-ea6a-487e-b121-3cb2c4aac33f",
+              "title": "不可变键",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5a561aad-ea6a-487e-b121-3cb2c4aac33f",
+                "completed_at": "2018-05-28T02:24:45.570Z",
+                "last_viewed_at": "2019-02-22T13:07:50.401Z",
+                "unstructured": "{\"selected_ids\":[\"a1512763384298\",\"a1512763421545\",\"a1512763422063\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下哪些项可以用作字典的键？（请选中所有适用项。） \nHint: 字典的键必须是不可变的，即所属的类型必须不可变。",
+                "answers": [
+                  {
+                    "id": "a1512763384298",
+                    "text": "`str`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512763421020",
+                    "text": "`list`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512763421545",
+                    "text": "`int`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512763422063",
+                    "text": "`float`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534373,
+              "key": "b5423fdb-5805-42d2-92c9-dc716352432d",
+              "title": "练习：查看哪些值不在字典里",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b5423fdb-5805-42d2-92c9-dc716352432d",
+                "completed_at": "2018-05-28T02:25:44.806Z",
+                "last_viewed_at": "2018-08-19T07:54:38.976Z",
+                "unstructured": "{\"selected_id\":\"a1512763543691\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "如果我们查找不在字典中的值，会发生什么？请在你自己的计算机上创建一个测试字典，并使用方括号查找尚未定义的值。会发生什么？",
+                "answers": [
+                  {
+                    "id": "a1512763525117",
+                    "text": "查询返回 `None`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512763543169",
+                    "text": "键被添加到字典中，默认值为 None",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512763543691",
+                    "text": "发生 `KeyError`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512763544153",
+                    "text": "Python 在互联网上搜索合适的值",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534374,
+              "key": "a0464643-a85a-4dd8-a029-9cb603353c8e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 返回默认值的 `get`\n\n字典有一个也很有用的相关方法，叫做 `get`。get 会在字典中查询值，但是和方括号不同，如果没有找到键，get 会返回 None（或者你所选的默认值）。如果你预计查询有时候会失败，`get` 可能比普通的方括号查询更合适。\n\n```python\n>>> elements.get('dilithium')\nNone\n>>> elements['dilithium']\nKeyError: 'dilithium'\n>>> elements.get('kryptonite', 'There\\'s no such element!')\n\"There's no such element!\"\n```\n在上个示例中，我们指定了一个默认值（字符串 `'There\\'s no such element!`），当键没找到时，get 会返回该值。\n\n## 检查是否相等与恒等：`==` 与 `is`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534375,
+              "key": "25d866a4-d465-42d1-a58d-5f888371d94f",
+              "title": "检查是否相等与恒等",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "25d866a4-d465-42d1-a58d-5f888371d94f",
+                "completed_at": "2018-05-28T02:27:39.270Z",
+                "last_viewed_at": "2018-11-10T08:33:33.614Z",
+                "unstructured": "{\"selected_id\":\"a1512764504391\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下代码的输出是什么？（请将这道多选题的答案中的逗号当做换行符。）\n\n```python\na = [1, 2, 3]\nb = a\nc = [1, 2, 3]\n\nprint(a == b)\nprint(a is b)\nprint(a == c)\nprint(a is c)\n```\n\n该页面的靠下部分有一个编程练习，你可以用该练习进行实验。",
+                "answers": [
+                  {
+                    "id": "a1512764280834",
+                    "text": "True, True, True, True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512764503835",
+                    "text": "True, False, True, False",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512764504391",
+                    "text": "True, True, True, False",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512764504903",
+                    "text": "True, True, False, False",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534376,
+              "key": "e6bc23fe-2bf6-4870-b1b7-7e3b9c1690f5",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e6bc23fe-2bf6-4870-b1b7-7e3b9c1690f5",
+                "completed_at": "2018-07-08T13:09:11.865Z",
+                "last_viewed_at": "2019-02-22T13:10:10.674Z",
+                "unstructured": "{\"equality_identity.py\":\"# Test the code here if you'd like\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\na = [1, 2, 3]\\nb = a\\nc = [1, 2, 3]\\n\\nprint(a == b)\\nprint(a is b)\\nprint(a == c)\\nprint(a is c)\\n\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4563386923352064",
+                "initial_code_files": [
+                  {
+                    "text": "# Test the code here if you'd like\na = [1, 2, 3]\nb = a\nc = [1, 2, 3]",
+                    "name": "equality_identity.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534414,
+          "key": "4814a6a9-cd30-48b2-be9b-47fe711cf295",
+          "title": "解决方案：字典与恒等运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4814a6a9-cd30-48b2-be9b-47fe711cf295",
+            "completed_at": "2018-05-28T02:29:15.540Z",
+            "last_viewed_at": "2019-02-22T13:12:33.365Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534377,
+              "key": "3fb4724a-2901-43e9-ba2b-ee8b2d9cc6a9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 解决方案：定义字典\n\n我们可以如下所示地定义字典：\n```python\n>>> population = {'Shanghai': 17.8,\n              'Istanbul': 13.3,\n              'Karachi': 13.0,\n              'Mumbai': 12.5}\n```\n我选择将每个键值对单独放一行，使这个字典定义更容易读懂，但是是否使用换行符以及在何处使用只是一种样式选择。下面这段代码也可行：\n\n```python\n>>> population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0, 'Mumbai': 12.5}\n``` ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534415,
+          "key": "082fc35c-f44e-48e8-9d34-be49e591293f",
+          "title": "复合数据结构",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "082fc35c-f44e-48e8-9d34-be49e591293f",
+            "completed_at": "2018-05-28T02:29:43.913Z",
+            "last_viewed_at": "2019-02-22T13:14:19.313Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 831019,
+              "key": "1d4df6be-3b34-4e92-8765-f5c79b78d65e",
+              "title": "L2 01 Compound Data Structures V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jmQ8IKvQgBU",
+                "china_cdn_id": "jmQ8IKvQgBU.mp4"
+              }
+            },
+            {
+              "id": 534379,
+              "key": "c6235cf4-eb52-44bf-a4c8-8380cfaac917",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 复合数据结构\n\n我们可以在其他容器中包含容器，以创建复合数据结构。例如，下面的字典将键映射到也是字典的值！\n```python\nelements = {\"hydrogen\": {\"number\": 1,\n                         \"weight\": 1.00794,\n                         \"symbol\": \"H\"},\n              \"helium\": {\"number\": 2,\n                         \"weight\": 4.002602,\n                         \"symbol\": \"He\"}}\n```\n我们可以如下所示地访问这个嵌套字典中的元素。\n```python\nhelium = elements[\"helium\"]  # get the helium dictionary\nhydrogen_weight = elements[\"hydrogen\"][\"weight\"]  # get hydrogen's weight\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534416,
+          "key": "788a3fa5-e1be-41ba-aab4-afad0a60b23b",
+          "title": "练习：复合数据结构",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "788a3fa5-e1be-41ba-aab4-afad0a60b23b",
+            "completed_at": "2018-05-28T02:32:54.908Z",
+            "last_viewed_at": "2019-02-22T13:14:43.806Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534380,
+              "key": "3968e635-9ebb-4eab-91b4-07d588706966",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：向嵌套字典中添加值\n\n请自己尝试处理嵌套字典。向 `elements` 字典中的每个字典添加另一个条目 'is_noble_gas。插入新条目后，你应该能够执行以下查询：\n\n```python\n>>> print(elements['hydrogen']['is_noble_gas'])\nFalse\n>>> print(elements['helium']['is_noble_gas'])\nTrue\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534381,
+              "key": "97273d22-5719-44a0-adf1-7dcbb9d58bd0",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "97273d22-5719-44a0-adf1-7dcbb9d58bd0",
+                "completed_at": "2018-05-28T03:15:33.889Z",
+                "last_viewed_at": "2019-02-22T13:14:30.470Z",
+                "unstructured": "{\"elements.py\":\"elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},\\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}\\n\\n# todo: Add an 'is_noble_gas' entry to the hydrogen and helium dictionaries\\n# hint: helium is a noble gas, hydrogen isn't\\nelements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H','is_noble_gas':False},\\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He','is_noble_gas':True}}\\nprint(elements['hydrogen']['is_noble_gas'])\\nprint(elements['helium']['is_noble_gas'])\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4571559172374528",
+                "initial_code_files": [
+                  {
+                    "text": "elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}\n\n# todo: Add an 'is_noble_gas' entry to the hydrogen and helium dictionaries\n# hint: helium is a noble gas, hydrogen isn't",
+                    "name": "elements.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534383,
+              "key": "b9fd4890-7688-4b3d-b30a-269aa0d05e51",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 综合练习\n\n对于一组数据，我们可以将其看做（数据元素的）集合(collections)。在这节课，我们学习了 Python 中的各种不同的数据结构，这些结构可以用来存储、访问和操纵数据集合。具体而言，我们学习了列表(list)、集合(set)和字典(dictionary)。\n\n在接下来的几个练习中，你将有机会练习和复习列表(list)、集合(set)和字典(dictionary)的属性。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534382,
+              "key": "4ca9a91b-70b7-45b6-8090-d4a49fcfa8c7",
+              "title": "比较集合，列表",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4ca9a91b-70b7-45b6-8090-d4a49fcfa8c7",
+                "completed_at": "2018-05-28T03:21:33.980Z",
+                "last_viewed_at": "2019-02-22T13:14:59.768Z",
+                "unstructured": "{\"selected_ids\":[\"a1512765694532\",\"a1512765695502\",\"a1512765695030\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪些属性使数据集适合使用 Python 列表来表示。",
+                "answers": [
+                  {
+                    "id": "a1512765683306",
+                    "text": "添加项目的顺序并不重要",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512765694532",
+                    "text": "项目的索引始终以 0 开始",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765695030",
+                    "text": "可排序",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765695502",
+                    "text": "使用 `.append` 添加项目",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765696547",
+                    "text": "使用 `.add` 添加项目",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534384,
+              "key": "a97f63aa-9635-4b14-a38f-e54fcde1ce9f",
+              "title": "比较集合，集合",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a97f63aa-9635-4b14-a38f-e54fcde1ce9f",
+                "completed_at": "2018-05-28T03:23:20.933Z",
+                "last_viewed_at": "2019-02-22T13:16:14.476Z",
+                "unstructured": "{\"selected_ids\":[\"a1512765753638\",\"a1512765764321\",\"a1512765764801\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪些属性使数据集适合使用 Python 集合来表示。",
+                "answers": [
+                  {
+                    "id": "a1512765753638",
+                    "text": "项目的出现顺序可能不一致",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765763859",
+                    "text": "同一条目可以出现多次",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512765764321",
+                    "text": "可变（你可以更改它）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765764801",
+                    "text": "使用 `.add` 添加项目",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765765253",
+                    "text": "可排序",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 534385,
+              "key": "3e5a275f-37cb-4ed7-9caa-d7fccd472780",
+              "title": "比较集合，字典'",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3e5a275f-37cb-4ed7-9caa-d7fccd472780",
+                "completed_at": "2018-05-28T03:25:10.117Z",
+                "last_viewed_at": "2019-02-22T13:17:05.954Z",
+                "unstructured": "{\"selected_ids\":[\"a1512765840495\",\"a1512765827376\",\"a1512765839334\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪些属性使数据集适合使用 Python 字典来表示。",
+                "answers": [
+                  {
+                    "id": "a1512765827376",
+                    "text": "每项都包含两部分",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765838813",
+                    "text": "使用 `.append` 添加项目",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512765839334",
+                    "text": "项目的出现顺序可能不一致",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512765839792",
+                    "text": "可排序",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512765840495",
+                    "text": "可以嵌套",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534417,
+          "key": "f9b20ab0-042e-4e86-9287-03436866ba2c",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9b20ab0-042e-4e86-9287-03436866ba2c",
+            "completed_at": "2018-05-28T03:27:11.420Z",
+            "last_viewed_at": "2019-03-21T01:06:46.013Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534386,
+              "key": "ade8f8b3-0af0-4253-83e6-7ff4fb1be6f7",
+              "title": "L2 28 总结 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LLEZadlXM8A",
+                "china_cdn_id": "LLEZadlXM8A.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

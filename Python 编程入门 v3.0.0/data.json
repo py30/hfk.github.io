@@ -1,0 +1,2074 @@
+{
+  "data": {
+    "nanodegree": {
+      "id": 384915,
+      "key": "nd000-cn-python",
+      "title": "Python 入门",
+      "semantic_type": "Degree",
+      "is_public": true,
+      "cohorts": [
+        {
+          "id": 263,
+          "part_keys": [
+            "2f0e3d0f-85db-4c75-8d13-e4f494234905",
+            "da6d1c36-acf5-4d50-928c-519f80174c44",
+            "412429d8-0137-4d02-ac42-f397bab18507",
+            "4fde0c01-0ce1-45b9-a32e-bc38bb3b11da",
+            "7c15f692-00e1-4ec3-9927-73da7e38037e",
+            "66c72f88-67d7-4991-9c40-e66fa7e98578",
+            "155faca0-1446-4b84-8170-07fb17aafbdb"
+          ],
+          "start_at": "2017-09-27T02:00:00.000Z",
+          "due_at": "2017-12-06T02:00:00.000Z",
+          "end_at": "2018-01-03T02:00:00.000Z"
+        }
+      ],
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "color_scheme": "color_scheme1",
+      "enrollment": {
+        "product_variant": "STANDARD",
+        "variant": "STANDARD",
+        "free_preview_status": "NONE",
+        "free_preview_expires_at": null,
+        "static_access": null
+      },
+      "nd_units": [
+        {
+          "id": 72,
+          "part_keys": [
+            "2f0e3d0f-85db-4c75-8d13-e4f494234905",
+            "da6d1c36-acf5-4d50-928c-519f80174c44",
+            "412429d8-0137-4d02-ac42-f397bab18507",
+            "4fde0c01-0ce1-45b9-a32e-bc38bb3b11da",
+            "7c15f692-00e1-4ec3-9927-73da7e38037e",
+            "66c72f88-67d7-4991-9c40-e66fa7e98578",
+            "155faca0-1446-4b84-8170-07fb17aafbdb"
+          ]
+        }
+      ],
+      "hero_image": {
+        "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59ba5154_pasted-image-at-2017-09-14-05-51-pm/pasted-image-at-2017-09-14-05-51-pm.png"
+      },
+      "forum_path": "",
+      "summary": "Python 是一门新手友好、功能强大、高效灵活的编程语言，也是数据分析、人工智能领域必不可少的工具。零基础开始，8 周掌握这门编程语言。",
+      "is_graduated": true,
+      "is_term_based": true,
+      "is_default": true,
+      "project_deadlines": [
+        {
+          "due_at": "2017-10-25T02:00:00.000Z",
+          "node_key": "1af4ba8f-5030-4493-a20d-3b8bbb775b78"
+        },
+        {
+          "due_at": "2017-11-22T02:00:00.000Z",
+          "node_key": "6519f4c0-83d3-41d7-b20f-fc8f184a8c66"
+        }
+      ],
+      "user_state": {
+        "node_key": "nd000-cn-python",
+        "completed_at": "2017-11-20T16:19:08.801Z",
+        "last_viewed_at": "2018-12-04T23:46:27.616Z",
+        "unstructured": null
+      },
+      "aggregated_state": {
+        "node_key": "nd000-cn-python",
+        "completion_amount": 1,
+        "completed_count": 118,
+        "concept_count": 118,
+        "last_viewed_child_key": "2f0e3d0f-85db-4c75-8d13-e4f494234905",
+        "part_aggregated_states": [
+          {
+            "node_key": "2f0e3d0f-85db-4c75-8d13-e4f494234905",
+            "completed_at": "2018-12-22T16:29:07.347Z",
+            "completion_amount": 1,
+            "completed_count": 106,
+            "concept_count": 106,
+            "last_viewed_child_key": "dcf10790-72eb-455e-9498-093236975586",
+            "module_aggregated_states": [
+              {
+                "node_key": "dcf10790-72eb-455e-9498-093236975586",
+                "completed_at": "2018-12-22T16:29:07.347Z",
+                "completion_amount": 1,
+                "completed_count": 106,
+                "concept_count": 106,
+                "last_viewed_child_key": "ebd93cf2-9329-4415-9bc2-7281e2aa9e13",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "410ddff6-0f40-4d69-a63d-22094c21350a",
+                    "completed_at": "2018-12-22T16:29:07.347Z",
+                    "completed_count": 4,
+                    "concept_count": 4,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "2662994e-0546-48c3-aed5-58f731a1358b"
+                  },
+                  {
+                    "node_key": "ebd93cf2-9329-4415-9bc2-7281e2aa9e13",
+                    "completed_at": "2018-05-28T03:27:11.420Z",
+                    "completed_count": 30,
+                    "concept_count": 30,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "861222b2-49d8-40c5-8e6c-9880f0044504"
+                  },
+                  {
+                    "node_key": "e91dc8c3-aed0-4c0c-9a43-438c36df7b0f",
+                    "completed_at": "2018-11-16T16:40:41.946Z",
+                    "completed_count": 24,
+                    "concept_count": 24,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "be839dbf-f02a-4a51-b708-8e54f4b4f7e6"
+                  },
+                  {
+                    "node_key": "d91fa76c-cfb4-40b5-8aec-40d5b25a1e58",
+                    "completed_at": "2018-06-13T00:59:00.049Z",
+                    "completed_count": 17,
+                    "concept_count": 17,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "97c1d194-e640-4dda-b7c8-770db5a4cb0f"
+                  },
+                  {
+                    "node_key": "09be9405-95aa-4a89-b800-9b60ccde5476",
+                    "completed_at": "2018-11-16T18:54:14.196Z",
+                    "completed_count": 30,
+                    "concept_count": 30,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "0e540dbc-0ab3-4c44-a2d1-548385081110"
+                  },
+                  {
+                    "node_key": "6e252a9c-5388-4304-9701-c5f56d2d72e8",
+                    "completed_at": "2017-12-23T15:49:21.607Z",
+                    "completed_count": 1,
+                    "concept_count": 1,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "db4df23a-7827-4484-8216-727b5248b9d9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_key": "155faca0-1446-4b84-8170-07fb17aafbdb",
+            "completed_at": "2018-02-22T03:42:00.872Z",
+            "completion_amount": 1,
+            "completed_count": 12,
+            "concept_count": 12,
+            "last_viewed_child_key": "bddf2f38-fa5e-4e0f-bc61-017ea4d1db60",
+            "module_aggregated_states": [
+              {
+                "node_key": "bddf2f38-fa5e-4e0f-bc61-017ea4d1db60",
+                "completed_at": "2018-02-22T03:42:00.872Z",
+                "completion_amount": 1,
+                "completed_count": 12,
+                "concept_count": 12,
+                "last_viewed_child_key": "0f3159b3-4a63-4fdb-a1c7-362f5f52ddfe",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "1be3e033-6aae-4e6f-8806-bca80a652222",
+                    "completed_at": "2018-02-22T03:41:40.767Z",
+                    "completed_count": 11,
+                    "concept_count": 11,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "0f113d0a-359c-465f-800c-75ee7c5e1ce1"
+                  },
+                  {
+                    "node_key": "0f3159b3-4a63-4fdb-a1c7-362f5f52ddfe",
+                    "completed_at": "2018-02-22T03:42:00.872Z",
+                    "completed_count": 1,
+                    "concept_count": 1,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "3df798eb-bc77-4f1a-b811-538b51971e24"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_key": "4fde0c01-0ce1-45b9-a32e-bc38bb3b11da",
+            "completed_at": "2018-02-21T16:32:26.845Z",
+            "completion_amount": 1,
+            "completed_count": 53,
+            "concept_count": 53,
+            "last_viewed_child_key": "ad3a5bfb-df0a-40c2-a1c5-fe6d60526b67",
+            "module_aggregated_states": [
+              {
+                "node_key": "ad3a5bfb-df0a-40c2-a1c5-fe6d60526b67",
+                "completed_at": "2018-02-21T16:32:26.845Z",
+                "completion_amount": 1,
+                "completed_count": 53,
+                "concept_count": 53,
+                "last_viewed_child_key": "ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "2fd50672-c1f9-4013-950e-c53493cb2e67",
+                    "completed_at": "2018-02-11T15:49:47.464Z",
+                    "completed_count": 12,
+                    "concept_count": 12,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "eeeb7757-5390-4d1f-8e0e-ea1ed9bd2e98"
+                  },
+                  {
+                    "node_key": "ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd",
+                    "completed_at": "2018-02-11T15:51:56.032Z",
+                    "completed_count": 18,
+                    "concept_count": 18,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "391e1ef5-3057-443a-80ab-4126da977ffe"
+                  },
+                  {
+                    "node_key": "a6927fc9-e963-4403-847d-0a79c8b16a46",
+                    "completed_at": "2018-02-21T16:32:26.845Z",
+                    "completed_count": 13,
+                    "concept_count": 13,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "67bfa90e-d496-49ba-9b62-49f96fdc8996"
+                  },
+                  {
+                    "node_key": "0d7cfb06-4a38-4dde-b6df-aae686ab3bf0",
+                    "completed_at": "2018-02-20T05:37:20.618Z",
+                    "completed_count": 10,
+                    "concept_count": 10,
+                    "completion_amount": 1,
+                    "last_viewed_child_key": "cc9f5ff4-3f94-4b83-96c0-31a7d67cbdd5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "resources": {
+        "files": [],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": "",
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "specializations": [],
+      "parts": [
+        {
+          "id": 384914,
+          "key": "2f0e3d0f-85db-4c75-8d13-e4f494234905",
+          "title": "Python 语法",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "zh-cn",
+          "summary": null,
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": null,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 615021,
+              "key": "dcf10790-72eb-455e-9498-093236975586",
+              "title": "第二版 Python3-1",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 533991,
+                  "key": "410ddff6-0f40-4d69-a63d-22094c21350a",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "欢迎学习 Python 编程课程！我迫不及待地想要带着你学习这门精彩的语言了。",
+                  "title": "为何要学习 Python 编程",
+                  "duration": 20,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a6976c8_2-1-number-and-strings2x/2-1-number-and-strings2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 533987,
+                      "key": "285fb88b-39c5-4c6b-8b43-0081e83ef1e3",
+                      "title": "欢迎学习这门课程！",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 533990,
+                      "key": "2662994e-0546-48c3-aed5-58f731a1358b",
+                      "title": "课程概述",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 533989,
+                      "key": "f705b6bc-5468-4fc8-836c-f88fbe06a6b4",
+                      "title": "Python 编程",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 784249,
+                      "key": "3868add3-22ac-436b-9b38-d1c238f4f8a5",
+                      "title": "学习说明",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 534418,
+                  "key": "ebd93cf2-9329-4415-9bc2-7281e2aa9e13",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "在这节课，你将学习 Python 中用到的所有数据类型和运算符。",
+                  "title": "数据类型和运算符",
+                  "duration": 180,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/October/59f8c51e_2-2-functions-installation-and-conditionals2x/2-2-functions-installation-and-conditionals2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 534388,
+                      "key": "2cc7d900-a68a-4565-b98e-41ba13a3ac88",
+                      "title": "简介",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534389,
+                      "key": "861222b2-49d8-40c5-8e6c-9880f0044504",
+                      "title": "算术运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534392,
+                      "key": "b83e017f-e464-4bf9-8b31-6a1136384ba4",
+                      "title": "练习：算术运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534393,
+                      "key": "cf20e9f1-9b19-4bea-b2e1-d5c591e20877",
+                      "title": "变量和赋值运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534394,
+                      "key": "0edf3cc8-5c35-43a9-bd6e-d410f0ad2978",
+                      "title": "练习：变量和赋值运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534390,
+                      "key": "e968300b-6d70-4898-b1e6-fd39952cb186",
+                      "title": "解决方案：变量和赋值运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534391,
+                      "key": "0056decd-35dc-41d0-9d58-22b3752fb20f",
+                      "title": "整数和浮点数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534395,
+                      "key": "f514f263-56be-41a9-a5be-28dde3b669bd",
+                      "title": "练习：整数和浮点数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534397,
+                      "key": "68a84b8b-a33b-4f94-8b4b-0d4cb1022757",
+                      "title": "布尔型运算符、比较运算符和逻辑运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534396,
+                      "key": "cb14b840-11e9-4ea0-a0b2-ae04c8b73fec",
+                      "title": "练习：布尔型运算符、比较运算符和逻辑运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534398,
+                      "key": "d3aee112-7e2f-4adc-9a59-bb03e5a84531",
+                      "title": "字符串",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534399,
+                      "key": "a9fa5602-6d7c-4e8a-b3e3-58b481798ab0",
+                      "title": "练习：字符串",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534400,
+                      "key": "c0fc67d1-178b-4162-8c79-e4c834d1d5d3",
+                      "title": "类型和类型转换",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534401,
+                      "key": "d4b580e8-95e2-42b4-bbcd-2ba1118634a9",
+                      "title": "练习：类型和类型转换",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534402,
+                      "key": "e2ecaf07-5c9a-4ec9-be9e-e4faae40ac37",
+                      "title": "字符串方法",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534403,
+                      "key": "4000d14c-bd24-4e8c-8cdc-1ae8ee0b9731",
+                      "title": "字符串方法",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534404,
+                      "key": "15635d7c-ee7f-43c7-a91c-b35ad8066a6c",
+                      "title": "列表和成员运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534405,
+                      "key": "2aa94895-d620-4d00-9d91-43771844cdcf",
+                      "title": "练习：列表和成员运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534406,
+                      "key": "b4777f6e-7e26-48da-9fc9-93191829b5ed",
+                      "title": "列表方法",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534407,
+                      "key": "9c1c1885-9a78-4108-bbdc-2bfd283f1fb4",
+                      "title": "练习：列表方法",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534408,
+                      "key": "e043295e-2639-4d17-a8c0-c3824811ad13",
+                      "title": "元组",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534409,
+                      "key": "7e05f190-288e-476d-b114-5dab6eeabca0",
+                      "title": "练习：元组",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534410,
+                      "key": "38fa80cd-03b6-4003-9f57-b4f055649f6a",
+                      "title": "集合",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534411,
+                      "key": "364dcf34-3ad9-4be2-a376-933dd5250805",
+                      "title": "练习：集合",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534412,
+                      "key": "3c4e9f14-b09e-4224-ab71-da42753f4340",
+                      "title": "字典和恒等运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534413,
+                      "key": "59aed96b-4ee7-4623-b520-3cd5e6ae82e7",
+                      "title": "练习：字典和恒等运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534414,
+                      "key": "4814a6a9-cd30-48b2-be9b-47fe711cf295",
+                      "title": "解决方案：字典与恒等运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534415,
+                      "key": "082fc35c-f44e-48e8-9d34-be49e591293f",
+                      "title": "复合数据结构",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534416,
+                      "key": "788a3fa5-e1be-41ba-aab4-afad0a60b23b",
+                      "title": "练习：复合数据结构",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534417,
+                      "key": "f9b20ab0-042e-4e86-9287-03436866ba2c",
+                      "title": "总结",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 534363,
+                  "key": "e91dc8c3-aed0-4c0c-9a43-438c36df7b0f",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "在这节课，你将开始通过控制流为你的程序创建逻辑！",
+                  "title": "控制流",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/November/5a00a97a_2-3-data-structures-and-loops2x/2-3-data-structures-and-loops2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 782294,
+                      "key": "adecab54-2eae-4b5c-aa03-37ced81b766d",
+                      "title": "什么是控制流",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534224,
+                      "key": "01fe69bf-0fa1-4afe-860a-d3932485c91c",
+                      "title": "简介",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534236,
+                      "key": "c2a30770-e445-40c8-bce6-45bb55140544",
+                      "title": "条件语句",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534237,
+                      "key": "5a45f230-6087-4d0e-9e1a-3ddd4fc664e3",
+                      "title": "练习：条件语句",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534248,
+                      "key": "8be1fc4b-a32b-4d4d-a57b-b4c6b2e34cc1",
+                      "title": "解决方案：条件语句",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534264,
+                      "key": "1f50b981-fa99-4737-adc8-fc01bf7a4b01",
+                      "title": "条件布尔表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534243,
+                      "key": "69bfbde2-3f63-41ed-8793-aabf0f6a4bab",
+                      "title": "练习：条件布尔表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534246,
+                      "key": "0dc5b22c-4b87-4ce4-b23f-b35b0d5fa996",
+                      "title": "解决方案：条件布尔表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534251,
+                      "key": "5c057e68-4556-4f47-885b-1c964003df27",
+                      "title": "For 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534282,
+                      "key": "90abdb2f-ca75-4290-a5db-8942822f9d48",
+                      "title": "练习：For 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534286,
+                      "key": "c9176070-5c31-445e-b6f6-56343c51a9e8",
+                      "title": "解决方案：For 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534288,
+                      "key": "dd92659f-e3d1-4997-b865-d61416a30f9c",
+                      "title": "While 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534295,
+                      "key": "6305f6e8-d28d-4120-856b-a6cb612f110e",
+                      "title": "练习：While 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534296,
+                      "key": "ac07f48e-590a-4da0-995b-9b8eb6eceaef",
+                      "title": "解决方案：While 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534298,
+                      "key": "27cafe73-8971-45d2-a950-48ed8e2c8d38",
+                      "title": "Break、Continue",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534305,
+                      "key": "be60eb0d-24ff-4c74-b9bf-1246e1c05a50",
+                      "title": "练习：Break、Continue",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534307,
+                      "key": "a2540c7c-4412-4099-944d-575deb4a88b8",
+                      "title": "解决方案：Break、Continue",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534309,
+                      "key": "a95d285d-fd94-4a29-ad95-68bf3d13b253",
+                      "title": "Zip 和 Enumerate（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534320,
+                      "key": "f04a1bda-b2cd-420c-a25d-6e719a268c32",
+                      "title": "练习：Zip 和 Enumerate（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534327,
+                      "key": "115ad3cf-995f-4e48-b032-86ba683c9113",
+                      "title": "解决方案：Zip 和 Enumerate（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534334,
+                      "key": "41c9267a-c9bd-42c8-9897-78e49b376471",
+                      "title": "列表推导式（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534342,
+                      "key": "be839dbf-f02a-4a51-b708-8e54f4b4f7e6",
+                      "title": "练习：列表推导式（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534343,
+                      "key": "05416928-6a1e-425f-b967-2eeb87a78c64",
+                      "title": "解决方案：列表推导式（选学）",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534346,
+                      "key": "59f33be8-d583-49de-a1bc-4f5d723f253f",
+                      "title": "总结",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 534167,
+                  "key": "d91fa76c-cfb4-40b5-8aec-40d5b25a1e58",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "你将学习如何定义函数。还将学习如何将程序拆分为多个部分，使得代码的结构更加合理。这部分不是必学，但学习后能更好地掌握和理解实战项目。",
+                  "title": "函数",
+                  "duration": 90,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/November/5a00a967_2-4-files-and-modules2x/2-4-files-and-modules2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 534059,
+                      "key": "e758630d-d2f2-4a80-a2ba-eb9f852ac1e5",
+                      "title": "简介",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534074,
+                      "key": "97c1d194-e640-4dda-b7c8-770db5a4cb0f",
+                      "title": "定义函数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534065,
+                      "key": "3487f6f7-ff59-40cf-8746-106c6bdca7a5",
+                      "title": "练习：定义函数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534081,
+                      "key": "06583dc4-befc-42dc-adad-876e43d3c8ba",
+                      "title": "解决方案：定义函数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534092,
+                      "key": "98b7dee3-4ce8-4d6b-8950-55d23a3e3241",
+                      "title": "变量作用域",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534062,
+                      "key": "6f936f02-4ba7-46d7-9fac-5a5c5ea8de73",
+                      "title": "变量作用域",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534089,
+                      "key": "92cc15be-1b0d-4266-9b26-4cec6aa91f93",
+                      "title": "解决方案：变量作用域",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534101,
+                      "key": "a9b3f8b5-16e2-4ca8-a11a-ee3722922eb4",
+                      "title": "文档",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534096,
+                      "key": "f4275609-4f8e-4096-a5cb-4cffd660153c",
+                      "title": "练习：文档",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534108,
+                      "key": "31623316-02d8-48b6-8969-9d337d04807d",
+                      "title": "解决方案：文档",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534107,
+                      "key": "258ce5fc-22bc-423c-b321-e0193bd98ace",
+                      "title": "Lambda 表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534109,
+                      "key": "9330654f-fbd0-4c90-bb30-cc0cb3b0a078",
+                      "title": "练习：Lambda 表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534110,
+                      "key": "7ef6a019-e4a7-4cb3-8938-440751a47960",
+                      "title": "解决方案：Lambda 表达式",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534115,
+                      "key": "50247542-7933-4afe-9130-ff1dff429b03",
+                      "title": "【选修】迭代器和生成器",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534120,
+                      "key": "8f8f635f-3a64-4430-9f5a-1b9cae806e6d",
+                      "title": "【选修】练习：迭代器和生成器",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534119,
+                      "key": "7da0a9fa-5c9b-4e81-a043-0fabd59ba8f0",
+                      "title": "【选修】解决方案：迭代器和生成器",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534127,
+                      "key": "851a31fc-8e66-4737-8262-1e402e493fec",
+                      "title": "总结",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 534387,
+                  "key": "09be9405-95aa-4a89-b800-9b60ccde5476",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "你将学习用来开发程序的不同环境。要分享你的代码并与其他开发者合作，必须了解这些环境。",
+                  "title": "脚本编写",
+                  "duration": 90,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/November/5a00a92f_2-5-optional-case-study-wikipedia-web-crawl2x/2-5-optional-case-study-wikipedia-web-crawl2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 782304,
+                      "key": "bdc6f32e-e0fe-4939-9822-7565877c173e",
+                      "title": "脚本",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534284,
+                      "key": "14e5c73b-a4c2-4bc3-8f1d-af3e2a7a36e4",
+                      "title": "简介",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534292,
+                      "key": "fe3a8be9-705f-4c40-9c62-4ef6a3925bd4",
+                      "title": "安装 Python",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534293,
+                      "key": "6883edc1-1c33-4506-9731-54ce104a1e14",
+                      "title": "方法 1：安装 Anaconda",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534265,
+                      "key": "38830f5d-9e7c-43c9-a6f3-929c8bed38fe",
+                      "title": "方法 2：安装 Python",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534283,
+                      "key": "0e540dbc-0ab3-4c44-a2d1-548385081110",
+                      "title": "运行 Python 脚本",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": {
+                        "files": [
+                          {
+                            "name": "first_script.py",
+                            "uri": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a6b919d_first-script/first-script.py"
+                          }
+                        ],
+                        "google_plus_link": null,
+                        "career_resource_center_link": null,
+                        "coaching_appointments_link": null,
+                        "office_hours_link": null,
+                        "aws_provisioning_link": null
+                      }
+                    },
+                    {
+                      "id": 534294,
+                      "key": "f411e93c-03f8-4d45-b60f-d4c2832b63d6",
+                      "title": "编程环境设置",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534297,
+                      "key": "e59b3000-02a4-45e0-8855-4fea925c0534",
+                      "title": "修改 Python 脚本",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534299,
+                      "key": "622bcf85-e02b-4ed1-a6b1-bc6629c8fcf7",
+                      "title": "在脚本中接受原始输入",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534306,
+                      "key": "ccfbdda9-5ab9-4933-8292-be528b1458e5",
+                      "title": "练习：在脚本中接受原始输入",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534308,
+                      "key": "86ea73de-9e88-41d7-9089-1bfd0ec0c93d",
+                      "title": "解决方案：在脚本中接受原始输入",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534312,
+                      "key": "f0b74936-746b-46e5-a002-815f293d81a3",
+                      "title": "错误和异常",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534310,
+                      "key": "8ddf22a0-4f66-4f4f-9dbb-500ebcb583a6",
+                      "title": "练习：错误和异常",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534317,
+                      "key": "d99ae312-d4cb-4f5a-9e0c-3e84550c8cc8",
+                      "title": "处理错误",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534318,
+                      "key": "1b4ee003-e838-47ad-b69f-147bb52033d1",
+                      "title": "练习：处理错误",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534325,
+                      "key": "ec0ff44b-ca65-45b0-a8e0-69f0703465b6",
+                      "title": "解决方案：处理错误",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534326,
+                      "key": "5911f6e3-7edd-40a5-a1ed-78909116b291",
+                      "title": "访问错误消息",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534333,
+                      "key": "43991399-3df7-48cf-a10c-792921e1b6bf",
+                      "title": "读写文件",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534335,
+                      "key": "8712ff09-9fb7-42fa-bb36-098b2b2ad8af",
+                      "title": "练习：读写文件",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534336,
+                      "key": "72e1001a-3061-4f38-9c5f-883465049852",
+                      "title": "解决方案：读写文件",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534344,
+                      "key": "a3dc7153-8f26-4ac9-b5b5-8631600c3563",
+                      "title": "导入本地脚本",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534345,
+                      "key": "4815cc2c-fe70-490a-8412-6b223eba93ea",
+                      "title": "标准库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534353,
+                      "key": "206c580e-6364-4f85-8cdc-7ef8c8294ba3",
+                      "title": "练习：标准库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534352,
+                      "key": "e29dc3ee-b0fc-47dd-af4a-288cf51985bb",
+                      "title": "解决方案：标准库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534359,
+                      "key": "3e8c6ff5-48d9-4a60-b747-bfc46f36732f",
+                      "title": "导入模块技巧",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534354,
+                      "key": "79434913-a869-4ce5-9b0e-f1589c83b1c7",
+                      "title": "练习：导入模块技巧",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534361,
+                      "key": "45252bd7-50b1-41f0-bed5-cef100501c12",
+                      "title": "第三方库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534364,
+                      "key": "7753beb8-ad05-431a-a4dc-2bce9151914f",
+                      "title": "在解释器中进行实验",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534367,
+                      "key": "396f3428-881e-410f-bde5-4cb0ea22c4a0",
+                      "title": "在线资源",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 534371,
+                      "key": "54b598b3-4c5a-4863-aa0d-592d47f1cd8f",
+                      "title": "总结",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 384415,
+                  "key": "6e252a9c-5388-4304-9701-c5f56d2d72e8",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "在这一项目中，利用一组伪造的短信与电话记录，你将会完成五个任务。你将运用在前三课中学到的 Python 技巧，分析并回答与数据集中的文本与对话相关的问题。",
+                  "title": "分析电话和短信记录",
+                  "duration": 20,
+                  "is_public": true,
+                  "is_project_lesson": true,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b79c00_telephone/telephone.jpg",
+                    "width": 689,
+                    "height": 434
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": {
+                    "key": "1af4ba8f-5030-4493-a20d-3b8bbb775b78",
+                    "version": "1.0.0",
+                    "locale": "zh-cn",
+                    "duration": 40320,
+                    "semantic_type": "Project",
+                    "title": "分析电话和短信记录",
+                    "description": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/investigate%20texts%20and%20calls/ZH) 查看项目内容，提交要求和评审标准。",
+                    "is_public": true,
+                    "summary": null,
+                    "forum_path": "",
+                    "rubric_id": "1176",
+                    "terminal_project_id": null,
+                    "resources": null,
+                    "image": null
+                  },
+                  "concepts": [
+                    {
+                      "id": 407665,
+                      "key": "db4df23a-7827-4484-8216-727b5248b9d9",
+                      "title": "分析电话和短信记录",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 615185,
+          "key": "155faca0-1446-4b84-8170-07fb17aafbdb",
+          "title": "抓取豆瓣电影信息",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": null,
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": null,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 615186,
+              "key": "bddf2f38-fa5e-4e0f-bc61-017ea4d1db60",
+              "title": "第一版 Python3-2 只有爬虫",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 347319,
+                  "key": "1be3e033-6aae-4e6f-8806-bca80a652222",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "我们将在本课编写一个探索维基百科的网络爬虫，将之前所学技能用于实际应用。",
+                  "title": "维基百科网络爬虫案例研究",
+                  "duration": 180,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b795f8_wiki/wiki.jpg",
+                    "width": 500,
+                    "height": 476
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 347303,
+                      "key": "3b9c496c-1a64-4de5-9e7b-583e890e2969",
+                      "title": "实战演练：维基百科爬虫",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347304,
+                      "key": "a99c5929-38de-43e8-8072-556f776677e8",
+                      "title": "搭建基础",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347305,
+                      "key": "0d2575fd-9155-4c45-be5d-32cad6215a2b",
+                      "title": "设计程序",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347306,
+                      "key": "da6affc5-8ee4-4b1e-832c-e849965c05ae",
+                      "title": "执行程序",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347307,
+                      "key": "6de97e3b-0a65-4875-96be-ec45ddee4fd3",
+                      "title": "执行程序II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347308,
+                      "key": "fc9de7a9-9ec8-4378-9c6e-2a3d225802ec",
+                      "title": "执行程序 III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347309,
+                      "key": "cfa1bf86-0dd3-4b33-8340-7c63d078d62a",
+                      "title": "迭代编程 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347310,
+                      "key": "1f5c8c7a-32c6-4d17-9907-a82c09ac38fd",
+                      "title": "迭代编程 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347311,
+                      "key": "1990e1c5-ee22-447b-9577-0469ba97bf14",
+                      "title": "迭代编程 III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347312,
+                      "key": "54271309-d408-4178-bf0a-d93b39ed94da",
+                      "title": "收尾工作",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347313,
+                      "key": "0f113d0a-359c-465f-800c-75ee7c5e1ce1",
+                      "title": "总结",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 384452,
+                  "key": "0f3159b3-4a63-4fdb-a1c7-362f5f52ddfe",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "在这个项目中, 你将会从豆瓣电影的网页中获取各个地区，各个类别的高评分电影，收集他们的名称，评分，电影页面的链接和电影海报的链接。最后在收集的数据进行统计。",
+                  "title": "抓取豆瓣电影信息",
+                  "duration": 20,
+                  "is_public": true,
+                  "is_project_lesson": true,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b79de1_douban/douban.jpg",
+                    "width": 400,
+                    "height": 400
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": {
+                    "key": "6519f4c0-83d3-41d7-b20f-fc8f184a8c66",
+                    "version": "1.0.0",
+                    "locale": "zh-cn",
+                    "duration": 40320,
+                    "semantic_type": "Project",
+                    "title": "抓取豆瓣电影信息",
+                    "description": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/best%20movie) 查看项目内容，提交要求和评审标准。",
+                    "is_public": true,
+                    "summary": null,
+                    "forum_path": "",
+                    "rubric_id": "1182",
+                    "terminal_project_id": null,
+                    "resources": null,
+                    "image": {
+                      "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59b7999d_douban/douban.jpg",
+                      "width": 400,
+                      "height": 400
+                    }
+                  },
+                  "concepts": [
+                    {
+                      "id": 384448,
+                      "key": "3df798eb-bc77-4f1a-b811-538b51971e24",
+                      "title": "抓取豆瓣电影信息",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 615183,
+          "key": "4fde0c01-0ce1-45b9-a32e-bc38bb3b11da",
+          "title": "[旧]Python 语法",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": "",
+          "part_type": "Elective",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": null,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 615188,
+              "key": "ad3a5bfb-df0a-40c2-a1c5-fe6d60526b67",
+              "title": "第一版Python3",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 347314,
+                  "key": "2fd50672-c1f9-4013-950e-c53493cb2e67",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "大家将在本课学习如何使用 Python 的数字和字符串数据类型。我们将使用内置函数和方法处理此类数据，并将结果存储在变量中。",
+                  "title": "数字和字符串",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b7a1f5_number-copy/number-copy.jpg",
+                    "width": 592,
+                    "height": 640
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 347248,
+                      "key": "2e323d45-81da-4ba9-8135-05f6d6c71ec1",
+                      "title": "欢迎！",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347249,
+                      "key": "d54b6078-83f5-49ad-ae48-c5d7214127e6",
+                      "title": "算术",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347250,
+                      "key": "af42c328-a565-4043-a9da-17b7bbb82352",
+                      "title": "整数和浮点数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347251,
+                      "key": "148a5f6d-4f16-489f-9b6e-3452ee4cf3e8",
+                      "title": "错误",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347256,
+                      "key": "a71c2b58-6062-46b5-9a56-be610ec0a175",
+                      "title": "变量 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347252,
+                      "key": "4dbaf9fa-31f5-46b2-b982-cfdc00d39fc4",
+                      "title": "变量 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347253,
+                      "key": "3f30cb17-ec1a-4291-92d4-bf31a86ef10e",
+                      "title": "比较运算符",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347254,
+                      "key": "ad93521f-cb0a-4c66-9191-2b2141b73b0a",
+                      "title": "字符串",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347255,
+                      "key": "1fbeace2-a1cb-48d1-932d-e1199f382c2a",
+                      "title": "内置函数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347257,
+                      "key": "98852da3-b627-4194-8e1d-248bb6624e8d",
+                      "title": "类型和类型转换",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347258,
+                      "key": "617d735a-a730-4877-8c01-f484c9a0ce79",
+                      "title": "字符串方法 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347260,
+                      "key": "eeeb7757-5390-4d1f-8e0e-ea1ed9bd2e98",
+                      "title": "字符串方法 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 347315,
+                  "key": "ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "在本课中，大家将在自己的计算机上安装 Python，学习如何定义函数，如何使用条件语句编写更详细的程序。此外还将学习如何将程序分解为可管理的部分，并将软件工程技能用于具体实践中。",
+                  "title": "函数、安装和条件",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b7a058_function-copy/function-copy.jpg",
+                    "width": 1748,
+                    "height": 2034
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 347259,
+                      "key": "2c21dcba-f074-4139-aec1-b8718aab312f",
+                      "title": "欢迎回来！",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347261,
+                      "key": "bcd75648-55c5-4634-873a-acdb308cb9c1",
+                      "title": "定义函数 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347263,
+                      "key": "6f282eeb-c6fe-4ef3-a80b-c1fde200daeb",
+                      "title": "定义函数 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347262,
+                      "key": "a46a918c-cee7-4f8d-8831-766171b6efec",
+                      "title": "定义函数 III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347264,
+                      "key": "8c26d7e4-8178-40e6-b9e4-23a1b8d45868",
+                      "title": "在电脑中安装 Python",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": {
+                        "files": [
+                          {
+                            "name": "My-First-Script",
+                            "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/June/593998ed_my-first-script/my-first-script.py"
+                          }
+                        ],
+                        "google_plus_link": null,
+                        "career_resource_center_link": null,
+                        "coaching_appointments_link": null,
+                        "office_hours_link": null,
+                        "aws_provisioning_link": null
+                      }
+                    },
+                    {
+                      "id": 347265,
+                      "key": "9a8a9282-12cb-4889-ab9d-be9d64fb739b",
+                      "title": "Python 编程设置",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": {
+                        "files": [
+                          {
+                            "name": "my_first_script.py",
+                            "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/January/586ff235_my-first-script/my-first-script.py"
+                          }
+                        ],
+                        "google_plus_link": null,
+                        "career_resource_center_link": null,
+                        "coaching_appointments_link": null,
+                        "office_hours_link": null,
+                        "aws_provisioning_link": null
+                      }
+                    },
+                    {
+                      "id": 347266,
+                      "key": "58b6ab9c-d283-4c00-bbe5-f8a518787088",
+                      "title": "具有分支的代码 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347267,
+                      "key": "90e16f83-95d3-4a82-8b0c-e8be86e94cac",
+                      "title": "具有分支的代码 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347268,
+                      "key": "d2778762-9538-4a2c-8b36-448bcb68bfd6",
+                      "title": "具有分支的代码 III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347270,
+                      "key": "a81008be-fb28-4ca0-8956-83d14563889b",
+                      "title": "具有分支的代码 IV",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347269,
+                      "key": "2a5fc3c8-7f04-4f78-8fc5-d3460d5c7ff8",
+                      "title": "具有分支的代码 V",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347271,
+                      "key": "06ee921c-2c03-4521-80da-f0b95b29ea78",
+                      "title": "分解程序",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347272,
+                      "key": "f4874914-ad98-41df-8bb5-971e6e41dd53",
+                      "title": "搭建程序框架与构建程序",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347273,
+                      "key": "2ef4fa14-1728-4ada-81f3-7fb37eb39ff0",
+                      "title": "创建程序段 I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347274,
+                      "key": "d5a5e19c-b249-4222-a066-4e642a1accd0",
+                      "title": "创建程序段 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347275,
+                      "key": "a17b38c1-b45e-4877-b193-576c34bc9490",
+                      "title": "创建程序段 III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347276,
+                      "key": "c97ec7d3-5c6b-4bca-845b-513cf23c8fdd",
+                      "title": "创建程序段 IV",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347278,
+                      "key": "391e1ef5-3057-443a-80ab-4126da977ffe",
+                      "title": "组合程序段",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 347316,
+                  "key": "a6927fc9-e963-4403-847d-0a79c8b16a46",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "你将在本课学习如何使用 Python 数据集：列表、集合和字典。学习如何使用 for 循环和 while 循环迭代这些集合，如何构建组合这些数据集的复合数据结构，以及练习重构和解决问题的软件工程技能。",
+                  "title": "数据结构和循环",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b7a1ac_data-structure/data-structure.jpg",
+                    "width": 592,
+                    "height": 640
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 347277,
+                      "key": "67bfa90e-d496-49ba-9b62-49f96fdc8996",
+                      "title": "欢迎回来！",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347279,
+                      "key": "f580c0dc-123a-45be-b569-dbb7e01c9e38",
+                      "title": "列表",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347280,
+                      "key": "b2e76180-b32a-4cd4-952e-acc18c6464a9",
+                      "title": "列表 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347281,
+                      "key": "06888cd6-6f49-4fcf-9f0a-829acdfac850",
+                      "title": "For 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347282,
+                      "key": "bfe80fb0-4dd8-4d31-808e-ae5aec03e59e",
+                      "title": "For 循环 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347283,
+                      "key": "839460eb-f4af-47c1-a330-e2728c23ac8c",
+                      "title": "While 循环",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347284,
+                      "key": "95a307ad-93bf-4fc0-b415-db8398c1328a",
+                      "title": "重构代码",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347285,
+                      "key": "703a21e3-94c9-4038-8556-c9a1dd1f291b",
+                      "title": "集合",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347286,
+                      "key": "541d29e2-f0ae-46b3-995d-5c01183325ed",
+                      "title": "集合 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347287,
+                      "key": "91817ced-1d7f-4d19-a24e-9dbcfa59a264",
+                      "title": "字典",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347288,
+                      "key": "b54d90bc-b5ab-4cbd-b48c-09afd5d4a6e2",
+                      "title": "字典 II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347289,
+                      "key": "7114184b-9319-4c67-8e8c-59b73bc49101",
+                      "title": "复合数据结构",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347290,
+                      "key": "998cc146-378a-4545-8912-d0a94fe4a164",
+                      "title": "问题解决能力",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 347318,
+                  "key": "0d7cfb06-4a38-4dde-b6df-aae686ab3bf0",
+                  "version": "1.0.0",
+                  "locale": "zh-cn",
+                  "semantic_type": "Lesson",
+                  "summary": "我们将在本课通过学习如何指定默认参数，以及如何从一个函数返回多个值，来扩充你的函数知识。你将学习如何读取文件，如何从 Python 标准库导入模块，以及如何安装第三方库。我们还将了解更多有关可靠问题解决方案的内容。",
+                  "title": "文件和模块",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2017/September/59b79c72_folder/folder.jpg",
+                    "width": 1624,
+                    "height": 1449
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 347293,
+                      "key": "0f153284-28ea-4055-af9d-fde1b492083c",
+                      "title": "欢迎回来！",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347294,
+                      "key": "5ebbee74-8eb5-4497-8e93-f6d1f1a8a78a",
+                      "title": "元组",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347296,
+                      "key": "25c1ebb2-9d7b-4c47-8bac-45c1bd4dfdf1",
+                      "title": "默认参数",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347295,
+                      "key": "9c190475-f615-4f8e-a9e0-a51b668a4460",
+                      "title": "变量作用域",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347297,
+                      "key": "d2d034b0-5c87-4572-bac4-b9508755609d",
+                      "title": "从文件读取",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347298,
+                      "key": "f9301f01-75c6-40ab-b909-1e8d7dbc676d",
+                      "title": "演员表解决方案",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347300,
+                      "key": "a59361e3-daa2-4faa-a95a-c7ee89fb136f",
+                      "title": "标准库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347299,
+                      "key": "2fbbda18-7114-4aab-99d2-f0dc8bde245f",
+                      "title": "密码生成器解决方案",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347301,
+                      "key": "572294be-1822-4e65-a091-ee08b80917ff",
+                      "title": "第三方库",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 347302,
+                      "key": "cc9f5ff4-3f94-4b83-96c0-31a7d67cbdd5",
+                      "title": "使用在线资源",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

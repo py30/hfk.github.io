@@ -1,0 +1,61 @@
+{
+  "data": {
+    "lesson": {
+      "id": 384415,
+      "key": "6e252a9c-5388-4304-9701-c5f56d2d72e8",
+      "title": "分析电话和短信记录",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这一项目中，利用一组伪造的短信与电话记录，你将会完成五个任务。你将运用在前三课中学到的 Python 技巧，分析并回答与数据集中的文本与对话相关的问题。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": {
+        "key": "1af4ba8f-5030-4493-a20d-3b8bbb775b78",
+        "version": "1.0.0",
+        "locale": "zh-cn",
+        "duration": 40320,
+        "semantic_type": "Project",
+        "title": "分析电话和短信记录",
+        "description": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/investigate%20texts%20and%20calls/ZH) 查看项目内容，提交要求和评审标准。",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1176",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 407665,
+          "key": "db4df23a-7827-4484-8216-727b5248b9d9",
+          "title": "分析电话和短信记录",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "db4df23a-7827-4484-8216-727b5248b9d9",
+            "completed_at": "2017-12-23T15:49:21.607Z",
+            "last_viewed_at": "2019-03-03T07:14:33.158Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 407666,
+              "key": "ff26fea1-35be-4b8d-81c4-354e36ba3833",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/investigate%20texts%20and%20calls/ZH) 查看项目内容，提交要求和评审标准。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
