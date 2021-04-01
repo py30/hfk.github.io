@@ -1,0 +1,469 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   字符串方法
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据类型和运算符
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术运算符.html">
+       02. 算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：算术运算符.html">
+       03. 练习：算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量和赋值运算符.html">
+       04. 变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 练习：变量和赋值运算符.html">
+       05. 练习：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 解决方案：变量和赋值运算符.html">
+       06. 解决方案：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 整数和浮点数.html">
+       07. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 练习：整数和浮点数.html">
+       08. 练习：整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 布尔型运算符、比较运算符和逻辑运算符.html">
+       09. 布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：布尔型运算符、比较运算符和逻辑运算符.html">
+       10. 练习：布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串.html">
+       11. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：字符串.html">
+       12. 练习：字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 类型和类型转换.html">
+       13. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 练习：类型和类型转换.html">
+       14. 练习：类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 字符串方法.html">
+       15. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 字符串方法.html">
+       16. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 列表和成员运算符.html">
+       17. 列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 练习：列表和成员运算符.html">
+       18. 练习：列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 列表方法.html">
+       19. 列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 练习：列表方法.html">
+       20. 练习：列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 元组.html">
+       21. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 练习：元组.html">
+       22. 练习：元组
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 集合.html">
+       23. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 练习：集合.html">
+       24. 练习：集合
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 字典和恒等运算符.html">
+       25. 字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：字典和恒等运算符.html">
+       26. 练习：字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 解决方案：字典与恒等运算符.html">
+       27. 解决方案：字典与恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 复合数据结构.html">
+       28. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 练习：复合数据结构.html">
+       29. 练习：复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          15. 字符串方法
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          字符串方法
+         </p>
+        </h3>
+        <video controls="">
+         <source src="15. 字符串方法-Bv7CAxVOONs.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="15. 字符串方法-Bv7CAxVOONs.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="15. 字符串方法-Bv7CAxVOONs.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="15. 字符串方法-Bv7CAxVOONs.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="15. 字符串方法-Bv7CAxVOONs.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="字符串方法">
+          字符串方法
+         </h1>
+         <p>
+          在此视频中，我们介绍了
+          <strong>
+           方法
+          </strong>
+          。
+          <strong>
+           方法
+          </strong>
+          就像某些你已经见过的
+          <strong>
+           函数
+          </strong>
+          ：
+         </p>
+         <ol>
+          <li>
+           <code>
+            len
+           </code>
+           ("this")
+          </li>
+          <li>
+           <code>
+            type
+           </code>
+           (12)
+          </li>
+          <li>
+           <code>
+            print
+           </code>
+           ("Hello world")
+          </li>
+         </ol>
+         <p>
+          上述三项都是
+          <strong>
+           函数
+          </strong>
+          。注意，它们使用了小括号并接受一个参数。
+         </p>
+         <p>
+          <code>
+           type
+          </code>
+          和
+          <code>
+           print
+          </code>
+          函数可以接收字符串、浮点型、整型和很多其他数据类型的参数，函数
+          <code>
+           len
+          </code>
+          也可以接受多种不同数据类型的参数，稍后你将在这节课中详细了解。
+         </p>
+         <p>
+          python 中的
+          <strong>
+           方法
+          </strong>
+          和函数相似，但是它针对的是你已经创建的变量。
+          <strong>
+           方法
+          </strong>
+          与特定变量中的数据类型相关。 方法相当于通过
+          <code>
+           .
+          </code>
+          来调用的一种函数。例如，
+          <code>
+           lower()
+          </code>
+          是一个字符串方法，对于一个叫 "sample string" 的字符串，它可以这样使用：
+          <code>
+           sample_string.lower()
+          </code>
+          。
+         </p>
+         <p>
+          下图显示了任何字符串都可以使用的方法。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/screen-shot-2018-02-01-at-12.10.40-am.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          每个方法都接受字符串本身作为该方法的第一个参数。但是，它们还可以接收其他参数。我们来看看几个示例的输出。
+         </p>
+         <pre><code>&gt;&gt;&gt; my_string.islower()
+True
+&gt;&gt;&gt; my_string.count('a')
+2
+&gt;&gt;&gt; my_string.find('a')
+3</code></pre>
+         <p>
+          可以看出，
+          <code>
+           count
+          </code>
+          和
+          <code>
+           find
+          </code>
+          方法都接受另一个参数。但是，
+          <code>
+           islower
+          </code>
+          方法不接受参数。如果我们要在变量中存储浮点数、整数或其他类型的数据，可用的方法可能完全不同！
+         </p>
+         <p>
+          任何专业人士都无法记住所有方法，因此知道如何通过文档查询答案非常重要。掌握扎实的编程基础使你能够利用这些基础知识查询文档，并且构建的程序比死记硬背所有 python 可用函数的人士构建的程序强大得多。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="16. 字符串方法.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('15. 字符串方法')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

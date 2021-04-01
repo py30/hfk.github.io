@@ -1,0 +1,579 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   列表和成员运算符
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据类型和运算符
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术运算符.html">
+       02. 算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：算术运算符.html">
+       03. 练习：算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量和赋值运算符.html">
+       04. 变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 练习：变量和赋值运算符.html">
+       05. 练习：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 解决方案：变量和赋值运算符.html">
+       06. 解决方案：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 整数和浮点数.html">
+       07. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 练习：整数和浮点数.html">
+       08. 练习：整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 布尔型运算符、比较运算符和逻辑运算符.html">
+       09. 布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：布尔型运算符、比较运算符和逻辑运算符.html">
+       10. 练习：布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串.html">
+       11. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：字符串.html">
+       12. 练习：字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 类型和类型转换.html">
+       13. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 练习：类型和类型转换.html">
+       14. 练习：类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 字符串方法.html">
+       15. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 字符串方法.html">
+       16. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 列表和成员运算符.html">
+       17. 列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 练习：列表和成员运算符.html">
+       18. 练习：列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 列表方法.html">
+       19. 列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 练习：列表方法.html">
+       20. 练习：列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 元组.html">
+       21. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 练习：元组.html">
+       22. 练习：元组
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 集合.html">
+       23. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 练习：集合.html">
+       24. 练习：集合
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 字典和恒等运算符.html">
+       25. 字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：字典和恒等运算符.html">
+       26. 练习：字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 解决方案：字典与恒等运算符.html">
+       27. 解决方案：字典与恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 复合数据结构.html">
+       28. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 练习：复合数据结构.html">
+       29. 练习：复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          17. 列表和成员运算符
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h3 id="列表和成员运算符">
+          列表和成员运算符
+         </h3>
+         <p>
+          此页面包含三个视频。请观看这些视频并查看其他帮助提醒！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L2 16a Listgs And Membership Operators V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="17. L2 16a Listgs And Membership Operators V3-Tg58Z58m2Lo.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="17. L2 16a Listgs And Membership Operators V3-Tg58Z58m2Lo.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="17. L2 16a Listgs And Membership Operators V3-Tg58Z58m2Lo.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="17. L2 16a Listgs And Membership Operators V3-Tg58Z58m2Lo.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="列表！">
+          列表！
+         </h1>
+         <p>
+          你在本视频中发现，你可以使用方括号创建列表。列表可以包含我们到目前为止所学的任何数据类型并且可以混合到一起。
+         </p>
+         <pre><code>lst_of_random_things = [1, 3.4, 'a string', True]</code></pre>
+         <p>
+          这是一个包含 4 个元素的类别。在 python 中，所有有序容器（例如列表）的起始索引都是 0。因此，要从上述列表中获取第一个值，我们可以编写以下代码：
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[0]
+1</code></pre>
+         <p>
+          似乎你可以使用以下代码获取最后一个元素，但实际上不可行：
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[len(lst_of_random_things)] 
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+&lt;ipython-input-34-f88b03e5c60e&gt; in &lt;module&gt;()
+----&gt; 1 list[len(list)]
+
+IndexError: list index out of range</code></pre>
+         <p>
+          但是，你可以通过使索引减一获取最后一个元素。因此，你可以执行以下操作：
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[len(lst_of_random_things) - 1] 
+True</code></pre>
+         <p>
+          此外，你可以使用负数从列表的末尾开始编制索引，其中 -1 表示最后一个元素，-2 表示倒数第二个元素，等等。
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[-1] 
+True
+&gt;&gt;&gt; lst_of_random_things[-2] 
+a string</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L2 16b Lists And Membership Operators V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="17. L2 16b Lists And Membership Operators V3-f4OF9XtXUR8.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="17. L2 16b Lists And Membership Operators V3-f4OF9XtXUR8.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="17. L2 16b Lists And Membership Operators V3-f4OF9XtXUR8.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="17. L2 16b Lists And Membership Operators V3-f4OF9XtXUR8.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="列表切片">
+          列表切片
+         </h1>
+         <p>
+          你发现，我们可以使用
+          <strong>
+           切片功能
+          </strong>
+          从列表中提取多个值。在使用切片功能时，务必注意，
+          <code>
+           起始
+          </code>
+          索引
+          <code>
+           包含在内
+          </code>
+          ，
+          <code>
+           终止
+          </code>
+          索引
+          <code>
+           排除在外
+          </code>
+          。（即，在上述视频示例中，6 是起始索引，9是终止索引）
+         </p>
+         <p>
+          因此：
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things = [1, 3.4, 'a string', True]
+&gt;&gt;&gt; lst_of_random_things[1:2]
+[3.4]</code></pre>
+         <p>
+          仅返回列表中的
+          <strong>
+           3.4
+          </strong>
+          。注意，这与单个元素索引依然不同，因为你通过这种索引获得了一个列表。冒号表示从冒号左侧的起始值开始，到右侧的元素（不含）结束。
+         </p>
+         <p>
+          如果你要从列表的开头开始，也可以省略起始值。
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[:2]
+[1, 3.4]</code></pre>
+         <p>
+          或者你要返回到列表结尾的所有值，可以忽略最后一个元素。
+         </p>
+         <pre><code>&gt;&gt;&gt; lst_of_random_things[1:]
+[3.4, 'a string', True]</code></pre>
+         <p>
+          这种索引和字符串索引完全一样，返回的值将是字符串。
+         </p>
+         <h1 id="在列表里还是不在列表里？">
+          <code>
+           在
+          </code>
+          列表里还是
+          <code>
+           不在
+          </code>
+          列表里？
+         </h1>
+         <p>
+          你发现，我们还可以使用
+          <code>
+           in
+          </code>
+          和
+          <code>
+           not in
+          </code>
+          返回一个
+          <strong>
+           布尔值
+          </strong>
+          ，表示某个元素是否存在于列表中，或者某个字符串是否为另一个字符串的子字符串。
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; 'this' in 'this is a string'
+True
+&gt;&gt;&gt; 'in' in 'this is a string'
+True
+&gt;&gt;&gt; 'isa' in 'this is a string'
+False
+&gt;&gt;&gt; 5 not in [1, 2, 3, 4, 6]
+True
+&gt;&gt;&gt; 5 in [1, 2, 3, 4, 6]
+False</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L2 16c Lists And Membership Operators II V4
+         </p>
+        </h3>
+        <video controls="">
+         <source src="17. L2 16c Lists And Membership Operators II V4-dVsJ9yzbSHE.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="17. L2 16c Lists And Membership Operators II V4-dVsJ9yzbSHE.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="17. L2 16c Lists And Membership Operators II V4-dVsJ9yzbSHE.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="17. L2 16c Lists And Membership Operators II V4-dVsJ9yzbSHE.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="可变性和顺序">
+          可变性和顺序
+         </h1>
+         <p>
+          <strong>
+           可变性
+          </strong>
+          是指对象创建完毕后，我们是否可以更改该对象。如果对象（例如列表）可以更改，则是
+          <strong>
+           可变的
+          </strong>
+          。但是，如果无法更改对象以创建全新的对象（例如字符串），则该对象是
+          <strong>
+           不可变的
+          </strong>
+          。
+         </p>
+         <pre><code>&gt;&gt;&gt; my_lst = [1, 2, 3, 4, 5]
+&gt;&gt;&gt; my_lst[0] = 'one'
+&gt;&gt;&gt; print(my_lst)
+['one', 2, 3, 4, 5]</code></pre>
+         <p>
+          正如上述代码所显示的，你可以将上述列表中的 1 替换为 'one。这是因为，列表是
+          <strong>
+           可变的
+          </strong>
+          。
+         </p>
+         <p>
+          但是，以下代码不可行：
+         </p>
+         <pre><code>&gt;&gt;&gt; greeting = "Hello there"
+&gt;&gt;&gt; greeting[0] = 'M'</code></pre>
+         <p>
+          这是因为，字符串是
+          <strong>
+           不可变的
+          </strong>
+          。意味着如果要更改该字符串，你需要创建一个全新的字符串。
+         </p>
+         <p>
+          对于你要使用的每种数据类型，你都需要注意两个事项：
+         </p>
+         <ol>
+          <li>
+           <strong>
+            可变
+           </strong>
+           吗？
+          </li>
+          <li>
+           <strong>
+            有序
+           </strong>
+           吗？
+          </li>
+         </ol>
+         <p>
+          字符串和列表都是有序的。但是，你将在后续部分看到某些数据类型是无序的。对于接下来要遇到的每种数据类型，有必要理解如何设定索引，可变吗，有序吗。了解数据结构的这些信息很有用！
+         </p>
+         <p>
+          此外，你将发现每种数据类型有不同的方法，因此为何使用一种数据类型（而不是另一种）在很大程度上取决于这些特性，以及如何轻松地利用这些特性！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="18. 练习：列表和成员运算符.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. 列表和成员运算符')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

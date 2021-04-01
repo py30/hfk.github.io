@@ -1,0 +1,550 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   变量和赋值运算符
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据类型和运算符
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术运算符.html">
+       02. 算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：算术运算符.html">
+       03. 练习：算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量和赋值运算符.html">
+       04. 变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 练习：变量和赋值运算符.html">
+       05. 练习：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 解决方案：变量和赋值运算符.html">
+       06. 解决方案：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 整数和浮点数.html">
+       07. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 练习：整数和浮点数.html">
+       08. 练习：整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 布尔型运算符、比较运算符和逻辑运算符.html">
+       09. 布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：布尔型运算符、比较运算符和逻辑运算符.html">
+       10. 练习：布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串.html">
+       11. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：字符串.html">
+       12. 练习：字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 类型和类型转换.html">
+       13. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 练习：类型和类型转换.html">
+       14. 练习：类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 字符串方法.html">
+       15. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 字符串方法.html">
+       16. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 列表和成员运算符.html">
+       17. 列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 练习：列表和成员运算符.html">
+       18. 练习：列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 列表方法.html">
+       19. 列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 练习：列表方法.html">
+       20. 练习：列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 元组.html">
+       21. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 练习：元组.html">
+       22. 练习：元组
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 集合.html">
+       23. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 练习：集合.html">
+       24. 练习：集合
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 字典和恒等运算符.html">
+       25. 字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：字典和恒等运算符.html">
+       26. 练习：字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 解决方案：字典与恒等运算符.html">
+       27. 解决方案：字典与恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 复合数据结构.html">
+       28. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 练习：复合数据结构.html">
+       29. 练习：复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          04. 变量和赋值运算符
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h3 id="变量和赋值运算符">
+          变量和赋值运算符
+         </h3>
+         <p>
+          从现在开始，你将开始学习 python 中的变量。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          变量
+         </p>
+        </h3>
+        <video controls="">
+         <source src="04. 变量-7pxpUot4x0w.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="04. 变量-7pxpUot4x0w.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="04. 变量-7pxpUot4x0w.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="04. 变量-7pxpUot4x0w.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="04. 变量-7pxpUot4x0w.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="变量-i">
+          变量 I
+         </h1>
+         <p>
+          python 中经常会用到变量！下面是你在视频中看到的示例：
+         </p>
+         <p>
+          <code>
+           mv_population = 74728
+          </code>
+         </p>
+         <p>
+          <code>
+           mv_population
+          </code>
+          是变量，负责存储
+          <code>
+           74728
+          </code>
+          的值。该表达式将右侧的项目赋值给左侧的名称，实际上和数学等式有所不同，因为
+          <code>
+           74728
+          </code>
+          不存储
+          <code>
+           mv_population
+          </code>
+          的值。
+         </p>
+         <p>
+          在任何情况下，无论左侧项是什么，在赋值后，都是右侧值的变量名称。一旦将变量值赋值给变量名称，你便可以通过该名称访问这个值。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L2 04b 变量 II V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="04. L2 04b 变量 II V3-4IJqbP8vi6A.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="04. L2 04b 变量 II V3-4IJqbP8vi6A.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="04. L2 04b 变量 II V3-4IJqbP8vi6A.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="04. L2 04b 变量 II V3-4IJqbP8vi6A.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="04. L2 04b 变量 II V3-4IJqbP8vi6A.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="变量-ii">
+          变量 II
+         </h1>
+         <p>
+          在此视频中，你发现以下两个表达式在赋值方面是对等的：
+         </p>
+         <pre><code>x = 3
+y = 4
+z = 5</code></pre>
+         <p>
+          以及
+         </p>
+         <pre><code>x, y, z = 3, 4, 5</code></pre>
+         <p>
+          但是，在大多数情况下，上面的表达式并不是很好的赋值方式，因为变量名称应该要能够描述所存储的值。
+         </p>
+         <p>
+          除了要设定具有描述性的变量名称之外，在 Python 中命名变量时，还需要注意以下几个事项：
+         </p>
+         <p>
+          <code>
+           1
+          </code>
+          . 只能在变量名称中使用常规字母、数字和下划线。不能包含空格，并且需要以字母或下划线开头。
+         </p>
+         <p>
+          <code>
+           2
+          </code>
+          .
+          <strong>
+           不能使用保留字或内置标识符
+          </strong>
+          ，它们在 Python 中具有重要含义，你将在整个这门课程中学到这些知识。python 保留字列表请参阅
+          <a href="https://pentangle.net/python/handbook/node52.html" target="_blank">
+           此处
+          </a>
+          。创建对值清晰描述的名称可以帮助你避免使用这些保留字。下面是这些保留字的简要表格。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/screen-shot-2018-01-30-at-4.39.42-pm.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          <code>
+           3
+          </code>
+          . 在 python 中，变量名称的命名方式是全部使用小写字母，并用下划线区分单词。
+         </p>
+         <p>
+          <strong>
+           正确
+          </strong>
+         </p>
+         <pre><code>my_height = 58
+my_lat = 40
+my_long = 105</code></pre>
+         <p>
+          <strong>
+           错误
+          </strong>
+         </p>
+         <pre><code>my height = 58
+MYLONG = 40
+MyLat = 105</code></pre>
+         <p>
+          虽然最后两个在 python 中可以运行，但是它们并不是在 python 中命名变量的推荐方式。我们命名变量的方式称之为 snake case，因为我们用下划线连接单词。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          赋值运算符
+         </p>
+        </h3>
+        <video controls="">
+         <source src="04. 赋值运算符-p_qfzL-x3Cs.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="04. 赋值运算符-p_qfzL-x3Cs.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="04. 赋值运算符-p_qfzL-x3Cs.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="04. 赋值运算符-p_qfzL-x3Cs.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="04. 赋值运算符-p_qfzL-x3Cs.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="赋值运算符">
+          赋值运算符
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          以下是视频中的赋值运算符。你还可以按照类似的方式使用
+          <code>
+           *=
+          </code>
+          ，但是与下方所示的运算符相比不太常见。你可以在
+          <a href="https://pentangle.net/python/handbook/node20.html" target="_blank">
+           此处
+          </a>
+          找到我们已经介绍的大部分知识的实践内容：
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="" class="img img-fluid" src="img/screen-shot-2018-01-30-at-5.14.39-pm.png"/>
+          <figcaption class="figure-caption">
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="05. 练习：变量和赋值运算符.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 变量和赋值运算符')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.834 --> 00:00:02.534
+FLUXO DE CONTROLE:
+LOOPS "WHILE"
+
+00:00:02.634 --> 00:00:06.033
+Loops "for" são um exemplo
+de iteração definida,
+
+00:00:06.067 --> 00:00:08.467
+o que significa que
+o corpo do loop é executado
+
+00:00:08.501 --> 00:00:10.968
+por uma série de vezes
+predefinidas.
+
+00:00:11.000 --> 00:00:14.400
+Um loop "for" sobre uma lista
+executa o corpo uma vez
+
+00:00:14.434 --> 00:00:16.834
+para cada elemento da lista.
+
+00:00:16.868 --> 00:00:19.100
+Um loop "for" usando
+a função "range"
+
+00:00:19.133 --> 00:00:23.234
+vai executar o número de vezes
+especificado pela função "range".
+
+00:00:23.267 --> 00:00:26.100
+Isso é diferente
+das iterações indefinidas,
+
+00:00:26.133 --> 00:00:29.601
+quando um loop se repete
+por um número desconhecido de vezes
+
+00:00:29.634 --> 00:00:32.601
+e termina quando uma condição
+é encontrada.
+
+00:00:32.634 --> 00:00:36.734
+Considere esse loop "while"
+que simula um crupiê de vinte-e-um
+
+00:00:36.767 --> 00:00:38.834
+ao tirar cartas de um baralho
+
+00:00:38.901 --> 00:00:43.467
+para uma lista detalhada, parando
+quando o valor da carta na mão
+
+00:00:43.501 --> 00:00:45.901
+é 17 ou mais.
+
+00:00:45.934 --> 00:00:49.300
+Esse exemplo apresenta
+uma nova função: "sum",
+
+00:00:49.334 --> 00:00:52.100
+e um novo método
+de lista, "pop".
+
+00:00:52.133 --> 00:00:57.000
+"Sum" é bem intuitivo. Ele devolve
+a soma dos elementos em uma lista.
+
+00:00:57.033 --> 00:01:00.000
+"Pop" é o inverso do método
+de anexar.
+
+00:01:00.033 --> 00:01:03.834
+Ele remove o último elemento
+de uma lista e o devolve.
+
+00:01:03.868 --> 00:01:07.868
+Você pode ler mais sobre isso
+nos guias oficiais.
+
+00:01:07.901 --> 00:01:11.367
+Nessa linha, estamos computando
+a soma da lista detalhada
+
+00:01:11.400 --> 00:01:15.801
+e verificando se ela é menor
+ou igual a 17.
+
+00:01:15.834 --> 00:01:19.501
+Nessa linha, executamos "pop"
+no último elemento do baralho
+
+00:01:19.534 --> 00:01:22.701
+e o anexamos
+à lista detalhada.
+
+00:01:22.734 --> 00:01:26.133
+Vamos falar sobre como funciona
+o loop "while".
+
+00:01:26.167 --> 00:01:30.501
+A palavra-chave "while" indica
+que esse é um loop "while".
+
+00:01:30.534 --> 00:01:32.501
+A seguir, vem a condição.
+
+00:01:32.534 --> 00:01:37.234
+Neste exemplo, a soma da mão
+é menor ou igual a 17.
+
+00:01:37.267 --> 00:01:41.868
+Se essa condição é verdadeira,
+o corpo do loop será executado.
+
+00:01:41.901 --> 00:01:44.367
+A cada execução
+do corpo do loop,
+
+00:01:44.400 --> 00:01:47.200
+a condição é avaliada
+outra vez.
+
+00:01:47.234 --> 00:01:51.534
+Esse processo de checar a condição
+e executar o loop se repete
+
+00:01:51.567 --> 00:01:54.567
+até que a expressão
+se torna falsa.
+
+00:01:54.601 --> 00:01:58.400
+O corpo recuado do loop deve
+modificar pelo menos uma variável
+
+00:01:58.434 --> 00:02:00.234
+na expressão do teste.
+
+00:02:00.267 --> 00:02:03.300
+Se o valor da expressão do teste
+nunca muda,
+
+00:02:03.334 --> 00:02:05.834
+o resultado
+é um loop infinito.
+
+00:02:05.868 --> 00:02:10.133
+Nesse exemplo, o corpo do loop
+anexa números à lista detalhada,
+
+00:02:10.167 --> 00:02:13.000
+o que eleva o valor
+da soma da mão.
+
+00:02:13.033 --> 00:02:15.234
+No fim das contas,
+o valor da soma da mão
+
+00:02:15.267 --> 00:02:18.067
+fica grande o bastante para
+a condição se tornar falsa.
+

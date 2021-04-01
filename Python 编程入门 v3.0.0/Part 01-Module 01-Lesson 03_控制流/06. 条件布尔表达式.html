@@ -1,0 +1,596 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   条件布尔表达式
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      控制流
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 什么是控制流.html">
+       01. 什么是控制流
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 简介.html">
+       02. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 条件语句.html">
+       03. 条件语句
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 练习：条件语句.html">
+       04. 练习：条件语句
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 解决方案：条件语句.html">
+       05. 解决方案：条件语句
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 条件布尔表达式.html">
+       06. 条件布尔表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 练习：条件布尔表达式.html">
+       07. 练习：条件布尔表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 解决方案：条件布尔表达式.html">
+       08. 解决方案：条件布尔表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="09. For 循环.html">
+       09. For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：For 循环.html">
+       10. 练习：For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 解决方案：For 循环.html">
+       11. 解决方案：For 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="12. While 循环.html">
+       12. While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 练习：While 循环.html">
+       13. 练习：While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 解决方案：While 循环.html">
+       14. 解决方案：While 循环
+      </a>
+     </li>
+     <li class="">
+      <a href="15. Break、Continue.html">
+       15. Break、Continue
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 练习：Break、Continue.html">
+       16. 练习：Break、Continue
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 解决方案：Break、Continue.html">
+       17. 解决方案：Break、Continue
+      </a>
+     </li>
+     <li class="">
+      <a href="18. Zip 和 Enumerate（选学）.html">
+       18. Zip 和 Enumerate（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 练习：Zip 和 Enumerate（选学）.html">
+       19. 练习：Zip 和 Enumerate（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 解决方案：Zip 和 Enumerate（选学）.html">
+       20. 解决方案：Zip 和 Enumerate（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 列表推导式（选学）.html">
+       21. 列表推导式（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 练习：列表推导式（选学）.html">
+       22. 练习：列表推导式（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 解决方案：列表推导式（选学）.html">
+       23. 解决方案：列表推导式（选学）
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 总结.html">
+       24. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          06. 条件布尔表达式
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L3 04a 复杂的布尔表达式 V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="06. L3 04a 复杂的布尔表达式 V3-gWmIKWgzFqI.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="06. L3 04a 复杂的布尔表达式 V3-gWmIKWgzFqI.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="06. L3 04a 复杂的布尔表达式 V3-gWmIKWgzFqI.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="06. L3 04a 复杂的布尔表达式 V3-gWmIKWgzFqI.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="06. L3 04a 复杂的布尔表达式 V3-gWmIKWgzFqI.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="复杂的布尔表达式">
+          复杂的布尔表达式
+         </h1>
+         <p>
+          <code>
+           If
+          </code>
+          语句有时候会使用更加复杂的条件布尔表达式。可能包括多个比较运算符、逻辑运算符，甚至包括算式。例如：
+         </p>
+         <pre><code class="python language-python">if 18.5 &lt;= weight / height**2 &lt; 25:
+    print("BMI is considered 'normal'")
+
+if is_raining and is_sunny:
+    print("Is there a rainbow?")
+
+if (not unsubscribed) and (location == "USA" or location == "CAN"):
+    print("send email")</code></pre>
+         <p>
+          对于非常复杂的条件，你可能需要结合使用
+          <code>
+           and
+          </code>
+          、
+          <code>
+           or
+          </code>
+          和
+          <code>
+           not
+          </code>
+          。使用括号可以使运算符组合更清晰。
+         </p>
+         <p>
+          无论是简单还是复杂的条件，
+          <code>
+           if
+          </code>
+          语句中的条件都必须是结果为 True 或 False 的布尔表达式，该值决定了
+          <code>
+           if
+          </code>
+          语句中的缩进代码块是否执行。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L3 04b 正反面示例 V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="06. L3 04b 正反面示例 V3-95oLh3WtdhY.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="06. L3 04b 正反面示例 V3-95oLh3WtdhY.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="06. L3 04b 正反面示例 V3-95oLh3WtdhY.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="06. L3 04b 正反面示例 V3-95oLh3WtdhY.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="06. L3 04b 正反面示例 V3-95oLh3WtdhY.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="正反面示例">
+          正反面示例
+         </h1>
+         <p>
+          在为
+          <code>
+           if
+          </code>
+          语句编写布尔表达式时，需要注意以下几个事项。
+         </p>
+         <h3 id="1-请勿使用-true-或-false-作为条件">
+          1. 请勿使用
+          <code>
+           True
+          </code>
+          或
+          <code>
+           False
+          </code>
+          作为条件
+         </h3>
+         <pre><code class="python language-python"># Bad example
+if True:
+    print("This indented code will always get run.")</code></pre>
+         <p>
+          虽然“True”是一个有效的布尔表达式，但不是有用的条件，因为它始终为 True，因此缩进代码将始终运行。同样，
+          <code>
+           if False
+          </code>
+          也不应使用，该
+          <code>
+           if
+          </code>
+          语句之后的语句将从不运行。
+         </p>
+         <pre><code class="python language-python"># Another bad example
+if is_cold or not is_cold:
+    print("This indented code will always get run.")</code></pre>
+         <p>
+          同样，使用你知道将始终结果为 True 的条件（例如上述示例）也是毫无用途的。布尔表达式只能为 True 或 False，因此
+          <code>
+           is_cold
+          </code>
+          或
+          <code>
+           not is_cold
+          </code>
+          将始终为 True，缩进代码将始终运行。
+         </p>
+         <h3 id="2-在使用逻辑运算符编写表达式时，要谨慎">
+          2. 在使用逻辑运算符编写表达式时，要谨慎
+         </h3>
+         <p>
+          逻辑运算符
+          <code>
+           and
+          </code>
+          、
+          <code>
+           or
+          </code>
+          和
+          <code>
+           not
+          </code>
+          具有特定的含义，与字面英文意思不太一样。确保布尔表达式的结果和你预期的一样。
+         </p>
+         <pre><code class="python language-python"># Bad example
+if weather == "snow" or "rain":
+    print("Wear boots!")</code></pre>
+         <p>
+          这段代码在 Python 中是有效的，但不是布尔表达式，虽然读起来像。原因是
+          <code>
+           or
+          </code>
+          运算符右侧的表达式
+          <code>
+           "rain"
+          </code>
+          不是布尔表达式，它是一个字符串。稍后我们将讨论当你使用非布尔型对象替换布尔表达式时，会发生什么。
+         </p>
+         <h3 id="3-请勿使用--true-或--false-比较布尔变量">
+          3. 请勿使用
+          <code>
+           == True
+          </code>
+          或
+          <code>
+           == False
+          </code>
+          比较布尔变量
+         </h3>
+         <p>
+          这种比较没必要，因为布尔变量本身是布尔表达式。
+         </p>
+         <pre><code class="python language-python"># Bad example
+if is_cold == True:
+    print("The weather is cold!")</code></pre>
+         <p>
+          这是一个有效的条件，但是我们可以使用变量本身作为条件，使代码更容易读懂，如下所示。
+         </p>
+         <pre><code class="python language-python"># Good example
+if is_cold:
+    print("The weather is cold!")</code></pre>
+         <p>
+          如果你想检查布尔表达式是否为 False，可以使用
+          <code>
+           not
+          </code>
+          运算符。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L3 04c 真假值测试 V3
+         </p>
+        </h3>
+        <video controls="">
+         <source src="06. L3 04c 真假值测试 V3-e52uw7ejV8k.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="06. L3 04c 真假值测试 V3-e52uw7ejV8k.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="06. L3 04c 真假值测试 V3-e52uw7ejV8k.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="06. L3 04c 真假值测试 V3-e52uw7ejV8k.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="06. L3 04c 真假值测试 V3-e52uw7ejV8k.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="真假值测试">
+          真假值测试
+         </h1>
+         <p>
+          如果我们在
+          <code>
+           if
+          </code>
+          语句中使用非布尔对象代替布尔表达式，Python 将检查其真假值，判断是否运行缩进代码。默认情况下，Python 中对象的真假值被视为 True，除非在文档中被指定为 False。
+         </p>
+         <p>
+          以下是在 Python 中被视为 False 的大多数内置对象：
+         </p>
+         <ul>
+          <li>
+           定义为 false 的常量：
+           <code>
+            None
+           </code>
+           和
+           <code>
+            False
+           </code>
+          </li>
+          <li>
+           任何数字类型的零：
+           <code>
+            0
+           </code>
+           、
+           <code>
+            0.0
+           </code>
+           、
+           <code>
+            0j
+           </code>
+           、
+           <code>
+            Decimal(0)
+           </code>
+           、
+           <code>
+            Fraction(0, 1)
+           </code>
+          </li>
+          <li>
+           空序列和空集合：
+           <code>
+            ””
+           </code>
+           、
+           <code>
+            ()
+           </code>
+           、
+           <code>
+            []
+           </code>
+           、
+           <code>
+            {}
+           </code>
+           、
+           <code>
+            set()
+           </code>
+           、
+           <code>
+            range(0)
+           </code>
+          </li>
+         </ul>
+         <p>
+          示例：
+         </p>
+         <pre><code class="python language-python">errors = 3
+if errors:
+    print("You have {} errors to fix!".format(errors))
+else:
+    print("No errors to fix!")</code></pre>
+         <p>
+          在上述代码中，errors 的真假值为 True，因为它是非零数字，因此输出了错误消息。这是一个编写
+          <code>
+           if
+          </code>
+          语句的简练方式。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="07. 练习：条件布尔表达式.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 条件布尔表达式')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

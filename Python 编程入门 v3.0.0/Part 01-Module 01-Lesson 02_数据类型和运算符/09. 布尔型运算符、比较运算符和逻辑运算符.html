@@ -1,0 +1,543 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   布尔型运算符、比较运算符和逻辑运算符
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      数据类型和运算符
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 算术运算符.html">
+       02. 算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：算术运算符.html">
+       03. 练习：算术运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 变量和赋值运算符.html">
+       04. 变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 练习：变量和赋值运算符.html">
+       05. 练习：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 解决方案：变量和赋值运算符.html">
+       06. 解决方案：变量和赋值运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 整数和浮点数.html">
+       07. 整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 练习：整数和浮点数.html">
+       08. 练习：整数和浮点数
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 布尔型运算符、比较运算符和逻辑运算符.html">
+       09. 布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：布尔型运算符、比较运算符和逻辑运算符.html">
+       10. 练习：布尔型运算符、比较运算符和逻辑运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 字符串.html">
+       11. 字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：字符串.html">
+       12. 练习：字符串
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 类型和类型转换.html">
+       13. 类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 练习：类型和类型转换.html">
+       14. 练习：类型和类型转换
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 字符串方法.html">
+       15. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 字符串方法.html">
+       16. 字符串方法
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 列表和成员运算符.html">
+       17. 列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 练习：列表和成员运算符.html">
+       18. 练习：列表和成员运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 列表方法.html">
+       19. 列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 练习：列表方法.html">
+       20. 练习：列表方法
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 元组.html">
+       21. 元组
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 练习：元组.html">
+       22. 练习：元组
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 集合.html">
+       23. 集合
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 练习：集合.html">
+       24. 练习：集合
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 字典和恒等运算符.html">
+       25. 字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：字典和恒等运算符.html">
+       26. 练习：字典和恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 解决方案：字典与恒等运算符.html">
+       27. 解决方案：字典与恒等运算符
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 复合数据结构.html">
+       28. 复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 练习：复合数据结构.html">
+       29. 练习：复合数据结构
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          09. 布尔型运算符、比较运算符和逻辑运算符
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          布尔型比较运算符和逻辑运算符
+         </p>
+        </h3>
+        <video controls="">
+         <source src="09. 布尔型比较运算符和逻辑运算符-iNNsUJIDtVU.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="09. 布尔型比较运算符和逻辑运算符-iNNsUJIDtVU.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="09. 布尔型比较运算符和逻辑运算符-iNNsUJIDtVU.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="09. 布尔型比较运算符和逻辑运算符-iNNsUJIDtVU.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="09. 布尔型比较运算符和逻辑运算符-iNNsUJIDtVU.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h3 id="布尔型运算符、比较运算符和逻辑运算符">
+          布尔型运算符、比较运算符和逻辑运算符
+         </h3>
+         <p>
+          布尔数据类型存储的是值
+          <code>
+           True
+          </code>
+          或
+          <code>
+           False
+          </code>
+          ，通常分别表示为
+          <code>
+           1
+          </code>
+          或
+          <code>
+           0
+          </code>
+          。
+         </p>
+         <p>
+          通常有 6 个比较运算符会获得
+          <code>
+           布尔
+          </code>
+          值：
+         </p>
+         <h3 id="比较运算符">
+          比较运算符
+         </h3>
+         <table>
+          <thead>
+           <tr>
+            <th id="**符号使用情况**">
+             <strong>
+              符号使用情况
+             </strong>
+            </th>
+            <th id="**布尔型**">
+             <strong>
+              布尔型
+             </strong>
+            </th>
+            <th id="**运算符**">
+             <strong>
+              运算符
+             </strong>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             5  &lt;  3
+            </td>
+            <td>
+             False
+            </td>
+            <td>
+             小于
+            </td>
+           </tr>
+           <tr>
+            <td>
+             5 &gt; 3
+            </td>
+            <td>
+             True
+            </td>
+            <td>
+             大于
+            </td>
+           </tr>
+           <tr>
+            <td>
+             3 &lt;= 3
+            </td>
+            <td>
+             True
+            </td>
+            <td>
+             小于或等于
+            </td>
+           </tr>
+           <tr>
+            <td>
+             3 &gt;= 5
+            </td>
+            <td>
+             False
+            </td>
+            <td>
+             大于或等于
+            </td>
+           </tr>
+           <tr>
+            <td>
+             3 == 5
+            </td>
+            <td>
+             False
+            </td>
+            <td>
+             等于
+            </td>
+           </tr>
+           <tr>
+            <td>
+             3 != 5
+            </td>
+            <td>
+             True
+            </td>
+            <td>
+             不等于
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+          你需要熟悉三个逻辑运算符：
+         </p>
+         <table>
+          <thead>
+           <tr>
+            <th id="**逻辑使用情况**">
+             <strong>
+              逻辑使用情况
+             </strong>
+            </th>
+            <th id="**布尔型**">
+             <strong>
+              布尔型
+             </strong>
+            </th>
+            <th id="**运算符**">
+             <strong>
+              运算符
+             </strong>
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <td>
+             5  &lt;  3
+             <code>
+              and
+             </code>
+             5 == 5
+            </td>
+            <td>
+             False
+            </td>
+            <td>
+             <code>
+              and
+             </code>
+             - 检查提供的所有语句是否都为 True
+            </td>
+           </tr>
+           <tr>
+            <td>
+             5  &lt;  3
+             <code>
+              or
+             </code>
+             5 == 5
+            </td>
+            <td>
+             True
+            </td>
+            <td>
+             <code>
+              or
+             </code>
+             - 检查是否至少有一个语句为 True
+            </td>
+           </tr>
+           <tr>
+            <td>
+             <code>
+              not
+             </code>
+             5  &lt;  3
+            </td>
+            <td>
+             True
+            </td>
+            <td>
+             <code>
+              not
+             </code>
+             - 翻转布尔值
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+          要详细了解 George Bool 如何改变了这个世界，请参阅
+          <a href="https://www.irishtimes.com/news/science/how-george-boole-s-zeroes-and-ones-changed-the-world-1.2014673" target="_blank">
+           这篇文章
+          </a>
+          ！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="10. 练习：布尔型运算符、比较运算符和逻辑运算符.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 布尔型运算符、比较运算符和逻辑运算符')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>
