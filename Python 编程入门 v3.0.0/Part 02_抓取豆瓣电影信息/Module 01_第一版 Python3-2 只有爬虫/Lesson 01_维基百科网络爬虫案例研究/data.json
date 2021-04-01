@@ -1,0 +1,1323 @@
+{
+  "data": {
+    "lesson": {
+      "id": 347319,
+      "key": "1be3e033-6aae-4e6f-8806-bca80a652222",
+      "title": "维基百科网络爬虫案例研究",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "我们将在本课编写一个探索维基百科的网络爬虫，将之前所学技能用于实际应用。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/1be3e033-6aae-4e6f-8806-bca80a652222/347319/1545026727177/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://s3.amazonaws.com/zips.udacity-data.com/1be3e033-6aae-4e6f-8806-bca80a652222/347319/1545026722041/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 347303,
+          "key": "3b9c496c-1a64-4de5-9e7b-583e890e2969",
+          "title": "实战演练：维基百科爬虫",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b9c496c-1a64-4de5-9e7b-583e890e2969",
+            "completed_at": "2018-02-19T04:47:31.303Z",
+            "last_viewed_at": "2019-03-02T10:52:28.904Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347177,
+              "key": "6e407c77-b198-4964-bc27-7ee20dd82e8e",
+              "title": "Ud1110 IntroPy L5 01 A Wikipedia Crawl",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "osrplIl1m-k",
+                "china_cdn_id": "osrplIl1m-k.mp4"
+              }
+            },
+            {
+              "id": 347178,
+              "key": "f0ea8ab8-f1b1-40f7-bafa-a9faaef68f67",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f0ea8ab8-f1b1-40f7-bafa-a9faaef68f67",
+                "completed_at": "2017-10-25T14:12:16.297Z",
+                "last_viewed_at": "2017-10-25T14:12:16.297Z",
+                "unstructured": "{\"answer\":\"会跳到另外一个链接\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "现在试一试。转到自己感兴趣的维基百科页面，或者一个 [随机页面](https://en.wikipedia.org/wiki/Special:Random)，单击第一个链接。然后在该页面单击文章主体的第一个链接，然后继续。可以多次尝试不同的页面，看看能否出现不同内容！然后在方框里写下具体内容。\n"
+              },
+              "answer": {
+                "text": "感谢爬取维基百科。是否将其写入“哲学”文章？",
+                "video": null
+              }
+            },
+            {
+              "id": 347179,
+              "key": "7eddceac-cdb7-4ea8-9919-5c82fc932760",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "实现维基百科 Crawl 自动化\n==============\n\n使用维基百科时，有趣的是单击和阅读所有文章需要很多时间。  我们将致力于使这一过程实现自动化，借助于一个为我们查阅维基百科的程序，跟踪每个页面上的第一个链接，以及看到这些链接的导向位置。为了实现这一点，我们需要了解网络页面的工作原理和我们可以用于与网络和网络内容交互的一些 Python 工具。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347304,
+          "key": "a99c5929-38de-43e8-8072-556f776677e8",
+          "title": "搭建基础",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a99c5929-38de-43e8-8072-556f776677e8",
+            "completed_at": "2018-02-19T04:50:43.959Z",
+            "last_viewed_at": "2019-03-02T11:55:22.509Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347180,
+              "key": "9dba7911-4230-4b25-9059-7bc501796303",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "网页如何运行？\n====================\n\n网络爬虫是一个与网站进行交互的程序。网络爬虫用于创建搜索引擎索引和归档页面，但在我们的例子中用于探索维基百科。编写爬虫前，我们需要先了解网页的工作原理。特别是，需要了解一些 HTML。\n\n如果你是一个热爱学习的网络开发人员，可能已经熟悉了 HTML。但如果不熟悉 HTML，也别担心！编写网络爬虫时，不需要了解太多 HTML。继续阅读要点概述。\n\nHTML 或*超文本标记语言*是网页的源代码。HTML 文档是描述页面内容的文本文档。其包括文本内容、页面上图像和视频的 URL 以及关于内容排列和样式的信息。网页浏览器会收到原始 HTML，并相应提供格式整齐的多媒体网页。\n\n我们来看一个简单页面的源码，了解一下如何构建 HTML，\n\n```html\n<title>My Website</title>\n<div id=\"introduction\">\n  <p>\n    Welcome to my website!\n  </p>\n</div>    \n<div id=\"image-gallery\">\n  <p>\n    This is my cat!\n    <img src=\"cat.jpg\" alt=\"Meow!\">\n    <a href=\"https://en.wikipedia.org/wiki/Cat\">Learn more about cats!</a>\n  </p>\n</div>\n```\n\nHTML 源代码由嵌套标签组成。第一个标签是标题标签，`<title>`和结束标签`</title>`之间的文本用作页面标题。\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347181,
+              "key": "88bbf586-ffcb-42ed-a320-91fd0e0862b9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/5875387d_kitty/kitty.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/88bbf586-ffcb-42ed-a320-91fd0e0862b9",
+              "caption": "样本页面，标题为 \"我的网站\"",
+              "alt": null,
+              "width": 444,
+              "height": 611,
+              "instructor_notes": null
+            },
+            {
+              "id": 347182,
+              "key": "0c610ec8-47cb-4847-9f21-a984693a3456",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "HTML 源代码中的下一个标签是 `<div id=\"introduction\">`。`div` 是 \"division\" 的缩写，`id=\"introduction\"` 表示该页面的作者将这一部分标注为引言。\n\n我们在该标签下面的几行中可看到 `</div>`。这是 div 的结束标签，表示该段落代码嵌套在 div 中:\n\n```html\n<p>\n  欢迎来到我的网站！\n</p>\n```\n\n`p` 是 \"段落\" 的缩写。`<p>` 和其结束标签 `</p>` 之间的文本是提供 HTML 时，显示在屏幕上的内容。可以将该段落称为 div 标签（嵌套在其中）的 \"子类\"。同样，div 是段落的 \"父类\"。总而言之，这种父类标签和子类标签的排列创建了一个树结构。\n\n词汇注释：术语 \"标签\" 和 \"元素\" 密切相关，有时可互换使用。标签是一个 HTML 源码，而元素是在浏览器呈现标签后用户可以看到的可视化组件。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347183,
+              "key": "2768116f-8190-4503-9664-c843ad415bb9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/587539aa_trees/trees.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2768116f-8190-4503-9664-c843ad415bb9",
+              "caption": "由嵌套标签组成的 HTML 文档树结构。",
+              "alt": null,
+              "width": 579,
+              "height": 557,
+              "instructor_notes": null
+            },
+            {
+              "id": 347184,
+              "key": "736ea499-faa1-4c94-b89e-81d39f697868",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "HTML 文档中的第二个 div 更复杂。它还有一个作为子类的段落标签，该段落标签有自己的子类，`img` 和 `a`。这两个子类标签嵌套在 div 标签内，成为 div 的后代标签。但它们不是 div 的子类，而是 'p` 标签的子类。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347185,
+              "key": "5a269e41-cbfd-42e2-9a8d-790634e43713",
+              "title": "识别父类标签与子类标签",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5a269e41-cbfd-42e2-9a8d-790634e43713",
+                "completed_at": "2017-10-29T13:12:56.868Z",
+                "last_viewed_at": "2019-03-02T12:19:19.651Z",
+                "unstructured": "{\"answer\":\"3\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "请参阅上文 \"我的网站\" html 来回答该问题。\n`image-gallery` div 里面有多少元素？",
+                "matchers": [
+                  {
+                    "expression": "3|[Tt]hree"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347186,
+              "key": "173bdf81-c991-4d4d-9e90-c02160ec3766",
+              "title": "识别父类标签与子类标签 II",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "173bdf81-c991-4d4d-9e90-c02160ec3766",
+                "completed_at": "2017-10-29T13:13:17.638Z",
+                "last_viewed_at": "2019-03-02T12:20:33.344Z",
+                "unstructured": "{\"answer\":\"1\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这些标签中有多少是 `image-gallery` 的直接后代标签？",
+                "matchers": [
+                  {
+                    "expression": "1|[Oo]ne"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347187,
+              "key": "abef139a-0e89-4523-a623-c671d3ef7069",
+              "title": "识别父类标签与子类标签 III",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "abef139a-0e89-4523-a623-c671d3ef7069",
+                "completed_at": "2017-10-27T10:57:58.128Z",
+                "last_viewed_at": "2019-03-02T12:21:20.705Z",
+                "unstructured": "{\"answer\":\"1\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "一个标签有多少个父类标签？该数字对于每个 html 文档是一样的。",
+                "matchers": [
+                  {
+                    "expression": "1|[Oo]ne"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347188,
+              "key": "937902fe-0199-4006-ba0d-f3ae108eb31c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "锚标签\n========\n\n如需爬取网页，还需要了解一个标签类型，即锚标签。我们已经看到一个锚标签：\n\n```html\n<a href=\"https://en.wikipedia.org/wiki/Cat\">Learn more about cats!</a>\n```\n\n锚标签（用`<a></a>`表示，用于创建链接。此示例创建了这样一个链接：\n\n>  [了解关于猫的更多内容！](https://en.wikipedia.org/wiki/Cat)\n\n在 `href` 属性中指定链接的目的，开始和结束标签之间的文本即链接的文本。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347189,
+              "key": "6d328a11-109b-4532-a22b-c1ee0e977878",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用开发工具探索 HTML\n==========================",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347190,
+              "key": "294920a2-bf7d-4468-9aa0-29dbad23d9a6",
+              "title": "使用开发工具探索 HTML",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YWbCvLCBQrg",
+                "china_cdn_id": "YWbCvLCBQrg.mp4"
+              }
+            },
+            {
+              "id": 347191,
+              "key": "4c809a0e-640c-423c-bc71-b5413a09d625",
+              "title": "试用开发人员工具",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4c809a0e-640c-423c-bc71-b5413a09d625",
+                "completed_at": "2017-10-27T11:06:16.594Z",
+                "last_viewed_at": "2019-03-02T12:27:12.915Z",
+                "unstructured": "{\"selected_id\":\"a1484079562685\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "自己试用开发人员工具。浏览任何维基百科的文章，并通过查看其 HTML 源码来回答该问题。\n\n查找带有 `mw-content-text’ 的 div。该 div 的父类是什么类型的标签？",
+                "answers": [
+                  {
+                    "id": "a1484079562685",
+                    "text": "`div`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484079707125",
+                    "text": "`b`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484079707785",
+                    "text": "`p`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484079709267",
+                    "text": "`body`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347192,
+              "key": "90912453-6323-46cf-b999-2369201e92df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用 Python 获取 HTML\n==============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347193,
+              "key": "7bcc66aa-43e2-4145-8a3e-a29441c388e7",
+              "title": "使用 Python 获取 HTML",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1Y_CZyKNWe4",
+                "china_cdn_id": "1Y_CZyKNWe4.mp4"
+              }
+            },
+            {
+              "id": 347194,
+              "key": "cae62b43-b46c-4d01-aee8-85a1fa48e8a0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "尝试自己`请求`\n================\n\n现在该你尝试请求库。\n\n首先去命令行安装具有 `pip` 的 `requests`\n\n```\n$ pip3 install requests\n```\n（根据 Python 安装，你可能需要使用 `pip`，而不是 `pip3`）\n\n然后打开交互式 Python 解释器测试一些请求代码。这是此前视频的代码：\n\n```python\n>>> response = requests.get('https://en.wikipedia.org/wiki/Dead_Parrot_sketch')\n>>> print(response.text)\n>>> print(type(response.text))\n```\n将示例中的 url 替换为你自己选择的页面，以便在交互式 Python 解释器中对其进行测试，然后查看html。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347195,
+              "key": "f312a7c3-5687-44a1-b695-4a1c4d9c8978",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Beautiful Soup\n============\n\n我们现在已经掌握了如何制作网页请求和下载 html，接下来我们了解一下如何解析 HTML。由于 HTML 只是文本，我们可以使用已经了解的工具对其进行解析；循环和字符串方法。这将极具挑战性，HTML 是一种非常灵活的语言，这使其难以正确解析。但好的一点是之前的程序员已经为我们解决了这个问题。\n\n此前，对于此类项目我经常使用 Beautiful Soup 库。根据其[文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)：\n\n>“Beautiful Soup 可解析你提供的任何内容，并为你遍历树材料。可以命令其'查找所有的链接'或’查找 classexternalLink 的所有链接'或'查找 url 与 \"foo.com\" 匹配的所有链接或'查找粗体文本的表格标题，然后将该文本发送给我。'\"\n\n“这些示例听起来很像我们在某个 div 中查找第一个维基百科链接时遇到的问题！\n\n我们来安装这个库并试试吧！可以使用 pip 安装最新版本的 Beautiful Soup：\n\n```shell\n$ pip3 install beautifulsoup4\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347196,
+              "key": "ded8b112-b3d5-4410-b893-a3faa650ad7e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Beautiful Soup 演示\n==============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347197,
+              "key": "70e0feb4-c892-4afe-b3de-a888ef6a0d80",
+              "title": "Beautiful Soup 演示",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "dk7ESZXLnk4",
+                "china_cdn_id": "dk7ESZXLnk4.mp4"
+              }
+            },
+            {
+              "id": 347198,
+              "key": "32a883d8-32b2-4d3a-88c0-3062614b5da8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "自己尝试 Beautiful Soup\n==================\n安装 Beautiful Soup 并试试吧！在终端中打开一个交互式解释器，并在浏览器中浏览你所选择的网页。在页面中选择元素，并尝试用 Beautiful Soup 来选择这些元素！尝试打开浏览器的开发人员工具，这有助于了解 HTML 的建构方式。\n\n浏览页面以及 Beautiful Soup，并回答以下问题。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347199,
+              "key": "0fd9b2c2-c986-4827-ae2e-6e79f2d4b56c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0fd9b2c2-c986-4827-ae2e-6e79f2d4b56c",
+                "completed_at": "2017-10-31T03:46:42.535Z",
+                "last_viewed_at": "2019-03-02T14:14:15.333Z",
+                "unstructured": "{\"selected_id\":\"a1484080887751\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪一项的计算结果为页面中第一段的所有锚标签（<a></a>）列？",
+                "answers": [
+                  {
+                    "id": "a1484080874232",
+                    "text": "`soup.p.a`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484080887135",
+                    "text": "`soup.find_all('p').find_all('a')`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484080887751",
+                    "text": "`soup.p.find_all('a')`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484080888509",
+                    "text": "`for p in soup.find_all('p'):     \\n p.a`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347200,
+              "key": "e424df09-67b3-4a7a-9426-fc2dbc565f56",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e424df09-67b3-4a7a-9426-fc2dbc565f56",
+                "completed_at": "2017-10-31T03:47:14.287Z",
+                "last_viewed_at": "2019-03-02T14:17:55.656Z",
+                "unstructured": "{\"selected_id\":\"a1484083680377\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "如果一个 soup 对象的名称为 `soup`，那么什么代码将选择一个具有 id \"image-gallery\" 的 div 元素？",
+                "answers": [
+                  {
+                    "id": "a1484083660182",
+                    "text": "`soup.id.image-gallery`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484083679121",
+                    "text": "`soup.div(id=\"image-gallery\")`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484083679765",
+                    "text": "`soup.get('div', id='image-gallery')`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484083680377",
+                    "text": "`soup.find(id=\"image-gallery\")`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347305,
+          "key": "0d2575fd-9155-4c45-be5d-32cad6215a2b",
+          "title": "设计程序",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0d2575fd-9155-4c45-be5d-32cad6215a2b",
+            "completed_at": "2018-02-19T05:53:35.207Z",
+            "last_viewed_at": "2019-03-02T14:18:18.090Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347201,
+              "key": "75482ac5-0936-40bc-8122-a24fc8aa423b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "逐步解决问题\n=================\n\n现在我们已经探索了将用于抓取维基百科的库，让我们考虑一下爬行程序将执行的步骤。我们遵循的手动过程是：\n\n1. 打开文章\n2. 找到文章中的第一个链接\n3. 单击链接\n4. 重复此过程，直到找到“哲学”文章或进入文章周期。\n\n这个过程中的关键词是 \"重复\"。这个四步骤过程本质上是一个循环！如果我们的程序重复该手动过程，则程序将包含一个大循环。这将导致一个问题，但...\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347202,
+              "key": "71ca2a29-1e84-426e-afcd-af8afeed5e29",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "71ca2a29-1e84-426e-afcd-af8afeed5e29",
+                "completed_at": "2017-10-31T03:47:55.549Z",
+                "last_viewed_at": "2019-03-02T14:18:34.677Z",
+                "unstructured": "{\"selected_id\":\"a1484084029600\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们应该使用什么类型的循环实现爬网过程？",
+                "answers": [
+                  {
+                    "id": "a1484084027380",
+                    "text": "一个`for`循环",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484084029600",
+                    "text": "一个`while`循环",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347203,
+              "key": "22af45f3-7b70-418f-8e47-f1fb45eabc62",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "记录我们的进度\n===============\n\n运行循环时，需要跟踪我们访问的文章，以便于输出爬虫发现的路径。我将其添加到我们的过程中：\n\n1. 打开文章\n2. 找到文章中的第一个链接\n3. 单击链接\n4. **在 `article_chain` 数据结构中记录链接**\n5. 重复此过程，直到我们找到“哲学”文章或进入文章周期。\n\n`article_chain` 将是我们的程序输出。我们也可以借此配合将探索的下一篇文章。在循环的第1步中，命令读出程序可以打开文章链最后的文章。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347204,
+              "key": "68388c17-368b-4b0d-9189-315a5f56518b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "68388c17-368b-4b0d-9189-315a5f56518b",
+                "completed_at": "2017-10-31T03:49:21.146Z",
+                "last_viewed_at": "2019-03-02T14:21:49.035Z",
+                "unstructured": "{\"selected_id\":\"a1484084330303\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们的算法需要跟踪已经看到的文章链，以便最后可以输出这些文章链。还需要跟踪上一篇文章，以便将其用作 while 循环下一次迭代的输入。这些数据结构中的哪*一*个可以用于 `article_chain`？",
+                "answers": [
+                  {
+                    "id": "a1484084301348",
+                    "text": "字符串",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484084330303",
+                    "text": "列表",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484084330901",
+                    "text": "字典",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484084331519",
+                    "text": "集合",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484084332204",
+                    "text": "元组",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484084332872",
+                    "text": "浮点数",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347205,
+              "key": "b02c5156-2409-4505-8fb9-61fe78499c41",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b02c5156-2409-4505-8fb9-61fe78499c41",
+                "completed_at": "2017-10-26T14:17:18.900Z",
+                "last_viewed_at": "2017-10-26T14:17:18.900Z",
+                "unstructured": "{\"answer\":\"内容重复的时候结束循环\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "在记录爬网维基百科过程访问的文章时，我们已经决定使用 `while` 循环。但是不应该编写一个将永远存在的程序 - 应该在什么情况下结束循环？这就是我们需要探讨的几种情况。将你的想写入方框。\n\n`while` 循环应在以下情况下结束："
+              },
+              "answer": {
+                "text": "解决方案：\n程序应该在以下情况下结束 `while` 循环：\n\n*查找“哲学”文章，\n*查找我们已经访问过的页面，因此发现我们已经处于一个文章循环中（与 [Chair](https://en.wikipedia.org/wiki/Chair) 案例类似，\n*我们继续操作了许久（我们认为 25 个步骤足以，但是如果你愿意的话可以调整），或者\n*我们找到一个没有链接的页面 - 在这种情况下，根本无法继续前进。\n\n稍后我们将决定如何采用最好的方法检查每个条件。\n已经决定使用一个 `article_chain`变量跟踪我们已经访问过的文章，这将很有用，而且将使检查循环更容易！",
+                "video": null
+              }
+            },
+            {
+              "id": 347206,
+              "key": "f60b2356-b830-4fde-a3ba-94b636a1b65e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "步骤序列\n=================\n\n我们已经确定将在一个循环中建构程序。我们将提前建立需要进入循环的步骤\n\n1. 查找当前文章 HTML 中的第一个链接\n2. 下载当前文章的 HTML\n3. 将当前文章中的第一个链接添加到 `article_chain` 中\n\n还有一个步骤我们之前尚未明确说明：\n\n<ol start=\"4\">\n  <li>暂停几秒钟，以便不会使请求洪泛维基百科。</li>\n</ol>\n\n手动查找链接并单击时，我们的速度自然受阅读和单击速度的限制。但 Python 程序不会受到这种限制，其循环速度将与页面下载速度一样快。虽然这可节省时间，但是用快速重复的请求敲击网络服务器显得无礼粗鲁。如果不减慢循环速度，服务器可能会认为我们是试图超载服务器的攻击者，因此会阻止我们。服务器可能是对的！如果代码中有一个错误，我们可能会进入一个无限循环，并且请求将淹没服务器。为了避免此种情况，我们应该在主循环中暂停几秒。（网站在 [robots.txt file](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) 中指定自动爬虫策略。可以在 [https//en.wikipedia.org/robots.txt](https//en.wikipedia.org/robots.txt) 中查阅维基百科的 robots.txt。维基百科认为，\"友好，低速执行重复功能程序是受大众青睐的浏览文章页面…\"。通过添加延迟，即表示我们遵守维基百科的条款！）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347207,
+              "key": "ec5062da-633d-4f4f-939b-50a9760bca5b",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ec5062da-633d-4f4f-939b-50a9760bca5b",
+                "completed_at": "2017-10-26T14:25:23.197Z",
+                "last_viewed_at": "2019-03-02T14:24:45.679Z",
+                "unstructured": "{\"answer\":\"2134\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们的循环按照什么顺序执行这四个步骤？如果你认为我们应按照写入顺序执行这些步骤，请在答案框中输入 \"1234\"。",
+                "matchers": [
+                  {
+                    "expression": "4213"
+                  },
+                  {
+                    "expression": "2413"
+                  },
+                  {
+                    "expression": "2143"
+                  },
+                  {
+                    "expression": "2134"
+                  },
+                  {
+                    "expression": "1.*2"
+                  },
+                  {
+                    "expression": "3.*2"
+                  },
+                  {
+                    "expression": "3.*1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347208,
+              "key": "edde99c2-e447-40c3-b159-1f243569fb6c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们还可以使用以下伪代码描述步骤序列。\n\n```python\n页面=一个随机起始页\narticle_chain = []\n而页面标题不是“哲学”，而且我们还没有发现循环：\n\t将页面添加到 article_chain\n\t下载页面内容\n\t在内容中查找第一个链接\n\t页面=该链接\n\t暂停片刻\n```\n这比使用简单的英语更有用，但仍然不是实际的 Python 代码。你可以将伪代码视为英文编号步骤和可运行的实际代码之间的中间步骤。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347306,
+          "key": "da6affc5-8ee4-4b1e-832c-e849965c05ae",
+          "title": "执行程序",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "da6affc5-8ee4-4b1e-832c-e849965c05ae",
+            "completed_at": "2018-02-19T05:56:02.052Z",
+            "last_viewed_at": "2019-03-02T14:34:17.310Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347209,
+              "key": "6ed7bf42-5e72-4397-909b-78fb892e53fb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "合作\n==========",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347210,
+              "key": "ae2cdb99-3fa0-4360-8769-a55da362eaa7",
+              "title": "Ud1110 IntroPy L5 22 爬网解决方案（续）",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tLhTfSZ6LRA",
+                "china_cdn_id": "tLhTfSZ6LRA.mp4"
+              }
+            },
+            {
+              "id": 347211,
+              "key": "8326fe97-1c4a-4ed7-8424-6fe585cf13de",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "测验：`continue_crawl` 函数\n========\n\n我们需要编写的第一个帮助函数是 `continue_crawl`，其将用于我们的 while 循环，如下所示：\n\n```python\nwhile continue_crawl(search_history, target_url):\n```\n\n例如，我们可以使用这些值调用函数：\n```python\ncontinue_crawl(['https://en.wikipedia.org/wiki/Floating_point'],\n                       'https://en.wikipedia.org/wiki/Philosophy')\n```\n* `search_history` 是维基百科文章 url 的字符串列表。列表中的最后一个项目是最近发现的 url。\n* 如果 `target_url` 是查找到结果，停止搜索时文章 url 的字符串。\n\n根据以下规则，`continue_crawl` 应该返回 `True` 或 `False`：\n*如果 search_history 中最近的文章是目标文章，则应停止搜索，函数应返回 `False`\n*如果列表中有 25 个 url，函数应返回 `False`\n*如果列表中有一个循环，函数应返回 `False`\n*否则应继续搜索，函数应返回 True。\n\n对于该测验，执行 `continue_crawl`。对于停止搜索的每种情况，请打印一个简要说明原因的消息。\n务必测试你的代码！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347212,
+              "key": "be3ce6b5-9cc2-4d26-918e-37abefd56332",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "be3ce6b5-9cc2-4d26-918e-37abefd56332",
+                "completed_at": "2018-02-19T06:00:09.624Z",
+                "last_viewed_at": "2019-03-02T14:37:37.259Z",
+                "unstructured": "{\"continuecrawl.py\":\"# TODO: Implement the continue_crawl function described above\\ndef continue_crawl(search_history, target_url):\\n    if search_history[-1] == target_url:\\n        print(\\\"The recent url is the same as the target url.\\\")\\n        return False\\n    elif len(search_history) > 25:\\n        print(\\\"The search history has more than 25 urls.\\\")\\n        return False\\n    elif search_history[-1] in search_history[:-1]:\\n        print(\\\"There is a loop in search history.\\\")\\n        return False\\n    else:\\n        return True\\n        \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5744938307420160",
+                "initial_code_files": [
+                  {
+                    "text": "# TODO: Implement the continue_crawl function described above",
+                    "name": "continuecrawl.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347213,
+              "key": "e22817e5-e5cc-4676-98d1-6810ce156c06",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "单击“下一项”按钮查看我的解决方案。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347307,
+          "key": "6de97e3b-0a65-4875-96be-ec45ddee4fd3",
+          "title": "执行程序II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6de97e3b-0a65-4875-96be-ec45ddee4fd3",
+            "completed_at": "2018-02-19T06:00:24.582Z",
+            "last_viewed_at": "2019-03-03T13:35:27.702Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347214,
+              "key": "1b969560-d338-4e9d-8a73-7f9bdc10bb20",
+              "title": "爬网解决方案（续）",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cFwJ_MO3ofs",
+                "china_cdn_id": "cFwJ_MO3ofs.mp4"
+              }
+            },
+            {
+              "id": 347215,
+              "key": "004ab983-e1f0-473c-9a59-9aff5824c6fa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这是完整 `continue_crawl` 函数的最终版本。\n\n```python\ndef continue_crawl(search_history, target_url, max_steps=25):\n    if search_history[-1] == target_url:\n        print(\"We've found the target article!\")\n        return False\n    elif len(search_history) > max_steps:\n        print(\"The search has gone on suspiciously long, aborting search!\")\n        return False\n    elif search_history[-1] in search_history[:-1]:\n        print(\"We've arrived at an article we've already seen, aborting search!\")\n        return False\n    else:\n        return True\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347216,
+              "key": "b361a232-f6d1-4cef-8092-56d41db4fc71",
+              "title": "在构架循环中编码",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MRPdqOwnqag",
+                "china_cdn_id": "MRPdqOwnqag.mp4"
+              }
+            },
+            {
+              "id": 347217,
+              "key": "6193b304-4262-410d-8fe4-444527229790",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这四个步骤可作为 while 循环构架中的注释。\n\n```python\nwhile continue_crawl(article_chain, target_url): \n    # download html of last article in article_chain\n    # find the first link in that html\n    # add the first link to article_chain\n    # delay for about two seconds\n```\n\n现在可以执行一些操作。\n\n第一步，`在 article_chain 中下载最后一篇文章的 html` 是我们将使用请求包从维基百科获取  html 的命令。第二步，`查找该 html 中的第一个链接`  将涉及使用 BeautifulSoup 解析该 html，以获取第一个链接的 URL。\n\n\n我建议将这两个步骤合并成一个单一的函数，其输入将是包含维基百科文章 URL 的字符串，输出将是包含维基百科文章正文中第一个链接的 URL 的字符串。我们调用此函数 `find_first_link`。\n\n步骤：\n`在 article_chain 中下载最后一篇文章的 html`\n与\n`查找该 html 中的第一个链接`\n是我们计划中最初的前两个步骤，但将它们放在一个帮助函数 `find_first_link` 中，可使用外部库请求和 `while` 循环之外的 BeautifulSoup 提取全部详细信息。这样做也很有用，原因是如果将来关于这些库工作原理的详细信息发生变化，我们仍然可以保留主 `while` 循环，而且只需更改帮助函数。这也有助于保持代码真正可读性。\n\n因为已经适当地定义了 `find_first_link` 的输入和输出，所以我可以把这个函数留给 Philip 执行 - 之后他将开始处理。现在，我可以根据这个函数的输出内容，并通过将 `find_first_link` 调用到 `while` 循环中来使其发挥作用。\n\n```python\nwhile continue_crawl(article_chain, target_url): \n    # download html of last article in article_chain\n    # find the first link in that html\n    first_link = find_first_link(article_chain[-1])\n    # add the first link to article chain\n    # delay for about two seconds\n```\n\n索引 `[-1]` 提供了 `article_chain` 列表中的最后一个条目，所以在下一行，将 `first_link` 添加到 `article_chain` 的末尾可起到一定作用 - 下一步将编写该代码！\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347218,
+              "key": "d844a080-54b9-48c2-b326-dc3913d7e2a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "测验：将链接添加到文章链\n===============\n\n写一行将 `first_link` 添加到 `article_chain` 列表末尾的代码。此行代码将位于注释 \"将第一个链接添加到文章链\" 之后。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347219,
+              "key": "4aafb890-7d0d-4e4b-b369-e1497c299366",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4aafb890-7d0d-4e4b-b369-e1497c299366",
+                "completed_at": "2018-02-19T06:03:14.907Z",
+                "last_viewed_at": "2019-03-03T13:36:38.298Z",
+                "unstructured": "{\"addlink.py\":\"def web_crawl():\\n    while continue_crawl(article_chain, target_url): \\n        # download html of last article in article_chain\\n        # find the first link in that html\\n        first_link = find_first_link(article_chain[-1])\\n        article_chain.append(first_link)\\n        # add the first link to article chain\\n        # delay for about two seconds\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5092230114181120",
+                "initial_code_files": [
+                  {
+                    "text": "def web_crawl():\n    while continue_crawl(article_chain, target_url): \n        # download html of last article in article_chain\n        # find the first link in that html\n        first_link = find_first_link(article_chain[-1])\n        # add the first link to article chain\n        # delay for about two seconds",
+                    "name": "addlink.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347308,
+          "key": "fc9de7a9-9ec8-4378-9c6e-2a3d225802ec",
+          "title": "执行程序 III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fc9de7a9-9ec8-4378-9c6e-2a3d225802ec",
+            "completed_at": "2018-02-19T06:03:21.820Z",
+            "last_viewed_at": "2019-03-03T13:37:22.617Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347220,
+              "key": "d96f18f7-34e9-4b21-bc39-b8616a5ecde8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "测验：稍等片刻！\n================\n处理 `while` 循环中的最后一步 - 如何使 Python 等待两秒钟。\n为了找到需要使用的相关 Python 包和/或命令，可能还需要进行一些研究。如果需要，将导入语句添加到顶部，然后在代码块缩进的底部再添加一行代码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347221,
+              "key": "e1b823ab-71b6-4e26-8cd8-c496bb4487fa",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e1b823ab-71b6-4e26-8cd8-c496bb4487fa",
+                "completed_at": "2017-10-27T03:16:22.810Z",
+                "last_viewed_at": "2019-03-03T13:39:24.138Z",
+                "unstructured": "{\"sleep.py\":\"#TODO: import something?\\nimport time\\ndef web_crawl():\\n    while continue_crawl(article_chain, target_url): \\n        # download html of last article in article_chain\\n        # find the first link in that html\\n        first_link = find_first_link(article_chain[-1])\\n        # add the first link to article chain\\n        article_chain.append(first_link)\\n        # delay for about two seconds\\n        # TODO: YOUR CODE HERE!\\n        time.sleep(2)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4703024875438080",
+                "initial_code_files": [
+                  {
+                    "text": "#TODO: import something?\n\ndef web_crawl():\n    while continue_crawl(article_chain, target_url): \n        # download html of last article in article_chain\n        # find the first link in that html\n        first_link = find_first_link(article_chain[-1])\n        # add the first link to article chain\n        article_chain.append(first_link)\n        # delay for about two seconds\n        # TODO: YOUR CODE HERE!",
+                    "name": "sleep.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347309,
+          "key": "cfa1bf86-0dd3-4b33-8340-7c63d078d62a",
+          "title": "迭代编程 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cfa1bf86-0dd3-4b33-8340-7c63d078d62a",
+            "completed_at": "2018-02-22T03:31:54.946Z",
+            "last_viewed_at": "2019-03-03T13:39:59.690Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347222,
+              "key": "c74451c7-4c59-4ddc-b8aa-53619caf9e0c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "查找第一个链接\n============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347223,
+              "key": "69eb8277-792e-40f1-ad12-40acc4520d6b",
+              "title": "Ud1110 IntroPy L5 30 查找第一个链接",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Z-uuXDrMzqM",
+                "china_cdn_id": "Z-uuXDrMzqM.mp4"
+              }
+            },
+            {
+              "id": 347224,
+              "key": "7ee55fd3-31ba-48cf-98bf-fd33a1a1ddaa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "功能脚手架代码\n=============\n\n在开始编写 `find_first_link` 函数代码之前，让我们先概述函数需要执行的子任务。首先编写函数的第一行，并提供一个解释其返回内容的注释。估计这些是 Charlie 需要处理的部分函数。\n\n```python\ndef find_first_link(url):\n    # return the first link as a string, or return None if there is no link\n```\n\n现在我可以执行中间的步骤：\n\n```python\ndef find_first_link(url):\n    # get the HTML from \"url\", use the requests library\n    # feed the HTML into Beautiful Soup\n    # find the first link in the article\n    # return the first link as a string, or return None if there is no link\n```\n\n我现在有一个执行该任务的计划。始终可以在没有计划的情况下开始编码，但我发现几分钟的计划可以防止浪费长达数小时的时间。工作时，我将用工作代码替换这些注释。\n\n第一个子任务非常简单，我们在尝试请求库时掌握了方法：\n```python\n# get the HTML from \"url\", use the requests library\nresponse = requests.get(url)\nhtml = response.text\n```\n\n下一步是`# 将 HTML 馈送到 Beautiful Soup`。早在尝试库时，我掌握了这一点。下一步是查找第一个链接，这将需要一些精力，所以我现在简单存根。\n\n```python\ndef find_first_link(url):\n    response = requests.get(url)\n    html = response.text\n    soup = BeautifulSoup(html, \"html.parser\")\n\n    # TODO: find the first link in the article, or set to None if\n    # there is no link in the article.\n    article_link = \"a url, or None\"\n\n    if article_link:\n        return article_link\n```\n\n我们可以用这个方法编写在一篇文章中查找第一个链接的代码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347225,
+              "key": "09b71a25-8633-4dcc-8364-219c70199dec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "查找第一个链接：首次尝试\n===============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347226,
+              "key": "552674d5-0c24-4d88-98a3-3c5ce067ff6e",
+              "title": "查找第一个链接",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_bPdJBJtNqo",
+                "china_cdn_id": "_bPdJBJtNqo.mp4"
+              }
+            },
+            {
+              "id": 347227,
+              "key": "059e0264-825c-45ce-acec-c870daeeec13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### 视频更新\n\n网络世界瞬息万变，此种情况也一样。截至该编写时间（2017 年 6 月），维基百科页面的结构已发生了变化，这使文章的主体比视频中显示的更深入一级。应该使用的表达式是：\n```python\nsoup.find(id='mw-content-text').find(class_=\"mw-parser-output\").p.a.get('href')\n```\n\n第二个 `.find(class_=\"mw-parser-output\")` 输入名为 \"mw-parser-output\" 的 `div` 元素。请注意，我们必须使用参数 `class_`，原因是 `class` 是 Python 中的保留关键字。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347228,
+              "key": "18c54d64-6765-4a3a-b8d2-d500cbb0369b",
+              "title": "有用吗？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "18c54d64-6765-4a3a-b8d2-d500cbb0369b",
+                "completed_at": "2017-11-03T01:33:56.306Z",
+                "last_viewed_at": "2019-03-03T13:55:22.156Z",
+                "unstructured": "{\"selected_id\":\"a1484089039028\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "尝试任何维基百科文章（[A.J.W. McNeilly](https://en.wikipedia.org/wiki/A.J.W._McNeilly) 除外）关于 html 的此 Beautiful Soup 代码。下载 HTML，创建一个 soup 对象，并从上面的文本框中尝试代码段。\n```python\nsoup.find(id='mw-content-text').find(class_=\"mw-parser-output\").p.a.get('href')\n```\n有用吗？如果不行，你觉得出了什么问题？",
+                "answers": [
+                  {
+                    "id": "a1484089039028",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484089058049",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347229,
+              "key": "4b04c73d-cf70-4c06-9257-f15500332f4a",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4b04c73d-cf70-4c06-9257-f15500332f4a",
+                "completed_at": "2017-10-27T03:42:00.329Z",
+                "last_viewed_at": "2017-10-27T03:42:00.329Z",
+                "unstructured": "{\"answer\":\"😂😂😂😂😂😂\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "如果测试运行不起作用，你认为出了什么问题？你的测试文章与 AJW McNeilly 的文章有何不同？"
+              },
+              "answer": {
+                "text": "按照维基百科标准，AJW McNeilly 的文章很简单。文章与信息框、发音指南和不方便放置的脚注为我们提出了有待解决的新问题。",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 347310,
+          "key": "1f5c8c7a-32c6-4d17-9907-a82c09ac38fd",
+          "title": "迭代编程 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f5c8c7a-32c6-4d17-9907-a82c09ac38fd",
+            "completed_at": "2017-11-03T01:34:00.093Z",
+            "last_viewed_at": "2019-03-03T13:55:48.191Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347230,
+              "key": "1a19adfd-567e-4802-8e2c-e1b461ec4fc3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "查找第一个链接：第二次尝试\n===============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347231,
+              "key": "db99eb94-71d2-4095-bd87-34e0535d4a56",
+              "title": "Ud1110 IntroPy L5 34 查找第一个链接 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bsMtF-705EU",
+                "china_cdn_id": "bsMtF-705EU.mp4"
+              }
+            },
+            {
+              "id": 347232,
+              "key": "28b72970-6920-48b2-9f6d-ffccd79b9f02",
+              "title": "子类与后代",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "28b72970-6920-48b2-9f6d-ffccd79b9f02",
+                "completed_at": "2017-10-31T13:26:18.932Z",
+                "last_viewed_at": "2019-03-03T14:01:00.730Z",
+                "unstructured": "{\"selected_ids\":[\"a1484089507636\",\"a1484089509846\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "在这些方法中，哪些可能有助于我们查找到想要的链接，而不是 `mw-content-text` div 标签较远后代标签的链接？选择所有看似相关的方法。",
+                "answers": [
+                  {
+                    "id": "a1484089497037",
+                    "text": "`extract`方法",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484089507636",
+                    "text": "`find_all`方法",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484089508654",
+                    "text": "`insert_after`方法",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484089509260",
+                    "text": "`prettify` 方法",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484089509846",
+                    "text": "`children`方法",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347233,
+              "key": "13b0786f-5c77-405c-9071-1aad60e84176",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "尝试新技术\n==============\n\n我重写了自己的代码，该代码这次使用 `find_all` 方法：\n\n```python\ncontent_div = soup.find(id=\"mw-content-text\").find(class_=\"mw-parser-output\")\nfor element in content_div.find_all(\"p\", recursive=False):\n    if element.a:\n        first_relative_link = element.a.get('href')\n        break\n```\n\n第一行代码查找到包含文章正文的 div。\n如果该标签是 div 的子类，则下一行在 div 中循环每个`<p>`。我们从[文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#recursive)了解到，\"如果想让 Beautiful Soup 只考虑直接子类，可以按照recursive=False进行传递\" 。\n\n循环主体可以查看段落中是否存在 `a` 标签。如果这样，从链接中获取 url，并将其存储在 `first_relative_link` 中，然后结束循环。\n\n注意：我也可以使用 `children` 方法编写代码。但循环主体将有所不同。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347234,
+              "key": "9996a7e8-efce-422f-a886-3dc44fc9316a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9996a7e8-efce-422f-a886-3dc44fc9316a",
+                "completed_at": "2017-10-31T13:32:04.981Z",
+                "last_viewed_at": "2019-03-03T14:02:36.836Z",
+                "unstructured": "{\"selected_id\":\"a1484090141003\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "尝试新测试文章中关于 html 的 Beautiful Soup 代码。有用吗？如果不行，你觉得出了什么问题？\n\n```python\ncontent_div = soup.find(id=\"mw-content-text\").find(class_=\"mw-parser-output\")\nfor element in content_div.find_all(\"p\", recursive=False):\n    if element.a:\n        first_relative_link = element.a.get('href')\n        break\n```",
+                "answers": [
+                  {
+                    "id": "a1484090090620",
+                    "text": "是",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484090141003",
+                    "text": "否",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347235,
+              "key": "effae3ac-f674-4532-bb98-ba88a50d4a1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "排错\n============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347236,
+              "key": "a2fc812b-33d3-4c09-9370-abd74831b5ae",
+              "title": "Ud1110 IntroPy L5 37 排错",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "X-GqfxYpaw0",
+                "china_cdn_id": "X-GqfxYpaw0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 347311,
+          "key": "1990e1c5-ee22-447b-9577-0469ba97bf14",
+          "title": "迭代编程 III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1990e1c5-ee22-447b-9577-0469ba97bf14",
+            "completed_at": "2017-10-31T15:17:36.492Z",
+            "last_viewed_at": "2019-03-03T14:03:30.008Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347237,
+              "key": "9670d841-9161-4c5a-95cc-01896fe2a0ce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "查找第一个链接：第三次尝试\n===============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347238,
+              "key": "90dc7029-5bdd-4f61-b452-be9712eee61c",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "90dc7029-5bdd-4f61-b452-be9712eee61c",
+                "completed_at": "2017-10-27T05:46:28.509Z",
+                "last_viewed_at": "2017-10-27T05:46:28.509Z",
+                "unstructured": "{\"answer\":\"设置一个条件，如果检查到的是普通文章以外的内容就忽略过去！！！\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "如何确保我们的代码只能查找到普通文章的链接，而不是链接到脚注、发音指南或其他奇怪的内容？实现这一点的方法不计其数，所以集思广益几种方法，并描述你认为是最好的解决方案。"
+              },
+              "answer": {
+                "text": "让我们看看，你的解决方案与我的有何不同。随时将自己的想法付诸实践！",
+                "video": null
+              }
+            },
+            {
+              "id": 347239,
+              "key": "55be0f94-8e11-4900-a2d6-7ea5d9e580e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "确保我们找到的链接可导向到维基百科文章的方法很多。我选择了一种懒人技术，该技术基于我最后一个问题的解决方案：我使用 `find` 方法的 `recursive = False` 选项：\n\n```python\ncontent_div = soup.find(id=\"mw-content-text\").find(class_=\"mw-parser-output\")\nfor element in content_div.find_all(\"p\", recursive=False):\n    if element.find(\"a\", recursive=False):\n        first_relative_link = element.find(\"a\", recursive=False).get('href')\n        break\n```\n\n这发挥作用的原因是 \"特殊链接\"（如脚注和发音键）似乎都包含在更多 div 标签中。由于这些特殊链接不是段落标签的直接后代，可以使用与之前相同的技术跳过这些链接。我这次使用 `find` 方法，而不是 `find_all`，原因是 `find` 可返回其查找到的第一个标签，而不是匹配标签的列表。\n\n自己尝试这个代码，或创建自己的 `find_first_link` 实现函数。该函数始终有用吗？\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347312,
+          "key": "54271309-d408-4178-bf0a-d93b39ed94da",
+          "title": "收尾工作",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54271309-d408-4178-bf0a-d93b39ed94da",
+            "completed_at": "2017-10-31T15:17:54.050Z",
+            "last_viewed_at": "2019-03-03T14:04:29.287Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347240,
+              "key": "be4108a4-3bf6-418b-8dec-a852c4a2d67a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "归纳总结\n=================\n\n在交互式 Python 解释器中进行了更多测试后，我准备将代码提取器代码粘贴到 `find_first_link` 函数中。这是整齐格式化和具有注释的完整函数：\n\n```python\ndef find_first_link(url):\n    response = requests.get(url)\n    html = response.text\n    soup = bs4.BeautifulSoup(html, \"html.parser\")\n\n    # This div contains the article's body\n    # (June 2017 Note: Body nested in two div tags)\n    content_div = soup.find(id=\"mw-content-text\").find(class_=\"mw-parser-output\")\n\n    # stores the first link found in the article, if the article contains no\n    # links this value will remain None\n    article_link = None\n\n    # Find all the direct children of content_div that are paragraphs\n    for element in content_div.find_all(\"p\", recursive=False):\n        # Find the first anchor tag that's a direct child of a paragraph.\n        # It's important to only look at direct children, because other types\n        # of link, e.g. footnotes and pronunciation, could come before the\n        # first link to an article. Those other link types aren't direct\n        # children though, they're in divs of various classes.\n        if element.find(\"a\", recursive=False):\n            article_link = element.find(\"a\", recursive=False).get('href')\n            break\n\n    if not article_link:\n        return \n\n    # Build a full url from the relative article_link url\n    first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)\n\n    return first_link\n```\n\n这里有一行新代码，`first_link = urllib.parse.urljoin ('https://en.wikipedia.org/', article_link)`。这很有必要，因为我和 Charlie 未在计划中预测到另一个难题。维基百科文章中的链接是相对 url，如`wiki/Templebryan_Stone_Circle`，而不是像 https://en.wikipedia.org/wiki/Templebryan_Stone_Circle 这样的绝对网址。我在网上搜索了如何根据相对 url 创建一个绝对 url，并发现了[这个解释](http://stackoverflow.com/a/476521/770271)。\n\n如果有兴趣，可以在 [Mozilla 开发人员网络](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL) 上了解有关相对和绝对 url 的更多信息。\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347241,
+              "key": "414af9b0-1c47-42f2-aa99-69b7cf9e5a58",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "运行完成的程序\n============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347242,
+              "key": "05ac9063-a3f7-4f9a-a8fc-ba3f6eb0bc49",
+              "title": "完成的程序",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yGDHoIOfwt8",
+                "china_cdn_id": "yGDHoIOfwt8.mp4"
+              }
+            },
+            {
+              "id": 347243,
+              "key": "9b1cfc18-e671-41bc-ab8e-ac3ccd0c7359",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "WikipediaCrawler.py\n=========\n\n```python\nimport time\nimport urllib\n\nimport bs4\nimport requests\n\n\nstart_url = \"https://en.wikipedia.org/wiki/Special:Random\"\ntarget_url = \"https://en.wikipedia.org/wiki/Philosophy\"\n\ndef find_first_link(url):\n    response = requests.get(url)\n    html = response.text\n    soup = bs4.BeautifulSoup(html, \"html.parser\")\n\n    # This div contains the article's body\n    # (June 2017 Note: Body nested in two div tags)\n    content_div = soup.find(id=\"mw-content-text\").find(class_=\"mw-parser-output\")\n\n    # stores the first link found in the article, if the article contains no\n    # links this value will remain None\n    article_link = None\n\n    # Find all the direct children of content_div that are paragraphs\n    for element in content_div.find_all(\"p\", recursive=False):\n        # Find the first anchor tag that's a direct child of a paragraph.\n        # It's important to only look at direct children, because other types\n        # of link, e.g. footnotes and pronunciation, could come before the\n        # first link to an article. Those other link types aren't direct\n        # children though, they're in divs of various classes.\n        if element.find(\"a\", recursive=False):\n            article_link = element.find(\"a\", recursive=False).get('href')\n            break\n\n    if not article_link:\n        return\n\n    # Build a full url from the relative article_link url\n    first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)\n\n    return first_link\n\ndef continue_crawl(search_history, target_url, max_steps=25):\n    if search_history[-1] == target_url:\n        print(\"We've found the target article!\")\n        return False\n    elif len(search_history) > max_steps:\n        print(\"The search has gone on suspiciously long, aborting search!\")\n        return False\n    elif search_history[-1] in search_history[:-1]:\n        print(\"We've arrived at an article we've already seen, aborting search!\")\n        return False\n    else:\n        return True\n\narticle_chain = [start_url]\n\nwhile continue_crawl(article_chain, target_url):\n    print(article_chain[-1])\n\n    first_link = find_first_link(article_chain[-1])\n    if not first_link:\n        print(\"We've arrived at an article with no links, aborting search!\")\n        break\n\n    article_chain.append(first_link)\n\n    time.sleep(2) # Slow things down so as to not hammer Wikipedia's servers\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347313,
+          "key": "0f113d0a-359c-465f-800c-75ee7c5e1ce1",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f113d0a-359c-465f-800c-75ee7c5e1ce1",
+            "completed_at": "2018-02-22T03:41:40.767Z",
+            "last_viewed_at": "2019-03-03T14:07:51.166Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347244,
+              "key": "acfcff11-b061-4ff4-9b07-560a084b2d0a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们圆满结束了！\n=======\n你表现的很好！以上就是我们所有内容的总结。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347245,
+              "key": "28a2f49a-f245-4bb3-a7dd-fa7633be31a6",
+              "title": "Ud1110 IntroPy L5 43 案例研究综述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jiZwuN6zTFs",
+                "china_cdn_id": "jiZwuN6zTFs.mp4"
+              }
+            },
+            {
+              "id": 347246,
+              "key": "4af47138-96fc-4e2c-94e5-46b8fd843f7f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "不错！\n======\n在本课程学到了很多东西。继续学习！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347247,
+              "key": "32691bd5-551d-4e71-8362-b3426405812c",
+              "title": "Ud1110 IntroPy L5 44 再见！",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lRYvuMf33eY",
+                "china_cdn_id": "lRYvuMf33eY.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

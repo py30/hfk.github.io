@@ -1,0 +1,104 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.067
+Agora que programamos
+todas as partes do crawler,
+
+00:00:03.100 --> 00:00:04.833
+vamos ver
+se elas funcionam juntas.
+
+00:00:04.867 --> 00:00:07.300
+Vou inicializar o programa
+e ver o que acontece.
+
+00:00:07.867 --> 00:00:10.100
+Certo.
+O programa está rodando,
+
+00:00:10.133 --> 00:00:12.133
+mas ainda não imprimiu nada.
+
+00:00:12.167 --> 00:00:14.533
+Está fazendo o crawling
+e vai imprimir no final.
+
+00:00:14.567 --> 00:00:15.667
+Vamos esperar.
+
+00:00:24.167 --> 00:00:26.167
+Opa! Ótimo. Acabou.
+
+00:00:26.201 --> 00:00:27.833
+Parece que funcionou.
+
+00:00:27.867 --> 00:00:32.500
+Fomos desde "Big Four - British
+railway companies" até "Filosofia".
+
+00:00:32.533 --> 00:00:35.933
+Mas quer saber?
+Esperar tanto foi meio chato.
+
+00:00:35.967 --> 00:00:40.967
+E, pensando bem, não preciso esperar
+para imprimir a série de artigos.
+
+00:00:41.001 --> 00:00:42.867
+Charlie e eu planejamos
+desta forma,
+
+00:00:42.900 --> 00:00:44.767
+mas, agora que vi
+os resultados,
+
+00:00:44.800 --> 00:00:47.733
+acho que eles podem
+ser impressos aos poucos.
+
+00:00:47.767 --> 00:00:50.700
+Vou fazer a alteração
+com linhas de comando.
+
+00:00:50.733 --> 00:00:52.767
+Você também pode usar
+seu editor de texto.
+
+00:00:52.800 --> 00:00:55.967
+Primeiro, vou retirar a condição
+imprimir do fim do programa
+
+00:00:56.000 --> 00:00:58.733
+e inserir uma nova condição imprimir
+no loop while.
+
+00:01:01.767 --> 00:01:03.333
+Vamos salvar a mudança
+e testá-la.
+
+00:01:04.100 --> 00:01:07.133
+Vamos lá.
+Começo com um artigo aleatório,
+
+00:01:07.167 --> 00:01:09.433
+em seguida "Karnataka".
+
+00:01:09.467 --> 00:01:10.767
+E por aí vai.
+
+00:01:10.800 --> 00:01:13.567
+Bacana. Acho que assim
+é mais legal de ver.
+
+00:01:14.100 --> 00:01:16.500
+Legal. O programa funciona.
+
+00:01:16.533 --> 00:01:19.632
+A versão completa do programa
+está abaixo do vídeo.
+
+00:01:19.666 --> 00:01:20.666
+*END*
+

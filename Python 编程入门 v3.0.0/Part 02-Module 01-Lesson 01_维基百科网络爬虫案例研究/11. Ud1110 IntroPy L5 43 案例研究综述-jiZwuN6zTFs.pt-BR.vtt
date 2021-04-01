@@ -1,0 +1,147 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:02.133
+Nós conseguimos!
+
+00:00:02.667 --> 00:00:05.033
+Dividindo o trabalho entre nós,
+e isso inclui você,
+
+00:00:05.167 --> 00:00:07.701
+conseguimos que o nosso rastreador
+da Wikipedia funcionasse.
+
+00:00:07.767 --> 00:00:09.167
+Vamos rever como fizemos isso.
+
+00:00:09.434 --> 00:00:10.834
+A primeira coisa que fizemos
+
+00:00:11.033 --> 00:00:14.033
+foi tentar clicar nos links
+da Wikipedia manualmente.
+
+00:00:14.300 --> 00:00:16.634
+Nós conseguimos entender
+o que queríamos alcançar
+
+00:00:16.668 --> 00:00:17.767
+com o programa.
+
+00:00:17.801 --> 00:00:19.501
+Depois aprendemos algo.
+
+00:00:19.567 --> 00:00:22.567
+Descobrimos sobre a estrutura
+dos dados de entrada, HTML,
+
+00:00:22.601 --> 00:00:25.634
+e pesquisamos pacotes Python úteis
+que nos ajudariam a processá-la.
+
+00:00:26.100 --> 00:00:29.634
+Depois projetamos o programa,
+mas sem codificá-lo ainda.
+
+00:00:30.200 --> 00:00:32.667
+Tomamos decisões
+sobre o tipo de loop a ser usado,
+
+00:00:32.701 --> 00:00:34.434
+as estruturas de dados
+que precisaríamos,
+
+00:00:34.501 --> 00:00:37.434
+e decidimos as etapas seguintes
+e suas solicitações.
+
+00:00:37.634 --> 00:00:40.267
+Havia também um item extra
+específico, que é importante
+
+00:00:40.334 --> 00:00:41.701
+se você estiver interagindo
+com a Web.
+
+00:00:41.767 --> 00:00:45.033
+Desaceleramos o programa
+para evitar distúrbios.
+
+00:00:45.467 --> 00:00:48.334
+Só depois de todo esse trabalho,
+começamos a escrever código.
+
+00:00:48.534 --> 00:00:50.267
+Charlie escreveu
+a função "continue_crawl"
+
+00:00:50.334 --> 00:00:51.501
+que controla o "loop while"
+
+00:00:51.567 --> 00:00:54.067
+e explicou as etapas principais
+dentro dele.
+
+00:00:54.334 --> 00:00:57.434
+No processo, ela acabou planejando
+uma função separada:
+
+00:00:57.634 --> 00:00:59.100
+"find_first_link".
+
+00:00:59.567 --> 00:01:02.801
+Ela planejou o que precisava fazer,
+mas não como fazer isso.
+
+00:01:03.234 --> 00:01:05.434
+Fui eu que escrevi
+a função "find_first_link",
+
+00:01:05.467 --> 00:01:07.400
+seguindo as especificações
+de Charlie.
+
+00:01:07.667 --> 00:01:09.400
+Também testei tudo para garantir
+
+00:01:09.434 --> 00:01:12.167
+que o código funcionasse
+em várias páginas da Wikipedia.
+
+00:01:12.400 --> 00:01:15.267
+Eu repeti o código que escrevi
+para fazê-lo funcionar
+
+00:01:15.334 --> 00:01:17.467
+em todas as páginas da Wikipedia
+que encontrei.
+
+00:01:17.701 --> 00:01:20.400
+Você pode usar esses marcadores
+e este exemplo
+
+00:01:20.434 --> 00:01:22.534
+para ajudar na próxima vez
+que escrever um programa.
+
+00:01:22.801 --> 00:01:24.567
+Dependendo do trabalho
+que você está fazendo,
+
+00:01:24.634 --> 00:01:26.267
+talvez seja necessário
+alterar a ordem
+
+00:01:26.300 --> 00:01:28.300
+ou repetir essa etapa
+mais de uma vez.
+
+00:01:28.400 --> 00:01:31.801
+São etapas básicas
+que você repetirá várias vezes
+
+00:01:32.033 --> 00:01:33.200
+quando estiver programando.
+

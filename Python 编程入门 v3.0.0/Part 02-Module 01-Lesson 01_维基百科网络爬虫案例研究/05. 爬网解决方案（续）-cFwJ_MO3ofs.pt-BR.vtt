@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:03.333
+Este código tem a funcionalidade
+que especificamos.
+
+00:00:03.367 --> 00:00:07.100
+Para cada caso em que o programa
+deveria parar o crawl da Wikipédia,
+
+00:00:07.133 --> 00:00:09.900
+temos uma instrução if
+ou elif
+
+00:00:09.933 --> 00:00:12.967
+com uma condição imprimir
+e uma retornar.
+
+00:00:13.001 --> 00:00:16.167
+Se nenhuma delas se aplicar,
+retornaremos "verdadeiro".
+
+00:00:16.200 --> 00:00:19.733
+Este é meu código, e esta não é
+a única forma de se fazer isso.
+
+00:00:19.767 --> 00:00:22.600
+Sua resposta pode ser diferente,
+e está tudo bem.
+
+00:00:22.633 --> 00:00:25.933
+Tem um ponto
+que quero melhorar no código.
+
+00:00:25.967 --> 00:00:31.100
+Aqui delimitei a instrução if
+em 25 passos.
+
+00:00:31.133 --> 00:00:34.933
+Se eu quisesse alterar
+o limite no futuro,
+
+00:00:34.967 --> 00:00:37.200
+eu teria que achar
+esta linha no código
+
+00:00:37.233 --> 00:00:39.633
+e alterá-la manualmente.
+
+00:00:39.667 --> 00:00:42.533
+Isso é o que chamamos
+de "número mágico".
+
+00:00:42.567 --> 00:00:46.467
+Ou seja, é um valor no código
+sem explicação.
+
+00:00:46.500 --> 00:00:48.633
+É melhor evitar
+números mágicos
+
+00:00:48.667 --> 00:00:52.233
+e colocar esse número
+numa variável.
+
+00:00:52.267 --> 00:00:57.100
+Assim o significado de uma variável
+fica muito mais claro
+
+00:00:57.133 --> 00:00:59.600
+e mais fácil de substituir,
+caso seja necessário.
+
+00:00:59.633 --> 00:01:00.733
+Para remover o número,
+
+00:01:00.767 --> 00:01:04.767
+vou acrescentar um argumento
+à função de crawl contínuo:
+
+00:01:04.800 --> 00:01:08.533
+o número máximo
+de passos permitido, "max_steps".
+
+00:01:08.567 --> 00:01:12.100
+Quero manter a funcionalidade
+como antes,
+
+00:01:12.133 --> 00:01:16.533
+então vou atribuir um valor padrão
+ao max_steps de 25.
+
+00:01:16.567 --> 00:01:20.133
+E eu vou substituir
+o "25" no código por "max_steps".
+
+00:01:20.333 --> 00:01:23.467
+Agora, se Philip quiser
+um número diferente de passos,
+
+00:01:23.501 --> 00:01:26.167
+ele pode facilmente mudar
+ao chamar a função.
+
+00:01:26.200 --> 00:01:30.967
+Se ele usar apenas dois argumentos,
+meu padrão de 25 será o limite.
+
+00:01:31.001 --> 00:01:32.001
+*END*
+

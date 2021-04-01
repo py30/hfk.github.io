@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.167
+Vou testar um código de extração
+de link no artigo sobre PICALM,
+
+00:00:03.200 --> 00:00:05.167
+que é uma proteína,
+aparentemente.
+
+00:00:05.200 --> 00:00:09.400
+Vou baixar e fazer a pesquisa
+da HTML neste artigo.
+
+00:00:09.434 --> 00:00:12.534
+Usar a seta para cima
+do teclado me poupa tempo.
+
+00:00:14.200 --> 00:00:17.367
+O 1º link é para o artigo
+"Proteína",
+
+00:00:17.400 --> 00:00:21.067
+mas nosso código
+achou o link para geneontology.org.
+
+00:00:21.100 --> 00:00:23.234
+O que deu errado?
+Vamos pensar.
+
+00:00:40.200 --> 00:00:42.033
+Levei alguns minutos
+pesquisando,
+
+00:00:42.067 --> 00:00:45.434
+mas encontrei o link sobre
+ontologia genética na barra lateral.
+
+00:00:45.467 --> 00:00:47.968
+Quando procurei a tag anchor
+com as ferramentas,
+
+00:00:48.000 --> 00:00:49.934
+vi que era parte
+de um parágrafo
+
+00:00:49.968 --> 00:00:53.601
+e que esse parágrafo era parte
+de uma div que nos interessa.
+
+00:00:53.899 --> 00:00:56.100
+Isso é o que pedimos
+para o Beautiful Soup fazer,
+
+00:00:56.133 --> 00:00:57.801
+mas não é o link
+que queremos.
+
+00:00:57.834 --> 00:01:00.300
+Vamos ver o link
+que nos interessa, "Proteína",
+
+00:01:00.334 --> 00:01:03.000
+para ver por que
+o Beautiful Soup não o achou.
+
+00:01:07.300 --> 00:01:10.734
+O link "Proteína" está
+numa tag parágrafo
+
+00:01:10.767 --> 00:01:13.601
+que, por sua vez,
+
+00:01:13.634 --> 00:01:15.934
+está dentro
+de uma div de conteúdo.
+
+00:01:15.968 --> 00:01:18.868
+Mas este link de "proteína"
+vem de um ponto mais baixo
+
+00:01:18.901 --> 00:01:20.501
+do que a caixa de informação.
+
+00:01:20.534 --> 00:01:24.868
+Mesmo que a caixa esteja
+distante da div, comparada ao link,
+
+00:01:24.901 --> 00:01:26.868
+o Beautiful Soup
+a encontrou primeiro.
+
+00:01:26.901 --> 00:01:29.934
+Esse problema parece mais complicado
+do que esperávamos.
+
+00:01:29.968 --> 00:01:33.167
+Não buscamos apenas
+o 1º link no 1º parágrafo,
+
+00:01:33.200 --> 00:01:35.934
+mas o 1º link,
+no 1º parágrafo
+
+00:01:35.968 --> 00:01:39.567
+que não seja parte de uma caixa
+de informação ou coisa do tipo.
+
+00:01:39.601 --> 00:01:42.065
+Vamos retomar a documentação
+do Beautiful Soup
+
+00:01:42.099 --> 00:01:44.300
+e ver se ela menciona
+algo similar.
+
+00:01:44.334 --> 00:01:45.334
+*END*
+

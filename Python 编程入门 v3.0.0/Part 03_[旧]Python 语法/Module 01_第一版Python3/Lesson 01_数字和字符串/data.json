@@ -1,0 +1,1602 @@
+{
+  "data": {
+    "lesson": {
+      "id": 347314,
+      "key": "2fd50672-c1f9-4013-950e-c53493cb2e67",
+      "title": "数字和字符串",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "大家将在本课学习如何使用 Python 的数字和字符串数据类型。我们将使用内置函数和方法处理此类数据，并将结果存储在变量中。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/2fd50672-c1f9-4013-950e-c53493cb2e67/347314/1516766706691/%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/2fd50672-c1f9-4013-950e-c53493cb2e67/347314/1516766691954/%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 347248,
+          "key": "2e323d45-81da-4ba9-8135-05f6d6c71ec1",
+          "title": "欢迎！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e323d45-81da-4ba9-8135-05f6d6c71ec1",
+            "completed_at": "2018-02-11T15:49:40.221Z",
+            "last_viewed_at": "2018-09-27T09:46:15.468Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346883,
+              "key": "8720f49b-264f-43e2-90e3-eae6d6f16434",
+              "title": "欢迎来到 Python 编程简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IILB-5hIeZM",
+                "china_cdn_id": "IILB-5hIeZM.mp4"
+              }
+            },
+            {
+              "id": 346884,
+              "key": "7c9cc189-eba5-4459-85b5-b472862d99be",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "本课程面向没有编程经验的学员。\n\n如果你是一名经验丰富的程序员，只想加快学习 Python 的进度，可随意跳过本课程中自己认为过于基础性的主题。你可以通过预览第一个实验室来衡量自己的技能。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346885,
+              "key": "d5dafedc-f612-4713-99f8-dc0e11b20614",
+              "title": "我们将学习哪些内容？",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rK6YlbBiKQM",
+                "china_cdn_id": "rK6YlbBiKQM.mp4"
+              }
+            },
+            {
+              "id": 346886,
+              "key": "ba39c19f-15b2-4800-b390-cd1cdac254fd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们将学习哪些内容？\n==============\n\n1. 数字和字符串\n2. 函数、安装和条件\n3. 数据结构和循环\n4. 文件和模块\n5. 维基百科网络抓取案例研究\n6. 异常和对象",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347249,
+          "key": "d54b6078-83f5-49ad-ae48-c5d7214127e6",
+          "title": "算术",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d54b6078-83f5-49ad-ae48-c5d7214127e6",
+            "completed_at": "2018-02-11T15:49:46.233Z",
+            "last_viewed_at": "2018-09-27T09:46:46.246Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346887,
+              "key": "1538f116-be04-4415-9ccb-f8ddd27453fd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "算术运算符\n=================\n\n我们将从数字开始学习 Python。你可以滚动到下方使用代码编辑器来自己尝试这些示例，并点击测试答案按钮来运行代码 ，运行结果将显示在下方的窗口中。在 Python 中，你可以使用基础的数学运算符，Python 将遵循常规数学规则来运行算数计算。\n\n下面是一个 Python 计算：\n\n\n```python\n>>> print(3 + 1)\n4\n```\n\n上面这行代码可以打印出结果 4。我们也可以在不打印的情况下完成该计算，但这样一来就无法看到结果。\n\n```python\n>>> 3 + 1\n```\n\n在这些示例中，`>>>` 是 Python 提示符。我们将使用这个符号来区分输入（提示符后面的内容）与下面一行的输出。\n\nPython 中表示加法和减法的符号就是我们通常使用的 `+` 和 `-`，乘法是星号 `*`（注意，不是 `x`），除法是斜杠 `/`，数学括号是圆括号 `(` 和 `)`。\n在使用 `print` 打印计算结果时，我们也必须在调用内容两侧添加括号，如：\n\n```python\n>>> print(1 + 2 + 3 * 3)\n12\n>>> print((1 + 2 + 3) * 3)\n18\n```\n\n以上代码证明了括号的重要性！\n\n我们也可以使用更高级的运算。比如，你可以用两个星号 `**` 计算出一个数字的乘方。\n\n```python\n>>> print(3**2)\n9\n```\n\n注意：还有一个运算符有时被误认为是幂运算符，即插入符号 `^`，但这并不是某些程序员期望的幂运算。事实上，该符号执行一个更加复杂的运算，也就是[按位异或](https://en.wikipedia.org/wiki/Bitwise_operation#XOR)。如果你习惯于使用插入符号，可能会不小心写错代码，最终导致结果混乱！\n\n另一个有用的运算符号是 `%` —— 即模运算。使用该符号将计算数字一除以数字二的余数，比如：\n\n```python\n>>> print(9 % 2)\n1\n```\n\n你也可以使用符号 `//` 进行整除。它将一个整数除以另一个整数，但并不给出准确结果，而是向下取整返回商的整数部分。（注意：即使答案为负数也可取商的整数部分。）\n\n```python\n>>> print(15 // 4)\n3\n>>> print(16 // 4)\n4\n>>> print(-5//4)\n-2\n```\n\n注意：Python 2 的除法运算 (`/`) 有别于 Python 3。由于该课程主要针对 Python 3，所以我们现在不对这些区别做详细讨论，而是重点学习 Python 3 中的除法运算。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346888,
+              "key": "40e40dd6-733a-4fcb-9852-a0ff85eb1c9e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Arithmetic Playground\n==================\n\n请在下面练习算术运算，以体验 int 型字符（整数）的计算，并使用 `print()` 函数来查看运算结果。\n\n请注意，下方的代码中有一条新的语法，即 \"#\"。\"#\" 后面的文本是一个注释，用于注解其余代码。在运行代码时，Python 解释器会忽略注释，并不执行其中的内容。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346889,
+              "key": "4d1ca028-ede2-47b5-8ac9-4cb9baf3e29c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4d1ca028-ede2-47b5-8ac9-4cb9baf3e29c",
+                "completed_at": "2017-12-01T10:59:04.009Z",
+                "last_viewed_at": "2018-03-23T11:21:18.512Z",
+                "unstructured": "{\"playground.py\":\"print(3+4)\\nprint(3**3)\\nprint(4+3*5)\\nprint(17%3)\\nprint(19//2)\\n#bianliang\\nprint(3+2)\\nprint(3*6)\\nprint(3+9*3)\\nprint(3*(12+3))\\nprint(9/45)\\nprint(45/9)\\nprint(9//3)\\nprint(10/3)\\nprint(10//7)\\nprint(9**3)\\nprint(10**3)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "Arithmetic Playground",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6671975389986816",
+                "initial_code_files": [
+                  {
+                    "text": "# Test this code to see the results, then write your own expressions\nprint(3 + 1)\n\nprint(1 + 2 + 3 * 3)\nprint((1 + 2 + 3) * 3)\nprint(3**2)\nprint(9 % 2)\n",
+                    "name": "playground.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346890,
+              "key": "daae8911-4826-47f1-b98b-8c701eb7515d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：平均电费\n=======\n\n现在我们尝试一下在 Python 中进行数学运算吧！\n\n我在过去三个月的电费分别是 $23、$32 和 $64 。那么我这三个月的平均月电费是多少？请编写一个表达式来计算平均值，并使用 `print()` 查看结果，最后提交答案。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346891,
+              "key": "f4d96240-0622-4493-80de-4a9ea24f1957",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f4d96240-0622-4493-80de-4a9ea24f1957",
+                "completed_at": "2017-12-01T10:59:58.401Z",
+                "last_viewed_at": "2018-03-23T11:23:24.137Z",
+                "unstructured": "{\"electric_average.py\":\"# Write an expression that calculates the average of 23, 32 and 64.\\n# Place the expression in this print statement.\\nprint((23+32+64)/3)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4540677594677248",
+                "initial_code_files": [
+                  {
+                    "text": "# Write an expression that calculates the average of 23, 32 and 64.\n# Place the expression in this print statement.\nprint()",
+                    "name": "electric_average.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346892,
+              "key": "1b97b406-a10d-463e-9dd4-fd443af04777",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "答案：平均电费\n==============",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346893,
+              "key": "29d747ae-cc5c-48f6-8ea5-3bdc6825d7d9",
+              "title": "Python 中的算术表达式",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Iq3ovQqBj1M",
+                "china_cdn_id": "Iq3ovQqBj1M.mp4"
+              }
+            },
+            {
+              "id": 346894,
+              "key": "fb46e1f2-71b1-4584-a8b6-1527f03d7eee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "算术和空格\n======\n\n大家可能已经注意到在 Python 的单行代码中，空格并不会对代码的运行造成影响。例如，\n\n```python\n>>> print(4+5)\n9\n```\n\n\n而以下代码将给出完全相同的输出：\n\n```python\n>>> print (                 4+  5)\n9\n```\n\n但这并不意味着这些代码都一样好。下面是一些有用的写法指导：\n\n* 当调用像 print 这样的函数时，将左括号直接放在函数名称之后，如 `print(8)`。\n* 不要在括号内添加多余空格，应为 `print(3*7)`。\n* 如果将不同优先级的运算符（如乘法和减法）混合在一起，为了使代码更容易阅读，可能需要在较低优先级（本例中为加法和减法）运算符周围添加空格。例如 `1 + 2*3`。\n* 不要使代码行过长，否则会很难理解。人们通常将一行代码的长度限制在 79 或 99 个字符以内。如果你觉得需要编写更长的代码行，请考虑重写并简化代码。\n\n这些规定出自 “Python 开发者指南”，其中包含一个名为 [PEP 8](https://www.python.org/dev/peps/pep-0008/) 的风格指南。如果目前不了解 PEP 8 的所有内容，也不要担心。\n\n为什么这很重要？\n虽然代码格式并不影响其*运行*，但会影响代码*阅读*。遵循代码风格的标准指南有助于使大多数代码更易读。因此，即使你编写的代码只有一行，我们也建议你遵循指南规范。从长远来看，它将帮助你编写可读性更高的代码。在每次学习新内容时，你可以参考 PEP 8，以编写风格规范的 Python 代码。 ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346895,
+              "key": "63ddf952-54a8-4f67-b42e-ee42cc4be3f5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：计算和格式\n====\n在这个练习中，大家将帮助一个泥瓦工进行计算。他需要为地板的两个部分铺上瓷砖，一部分是** 9 砖宽， 7 砖长**，另一部分是**5 砖宽， 7 砖长**，而一包瓷砖装有 6 片砖。\n\n1. 这个泥瓦工一共需要多少片瓷砖？\n2. 他购买了** 17 包瓷砖，每包装有 6 片瓷砖**，最后还能剩下多少片瓷砖？\n\n编写代码时，请注意遵循上面提到的格式指南。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346896,
+              "key": "30bdc63a-3ca3-4690-87b3-86d3b2584319",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "30bdc63a-3ca3-4690-87b3-86d3b2584319",
+                "completed_at": "2017-12-01T11:03:12.782Z",
+                "last_viewed_at": "2018-03-23T11:35:32.401Z",
+                "unstructured": "{\"tiles.py\":\"# Fill this in with an expression that calculates how many tiles are needed.\\nprint((9*7)+(5*7))\\n\\n# Fill this in with an expression that calculates how many tiles will be left over.\\nprint((17*6)-(9*7+5*7))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6584147469533184",
+                "initial_code_files": [
+                  {
+                    "text": "# Fill this in with an expression that calculates how many tiles are needed.\nprint()\n\n# Fill this in with an expression that calculates how many tiles will be left over.\nprint()",
+                    "name": "tiles.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689256,
+              "key": "9601ba44-5d28-49d2-8d12-237b115bb9ea",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 答案：计算与格式\n\n```\nprint(9*7 + 5*7)\n\nprint((17*6) - (9*7 + 5*7))\n```\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346897,
+              "key": "daf6738c-2deb-4d46-882f-b03f10d3683f",
+              "title": "代码格式",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "daf6738c-2deb-4d46-882f-b03f10d3683f",
+                "completed_at": "2017-12-01T11:04:21.641Z",
+                "last_viewed_at": "2018-03-23T11:37:53.336Z",
+                "unstructured": "{\"selected_ids\":[\"a1483472071150\",\"a1483472087692\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "下面哪一行代码的格式是正确的？你将如何改善格式杂乱的代码？",
+                "answers": [
+                  {
+                    "id": "a1483472039425",
+                    "text": "`print(((3+  32))+ -15//2)`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483472071150",
+                    "text": "`print((17 - 6)%(5 + 2))`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483472086944",
+                    "text": "`print ((1 + 2 + 4) / 13)`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483472087692",
+                    "text": "`print(4/2 - 7*7)`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347250,
+          "key": "af42c328-a565-4043-a9da-17b7bbb82352",
+          "title": "整数和浮点数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "af42c328-a565-4043-a9da-17b7bbb82352",
+            "completed_at": "2018-02-11T15:49:47.464Z",
+            "last_viewed_at": "2018-09-27T09:47:19.053Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346898,
+              "key": "76c07d0e-b851-4887-9868-4c0a4ae662b6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "整数和浮点数\n======\n到目前为止，我们看到的所有数值例子都是整数，即 int 型。但实际上 Python 中还存在其他数值类型，我们需要学习如何使用它们进行计算，以及如何在 Python 中生成它们。\n\n```python\n>>> print(3/4)\n0.75\n```\n\n在上面这个示例中，我们使用一个整数除以另一个整数，而得到的结果并不是整数，即 0.75。在 Python（和一般计算）中，我们将此类数字称为**浮点数**（float），其英文全称是 **floating-point number**。\n\n即使一个整数可以整除另一个整数，其结果也将是一个浮点数，比如：\n\n```python\n>>> print(16/4)\n4.0\n```\n\n[注意：我们课程中用到的是 Python 3。目前常用的 Python 有两种版本，即 Python 2 和 Python 3。在 Python 2 中，一个整数除以另一个整数将产生一个 `int`，即使预期的结果不是整数！Python 2 的这个概念与 Python 3 中的整数除法 (`//`) 类似。]\n\n一个整数和一个浮点数的运算将生成一个浮点数，比如：\n\n```python\n>>> 3 + 2.5\n5.5\n```\n\n要生成一个整数，只要给出一个没有小数点的整数即可。下面是一个整数：\n```python\n>>> 387\n```\n如果需要生成一个浮点数，添加一个小数点即可！即使数字本身是一个整数也没有关系，你甚至不必在小数点之后添加任何内容。下面是几个浮点数：\n\n```python\n>>> 213.13\n>>> 341.\n```\n有时我们可能需要手动将一个数值类型转换为另一个数值类型，要想实现这一点，你可以通过 `int()` 和 `float()` 来构造这些类型的新对象，比如：\n\n```python\n>>> int(49.7)\n49\n>>> int(16/4)\n4\n>>> float(3520+3239)\n6759.0\n```\n\n将一个浮点数转换成整数时，小数点后的部分会被去除。\n\n所以我们看到 Python 具有两个主要的数值**类型** —— 整数 (int) 和浮点数 (float)。那么这两种数值类型有什么用处呢？\n\n* int —— 大家可能经常需要对物品进行计数，或者需要一个整数的计算结果。int 类型在这方面正好可以派上用场。\n* float —— 如果你正在使用的数字不一定是一个整数，那么 float 可能就是你需要的类型！\n\n浮点数是它们所表示的数字的**近似值**。了解这一点十分重要，因为浮点数可以表示很大范围内的数字，因此为了在计算机内存中存储数字，Python 必须使用近似值。这有时会产生惊人的结果：\n\n```python\n>>> print(0.1)\n0.1\n>>> print(0.1 + 0.2)\n0.30000000000000004\n```\n因为 `0.1` 的浮点数（即近似值）实际上略超过 0.1，所以当我们将其中几个值加到一起时，可以看到数学上的正确答案与 Python 输出的答案之间的区别。在大多数情况下，这些小差异无关紧要，但了解这些差异的存在十分必要！\n\n如果你想更加深入地了解差异的原因，可以查看 Python [官方文档](https://docs.python.org/3/tutorial/floatingpoint.html)中的解释，你也可以参考这个[中文博客](https://www.cnblogs.com/mooncher/p/5145571.html)。简单来说，是因为 Python 是二进制的系统。二进制中，1/2、1/4 和 1/8 都可以被精确表示。但是，1/5 或者 1/10 就变成了循环小数。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346899,
+              "key": "fac02264-315d-4ab1-8ac5-6d5c4ed1e8d1",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fac02264-315d-4ab1-8ac5-6d5c4ed1e8d1",
+                "completed_at": "2017-12-01T11:07:00.381Z",
+                "last_viewed_at": "2018-03-23T11:42:44.259Z",
+                "unstructured": "{\"selected_ids\":[\"a1490717693610\",\"a1490717762760\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "在捕鱼时，你可能会接触到下面这些数值，其中一些数值的类型为 `int`，一些类型为 `float`。请选出所有 `float` 类型的选项",
+                "answers": [
+                  {
+                    "id": "a1490717598573",
+                    "text": "有多少人参加此次捕鱼活动？",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490717693610",
+                    "text": "你捕获的鱼的长度，单位：米。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490717706252",
+                    "text": "捕获的鱼数量。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490717762760",
+                    "text": "捕获第一条鱼所用的时间，单位：小时。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347251,
+          "key": "148a5f6d-4f16-489f-9b6e-3452ee4cf3e8",
+          "title": "错误",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "148a5f6d-4f16-489f-9b6e-3452ee4cf3e8",
+            "completed_at": "2017-12-06T15:10:57.190Z",
+            "last_viewed_at": "2018-09-27T09:47:35.973Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346900,
+              "key": "516fc59f-8036-424a-b6fc-5002ee8c35d7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "除以零？\n==========\n\n如果在 Python 中把一个数字除以零，会出现什么结果？试试看！试着运行此代码，看看会出现什么结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346902,
+              "key": "444421c5-3cef-4985-80e7-3e1656adf9ab",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "444421c5-3cef-4985-80e7-3e1656adf9ab",
+                "completed_at": "2017-12-01T11:07:26.093Z",
+                "last_viewed_at": "2018-03-23T11:43:19.521Z",
+                "unstructured": "{\"quiz.py\":\"print(5/0)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "Divide by Zero",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6644924880650240",
+                "initial_code_files": [
+                  {
+                    "text": "print(5/0)",
+                    "name": "quiz.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346901,
+              "key": "48bc440e-85ba-4ca4-99d1-0a4713c63fd8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是提交答案时出现的内容：\n\n```text\nTraceback (most recent call last):\n  File \"/tmp/vmuser_ysnciqgdfu/quiz.py\", line 1, in <module>\n    print(5/0)\n\nZeroDivisionError: division by zero```\n\nTraceback（回溯）表示“程序出错停止时正在执行的内容”，这正是上面几行信息的内容。 由于错误内容出现在最近的代码中，我们可以从最后开始分析这段错误信息。此外，回溯中还提到了一个命名奇怪的文件 \"vmuser_ysnciqgdfu/divzero.py”，这是上述 Python 程序的文件名。\n\n最后一行是错误信息，它可以描述出了什么问题，但有些描述并不清晰。如果你无法明白错误信息，可以上网搜索错误信息的原文，这将帮助你理解问题。\n\n示例中的错误信息帮我们找到了错误的原因：即 ZeroDivisionError，信息提示我们除以零（或者试图对 0 进行模运算）。Python 确实在执行运算规则！\n\n而上一行显示了出错的部分 —— 即 5/0 所在行，甚至还提供了行号，因此我们很容易找到错误根源并解决问题。\n现在我们可以返回并解决这个问题 —— 除以零除外的数字，这是否能消除错误呢？\n\n有时候你会在错误信息中看到 'Exception' 这个词，异常（Exception）是在代码运行时出现的问题，而 'Syntax Error' 是 Python 在运行程序之前，进行代码检查时发现的问题。\n有关更多信息，请参阅 Python 教程页面上的 [错误和异常](https://docs.python.org/3/tutorial/errors.html)。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347256,
+          "key": "a71c2b58-6062-46b5-9a56-be610ec0a175",
+          "title": "变量 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a71c2b58-6062-46b5-9a56-be610ec0a175",
+            "completed_at": "2017-12-06T15:11:02.158Z",
+            "last_viewed_at": "2018-09-27T09:48:50.881Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346923,
+              "key": "1ed8d65c-a415-4aaa-ae85-6b49ab0c4437",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Python 完全可以进行算术运算，但变量的使用使 Python 不仅仅是一个计算器。\n\n我们将在这部分课程中学习关于变量的内容。我们将使用马尼拉（Manila，菲律宾首都）的人口数据进行一些计算，并使用变量完成这些计算。使用变量（相对于使用原始数字进行计算）具有许多优点，比如我们可以更高效地说明数据的转换，我们将在后面的内容中体验这一优点。现在先开始计算吧！\n\n在 Python 中创建一个新变量很简单，我们这里创建了一个表示马尼拉人口的变量。\n\n```python\n>>> manila_pop = 1780148\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346924,
+              "key": "41c32777-5403-4912-abcc-a9c9ea47e74c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/586c1a18_l1-diagrams.001/l1-diagrams.001.jpeg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/41c32777-5403-4912-abcc-a9c9ea47e74c",
+              "caption": "\n此示例中的变量名为 `manila_pop`。等号 `=` 是赋值运算符。变量 `manila_pop` 的值为 1780148。\n",
+              "alt": null,
+              "width": 621,
+              "height": 216,
+              "instructor_notes": null
+            },
+            {
+              "id": 346925,
+              "key": "227395fd-d26d-4a46-9264-b7ff624da77f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "赋值和打印变量\n========\n\n该赋值表达式的顺序非常重要！我们应始终按照相同的顺序，即变量名 = 值。左侧的变量名是右侧表达式给出值的名称。赋值运算符 `=` 将右侧的值赋给左侧的变量名。（注意，这与数学中的表达式不同，在数学表达式中`x = y` 等同于 `y = x`）\n\n请注意，Python 中没有某些语言中关于变量赋值的关键字，无需指定变量的类型 ，只需直接使用等号为变量赋值即可。\n\n如果要访问该值，仅需使用变量名。例如，我们可以将它打印出来：\n\n```python\n>>> print(manila_pop)\n1780148\n```\n\n\n我们在这节课中多次使用了 `print` 函数。当需要知道某个变量的值是什么时，只用简单地 `print` 这个变量即可。如果没有 `print`，Python 中发生的事情只会停留在 Python 内部。在大多数情况下，Python 程序中的大部分内容都在内部运行，数据只是被使用或传递，直到用户需要看到某些结果的时候为止。`print` 有助于大家看到正在执行的内容，这对出现问题时的调试非常有用。\n\n`print` 是 Python 的一个内置函数，大家将在后面遇到更多内置函数。Python 中的函数调用始终带有一对括号，如果有参数，那么参数放在括号内。\n所以 `print` 函数的语法需要一对括号，并将参数放在括号内。如大家所见，如果在括号里放置的是一个变量，那么打印的结果就是该变量的值，而不是变量的名称。\n\n注意：在 Python 2 中打印时不需要使用括号，但是在 Python 3 中需要，所以请勿忘记括号！\n\n```python\n>>> print manila_pop\n  File \"<stdin>\", line 1\n    print manila_pop\n                    ^\nSyntaxError: Missing parentheses in call to 'print'\n```\n\n这里出现了一个 SyntaxError（语法错误），这是关于错误原因的明确信息。在学习的过程中，你可能会经常犯类似的错误，而使用错误信息将有助于改正错误。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346926,
+              "key": "dd18b53e-1585-4f71-9f74-f5394cc85f55",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "名称中出现了哪些错误？\n========\n\n我们一直在研究马尼拉的人口，但是假如我们真的想了解人口密度，那么首先需要创建一个作为计算结果的变量。\n\n```python\n>>> manila_pop = 1780148\n>>> manila_pop_density = manila_pop / manila_area\nNameError: name 'manila_area' is not defined\n```\n\n呃哦 —— 好像又出错了。到底怎么回事？\n好吧，我试着除以变量 `manila_area`，但还没有将其作为变量名并给它进行赋值，所以导致了一个 NameError。错误信息中清楚说明了问题出在是名称的部分。如果你要使用变量名，首先必须为其赋值！\n\n现在我再试一次：\n\n```python\n>>> manila_pop = 1780148\n>>> manila_area = 16.56\n>>> manila_pop_density = manila_pop/manila_area\n>>> print(manila_pop_density)\n107496.85990338166\n```\n\n这次没有出现 NameError，并且我们成功计算了马尼拉的人口密度。马尼拉地区的面积为 16.56 平方英里，人口密度是每平方英里的人口数。\n\n给变量命名时，需要注意以下几点：\n* 有一些不能用于变量名的保留字，如 `False` 和 `class`，这些词汇在 Python 中有重要的作用。[保留字列表见此](https://docs.python.org/3/reference/lexical_analysis.html#keywords)。尝试为某个保留字赋值将导致一个 `SyntaxError`。\n* 变量名中只能使用普通字母、数字和下划线，且以字母或下划线开头。\n* 虽然在变量名中使用任何内置的标识符不会立即导致错误，但我们也不建议你使用。例如，为 `int` 赋值时不会引发错误，但当你想要将某数字转换成整数时，一定会出现问题。\n```python\n>>> int = 7\n>>> int(3.0)\nTypeError: 'int' object is not callable\n```\n* 最好使用英文单词作为变量名，并尽可能地描述变量内容。如果你想要一个多词变量名，请使用下划线分隔单词。例如 `coconut_counter = 2`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346927,
+              "key": "355314db-6505-4fb2-8886-a2d85b043430",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "再次给一个变量赋值！\n===============\n\n我们已经将 `manila_pop` 变量设置为马尼拉的人口，即 1780148。但如果马尼拉的人口出现变化，我们可以更新人口数据吗？人口现在达到了 1781573。我们可以通过为同一个变量名重新赋值来更新 Python 中存储的数据，这将改变该变量的值。\n\n```python\n>>> manila_pop = 1781573\n>>> print(manila_pop)\n1781573\n```\n\n这样一来，旧数据已经被遗忘，取而代之的是 `manila_pop` 的新值。\n\n我们也可以使用另一种方式，使用 Python 计算来更新数值。假设这个城市新增了 1675 个人，减少了 250 个人。我们可以在 Python 中通过计算求出新值，并在同一步中为变量赋值。\n\n```python\n>>> manila_pop = 1780148\n>>> print(manila_pop)\n1780148\n```\n\n```python\n>>> manila_pop = manila_pop + 1675 - 250\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346928,
+              "key": "412ee393-5d53-4caa-be55-0032be58ce24",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/586c1c64_l1-diagrams.002/l1-diagrams.002.jpeg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/412ee393-5d53-4caa-be55-0032be58ce24",
+              "caption": "位于等号左侧的变量 `manila_pop`，被赋值为整个右侧表达式的值。等号的右侧是表达式 `manila_pop + 1675 - 250`。所以 `manila_pop` 的当前值为 1780148。\n",
+              "alt": null,
+              "width": 783,
+              "height": 334,
+              "instructor_notes": null
+            },
+            {
+              "id": 346929,
+              "key": "a444f3ad-6dcf-4726-9976-925ae1daa1b5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "再次赋值的结果\n===============\n\n我们现在可以检查输出：\n\n```python\n>>> print(manila_pop)\n1781573\n```\n\n在数学计算中， `manila_pop = manila_pop + 1675 - 250` 这条赋值语句是完全错误的，因为变量名 `manila_pop` 同时位于等号的两边。但由于等号 `=` 在 Python 中用于赋值，所以这行代码在 Python 中可以正常运行。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346930,
+              "key": "6fab6bdf-8d82-4b28-931d-457cddd9c012",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "重新赋值运算符\n===========\n\n由于这种增量和重新赋值的运算非常普遍，Python 中也包括专门用于重新赋值运算的特殊运算符：\n\n```python\n>>> manila_pop += 1675 # increase the value of manila_pop by 1675\n>>> manila_pop -= 250 # decrease the value of manila_pop by 250\n>>> manila_pop *= 0.9 # decimate manila_pop\n>>> manila_area /=  2 # half the area of Manila```\n\n`manila_pop += 1675` 是 `manila_pop = manila_pop + 1675` 的简写。其他重新赋值运算符也是相同的模式。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346931,
+              "key": "4aa292cb-8993-4906-8b85-d43bbd78df69",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：赋值和修改变量\n==========\n现在该你来尝试一下使用变量了，该练习中的注释（以 `#` 开头的代码行）具有创建和修改变量的说明。请在每条注释后，编写代码来实现注释要求的指令。\n\n请注意，此代码使用[科学计数法](https://en.wikipedia.org/wiki/Scientific_notation)来表示数值极大的数字。`4.445e8` 等于 `4.445 * 10 ** 8`，也等于 `444500000.0`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346932,
+              "key": "84f218d7-440f-407b-a174-02f17860018d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "84f218d7-440f-407b-a174-02f17860018d",
+                "completed_at": "2017-11-14T11:00:37.594Z",
+                "last_viewed_at": "2018-03-23T12:18:48.589Z",
+                "unstructured": "{\"variables.py\":\"# The current volume of a water reservoir (in cubic metres)\\nreservoir_volume = 4.445e8\\n# The amount of rainfall from a storm (in cubic metres)\\nrainfall = 5e6\\n\\n# decrease the rainfall variable by 10% to account for runoff\\nrainfall = rainfall - rainfall*0.1\\n# add the rainfall variable to the reservoir_volume variable\\nreservoir_volume += rainfall\\n# increase reservoir_volume by 5% to account for stormwater that flows\\n# into the reservoir in the days following the storm\\nreservoir_volume *= 1.05\\n# decrease reservoir_volume by 5% to account for evaporation\\nreservoir_volume *= 0.95\\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\\n# that's piped to arid regions.\\nreservoir_volume -= 2.5e5\\n# print the new value of the reservoir_volume variable\\nprint(reservoir_volume)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "赋值和修改变量",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5381872172531712",
+                "initial_code_files": [
+                  {
+                    "text": "# The current volume of a water reservoir (in cubic metres)\nreservoir_volume = 4.445e8\n# The amount of rainfall from a storm (in cubic metres)\nrainfall = 5e6\n\n# decrease the rainfall variable by 10% to account for runoff\n\n# add the rainfall variable to the reservoir_volume variable\n\n# increase reservoir_volume by 5% to account for stormwater that flows\n# into the reservoir in the days following the storm\n\n# decrease reservoir_volume by 5% to account for evaporation\n\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\n# that's piped to arid regions.\n\n# print the new value of the reservoir_volume variable\n",
+                    "name": "variables.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347252,
+          "key": "4dbaf9fa-31f5-46b2-b982-cfdc00d39fc4",
+          "title": "变量 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4dbaf9fa-31f5-46b2-b982-cfdc00d39fc4",
+            "completed_at": "2017-12-06T15:11:26.212Z",
+            "last_viewed_at": "2018-09-27T09:48:17.815Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346903,
+              "key": "d69d3416-70f2-4e6a-8f3b-fbd0099f819b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习答案：赋值和修改变量\n=====\n以下是我们对之前练习提供的答案：\n```python\n# The current volume of a water reservoir (in cubic metres)\nreservoir_volume = 4.445e8\n# The amount of rainfall from a storm (in cubic metres)\nrainfall = 5e6\n\n# decrease the rainfall variable by 10% to account for runoff\nrainfall *= .9\n\n# add the rainfall variable to the reservoir_volume variable\nreservoir_volume += rainfall\n\n# increase reservoir_volume by 5% to account for stormwater that flows\n# into the reservoir in the days following the storm\nreservoir_volume *= 1.05\n\n# decrease reservoir_volume by 5% to account for evaporation\nreservoir_volume *= 0.95\n\n# subtract 2.5e5 cubic metres from reservoir_volume to account for water\n# that's piped to arid regions.\nreservoir_volume -= 2.5e5 \n\n# print the new value of the reservoir_volume variable\nprint(reservoir_volume)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346904,
+              "key": "70a1099e-98af-4d61-a0c3-55af2c7982d3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "多重赋值\n============\n我们也可以在一行代码中同时为两个变量赋值：\n\n```python\n#These two assignments can be abbreviated\nsavings = 514.86\nsalary = 320.51\n\n#Using multiple assignment\nsavings, salary = 514.86, 320.51\n```\n\n第一个变量被赋值为 `=` 之后的第一个值，第二个变量则接收第二个值。对于两个紧密相关的变量，如某物体的宽度和高度、或某物体的 x 轴和 y 轴坐标，在进行赋值时我们可以使用多重赋值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346905,
+              "key": "b4aac815-6ff2-43b8-be5b-0ebae238ea42",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "更改变量\n==========\n当我们更改一个变量时，会对另一个根据其定义的变量造成怎样的影响？我们来看一个例子。\n\n以下是马尼拉人口和人口密度的初步数据。\t\n\n```python\n>>> manila_pop = 1780148\n>>> manila_area = 16.56\n>>> manila_pop_density = manila_pop/manila_area\n>>> print(int(manila_pop_density))\n107496\n```\n\n现在我们重新定义 `manila_pop` 变量：\n```python\n>>> manila_pop = 1781573\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346906,
+              "key": "3813b303-5f5d-4ce6-a68d-76e0864b9722",
+              "title": "变量更改",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3813b303-5f5d-4ce6-a68d-76e0864b9722",
+                "completed_at": "2017-10-06T15:01:17.190Z",
+                "last_viewed_at": "2018-03-24T10:50:24.068Z",
+                "unstructured": "{\"selected_id\":\"a1483481341200\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "根据上面的代码，猜测这个表达式的输出是什么。\n```python\t\n>>> print(int(manila_pop_density))\t\n```",
+                "answers": [
+                  {
+                    "id": "a1483481276199",
+                    "text": "107448",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483481341200",
+                    "text": "107496",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483481341949",
+                    "text": "107582",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483481342723",
+                    "text": "108496",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346907,
+              "key": "50a63741-1059-4e4f-9cc4-1b07027b4d82",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "正确的答案是 `int(manila_pop_density)` 的值没有改变。这是因为一个变量被赋值时，其被赋予的是*右侧表达式的值*，而不是表达式本身。在代码行\t\n```python\t\n>>> manila_pop_density = manila_pop/manila_area\t\n```\t\nPython 实际上是计算右侧表达式 `manila_pop/manila_area`，然后将该表达式的值赋值给变量 `manila_pop_density`。在将表达式的结果赋值之后，它将马上忘记这个公式。\n要依据 `manila_pop` 更新 `manila_pop_density` 的值，我们需要再次运行这行代码：\n```\t\n>>> manila_pop_density = manila_pop/manila_area\t\n>>> print(int(manila_pop_density))\t\n107582\n```\t\n这就是考虑到人口新增和减少之后的新人口密度 —— 为了考虑到这一点，我们已经更新了所有变量。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347253,
+          "key": "3f30cb17-ec1a-4291-92d4-bf31a86ef10e",
+          "title": "比较运算符",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3f30cb17-ec1a-4291-92d4-bf31a86ef10e",
+            "completed_at": "2017-12-06T15:10:29.433Z",
+            "last_viewed_at": "2018-09-27T09:49:24.286Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346908,
+              "key": "b21c9638-a258-4417-b48b-f3c552351846",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "布尔值和比较运算符\n==============\n\n到目前为止，我们已经学习了两种类型的数值，整数与浮点数，而且我们使用算术运算符（如 `+` 和 `**`）来计算这些数值。而我们现在要学习的数值类型是 `bool`，它用于表示 True 和 False 值。\"bool\" 是 \"boolean\" 的缩写。[布尔代数](https://en.wikipedia.org/wiki/Boolean_algebra)是代数的一个分支，用于处理值为 True 或 False 的变量。布尔代数以其发明人 [George Boole](https://en.wikipedia.org/wiki/George_Boole) 的名字命名。\n\n我们可以这样将布尔值赋给变量：\n\n```python\n>>> the_sun_is_up = True\n>>> the_sky_is_blue = False\n```\n单看这两个句子并不直观。我们可以使用 `<` 和 `>` 等比较运算符来比较值，这将产生一个布尔值结果：\n\n```python\n>>> print(1 < 2)\nTrue\n>>> print(42 > 43)\nFalse\n```\n以下是比较运算符：\n\n| **运算符名称** | **符号** |\n|---------------|---------|\n| 小于          |   `<`    |\n| 大于          |   `>`    |\n|小于等于       |   `<=`   |\n|大于等于       |   `>=`   |\n| 等于          |   `== `  |\n| 不等于        |   `!=`   |\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346909,
+              "key": "984289ed-cb10-45b9-bc86-7a4fe7bacf1a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：里约热内卢和旧金山相比，哪个城市的人口密度更高？\n=================\n\n请在这个练习中尝试使用比较运算符！下面的代码计算了里约热内卢和旧金山的人口密度。\n\n请编写代码来比较这些密度。旧金山的人口密度比里约热内卢更高吗？如果是，请打印 `True`，否则打印 `False`。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346910,
+              "key": "6b9fee7b-4d7d-4d82-a55c-1593535926bb",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "6b9fee7b-4d7d-4d82-a55c-1593535926bb",
+                "completed_at": "2017-10-06T15:04:10.634Z",
+                "last_viewed_at": "2018-03-24T12:36:14.551Z",
+                "unstructured": "{\"CompareDensities.py\":\"sf_population, sf_area = 864816, 231.89\\nrio_population, rio_area = 6453682, 486.5\\n\\nsan_francisco_pop_density = sf_population/sf_area\\nrio_de_janeiro_pop_density = rio_population/rio_area\\n\\n# Write code that prints True if San Francisco is denser than Rio, and False otherwise\\nprint (san_francisco_pop_density > rio_de_janeiro_pop_density)\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6704584660746240",
+                "initial_code_files": [
+                  {
+                    "text": "sf_population, sf_area = 864816, 231.89\nrio_population, rio_area = 6453682, 486.5\n\nsan_francisco_pop_density = sf_population/sf_area\nrio_de_janeiro_pop_density = rio_population/rio_area\n\n# Write code that prints True if San Francisco is denser than Rio, and False otherwise\n",
+                    "name": "CompareDensities.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689258,
+              "key": "67e9ecbd-3260-4f06-930b-65083690a54b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 答案：\n\n```\nprint(san_francisco_pop_density > rio_de_janeiro_pop_density)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346911,
+              "key": "611e80cc-aae4-40de-b812-b966371c1456",
+              "title": "为什么用 `==`？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "611e80cc-aae4-40de-b812-b966371c1456",
+                "completed_at": "2017-10-06T15:04:35.362Z",
+                "last_viewed_at": "2018-03-24T11:28:57.183Z",
+                "unstructured": "{\"selected_id\":\"a1483482303034\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "你认为为什么 Python 使用 `==` 检查相等性，而不是使用 `=`？",
+                "answers": [
+                  {
+                    "id": "a1483482240115",
+                    "text": "因为这有两个字符长，跟 `!=` 类似",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483482303034",
+                    "text": "因为 `=` 用于变量赋值",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483482303730",
+                    "text": "`=` 和 `==` 都可以",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483482304458",
+                    "text": "因为 `=` 用于检查两个值是否大约相等",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347254,
+          "key": "ad93521f-cb0a-4c66-9191-2b2141b73b0a",
+          "title": "字符串",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ad93521f-cb0a-4c66-9191-2b2141b73b0a",
+            "completed_at": "2018-02-11T15:49:18.121Z",
+            "last_viewed_at": "2018-09-27T09:49:46.528Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346912,
+              "key": "81a41d7e-b86a-4306-8ec7-8857f78546de",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字符串和文本\n==========\n编程不仅涉及数字和算术，有时还需要处理文本。为了在 Python 中使用文本，我们需要借助于 `string`（字符串），它表示一个字符的序列。字符串是文本的一种呈现类型。\n\n**注意：**如果大家之前编写过代码，那么可能对字符串的概念并不陌生。但除非你非常了解 Python 的字符串，否则仍需要仔细学习这一部分课程，因为在不同的编程语言中，字符串运行的规则也不相同。\n\n我们可以使用引号创建一个字符串，单引号或双引号均可。\n```python\n>>> print(\"hello\") #used double-quotes here\nhello\n>>> print ('hello') #used single-quotes on this one\nhello\n```\n在上面这个例子中，我分别使用了单引号和双引号来打印字符串 `\"hello\"`，并且都得到了输出 `hello`。\n\n我们可以采用与数字相同的方式将变量设置为一个字符串。字符串可以包括任何字符，甚至是空格、标点符号和数字。\n\n```python\n>>> welcome_message = \"Hello, welcome to Udacity!\"\n>>> print(welcome_message)\nHello, welcome to Udacity!\n```\n\n尽管字符串不是数字，但有一些适用于整数和浮点数的运算也同样适用于字符串。例如，我们可以使用 `+` 来将字符串放在一起，这被称为*连接*字符串。\n\n```python\n>>> instructor_1 = \"Philip\"\n>>> instructor_2 = \"Charlie\"\n>>> print(instructor_1 + instructor_2)\nPhilipCharlie\n```\n\n在上面这个例子中，有两个储存导师姓名的变量。我们使用 `+` 将两个字符串连接在一起并打印，但这与数字的加法有本质区别。\n但你还需要注意的是，我们在这里打印出的两个姓名连在一起，中间没有空格。在使用字符串时，Python 将完全遵循字面形式。因此，如果你希望你编写的内容具有意义，就需要在代码内明确添加空格和标点符号。\n\n```python\n>>> instructor_1 = \"Philip\"\n>>> instructor_2 = \"Charlie\"\n>>> print(instructor_1 + \" and \" + instructor_2)\nPhilip and Charlie\n```\n\n这次我们得到了一个有意义的字符串，成功将两位导师的姓名连在一起。请注意，中间加入的字符串 `and` 前后都有一个空格，以便留出适当的间距。\n\n这样看来，使用 `+` 运行字符串似乎可行。现在我们来试试另一个数学运算：\n\n```python\n>>> print(instructor_1 / instructor_2)\nTypeError: unsupported operand type(s) for /: 'str' and 'str'\n```\n\n请注意，这里出现了一种新错误！运算符 `/` 不适用于字符串 (`str`) 类型。这样可再好不过了，因为我不想看到两个导师相除时出现混乱的场面！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346913,
+              "key": "2cadbc57-e4cb-468f-ac2d-c86f84a91165",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "引号中的引号\n=========\n\n使用引号来定义字符串将会导致一个问题：我们该如何定义一个含有引号的字符串？下面这行代码无法运行，因为字符串本身含有一个引号：\n\n```text\npet_halibut = \"Why should I be tarred with the epithet \"loony\" merely because I have a pet halibut?\"\n```\n\nPython 为这个问题提供了两个解决方案。一是将字符串放在单引号 (`'`)，而不使用双引号 (`\"`) ，如下所示：\n\n```python\npet_halibut = 'Why should I be tarred with the epithet \"loony\" merely because I have a pet halibut?'\n```\n\n大家也可以使用另一种类型的引号来定义字符串。但有时候我们也需要定义一个同时包含单引号和双引号的字符串，那应该怎么办呢？在出现这种情况时，我们可以使用一个反斜杠 `\\` 来转义引号。例如：\n\n```python\nsalesman = '\"I think you\\'re an encyclopaedia salesman\"'\n```\n在这个例子里，我们在定义字符串时使用了单引号，同时在字符串中的单引号前加上了一个反斜杠，因此 Python 知道应该将这个单引号解释为字符串的一部分，而不是结束字符串的引号。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346914,
+              "key": "1fba22e7-bd82-4323-bd08-69c475edf5f1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：修复引号\n===============\n在下方练习的代码中，由于引号使用不当导致了语法错误。请你使用“测试答案”来运行代码，查看错误信息，并为变量 `messiah` 选择正确的引号来修改这个错误。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346915,
+              "key": "288f0a19-f3bd-4d5d-9f60-ee23a76fc48c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "288f0a19-f3bd-4d5d-9f60-ee23a76fc48c",
+                "completed_at": "2017-12-01T11:17:52.349Z",
+                "last_viewed_at": "2018-03-24T11:51:04.047Z",
+                "unstructured": "{\"quotes.py\":\"# TODO: Fix this string!\\nford_quote = 'Whether you think you can, or you think you can\\\\'t--you\\\\'re right.'\\nprint (ford_quote)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5795315119685632",
+                "initial_code_files": [
+                  {
+                    "text": "# TODO: Fix this string!\nford_quote = 'Whether you think you can, or you think you can't--you're right.'",
+                    "name": "quotes.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689259,
+              "key": "3a879203-4f04-49e4-86ad-63c6b09d6bae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 答案：\n\n1. 双引号解决方案：\n```\nford_quote = \"Whether you think you can, or you think you can't--you're right.\"\n```\n\n2. 反斜杠解决方案：\n```\nford_quote = 'Whether you think you can, or you think you can\\'t--you\\'re right.'\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346916,
+              "key": "3574860e-c744-472e-b7cc-081b6efa008c",
+              "title": "数字字符串",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3574860e-c744-472e-b7cc-081b6efa008c",
+                "completed_at": "2017-12-01T11:18:50.803Z",
+                "last_viewed_at": "2018-03-12T01:34:51.274Z",
+                "unstructured": "{\"selected_id\":\"a1483483732917\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们已经看到，对象的类型会影响运算符的意义。那么下面这段代码的输出是什么？\n\n```python\ncoconut_count = \"34\"\nmango_count = \"15\"\ntropical_fruit_count = coconut_count + mango_count\nprint(tropical_fruit_count)\n```",
+                "answers": [
+                  {
+                    "id": "a1483483707678",
+                    "text": "49（并且 Tropical_fruit_count 是一个字符串）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483483732175",
+                    "text": "49（并且 Tropical_fruit_count 是一个整数）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483483732917",
+                    "text": "3415（并且 Tropical_fruit_count 是一个字符串）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483483733666",
+                    "text": "3415（并且 Tropical_fruit_count 是一个整数）",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346917,
+              "key": "52f1a7a2-9412-492c-88de-e0e811a985d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：编写服务器日志信息\n=============\n\n在下面这个编程练习中，大家将使用我们刚刚学习的关于字符串的内容来编写服务器日志信息。\n\n我们将为大家提供用户的示例数据、访问时间和访问的网站。你们应该使用所提供的变量和所学技巧打印如下所示的日志消息（用相应变量的值替换用户名、url 和时间）：\n\n `Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.`\n\n在编写代码时，你可以随时使用“测试答案”按钮查看代码的运行结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346919,
+              "key": "5b17cf9c-599c-4f3d-8260-f4b39cf76f76",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5b17cf9c-599c-4f3d-8260-f4b39cf76f76",
+                "completed_at": "2017-12-01T11:21:56.653Z",
+                "last_viewed_at": "2018-03-29T11:41:23.187Z",
+                "unstructured": "{\"Logs.py\":\"username = \\\"Kinari\\\"\\ntimestamp = \\\"04:50\\\"\\nurl = \\\"http://petshop.com/pets/mammals/cats\\\"\\n\\n# TODO: print a log message incorporating the strings above.\\n# The message should be use the same format as this one:\\n# \\\"Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.\\\"\\nb=(username + ' accessed the site ' + url + ' at ' + timestamp + '.')\\nprint (b)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6025426045632512",
+                "initial_code_files": [
+                  {
+                    "text": "username = \"Kinari\"\ntimestamp = \"04:50\"\nurl = \"http://petshop.com/pets/mammals/cats\"\n\n# TODO: print a log message incorporating the strings above.\n# The message should be use the same format as this one:\n# \"Yogesh accessed the site http://petshop.com/pets/reptiles/pythons at 16:20.\"\n",
+                    "name": "Logs.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689260,
+              "key": "088b0e55-a1c7-45af-99a9-22bcd90c2129",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "答案：\n\n```\nmessage = username + \" accessed the site \" + url + \" at \" + timestamp + \".\"\nprint(message)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347255,
+          "key": "1fbeace2-a1cb-48d1-932d-e1199f382c2a",
+          "title": "内置函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1fbeace2-a1cb-48d1-932d-e1199f382c2a",
+            "completed_at": "2017-12-06T15:11:48.542Z",
+            "last_viewed_at": "2018-09-27T09:50:14.077Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346918,
+              "key": "214f4ee7-d833-43b5-975d-0d5d542ebf0b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在前面的课程中，我们已经学习了 Python 的一个内置函数 `print`。在这里，我们将学习另一个有用的内置函数，即 `len`。`len` 函数计算传递给它的字符串长度，如下所示：\n\n```python\n>>> udacity_length = len(\"Udacity\")\n>>> print(udacity_length)\n7\n```\n`len` 函数与 `print` 类似，我们将括号内的参数作为变量来调用这个函数。`len` 与 `print` 的不同之处在于，`len` 产生的值可以被存储在变量中。在上面的例子中，`len` 函数将输出数字 7，这个结果被存储在 `udacity_length` 变量中。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346920,
+              "key": "e9b568fe-dcf4-4df7-bdf5-3b34eb47020d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：`len`\n=======\n\n在下面的练习中，请使用字符串连接的方法和 `len` 函数来计算查理全名的长度。（没错，她一直在抱怨父母给她取的这个名字！）并将该长度存储在 `name_length` 变量中。不要忘记名字的不同部分之间有空格！\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346921,
+              "key": "47d11fda-6131-4cdc-b64a-6eacd9ba8d7d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "47d11fda-6131-4cdc-b64a-6eacd9ba8d7d",
+                "completed_at": "2017-12-01T11:25:02.953Z",
+                "last_viewed_at": "2018-03-25T10:52:12.718Z",
+                "unstructured": "{\"hippo.py\":\"given_name = \\\"Charlotte\\\"\\nmiddle_names = \\\"Hippopotamus\\\"\\nfamily_name = \\\"Turner\\\"\\n\\nname_length = len(\\\"Charlotte Hippopotamus Turner\\\")\\n\\ndriving_licence_character_limit = 28\\nprint(name_length <= driving_licence_character_limit)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4518621461217280",
+                "initial_code_files": [
+                  {
+                    "text": "given_name = \"Charlotte\"\nmiddle_names = \"Hippopotamus\"\nfamily_name = \"Turner\"\n\nname_length = #todo: calculate how long this name is\n\ndriving_licence_character_limit = 28\nprint(name_length <= driving_licence_character_limit)",
+                    "name": "hippo.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689261,
+              "key": "eda2fd86-9f32-4e3c-b999-924a52f6e8ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 答案：\n\n```\nname_length = len(given_name + middle_names + family_name) + 2\n```\n其中 `+2` 是考虑到3个单词之间的两个空格。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346922,
+              "key": "a964630b-9bbe-4f0c-8042-bd6766ced0df",
+              "title": "整数的长度",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a964630b-9bbe-4f0c-8042-bd6766ced0df",
+                "completed_at": "2017-12-01T11:27:10.556Z",
+                "last_viewed_at": "2018-03-25T10:52:41.666Z",
+                "unstructured": "{\"selected_id\":\"a1483485524487\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "我们刚刚使用了 `len` 函数来计算字符串的长度。但当我们给出整数 `835`，而不是字符串时，len 函数将返回什么结果？",
+                "answers": [
+                  {
+                    "id": "a1483485485110",
+                    "text": "`len` 返回数字的绝对值",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483485522091",
+                    "text": "`len` 返回 0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483485522742",
+                    "text": "`len` 返回 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483485523682",
+                    "text": "`len` 返回 3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483485524487",
+                    "text": "发生错误",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347257,
+          "key": "98852da3-b627-4194-8e1d-248bb6624e8d",
+          "title": "类型和类型转换",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "98852da3-b627-4194-8e1d-248bb6624e8d",
+            "completed_at": "2017-12-06T15:48:28.682Z",
+            "last_viewed_at": "2018-09-27T09:52:44.036Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346933,
+              "key": "9df9b9c9-36ce-46ac-bd3b-943cfc5b48aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这个对象属于什么类型？\n======\n\n到目前为止，我们已经介绍了四种类型：\n\n* `int`（整数）\n* `float`（浮点数）\n* `bool`（布尔值，True 和 False）\n* `str`（字符串，针对文本）\n\nPython 中的每个对象都有一个类型。对象的类型定义了哪些运算符和函数能作用于该对象，以及它们的运行原理。\n\n你可以使用内置函数 `type()` 来直接查看对象的类型，例如：\n\n```python\n>>> print(type(633))\nint\n```\n\n```python\n>>> print(type(\"633\"))\nstr\n```\n\n```python\n>>> print(type(633.0))\nfloat\n```\n\n在上面的示例中，我们实际上采用了三种不同的方式来定义同样的数字，因此它们有三种不同的类型，其中每种类型都有自己的运行方式。\n\n作为旁注，我们对函数 `type()` 的输出调用了函数 `print()`。这段代码将首先运算括号里的内容，再将得出的值作为输出传递给下一个函数。在这个示例中，Python 将首先运行 `type()` 函数，然后其输出被 `print()`出来。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346934,
+              "key": "753c18da-9bd3-4754-acb6-34bed849613b",
+              "title": "哪种类型？ I",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "753c18da-9bd3-4754-acb6-34bed849613b",
+                "completed_at": "2017-09-13T15:12:38.186Z",
+                "last_viewed_at": "2017-09-13T15:12:38.186Z",
+                "unstructured": "{\"selected_id\":\"a1483486179827\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "`\"12\"` 这个对象属于什么类型？大家可以使用本页面下方的代码环境进行测试。输入代码之后，你可以通过 “测试答案” 按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1483486179827",
+                    "text": "str",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483486202161",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486202795",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486203390",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346935,
+              "key": "80cc4c4b-a2ef-421c-9ded-ea634372718f",
+              "title": "哪种类型？ I",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "80cc4c4b-a2ef-421c-9ded-ea634372718f",
+                "completed_at": "2017-09-13T15:14:27.307Z",
+                "last_viewed_at": "2017-09-13T15:14:27.307Z",
+                "unstructured": "{\"selected_id\":\"a1483486288816\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "`12.3` 这个对象属于什么类型？大家可以使用本页面下方的代码环境进行测试。输入代码之后，你可以通过 “测试答案” 按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1483486260885",
+                    "text": "str",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486288816",
+                    "text": "float",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483486289579",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486290296",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346936,
+              "key": "efe244be-6aa9-4835-9b22-475e410a5a5e",
+              "title": "哪种类型？ III",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "efe244be-6aa9-4835-9b22-475e410a5a5e",
+                "completed_at": "2017-12-01T11:31:30.840Z",
+                "last_viewed_at": "2017-12-01T11:31:30.840Z",
+                "unstructured": "{\"selected_id\":\"a1483486384393\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "`len(\"my_string\")` 这个对象属于什么类型？大家可以使用本页面下方的代码环境进行测试。输入代码之后，你可以通过 “测试答案” 按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1483486368477",
+                    "text": "str",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486383794",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486384393",
+                    "text": "int",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483486384995",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346937,
+              "key": "f07a1116-a85c-491c-8bb3-34acf0665439",
+              "title": "哪种类型？ IV",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f07a1116-a85c-491c-8bb3-34acf0665439",
+                "completed_at": "2017-12-01T11:30:22.195Z",
+                "last_viewed_at": "2017-12-01T11:30:22.195Z",
+                "unstructured": "{\"selected_id\":\"a1483486418001\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "`\"hippo\" *12` 这个对象属于什么类型？大家可以使用本页面下方的代码环境进行测试。输入代码之后，你可以通过 “测试答案” 按钮运行代码。",
+                "answers": [
+                  {
+                    "id": "a1483486418001",
+                    "text": "str",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483486435068",
+                    "text": "float",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486435622",
+                    "text": "int",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483486436282",
+                    "text": "bool",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346938,
+              "key": "4a3eb805-3652-4837-9390-eb5966216b61",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "类型练习\n=========\n请在下方的练习中测试对象的类型。不要忘记使用 `print` 来查看代码运行的结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346939,
+              "key": "c2ab0986-bd6a-4ebf-914e-92f4845a15be",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "c2ab0986-bd6a-4ebf-914e-92f4845a15be",
+                "completed_at": "2017-12-01T11:31:11.104Z",
+                "last_viewed_at": "2018-03-26T11:35:32.204Z",
+                "unstructured": "{\"play.py\":\"print(type(\\\"12\\\"))\\nprint(type(12.3))\\nprint(type(len(\\\"my_steing\\\")))\\nprint(type(\\\"hippo\\\"*12))\\nprint(type(\\\"yujhk\\\"_5))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4883752737177600",
+                "initial_code_files": [
+                  {
+                    "text": " ",
+                    "name": "play.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346940,
+              "key": "d9cf2ffc-829f-44b8-a479-8ac8dd47201d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "选择类型\n===========\n不同的类型具有不同的属性，在设计计算机程序时，我们需要根据使用数据的方式来选择数据类型。\n例如，如果你要将数字作为句子的一部分，很简单，这个数字的类型需要是字符串。如果你要对一个 true/false 值进行编码，那么布尔型操作起来要比字符串容易一些。\n\n在一些情况中，你可能无法决定自己所收到的数据的类型，但仍需要使用它。这时你可以基于旧对象来创建新对象，并在这一过程中更改数值类型。\n我们来看一些例子：\n\n下面这段代码从浮点数创建了一个整数，并将其赋值给变量 `count`，最后打印出了 `count` 及其类型。\n\n```python\n>>> count = int(4.0)\n>>> print(count)\n4\n>>> print(type(count))\n<class 'int'>\n```\n\n\n下面这段代码从数字创建了一个字符串：\n```python\n>>> house_number = 13\n>>> street_name = \"The Crescent\"\n>>> town_name = \"Belmont\"\n>>> print(type(house_number))\n<class 'int'>\n>>> address = str(house_number) + \" \" + street_name + \", \" + town_name\n>>> print(address)\n13 The Crescent, Belmont\n```\n\n我们也可以从字符串创建一个数字，例如：\n```python\n>>> grams_of_sugar = float(\"35.0\")\n>>> print(grams_of_sugar)\n35.0\n>>> print(type(grams_of_sugar))\n<class 'float'>\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346941,
+              "key": "022070f2-731a-47d9-a15b-5a986d385b55",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：销售总额\n============\n\n在下面这道练习中，你需要更改输入和输出数据的类型来获得你希望的结果。\n\n请根据提供的数据计算并打印一周的销售总额。你需要打印一个格式为：`\"This week's total sales: xxx\"` 的字符串，其中 xxx 将是实际销售总额的数字。你需要更改输入数据的类型才可以计算销售总额。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346942,
+              "key": "8c5c5490-c7f3-47b8-b9dd-69c2cbb82d2c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8c5c5490-c7f3-47b8-b9dd-69c2cbb82d2c",
+                "completed_at": "2017-12-01T11:41:37.499Z",
+                "last_viewed_at": "2018-03-28T11:11:14.092Z",
+                "unstructured": "{\"sales.py\":\"mon_sales = \\\"121\\\"\\ntues_sales = \\\"105\\\"\\nwed_sales = \\\"110\\\"\\nthurs_sales = \\\"98\\\"\\nfri_sales = \\\"95\\\"\\ni = int(mon_sales) + int(tues_sales) + int(wed_sales) + int(thurs_sales) + int(fri_sales)\\nl = str(i)\\ng = \\\"This week's total sales:\\\"\\nprint (g+l)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5283020815859712",
+                "initial_code_files": [
+                  {
+                    "text": "mon_sales = \"121\"\ntues_sales = \"105\"\nwed_sales = \"110\"\nthurs_sales = \"98\"\nfri_sales = \"95\"\n\n#TODO: Print a string with this format: This week's total sales: xxx\n# You will probably need to write several lines of code before the print statement.",
+                    "name": "sales.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 689262,
+              "key": "c9f8330d-ae87-4886-acf0-6b20c98f96e7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 答案：\n\n```\nweekly_sales = int(mon_sales) + int(tues_sales) + int(wed_sales) + int(thurs_sales) + int(fri_sales)\nweekly_sales = str(weekly_sales) \nprint(\"This week's total sales: \" + weekly_sales)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347258,
+          "key": "617d735a-a730-4877-8c01-f484c9a0ce79",
+          "title": "字符串方法 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "617d735a-a730-4877-8c01-f484c9a0ce79",
+            "completed_at": "2017-12-06T15:47:45.999Z",
+            "last_viewed_at": "2018-09-27T09:53:10.951Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346943,
+              "key": "f4eb9d66-9d0e-4bda-8493-fa757cf06d21",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "到目前为止，我们已经学习了使用 Python 处理数据的两种不同方式。我们使用像 `+`、`<=` 和 `=` 这样的运算符，处理运算符两边的值。我们也使用了像 `print` 和 `len` 这样的函数。函数与运算符非常相似，实际上唯一的区别就是它们的外观：函数输入放在括号中，而不是置于运算符旁边，函数具有描述性名称而不是短符号。\n\n<diagram showing the rearranged syntax of operators and functions>\n\n处理值还有第三种方式：方法（method）。比如 title 方法：\n\n```python\n>>> \"charlotte hippopotamus turner\".title()\n'Charlotte Hippopotamus Turner'\n```\n方法（method）与函数（function）相关，但又与函数不同，方法与特定类型的对象相关。在这个示例中，对象是一个值为 \"charlotte hippopotamus turner\" 的字符串，我们调用了它的 `title` 方法。该方法返回首字母大写的字符串，即每个单词的第一个字母都被大写。\n\n我们来试试另一个字符串方法，islower：\n```python\n>>> full_name = \"charlotte hippopotamus turner\"\n>>> full_name.islower()\nTrue\n```\n`islower` 方法查看调用它的字符串对象。在此例中，字符串对象是 \"charlotte hippopotamus turner\"。`islower` 返回一个布尔值，说明该字符串对象中的字母是否都是小写字母（不区分大小写的字符不计算在内，比如标点符号）。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346944,
+              "key": "583e4fda-287d-4496-b365-b37cb87e8022",
+              "title": "方法和类型",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "583e4fda-287d-4496-b365-b37cb87e8022",
+                "completed_at": "2017-10-06T15:20:18.697Z",
+                "last_viewed_at": "2018-03-28T11:15:19.823Z",
+                "unstructured": "{\"selected_id\":\"a1483487533037\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "对浮点对象调用字符串方法，如 `islower` 时会出现什么结果？例如，`13.37.islower`。\n\n该页面下方还有一个练习场，大家可以体验一下。",
+                "answers": [
+                  {
+                    "id": "a1483487360674",
+                    "text": "浮点数被返回且保持不变",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483487531654",
+                    "text": "`islower` 返回 True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483487532387",
+                    "text": "`islower` 返回 False",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483487533037",
+                    "text": "发生错误",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 346945,
+              "key": "4349c297-10dd-4b30-a68f-6f2b5a3498ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "可以通过查看 https://docs.python.org/3/library/stdtypes.html#string-methods 中的字符串方法文档来了解有关字符串和字符串方法的更多信息。\n大家将会发现文档是编写代码最有价值的资源之一，不仅仅是指字符串或在 Python 中编写代码！阅读和搜索文档时，还可以了解数据类型、内置函数以及相关使用方法。\n\n现在试试吧！查找几个字符串方法（使用上面的链接），并在下面的编程练习中（使用测试答案按钮）进行测试。\n\n字符串方法练习区\n================",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346946,
+              "key": "f7debf55-c325-4e19-830d-d8d6e7b4243a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f7debf55-c325-4e19-830d-d8d6e7b4243a",
+                "completed_at": "2017-12-01T11:47:09.666Z",
+                "last_viewed_at": "2018-03-28T11:19:19.590Z",
+                "unstructured": "{\"string_playground.py\":\"#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods\\n#and try them out here\\nstr.\\\"capitalize()\\\"\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5323939158032384",
+                "initial_code_files": [
+                  {
+                    "text": "#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods\n#and try them out here",
+                    "name": "string_playground.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346947,
+              "key": "f7524128-049f-485a-bce0-6a226db539a9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`count` 方法\n======\n大家可能已经注意到，调用 `islower` 和 `title` 方法时，会使用到括号，但我们并没有像调用函数那样在括号中放置任何内容。这并不是因为方法不引用参数，而是目前为止用到的方法根本不需要参数。让我们尝试一个**需要**引入参数的 `count` 的方法。\n\n```python\n>>> \"One fish, two fish, red fish, blue fish.\".count('fish')\n4\n```\n在该示例中，`count` 方法返回字符串中子字符串 \"fish\" 出现的次数。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346948,
+              "key": "7653cedc-0cfd-4aa7-a867-96efc187c6f9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：元音计数\n=========\n使用 count 方法来确定字符串 `prophecy` 中有多少个元音。将此计数存储在 vowel_count 变量中。\n\n注意：元音是 a、e、i、o 和 u。\n\n提示：可能需要多次调用 `count` 方法，并且多次增加 `vowel_count` 的值。\n\n如果出现问题，请查看 *solution.py* 选项卡。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346949,
+              "key": "963c1362-e148-422d-ba50-c20c6c10c68b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "963c1362-e148-422d-ba50-c20c6c10c68b",
+                "completed_at": "2017-12-01T11:55:00.611Z",
+                "last_viewed_at": "2018-03-13T02:49:57.921Z",
+                "unstructured": "{\"vowels.py\":\"prophecy = \\\"And there shall in that time be rumours of things going astray, and there will be a great confusion as to where things really are, and nobody will really know where lieth those little things with the sort of raffia work base, that has an attachment…at this time, a friend shall lose his friends’s hammer and the young shall not know where lieth the things possessed by their fathers that their fathers put there only just the night before around eight o’clock…\\\"\\nvowel_count_a = prophecy.count(a)\\nvowel_count_e = prophecy.count(e)\\nvowel_count_i = prophecy.count(i)\\nvowel_count_o = prophecy.count(o)\\nvowel_count_u = prophecy.count\\nvowel_count = vowel_count_a + vowel_count_e +vowel_count_i + vowel_count_o +vowel_count_u\\n# TODO: set the value of vowel_count to be the number of vowels in prophecy\\n# Print the final count\\nprint(vowel_count)\",\"solution.py\":\"# This is my vowel counting code:\\r\\n\\r\\nvowel_count += prophecy.count('a')\\r\\nvowel_count += prophecy.count('A')\\r\\nvowel_count += prophecy.count('e')\\r\\nvowel_count += prophecy.count('E')\\r\\nvowel_count += prophecy.count('i')\\r\\nvowel_count += prophecy.count('I')\\r\\nvowel_count += prophecy.count('o')\\r\\nvowel_count += prophecy.count('O')\\r\\nvowel_count += prophecy.count('u')\\r\\nvowel_count += prophecy.count('U')\\r\\n\\r\\n'''\\r\\nLooking at this first attempt, I think I can make it better. Counting \\r\\nboth lower-case 'a' and upper-case 'A', seems unnecessary. I'll convert \\r\\neverything to lower-case, and then I only need to count each vowel once!\\r\\n'''\\r\\n\\r\\nvowel_count = 0\\r\\nlower_prophecy = prophecy.lower()\\r\\nvowel_count += lower_prophecy.count('a')\\r\\nvowel_count += lower_prophecy.count('e')\\r\\nvowel_count += lower_prophecy.count('i')\\r\\nvowel_count += lower_prophecy.count('o')\\r\\nvowel_count += lower_prophecy.count('u')\\r\\nprint(vowel_count)\\r\\n\\r\\n'''\\r\\nIt's easy to check that I got the same result with my new, shorter version. \\r\\nThere was nothing especially wrong with the first version, but it was only \\r\\nafter I had written my first idea that I realised the efficiency I could make\\r\\nin the second attempt. Getting started with a simple idea and then improving \\r\\nmy work from there is a common pattern I use when programming, I recommend \\r\\nyou try it too.\\r\\n'''\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5802944457998336",
+                "initial_code_files": [
+                  {
+                    "text": "prophecy = \"And there shall in that time be rumours of things going astray, and there will be a great confusion as to where things really are, and nobody will really know where lieth those little things with the sort of raffia work base, that has an attachment…at this time, a friend shall lose his friends’s hammer and the young shall not know where lieth the things possessed by their fathers that their fathers put there only just the night before around eight o’clock…\"\n\nvowel_count = 0\n\n# TODO: set the value of vowel_count to be the number of vowels in prophecy\n\n\n\n# Print the final count\nprint(vowel_count)",
+                    "name": "vowels.py"
+                  },
+                  {
+                    "text": "# This is my vowel counting code:\r\n\r\nvowel_count += prophecy.count('a')\r\nvowel_count += prophecy.count('A')\r\nvowel_count += prophecy.count('e')\r\nvowel_count += prophecy.count('E')\r\nvowel_count += prophecy.count('i')\r\nvowel_count += prophecy.count('I')\r\nvowel_count += prophecy.count('o')\r\nvowel_count += prophecy.count('O')\r\nvowel_count += prophecy.count('u')\r\nvowel_count += prophecy.count('U')\r\n\r\n'''\r\nLooking at this first attempt, I think I can make it better. Counting \r\nboth lower-case 'a' and upper-case 'A', seems unnecessary. I'll convert \r\neverything to lower-case, and then I only need to count each vowel once!\r\n'''\r\n\r\nvowel_count = 0\r\nlower_prophecy = prophecy.lower()\r\nvowel_count += lower_prophecy.count('a')\r\nvowel_count += lower_prophecy.count('e')\r\nvowel_count += lower_prophecy.count('i')\r\nvowel_count += lower_prophecy.count('o')\r\nvowel_count += lower_prophecy.count('u')\r\nprint(vowel_count)\r\n\r\n'''\r\nIt's easy to check that I got the same result with my new, shorter version. \r\nThere was nothing especially wrong with the first version, but it was only \r\nafter I had written my first idea that I realised the efficiency I could make\r\nin the second attempt. Getting started with a simple idea and then improving \r\nmy work from there is a common pattern I use when programming, I recommend \r\nyou try it too.\r\n'''",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347260,
+          "key": "eeeb7757-5390-4d1f-8e0e-ea1ed9bd2e98",
+          "title": "字符串方法 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "eeeb7757-5390-4d1f-8e0e-ea1ed9bd2e98",
+            "completed_at": "2017-12-06T15:48:20.901Z",
+            "last_viewed_at": "2018-09-27T09:53:31.705Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346950,
+              "key": "5d2016b5-16c6-4d68-888f-23ba0da5824a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字符串方法的文档\n================",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346951,
+              "key": "f0470672-cae4-494a-a791-1b98b905ab83",
+              "title": "Python 文档",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lBtG0DO_KqM",
+                "china_cdn_id": "lBtG0DO_KqM.mp4"
+              }
+            },
+            {
+              "id": 346952,
+              "key": "54046c02-2a27-49e3-a446-22c2e9254a2a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字符串方法的文档见 https://docs.python.org/3/library/stdtypes.html#string-methods\n\n大家可以在下面的编程练习中使用测试答案按钮进行一些测试。\n\n字符串方法练习区\n================",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346953,
+              "key": "09b4d525-5918-4eea-88c7-487cb3bcec66",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "09b4d525-5918-4eea-88c7-487cb3bcec66",
+                "completed_at": "2017-10-06T15:30:42.481Z",
+                "last_viewed_at": "2018-03-22T13:50:42.379Z",
+                "unstructured": "{\"strings.py\":\"#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods\\n#and try them out here\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5801184595148800",
+                "initial_code_files": [
+                  {
+                    "text": "#browse the complete list of string methods at https://docs.python.org/3/library/stdtypes.html#string-methods\n#and try them out here",
+                    "name": "strings.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346954,
+              "key": "c28f5e5c-184a-45b6-a679-8d4297b0a4bc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字符串格式化\n===========\n\n一个特别有用的字符串方法是 `format`。`format` 方法将值插入到模板字符串中来构建字符串。我们来看一个示例，为一个虚拟的 Web 服务器生成日志信息。\n\n```python\nlog_message = \"IP address {} accessed {} at {}\".format(user_ip, url, now)\n```\n\n如果变量 `user_ip`、`url` 和 `now` 已经被定义了，那么它们的值将替代作为占位符的 `{}`：\n\n```python\n> print(log_message)\nIP address 208.94.117.90 accessed /bears/koala at 16:20\n```\n\n你可以将任何类型传递到 `format` 方法。`format` 将根据需求将值转换为字符串。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346955,
+              "key": "683017d6-08dd-4ace-b94b-c42bf03d4716",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：使用字符串格式化简化代码\n============\n\n本练习中的代码可生成天气报告警报。之前的程序员使用字符串连接来组合警报，这会导致一些代码难以阅读。使用 `format` 方法重写代码。你的新代码应该产生与被替换的旧代码相同的字符串。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346956,
+              "key": "ee979bc1-e6df-41ed-84dd-23b820ca5f8a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ee979bc1-e6df-41ed-84dd-23b820ca5f8a",
+                "completed_at": "2017-10-15T00:55:33.854Z",
+                "last_viewed_at": "2018-03-22T13:42:58.347Z",
+                "unstructured": "{\"weather.py\":\"city = \\\"Seoul\\\"\\nhigh_temperature = 18\\nlow_temperature = 9\\ntemperature_unit = \\\"degrees Celsius\\\"\\nweather_conditions = \\\"light rain\\\"\\n\\n#todo rewrite this line to use the format method rather than string concatenation\\n\\nalert = \\\"Today's forecast for {}: The temperature will range from {} to {} {}. Conditions will be {}.\\\".format(city, str(low_temperature), str(high_temperature), temperature_unit, weather_conditions)\\n# print the alert\\nprint(alert)\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4651038658396160",
+                "initial_code_files": [
+                  {
+                    "text": "city = \"Seoul\"\nhigh_temperature = 18\nlow_temperature = 9\ntemperature_unit = \"degrees Celsius\"\nweather_conditions = \"light rain\"\n\n#todo rewrite this line to use the format method rather than string concatenation\nalert = \"Today's forecast for \" + city + \": The temperature will range from \" + str(low_temperature) + \" to \" + str(high_temperature) + \" \" + temperature_unit + \". Conditions will be \" + weather_conditions + \".\"\n\n# print the alert\nprint(alert)",
+                    "name": "weather.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346957,
+              "key": "59b7d74e-82fb-4948-8060-2c613d0bcfdc",
+              "title": "第 1 课完成了！",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "y3dstGZWPgc",
+                "china_cdn_id": "y3dstGZWPgc.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

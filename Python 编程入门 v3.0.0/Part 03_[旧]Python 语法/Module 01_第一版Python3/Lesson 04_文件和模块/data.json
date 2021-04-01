@@ -1,0 +1,1089 @@
+{
+  "data": {
+    "lesson": {
+      "id": 347318,
+      "key": "0d7cfb06-4a38-4dde-b6df-aae686ab3bf0",
+      "title": "文件和模块",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "我们将在本课通过学习如何指定默认参数，以及如何从一个函数返回多个值，来扩充你的函数知识。你将学习如何读取文件，如何从 Python 标准库导入模块，以及如何安装第三方库。我们还将了解更多有关可靠问题解决方案的内容。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/0d7cfb06-4a38-4dde-b6df-aae686ab3bf0/347318/1516766722331/%E6%96%87%E4%BB%B6%E5%92%8C%E6%A8%A1%E5%9D%97%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/0d7cfb06-4a38-4dde-b6df-aae686ab3bf0/347318/1516766717721/%E6%96%87%E4%BB%B6%E5%92%8C%E6%A8%A1%E5%9D%97%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 347293,
+          "key": "0f153284-28ea-4055-af9d-fde1b492083c",
+          "title": "欢迎回来！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f153284-28ea-4055-af9d-fde1b492083c",
+            "completed_at": "2017-12-08T18:35:22.758Z",
+            "last_viewed_at": "2018-09-27T09:14:31.649Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347122,
+              "key": "e63b1ad9-b315-4814-bd3c-a5385d35d3f3",
+              "title": "欢迎回来",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Sr_TzGyDwC4",
+                "china_cdn_id": "Sr_TzGyDwC4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 347294,
+          "key": "5ebbee74-8eb5-4497-8e93-f6d1f1a8a78a",
+          "title": "元组",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5ebbee74-8eb5-4497-8e93-f6d1f1a8a78a",
+            "completed_at": "2018-02-19T04:35:02.222Z",
+            "last_viewed_at": "2018-09-27T09:18:52.044Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347123,
+              "key": "41c9f322-53ef-47d5-9a03-23b616745704",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "元组简介\n=============\n\nPython 提供了另一个有用的内置类型：元组。元组用于存储相关信息。我们来看一下有关纬度和经度的示例：\n\n```python\n>>> AngkorWat = (13.4125, 103.866667)\n>>> print(type(AngkorWat))\n<class 'tuple'>\n>>> print(\"Angkor Wat is at latitude: {}\".format(AngkorWat[0]))\nAngkor Wat is at latitude: 13.4125\n>>> print(\"Angkor Wat is at longitude: {}\".format(AngkorWat[1]))\nAngkor Wat is at longitude: 103.866667\n```\n\n\n元组与列表相似，用于存储有序对象的集合，可以通过其索引进行访问（例如 `AngkorWat[0]` 和 `AngkorWat[1]`）。不同于列表，元组具有*不可变性*。所以不能添加和删除元组中的项，或对其进行排序。\n\n为什么需要元组？\n-------------------\n如果元组与列表类似，但功能又少，为什么我们还需要元组？当有两个或更多密切相关的值，而且通常一起使用时，如纬度和经度坐标，元组就会派上用场。\n\n元组可用于适当为多个变量赋值\n```python\n>>> dimensions = 52, 40, 100 \n>>> length, width, height = dimensions \n>>> print(\"The dimensions are {}x{}x{}\".format(length, width, height))\nThe dimensions are 52x40x100\n```\n\n注意，赋给元组 `dimensions` 的值与之前的示例不一样，没有使用括号。编写元组时，也可以选择使用括号，如果括号不用于明确代码，程序员会经常会将其省略。\n\n元组解包\n-------------------------\n在第二行中，将元组 `dimensions` 的内容赋值给三个变量。我们将这称为*元组解包*。大家可以使用元组拆包，将元组中的信息赋值给多个变量，而不必逐个访问和编写多个赋值语句。\n\n在该示例中，如果不需要直接使用 `dimensions`，我们可以将这两行代码缩短为一行，一次为三个变量赋值！\n\n```python\nlength, width, height = 52, 40, 100\n```\n\n元组不变性\n------------------------------\n另外一方面，元组的不变性也是一个重要属性。与列表不同，元组可以存储在集合（set）中，或用作字典的键（key）。由于这两种数据结构需要不可变的键，所以不可以使用列表。（如果好奇为什么集合和字典需要不可变的键，可以查阅 CS101 第 5 课。在该课程中，你将从头开始重新构建一个字典，了解字典的运行原理。）\n在下面的例子中，我们创建一个字典 `world_heritage_locations`，该字典具有 `(latitude, longitude)` 形式的元组作为键（key），以及表示相应地名的字符串作为值（value）。\n```python\nworld_heritage_locations = {(13.4125, 103.866667): \"Angkor Wat\",\n                            (25.73333, 32.6): \"Ancient Thebes\",\n                            (30.330556, 35.4433330): \"Petra\",\n                            (-13.116667, -72.583333): \"Machu Picchu\"}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347124,
+              "key": "70b7eefe-b352-4fe4-a746-915d32c67434",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "返回元组\n=======\n元组的常见用法是函数返回多个值：\n\n```python\ndef first_and_last(sequence):\n    \"\"\"returns the first and last elements of a sequence\"\"\"\n    return sequence[0], sequence[-1]\n```\n\n函数 `first_and_last` 的使用方法如下：\n\n```python\n>>> first_and_last([\"Spam\", \"egg\", \"sausage\", \"Spam\"])\n('Spam', 'Spam')\n```\n\n返回一个元组的函数也可以用于为多个变量赋值：\n\n```python\n>>> start, end = first_and_last([\"Spam\", \"egg\", \"sausage\", \"Spam\"])\n>>> print(start)\nSpam\n>>> print(end)\nSpam\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347125,
+              "key": "1c9ab166-b6df-4a64-805c-27a57c022442",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：天和小时\n==============\n尝试编写一个使用元组返回多个值的函数。编写 `hours2days` 函数，传入一个整数类型的参数，该参数表示一个以小时为单位的时间段。该函数应该返回一个元组，用天和小时为单位表示传入的时间段，不足一天的时间用小时表示。例如，39 个小时表示 1 天 15 个小时，所以函数返回的应该是 (1,15)。\n\n这些例子演示了该函数的使用：\n\n```python\n>>> hours2days(24) # 24 hours is one day and zero hours\n(1, 0)\n>>> hours2days(25) # 25 hours is one day and one hour\n(1, 1)\n>>> hours2days(10000)\n(416, 16)\n```\n你可以用它们测试你的代码。该函数不需要处理负数的输入。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347126,
+              "key": "bbf4357f-290d-4ed7-a157-6950ee5f5f15",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "bbf4357f-290d-4ed7-a157-6950ee5f5f15",
+                "completed_at": "2017-12-08T19:00:48.298Z",
+                "last_viewed_at": "2017-12-08T19:00:48.298Z",
+                "unstructured": "{\"hours2days.py\":\"def hours2days(hours):\\n     days=hours//24\\n     hour=hours%24\\n     return days,hour\\nhours=100\\n\\ndays,hour=hours2days(hours)\\ndays_hour=[days,hour]\\nprint(days_hour)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5156388369203200",
+                "initial_code_files": [
+                  {
+                    "text": " ",
+                    "name": "hours2days.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347296,
+          "key": "25c1ebb2-9d7b-4c47-8bac-45c1bd4dfdf1",
+          "title": "默认参数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "25c1ebb2-9d7b-4c47-8bac-45c1bd4dfdf1",
+            "completed_at": "2018-02-20T05:33:30.989Z",
+            "last_viewed_at": "2018-09-27T09:20:26.609Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347127,
+              "key": "4b16a843-e7ee-4035-8bbc-ab177d0e48da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "默认参数值\n=================\n现在我们来重新看看在前面的课程中（数据结构和循环 -> For循环）出现的 `starbox` 函数，不过这次我们作了一处修改。这个 `box` 函数可使用任何符号绘制方框，而不仅仅是`*`。\n\n```python\ndef box(width, height, symbol):\n    \"\"\"print a box made up of asterisks, or some other character.\n\n    width: width of box in characters, must be at least 2\n    height: height of box in lines, must be at least 2\n    symbol: a single character string used to draw the box edges\n    \"\"\"\n    print(symbol * width) # print top edge of box\n   \n    # print sides of box\n    for _ in range(height-2):\n        print(symbol + \" \" * (width-2) + symbol) \n\n    print(symbol * width) # print bottom edge of box\n```\n\n这个新增功能非常好，但是调用该函数时，你还必须多指定一个参数。如果你只想绘制一个方框，而不在乎使用什么符号，这个功能反倒有些累赘了。但幸好 Python 有一个功能，可使参数具有灵活性，也可以指定默认参数。\n\n我们可以通过对函数的第一行做出以下更改，来指定 `symbol` 参数的默认值：\n\n```python\ndef box(width, height, symbol='*'):\n```\n\n现在我们可以传入两个参数或三个参数来调用函数。如果第三个参数被省略，那么则使用 `*` 作为默认值。\n\n```python\n>>> box(7, 5)\n*******\n*     *\n*     *\n*     *\n*******\n\n>>> box(7, 5, '#')\n#######\n#     #\n#     #\n#     #\n#######\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347128,
+              "key": "253e93d2-7312-427f-a496-6937a0473689",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：默认参数\n===============\n在下面的练习中，`print_list` 函数以列表作为输入，并逐行打印列表内的元素，以数字编号或项目符号开头。该函数具有三个参数：\n- `l`：要打印的列表\n- `numbered`：设置为 `True` 时打印编号列表。\n- `bullet_character`：置于每个列表元素之前的项目符号。如果 `numbers` 为 `True`，则忽略。\n\n这样的函数在调用时很麻烦，即使用户想要的是一个以数字编号开头的序列，也仍然需要指定一个 `bullet_character` 参数。\n\n现在请你添加默认参数，使函数的使用更加简便。在默认情况下，该函数可以以项目符号开头打印列表中的元素，默认的项目符号应为 \"-\"。\n\n更改后，该函数的输出如下所示：\n\n```python\n>>> print_list([\"cats\", \"in\", \"space\"])\n- cats\n- in\n- space\n>>> print_list([\"cats\", \"in\", \"space\"], True)\n1: cats\n2: in\n3: space\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347129,
+              "key": "aa6a786d-ebfb-4bf7-ba03-44e9657dd3b8",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "aa6a786d-ebfb-4bf7-ba03-44e9657dd3b8",
+                "completed_at": "2017-12-08T19:16:44.238Z",
+                "last_viewed_at": "2018-03-10T14:38:36.064Z",
+                "unstructured": "{\"list_printer.py\":\"def print_list(l, numbered=True, bullet_character='-'):\\n    \\\"\\\"\\\"Prints a list on multiple lines, with numbers or bullets\\n    \\n    Arguments:\\n    l: The list to print\\n    numbered: set to True to print a numbered list\\n    bullet_character: The symbol placed before each list element. This is\\n                      ignored if numbered is True.\\n    \\\"\\\"\\\"\\n    for index, element in enumerate(l):\\n        if numbered:\\n            print(\\\"{}: {}\\\".format(index+1, element))\\n        else:\\n            print(\\\"{} {}\\\".format(bullet_character, element))\\nprint_list([\\\"cats\\\", \\\"in\\\", \\\"space\\\"])\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6524326426836992",
+                "initial_code_files": [
+                  {
+                    "text": "def print_list(l, numbered, bullet_character):\n    \"\"\"Prints a list on multiple lines, with numbers or bullets\n    \n    Arguments:\n    l: The list to print\n    numbered: set to True to print a numbered list\n    bullet_character: The symbol placed before each list element. This is\n                      ignored if numbered is True.\n    \"\"\"\n    for index, element in enumerate(l):\n        if numbered:\n            print(\"{}: {}\".format(index+1, element))\n        else:\n            print(\"{} {}\".format(bullet_character, element))\n",
+                    "name": "list_printer.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347130,
+              "key": "272943a5-f22d-41dc-a31a-b157b48f2473",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：可变默认参数\n=================\n\n默认参数是一个相当有用的功能，但在一种情况下例外。如果使用可变类型（如列表或字典）作为默认参数，在修改这个参数后可能会导致奇怪的结果。因此，你最好避免使用可变的默认参数。你可以在本地尝试以下代码以查看原因：\n\n有一个函数可将项目添加到待办事项列表。用户可以提供自己的待办事项列表，或将项目添加到默认列表中：\n```python\ndef todo_list(new_task, base_list=['wake up']):\n    base_list.append(new_task)\n    return base_list\n```\n\n我们可以像这样调用该函数：\n\n```python\n>>> todo_list(\"check the mail\")\n['wake up', 'check the mail']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347131,
+              "key": "f5a0b7a2-acea-4739-ae3e-d6e2a108af60",
+              "title": " ",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f5a0b7a2-acea-4739-ae3e-d6e2a108af60",
+                "completed_at": "2017-12-08T19:20:22.174Z",
+                "last_viewed_at": "2017-12-08T19:20:22.174Z",
+                "unstructured": "{\"selected_id\":\"a1484094718173\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "之后，一名宇航员调用该函数为自己创建一个待办事项列表：\n```python\n>>> todo_list(\"begin orbital transfer\")\n```\n\n`todo_list` 返回什么结果？",
+                "answers": [
+                  {
+                    "id": "a1484094660128",
+                    "text": "`['begin orbital transfer']`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484094698148",
+                    "text": "`['wake up', 'begin orbital transfer']`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484094707384",
+                    "text": "`['wake up', 'check the mail']`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484094718173",
+                    "text": "`['wake up', 'check the mail', 'begin orbital transfer']`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347295,
+          "key": "9c190475-f615-4f8e-a9e0-a51b668a4460",
+          "title": "变量作用域",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9c190475-f615-4f8e-a9e0-a51b668a4460",
+            "completed_at": "2018-02-20T05:33:43.742Z",
+            "last_viewed_at": "2018-09-27T09:23:43.283Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347132,
+              "key": "ec17437b-eae3-4077-a170-f31b87808fc5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在编程时，你可能会经常产生相似的想法。在计数、迭代和累加返回值等过程中，你都需要使用变量。为了编写可读性更高的代码，你可能会针对相似变量使用相似的名称。在将多段代码放在一起时（例如，单个脚本中的多个函数或函数调用），你可能会发现两个不同部分中的变量需要使用相同的名称。\n\n幸运的是，你并不需要想出无数个新名称。你可以将变量名称保留在不同的作用域（Scope）内，即可重复使用对象的名称。作用域是指变量可以被引用的程序部分。\n\n如果变量是在函数内被创建的，则只能在该函数内使用此变量。\n\n现在我们来看看下面两个函数 `word_count` 和 `nearest_square`。这两个函数都包含一个 `answer` 变量，但它们只存在在各自的函数中。\n\n```python\ndef word_count(document, search_term):\n    \"\"\" Count how many times search_term appears in document. \"\"\"\n    words = document.split()\t\n    answer = 0\n    for word in words:\n        if word == search_term:\n            answer += 1\n    return answer\n\ndef nearest_square(limit):\n    \"\"\" Find the largest square number smaller than limit. \"\"\"\n    answer = 0\n    while (answer+1)**2 < limit:\n        answer += 1\n    return answer**2\n```\n\n最好的做法是在所需的最小作用域内定义变量。虽然函数 *可以* 引用更大范围内定义的变量，但这并不是个好主意。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347133,
+              "key": "80d445d4-17d9-4352-a1b4-c7afe05416d7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "80d445d4-17d9-4352-a1b4-c7afe05416d7",
+                "completed_at": "2017-12-08T19:24:37.943Z",
+                "last_viewed_at": "2017-12-08T19:24:37.943Z",
+                "unstructured": "{\"selected_id\":\"a1484098849281\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "阅读以下代码段，\n\n```python\negg_count = 0\n\ndef buy_eggs():\n    egg_count += 12 # purchase a dozen eggs\n\nbuy_eggs()\n```\n\n这段代码的运行结果是什么？如果不确定，请尝试在自己的计算机上运行！",
+                "answers": [
+                  {
+                    "id": "a1484098582574",
+                    "text": "`egg_count` 等于零",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484098848319",
+                    "text": "`egg_count` 等于 12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484098849281",
+                    "text": "发生错误",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347297,
+          "key": "d2d034b0-5c87-4572-bac4-b9508755609d",
+          "title": "从文件读取",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d2d034b0-5c87-4572-bac4-b9508755609d",
+            "completed_at": "2018-02-20T05:33:54.526Z",
+            "last_viewed_at": "2018-09-27T09:24:02.939Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347134,
+              "key": "6119a891-e71a-4f50-b3ad-ddf431593d01",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用文件\n=========\n为了使程序真正有用，需要与真实数据交互。图像、网页、数据库都是文件的示例，我们在日常的数字化生活中定期创建、移动、操作和阅读这些文件。\n\n迄今为止，我们所使用的所有数据都是已经在 Python 解释器或 Python 脚本中定义了的。接下来，我们将通过介绍如何在 Python 中打开和读取文件，提高 Python 编程功能的多样化。这将使我们可以处理任何来源的大量信息，并与其进行交互。\n\n所有不同类型的文件在计算机上均具有相似的结构 —— 这些文件都是编码某些信息的字符串。特定的文件格式（通常由文件名的扩展名（例如 .txt 或 .mp3）表示）表示这些字符的组织方式。我们使用处理字符的各种程序解释文件中的字符 —— 例如，图像编辑程序会解释数字照片文件的信息并显示图像。如果在程序中编辑图像，则表示我们正在使用程序更改文件中的字符。\n\n我们可以在 Python 里直接读取这些文件，但这看起来与在桌面应用程序中打开文件大不相同。在 Python 中打开文件为我们提供了一个通用的编程界面，而不需要图形用户界面，这就意味着 Python 程序可以自动执行涉及文件的任务！\n\n以下是一个将文件信息读取到 Python 的代码示例。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347135,
+              "key": "36431401-49e0-4124-9a8c-38b53820e23a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "打开和读取文件\n---------------\n要读取文件，必须先打开文件，我们可以使用 `open` 函数。我们提供一个文件所在的路径，也可以指定几个可选参数。然后将该函数返回的值赋给一个变量。例如：\n```python\nf = open('/my_path/my_file.txt','r')\n```\n`open` 函数将返回一个文件对象 —— 一种 Python 对象，通过该对象 Python 可以与文件交互。\n\n在该示例中，第二个参数 `r` 指定了打开文件的模式，在该示例中以只读模式打开（原因是我们只想读取文件，不改变文件内容）。我们不需要指定这个参数，因为默认情况下（如果未指定模式）`open` 将以只读模式打开文件。\n\n接下来，为了访问文件的内容，我们可以使用 `read`。`f.read()` 创建一个包含文件文本的字符串对象。使用该字符串为名为 `file_data` 的变量赋值：\n```python\nfile_data = f.read()\n```\n使用文件 `f` 完成操作后，应关闭文件。这可释放出该文件所占用的系统资源：\n```python\nf.close()\n```\n如果不再需要，则应务必关闭打开的文件。如果打开大量的文件，却不关闭，我们可能会耗尽文件句柄（file handle），而无法打开任何新文件（在耗尽文件句柄之前，能够打开的文件数量完全取决于你的操作系统）。\n\n如果不信，可以尝试在 python 解释器中运行以下内容：\n```python\n>>> files = []\n>>> for i in range(100000):\n...     files.append(open('somefile.txt'))\n```\n尝试在 `for` 循环中编辑 `range` 中的数字。有时候，对于较大的数字，可能会出现一个错误提示。\n```python\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\nOSError: [Errno 24] Too many open files: 'somefile.txt'\n>>> i\n7164\n```\n我们可以看到，在打开 7164 个文件后，系统不再具有打开任何新文件的可用资源。为了避免这种情况，最好关闭任何不需要的文件。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347136,
+              "key": "17b51385-186f-4c79-9ad3-b8d2fd2fe8b3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "写入文件\n----------------\n除了读取外，还可以写入文件，这样将更改文件内容。为此，必须以写入模式打开文件：\n```python\nf = open('/my_path/my_file.txt','w')\n```\n注意：一旦以写入模式打开文件，文件之前的任何内容将被删除。如果你对在现有的文件中添加内容感兴趣（不删除文件内容），应该使用 `append`，而不是 `write`，并以添加模式打开（使用 `a`，而不是 `w`）。请访问 [python 文档](https://docs.python.org/3/library/functions.html#open)，了解关于文件不同打开模式的更多信息。\n\n如果文件不存在，python 将为你创建一个文件。\n\n现在我们可以写入文件：\n```python\nf.write(\"Hello World!\")\n```\n完成后，关闭文件，利人利己。\n```python\nf.close()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347137,
+              "key": "2079524c-d5d0-46cb-a82b-6e0cc6a65daa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`with`\n============\nPython 中使用 `with` 可以允许你打开一个文件，对其进行各种操作，然后自动关闭该文件。\n```python\n>>> with open('/my_path/my_file.txt','r') as f:\n>>>   file_data = f.read()\n```\n在上面的示例中，我们打开了一个文件，在 `with` 语句下的程序块中进行操作（在这个例子中是读取文件操作），Python 稍后将为我们关闭该文件，不需要再调用`f.close()`！\n\n我们将在下文对此进行更详细地解释。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347138,
+              "key": "5f2eab34-8f7e-4861-bb0b-5bca57210d95",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58ebc748_intropy-l4-reading-from-a-file/intropy-l4-reading-from-a-file.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5f2eab34-8f7e-4861-bb0b-5bca57210d95",
+              "caption": "",
+              "alt": "",
+              "width": 517,
+              "height": 294,
+              "instructor_notes": null
+            },
+            {
+              "id": 347139,
+              "key": "22901696-bdea-48a5-bf63-5cc307ba9b03",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nwith open('/my_path/my_file.txt','r') as f:\n    file_data = f.read()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347140,
+              "key": "57065cd0-e856-45ef-82ce-696e2f4944e1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在这段代码中，函数 `open` 将一个文件路径 (`'/my_path/my_file.txt'`) 作为输入用于文件系统，并创建一个文件对象。正如我们所见，`'r'` 表示这个对象只能用于**只读**模式。`'r'` 实际上是默认模式，所以调用 `open` 时，并不一定要启用该参数。\n\n代码 `as f` 将通过调用 `open` 创建的文件对象为变量名 `f` 赋值 —— 类似于 `f = open('/my_path/my_file.txt','r')`。\n\n调用 `f.read()` 时，文件对象 `f` 读取文件 `/my_path/my_file.txt` 中的全部内容，所以 `f.read()` 可创建一个包含该文件文本的字符串对象，并使用该字符串为名为 `file_data` 的变量赋值。\n\n编码时很容易忘记关闭文件，但 Python 提供了自动关闭文件的特殊语法：即关键字 `with`。\n\n在 `with open(filename) as f:` 语句（不要忘记结尾的冒号）之后编写一个缩进的代码块，在其中你可以根据需要任意使用打开的文件对象 `f`。一旦执行完缩进的代码块，文件将自动关闭。这是另一种作用域（scope） —— 只能通过该缩进代码块中的 `f` 访问文件中的数据。关闭文件后，将无法与其再进行交互。\n\n`open` 和文件对象的官方文档见 [此处](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)，其中提供了更多示例和解释。\n\n执行示例代码之后，字符串 `file_data` 即为包含整个文件文本的单个字符串。你可以对该字符串使用所有常用的字符串方法来处理其中的内容。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347141,
+              "key": "3f426215-c164-4fa2-bf2e-612de14cc882",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如何读取\n==========\n打开一个文件对象查看文件时，就像打开了通往该文件的一扇窗口。更准确地说，这是一个只有一个字符那么宽，始终从文件最开头开始的字符窗口。这与阅读书籍或文档截然不同，可以一次查看多个单词甚至多个页面。将文件看作一个很长的字符串，文件对象只能按顺序一次查看一个字符。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347142,
+              "key": "0f41b448-c271-427e-ae52-8ad80540bde4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/58759509_lesson4animation/lesson4animation.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f41b448-c271-427e-ae52-8ad80540bde4",
+              "caption": "",
+              "alt": "",
+              "width": 640,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 347143,
+              "key": "a8ab4693-6ffb-4581-a502-7c22d7fa8b05",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在前面的代码中，调用 `f.read()` 时没有传送参数，该函数默认从当前位置读取文件的所有剩余部分 —— 也就是整个文档。如果向 `.read()` 传送一个整数参数，该函数将读取与参数数量相等的字符数，输出它们，并确保“窗口”在当前位置，可以继续往下读取。\n\n```python\n>>> with open(camelot.txt) as song:\n…        print(song.read(2))\n…        print(song.read(8))\n…        print(song.read())\nWe\n're the \nknights of the round table\nWe dance whenever we're able\n```\n这使得在打开的文件中来回读取有些麻烦，原因是没有多个用于导航的标记。\n\n文本中的 `\\n` 是换行符。换行符标记一行的结尾，提醒程序（如文本编辑器）移到下一行。但是从文件中的字符串来看，`\\n` 只是另一种字符。幸好 Python 知道这些是特殊字符，所以可以一次性请求读取一整行。让我们试试吧！\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347144,
+              "key": "3c09c41e-579b-4659-8303-1280bf55e433",
+              "title": "读取下一行",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3c09c41e-579b-4659-8303-1280bf55e433",
+                "completed_at": "2017-12-08T19:37:43.815Z",
+                "last_viewed_at": "2017-12-08T19:37:43.815Z",
+                "unstructured": "{\"answer\":\"readline()\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "使用 [Python 文档的相关部分](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) 查找读取文件下一行的函数。将函数名称填入方框中。\n",
+                "matchers": [
+                  {
+                    "expression": "readline"
+                  },
+                  {
+                    "expression": "readline()"
+                  },
+                  {
+                    "expression": ".readline"
+                  },
+                  {
+                    "expression": ".readline()"
+                  },
+                  {
+                    "expression": "read line"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347145,
+              "key": "ead3c268-de8b-4610-8262-ddf33b99f741",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "方便的是，Python 使用语法 `for line in file` 循环读取文件中的行。我可以用该语法来创建文件中的行列表。由于每行仍然有自己的换行符，所以我使用 `.strip()` 将其删除。\n\n```python\n>>> camelot_lines = []\n>>> with open(\"camelot.txt\") as f:\n...     for line in f:\n...         camelot_lines.append(line.strip())\n... \n>>> print(camelot_lines)\n[\"We're the knights of the round table\", \"We dance whenever we're able\"]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347146,
+              "key": "beaa2475-8ff9-4efc-9de7-cee5656cf407",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：飞行马戏团演员表\n=============\n你将要为电视节目 Monty Python 飞行马戏团的演员创建一个演员表。\n\n编写一个名为 `create_cast_list` 的函数，该函数将文件名作为输入，并返回一个演员姓名列表。\n该函数将在文件 `flying_circus_cast.txt`（信息源自 imdb.com）上运行。该文件的每一行都包含一个演员名字、一个逗号以及一些他们在节目中所扮演角色的（凌乱）相关信息。你*仅*需要提取名称并将其添加到列表中。也可以使用 [`.split()` method](https://docs.python.org/3/library/stdtypes.html#str.split) 处理每一行。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347147,
+              "key": "f575d356-77c4-4f73-8b78-5b8596285d2d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f575d356-77c4-4f73-8b78-5b8596285d2d",
+                "completed_at": "2017-12-08T20:21:46.433Z",
+                "last_viewed_at": "2017-12-08T20:21:46.433Z",
+                "unstructured": "{\"cast_list.py\":\"def create_cast_list(filename):\\n    cast_list = []\\n    #use with to open the file filename\\n    #use the for loop syntax to process each line\\n    #and add the actor name to cast_list\\n    with open(\\\"flying_circus_cast.txt\\\") as f:\\n        for line in f:\\n            cast_list.append(line.split(\\\",\\\")[0])\\n    return cast_list\\nlist=create_cast_list(\\\"Monty Python\\\")\\nprint(list)\",\"flying_circus_cast.txt\":\"Graham Chapman,  Various / ... (46 episodes, 1969-1974)\\nEric Idle,  Various / ... (46 episodes, 1969-1974)\\nTerry Jones,  Various / ... (46 episodes, 1969-1974)\\nMichael Palin,  It's Man / ... (46 episodes, 1969-1974)\\nTerry Gilliam,  Various / ... (46 episodes, 1969-1974)\\nJohn Cleese,  Announcer / ... (40 episodes, 1969-1973)\\nCarol Cleveland,  Various / ... (34 episodes, 1969-1974)\\nIan Davidson,  Algy Braithwaite / ... (8 episodes, 1969-1970)\\nJohn Hughman,  Alfred Lord Tennyson / ... (8 episodes, 1970-1974)\\nThe Fred Tomlinson Singers,  Amantillado Chorus / ... (7 episodes, 1969-1973)\\nConnie Booth,  Animated Mother / ... (6 episodes, 1969-1974)\\nBob Raymond,  'Dad' / ... (5 episodes, 1974)\\nLyn Ashley,  Algon Girl / ... (5 episodes, 1970-1972)\\nRita Davies,  Argument Secretary / ... (4 episodes, 1969-1972)\\nStanley Mason,  Clapper Man / ... (4 episodes, 1970-1971)\\nDavid Ballantyne,  Ivan the Terrible / ... (3 episodes, 1970-1971)\\nDonna Reading,  Girl in Bikini with Its Man / ... (3 episodes, 1969)\\nPeter Brett,  Door-to-Door Martial Arts Salesman (2 episodes, 1974)\\nMaureen Flanagan,  Anona Winn / ... (2 episodes, 1969-1970)\\nKatya Wyeth,  Elsie / ... (2 episodes, 1969)\\nFrank Lester,  The Late Professor Thynne (2 episodes, 1972-1974)\\nNeil Innes,  Hesitant guitarist / ... (2 episodes, 1974)\\nDick Vosburgh,  Van der Berg (1 episode, 1969)\\nSandra Richards,  'Semprini' Girl / ... (1 episode, 1970)\\nJulia Breck,  Puss In Boots / ... (1 episode, 1972)\\nNicki Howorth,  Miss Bladder (1 episode, 1972)\\nJimmy Hill,  Himself (1 episode, 1974)\\nBarry Cryer,  Herman Rodrigues (1 episode, 1969)\\nJeannette Wild,  Second Secretary (1 episode, 1970)\\nMarjorie Wilde,  Dear Old Lady (1 episode, 1970)\\nMarie Anderson,  Girl interviewing the announcer (1 episode, 1972)\\nCaron Gardner,  Mary (1 episode, 1973)\\nNosher Powell,  Jack Bodell (1 episode, 1973)\\nCarolae Donoghue,  Vera's Husband's Mistress (1 episode, 1969)\\nVincent Wong,  Mr. Kamikaze (1 episode, 1970)\\nHelena Clayton,  Various Roles (1 episode, 1971)\\nNigel Jones,  Various (1 episode, 1972)\\nRoy Gunson, (1 episode, 1970)\\nDaphne Davey,  Various Roles (1 episode, 1971)\\nStenson Falke, (1 episode, 1974)\\nAlexander Curry,  Various (1 episode, 1970)\\nFrank Williams,  Clerk of the Court (1 episode, 1972)\\nRalph Wood, (1 episode, 1970)\\nRosalind Bailey,  Elizabethan Girl (1 episode, 1972)\\nMarion Mould, (1 episode, 1974)\\nSheila Sands,  Stripper / ... (uncredited) (2 episodes, 1969)\\nRichard Baker,  Himself - BBC News Anchor (uncredited) (3 episodes, 1972-1973)\\nDouglas Adams,  Dr. Emile Koning - Surgeon / ... (uncredited) (2 episodes, 1974)\\nEwa Aulin,  Harrassed Woman (uncredited) (1 episode, 1969)\\nReginald Bosanquet,  Himself (uncredited) (1 episode, 1970)\\nBarbara Lindley,  Bride (uncredited) (1 episode, 1970)\\nRoy Brent,  Armoured Knight (uncredited) (1 episode, 1972)\\nJonas Card,  Armoured Knight (uncredited) (1 episode, 1972)\\nTony Christopher,  Armoured Knight (uncredited) (1 episode, 1972)\\nBeulah Hughes, (uncredited) (1 episode, 1972)\\nPeter Kodak,  Armoured Knight (uncredited) (1 episode, 1972)\\nLulu,  Herself (uncredited) (1 episode, 1972)\\nJay Neill,  Armoured Knight (uncredited) (1 episode, 1972)\\nGraham Skidmore,  Armoured Knight (uncredited) (1 episode, 1972)\\nRingo Starr,  Himself (uncredited) (1 episode, 1972)\\nFred Tomlinson,  Superintendent McGough (uncredited) (1 episode, 1972)\\nDavid Hamilton,  Himself - Thames TV Announcer (uncredited) (1 episode, 1973)\\nSuzy Mandel,  German Girl (uncredited) (1 episode, 1974)\\nPeter Woods,  BBC Presenter (uncredited) (1 episode, 1974)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6044203843977216",
+                "initial_code_files": [
+                  {
+                    "text": "def create_cast_list(filename):\n    cast_list = []\n    #use with to open the file filename\n    #use the for loop syntax to process each line\n    #and add the actor name to cast_list\n\n    return cast_list",
+                    "name": "cast_list.py"
+                  },
+                  {
+                    "text": "Graham Chapman,  Various / ... (46 episodes, 1969-1974)\nEric Idle,  Various / ... (46 episodes, 1969-1974)\nTerry Jones,  Various / ... (46 episodes, 1969-1974)\nMichael Palin,  It's Man / ... (46 episodes, 1969-1974)\nTerry Gilliam,  Various / ... (46 episodes, 1969-1974)\nJohn Cleese,  Announcer / ... (40 episodes, 1969-1973)\nCarol Cleveland,  Various / ... (34 episodes, 1969-1974)\nIan Davidson,  Algy Braithwaite / ... (8 episodes, 1969-1970)\nJohn Hughman,  Alfred Lord Tennyson / ... (8 episodes, 1970-1974)\nThe Fred Tomlinson Singers,  Amantillado Chorus / ... (7 episodes, 1969-1973)\nConnie Booth,  Animated Mother / ... (6 episodes, 1969-1974)\nBob Raymond,  'Dad' / ... (5 episodes, 1974)\nLyn Ashley,  Algon Girl / ... (5 episodes, 1970-1972)\nRita Davies,  Argument Secretary / ... (4 episodes, 1969-1972)\nStanley Mason,  Clapper Man / ... (4 episodes, 1970-1971)\nDavid Ballantyne,  Ivan the Terrible / ... (3 episodes, 1970-1971)\nDonna Reading,  Girl in Bikini with Its Man / ... (3 episodes, 1969)\nPeter Brett,  Door-to-Door Martial Arts Salesman (2 episodes, 1974)\nMaureen Flanagan,  Anona Winn / ... (2 episodes, 1969-1970)\nKatya Wyeth,  Elsie / ... (2 episodes, 1969)\nFrank Lester,  The Late Professor Thynne (2 episodes, 1972-1974)\nNeil Innes,  Hesitant guitarist / ... (2 episodes, 1974)\nDick Vosburgh,  Van der Berg (1 episode, 1969)\nSandra Richards,  'Semprini' Girl / ... (1 episode, 1970)\nJulia Breck,  Puss In Boots / ... (1 episode, 1972)\nNicki Howorth,  Miss Bladder (1 episode, 1972)\nJimmy Hill,  Himself (1 episode, 1974)\nBarry Cryer,  Herman Rodrigues (1 episode, 1969)\nJeannette Wild,  Second Secretary (1 episode, 1970)\nMarjorie Wilde,  Dear Old Lady (1 episode, 1970)\nMarie Anderson,  Girl interviewing the announcer (1 episode, 1972)\nCaron Gardner,  Mary (1 episode, 1973)\nNosher Powell,  Jack Bodell (1 episode, 1973)\nCarolae Donoghue,  Vera's Husband's Mistress (1 episode, 1969)\nVincent Wong,  Mr. Kamikaze (1 episode, 1970)\nHelena Clayton,  Various Roles (1 episode, 1971)\nNigel Jones,  Various (1 episode, 1972)\nRoy Gunson, (1 episode, 1970)\nDaphne Davey,  Various Roles (1 episode, 1971)\nStenson Falke, (1 episode, 1974)\nAlexander Curry,  Various (1 episode, 1970)\nFrank Williams,  Clerk of the Court (1 episode, 1972)\nRalph Wood, (1 episode, 1970)\nRosalind Bailey,  Elizabethan Girl (1 episode, 1972)\nMarion Mould, (1 episode, 1974)\nSheila Sands,  Stripper / ... (uncredited) (2 episodes, 1969)\nRichard Baker,  Himself - BBC News Anchor (uncredited) (3 episodes, 1972-1973)\nDouglas Adams,  Dr. Emile Koning - Surgeon / ... (uncredited) (2 episodes, 1974)\nEwa Aulin,  Harrassed Woman (uncredited) (1 episode, 1969)\nReginald Bosanquet,  Himself (uncredited) (1 episode, 1970)\nBarbara Lindley,  Bride (uncredited) (1 episode, 1970)\nRoy Brent,  Armoured Knight (uncredited) (1 episode, 1972)\nJonas Card,  Armoured Knight (uncredited) (1 episode, 1972)\nTony Christopher,  Armoured Knight (uncredited) (1 episode, 1972)\nBeulah Hughes, (uncredited) (1 episode, 1972)\nPeter Kodak,  Armoured Knight (uncredited) (1 episode, 1972)\nLulu,  Herself (uncredited) (1 episode, 1972)\nJay Neill,  Armoured Knight (uncredited) (1 episode, 1972)\nGraham Skidmore,  Armoured Knight (uncredited) (1 episode, 1972)\nRingo Starr,  Himself (uncredited) (1 episode, 1972)\nFred Tomlinson,  Superintendent McGough (uncredited) (1 episode, 1972)\nDavid Hamilton,  Himself - Thames TV Announcer (uncredited) (1 episode, 1973)\nSuzy Mandel,  German Girl (uncredited) (1 episode, 1974)\nPeter Woods,  BBC Presenter (uncredited) (1 episode, 1974)",
+                    "name": "flying_circus_cast.txt"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347298,
+          "key": "f9301f01-75c6-40ab-b909-1e8d7dbc676d",
+          "title": "演员表解决方案",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9301f01-75c6-40ab-b909-1e8d7dbc676d",
+            "completed_at": "2018-02-20T05:34:16.988Z",
+            "last_viewed_at": "2018-09-27T09:32:57.224Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347148,
+              "key": "82258bf8-e060-4d87-8459-952d4b81eb80",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是我们创建演员表的方法。\n\n```python\ndef create_cast_list(filename):\n    cast_list = []\n    # use with to open the file filename\n    with open(filename) as f:\n    # use the for loop syntax to process each line        \n    # and add the actor name to cast_list\n        for line in f:\n            line_data = line.split(',')\n            cast_list.append(line_data[0])\n    return cast_list\n```\n\n稍后大家将学习如何使用其他人的代码，用更复杂的方式解析文件，但始终需要先打开文件 —— 大家在掌握这个技能方面做得不错！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347300,
+          "key": "a59361e3-daa2-4faa-a95a-c7ee89fb136f",
+          "title": "标准库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a59361e3-daa2-4faa-a95a-c7ee89fb136f",
+            "completed_at": "2018-02-20T05:34:21.846Z",
+            "last_viewed_at": "2018-09-27T09:33:28.137Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347149,
+              "key": "9bd0e3b7-b850-4262-b34c-cb1940a3af3d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Python 标准库简介\n======================\n到目前为止，我们已经在 Python 中使用了内置类型、函数和语法。你所看到的语法都可以在 Python 解释器中使用，也可以将代码放入 Python 脚本中运行。Python 不仅作用齐全，而且功能强大，只有你想不到的，没有它完不成的，只要编程能力高，就可以充分发挥 Python 的作用！\n\n程序员可以自己编写代码，而我们也有一些现成的代码可以解决常见的问题。我们将这些“现成的代码”称为 Python 标准库。\n\n\nPython 标准库是大量强大编程工具的集合，可为你在 Python 中编程提供帮助。从网络到数学统计，Python 标准库为一系列常见的专业任务提供新的对象类型和函数。其他程序员编写好的代码被放入有用的“模块”（module）中，以供你在自己的代码中访问和使用。使用 Python 标准库中的模块可轻松访问和使用现有代码，极大提升了你的编程能力！\n\n\n在本节中，我们将了解标准库及其使用方法，并分享我们最喜欢的模块。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347150,
+              "key": "9c155dfd-ca69-4363-9e7a-8ba45618ccb9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "导入模块\n================\nPython 标准库的各组成部分被称为 `modules`（模块）。许多模块都只是 Python 文件，与你已经使用和编写过的 Python 脚本类似。为了使用模块中的代码，我们必须将其 `import` （导入）到交互式解释器或我们自己的 Python 脚本中。\n\n导入模块的语法很简单： `import package_name`。\n\n```python\n>>> import math\n```\n将导入语句放在文件的顶部（每个导入语句占一行）。导入模块即可运行该文件中的代码。其中通常包含很多定义，一般不显示任何输出。运行代码将使模块的所有函数和对象类型可用。\n\n例如，`math` 有一个 `factorial` （阶乘）函数。（该函数会得出一个正整数与所有小于该正整数的整数乘积；例如 4 的阶乘是 24，因为 4×3×2×1 = 24）\n在上方的代码块中，我们已经使用 `import math` 导入了 `math` 模块。现在，为了使用 `factorial` 函数，我们需调用它，以模块名称 `math` 开始，然后是一个点符号 (`.`)，最后是函数名 `factorial()`。\n\n```python\n>>> print(math.factorial(3))\n6\n```\n\nPython 标准库为其每个模块提供了详细的文档，在使用模块时，请先阅读对应的文档。[这里是 `math` 模块的文档链接](https://docs.python.org/3/library/math.html#module-math)。\n\n可以在 [Python 模块周刊](https://pymotw.com/3/) 中了解新模块。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347151,
+              "key": "a5d955b0-0b6e-403d-9ec2-56a0fe8b5bf5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：求幂\n=================\n\n现在你应该练习自己导入和使用 `math` 模块了。请在下方的练习中使用 `math` 模块来计算 `e` 的 3 次幂，并 `print` 答案。\n\n你可以参考 [math 模块文档](https://docs.python.org/3.6/library/math.html?highlight=math%20module#module-math)，查找自己需要的函数！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347152,
+              "key": "cbbd60a2-3137-47e1-813a-56468a265a27",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "cbbd60a2-3137-47e1-813a-56468a265a27",
+                "completed_at": "2017-12-08T20:34:09.179Z",
+                "last_viewed_at": "2017-12-08T20:34:09.179Z",
+                "unstructured": "{\"expquiz.py\":\"# TODO: print e to the power of 3 using the math module\\nimport math\\n\\n\\nprint(math.exp(3))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5487581417570304",
+                "initial_code_files": [
+                  {
+                    "text": "# TODO: print e to the power of 3 using the math module",
+                    "name": "expquiz.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347153,
+              "key": "718c7c90-8e94-4f7b-ab75-6ca11c76e95d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "了解标准库\n=============\n\n到目前为止，我们只见过 Python 标准库中的一个模块。这个模块十分实用，但我们还有很多其他模块。我们现在来看看整个 Python 标准库的文档，这是一个庞大的链接列表。在之前的课程内容中，我们探讨的大部分内容都与内置对象相关。（如你所知，使用前不需要 `import`）。\n\n在这个文档中，模块被根据用途分列成组。单击导航中的模块名称即可跳至对应的内容，文档中通常还包含示例代码，可供你随时进行测试。\n\n[可以点击此处浏览标准库文档。](https://docs.python.org/3/library/)\n\n在下面的练习中，请你输入解决每个问题的模块名称。请注意大小写！标准库中的每个模块都采用小写字母。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347154,
+              "key": "eca6c29f-bf78-4999-a73a-8c8fa767b0a4",
+              "title": "哪个模块？ 1",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "eca6c29f-bf78-4999-a73a-8c8fa767b0a4",
+                "completed_at": "2017-12-08T20:38:00.503Z",
+                "last_viewed_at": "2017-12-08T20:38:00.503Z",
+                "unstructured": "{\"answer\":\"datetime\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以提示当前时间和日期？",
+                "matchers": [
+                  {
+                    "expression": "datetime"
+                  },
+                  {
+                    "expression": "datetime\\.datetime"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347155,
+              "key": "454ebc7a-64f3-4c45-91bd-ed2e7042dace",
+              "title": "哪个模块？ 2",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "454ebc7a-64f3-4c45-91bd-ed2e7042dace",
+                "completed_at": "2017-12-08T20:39:44.671Z",
+                "last_viewed_at": "2017-12-08T20:39:44.671Z",
+                "unstructured": "{\"answer\":\"os\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块具有更改当前工作目录的方法？",
+                "matchers": [
+                  {
+                    "expression": "os"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347156,
+              "key": "c0baf8e0-5f9b-4540-b64e-b0f629beff19",
+              "title": "哪个模块？ 3",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c0baf8e0-5f9b-4540-b64e-b0f629beff19",
+                "completed_at": "2017-12-08T20:45:22.417Z",
+                "last_viewed_at": "2017-12-08T20:45:22.417Z",
+                "unstructured": "{\"answer\":\"csv\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可以将数据从逗号分隔符 (.csv) 文件读取到 Python 字典的每一行？",
+                "matchers": [
+                  {
+                    "expression": "csv"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347157,
+              "key": "08346fcf-fe2a-4a35-92b4-993bed811e4e",
+              "title": "哪个模块？ 4",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "08346fcf-fe2a-4a35-92b4-993bed811e4e",
+                "completed_at": "2018-02-19T04:45:06.066Z",
+                "last_viewed_at": "2018-02-19T04:45:06.066Z",
+                "unstructured": "{\"answer\":\"zipfile\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块有助于从 zip 文件解压所有文件？",
+                "matchers": [
+                  {
+                    "expression": "zipfile"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347158,
+              "key": "028cf8c0-ff04-40e2-b1fb-a2d476ffa5a4",
+              "title": "哪个模块？ 5",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "028cf8c0-ff04-40e2-b1fb-a2d476ffa5a4",
+                "completed_at": "2018-02-19T04:46:07.503Z",
+                "last_viewed_at": "2018-02-19T04:46:07.503Z",
+                "unstructured": "{\"answer\":\"datetime\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个模块可表示代码运行时长？\n",
+                "matchers": [
+                  {
+                    "expression": "timeit"
+                  },
+                  {
+                    "expression": "profile"
+                  },
+                  {
+                    "expression": "cProfile"
+                  },
+                  {
+                    "expression": "time"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347159,
+              "key": "dee310e0-1589-4d41-9ffd-cf3dd4cd872a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "其他导入方法与命名\n===================\n\n到目前为止，我们已经学习了如何使用 `import module_name` 导入模块，并通过点符号获得该模块的所有函数和所有对象类。\n\n而我们还有其他一些常见的导入方法：\n\n### 如果你需要从模块中导入单个的函数或类，可使用：\n```python\n>>> from module_name import object_name\n```\n例如：\n```python\n>>> from collections import defaultdict\n```\n这**仅**可访问模块 `collections` 中的 `defaultdict`，并通过 `defaultdict` 自身的名称（前面不用加模块名称）对其进行访问，假如你试图访问 `collections`，或是调用 `collections.defaultdict()` 都会导致一个 NameError。\n\n```python\n>>> collections\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'collections' is not defined\n>>> collections.defaultdict()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nNameError: name 'collections' is not defined\n>>> defaultdict()\ndefaultdict(None, {})\n```\n从模块导入单个对象意味着只需要使用所需内容，而不需要使用点符号进行访问。\n\n用逗号将对象隔开即可从模块中导入多个单独的对象：\n```python\n>>> from collections import defaultdict, namedtuple\n```\n这种方法常用于从大型库中导入对象的情况。\n\n### 导入一个模块并重新命名（通常取较短名称）\n如需重命名模块，可以使用 `as`：\n```python\n>>> import module_name as different_name\n```\n例如：\n```python\n>>> import multiprocessing as mp\n```\n如果模块的名称特别长，或与具有相同或相似名称的内容发生冲突，则可以重命名模块。请查看文档中的代码示例，因为这些代码通常拥有常用的标准缩写形式，如果你使用与其他人一致的缩写，会使代码更易读。\n\n然后你可以通过自己指定的备用名称和常用点符号从模块访问对象：\n\n```python\n>>> mp.cpu_count()\n4\n```\n\n### 从模块导入单个项目并重命名\n你可以组合前两个语法，从模块导入一个项目，**并**更改其名称：\n\n```python\nfrom module_name import object_name as different_name\n```\n例如：\n\n```python\nfrom csv import reader as csvreader\n```\n同样地，你可以仅通过新指定的名称直接访问该单独项目，而不需要点符号。如果你有多个对象，且其名称与命名空间中的不同包名称相同，这可能会派上用场。例如，你也许需要一个 csv reader 和一个 json reader —— 可以从它们各自的模块中导入这些 reader，并给出描述性的名称。\n\n\n### 一种**不应该**用于导入的方法\n\n你有可能会在别人的代码中发现一种导入方法，但你**不应该**使用这种方法：\n\n```python\nfrom module_name import *\n```\n例如\n```python\nfrom random import *\n```\n上面这段代码将单独从 `random` 模块导入**每个**对象，并允许你直接通过其名称进行访问。这里存在的问题是该模块可能包含很多对象，而每个对象都有一个名称。导入所有这些名称可能会覆盖你在程序中使用的其他名称，或可能被其他名称覆盖。`import *` 也使你的合作伙伴无法找到导入对象的定义位置。能够搜索函数定义的读写器，却无法确定它的位置，也无法确定是哪个 `import *` 语句引入了函数。这些问题将导致严重混乱。\n\n**请勿使用 `from module_name import *`进行导入！！**\n\n如果真的想使用 `random` 模块中的所有对象，请使用标准的 `import random` 语句，并通过点符号访问每个对象。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347160,
+              "key": "94125fc5-9d88-487d-aef2-afd75d5f085e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "模块、包和名称\n==================\n某些 Python 标准库中有很多模块！为了更好地管理代码，它们被分解成包（package）中的子模块（sub-module）。一个包只是一个包含子模块的模块，并通过常见的点符号指定子模块。\n\n例如，`os` 模块（用于处理文件系统，对每个操作系统都起作用）具有一个子模块 os.path，该子模块专用于处理路径名。子模块由包名称指定，并通过点符号与子模块名称隔开。\n\n你可以使用代码 `os.path` 导入子模块，如：\n```python\n>>> import os.path\n```\n然后可以按常见方式使用子模块中的对象：\n```python\n>>> os.path.isdir('my_path')\nFalse\n```\n但是，该导入语法将**只**适用于子模块 —— 你不能以此种方式从模块导入函数。\n```python\n>>> import os.path.isdir\nImportError: No module named 'os.path.isdir'; 'os.path' is not a package\n```\n如果你想使用 os 模块的其他部分，你可以导入 `os`，这样就可以访问 `os.path` 中的所有内容。\n\n有时候在使用模块时，命名可能会出现混乱。例如，模块可能以其中一个重要的类或函数命名。在此种情况下，你需要仔细考虑导入语句：\n\n```python\n>>> from datetime import datetime\n```\n上方代码从 `datetime` 模块中导入了 `datetime` 类。请注意，在此之后，使用 `datetime` 将表示 `datetime` 类，而不是模块。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347161,
+              "key": "661503be-107a-43bf-acd8-c95205b89586",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "从模块导入和访问\n===============\n在本练习中，你将使用不同的方法从 `random` 模块导入和使用 `random.randint()` 函数。你的任务是将导入语句与随后调用函数的方式进行匹配。\n你可以在自己的 Python 解释器中进行测试。但请注意，一旦导入语句，其将一直处于导入状态，直到通过 `exit()` 或 `ctrl-D`（或者如果在 Windows 上使用 `ctrl-Z`）退出交互式解释器。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347162,
+              "key": "77505ebf-682e-4830-bf04-bb579ba00110",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "77505ebf-682e-4830-bf04-bb579ba00110",
+                "completed_at": "2017-10-25T11:38:21.837Z",
+                "last_viewed_at": "2017-10-25T11:38:21.837Z",
+                "unstructured": "{\"answer_ids\":[\"a1484117753829\",\"a1484117827419\",\"a1484117843772\",\"a1484117859785\",\"a1484117876417\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "将导入语句与 `random.randint()` 的调用方式匹配。"
+                },
+                "concepts_label": "导入语句",
+                "answers_label": "调用函数",
+                "concepts": [
+                  {
+                    "text": "`import random`",
+                    "correct_answer": {
+                      "id": "a1484117753829",
+                      "text": "`random.randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import randint`",
+                    "correct_answer": {
+                      "id": "a1484117827419",
+                      "text": "`randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`import random as rd`",
+                    "correct_answer": {
+                      "id": "a1484117843772",
+                      "text": "`rd.randint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import randint as rint`",
+                    "correct_answer": {
+                      "id": "a1484117859785",
+                      "text": "`rint(0,10)`"
+                    }
+                  },
+                  {
+                    "text": "`from random import *`",
+                    "correct_answer": {
+                      "id": "a1484117876417",
+                      "text": "请勿使用该导入语句！"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1484117859785",
+                    "text": "`rint(0,10)`"
+                  },
+                  {
+                    "id": "a1484117827419",
+                    "text": "`randint(0,10)`"
+                  },
+                  {
+                    "id": "a1484117753829",
+                    "text": "`random.randint(0,10)`"
+                  },
+                  {
+                    "id": "a1484117876417",
+                    "text": "请勿使用该导入语句！"
+                  },
+                  {
+                    "id": "a1484117843772",
+                    "text": "`rd.randint(0,10)`"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347163,
+              "key": "013436ce-2008-454a-9fb6-ae56366414e6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们最喜欢的模块\n============\nPython 标准库的模块有很多！为了帮助大家熟悉可用模块，我们列出了一些实用的 Python 标准库模块，以及这些模块的简介：\n\n* [`csv`](https://docs.python.org/3/library/csv.html)：方便阅读和编写 csv 文件\n* [`collections`](https://docs.python.org/3/library/collections.html)：常用数据类型的有用扩展，包括 `OrderedDict`、`defaultdict` 与 `namedtuple`\n* [`random`](https://docs.python.org/3/library/random.html)：生成伪随机数，随机打乱顺序，选择随机项  \n* [`string`](https://docs.python.org/3/library/string.html)：字符串功能的拓展。此模块还包含诸如 `string.digits`（一个包含所有有效数字字符的字符串）的有用字母集合。\n* [`re`](https://docs.python.org/3/library/re.html)：通过正则表达式匹配字符串模式\n* [`math`](https://docs.python.org/3/library/math.html)：一些标准的数学函数\n* [`os`](https://docs.python.org/3/library/os.html)：与操作系统交互\n* [`os.path`](https://docs.python.org/3/library/os.path.html) ：操作路径名的 `os` 子模块\n* [`sys`](https://docs.python.org/3/library/sys.html)：直接使用 Python 解释器\n* [`json`](https://docs.python.org/3/library/json.html)：很适合阅读和编写 json 文件（适合网络工作）\n\n我们希望以上内容能为大家提供帮助！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347164,
+              "key": "3323e128-a7b5-4aa5-b3e1-2c2aba1ce0b7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：密码生成器\n================\n请编写一个名为 `generate_password()` 的函数，该函数从一个具有单词的文件中随机选出三个词，并将它们连成一个字符串。提供的初始代码中已经具有读取文件数据的代码，大家需要根据这些内容构建密码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347165,
+              "key": "1520997f-9dae-4451-8ca0-c344691700cd",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "1520997f-9dae-4451-8ca0-c344691700cd",
+                "completed_at": "2017-12-08T21:19:21.061Z",
+                "last_viewed_at": "2017-12-08T21:19:21.061Z",
+                "unstructured": "{\"password_generator.py\":\"# Use an import statement at the top\\nimport random\\nword_file = \\\"words.txt\\\"\\nword_list = []\\n\\n#fill up the word_list\\n#fill up the word_list\\nwith open(word_file,'r') as words:\\n\\tfor line in words:\\n\\t\\t# remove white space and make everything lowercase\\n\\t\\tword = line.strip().lower()\\n\\t\\t# don't include words that are too long or too short\\n\\t\\tif 3 < len(word) < 8:\\n\\t\\t\\tword_list.append(word)\\ndef  generate_password():\\n    \\n    return ''.join(random.sample(word_list,3))\\n    \\npsw=generate_password()\\n\\nprint(psw)\",\"words.txt\":\"Alice\\nwas\\nbeginning\\nto\\nget\\nvery\\ntired\\nof\\nsitting\\nby\\nher\\nsister\\nbank\\nhaving\\nnothing\\nOnce\\ntwice\\nshe\\nhad\\npeeped\\ninto\\nthe\\nbook\\nher\\nsister\\nwas\\nreading\\nbut\\nit\\nhad\\nno\\npictures\\nor\\nconversations\\nin\\nit\\nand\\nwhat\\nis\\nthe\\nuse\\nof\\na\\nbook\\nthought\\nAlice\\nwithout\\npictures\\nor\\nconversations\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6339134953226240",
+                "initial_code_files": [
+                  {
+                    "text": "# Use an import statement at the top\n\nword_file = \"words.txt\"\nword_list = []\n\n#fill up the word_list\nwith open(word_file,'r') as words:\n\tfor line in words:\n\t\t# remove white space and make everything lowercase\n\t\tword = line.strip().lower()\n\t\t# don't include words that are too long or too short\n\t\tif 3 < len(word) < 8:\n\t\t\tword_list.append(word)\n\n# Add your function generate_password here\n# It should return a string consisting of three random words \n# concatenated together without spaces\n\n\n# test your function\nprint(generate_password())",
+                    "name": "password_generator.py"
+                  },
+                  {
+                    "text": "Alice\nwas\nbeginning\nto\nget\nvery\ntired\nof\nsitting\nby\nher\nsister\nbank\nhaving\nnothing\nOnce\ntwice\nshe\nhad\npeeped\ninto\nthe\nbook\nher\nsister\nwas\nreading\nbut\nit\nhad\nno\npictures\nor\nconversations\nin\nit\nand\nwhat\nis\nthe\nuse\nof\na\nbook\nthought\nAlice\nwithout\npictures\nor\nconversations",
+                    "name": "words.txt"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347299,
+          "key": "2fbbda18-7114-4aab-99d2-f0dc8bde245f",
+          "title": "密码生成器解决方案",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2fbbda18-7114-4aab-99d2-f0dc8bde245f",
+            "completed_at": "2018-02-20T05:35:54.842Z",
+            "last_viewed_at": "2018-09-27T09:36:19.412Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347166,
+              "key": "1f180a70-edb1-4c01-a6fb-e03007376c39",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：密码生成器\n========\n创建随机密码时，我们需要使用 `import random`。函数定义很简单：\n```python\ndef generate_password():\n\treturn random.choice(word_list) + random.choice(word_list) + random.choice(word_list)\n```\n或者也可以使用用于字符串的 `random.sample` 函数和 `.join` 方法：\n```python\ndef generate_password():\n    return str().join(random.sample(word_list,3))\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347301,
+          "key": "572294be-1822-4e65-a091-ee08b80917ff",
+          "title": "第三方库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "572294be-1822-4e65-a091-ee08b80917ff",
+            "completed_at": "2018-02-20T05:36:03.055Z",
+            "last_viewed_at": "2018-09-27T09:36:35.073Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347167,
+              "key": "112753d0-dd5a-4f20-bd7e-1904d15ee0e9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "第三方库和包管理器\n===================\n与大多数语言相比，Python 的标准库更加丰富。人们常说 Python “自带电池”，这是因为 Python 自带许多开展工作所需的库。但标准库并不具有你想要的一切，它不支持某些太专业化的任务。但好在独立开发人员编写了成千上万个第三方库。你可以浏览 [PyPi 排名中最受欢迎的第三方库列表](http://pypi-ranking.info/alltime)。\n\n既然 Python 本身不包含这些第三方库，那我们该如何获取呢？我们可以使用 [pip](https://pip.pypa.io/en/stable/) 来安装库，这是 Python 3 自带的一个包管理器。Python 2 用户也可以使用 pip，但是 Python 2 并没有自带这个管理器，因此必须单独安装。如果你同时安装了 Python 2 和 Python 3，并且每个都带有 pip，你可以使用命令 pip2 和 pip3 来进行区分。\n\npip 是 Python 的标准包管理器，但不是唯一的管理器。我们还可以使用 [Anaconda](https://www.continuum.io/anaconda-overview)，它专门为数据科学家和类似用户所设计。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347168,
+              "key": "65d0c539-47e3-40d0-9991-298c442a22ca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用 pip 安装包\n=============\n现在让我们使用 pip 来安装 pytz 库。为了确保我们使用的是与 Python 3 自带的 pip，我们将使用命令 `pip3`。pytz 是一个与时区相关的库，时区处理是[一项非常复杂的任务](http://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time)。\n\n我们可以使用 `pip3` 命令行安装 `pytz`：\n\n```shell\n$ pip3 install pytz\n```\n\n上面的命令将下载并安装 `pytz`，以便于我们将其导入程序。安装完成后，我们可以导入第三方库，方法与导入标准库相同。在这个示例中，我从标准库导入了 `pytz` 和 `datetime`。标准的做法是将导入第三方库的语句，放在导入标准库的语句后面。\n\n```python\nimport datetime\n\nimport pytz\n\nutc = pytz.utc # utc is Coordinated Universal Time\nist = pytz.timezone('Asia/Kolkata') #IST is Indian Standard Time\n\nnow = datetime.datetime.now(tz=utc) # this is the current time in UTC\nist_now = now.astimezone(ist) # this is the current time in IST.\n```\n\n该示例以 [协调世界时（Coordinated Universal Time）](https://zh.wikipedia.org/wiki/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6) 表达方式在变量 `now` 中存储当前时间。然后将此时间转换为 [印度标准时间（Indian Standard Time）](https://zh.wikipedia.org/wiki/%E5%8D%B0%E5%BA%A6%E6%A8%99%E6%BA%96%E6%99%82%E9%96%93)，并将其存储在变量 `ist_now` 中。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347169,
+              "key": "f1cf65a0-38bf-4a9e-b47d-2a5a700585be",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "有用的第三方包\n===============\n\n掌握安装和导入第三方库的技能很有用，但要成为一名高效的程序员，还需要知道哪些库可供自己使用。人们通常会通过网上推荐或同事推荐来了解有用的新库。如果你是一位刚刚入门不久的 Python 程序员，可能还不认识太多同事，所以我们推荐你从这里开启自己的程序员生涯，下面是很受 Udacity 工程师欢迎的包列表：\n\n\n* [IPython](https://ipython.org/) - 一个优秀的交互式 Python 解释器\n* [requests](http://docs.python-requests.org/) - 提供制作 Web 请求的简单方法，用于访问 Web API。\n* [Flask](http://flask.pocoo.org/) - 用于制作 Web 应用程序和 API 的轻量级框架。\n* [Django](https://www.djangoproject.com/) - 制作 Web 应用程序的特色框架。Django 特别适用于设计复杂、内容繁重的 Web 应用程序。  \n* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) - 用于解析 HTML 并从中提取信息。尤其适用于网络抓取。  \n* [pytest](http://doc.pytest.org/) - 扩展 Python 的内置断言（assertion）和 unittest 模块。  \n* [PyYAML](http://pyyaml.org/wiki/PyYAML) - 用于阅读和编写 [YAML](https://en.wikipedia.org/wiki/YAML) 文件。\n* [NumPy](http://www.numpy.org/) - 使用 Python 进行科学计算的基础包，除了其他功能之外，其还包含强大的 N 维数组对象和有用的线性代数功能。\n* [pandas](http://pandas.pydata.org/) - 一个包含高表现力、数据结构和数据分析工具的库。更值得一提的是，pandas 提供了 DataFrame 数据结构！  \n* [matplotlib](http://matplotlib.org/) - 一个 2D 绘图库，用于在交互式环境中生成各种硬拷贝格式的高质量图。  \n* [ggplot](http://ggplot.yhathq.com/) - 另一个 2D 绘图库，基于 R 的 ggplot2 库。  \n* [Pillow](https://python-pillow.org/) - Python 影像库使你的 Python 解释器新增图像处理功能。  \n* [pyglet](http://www.pyglet.org/) - 用于游戏开发的跨平台应用程序框架。  \n* [Pygame](http://www.pygame.org/) - 用于编写游戏的 Python 模块集合。  \n* [pytz](http://pytz.sourceforge.net/) -  Python 中的世界时区定义",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347170,
+              "key": "24d43774-bfb1-41f0-a988-24b323cc9055",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`requirements.txt`\n======\n较大的 Python 程序可能依赖几十个第三方包。为了更容易共享这些程序，程序员通常会在一个名为 requirements.txt 的文件中列出项目的依赖项。这是一个 requirements.txt 文件的示例：\n\n```text\nbeautifulsoup4==4.5.1\nbs4==0.0.1\npytz==2016.7\nrequests==2.11.1\n```\n\n文件的每一行都包含一个包的名称及其版本号。版本号在技术上是可选的，但通常应该包含在内。库可能在不同版本之间略有改变（或大幅改变），因此在使用其他程序员编写好的程序时，选择相同版本的库非常重要。\n\n大家可以使用 pip，并通过以下命令一次安装项目的所有依赖项：\n\n```shell\n$ pip3 install -r requirements.txt\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347302,
+          "key": "cc9f5ff4-3f94-4b83-96c0-31a7d67cbdd5",
+          "title": "使用在线资源",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cc9f5ff4-3f94-4b83-96c0-31a7d67cbdd5",
+            "completed_at": "2018-02-20T05:37:20.618Z",
+            "last_viewed_at": "2018-09-27T09:39:51.169Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347171,
+              "key": "0e285ff2-1115-4df6-8ed7-e450cfc72428",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "获取所需信息\n========\n\n成为一名熟练的程序员需要具备丰富的知识，包括掌握库、语法以及注意各种其他细节。更具挑战性的是，随着新技术和新工具的不断出现，整个技术格局也在一直发生变化。\n\n对于一个新程序员来说，学习所有这些细节和跟上新的发展步伐似乎是一个不可能完成的任务。确实如此！实际上哪怕是经验丰富的专家级程序员也无法把百科全书中的知识装入大脑。但是他们掌握了快速查找信息的方法。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347172,
+              "key": "21cca1dc-619e-46e9-8ab3-fd3cef5887d9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如何搜索\n=============\n以下是一些有用的网页搜索技巧：\n\n* 尝试使用 \"Python\" 或正在使用的库的名称作为查询的第一个关键词。这会提示搜索引擎优先考虑与你所使用工具明确相关的结果。\n* 可以多次尝试搜索，如果第一次搜索时未查找到有用的结果，请重试。\n* 尝试使用初次搜索时在页面上找到的关键词，以便于后续搜索时，引导搜索引擎给出关联度更高的结果。\n* 复制并粘贴错误消息，将其作为搜索关键词，这会找到错误解释和导致错误的原因。错误消息中可能还包含代码的特定行号。但在搜索时，仅使用行号前出现的错误消息部分即可。\n* 如果找不到问题的答案，请自己询问！像 Stackoverflow 这样的社区具有某些礼节规定，如果你想参与进去，就必须学习这些礼节，但不要让这些礼节影响大家对资源的使用。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347173,
+              "key": "11a0da64-cda2-48fa-b161-89271bae44e2",
+              "title": "练习：最佳搜索词",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "11a0da64-cda2-48fa-b161-89271bae44e2",
+                "completed_at": "2017-10-29T12:10:07.812Z",
+                "last_viewed_at": "2017-10-29T12:10:07.812Z",
+                "unstructured": "{\"selected_id\":\"a1484171291216\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "假如你在写代码时遇到以下错误信息：\n\n```python\nUnboundLocalError: local variable 'egg_count' referenced before assignment\n```\n\n用下面哪一个选项搜索，最有可能得出有用结果？",
+                "answers": [
+                  {
+                    "id": "a1484171257859",
+                    "text": "`egg_count` referenced before assignment（赋值前引用 `egg_count`）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484171276909",
+                    "text": "counting with Python（用 Python 计数）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484171282022",
+                    "text": "reference before assignment（赋值前引用）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484171291216",
+                    "text": "Python UnboundLocalError: local variable（Python UnboundLocalError：局部变量）",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347174,
+              "key": "15287696-1da5-473b-8166-18fa5a378ea9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在线资源\n==================\n\n虽然关于编程的在线资源数不胜数，但并不是所有资源都一样可靠。在下面我们按可靠性为你列出了一些资源：\n\n1. ** [Python 教程](https://docs.python.org/3/tutorial/)**  - 这部分官方文档涉及 Python 语法和标准库的相关研究。文档中包含丰富的示例，并且的技术语言比主文档更少。请确保你阅读的是 Python3 对应的文档版本！\n2. ** [Python 语言和库引用](https://docs.python.org/3/index.html)** - 相对于 Python 教程而言，语言引用和库引用使用了更多技术性语言，但这才是最终的真理之源。随着你对 Python 越来越熟悉，你也应该开始充分利用这些资源。\n3. **第三方库文档** - 第三方库不仅会在自己的网站上发布文档，也会经常在 https://readthedocs.org/ 上发布。大家可以通过其文档的质量判断第三方库的质量。如果开发人员没有时间编写好的文档，那么他们可能也没有时间研究自己的库。\n4. **知名专家的网站和博客** - 之前的资源为主要资源，那些文档的作者都是代码编写人员。尽管主要资源相当可靠，但次要资源有时也极具价值。次要资源的缺点在于你需要确定来源的可信度。像 [Doug Hellmann](https://doughellmann.com/blog/) 和 [Eli Bendersky](http://eli.thegreenplace.net/) 都是非常优秀的开发人员。而一些不知名作者的博客可能极具价值，也可能毫无用处。\n5. **[Stackoverflow](http://stackoverflow.com/)** - 这个问答网站的访问量很大，所以有人可能提问过你想要问的问题，并得到了回答。然而，这些答案都由志愿者提供，因此质量也参差不齐。在参考答案中的代码之前，请务必了解相关解决方案。如果答案中没有任何解释，那么多半也并不可靠。你可以利用这个网站找到更多问题的解决方案或是搜索问题的关键词。\n6. ** Bug 跟踪器** - 有时你也会遇到一个非常罕见的或全新的问题，并且 Stackoverflow 上也没有人解决过这个问题。这时，你可能会在 GitHub 的错误报告中引用自己的错误。这些错误报告也许会有帮助，但为了解决这个问题，你还需要将之前的工作再重复一遍。\n7. **其它网络论坛**  - 有时搜索引擎也会将你引导至一些古早的论坛，它们可能早在2004年之后就不再运作了。如果这些论坛是解决问题的唯一资源，你或许应该重新考虑问题的解决方案了。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347175,
+              "key": "596300da-d10f-46d2-b2ad-23f2ef758068",
+              "title": "练习：为学员提供帮助",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "596300da-d10f-46d2-b2ad-23f2ef758068",
+                "completed_at": "2017-10-25T13:56:44.138Z",
+                "last_viewed_at": "2017-10-25T13:56:44.138Z",
+                "unstructured": "{\"answer\":\"索引只能是整型，friends[3]，\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "学习技能最好的方式之一是教导别人。你可以通过帮助其他学员理解代码中的错误来练习自己的调试和研究技能。设想一下，假如有一位学员在 [Udacity 论坛](https://discussions.youdaxue.com) 上发布了以下消息和代码。\n\n请你给学员写一则消息，解释他们发现的错误，并帮助他们掌握如何解决问题。\n\n> 嗨，我的代码出现了错误，但我不明白问题出在哪里？\n\n> 我列出了自己的 Facebook 好友，想从列表中选择第四个好友。\n> 这是我的代码：\n```\nfriends[\"3\"]\n```\n> 错误信息是：\n> `TypeError: list indices must be integers or slices, not str` （列表索引必须是整数或片段，而不是 str）"
+              },
+              "answer": {
+                "text": "感谢大家考虑如何帮助学员。与他人共享知识是提高编程能力的好方法！\n\n### 我们为学员的问题提供以下答案：\n> 同学你好！感谢分享你的问题 —— 记录问题是第一步，做得不错。\n> 我在网上阅读并研究了你的错误信息。你的变量 `friends` 是指一个列表吗？如果要获取列表的元素，则需要使用索引的**整数**，**不是**一个字符串。（\"3\" 是一个字符串，与整数 `3` 不同。）\n\n### 通过研究，我们得出了结果\n我们看不到学员代码的回溯或其余部分，但错误消息含有很多信息。\n我在线搜索 \"python TypeError: list indices must be integers or slices, not str\"，这会出现一些不同的结果，包括一些不相关的结果，这起初让我很困惑。慢慢地，在 Stackoverflow 和其他网站上阅读了几个不同的答案后，我了解这个问题的种类，并忽略了不相关的部分。\n\n如果想要进行更多纠错练习，请随时回答真实学生参加此课程的相关问题。[浏览论坛，了解自己如何为他人提供帮助！](https://discussions.youdaxue.com）。",
+                "video": null
+              }
+            },
+            {
+              "id": 347176,
+              "key": "2c4d3d27-53da-421a-ae8e-73d9e87e6892",
+              "title": "课程总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8AOietAcOLk",
+                "china_cdn_id": "8AOietAcOLk.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

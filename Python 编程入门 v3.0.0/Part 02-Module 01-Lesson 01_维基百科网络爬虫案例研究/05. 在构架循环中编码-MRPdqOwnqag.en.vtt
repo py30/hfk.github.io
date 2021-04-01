@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.899
+So far, we've been working on figuring out the steps that should be included in
+
+00:00:03.899 --> 00:00:06.035
+our code and coded up the continue_crawl
+
+00:00:06.035 --> 00:00:09.439
+function to control when the while loop should end.
+
+00:00:09.439 --> 00:00:13.349
+My next job is to work on the contents of that while loop.
+
+00:00:13.349 --> 00:00:16.410
+I'll transcribe the full steps we ordered earlier into
+
+00:00:16.410 --> 00:00:20.000
+comments in the body of the loop, then add the actual code.
+

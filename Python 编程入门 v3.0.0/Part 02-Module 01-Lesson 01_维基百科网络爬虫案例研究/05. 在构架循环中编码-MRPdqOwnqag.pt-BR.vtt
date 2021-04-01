@@ -1,0 +1,35 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:04.605
+Até agora, trabalhamos nas etapas
+que devem fazer parte do código
+
+00:00:04.638 --> 00:00:06.707
+e programamos a função
+de crawl contínuo
+
+00:00:06.740 --> 00:00:09.276
+para determinar quando
+o loop while deve terminar.
+
+00:00:09.309 --> 00:00:13.480
+Minha próxima tarefa é trabalhar
+no conteúdo daquele loop.
+
+00:00:13.514 --> 00:00:15.949
+Vou transcrever os quatro passos
+que mencionamos
+
+00:00:15.983 --> 00:00:18.085
+em comentários
+no corpo do loop
+
+00:00:18.118 --> 00:00:19.987
+e, em seguida,
+adicionar o código.
+
+00:00:20.020 --> 00:00:21.021
+*END*
+

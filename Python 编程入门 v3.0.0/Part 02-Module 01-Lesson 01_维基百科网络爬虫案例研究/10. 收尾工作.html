@@ -1,0 +1,398 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   收尾工作
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      维基百科网络爬虫案例研究
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 实战演练：维基百科爬虫.html">
+       01. 实战演练：维基百科爬虫
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 搭建基础.html">
+       02. 搭建基础
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 设计程序.html">
+       03. 设计程序
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 执行程序.html">
+       04. 执行程序
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 执行程序II.html">
+       05. 执行程序II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 执行程序 III.html">
+       06. 执行程序 III
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 迭代编程 I.html">
+       07. 迭代编程 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 迭代编程 II.html">
+       08. 迭代编程 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 迭代编程 III.html">
+       09. 迭代编程 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 收尾工作.html">
+       10. 收尾工作
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 总结.html">
+       11. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          10. 收尾工作
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="归纳总结">
+          归纳总结
+         </h1>
+         <p>
+          在交互式 Python 解释器中进行了更多测试后，我准备将代码提取器代码粘贴到
+          <code>
+           find_first_link
+          </code>
+          函数中。这是整齐格式化和具有注释的完整函数：
+         </p>
+         <pre><code class="python language-python">def find_first_link(url):
+    response = requests.get(url)
+    html = response.text
+    soup = bs4.BeautifulSoup(html, "html.parser")
+
+    # This div contains the article's body
+    # (June 2017 Note: Body nested in two div tags)
+    content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
+
+    # stores the first link found in the article, if the article contains no
+    # links this value will remain None
+    article_link = None
+
+    # Find all the direct children of content_div that are paragraphs
+    for element in content_div.find_all("p", recursive=False):
+        # Find the first anchor tag that's a direct child of a paragraph.
+        # It's important to only look at direct children, because other types
+        # of link, e.g. footnotes and pronunciation, could come before the
+        # first link to an article. Those other link types aren't direct
+        # children though, they're in divs of various classes.
+        if element.find("a", recursive=False):
+            article_link = element.find("a", recursive=False).get('href')
+            break
+
+    if not article_link:
+        return 
+
+    # Build a full url from the relative article_link url
+    first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)
+
+    return first_link</code></pre>
+         <p>
+          这里有一行新代码，
+          <code>
+           first_link = urllib.parse.urljoin ('https://en.wikipedia.org/', article_link)
+          </code>
+          。这很有必要，因为我和 Charlie 未在计划中预测到另一个难题。维基百科文章中的链接是相对 url，如
+          <code>
+           wiki/Templebryan_Stone_Circle
+          </code>
+          ，而不是像
+          <a href="https://en.wikipedia.org/wiki/Templebryan_Stone_Circle" target="_blank">
+           https://en.wikipedia.org/wiki/Templebryan_Stone_Circle
+          </a>
+          这样的绝对网址。我在网上搜索了如何根据相对 url 创建一个绝对 url，并发现了
+          <a href="http://stackoverflow.com/a/476521/770271" target="_blank">
+           这个解释
+          </a>
+          。
+         </p>
+         <p>
+          如果有兴趣，可以在
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL" target="_blank">
+           Mozilla 开发人员网络
+          </a>
+          上了解有关相对和绝对 url 的更多信息。"
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="运行完成的程序">
+          运行完成的程序
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          完成的程序
+         </p>
+        </h3>
+        <video controls="">
+         <source src="10. 完成的程序-yGDHoIOfwt8.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="10. 完成的程序-yGDHoIOfwt8.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="10. 完成的程序-yGDHoIOfwt8.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="10. 完成的程序-yGDHoIOfwt8.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="10. 完成的程序-yGDHoIOfwt8.zh-CN.vtt" srclang="zh-CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="wikipediacrawlerpy">
+          WikipediaCrawler.py
+         </h1>
+         <pre><code class="python language-python">import time
+import urllib
+
+import bs4
+import requests
+
+
+start_url = "https://en.wikipedia.org/wiki/Special:Random"
+target_url = "https://en.wikipedia.org/wiki/Philosophy"
+
+def find_first_link(url):
+    response = requests.get(url)
+    html = response.text
+    soup = bs4.BeautifulSoup(html, "html.parser")
+
+    # This div contains the article's body
+    # (June 2017 Note: Body nested in two div tags)
+    content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
+
+    # stores the first link found in the article, if the article contains no
+    # links this value will remain None
+    article_link = None
+
+    # Find all the direct children of content_div that are paragraphs
+    for element in content_div.find_all("p", recursive=False):
+        # Find the first anchor tag that's a direct child of a paragraph.
+        # It's important to only look at direct children, because other types
+        # of link, e.g. footnotes and pronunciation, could come before the
+        # first link to an article. Those other link types aren't direct
+        # children though, they're in divs of various classes.
+        if element.find("a", recursive=False):
+            article_link = element.find("a", recursive=False).get('href')
+            break
+
+    if not article_link:
+        return
+
+    # Build a full url from the relative article_link url
+    first_link = urllib.parse.urljoin('https://en.wikipedia.org/', article_link)
+
+    return first_link
+
+def continue_crawl(search_history, target_url, max_steps=25):
+    if search_history[-1] == target_url:
+        print("We've found the target article!")
+        return False
+    elif len(search_history) &gt; max_steps:
+        print("The search has gone on suspiciously long, aborting search!")
+        return False
+    elif search_history[-1] in search_history[:-1]:
+        print("We've arrived at an article we've already seen, aborting search!")
+        return False
+    else:
+        return True
+
+article_chain = [start_url]
+
+while continue_crawl(article_chain, target_url):
+    print(article_chain[-1])
+
+    first_link = find_first_link(article_chain[-1])
+    if not first_link:
+        print("We've arrived at an article with no links, aborting search!")
+        break
+
+    article_chain.append(first_link)
+
+    time.sleep(2) # Slow things down so as to not hammer Wikipedia's servers</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="11. 总结.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 收尾工作')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

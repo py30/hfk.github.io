@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+Now that we've written all the parts of the Wikipedia crawler,
+
+00:00:03.060 --> 00:00:04.750
+let's see if they work together.
+
+00:00:04.750 --> 00:00:07.519
+I'll start the program and see what happens.
+
+00:00:07.519 --> 00:00:08.830
+Hmm, OK.
+
+00:00:08.830 --> 00:00:12.199
+The program is running but it isn't printing anything quite yet.
+
+00:00:12.199 --> 00:00:14.695
+I guess it's doing the crawling first and printing at the end.
+
+00:00:14.695 --> 00:00:21.945
+Let's wait.
+
+00:00:21.945 --> 00:00:25.149
+Oh, great.
+
+00:00:25.149 --> 00:00:27.969
+It's done, and it looks like it worked.
+
+00:00:27.969 --> 00:00:32.534
+We got from the Big Four British railway companies to Philosophy.
+
+00:00:32.534 --> 00:00:35.971
+But you know, waiting all that time is kind of annoying,
+
+00:00:35.972 --> 00:00:37.240
+and if I think about it,
+
+00:00:37.240 --> 00:00:41.060
+there's no real reason to wait until the end of the program to print the article chain.
+
+00:00:41.060 --> 00:00:42.955
+Charlie and I planned it that way,
+
+00:00:42.954 --> 00:00:44.899
+but now that I see the results in front of me,
+
+00:00:44.899 --> 00:00:47.780
+I think it would be better if we printed the articles as they were visited.
+
+00:00:47.780 --> 00:00:50.844
+I'll make that quick change with a command line text editor.
+
+00:00:50.844 --> 00:00:52.804
+You can also use your standard text editor.
+
+00:00:52.804 --> 00:00:55.030
+First, I'll remove this print statement from the end of
+
+00:00:55.030 --> 00:01:00.060
+the program and I'll put a new print statement in the while loop.
+
+00:01:00.060 --> 00:01:05.055
+Let's save this change and test it. Here we go.
+
+00:01:05.055 --> 00:01:07.010
+So it starts with a random article,
+
+00:01:07.010 --> 00:01:10.950
+then Karnataka, and here it goes.
+
+00:01:10.950 --> 00:01:15.030
+Cool. I think this is a lot more fun to watch. All right.
+
+00:01:15.030 --> 00:01:19.439
+The program works. You can find the completed version of this program below this video.
+

@@ -1,0 +1,598 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   设计程序
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      维基百科网络爬虫案例研究
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 实战演练：维基百科爬虫.html">
+       01. 实战演练：维基百科爬虫
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 搭建基础.html">
+       02. 搭建基础
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 设计程序.html">
+       03. 设计程序
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 执行程序.html">
+       04. 执行程序
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 执行程序II.html">
+       05. 执行程序II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 执行程序 III.html">
+       06. 执行程序 III
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 迭代编程 I.html">
+       07. 迭代编程 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 迭代编程 II.html">
+       08. 迭代编程 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 迭代编程 III.html">
+       09. 迭代编程 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 收尾工作.html">
+       10. 收尾工作
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 总结.html">
+       11. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          03. 设计程序
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="逐步解决问题">
+          逐步解决问题
+         </h1>
+         <p>
+          现在我们已经探索了将用于抓取维基百科的库，让我们考虑一下爬行程序将执行的步骤。我们遵循的手动过程是：
+         </p>
+         <ol>
+          <li>
+           打开文章
+          </li>
+          <li>
+           找到文章中的第一个链接
+          </li>
+          <li>
+           单击链接
+          </li>
+          <li>
+           重复此过程，直到找到“哲学”文章或进入文章周期。
+          </li>
+         </ol>
+         <p>
+          这个过程中的关键词是 "重复"。这个四步骤过程本质上是一个循环！如果我们的程序重复该手动过程，则程序将包含一个大循环。这将导致一个问题，但…
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             我们应该使用什么类型的循环实现爬网过程？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484084027380" name="347202" type="radio" value="a1484084027380"/>
+           <label for="a1484084027380">
+            <p>
+             一个
+             <code>
+              for
+             </code>
+             循环
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084029600" name="347202" type="radio" value="a1484084029600"/>
+           <label for="a1484084029600">
+            <p>
+             一个
+             <code>
+              while
+             </code>
+             循环
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          一个`while`循环
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="记录我们的进度">
+          记录我们的进度
+         </h1>
+         <p>
+          运行循环时，需要跟踪我们访问的文章，以便于输出爬虫发现的路径。我将其添加到我们的过程中：
+         </p>
+         <ol>
+          <li>
+           打开文章
+          </li>
+          <li>
+           找到文章中的第一个链接
+          </li>
+          <li>
+           单击链接
+          </li>
+          <li>
+           <strong>
+            在
+            <code>
+             article_chain
+            </code>
+            数据结构中记录链接
+           </strong>
+          </li>
+          <li>
+           重复此过程，直到我们找到“哲学”文章或进入文章周期。
+          </li>
+         </ol>
+         <p>
+          <code>
+           article_chain
+          </code>
+          将是我们的程序输出。我们也可以借此配合将探索的下一篇文章。在循环的第1步中，命令读出程序可以打开文章链最后的文章。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             我们的算法需要跟踪已经看到的文章链，以便最后可以输出这些文章链。还需要跟踪上一篇文章，以便将其用作 while 循环下一次迭代的输入。这些数据结构中的哪
+             <em>
+              一
+             </em>
+             个可以用于
+             <code>
+              article_chain
+             </code>
+             ？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484084301348" name="347204" type="radio" value="a1484084301348"/>
+           <label for="a1484084301348">
+            <p>
+             字符串
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084330303" name="347204" type="radio" value="a1484084330303"/>
+           <label for="a1484084330303">
+            <p>
+             列表
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084330901" name="347204" type="radio" value="a1484084330901"/>
+           <label for="a1484084330901">
+            <p>
+             字典
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084331519" name="347204" type="radio" value="a1484084331519"/>
+           <label for="a1484084331519">
+            <p>
+             集合
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084332204" name="347204" type="radio" value="a1484084332204"/>
+           <label for="a1484084332204">
+            <p>
+             元组
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484084332872" name="347204" type="radio" value="a1484084332872"/>
+           <label for="a1484084332872">
+            <p>
+             浮点数
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          列表
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          思考
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUESTION:
+          </strong>
+         </p>
+         <p>
+          在记录爬网维基百科过程访问的文章时，我们已经决定使用
+          <code>
+           while
+          </code>
+          循环。但是不应该编写一个将永远存在的程序 - 应该在什么情况下结束循环？这就是我们需要探讨的几种情况。将你的想写入方框。
+         </p>
+         <p>
+          <code>
+           while
+          </code>
+          循环应在以下情况下结束：
+         </p>
+         <details>
+          <summary>
+           <strong>
+            ANSWER:
+           </strong>
+          </summary>
+          <p>
+           <p>
+            解决方案：
+            <br/>
+            程序应该在以下情况下结束
+            <code>
+             while
+            </code>
+            循环：
+           </p>
+           <p>
+            *查找“哲学”文章，
+            <br/>
+            *查找我们已经访问过的页面，因此发现我们已经处于一个文章循环中（与
+            <a href="https://en.wikipedia.org/wiki/Chair" target="_blank">
+             Chair
+            </a>
+            案例类似，
+            <br/>
+            *我们继续操作了许久（我们认为 25 个步骤足以，但是如果你愿意的话可以调整），或者
+            <br/>
+            *我们找到一个没有链接的页面 - 在这种情况下，根本无法继续前进。
+           </p>
+           <p>
+            稍后我们将决定如何采用最好的方法检查每个条件。
+            <br/>
+            已经决定使用一个
+            <code>
+             article_chain
+            </code>
+            变量跟踪我们已经访问过的文章，这将很有用，而且将使检查循环更容易！
+           </p>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="步骤序列">
+          步骤序列
+         </h1>
+         <p>
+          我们已经确定将在一个循环中建构程序。我们将提前建立需要进入循环的步骤
+         </p>
+         <ol>
+          <li>
+           查找当前文章 HTML 中的第一个链接
+          </li>
+          <li>
+           下载当前文章的 HTML
+          </li>
+          <li>
+           将当前文章中的第一个链接添加到
+           <code>
+            article_chain
+           </code>
+           中
+          </li>
+         </ol>
+         <p>
+          还有一个步骤我们之前尚未明确说明：
+         </p>
+         <ol start="4">
+          <li>
+           暂停几秒钟，以便不会使请求洪泛维基百科。
+          </li>
+         </ol>
+         <p>
+          手动查找链接并单击时，我们的速度自然受阅读和单击速度的限制。但 Python 程序不会受到这种限制，其循环速度将与页面下载速度一样快。虽然这可节省时间，但是用快速重复的请求敲击网络服务器显得无礼粗鲁。如果不减慢循环速度，服务器可能会认为我们是试图超载服务器的攻击者，因此会阻止我们。服务器可能是对的！如果代码中有一个错误，我们可能会进入一个无限循环，并且请求将淹没服务器。为了避免此种情况，我们应该在主循环中暂停几秒。（网站在
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt" target="_blank">
+           robots.txt file
+          </a>
+          中指定自动爬虫策略。可以在
+          <a href="https//en.wikipedia.org/robots.txt" target="_blank">
+           https//en.wikipedia.org/robots.txt
+          </a>
+          中查阅维基百科的 robots.txt。维基百科认为，"友好，低速执行重复功能程序是受大众青睐的浏览文章页面…"。通过添加延迟，即表示我们遵守维基百科的条款！）
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            我们的循环按照什么顺序执行这四个步骤？如果你认为我们应按照写入顺序执行这些步骤，请在答案框中输入 "1234"。
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          我们还可以使用以下伪代码描述步骤序列。
+         </p>
+         <pre><code class="python language-python">页面=一个随机起始页
+article_chain = []
+而页面标题不是“哲学”，而且我们还没有发现循环：
+    将页面添加到 article_chain
+    下载页面内容
+    在内容中查找第一个链接
+    页面=该链接
+    暂停片刻</code></pre>
+         <p>
+          这比使用简单的英语更有用，但仍然不是实际的 Python 代码。你可以将伪代码视为英文编号步骤和可运行的实际代码之间的中间步骤。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="04. 执行程序.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 设计程序')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

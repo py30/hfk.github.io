@@ -1,0 +1,1692 @@
+{
+  "data": {
+    "lesson": {
+      "id": 347316,
+      "key": "a6927fc9-e963-4403-847d-0a79c8b16a46",
+      "title": "数据结构和循环",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "你将在本课学习如何使用 Python 数据集：列表、集合和字典。学习如何使用 for 循环和 while 循环迭代这些集合，如何构建组合这些数据集的复合数据结构，以及练习重构和解决问题的软件工程技能。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/a6927fc9-e963-4403-847d-0a79c8b16a46/347316/1516766756208/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/a6927fc9-e963-4403-847d-0a79c8b16a46/347316/1516766748423/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 347277,
+          "key": "67bfa90e-d496-49ba-9b62-49f96fdc8996",
+          "title": "欢迎回来！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "67bfa90e-d496-49ba-9b62-49f96fdc8996",
+            "completed_at": "2017-12-06T14:03:25.804Z",
+            "last_viewed_at": "2018-11-09T13:19:41.418Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347031,
+              "key": "4e9fb568-7595-4d7f-8ff8-72d9c0b2c958",
+              "title": "Ud1110 IntroPy L301 Welcome To Lesson 3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ikOWhrOUgLc",
+                "china_cdn_id": "ikOWhrOUgLc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 347279,
+          "key": "f580c0dc-123a-45be-b569-dbb7e01c9e38",
+          "title": "列表",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f580c0dc-123a-45be-b569-dbb7e01c9e38",
+            "completed_at": "2018-02-13T02:28:41.397Z",
+            "last_viewed_at": "2018-09-27T08:50:42.990Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347032,
+              "key": "49509fe1-5096-4d1f-896c-9925094ba8a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "列表\n===\n到目前为止，我们一直在处理各种单独的数据，比如字符串和数字。但当我们使用数据集合时，还可以编写出更强大的程序。现在我们先介绍一下第一种数据集合：列表。\n\n```python\npython_versions = [1.0, 1.5, 1.6, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6]\n```\n\n上面这行代码定义了一个变量 `python_versions`，其中包含一系列浮点数。列表中的每个元素都表示 Python 的一个版本号（Python 的版本一直在升级，因此有很多不同的版本号）。列表使用方括号（`[` 和 `]`）定义，列表内的元素用逗号分开。\n\n我们可以通过索引来查找列表中的各个元素，比如针对上面这个列表，我们可以按照如下所示的方法查找版本号：\n\n```python\n>>> python_versions[0]\n1.0\n\n>>> python_versions[1]\n1.5\n\n>>> python_versions[7]\n2.4\n```\n\n请注意列表中的第一个元素 `1.0` 的索引编号为 0 ，而不是 1。有许多编程语言都遵循这个惯例，我们将其称为\"零索引\"。如果这种说法让你难以理解，你也可以这样理解：元素的索引编号代表元素与列表开头的距离。第一个元素距离开头有 0 个元素，第二个元素有一个元素，以此类推。\n\n当然，除了这种从列表开头进行索引的方法，我们也可以从列表的末尾进行索引。\n要从列表的末尾索引需要使用负索引。以我们在上方定义的列表为例，我们可以通过下面这种方法得到最新的 Python 版本：\n\n```python\n>>> python_versions[-1]\n3.6\n```\n索引 `-1` 是指列表的最后一个元素，`-2` 是倒数第二个，以此类推。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347033,
+              "key": "42b026d6-71c2-4a30-a9cd-d2628d005a94",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "索引错误\n=========\n如果尝试索引列表中不存在的元素，将导致列表索引异常（List Index Exception）。这条信息表示 Python 提醒你正在尝试访问一个列表中不存在的元素。\n\n例如，我们定义以下列表：\n\n```python\n>>> my_list = ['a','b','c','d','e']\n```\n这个列表中有五个元素，索引编号分别是 0、1、2、3 和 4\n```python\n>>> my_list[4]\n'e'\n```\n如大家所见，`my_list [4]` 返回这个列表的最后一个元素。但是当我们尝试访问索引编号为 5 的元素时，会出现什么结果？\n\n```python\n>>> my_list[5]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nIndexError: list index out of range\n```\n因为列表中只包含 5 个元素，尝试访问索引编号为 5 的元素其实是要求 Python 给出该列表中的第 6 个元素。由于这个元素并不存在，所以导致了一个 `IndexError`。\n\n索引错误十分常见，尤其是当你还不习惯在 Python 中进行索引的时候。刚开始你可能会经常收到这些错误信息，但在慢慢熟悉 Python 后，这样的错误就会很少出现了。导致索引错误最常见的一个原因是在进行索引时编号差 1（比如在上方的例子中，`my_list[5]` 会导致索引错误，因为列表中最后一个元素的编号实际上是 4），但也存在一些其他原因。因此我们建议你使用 `print` 函数来打印你想要索引的元素，以此进行纠错，这可以提醒你的索引是否有差，差是多少。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347034,
+              "key": "6345f3ed-e3b8-4f6e-bdfd-94952a1a9f16",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：列表索引\n==========\n\n请完成函数 `how_many_days`，其将输入一个表示月份的数字，并返回该月份的天数。我们定义的 `days_in_month` 是一个包含各月天数的列表。例如，`how_many_days(8)` 应该返回 31，因为第八个月，即八月，有 31 天。\n\n记住索引编号从零开始！\n\n（提示：目前函数还没有学过，你可以参考下一课：**函数** 来了解一些基本知识。本节中编程习题的解决方案可以在下一小节： **解决方案：列表** 中查看。）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347035,
+              "key": "1b994ca7-6277-4762-bbf1-036918d66d2b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "1b994ca7-6277-4762-bbf1-036918d66d2b",
+                "completed_at": "2017-10-14T16:46:03.534Z",
+                "last_viewed_at": "2018-03-19T00:07:07.854Z",
+                "unstructured": "{\"HowManyDays.py\":\"def how_many_days(month_number):\\n    \\\"\\\"\\\"Returns the number of days in a month.\\n    WARNING: This function doesn't account for leap years!\\n    \\\"\\\"\\\"\\n    days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]\\n    month_number -=1\\n    #todo: return the correct value\\n    return days_in_month [month_number]\\n# This test case should print 31, the number of days in the eighth month, August\\nprint(how_many_days(8))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5605624130961408",
+                "initial_code_files": [
+                  {
+                    "text": "def how_many_days(month_number):\n    \"\"\"Returns the number of days in a month.\n    WARNING: This function doesn't account for leap years!\n    \"\"\"\n    days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]\n    #todo: return the correct value\n    \n# This test case should print 31, the number of days in the eighth month, August\nprint(how_many_days(8))",
+                    "name": "HowManyDays.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347036,
+              "key": "470e0a5c-dc98-43f7-8046-15d2b6ac7039",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "列表切片\n========\n\n除了从列表访问各个元素外，我们还可以使用 Python 的切片符号来访问列表的子序列。大家来看一下这个月份列表，\n```python\nmonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\n```\n\n我们可以从月份列表中切片出一年的第三季度，如下所示：\n```python\n>>> q3 = months[6:9]\n>>> print(q3)\n['July', 'August', 'September']\n>>> print(months)\n['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347037,
+              "key": "0e1ca001-c5dd-4461-9495-bb6bfb573928",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/5873d44b_slicing/slicing.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0e1ca001-c5dd-4461-9495-bb6bfb573928",
+              "caption": "`q3 = months[6:9]`",
+              "alt": null,
+              "width": 507,
+              "height": 235,
+              "instructor_notes": null
+            },
+            {
+              "id": 347038,
+              "key": "ee06171f-6acd-4b32-add7-ce62b8b534a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "冒号左侧的索引编号 6 是切片开始的位置。切片持续到第二个索引编号 9（请注意，切片不包括索引编号为 9 的元素，但包括编号为 6 的元素，以此类推）。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347039,
+              "key": "30b8a355-67a1-4a25-9d27-710a5d42e780",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "切片简化方式\n===========\n\n当然我们也有一些简化切片代码的方法。如果你想获得一个从原始列表开头开始的子列表，或者一个在原始列表的末尾结束的子列表，可以采用如下所示的方法来快捷开始或结束索引：\n```python\n>>> first_half = months[:6]\n>>> print(first_half)\n['January', 'February', 'March', 'April', 'May', 'June']\n>>> second_half = months[6:]\n>>> print(second_half)\n['July', 'August', 'September', 'October', 'November', 'December']\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347040,
+              "key": "79848595-8989-4ce3-857c-28860339ac97",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：列表切片\n==========\n\n请使用列表切片符号从下面这个列表中选择三个最近的日期。提示：负索引也适用于列表切片。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347041,
+              "key": "affc5e21-063c-47a8-b69b-630787c27cad",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "affc5e21-063c-47a8-b69b-630787c27cad",
+                "completed_at": "2017-10-09T15:43:38.256Z",
+                "last_viewed_at": "2018-03-19T00:07:32.588Z",
+                "unstructured": "{\"slicing.py\":\"eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',\\n                 'March 29, 2006', 'August 1, 2008', 'July 22, 2009',\\n                 'July 11, 2010', 'November 13, 2012', 'March 20, 2015',\\n                 'March 9, 2016']\\n                 \\nlast_three_element = eclipse_dates[7:]           \\nprint(last_three_element)\\n# TODO: Modify this line so it prints the last three elements of the list\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6005503906938880",
+                "initial_code_files": [
+                  {
+                    "text": "eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',\n                 'March 29, 2006', 'August 1, 2008', 'July 22, 2009',\n                 'July 11, 2010', 'November 13, 2012', 'March 20, 2015',\n                 'March 9, 2016']\n                 \n                 \n# TODO: Modify this line so it prints the last three elements of the list\nprint(eclipse_dates)",
+                    "name": "slicing.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347042,
+              "key": "21359d9e-aec2-4614-adb5-96c495161a6f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "列表、字符串和可变性\n==================\n\n与 `string`、`float` 和 `int` 一样，`list` 也是一种类型。在我们看到的所有类型中，列表与字符串最为相似：这两种类型都支持索引、切片、`len` 函数和 `in` 运算符。\n\n```python\n>>> sample_string = \"And Now For Something Completely Different\"\n>>> sample_list = ['Graham', 'John', 'Terry', 'Eric', 'Terry', 'Michael']\n>>> sample_string[4]\n'N'\n>>> sample_list[4]\n'Terry'\n>>> sample_string[12:21]\n'Something'\n>>> sample_list[2:4]\n['Terry', 'Eric']\n>>> len(sample_string)\n42\n>>> len(sample_list)\n6\n>>> 'thing' in sample_string\nTrue\n>>> 'Rowan' in sample_list\nFalse\n```\n那么列表与字符串有什么不同？其中最明显的区别是字符串为字母序列，而列表的元素可以是**任何**类型的对象。更细微的区别是列表可以被修改，但字符串不能：\n\n```python\n>>> sample_list[3] = 'Eric'\n>>> print(sample_list)\n['Graham', 'John', 'Terry', 'Eric', 'Terry', 'Michael']\n>>> sample_string[8] = 'f'\nTypeError: 'str' object does not support item assignment\n```\n表示对象可否修改的术语是**可变性**（Mutability）。列表是可变的，而字符串不可变。接下来，我们将探讨可以在列表中使用的方法和函数，同时将在程序中利用列表的可变性。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347043,
+              "key": "789515b1-3477-4d4e-8697-c3ebfc663e96",
+              "title": "可变性匹配练习",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "789515b1-3477-4d4e-8697-c3ebfc663e96",
+                "completed_at": "2017-12-07T16:03:53.220Z",
+                "last_viewed_at": "2018-03-19T12:01:48.077Z",
+                "unstructured": "{\"answer_ids\":[\"a1490730669503\",\"a1490730709235\",\"a1490730802508\",\"a1490730825330\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "假设我们有以下两个表达式，`sentence1` 和 `sentence2`：\n```python\nsentence1 = \"I wish to register a complaint.\"\nsentence2 = [\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]\n```\n将下面的 python 代码与修改后的 `sentence1` 或 `sentence2` 值相匹配。如果代码导致错误，则与\n Error 匹配。"
+                },
+                "concepts_label": "Python code",
+                "answers_label": "`sentence1` 或 `sentence2` 的值",
+                "concepts": [
+                  {
+                    "text": "`sentence2[6]=\"!\"`",
+                    "correct_answer": {
+                      "id": "a1490730669503",
+                      "text": "[\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \"!\"]"
+                    }
+                  },
+                  {
+                    "text": "`sentence2[0]= \"Our Majesty\"`",
+                    "correct_answer": {
+                      "id": "a1490730709235",
+                      "text": "[\"Our Majesty\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]"
+                    }
+                  },
+                  {
+                    "text": "`sentence1[30]=\"!\"`",
+                    "correct_answer": {
+                      "id": "a1490730802508",
+                      "text": "Error"
+                    }
+                  },
+                  {
+                    "text": "`sentence2[0:2] = [\"We\", \"want\"]`",
+                    "correct_answer": {
+                      "id": "a1490730825330",
+                      "text": "[\"We\", \"want\", \"to\", \"register\", \"a\", “complaint”, \".\"]"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1490730825330",
+                    "text": "[\"We\", \"want\", \"to\", \"register\", \"a\", “complaint”, \".\"]"
+                  },
+                  {
+                    "id": "a1490730849467",
+                    "text": "“I wish to register a complaint！”"
+                  },
+                  {
+                    "id": "a1490730669503",
+                    "text": "[\"I\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \"!\"]"
+                  },
+                  {
+                    "id": "a1490730802508",
+                    "text": "Error"
+                  },
+                  {
+                    "id": "a1490730709235",
+                    "text": "[\"Our Majesty\", \"wish\", \"to\", \"register\", \"a\", \"complaint\", \".\"]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347047,
+              "key": "9b11e668-80ed-4dda-bd3e-56774e7ed37c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "保存列表的变量\n====================\n之前，当创建一个具有不可变对象的变量时，该不可变对象的值即被保存在内存中。例如在下面这个示例中，我们创建了一个值为 `\"Old Woman\"` 的变量 `name` ，并将其赋值给另一个变量 `person`。\n```\n>>> name = \"Old Woman\"\n>>> person = name\n>>> name = \"Dennis\"\n>>> print(name)\nDennis\n>>> print(person)\nOld Woman\n```\n在第二行代码中，字符串 \"Old Woman\" 已经为 `person` 赋值。因此当我们在后面为 `name` 重新赋值，将其更新为 `\"Dennis\"` 时，并不会影响到 `person` 的值。\n\n\n列表与字符串不同，它们是可变的。在下面这个示例中，我们创建了一个名为 `dish` 的列表，列表中包含了一家咖啡厅的菜肴。我们将这个列表赋值给变量 `mr_buns_order`。当我们由于一种食材不可用而更改（转变）列表 `dish` 时，会同时影响 `dish` 和 `mr_buns_order`：\n```\n>>> dish = [\"Spam\", \"Spam\", \"Spam\", \"Spam\", \"Spam\", \"Spam\", \"baked beans\", \"Spam\", \"Spam\", \"Spam\", \"Spam\"]\n>>> mr_buns_order = dish\n>>> print(dish)\n['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'baked beans', 'Spam', 'Spam', 'Spam', 'Spam']\n>>> print(mr_buns_order)\n['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'baked beans', 'Spam', 'Spam', 'Spam', 'Spam']\n>>> dish[6] = \"Spam\" #baked beans are off\n>>> print(mr_buns_order)\n['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']\n>>> print(dish)\n['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']\n```\n`dish` 和 `mr_buns_order`是同一底层列表的两个变量名，我们可以使用任一名称来访问和更改该列表。\n\n包含可变和不可变对象的变量运行方式非常不同，你必须十分注意这一点。\n你需要不断进行试验，通过 `print` 函数来检查你的代码，以确保程序可以正确处理数据。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347044,
+              "key": "5a701d5b-d41d-44c0-840a-bb7568117d2b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用列表\n==============\n\n下面是一些可以与列表一起使用的函数：\n\n`len（some_list）`\n------------------------\n\n返回 `some_list` 中的元素个数\n\n`max(some_list)`\n------------------------\n返回列表中的最大元素。最大元素的确定取决于列表中的对象类型。数字列表中的最大元素是最大的数字：\n```python\n>>> batch_sizes = [15, 6, 89, 34, 65, 35]\n>>> max(batch_sizes)\n89\n```\n字符串列表的最大元素是首字母顺序排在最后的一个元素：\n```python\n>>> python_varieties = ['Burmese Python', 'African Rock Python', 'Ball Python', 'Reticulated Python', 'Angolan Python']\n>>> max(python_varieties)\n'Reticulated Python'\n```\n这是因为 `max` 函数采用比较运算符 `>` 定义。有许多非数字类型都可以使用`>` 运算符进行比较。如果正在处理的对象可以用 `>` 比较，那么在这类对象的列表中便可以使用 `max` 函数。对于字符串来说，比较标准是首字母顺序，因此上面示例中列表的最大值就是首字母顺序排在最后的元素。\n\n当一个列表中包含不同类型的元素，并且这些类型无法进行比较时，`max` 函数也将无法使用：\n```python\n>>> max([42, 'African Swallow'])\nTypeError: unorderable types: str() > int()\n``` \n这是因为 `max` 函数采用 `>` 定义，如果无法比较列表中的两个对象，则无法确定最大元素。\n\n`min(some_list)`\n------------------------\n返回列表中的最小元素。 `min` 与 `max` 相反。\n\n`sorted（some_list）`\n------------------------\n按从小到大的顺序返回 `some_list` 的副本，同时保持 `some_list` 不变。可以通过添加可选参数 `reverse = True` 按从大到小的顺序排序。\n```python\n>>> sorted(batch_sizes)\n[6, 15, 34, 35, 65, 89]\n>>> sorted(batch_sizes, reverse=True)\n[89, 65, 35, 34, 15, 6]\n>>> print(batch_sizes)\n[15, 6, 89, 34, 65, 35]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347045,
+              "key": "1025be33-e6b7-4132-9996-e47956ff0f75",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "连接列表\n========\n\n下面我们来介绍一个新的字符串方法`join`，使用示例如下：\n```python\n>>> nautical_directions = \"\\n\".join([\"fore\", \"aft\", \"starboard\", \"port\"])\n>>> print(nautical_directions)\nfore\naft\nstarboard\nport\n```\njoin 将一个列表作为参数，返回一个由分隔符字符串连接列表元素组成的字符串。在这个示例中，我们使用字符串 `\\n` 作为分隔符，以便使每个元素之间有一个换行符。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347046,
+              "key": "0f1cedb9-f814-47a1-aa46-156ee76035fd",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/5873e61f_join/join.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f1cedb9-f814-47a1-aa46-156ee76035fd",
+              "caption": "",
+              "alt": null,
+              "width": 603,
+              "height": 195,
+              "instructor_notes": null
+            },
+            {
+              "id": 347048,
+              "key": "538b2464-8003-416e-b3db-a5228a142c55",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们也可以和 `.join` 配合使用其他字符串（而不是 `'\\n'`）。例如：\n```python\n>>> names = [\"García\", \"O'Kelly\", \"Davis\"]\n>>> \"-\".join(names)\n\"García-O'Kelly-Davis\"\n```\n注意，务必用逗号 (`,`) 隔开连接列表中的每个元素。如果忘记隔开，尽管不会导致错误，但也会使你无法获得理想的结果。下面的例子中，\"García” 和 \"O'Kelly” 之间没有逗号，所以出现了以下结果：\n```python\n>>> names = [\"García\" \"O'Kelly\", \"Davis\"]\n>>> \"-\".join(names)\n\"GarcíaO'Kelly-Davis\"\n```\n你有没有注意到 \"García\" 和 \"O'Kelly\" 之间的 '-' 分隔符消失了？这是因为 Python 默认按字符串的字面形式进行连接。如果 `.join` 返回的结果与你的预期不同，那么你最好检查是否丢失了逗号。\n\n你还要注意的是，如果你尝试在列表中加入字符串以外的其他任何内容，`join` 会触发错误。例如：\n```python\n>>> stuff = [\"thing\", 42, \"nope\"]\n>>> \" and \".join(stuff)\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: sequence item 1: expected str instance, int found\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347049,
+              "key": "84e01ac7-965d-45aa-b70d-a18a5ae8ad3f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "追加到列表\n==============\n\n列表对象的 `append` 方法在列表末尾添加一个元素。\n```python\n>>> python_varieties.append('Blood Python')\n>>> print(python_varieties)\n['Burmese Python', 'African Rock Python', 'Ball Python', 'Reticulated Python', 'Angolan Python', 'Blood Python']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347050,
+              "key": "2b5fc2c0-d4b0-4505-9c4d-5dc4be2c5c0b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：前三名\n===========\n\n编写一个函数 `top_three`，该函数以列表为参数，返回三个最大元素的列表。例如，`top_three([2,3,5,6,8,4,2,1]) == [8, 6, 5]`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347051,
+              "key": "03dc81ea-d062-4d82-883d-5755dc0f403d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "03dc81ea-d062-4d82-883d-5755dc0f403d",
+                "completed_at": "2018-02-09T17:10:13.684Z",
+                "last_viewed_at": "2018-03-19T06:51:12.567Z",
+                "unstructured": "{\"top3.py\":\"def top_three(input_list):\\n    \\\"\\\"\\\"Returns a list of the three largest elements input_list in order from largest to smallest.\\n\\n    If input_list has fewer than three elements, return input_list element sorted largest to smallest/\\n    \\\"\\\"\\\"\\n    # TODO: implement this function\\n    return sorted(input_list, reverse = True)[:3]\\nprint(top_three([1, 4, 6, 7, 9, 0, 1, 2]))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5741180747907072",
+                "initial_code_files": [
+                  {
+                    "text": "def top_three(input_list):\n    \"\"\"Returns a list of the three largest elements input_list in order from largest to smallest.\n\n    If input_list has fewer than three elements, return input_list element sorted largest to smallest/\n    \"\"\"\n    # TODO: implement this function",
+                    "name": "top3.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347052,
+              "key": "70b279cf-7a83-4bf2-966e-9315f75c12be",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：中位数（Median）\n=========\n\n此练习中的函数 `median` 返回输入列表的中值。但该函数只适用于具有奇数个元素的列表。现在请你修改函数，当为 `median` 输入具有偶数个元素的列表时，该函数可返回两个中心元素的平均值。练习中提供的用例可以使你测试预期结果。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347053,
+              "key": "433d30f1-e615-46b6-b0a9-c1a4e2c6a2c8",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "433d30f1-e615-46b6-b0a9-c1a4e2c6a2c8",
+                "completed_at": "2018-02-11T16:24:51.540Z",
+                "last_viewed_at": "2018-03-20T07:31:13.170Z",
+                "unstructured": "{\"median.py\":\"def median(numbers):\\n    numbers.sort() #The sort method sorts a list directly, rather than returning a new sorted list\\n    middle_index = int(len(numbers)/2)\\n    if len(numbers)%2 == 1 :\\n        return numbers[middle_index]\\n    else:\\n        middle_index_right = int(len(numbers)/2)\\n        middle_index_left = middle_index_right - 1\\n        return (numbers[middle_index_left] + numbers[middle_index_right]) / 2\\n    \\n\\ntest1 = median([1,2,3])\\nprint(\\\"expected result: 2, actual result: {}\\\".format(test1))\\n\\ntest2 = median([1,2,3,4])\\nprint(\\\"expected result: 2.5, actual result: {}\\\".format(test2))\\n\\ntest3 = median([53, 12, 65, 7, 420, 317, 88])\\nprint(\\\"expected result: 65, actual result: {}\\\".format(test3))\\n\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5596945310679040",
+                "initial_code_files": [
+                  {
+                    "text": "def median(numbers):\n    numbers.sort() #The sort method sorts a list directly, rather than returning a new sorted list\n    middle_index = int(len(numbers)/2)\n    return numbers[middle_index]\n\ntest1 = median([1,2,3])\nprint(\"expected result: 2, actual result: {}\".format(test1))\n\ntest2 = median([1,2,3,4])\nprint(\"expected result: 2.5, actual result: {}\".format(test2))\n\ntest3 = median([53, 12, 65, 7, 420, 317, 88])\nprint(\"expected result: 65, actual result: {}\".format(test3))\n\n",
+                    "name": "median.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347054,
+              "key": "e224eb6b-8445-4cf6-bd44-6e4b595cf243",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "单击“下一项”查看该练习的解决方案。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347280,
+          "key": "b2e76180-b32a-4cd4-952e-acc18c6464a9",
+          "title": "列表 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b2e76180-b32a-4cd4-952e-acc18c6464a9",
+            "completed_at": "2018-02-14T16:24:26.660Z",
+            "last_viewed_at": "2018-09-27T08:51:56.834Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347055,
+              "key": "7cd0d5e7-f59c-42da-a19c-085dab19f5dc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "解决方案：中位数\n===========",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347056,
+              "key": "8dd42315-e2e4-46ef-b46d-14ff88694ea5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "中位数函数需要处理两种情况：偶数长度的输入和奇数长度的输入。可以使用 if 语句来确定列表长度的奇偶性。\n\n```python\ndef median(numbers):\n    numbers.sort() \n    if len(numbers) % 2:\n        # if the list has an odd number of elements,\n        # the median is the middle element\n        middle_index = int(len(numbers)/2)\n        return numbers[middle_index]\n    else:\n        # if the list has an even number of elements,\n        # the median is the average of the middle two elements\n        right_of_middle = len(numbers)//2 \n        left_of_middle = right_of_middle - 1\n        return (numbers[right_of_middle] + numbers[left_of_middle])/2\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347281,
+          "key": "06888cd6-6f49-4fcf-9f0a-829acdfac850",
+          "title": "For 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "06888cd6-6f49-4fcf-9f0a-829acdfac850",
+            "completed_at": "2018-02-14T16:24:28.777Z",
+            "last_viewed_at": "2018-09-27T08:52:16.575Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347057,
+              "key": "e7dae03e-b4d8-4576-a3f7-c1a3ea2b1537",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For 循环\n========\n\n在 Python 中，我们可以使用列表来存储数据序列，并使用 for 循环来遍历列表。下面的代码中包含一个循环，可以将列表中每个名字的首字母大写（将字符串的首字母大写可以通过字符串的[title()](https://www.tutorialspoint.com/python/string_title.htm)方法来实现），并打印：\n\n```python\nnames = ['charlotte hippopotamus turner', 'oliver st. john-mollusc',\n         'nigel incubator-jones', 'philip diplodocus mallory']\n\nfor name in names:\n    print(name.title())\n```\n\n运行该代码可输出：\n```text\nCharlotte Hippopotamus Turner\nOliver St. John-Mollusc\nNigel Incubator-Jones\nPhilip Diplodocus Mallory\n```\n\n现在我们来具体看看 for 循环的语法：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347058,
+              "key": "4633cfec-e20e-4e4f-9cc2-36618616fb4e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/5873f13f_for-loop/for-loop.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4633cfec-e20e-4e4f-9cc2-36618616fb4e",
+              "caption": "",
+              "alt": null,
+              "width": 1232,
+              "height": 676,
+              "instructor_notes": null
+            },
+            {
+              "id": 347059,
+              "key": "d15651c2-63bc-4167-a5b3-fced69d6a4dd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "1. 关键字 `for` 表示这是一个 for 循环。\n2. 该行的其余部分表示正在迭代的内容。`names` 是这个 for 循环迭代的列表。`name` 是该循环的迭代变量。针对 `names` 中的每个元素， for 循环的主体都会被执行一次，迭代变量 `name` 可用于循环体，从而指代循环当前处理的元素。\n3. for 循环的主体部分需要缩进四个空格，并针对列表中的每个元素执行一次。\n\n**关于命名的注释**：你可以采用自己喜欢的任何方式命名迭代变量。但是上面这个例子展现了一个常见模式，即列表 `names` 的名称是以 \"s\" 结尾的复数，而迭代变量是没有 \"s\" 的单数。以此模式命名列表和迭代变量，可以使其他程序员更轻松地了解不同的变量。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347060,
+              "key": "7c7812b2-cb41-44b7-9d23-550c404b66f3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：列表的总和\n==============\n\n请在下面的练习中定义一个函数 `list_sum`，该函数将一个列表作为参数，并返回列表中元素的总和。你可以使用 for 循环迭代列表。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347061,
+              "key": "abee6df5-ed88-45f8-a951-371d3a4b732d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "abee6df5-ed88-45f8-a951-371d3a4b732d",
+                "completed_at": "2018-02-13T02:45:07.920Z",
+                "last_viewed_at": "2018-03-22T13:51:10.896Z",
+                "unstructured": "{\"sum.py\":\"def list_sum(input_list):\\n    sum = 0\\n    # todo: Write a for loop that adds the elements\\n    # of input_list to the sum variable\\n    for number in input_list:\\n        sum +=number\\n    return sum\\n\\n\\n\\n#These test cases check that list_sum works correctly\\ntest1 = list_sum([1, 2, 3])\\nprint(\\\"expected result: 6, actual result: {}\\\".format(test1))\\n\\ntest2 = list_sum([-1, 0, 1])\\nprint(\\\"expected result: 0, actual result: {}\\\".format(test2))\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6379850437885952",
+                "initial_code_files": [
+                  {
+                    "text": "def list_sum(input_list):\n    sum = 0\n    # todo: Write a for loop that adds the elements\n    # of input_list to the sum variable\n    \n    return sum\n\n\n\n#These test cases check that list_sum works correctly\ntest1 = list_sum([1, 2, 3])\nprint(\"expected result: 6, actual result: {}\".format(test1))\n\ntest2 = list_sum([-1, 0, 1])\nprint(\"expected result: 0, actual result: {}\".format(test2))\n",
+                    "name": "sum.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347062,
+              "key": "3802073f-e33e-4dad-9a1f-12166187e0a5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：XML 标签计数器\n================\n请在下面的练习中编写函数 `tag_count`，其参数以字符串列表的形式列出。该函数应该返回字符串中有多少个 [XML 标签](https://en.wikipedia.org/wiki/XML)。XML 是类似于 HTML 的数据语言，它以左尖括号 \"<\" 开始，以右尖括号 \">\" 结尾。你可以通过检查列表中的字符串是否以 \"<\" 开始，以 \">\" 结尾来判断它是否为 XML 标签。\n\n你可以假设作为输入的字符串列表不包含空字符串。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347063,
+              "key": "3630b9ef-8994-4346-9f32-e1c4849d9ead",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3630b9ef-8994-4346-9f32-e1c4849d9ead",
+                "completed_at": "2018-02-13T03:14:10.297Z",
+                "last_viewed_at": "2018-03-22T13:51:02.825Z",
+                "unstructured": "{\"XMLTagCounter.py\":\"\\\"\\\"\\\"Write a function, `tag_count`, that takes as its argument a list\\nof strings. It should return a count of how many of those strings\\nare XML tags. You can tell if a string is an XML tag if it begins\\nwith a left angle bracket \\\"<\\\" and ends with a right angle bracket \\\">\\\".\\n\\\"\\\"\\\"\\n#TODO: Define the tag_count function\\n\\n\\n# Test for the tag_count function:\\ndef tag_count(tokens):\\n    count = 0\\n    for token in tokens:\\n        if token[0] == '<' and token[-1] == '>':\\n            count += 1\\n    return count\\nlist1 = ['<greeting>', 'Hello World!', '</greeting>']\\ncount = tag_count(list1)\\nprint(\\\"Expected result: 2, Actual result: {}\\\".format(count))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5933602765406208",
+                "initial_code_files": [
+                  {
+                    "text": "\"\"\"Write a function, `tag_count`, that takes as its argument a list\nof strings. It should return a count of how many of those strings\nare XML tags. You can tell if a string is an XML tag if it begins\nwith a left angle bracket \"<\" and ends with a right angle bracket \">\".\n\"\"\"\n#TODO: Define the tag_count function\ndef tag_count(list1):\n    # Your code goes here!\n    return count\n\n# Test for the tag_count function:\nlist1 = ['<greeting>', 'Hello World!', '</greeting>']\ncount = tag_count(list1)\nprint(\"Expected result: 2, Actual result: {}\".format(count))",
+                    "name": "XMLTagCounter.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347064,
+              "key": "6e4e0c88-40e3-41e9-bb3a-efddad8294b2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用循环构建列表\n====================\n\n除了利用循环从列表中提取信息之外，我们还可以使用 for 循环创建和修改列表。以我们在这一节开头看到的名单列表为例（注意所有首字母均为小写）：\n\n```python\nnames = ['charlotte hidppopotamus turner', 'oliver st. john-mollusc',\n         'nigel incubator-jones', 'philip diplodocus mallory']\n```\n\n通过下面的代码，我们可以使用循环生成一个首字母大写的名单：\n\n```python\n# create a new list of capitalized names without modifying the original list\ncapitalized_names = [] #create a new, empty list\nfor name in names:\n    capitalized_names.append(name.title()) #add elements to the new list\n```\n\n如果你不想保留首字母小写的名单列表，你也可以将其覆盖，而不是创建一个新列表。\n\n```python\n# modify the names list in place\nfor index in range(len(names)): # iterate over the index numbers of the names list\n    names[index] = names[index].title() # modify each element of names\n```\n\n如需创建一个新列表，可以从一个空列表 (`[]`) 开始，然后使用 `append` 方法添加新元素。修改列表更复杂一些，需要使用一个新的函数：`range`。`range` 函数需要一个参数，即整数 n，并返回一个从零到 n-1 的数字序列。\n\n```python\n>>> for number in range(4):\n>>>     print(number)\n0\n1\n2\n3\n```\n使用 range 函数为名单列表中的每个值生成索引。这样我们可以使用 `names[index]` 访问列表的元素，以便更新 `names` 列表中的值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347065,
+              "key": "e6247f34-df4f-4dc9-85ef-9b9d060294c6",
+              "title": "Why `range`?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e6247f34-df4f-4dc9-85ef-9b9d060294c6",
+                "completed_at": "2017-12-06T14:35:37.765Z",
+                "last_viewed_at": "2017-12-06T14:35:37.765Z",
+                "unstructured": "{\"selected_id\":\"a1483994486263\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "使用 `range` 生成索引以修改列表似乎相当于迂回，为什么这是必要的？试一试这个更简单的方法看看会出现什么结果：\n\n```python\nnames = ['charlotte hippopotamus turner', 'oliver st. john-mollusc', 'nigel incubator-jones', 'philip diplodocus mallory']\n\nfor name in names:\n    name = name.title()\n\nprint(names)\n```\n\n这段代码有什么用？",
+                "answers": [
+                  {
+                    "id": "a1483994414451",
+                    "text": "修改名单列表，使得每个名字都大写",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483994485416",
+                    "text": "导致运行时错误",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483994486263",
+                    "text": "代码没有任何作用",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483994487103",
+                    "text": "删除列表",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347066,
+              "key": "e19a44d8-0025-42bf-b9cc-35f6919a2cf6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：创建 HTML 列表\n=====================\n\n请在下面的练习中编写 `html_list` 函数。该函数需要一个参数，即一个字符串列表，并返回一个 HTML 列表形式的单个字符串。例如，如果为函数提供列表 `['first string', 'second string']` 作为参数，则该函数将返回以下字符串。\n```text\n<ul>\n<li>first string</li>\n<li>second string</li>\n</ul>\n```\n也就是说，字符串的第一行应该是开始标签 `<ul>`。继第一行之后是源列表中的两个元素（各占一行），前后带有 `<li>` 和 `</li>` 标签。字符串的最后一行应该是结束标签 `</ul>`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347067,
+              "key": "d7a1483d-f68a-4393-99b9-3503da19d2e6",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "d7a1483d-f68a-4393-99b9-3503da19d2e6",
+                "completed_at": "2018-02-14T17:07:43.962Z",
+                "last_viewed_at": "2018-03-22T09:40:19.452Z",
+                "unstructured": "{\"htmllist.py\":\"#define the  html_list function\\ndef html_list(li):\\n    #print(\\\"<ul>\\\")\\n    html_list = \\\"<ul>\\\\n\\\"\\n    for i in (li):\\n        html_list += \\\"<li>{}</li>\\\\n\\\".format(i)\\n        #x = str(i)\\n        #print(\\\"<li>\\\"+x+\\\"</li>\\\")\\n        # print (\\\"<li>{}</li>\\\".format(i))\\n    html_list += \\\"</ul>\\\"\\n    return html_list\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5147060371324928",
+                "initial_code_files": [
+                  {
+                    "text": "#define the  html_list function\ndef html_list(list_of_strings):\n    # Your code goes here!\n    return\n\nprint(html_list(['First element', 'Second element', 'Third element']))",
+                    "name": "htmllist.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347068,
+              "key": "480623c1-4e24-44ab-9020-246f3d4a90fd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`range` 函数的其他应用\n=====================\n虽然 `range` 可以用于修改列表，但这并不是它的唯一用处。我们也可以使用该函数将某个操作重复一定次数。\n```python\n>>> for i in range(3):\n...     print(\"Camelot!\")\n... \nCamelot!\nCamelot!\nCamelot!\n>>> print(\"It's only a model.\")\nIt's only a model.\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347069,
+              "key": "8e13c7fb-e714-410b-b07c-51ec2318bb72",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：Starbox\n=========\n\n在下面的练习中，`starbox` 函数将打印出一个由星号组成的框。该函数有两个参数，即宽度和高度，其单位为字符数量。\n这个函数并不完整，尽管它打印了正确宽度的框，但忽略了参数高度。现在请你将函数补充完整，以便根据我们提供的两个测试用例打印出正确大小的框。**提示：**在这个练习中，`range` 函数也许可以派上用场！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347070,
+              "key": "93fed313-af59-4c8d-ae7d-f58222d9094b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "93fed313-af59-4c8d-ae7d-f58222d9094b",
+                "completed_at": "2017-12-06T14:57:16.739Z",
+                "last_viewed_at": "2017-12-06T14:57:16.739Z",
+                "unstructured": "{\"starbox.py\":\"def starbox(width, height):\\n    \\\"\\\"\\\"print a box made up of asterisks.\\n\\n    width: width of box in characters, must be at least 2\\n    height: height of box in lines, must be at least 2\\n    \\\"\\\"\\\"\\n    for i in range(height):\\n        if i==0:\\n            print(\\\"*\\\" * width) #print top edge of box\\n        elif i!=0 and i!=height-1:  \\n    # print sides of box\\n    # todo: print this line height-2 times, instead of three times\\n            print(\\\"*\\\" + \\\" \\\" * (width-2) + \\\"*\\\") \\n        else:\\n                print(\\\"*\\\" * width) #print bottom edge of box\\n\\n# Test Cases\\nprint(\\\"Test 1:\\\")\\nstarbox(5, 5) # this prints correctly\\n\\nprint(\\\"Test 2:\\\")\\nstarbox(2, 3)  # this currently prints two lines too tall - fix it!\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4642945396506624",
+                "initial_code_files": [
+                  {
+                    "text": "def starbox(width, height):\n    \"\"\"print a box made up of asterisks.\n\n    width: width of box in characters, must be at least 2\n    height: height of box in lines, must be at least 2\n    \"\"\"\n    print(\"*\" * width) #print top edge of box\n   \n    # print sides of box\n    # todo: print this line height-2 times, instead of three times\n    print(\"*\" + \" \" * (width-2) + \"*\") \n    print(\"*\" + \" \" * (width-2) + \"*\")\n    print(\"*\" + \" \" * (width-2) + \"*\")\n\n    print(\"*\" * width) #print bottom edge of box\n\n# Test Cases\nprint(\"Test 1:\")\nstarbox(5, 5) # this prints correctly\n\nprint(\"Test 2:\")\nstarbox(2, 3)  # this currently prints two lines too tall - fix it!\n",
+                    "name": "starbox.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347071,
+              "key": "a09c1568-1505-475c-a239-ea46128b1e61",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "单击“下一项”查看该练习的解决方案。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347282,
+          "key": "bfe80fb0-4dd8-4d31-808e-ae5aec03e59e",
+          "title": "For 循环 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bfe80fb0-4dd8-4d31-808e-ae5aec03e59e",
+            "completed_at": "2018-02-13T04:26:44.597Z",
+            "last_viewed_at": "2018-09-27T08:55:00.519Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347072,
+              "key": "54f5de0e-c36d-4d7e-abd0-d61ac05f4649",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "解决方案：Starbox\n==========\n\n我已修改了这个函数，通过循环打印出正确的行数：\n```python\nfor _ in range(height-2):\n        print(\"*\" + \" \" * (width-2) + \"*\")\n```\n该循环将范围用作一个简单的计数器，循环体执行 `height - 2` 次。我命名了迭代变量 `_`，表示该变量是一个虚变量，不在循环体中使用其值。\n\n这是我的完整解决方案：\n```python\ndef starbox(width, height):\n    \"\"\"print a box made up of asterisks.\n\n    width: width of box in characters, must be at least 2\n    height: height of box in lines, must be at least 2\n    \"\"\"\n    print(\"*\" * width) #print top edge of box\n   \n    # print sides of box\n    for _ in range(height-2):\n        print(\"*\" + \" \" * (width-2) + \"*\") \n\n    print(\"*\" * width) #print bottom edge of box\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347283,
+          "key": "839460eb-f4af-47c1-a330-e2728c23ac8c",
+          "title": "While 循环",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "839460eb-f4af-47c1-a330-e2728c23ac8c",
+            "completed_at": "2018-02-13T04:26:46.827Z",
+            "last_viewed_at": "2018-09-27T08:55:16.490Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347073,
+              "key": "e532c320-c2e6-4afe-8c66-5d5d9d0dc7c5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "While 循环\n======\nFor 循环是 \"定迭代\" 的一种，它表示循环主体将执行指定次数。列表的 for 循环针对列表中的每个元素执行一次主体。使用 `range` 函数的 for 循环，其执行次数将由 range 函数调用指定。\n这种迭代与 \"不定迭代\" 不同，后者指循环重复未知次数，直到满足某些条件时循环才会结束。下面这个示例将模拟二十一点发牌，使用 while 循环将卡片牌堆拖到手牌中，在手牌的值大于或等于 17 时停止。\n\n```python\ncard_deck = [4, 11, 8, 5, 13, 2, 8, 10]\nhand = []\n\nwhile sum(hand) <= 17:\n    hand.append(card_deck.pop())\n\nprint(hand)\n```\n这个示例中有一个新的函数 `sum` 和一个新的列表方法 `pop`。`sum` 非常直观，它用于计算列表中元素的总和。`pop` 方法与 `append` 方法相反，`pop` 从列表中移除一个元素并返回它。大家可以在[官方文档](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)中阅读更多关于 pop 方法的内容。\n\n\n下面我们来看一下 while 循环的语法：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347074,
+              "key": "9c8164e8-a722-48a5-b11e-d0efcac1b6c2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/5873fbe3_screen-shot-2017-01-09-at-1.08.23-pm/screen-shot-2017-01-09-at-1.08.23-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9c8164e8-a722-48a5-b11e-d0efcac1b6c2",
+              "caption": "",
+              "alt": null,
+              "width": 594,
+              "height": 256,
+              "instructor_notes": null
+            },
+            {
+              "id": 347075,
+              "key": "b5f092e8-316c-4837-8851-e58222560db6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "1. 关键字 `While` 表示这是一个 while 循环\n2. 接下来是一个测试表达式，在该示例中表达式为 `sum(hand) <= 21`。如果表达式为真，将执行循环主体，之后将再次判断该表达式是否为真。这一过程重复判断测试表达式的真假，并运行循环主体，直到表达式变为 false。\n3. 循环主体前需要缩进四个空格。循环主体应该以某种方式修改测试表达式中的变量。如果测试表达式的值没有改变，这将导致一个无限循环！在上面的示例中，循环主体将数字追加到了 `hand` 列表中，因此增加了 `sum(hand)` 的值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347076,
+              "key": "836ae6f1-8569-4252-89e4-7f721002119c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：最大平方数\n===========\n请在下面的练习中完成 nearest_square 函数。该函数取一个整数参数 `limit`，并返回一个小于 `limit` 的最大平方数。平方数是整数乘以自身的乘积，例如 6*6 等于 36，所以 36 是一个平方数。\n\n这个代码有多种编写方法，但是我建议大家使用一个 while 循环！\n\n下面是一个测试用例，在函数编写完成后，你可以使用它来测试自己的代码。当然你也可以随意使用其他数据进行测试。\n\n```python\ntest1 = nearest_square(40)\nprint(\"expected result: 36, actual result: {}\".format(test1))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347077,
+              "key": "4cc1e26b-ac8c-4ccd-b600-9acce025105a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4cc1e26b-ac8c-4ccd-b600-9acce025105a",
+                "completed_at": "2018-02-13T04:27:03.401Z",
+                "last_viewed_at": "2018-02-13T04:27:03.401Z",
+                "unstructured": "{\"nearestsquare.py\":\"#TODO: Implement the nearest_square function\\ndef nearest_square(top):\\n    limit=1\\n    while(limit*limit<top):\\n        sum=limit*limit\\n        limit +=1\\n    return sum\\n    \\ntest1 = nearest_square(40)\\nprint(\\\"expected result: 36, actual result: {}\\\".format(test1))    \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6289409835139072",
+                "initial_code_files": [
+                  {
+                    "text": "#TODO: Implement the nearest_square function",
+                    "name": "nearestsquare.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347078,
+              "key": "69f5c2d6-fa4e-4c33-bc48-dd73035a50f3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`break` 停止\n================\n\nFor 循环迭代序列中的每个元素，而 while 循环在满足条件时停止迭代。在大多数情况下，这两种用法就已经足够了，但我们有时候需要更精确地控制循环何时结束。这时我们就需要使用关键字 `break` 了。\n\n循环在遇到 break 时便会立即停止。如果检测到已经满足某些条件，那么我们可以使用这些条件来结束循环。在 `for` 循环和 `while` 循环中，我们都可以使用`break`。\n\n我们将通过下面的示例学习如何使用 `break`。\n假设你想按照一个货物列表来装载货船。每个货物都具有一定的重量，但货船有最大载重限制。在理想情况下，我们希望能够装载所有货物，同时避免货船超载。因此，当货物达到货船的额定载重时，应停止装载。所以在这里我们将使用一个 `for` 循环，来记录装载的货物以及总重量。一旦所装载的货物达到了货船的最大载重，应使用 `break` 语句停止装载。\n\n**注意：**下方示例中的 `manifest` 是一个由列表组成的列表。我们以前接触过列表，也知道有些列表元素本身就是列表，而 `manifest` 变量就是这种情况。`manifest` 列表中的每个元素本身就是一个列表，它包含两个元素：货物名称和货物重量。\n\n```python\n# each item in the manifest is an item and its weight\nmanifest = [[\"bananas\", 15], [\"mattresses\", 34], [\"dog kennels\",42], [\"machine that goes ping!\", 120], [\"tea chests\", 10], [\"cheeses\", 0]]\n\ncargo_weight = 0\ncargo_hold = []\n\nfor cargo in manifest:\n    if cargo_weight >= 100:\n        break\n    else:\n        cargo_hold.append(cargo[0])\n        cargo_weight += cargo[1]\n```\n\n上方这段代码旨在避免船上货物的重量超过规定的限值 100。现在我们来检查一下装载在船上的货物重量。\n\n```python\n>>> print(cargo_weight)\n211\n>>> print(cargo_hold)\n['bananas', 'mattresses', 'dog kennels', 'machine that goes ping!']\n```\n上方的结果好像不太对劲，货船装载的货物严重超过了重量限制。尽管 break 语句阻止了我们将每一件货物都放在船上，但最后仍然超过了限制。\n\n单看上方的代码我们很难判断哪里出了问题。在这里我们可以在代码中使用 `print` 函数来查看问题出在哪里。这是一个非常方便的方法，因为随着代码的逐步运行，它可以让我们深入了解数据状态。如果打印的提示正确（并给出上下文），这可能有助于我们找到错误。\n\n我们在下方的代码中添加了调试语句：\n```python\ncargo_weight = 0\ncargo_hold = []\n\nfor cargo in manifest:\n    print(\"debug: the weight is currently: {}\".format(cargo_weight))\n    if cargo_weight >= 100:\n        print(\"debug: breaking loop now!\")\n        break\n    else:\n        print(\"debug: adding item: {}\".format(cargo[0]))\n        print(\"debug: with weight: {}\".format(cargo[1]))\n        cargo_hold.append(cargo[0])\n        cargo_weight += cargo[1]\n```\n\n以下是带标注循环的输出：\n```text\ndebug: the weight is currently: 0\ndebug: adding item: bananas\ndebug: with weight: 15\ndebug: the weight is currently: 15\ndebug: adding item: mattresses\ndebug: with weight: 34\ndebug: the weight is currently: 49\ndebug: adding item: dog kennels\ndebug: with weight: 42\ndebug: the weight is currently: 91\ndebug: adding item: machine that goes ping!\ndebug: with weight: 120\ndebug: the weight is currently: 211\ndebug: breaking loop now!\n```\n\n通过这些调试日志，我们可以看到循环正确地将货物添加到货船中，但是在满足重量限制之后，还增加了一个额外货物。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347079,
+              "key": "4939a260-cabf-472b-aaec-e179e373954a",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4939a260-cabf-472b-aaec-e179e373954a",
+                "completed_at": "2017-10-02T17:02:56.522Z",
+                "last_viewed_at": "2017-10-02T17:02:56.522Z",
+                "unstructured": "{\"answer\":\"用于提醒我们哪些货物上船了\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "大家知道为什么列表中添加了一个额外的货物吗？请告诉我们你的想法，并查看我们的想法。"
+              },
+              "answer": {
+                "text": "感谢大家思考！问题是导致循环 `break` 的 `if` 条件只有在*当前*重量超过限制时才会触发。相反，应该检查添加下一个货物后的*新*重量是否超过限制。\n\n这段新代码将解决问题：\n```python\nfor cargo in manifest:\n    if cargo_weight + cargo[1] >= 100:\n        break\n    else:\n        cargo_hold.append(cargo[0])\n        cargo_weight += cargo[1]\n```\n可以再次添加 `print` 语句，并看看其如何运行。",
+                "video": null
+              }
+            },
+            {
+              "id": 347080,
+              "key": "79171ec8-2153-42af-ab3e-b3cc7dcc2586",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：断开字符串\n==========\n\n请在下方的练习中使用 break 语句来编写自己的循环。你的任务是创建一个长度为 140 个字符的字符串 `news_ticker`。你可以从 `headlines` 列表添加标题，并在每个标题之间插入一个空格。当 `news_ticker` 的长度超过 140 个字符时，你可以从中间截断最后一个标题，使字符长度保持在 140。\n\n请记住，在 for 循环和 while 循环中均可使用 `break`。请在下方练习中使用你心目中最合适的循环，你也可以考虑在代码中添加 `print` 语句来帮助你解决错误。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347081,
+              "key": "36a9b1c2-64eb-46ff-92a9-777077c69fce",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "36a9b1c2-64eb-46ff-92a9-777077c69fce",
+                "completed_at": "2017-12-06T16:22:51.902Z",
+                "last_viewed_at": "2017-12-06T16:22:51.902Z",
+                "unstructured": "{\"ticker.py\":\"headlines = [\\\"Local Bear Eaten by Man\\\",\\n             \\\"Legislature Announces New Laws\\\",\\n             \\\"Peasant Discovers Violence Inherent in System\\\",\\n             \\\"Cat Rescues Fireman Stuck in Tree\\\",\\n             \\\"Brave Knight Runs Away\\\",\\n             \\\"Papperbok Review: Totally Triffic\\\"]\\n\\nnews_ticker = \\\"\\\"\\nindex=0\\nfor i in range(len(headlines)):\\n    if len(news_ticker)<140:\\n        \\n        if len(news_ticker+headlines[i])>140:\\n            num = 140-len(news_ticker)\\n            end=headlines[i]\\n            print(\\\"This is\\\"+end[0:num])\\n            news_ticker=news_ticker+end[0:num]\\n            break\\n            \\n           \\n        news_ticker=news_ticker+headlines[i]+\\\" \\\"\\n        \\n\\nprint(news_ticker)\\nprint(len(news_ticker))\\n        \\n# TODO: set news_ticker to a string that contains no more than 140 characters long.\\n# HINT: modify the headlines list to verify your loop works with different inputs\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5808871445757952",
+                "initial_code_files": [
+                  {
+                    "text": "headlines = [\"Local Bear Eaten by Man\",\n             \"Legislature Announces New Laws\",\n             \"Peasant Discovers Violence Inherent in System\",\n             \"Cat Rescues Fireman Stuck in Tree\",\n             \"Brave Knight Runs Away\",\n             \"Papperbok Review: Totally Triffic\"]\n\nnews_ticker = \"\"\n# TODO: set news_ticker to a string that contains no more than 140 characters long.\n# HINT: modify the headlines list to verify your loop works with different inputs",
+                    "name": "ticker.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347284,
+          "key": "95a307ad-93bf-4fc0-b415-db8398c1328a",
+          "title": "重构代码",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "95a307ad-93bf-4fc0-b415-db8398c1328a",
+            "completed_at": "2018-02-11T15:59:32.376Z",
+            "last_viewed_at": "2018-09-27T08:57:44.683Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347082,
+              "key": "0e58e7cf-6c10-4b24-9940-2d59d0820708",
+              "title": "Ud1110 IntroPy L3 37 Reading Existing Code",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0Pg3HryU9Z4",
+                "china_cdn_id": "0Pg3HryU9Z4.mp4"
+              }
+            },
+            {
+              "id": 347083,
+              "key": "b593ddf5-f01e-4775-8623-f88f3db6752b",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b593ddf5-f01e-4775-8623-f88f3db6752b",
+                "completed_at": "2017-10-04T01:13:10.858Z",
+                "last_viewed_at": "2017-10-04T01:13:10.858Z",
+                "unstructured": "{\"answer\":\"不等于部分重复，可以用循环来来返回结果，\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "下面的函数 `check_answers()` 设计在练习中作为一个具有五个答案的列表以及五个正确解决方案的列表的输入。该函数根据解决方案和输出消息检查答案。代码当前正在按预期的方式运行，但这不是理想的实现。随意在自己的电脑上运行代码，以进行测试。\n\n在本练习中，大家应该确定完善此函数的实现方式，但又无需删除其当前的使用情况。这里有一些问题有助于你们开始思考这个问题，但大家应该有自己的判断！\n* 阅读代码，清楚每个代码的作用？以及如何让代码读取更容易？\n* 如果需要更改部分功能，容易操作吗？需要在几个地方做同样的修改吗？\n* 如果将函数的目的分解为多个步骤，需要几个步骤？最好让每个函数执行一个目的。\n* 是否存在不必要的重复？每一段代码都发挥作用了吗？能否在简洁的同时确保良好的可读性？我们将这称为 [DRY（不要重复自己）原则](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)。\n\n```python\ndef check_answers(my_answers,answers):\n    \"\"\"\n    Checks the five answers provided to a multiple choice quiz and returns the results.\n    \"\"\"\n    results= [None, None, None, None, None]\n    if my_answers[0] == answers[0]:\n        results[0] = True\n    elif my_answers[0] != answers[0]:\n        results[0] = False\n    if my_answers[1] == answers[1]:\n        results[1] = True\n    elif my_answers[1] != answers[0]:\n        results[1] = False\n    if my_answers[2] == answers[2]:\n        results[2] = True\n    elif my_answers[2] != answers[2]:\n        results[2] = False\n    if my_answers[3] == answers[3]:\n        results[3] = True\n    elif my_answers[3] != answers[3]:\n        results[3] = False\n    if my_answers[4] == answers[4]:\n        results[4] = True\n    elif my_answers[4] != answers[4]:\n        results[4] = False\n    count_correct = 0\n    count_incorrect = 0\n    for result in results:\n        if result == True:\n            count_correct += 1\n        if result != True:\n            count_incorrect += 1\n    if count_correct/5 > 0.7:\n        return \"Congratulations, you passed the test! You scored \" + str(count_correct) + \" out of 5.\"\n    elif count_incorrect/5 >= 0.3:\n        return \"Unfortunately, you did not pass. You scored \" + str(count_correct) + \" out of 5.\"\n```"
+              },
+              "answer": {
+                "text": "大家在思考这个问题方面做得不错！",
+                "video": null
+              }
+            },
+            {
+              "id": 347084,
+              "key": "486e3b5a-1347-4d78-b35b-a79a891a847a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是一些我们不喜欢的代码，我们已经为发现的问题点添加了注释。\n\n```python\ndef check_answers(my_answers,answers):\n    #1 variable names are not easy to tell apart\n    \"\"\"\n    Checks the five answers provided to a multiple choice quiz and returns the results.\n    \"\"\"\n    #2 Code will only work if there are exactly five answers\n    results= [None, None, None, None, None]\n    #3 Repeated code would be better as a separate function\n    if my_answers[0] == answers[0]:\n        results[0] = True\n    elif my_answers[0] != answers[0]:\n        results[0] = False\n    #4 if and elif could be clearer with if and else\n    if my_answers[1] == answers[1]:\n        results[1] = True\n    elif my_answers[1] != answers[0]:\n        results[1] = False\n    if my_answers[2] == answers[2]:\n        results[2] = True\n    elif my_answers[2] != answers[2]:\n        results[2] = False\n    if my_answers[3] == answers[3]:\n        results[3] = True\n    elif my_answers[3] != answers[3]:\n        results[3] = False\n    if my_answers[4] == answers[4]:\n        results[4] = True\n    elif my_answers[4] != answers[4]:\n        results[4] = False\n    #6 this function does several things in one long block\n    count_correct = 0\n    count_incorrect = 0\n    for result in results:\n    #7 The code counts both correct and incorrect answers.\n        if result == True:\n            count_correct += 1\n        if result != True:\n            count_incorrect += 1\n    if count_correct/5 > 0.7:\n    #8 The pass rate has been hard-coded into the function\n        return \"Congratulations, you passed the test! You scored \" + str(count_correct) + \" out of 5.\"\n    elif count_incorrect/5 >= 0.3:\n        return \"Unfortunately, you did not pass. You scored \" + str(count_correct) + \" out of 5.\"\n```\n\n**1：** 名称 `my_answers` 和 `answers` 非常相似，这有点混乱。为这些参数设置更好的名称，并将其定义放在文档字符串中以供参考。\n\n\n**2：** 练习中的五个问题对运行代码至关重要。虽然这个约束不能阻止其正常运行，但如果将来我们有一个包括十个问题的练习，可以重复使用同样的代码就好了。\n\n**3：** 此部分用于检查答案\n\n```python\n    if my_answers[1] == answers[1]:\n        results[1] = True\n    elif my_answers[1] != answers[0]:\n        results[1] = False\n```\n重复五次！使用一个单独的函数检查答案将更好。\n\n**4：** 有几处使用 `if` 和 `elif`，但是 `elif` 子句中的布尔表达式只是 `if` 之后的内容。此种情况下，如果我们使用 `if` 和 `else`，该程序可正常运行，但是更容易阅读。\n\n**5：** 没有解释代码作用的行内注释。\n\n**6：** 该函数的作用不止一点 —— 检查每个答案，然后总计正确和错误答案的数量，然后输出一则消息。但至少应将某些作用分开。\n\n**7：** 如果每个问题非对即错，而且我们知道有多少个问题，那么就不需要计数正确答案和错误答案的数量。也可以通过使用 `sum` 计数 `results` 中的正确答案，使代码更短。\n\n**8：** 在通过练习的边缘中，正确答案的比例是硬编码的，也不需要。\n\n完善该函数的方法很多！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347085,
+              "key": "43f38e5d-f751-4073-bc69-640ab2917797",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：重构代码\n===============\n完善该代码的列表较长！但不要害怕，我们不必一次完成全部列表内容 —— 事实上，最好一次完善一个内容，然后测试结果。\n\n在这个练习中，对程序进行两处修改：\n\n1. 将检查答案的代码移动（重构）到一个单独的函数，并明确命名。使用循环针对每个答案调用函数，避免五次调用该函数。\n2. 完善文档字符串并添加注释，使代码更容易理解。\n\n这不包括整个完善清单，但这是一个很好的开始！大家还可以自行进行其他完善。将在某些测试用例中测试你的代码，因此只需确保代码可正常运行即可！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347086,
+              "key": "aad36582-4d67-4ab0-82cf-195dc9262ece",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "aad36582-4d67-4ab0-82cf-195dc9262ece",
+                "completed_at": "2017-12-07T14:59:28.075Z",
+                "last_viewed_at": "2017-12-07T14:59:28.075Z",
+                "unstructured": "{\"refactor.py\":\"       \\ndef check_answers(my_answers,answers):\\n    \\\"\\\"\\\"\\n    Checks the five answers provided to a multiple choice quiz and returns the results.\\n    \\\"\\\"\\\"\\n    results= [None, None, None, None, None]\\n    for i in range(len(my_answers)):\\n        results[i]= check(my_answers[i],answers[i])\\n        \\n    count_correct = 0\\n\\n    for result in results:\\n        if result:\\n            count_correct += 1\\n            \\n    if count_correct/5 > 0.7:\\n        return \\\"Congratulations, you passed the test! You scored \\\" + str(count_correct) + \\\" out of 5.\\\"\\n    else :\\n        return \\\"Unfortunately, you did not pass. You scored \\\" + str(count_correct) + \\\" out of 5.\\\"\\n        \\ndef check(my_answers,answers):\\n    if my_answers==answers:\\n        return True\\n    else:\\n        return False\\n \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6472316251930624",
+                "initial_code_files": [
+                  {
+                    "text": "def check_answers(my_answers,answers):\n    \"\"\"\n    Checks the five answers provided to a multiple choice quiz and returns the results.\n    \"\"\"\n    results= [None, None, None, None, None]\n    if my_answers[0] == answers[0]:\n        results[0] = True\n    elif my_answers[0] != answers[0]:\n        results[0] = False\n    if my_answers[1] == answers[1]:\n        results[1] = True\n    elif my_answers[1] != answers[1]:\n        results[1] = False\n    if my_answers[2] == answers[2]:\n        results[2] = True\n    elif my_answers[2] != answers[2]:\n        results[2] = False\n    if my_answers[3] == answers[3]:\n        results[3] = True\n    elif my_answers[3] != answers[3]:\n        results[3] = False\n    if my_answers[4] == answers[4]:\n        results[4] = True\n    elif my_answers[4] != answers[4]:\n        results[4] = False\n    count_correct = 0\n    count_incorrect = 0\n    for result in results:\n        if result == True:\n            count_correct += 1\n        if result != True:\n            count_incorrect += 1\n    if count_correct/5 > 0.7:\n        return \"Congratulations, you passed the test! You scored \" + str(count_correct) + \" out of 5.\"\n    elif count_incorrect/5 >= 0.3:\n        return \"Unfortunately, you did not pass. You scored \" + str(count_correct) + \" out of 5.\"",
+                    "name": "refactor.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347285,
+          "key": "703a21e3-94c9-4038-8556-c9a1dd1f291b",
+          "title": "集合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "703a21e3-94c9-4038-8556-c9a1dd1f291b",
+            "completed_at": "2017-12-07T17:09:59.509Z",
+            "last_viewed_at": "2018-09-27T08:59:55.978Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347087,
+              "key": "b986aa40-83cc-4ba0-acde-89b5e1aa76ec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "删除列表中的重复项\n==============\n假设你在运行一个热门搜索引擎，并且为了了解用户是从哪里浏览，你已经对他们进行了调查。你已经收到了 785 个回复，并将这些回复编制成了一个国家列表：\n\n```python\n>>> len(countries)\n785\n>>> countries[:5]\n['Angola', 'Maldives', 'India', 'United States', 'India']\n``` \n世界上没有 785 个国家，这说明 `countries` 列表中可能有重复的条目。对列表进行切片，查看前几个元素证明了这一点。删除重复项，生成一个用户所浏览的全部国家/地区的列表将比较有用。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347088,
+              "key": "22189606-2796-4e0a-84b0-0588db7d50b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：删除重复数据\n==========\n编写一个函数 `remove_duplicates`，该函数将列表作为参数，并返回一个包含源列表中唯一元素的新列表。新列表中未重复出现的元素可采用任何顺序。\n\n建议的测试用例：\n尝试输入一个没有重复元素的列表。输出列表应与原始列表的大小相同。\n尝试输入一个已知唯一元素和重复元素数量的列表。验证没有重复元素的列表是否长度适当。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347089,
+              "key": "9002ea88-ee12-4ef1-b6d3-6455b9085884",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "9002ea88-ee12-4ef1-b6d3-6455b9085884",
+                "completed_at": "2017-12-07T15:11:51.894Z",
+                "last_viewed_at": "2017-12-07T15:11:51.894Z",
+                "unstructured": "{\"deduplicate.py\":\" # Define the remove_duplicates function\\ndef remove_duplicates(box):\\n    res=[]\\n     \\n    for i in box:\\n        if i not in res:\\n            res.append(i)\\n    \\n    return res\\n         \\n         \\n         \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4728247473537024",
+                "initial_code_files": [
+                  {
+                    "text": " # Define the remove_duplicates function",
+                    "name": "deduplicate.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347090,
+              "key": "e9daf4ef-e73a-4a85-bb40-4e7fb0b394ea",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "重复数据删除练习的解决方案：\n=======\n以下是我们的解决方案：\n```python\ndef remove_duplicates(source):\n    target = []\n\n    for element in source:\n        if element not in target:\n            target.append(element)\n\n    return target\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347091,
+              "key": "675b010d-a286-4b9e-887b-e8813c79b53d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "集合\n===\n可以使用 `for` 循环从列表中删除重复项，但是还有一种替代技术。Python 用于存储集合的数据结构除了列表之外还有几个，其中一个非常适合存储唯一的元素：集合。\n\n集合是唯一元素的集合，没有任何特定的排序。我们可以从这样的列表中创建一个集合：\n\n```python\n>>> country_ set = set(countries)\n>>> len(country_set)\n196\n```\n集合与列表一样支持 `in` 运算符：\n\n```python\n>>> 'Mauritius' in countries\nTrue\n>>> 'Mauritius' in country_set\nTrue\n```\n\n可以添加元素到集合，但列表不同，不使用 `append` 方法，而是 `add` 方法：\n\n```python\ncountry_set.add(\"Florin\")\n```\n集合也有一个与列表一样的 `pop` 方法。从集合 `pop` 一个元素时，一个随机元素被删除（记住，集合不同于列表，是无序的，所以没有 \"最后一个元素\"。\n\n可以使用与迭代列表一样的方法通过 for 循环迭代集合。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347092,
+              "key": "9f0d5b81-853e-447e-94c7-80948d3637d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：构建集合\n=============\n\n就像构建一个 `my_list = []` 的空列表一样，你可以用 `my_set = set()` 构建一个空集合。\n用这个方法以及 `add` 方法，构建一个包含所有大于 0 小于 2000 的平方数集合。我在我的实施代码中包括了之前练习中的 `nearest_square` 函数以便参考。你可以在你的代码中调用它，或者也可以直接忽视它。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347093,
+              "key": "b944cd7c-1a81-47bc-aadb-72d27804f0d7",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "b944cd7c-1a81-47bc-aadb-72d27804f0d7",
+                "completed_at": "2017-12-07T15:29:26.887Z",
+                "last_viewed_at": "2017-12-07T15:29:26.887Z",
+                "unstructured": "{\"squareset.py\":\"# Note: If you want to call the nearest_square function, you must define\\n# the function on a line before you call it. Feel free to move this code up!\\ndef nearest_square(limit):\\n    answer = 0\\n    while (answer+1)**2 < limit:\\n        answer += 1\\n        squares.add(answer**2)\\n    return answer**2\\n    \\nsquares = set()\\nnearest_square(2000)\\nprint(squares)\\n# todo: populate \\\"squares\\\" with the set of all of the integers less \\n# than 2000 that are square numbers\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4753394809044992",
+                "initial_code_files": [
+                  {
+                    "text": "squares = set()\n\n# todo: populate \"squares\" with the set of all of the integers less \n# than 2000 that are square numbers\n\n\n# Note: If you want to call the nearest_square function, you must define\n# the function on a line before you call it. Feel free to move this code up!\ndef nearest_square(limit):\n    answer = 0\n    while (answer+1)**2 < limit:\n        answer += 1\n    return answer**2",
+                    "name": "squareset.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347094,
+              "key": "c0d37152-c881-4c85-a359-0c120039b559",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "单击“下一项”查看该练习的解决方案。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347286,
+          "key": "541d29e2-f0ae-46b3-995d-5c01183325ed",
+          "title": "集合 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "541d29e2-f0ae-46b3-995d-5c01183325ed",
+            "completed_at": "2017-12-07T15:40:43.588Z",
+            "last_viewed_at": "2018-09-27T09:00:49.368Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347095,
+              "key": "1f8b1db7-110b-448e-b575-c8336d0b3dc7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "解决方案：构建集合\n============\n\n在该解决方案中，我重新编写了 `nearest_square` 函数循环，将元素添加到 `squares` 集合中：\n```python\nn = 1\nwhile n**2 < 2000:\n    squares.add(n**2)\n    n += 1\n```\n最初编写时通过重复调用循环，仅使用 `nearest_square` 函数即可，但是我意识到这样会使电脑重复进行相同的计算。例如，如果循环调用 `nearest_square(1999)`，然后是 `nearest_square(2000)`，则必须从 1 到 1,999 重复循环才能产生结果。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347287,
+          "key": "91817ced-1d7f-4d19-a24e-9dbcfa59a264",
+          "title": "字典",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "91817ced-1d7f-4d19-a24e-9dbcfa59a264",
+            "completed_at": "2018-02-15T02:01:37.464Z",
+            "last_viewed_at": "2018-09-27T09:01:17.229Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347096,
+              "key": "b4b7804a-6e31-4175-bfb6-726873aeb1eb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字典\n=========\n\n集合是简单的数据结构，具有一个主要用途：收集唯一的元素。我们要学习的下一个数据结构是字典，这个数据结构更灵活。字典不像列表和集合存储单个对象，而是存储元素对：**键（Key）** 和 **值（Value）**。我们在该示例中定义了一个字典，其中键是元素名称，值是它们对应的原子序数。\n\n```python\nelements = {'hydrogen': 1, 'helium': 2, 'carbon': 6}\n```\n\n可以用方括号括住键来查找字典中的值：\n\n```python\n>>> print(elements['carbon'])\n6\n```\n也可以使用方括号将新值插入字典：\n```python\n>>> elements['lithium'] = 3\n>>> print(elements['lithium'])\n3\n```\n\n字典键与列表索引类似：我们可以通过将索引 / 键放入方括号，从数据结构中选择元素。与列表不同，字典可以具有任何不可变类型的键，而不仅仅是整数。`elements` 字典使用**字符串**作为键。但是不必使每个键都具有相同的类型！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347097,
+              "key": "2f4701d9-646b-44be-8d89-905c647d5e21",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：定义词典\n================\n定义一个名为 `population`，且包含以下数据的字典：\n\n|  **Keys** | **Values**  |\n|---|---|\n|  Shanghai | 17.8  |\n|  Istanbul | 13.3  |\n|  Karachi |  13.0 |\n|  Mumbai | 12.5  |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347098,
+              "key": "c28574f4-62f6-466d-bc9e-572ee01d5647",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "c28574f4-62f6-466d-bc9e-572ee01d5647",
+                "completed_at": "2017-12-07T15:34:57.080Z",
+                "last_viewed_at": "2017-12-07T15:34:57.080Z",
+                "unstructured": "{\"popdict.py\":\"# Define a Dictionary, population,\\n# that provides information\\n# on the world's largest cities.\\n# The key is the name of a city\\n# (a string), and the associated\\n# value is its population in\\n# millions of people.\\n\\n#   Key     |   Value\\n# Shanghai  |   17.8\\n# Istanbul  |   13.3\\n# Karachi   |   13.0\\n# Mumbai    |   12.5\\n'''定义词典，人口，\\n＃提供信息\\n＃在世界上最大的城市。\\n关键是城市的名称\\n＃（一个字符串）和相关联的\\n＃值是它的人口\\n＃ 人山人海。\\n\\n＃键| 值\\n＃上海|17.8\\n＃伊斯坦布尔|13.3\\n＃卡拉奇13.0\\n孟买|12.5'''\\npopulation = {'Shanghai': 17.8, \\n                'Istanbul': 13.3, \\n                'Karachi': 13.0,\\n                'Mumbai': 12.5}\\nprint(population['Shanghai'])\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5261477595447296",
+                "initial_code_files": [
+                  {
+                    "text": "# Define a Dictionary, population,\n# that provides information\n# on the world's largest cities.\n# The key is the name of a city\n# (a string), and the associated\n# value is its population in\n# millions of people.\n\n#   Key     |   Value\n# Shanghai  |   17.8\n# Istanbul  |   13.3\n# Karachi   |   13.0\n# Mumbai    |   12.5",
+                    "name": "popdict.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347288,
+          "key": "b54d90bc-b5ab-4cbd-b48c-09afd5d4a6e2",
+          "title": "字典 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b54d90bc-b5ab-4cbd-b48c-09afd5d4a6e2",
+            "completed_at": "2018-02-21T16:32:26.845Z",
+            "last_viewed_at": "2018-09-27T09:02:20.822Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347099,
+              "key": "efcfe215-0901-4527-aa36-706274a782c4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "解决方案：定义一个字典\n=============\n\n可以按照如下所示的方法定义字典，\n```python\n>>> population = {'Shanghai': 17.8,\n              'Istanbul': 13.3,\n              'Karachi': 13.0,\n              'Mumbai': 12.5}\n```\n我选择把每个键值对都放在其自身的行中，因此更易读取字典的定义，但是放在何处以及是否使用换行符只是一种风格选择。下面这段代码也一样：\n\n```python\n>>> population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0, 'Mumbai': 12.5}\n``` ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347100,
+              "key": "7eca0dba-0435-4053-83d8-d5abcb338592",
+              "title": "不变键",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7eca0dba-0435-4053-83d8-d5abcb338592",
+                "completed_at": "2017-10-04T04:40:00.767Z",
+                "last_viewed_at": "2017-10-04T04:40:00.767Z",
+                "unstructured": "{\"selected_ids\":[\"a1484003318866\",\"a1484003334280\",\"a1484003335062\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪些可以用作字典的键？提示：字典的键必须具有不可变性，也就是说，它们必须是不可修改的类型。",
+                "answers": [
+                  {
+                    "id": "a1484003318866",
+                    "text": "`str`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484003333525",
+                    "text": "`list`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484003334280",
+                    "text": "`int`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484003335062",
+                    "text": "`float`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347101,
+              "key": "23179604-560f-417c-b514-d6ea6ec33d5b",
+              "title": "练习：查找哪些值不存在",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "23179604-560f-417c-b514-d6ea6ec33d5b",
+                "completed_at": "2017-12-07T15:37:44.333Z",
+                "last_viewed_at": "2017-12-07T15:37:44.333Z",
+                "unstructured": "{\"selected_id\":\"a1484003504878\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "如果查找字典中不存在的值，会出现什么结果？在自己的计算机上创建一个测试字典，并使用方括号来查找尚未定义的值。看看会出现什么结果？",
+                "answers": [
+                  {
+                    "id": "a1484003471533",
+                    "text": "查找返回 `None`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484003504254",
+                    "text": "将默认值为 None 的键添加到字典",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1484003504878",
+                    "text": "出现 `KeyError`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1484003505578",
+                    "text": "Python 在互联网上搜索合适的值",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347102,
+              "key": "5b05bde1-4f92-4b99-b536-f668ee958669",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字典中是什么内容？\n=============\n\n我们可以使用与通过 `in` 关键字检查列表或集合中是否存在一个值的方法来查看字典中是否存在值。\n\n```python\nif 'mithril' in elements:\n    print(\"That's a real element!\")\nelse:\n    print(\"There's no such element!')\n```\n\n如果集合中可能没有键，在查找之前可以使用 `in` 验证字典中是否存在这个键。\n\n字典还有一个有用的相关方法，即 `get`。`get` 用于在字典中查找值，但不同于方括号，如果不存在这个键，`get` 返回 `None` (或选择的默认值)。如果预料查找可能会失败，则相对于普通方括号来说，`get` 可能是一个更好的工具。\n\n```python\n>>> elements.get('dilithium')\nNone\n>>> elements['dilithium']\nKeyError: 'dilithium'\n>>> elements.get('kryptonite', 'There\\'s no such element!')\n\"There's no such element!\"\n```\n在最后一个示例中，当未找到键时，我们指定返回一个默认值 (`string` `'There\\'s no such element!'`)，而不是 `None`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347103,
+              "key": "db6490f9-6fb6-406c-a3ac-fdc77c4f68b8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：用户（按国家 / 地区）\n================\n\n我们重新回顾一下此前的调查信息。在我们使用集合来确定数据集中有多少个国家之前，先假设该数据集实际上包含有关下载和安装某个应用程序的用户信息：对于每个下载和安装该应用程序的用户，其国家将出现在列表中。现在让我们用一个字典来进行更复杂的分析：每个国家有多少名用户？\n\n创建一个字典，`country_counts`，其键是国家名称，其值是国家/地区在 `countries` 列表中出现的次数。将自己的代码写在 app.py 文件中。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347109,
+              "key": "b467409b-17d8-447f-828c-10691894ab2a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "b467409b-17d8-447f-828c-10691894ab2a",
+                "completed_at": "2018-02-15T02:38:11.638Z",
+                "last_viewed_at": "2018-02-15T02:38:11.638Z",
+                "unstructured": "{\"countries.py\":\"country_list = ['Malta',\\n 'Sudan',\\n 'Oman',\\n 'Jamaica',\\n 'Pakistan',\\n 'Netherlands',\\n 'Venezuela',\\n 'Tuvalu',\\n 'Kazakhstan',\\n 'Namibia',\\n 'Congo {Democratic Rep}',\\n 'Qatar',\\n 'El Salvador',\\n 'Macedonia',\\n 'Morocco',\\n 'Albania',\\n 'Netherlands',\\n 'Namibia',\\n 'Moldova',\\n 'Djibouti',\\n 'Malaysia',\\n 'Belarus',\\n 'Niger',\\n 'Thailand',\\n 'Burkina',\\n 'Panama',\\n 'Libya',\\n 'Kuwait',\\n 'Dominican Republic',\\n 'Andorra',\\n 'Nauru',\\n 'Guyana',\\n 'Austria',\\n 'Germany',\\n 'Morocco',\\n 'Sudan',\\n 'Lebanon',\\n 'Bahamas',\\n 'Austria',\\n 'Chad',\\n 'Canada',\\n 'Ivory Coast',\\n 'Papua New Guinea',\\n 'Mali',\\n 'Marshall Islands',\\n 'Morocco',\\n 'Angola',\\n 'New Zealand',\\n 'Mali',\\n 'Moldova',\\n 'Libya',\\n 'Bulgaria',\\n 'Honduras',\\n 'Comoros',\\n 'Tunisia',\\n 'Peru',\\n 'Greece',\\n 'Montenegro',\\n 'Austria',\\n 'Cambodia',\\n 'St Lucia',\\n 'Ecuador',\\n 'Taiwan',\\n 'Colombia',\\n 'Liechtenstein',\\n 'Monaco',\\n 'Iraq',\\n 'Zambia',\\n 'Sri Lanka',\\n 'Poland',\\n 'Vanuatu',\\n 'Barbados',\\n 'Mauritius',\\n 'Turkmenistan',\\n 'Taiwan',\\n 'Israel',\\n 'Mali',\\n 'United Arab Emirates',\\n 'Zimbabwe',\\n 'Sao Tome & Principe',\\n 'Kuwait',\\n 'Canada',\\n 'Vietnam',\\n 'Zambia',\\n 'Rwanda',\\n 'Kosovo',\\n 'Nepal',\\n 'Indonesia',\\n 'Suriname',\\n 'Mali',\\n 'Chile',\\n 'Luxembourg',\\n 'Papua New Guinea',\\n 'Norway',\\n 'Brunei',\\n 'Ecuador',\\n 'Turkey',\\n 'Pakistan',\\n 'Mozambique',\\n 'Senegal',\\n 'Algeria',\\n 'Laos',\\n 'Vietnam',\\n 'Kosovo',\\n 'Belize',\\n 'Bhutan',\\n 'Andorra',\\n 'Russian Federation',\\n 'Cambodia',\\n 'Madagascar',\\n 'Slovenia',\\n 'Malaysia',\\n 'Belgium',\\n 'Sweden',\\n 'Nepal',\\n 'Germany',\\n 'Fiji',\\n 'Australia',\\n 'Kenya',\\n 'Sudan',\\n 'Nepal',\\n 'Niger',\\n 'Palau',\\n 'Serbia',\\n 'Chad',\\n 'Bhutan',\\n 'Poland',\\n 'Nicaragua',\\n 'Barbados',\\n 'Hungary',\\n 'Algeria',\\n 'Ukraine',\\n 'China',\\n 'Latvia',\\n 'Panama',\\n 'Papua New Guinea',\\n 'Sweden',\\n 'Zimbabwe',\\n 'Jordan',\\n 'Sao Tome & Principe',\\n 'Mexico',\\n 'Sudan',\\n 'Czech Republic',\\n 'New Zealand',\\n 'Uruguay',\\n 'Kuwait',\\n 'Liberia',\\n 'Canada',\\n 'Seychelles',\\n 'Liberia',\\n 'Saudi Arabia',\\n 'Sierra Leone',\\n 'South Sudan',\\n 'Bolivia',\\n 'Philippines',\\n 'Mauritania',\\n 'United States',\\n 'Hungary',\\n 'Bhutan',\\n 'Netherlands',\\n 'Burkina',\\n 'Congo {Democratic Rep}',\\n 'Central African Rep',\\n 'Burkina',\\n 'Poland',\\n 'Guinea',\\n 'United States',\\n 'Luxembourg',\\n 'Chile',\\n 'Kuwait',\\n 'Vatican City',\\n 'Maldives',\\n 'Ethiopia',\\n 'France',\\n 'Mozambique',\\n 'Nicaragua',\\n 'Portugal',\\n 'United States',\\n 'South Sudan',\\n 'Bangladesh',\\n 'Belize',\\n 'Mozambique',\\n 'Pakistan',\\n 'Sao Tome & Principe',\\n 'Israel',\\n 'Antigua & Deps',\\n 'Equatorial Guinea',\\n 'Grenada',\\n 'Liberia',\\n 'Nauru',\\n 'St Kitts & Nevis',\\n 'Armenia',\\n 'Italy',\\n 'San Marino',\\n 'Congo {Democratic Rep}',\\n 'Suriname',\\n 'Mauritius',\\n 'Albania',\\n 'Samoa',\\n 'Bosnia Herzegovina',\\n 'South Sudan',\\n 'Trinidad & Tobago',\\n 'Nigeria',\\n 'Bolivia',\\n 'South Africa',\\n 'Qatar',\\n 'South Sudan',\\n 'Morocco',\\n 'Benin',\\n 'Kuwait',\\n 'Tajikistan',\\n 'Guyana',\\n 'Indonesia',\\n 'Turkmenistan',\\n 'Sierra Leone',\\n 'Mali',\\n 'Antigua & Deps',\\n 'Turkmenistan',\\n 'Seychelles',\\n 'Bulgaria',\\n 'Rwanda',\\n 'Czech Republic',\\n 'Philippines',\\n 'Norway',\\n 'Germany',\\n 'Tonga',\\n 'United Arab Emirates',\\n 'Syria',\\n 'Bahamas',\\n 'Armenia',\\n 'Paraguay',\\n 'Zambia',\\n 'Samoa',\\n 'Senegal',\\n 'Kiribati',\\n 'Taiwan',\\n 'Gabon',\\n 'Cuba',\\n 'Comoros',\\n 'Bhutan',\\n 'Seychelles',\\n 'Mexico',\\n 'Bhutan',\\n 'El Salvador',\\n 'Tunisia',\\n 'Liechtenstein',\\n 'Czech Republic',\\n 'Congo',\\n 'Jordan',\\n 'Djibouti',\\n 'Macedonia',\\n 'Finland',\\n 'Denmark',\\n 'San Marino',\\n 'Cuba',\\n 'Botswana',\\n 'Equatorial Guinea',\\n 'United Kingdom',\\n 'Tanzania',\\n 'Bosnia Herzegovina',\\n 'Algeria',\\n 'El Salvador',\\n 'Senegal',\\n 'Myanmar, {Burma}',\\n 'Pakistan',\\n 'Malaysia',\\n 'Oman',\\n 'Tanzania',\\n 'Gabon',\\n 'Tonga',\\n 'Vietnam',\\n 'Sudan',\\n 'Slovakia',\\n 'Tajikistan',\\n 'Kyrgyzstan',\\n 'Kiribati',\\n 'Zambia',\\n 'San Marino',\\n 'Saudi Arabia',\\n 'South Sudan',\\n 'Mexico',\\n 'Uruguay',\\n 'Cyprus',\\n 'Syria',\\n 'Panama',\\n 'Sierra Leone',\\n 'Finland',\\n 'Iraq',\\n 'United States',\\n 'Dominican Republic',\\n 'Czech Republic',\\n 'Latvia',\\n 'Bolivia',\\n 'Korea North',\\n 'Angola',\\n 'Germany',\\n 'Malawi',\\n 'Guinea-Bissau',\\n 'Ghana',\\n 'Lithuania',\\n 'East Timor',\\n 'Honduras',\\n 'Bahamas',\\n 'Algeria',\\n 'Luxembourg',\\n 'Eritrea',\\n 'Gabon',\\n 'Mauritania',\\n 'Cambodia',\\n 'Solomon Islands',\\n 'Haiti',\\n 'Jamaica',\\n 'Kyrgyzstan',\\n 'Tanzania',\\n 'Marshall Islands',\\n 'Lithuania',\\n 'Bahrain',\\n 'East Timor',\\n 'Botswana',\\n 'Marshall Islands',\\n 'Grenada',\\n 'France',\\n 'St Lucia',\\n 'Eritrea',\\n 'Azerbaijan',\\n 'Ghana',\\n 'New Zealand',\\n 'El Salvador',\\n 'Cape Verde',\\n 'Hungary',\\n 'Botswana',\\n 'Bosnia Herzegovina',\\n 'Kuwait',\\n 'Saudi Arabia',\\n 'Indonesia',\\n 'Qatar',\\n 'Germany',\\n 'Argentina',\\n 'Georgia',\\n 'Fiji',\\n 'Tajikistan',\\n 'Vanuatu',\\n 'Samoa',\\n 'Togo',\\n 'Gambia',\\n 'Sudan',\\n 'Cambodia',\\n 'Argentina',\\n 'Canada',\\n 'Nepal',\\n 'Grenada',\\n 'Vietnam',\\n 'Cameroon',\\n 'Cameroon',\\n 'Lebanon',\\n 'Rwanda',\\n 'United Kingdom',\\n 'Cambodia',\\n 'Paraguay',\\n 'Guinea',\\n 'Kosovo',\\n 'Switzerland',\\n 'Mauritius',\\n 'Fiji',\\n 'Paraguay',\\n 'Thailand',\\n 'Eritrea',\\n 'Guatemala',\\n 'Suriname',\\n 'Palau',\\n 'Mozambique',\\n 'Bangladesh',\\n 'Australia',\\n 'South Africa',\\n 'Yemen',\\n 'India',\\n 'Peru',\\n 'Korea North',\\n 'Oman',\\n 'Moldova',\\n 'St Kitts & Nevis',\\n 'Benin',\\n 'India',\\n 'Grenada',\\n 'Taiwan',\\n 'Madagascar',\\n 'Paraguay',\\n 'Angola',\\n 'Saudi Arabia',\\n 'Antigua & Deps',\\n 'Marshall Islands',\\n 'Micronesia',\\n 'Benin',\\n 'Monaco',\\n 'Cuba',\\n 'Kuwait',\\n 'Serbia',\\n 'Oman',\\n 'Bahamas',\\n 'Norway',\\n 'Thailand',\\n 'Malawi',\\n 'Guyana',\\n 'Denmark',\\n 'South Africa',\\n 'China',\\n 'Oman',\\n 'New Zealand',\\n 'Austria',\\n 'Venezuela',\\n 'Syria',\\n 'Rwanda',\\n 'Dominican Republic',\\n 'Algeria',\\n 'Honduras',\\n 'Solomon Islands',\\n 'Palau',\\n 'Cape Verde',\\n 'Ghana',\\n 'Algeria',\\n 'Pakistan',\\n 'Morocco',\\n 'Kenya',\\n 'Switzerland',\\n 'Malta',\\n 'China',\\n 'South Sudan',\\n 'Jamaica',\\n 'East Timor',\\n 'Malta',\\n 'Benin',\\n 'China',\\n 'Algeria',\\n 'United Kingdom',\\n 'Palau',\\n 'Ireland {Republic}',\\n 'Maldives',\\n 'Swaziland',\\n 'Guinea',\\n 'Haiti',\\n 'Lesotho',\\n 'Korea South',\\n 'Italy',\\n 'Nigeria',\\n 'Kiribati',\\n 'Kyrgyzstan',\\n 'Antigua & Deps',\\n 'Saint Vincent & the Grenadines',\\n 'United States',\\n 'Mongolia',\\n 'Saudi Arabia',\\n 'Haiti',\\n 'Czech Republic',\\n 'Portugal',\\n 'Mauritius',\\n 'Samoa',\\n 'Honduras',\\n 'Vietnam',\\n 'Algeria',\\n 'Marshall Islands',\\n 'Kiribati',\\n 'Fiji',\\n 'Ivory Coast',\\n 'Tajikistan',\\n 'Nicaragua',\\n 'Portugal',\\n 'Equatorial Guinea',\\n 'Ivory Coast',\\n 'Zambia',\\n 'New Zealand',\\n 'Somalia',\\n 'Senegal',\\n 'Mongolia',\\n 'Montenegro',\\n 'Ghana',\\n 'Bahrain',\\n 'Laos',\\n 'Paraguay',\\n 'Guinea-Bissau',\\n 'Bosnia Herzegovina',\\n 'Tanzania',\\n 'Gambia',\\n 'Sierra Leone',\\n 'Canada',\\n 'Bolivia',\\n 'Iraq',\\n 'Ivory Coast',\\n 'Zimbabwe',\\n 'Turkmenistan',\\n 'Bhutan',\\n 'Venezuela',\\n 'Ghana',\\n 'Panama',\\n 'Philippines',\\n 'Kenya',\\n 'Mali',\\n 'Tunisia',\\n 'Turkmenistan',\\n 'Ukraine',\\n 'Egypt',\\n 'Burundi',\\n 'Qatar',\\n 'Latvia',\\n 'Slovenia',\\n 'Gambia',\\n 'Algeria',\\n 'Poland',\\n 'Myanmar, {Burma}',\\n 'Panama',\\n 'Myanmar, {Burma}',\\n 'Central African Rep',\\n 'United Kingdom',\\n 'Comoros',\\n 'Yemen',\\n 'Liechtenstein',\\n 'Gambia',\\n 'Ethiopia',\\n 'Malaysia',\\n 'Italy',\\n 'Brazil',\\n 'Brazil',\\n 'Russian Federation',\\n 'Nicaragua',\\n 'Switzerland',\\n 'Georgia',\\n 'Georgia',\\n 'Dominica',\\n 'Liberia',\\n 'Tonga',\\n 'St Kitts & Nevis',\\n 'Vatican City',\\n 'Luxembourg',\\n 'Barbados',\\n 'Croatia',\\n 'Samoa',\\n 'St Lucia',\\n 'Comoros',\\n 'Burundi',\\n 'Philippines',\\n 'Mali',\\n 'Yemen',\\n 'Singapore',\\n 'Brazil',\\n 'Benin',\\n 'Slovenia',\\n 'Qatar',\\n 'Tajikistan',\\n 'Qatar',\\n 'Seychelles',\\n 'Somalia',\\n 'Zimbabwe',\\n 'Marshall Islands',\\n 'Ukraine',\\n 'Japan',\\n 'Sudan',\\n 'St Kitts & Nevis',\\n 'Botswana',\\n 'Slovakia',\\n 'Azerbaijan',\\n 'Philippines',\\n 'United States',\\n 'Nauru',\\n 'Albania',\\n 'Burundi',\\n 'Dominican Republic',\\n 'Bolivia',\\n 'France',\\n 'Antigua & Deps',\\n 'Georgia',\\n 'Finland',\\n 'Benin',\\n 'Oman',\\n 'Dominica',\\n 'Belize',\\n 'South Africa',\\n 'Libya',\\n 'Cyprus',\\n 'Ecuador',\\n 'France',\\n 'Namibia',\\n 'Zimbabwe',\\n 'Dominica',\\n 'Belgium',\\n 'United Arab Emirates',\\n 'Pakistan',\\n 'Colombia',\\n 'Vatican City',\\n 'Chad',\\n 'Algeria',\\n 'Malaysia',\\n 'Cambodia',\\n 'Equatorial Guinea',\\n 'Slovenia',\\n 'Bolivia',\\n 'Kazakhstan',\\n 'Japan',\\n 'New Zealand',\\n 'Morocco',\\n 'Romania',\\n 'Mexico',\\n 'Tonga',\\n 'Eritrea',\\n 'Senegal',\\n 'Belize',\\n 'Kosovo',\\n 'Benin',\\n 'Eritrea',\\n 'Egypt',\\n 'Korea North',\\n 'Taiwan',\\n 'Taiwan',\\n 'Guatemala',\\n 'Slovenia',\\n 'Somalia',\\n 'Spain',\\n 'Libya',\\n 'Dominica',\\n 'Togo',\\n 'Taiwan',\\n 'Morocco',\\n 'Finland',\\n 'Iraq',\\n 'Albania',\\n 'Hungary',\\n 'Angola',\\n 'St Lucia',\\n 'Seychelles',\\n 'Seychelles',\\n 'Andorra',\\n 'Serbia',\\n 'Mauritius',\\n 'Jamaica',\\n 'Ivory Coast',\\n 'Sudan',\\n 'Bahrain',\\n 'Australia',\\n 'France',\\n 'China',\\n 'United Kingdom',\\n 'Marshall Islands',\\n 'Guinea',\\n 'Japan',\\n 'Cuba',\\n 'Sierra Leone',\\n 'Sri Lanka',\\n 'Antigua & Deps',\\n 'Georgia',\\n 'India',\\n 'Germany',\\n 'Congo',\\n 'Cameroon',\\n 'Brunei',\\n 'Uganda',\\n 'South Africa',\\n 'Ecuador',\\n 'St Lucia',\\n 'Congo {Democratic Rep}',\\n 'Bahamas',\\n 'Syria',\\n 'Czech Republic',\\n 'Pakistan',\\n 'Tanzania',\\n 'Sao Tome & Principe',\\n 'Burkina',\\n 'Nigeria',\\n 'Mali',\\n 'Greece',\\n 'Vatican City',\\n 'South Sudan',\\n 'Morocco',\\n 'Burkina',\\n 'Switzerland',\\n 'Kosovo',\\n 'Gabon',\\n 'Paraguay',\\n 'Romania',\\n 'Mongolia',\\n 'Zambia',\\n 'Syria',\\n 'Netherlands',\\n 'Zambia',\\n 'Dominican Republic',\\n 'Iceland',\\n 'Libya',\\n 'Lebanon',\\n 'Antigua & Deps',\\n 'Albania',\\n 'Turkey',\\n 'New Zealand',\\n 'Somalia',\\n 'Guinea-Bissau',\\n 'El Salvador',\\n 'Israel',\\n 'Central African Rep',\\n 'Korea North',\\n 'Zambia',\\n 'Switzerland',\\n 'Taiwan',\\n 'Namibia',\\n 'Mauritania',\\n 'Sudan',\\n 'Ghana',\\n 'Moldova',\\n 'East Timor',\\n 'Brunei',\\n 'Swaziland',\\n 'Cambodia',\\n 'Saint Vincent & the Grenadines',\\n 'Netherlands',\\n 'Papua New Guinea',\\n 'Georgia',\\n 'Tonga',\\n 'Mauritius',\\n 'Canada',\\n 'Guinea-Bissau',\\n 'Norway',\\n 'Singapore',\\n 'Morocco',\\n 'Cape Verde',\\n 'Pakistan',\\n 'Central African Rep',\\n 'Myanmar, {Burma}',\\n 'United Arab Emirates',\\n 'Maldives',\\n 'Ghana',\\n 'Saudi Arabia',\\n 'Netherlands',\\n 'Albania',\\n 'Bahamas',\\n 'Papua New Guinea',\\n 'Kosovo',\\n 'Lesotho',\\n 'Panama',\\n 'Argentina',\\n 'India',\\n 'Kazakhstan',\\n 'Angola',\\n 'Guinea',\\n 'Ukraine',\\n 'Congo',\\n 'Bahrain',\\n 'Israel',\\n 'Sudan',\\n 'Qatar',\\n 'Belarus',\\n 'Ghana',\\n 'Algeria',\\n 'Macedonia',\\n 'Grenada',\\n 'Spain',\\n 'Antigua & Deps',\\n 'Comoros',\\n 'Egypt',\\n 'Belize',\\n 'Haiti',\\n 'Eritrea',\\n 'Poland',\\n 'Bhutan',\\n 'Cape Verde',\\n 'Uganda',\\n 'Syria',\\n 'Libya',\\n 'Thailand',\\n 'Bahrain',\\n 'Slovenia',\\n 'Luxembourg',\\n 'Tunisia',\\n 'Guinea-Bissau',\\n 'Bhutan',\\n 'Uzbekistan',\\n 'Togo',\\n 'Madagascar',\\n 'Greece',\\n 'Guinea-Bissau',\\n 'Afghanistan',\\n 'Zambia',\\n 'Hungary',\\n 'Albania',\\n 'India',\\n 'Sao Tome & Principe',\\n 'Honduras',\\n 'Albania',\\n 'Cape Verde',\\n 'Turkmenistan',\\n 'Antigua & Deps']\",\"app.py\":\"from countries import country_list # Note: since the list is so large, it's tidier\\n                                   # to put in in a separate file. We'll learn more\\n                                   # about \\\"import\\\" later on.\\n\\ncountry_counts = {}\\nfor country in country_list:\\n    country_counts[country]=country_list.count(country)\\n\\n    #todo: insert countries into the country_count dict.\\n    # If the country isn't in the dict already, add it and set the value to 1\\n    # If the country is in the dict, increment its value by one to keep count\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5244591663087616",
+                "initial_code_files": [
+                  {
+                    "text": "country_list = ['Malta',\n 'Sudan',\n 'Oman',\n 'Jamaica',\n 'Pakistan',\n 'Netherlands',\n 'Venezuela',\n 'Tuvalu',\n 'Kazakhstan',\n 'Namibia',\n 'Congo {Democratic Rep}',\n 'Qatar',\n 'El Salvador',\n 'Macedonia',\n 'Morocco',\n 'Albania',\n 'Netherlands',\n 'Namibia',\n 'Moldova',\n 'Djibouti',\n 'Malaysia',\n 'Belarus',\n 'Niger',\n 'Thailand',\n 'Burkina',\n 'Panama',\n 'Libya',\n 'Kuwait',\n 'Dominican Republic',\n 'Andorra',\n 'Nauru',\n 'Guyana',\n 'Austria',\n 'Germany',\n 'Morocco',\n 'Sudan',\n 'Lebanon',\n 'Bahamas',\n 'Austria',\n 'Chad',\n 'Canada',\n 'Ivory Coast',\n 'Papua New Guinea',\n 'Mali',\n 'Marshall Islands',\n 'Morocco',\n 'Angola',\n 'New Zealand',\n 'Mali',\n 'Moldova',\n 'Libya',\n 'Bulgaria',\n 'Honduras',\n 'Comoros',\n 'Tunisia',\n 'Peru',\n 'Greece',\n 'Montenegro',\n 'Austria',\n 'Cambodia',\n 'St Lucia',\n 'Ecuador',\n 'Taiwan',\n 'Colombia',\n 'Liechtenstein',\n 'Monaco',\n 'Iraq',\n 'Zambia',\n 'Sri Lanka',\n 'Poland',\n 'Vanuatu',\n 'Barbados',\n 'Mauritius',\n 'Turkmenistan',\n 'Taiwan',\n 'Israel',\n 'Mali',\n 'United Arab Emirates',\n 'Zimbabwe',\n 'Sao Tome & Principe',\n 'Kuwait',\n 'Canada',\n 'Vietnam',\n 'Zambia',\n 'Rwanda',\n 'Kosovo',\n 'Nepal',\n 'Indonesia',\n 'Suriname',\n 'Mali',\n 'Chile',\n 'Luxembourg',\n 'Papua New Guinea',\n 'Norway',\n 'Brunei',\n 'Ecuador',\n 'Turkey',\n 'Pakistan',\n 'Mozambique',\n 'Senegal',\n 'Algeria',\n 'Laos',\n 'Vietnam',\n 'Kosovo',\n 'Belize',\n 'Bhutan',\n 'Andorra',\n 'Russian Federation',\n 'Cambodia',\n 'Madagascar',\n 'Slovenia',\n 'Malaysia',\n 'Belgium',\n 'Sweden',\n 'Nepal',\n 'Germany',\n 'Fiji',\n 'Australia',\n 'Kenya',\n 'Sudan',\n 'Nepal',\n 'Niger',\n 'Palau',\n 'Serbia',\n 'Chad',\n 'Bhutan',\n 'Poland',\n 'Nicaragua',\n 'Barbados',\n 'Hungary',\n 'Algeria',\n 'Ukraine',\n 'China',\n 'Latvia',\n 'Panama',\n 'Papua New Guinea',\n 'Sweden',\n 'Zimbabwe',\n 'Jordan',\n 'Sao Tome & Principe',\n 'Mexico',\n 'Sudan',\n 'Czech Republic',\n 'New Zealand',\n 'Uruguay',\n 'Kuwait',\n 'Liberia',\n 'Canada',\n 'Seychelles',\n 'Liberia',\n 'Saudi Arabia',\n 'Sierra Leone',\n 'South Sudan',\n 'Bolivia',\n 'Philippines',\n 'Mauritania',\n 'United States',\n 'Hungary',\n 'Bhutan',\n 'Netherlands',\n 'Burkina',\n 'Congo {Democratic Rep}',\n 'Central African Rep',\n 'Burkina',\n 'Poland',\n 'Guinea',\n 'United States',\n 'Luxembourg',\n 'Chile',\n 'Kuwait',\n 'Vatican City',\n 'Maldives',\n 'Ethiopia',\n 'France',\n 'Mozambique',\n 'Nicaragua',\n 'Portugal',\n 'United States',\n 'South Sudan',\n 'Bangladesh',\n 'Belize',\n 'Mozambique',\n 'Pakistan',\n 'Sao Tome & Principe',\n 'Israel',\n 'Antigua & Deps',\n 'Equatorial Guinea',\n 'Grenada',\n 'Liberia',\n 'Nauru',\n 'St Kitts & Nevis',\n 'Armenia',\n 'Italy',\n 'San Marino',\n 'Congo {Democratic Rep}',\n 'Suriname',\n 'Mauritius',\n 'Albania',\n 'Samoa',\n 'Bosnia Herzegovina',\n 'South Sudan',\n 'Trinidad & Tobago',\n 'Nigeria',\n 'Bolivia',\n 'South Africa',\n 'Qatar',\n 'South Sudan',\n 'Morocco',\n 'Benin',\n 'Kuwait',\n 'Tajikistan',\n 'Guyana',\n 'Indonesia',\n 'Turkmenistan',\n 'Sierra Leone',\n 'Mali',\n 'Antigua & Deps',\n 'Turkmenistan',\n 'Seychelles',\n 'Bulgaria',\n 'Rwanda',\n 'Czech Republic',\n 'Philippines',\n 'Norway',\n 'Germany',\n 'Tonga',\n 'United Arab Emirates',\n 'Syria',\n 'Bahamas',\n 'Armenia',\n 'Paraguay',\n 'Zambia',\n 'Samoa',\n 'Senegal',\n 'Kiribati',\n 'Taiwan',\n 'Gabon',\n 'Cuba',\n 'Comoros',\n 'Bhutan',\n 'Seychelles',\n 'Mexico',\n 'Bhutan',\n 'El Salvador',\n 'Tunisia',\n 'Liechtenstein',\n 'Czech Republic',\n 'Congo',\n 'Jordan',\n 'Djibouti',\n 'Macedonia',\n 'Finland',\n 'Denmark',\n 'San Marino',\n 'Cuba',\n 'Botswana',\n 'Equatorial Guinea',\n 'United Kingdom',\n 'Tanzania',\n 'Bosnia Herzegovina',\n 'Algeria',\n 'El Salvador',\n 'Senegal',\n 'Myanmar, {Burma}',\n 'Pakistan',\n 'Malaysia',\n 'Oman',\n 'Tanzania',\n 'Gabon',\n 'Tonga',\n 'Vietnam',\n 'Sudan',\n 'Slovakia',\n 'Tajikistan',\n 'Kyrgyzstan',\n 'Kiribati',\n 'Zambia',\n 'San Marino',\n 'Saudi Arabia',\n 'South Sudan',\n 'Mexico',\n 'Uruguay',\n 'Cyprus',\n 'Syria',\n 'Panama',\n 'Sierra Leone',\n 'Finland',\n 'Iraq',\n 'United States',\n 'Dominican Republic',\n 'Czech Republic',\n 'Latvia',\n 'Bolivia',\n 'Korea North',\n 'Angola',\n 'Germany',\n 'Malawi',\n 'Guinea-Bissau',\n 'Ghana',\n 'Lithuania',\n 'East Timor',\n 'Honduras',\n 'Bahamas',\n 'Algeria',\n 'Luxembourg',\n 'Eritrea',\n 'Gabon',\n 'Mauritania',\n 'Cambodia',\n 'Solomon Islands',\n 'Haiti',\n 'Jamaica',\n 'Kyrgyzstan',\n 'Tanzania',\n 'Marshall Islands',\n 'Lithuania',\n 'Bahrain',\n 'East Timor',\n 'Botswana',\n 'Marshall Islands',\n 'Grenada',\n 'France',\n 'St Lucia',\n 'Eritrea',\n 'Azerbaijan',\n 'Ghana',\n 'New Zealand',\n 'El Salvador',\n 'Cape Verde',\n 'Hungary',\n 'Botswana',\n 'Bosnia Herzegovina',\n 'Kuwait',\n 'Saudi Arabia',\n 'Indonesia',\n 'Qatar',\n 'Germany',\n 'Argentina',\n 'Georgia',\n 'Fiji',\n 'Tajikistan',\n 'Vanuatu',\n 'Samoa',\n 'Togo',\n 'Gambia',\n 'Sudan',\n 'Cambodia',\n 'Argentina',\n 'Canada',\n 'Nepal',\n 'Grenada',\n 'Vietnam',\n 'Cameroon',\n 'Cameroon',\n 'Lebanon',\n 'Rwanda',\n 'United Kingdom',\n 'Cambodia',\n 'Paraguay',\n 'Guinea',\n 'Kosovo',\n 'Switzerland',\n 'Mauritius',\n 'Fiji',\n 'Paraguay',\n 'Thailand',\n 'Eritrea',\n 'Guatemala',\n 'Suriname',\n 'Palau',\n 'Mozambique',\n 'Bangladesh',\n 'Australia',\n 'South Africa',\n 'Yemen',\n 'India',\n 'Peru',\n 'Korea North',\n 'Oman',\n 'Moldova',\n 'St Kitts & Nevis',\n 'Benin',\n 'India',\n 'Grenada',\n 'Taiwan',\n 'Madagascar',\n 'Paraguay',\n 'Angola',\n 'Saudi Arabia',\n 'Antigua & Deps',\n 'Marshall Islands',\n 'Micronesia',\n 'Benin',\n 'Monaco',\n 'Cuba',\n 'Kuwait',\n 'Serbia',\n 'Oman',\n 'Bahamas',\n 'Norway',\n 'Thailand',\n 'Malawi',\n 'Guyana',\n 'Denmark',\n 'South Africa',\n 'China',\n 'Oman',\n 'New Zealand',\n 'Austria',\n 'Venezuela',\n 'Syria',\n 'Rwanda',\n 'Dominican Republic',\n 'Algeria',\n 'Honduras',\n 'Solomon Islands',\n 'Palau',\n 'Cape Verde',\n 'Ghana',\n 'Algeria',\n 'Pakistan',\n 'Morocco',\n 'Kenya',\n 'Switzerland',\n 'Malta',\n 'China',\n 'South Sudan',\n 'Jamaica',\n 'East Timor',\n 'Malta',\n 'Benin',\n 'China',\n 'Algeria',\n 'United Kingdom',\n 'Palau',\n 'Ireland {Republic}',\n 'Maldives',\n 'Swaziland',\n 'Guinea',\n 'Haiti',\n 'Lesotho',\n 'Korea South',\n 'Italy',\n 'Nigeria',\n 'Kiribati',\n 'Kyrgyzstan',\n 'Antigua & Deps',\n 'Saint Vincent & the Grenadines',\n 'United States',\n 'Mongolia',\n 'Saudi Arabia',\n 'Haiti',\n 'Czech Republic',\n 'Portugal',\n 'Mauritius',\n 'Samoa',\n 'Honduras',\n 'Vietnam',\n 'Algeria',\n 'Marshall Islands',\n 'Kiribati',\n 'Fiji',\n 'Ivory Coast',\n 'Tajikistan',\n 'Nicaragua',\n 'Portugal',\n 'Equatorial Guinea',\n 'Ivory Coast',\n 'Zambia',\n 'New Zealand',\n 'Somalia',\n 'Senegal',\n 'Mongolia',\n 'Montenegro',\n 'Ghana',\n 'Bahrain',\n 'Laos',\n 'Paraguay',\n 'Guinea-Bissau',\n 'Bosnia Herzegovina',\n 'Tanzania',\n 'Gambia',\n 'Sierra Leone',\n 'Canada',\n 'Bolivia',\n 'Iraq',\n 'Ivory Coast',\n 'Zimbabwe',\n 'Turkmenistan',\n 'Bhutan',\n 'Venezuela',\n 'Ghana',\n 'Panama',\n 'Philippines',\n 'Kenya',\n 'Mali',\n 'Tunisia',\n 'Turkmenistan',\n 'Ukraine',\n 'Egypt',\n 'Burundi',\n 'Qatar',\n 'Latvia',\n 'Slovenia',\n 'Gambia',\n 'Algeria',\n 'Poland',\n 'Myanmar, {Burma}',\n 'Panama',\n 'Myanmar, {Burma}',\n 'Central African Rep',\n 'United Kingdom',\n 'Comoros',\n 'Yemen',\n 'Liechtenstein',\n 'Gambia',\n 'Ethiopia',\n 'Malaysia',\n 'Italy',\n 'Brazil',\n 'Brazil',\n 'Russian Federation',\n 'Nicaragua',\n 'Switzerland',\n 'Georgia',\n 'Georgia',\n 'Dominica',\n 'Liberia',\n 'Tonga',\n 'St Kitts & Nevis',\n 'Vatican City',\n 'Luxembourg',\n 'Barbados',\n 'Croatia',\n 'Samoa',\n 'St Lucia',\n 'Comoros',\n 'Burundi',\n 'Philippines',\n 'Mali',\n 'Yemen',\n 'Singapore',\n 'Brazil',\n 'Benin',\n 'Slovenia',\n 'Qatar',\n 'Tajikistan',\n 'Qatar',\n 'Seychelles',\n 'Somalia',\n 'Zimbabwe',\n 'Marshall Islands',\n 'Ukraine',\n 'Japan',\n 'Sudan',\n 'St Kitts & Nevis',\n 'Botswana',\n 'Slovakia',\n 'Azerbaijan',\n 'Philippines',\n 'United States',\n 'Nauru',\n 'Albania',\n 'Burundi',\n 'Dominican Republic',\n 'Bolivia',\n 'France',\n 'Antigua & Deps',\n 'Georgia',\n 'Finland',\n 'Benin',\n 'Oman',\n 'Dominica',\n 'Belize',\n 'South Africa',\n 'Libya',\n 'Cyprus',\n 'Ecuador',\n 'France',\n 'Namibia',\n 'Zimbabwe',\n 'Dominica',\n 'Belgium',\n 'United Arab Emirates',\n 'Pakistan',\n 'Colombia',\n 'Vatican City',\n 'Chad',\n 'Algeria',\n 'Malaysia',\n 'Cambodia',\n 'Equatorial Guinea',\n 'Slovenia',\n 'Bolivia',\n 'Kazakhstan',\n 'Japan',\n 'New Zealand',\n 'Morocco',\n 'Romania',\n 'Mexico',\n 'Tonga',\n 'Eritrea',\n 'Senegal',\n 'Belize',\n 'Kosovo',\n 'Benin',\n 'Eritrea',\n 'Egypt',\n 'Korea North',\n 'Taiwan',\n 'Taiwan',\n 'Guatemala',\n 'Slovenia',\n 'Somalia',\n 'Spain',\n 'Libya',\n 'Dominica',\n 'Togo',\n 'Taiwan',\n 'Morocco',\n 'Finland',\n 'Iraq',\n 'Albania',\n 'Hungary',\n 'Angola',\n 'St Lucia',\n 'Seychelles',\n 'Seychelles',\n 'Andorra',\n 'Serbia',\n 'Mauritius',\n 'Jamaica',\n 'Ivory Coast',\n 'Sudan',\n 'Bahrain',\n 'Australia',\n 'France',\n 'China',\n 'United Kingdom',\n 'Marshall Islands',\n 'Guinea',\n 'Japan',\n 'Cuba',\n 'Sierra Leone',\n 'Sri Lanka',\n 'Antigua & Deps',\n 'Georgia',\n 'India',\n 'Germany',\n 'Congo',\n 'Cameroon',\n 'Brunei',\n 'Uganda',\n 'South Africa',\n 'Ecuador',\n 'St Lucia',\n 'Congo {Democratic Rep}',\n 'Bahamas',\n 'Syria',\n 'Czech Republic',\n 'Pakistan',\n 'Tanzania',\n 'Sao Tome & Principe',\n 'Burkina',\n 'Nigeria',\n 'Mali',\n 'Greece',\n 'Vatican City',\n 'South Sudan',\n 'Morocco',\n 'Burkina',\n 'Switzerland',\n 'Kosovo',\n 'Gabon',\n 'Paraguay',\n 'Romania',\n 'Mongolia',\n 'Zambia',\n 'Syria',\n 'Netherlands',\n 'Zambia',\n 'Dominican Republic',\n 'Iceland',\n 'Libya',\n 'Lebanon',\n 'Antigua & Deps',\n 'Albania',\n 'Turkey',\n 'New Zealand',\n 'Somalia',\n 'Guinea-Bissau',\n 'El Salvador',\n 'Israel',\n 'Central African Rep',\n 'Korea North',\n 'Zambia',\n 'Switzerland',\n 'Taiwan',\n 'Namibia',\n 'Mauritania',\n 'Sudan',\n 'Ghana',\n 'Moldova',\n 'East Timor',\n 'Brunei',\n 'Swaziland',\n 'Cambodia',\n 'Saint Vincent & the Grenadines',\n 'Netherlands',\n 'Papua New Guinea',\n 'Georgia',\n 'Tonga',\n 'Mauritius',\n 'Canada',\n 'Guinea-Bissau',\n 'Norway',\n 'Singapore',\n 'Morocco',\n 'Cape Verde',\n 'Pakistan',\n 'Central African Rep',\n 'Myanmar, {Burma}',\n 'United Arab Emirates',\n 'Maldives',\n 'Ghana',\n 'Saudi Arabia',\n 'Netherlands',\n 'Albania',\n 'Bahamas',\n 'Papua New Guinea',\n 'Kosovo',\n 'Lesotho',\n 'Panama',\n 'Argentina',\n 'India',\n 'Kazakhstan',\n 'Angola',\n 'Guinea',\n 'Ukraine',\n 'Congo',\n 'Bahrain',\n 'Israel',\n 'Sudan',\n 'Qatar',\n 'Belarus',\n 'Ghana',\n 'Algeria',\n 'Macedonia',\n 'Grenada',\n 'Spain',\n 'Antigua & Deps',\n 'Comoros',\n 'Egypt',\n 'Belize',\n 'Haiti',\n 'Eritrea',\n 'Poland',\n 'Bhutan',\n 'Cape Verde',\n 'Uganda',\n 'Syria',\n 'Libya',\n 'Thailand',\n 'Bahrain',\n 'Slovenia',\n 'Luxembourg',\n 'Tunisia',\n 'Guinea-Bissau',\n 'Bhutan',\n 'Uzbekistan',\n 'Togo',\n 'Madagascar',\n 'Greece',\n 'Guinea-Bissau',\n 'Afghanistan',\n 'Zambia',\n 'Hungary',\n 'Albania',\n 'India',\n 'Sao Tome & Principe',\n 'Honduras',\n 'Albania',\n 'Cape Verde',\n 'Turkmenistan',\n 'Antigua & Deps']",
+                    "name": "countries.py"
+                  },
+                  {
+                    "text": "from countries import country_list # Note: since the list is so large, it's tidier\n                                   # to put in in a separate file. We'll learn more\n                                   # about \"import\" later on.\n\ncountry_counts = {}\nfor country in country_list:\n    #todo: insert countries into the country_count dict.\n    # If the country isn't in the dict already, add it and set the value to 1\n    # If the country is in the dict, increment its value by one to keep count\n",
+                    "name": "app.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347104,
+              "key": "de457f97-71a1-4863-afc2-0ef35975d2fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "迭代字典和集合\n============\n\n可以使用 for 循环迭代集合和字典，这与迭代列表的方法大体相同。采用如下所示的方法迭代集合：\n\n\n```Python\n>>> colors = set(['Pthalo Blue', 'Indian Yellow', 'Sap Green'])\n>>> for color in colors:\n...    print(color)\n...\nIndian Yellow\nSap Green\nPthalo Blue\n```\n\n请注意，for 循环没有以与插入集合相同的顺序打印颜色。集合不跟踪列表的排序方式，因此迭代集合会以任意顺序生成值。\n\n用于迭代字典的语法非常相似。不同的是字典存储键值对，循环字典时，可迭代键：\n\n```python\nBeatles_Discography = {\"Please Please Me\": 1963, \"With the Beatles\": 1963, \n    \"A Hard Day's Night\": 1964, \"Beatles for Sale\": 1964, \"Twist and Shout\": 1964,\n    \"Help\": 1965, \"Rubber Soul\": 1965, \"Revolver\": 1966,\n    \"Sgt. Pepper's Lonely Hearts Club Band\": 1967,\n    \"Magical Mystery Tour\": 1967, \"The Beatles\": 1968,\n    \"Yellow Submarine\": 1969 ,'Abbey Road': 1969,\n    \"Let It Be\": 1970}\n\nfor album_title in Beatles_Discography:\n    print(\"title: {}, year: {}\".format(album_title, Beatles_Discography[album_title]))\n```\n\n我们可以使用键 `album_title` 获取字典 `Beatles_Discography[album_title]` 中的每个值。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347105,
+              "key": "3bae4920-3481-441f-8e5b-0309fb1395bd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：多产的一年\n==========\n\n编写一个函数 `most_prolific`，其将采用与上述 `Beatles_Discography` 示例相同的字典格式，并返回发布最多专辑的年份。如果在 `Beatles_Discography` 中调用该函数，那么应返回 1964 年，这一年相对于其他年份发行的唱片数量较多一些。\n\n如果多个年份的最大发行量相同，则该函数将返回一个年份列表。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347106,
+              "key": "51ab59e5-60ef-4294-a145-d66a9d4e5d60",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "51ab59e5-60ef-4294-a145-d66a9d4e5d60",
+                "completed_at": "2017-12-07T17:54:57.115Z",
+                "last_viewed_at": "2017-12-07T17:54:57.115Z",
+                "unstructured": "{\"prolificyear.py\":\"Beatles_Discography = {'The Game': 1980, 'A Night at the Opera': 1975, 'Jazz': 1978, 'Queen II': 1974, 'A Day at the Races': 1976, 'News of the World': 1977, 'Queen': 1973, 'Sheer Heart Attack': 1974}\\r\\n\\r\\n\\r\\n\\r\\ndef most_prolific(Beatles_Discography):\\r\\n    years=[]\\r\\n    num={}\\r\\n    res=[]\\r\\n    for year in Beatles_Discography:\\r\\n        years.append(Beatles_Discography[year])\\r\\n    for i in range(len(years)):\\r\\n        num[years[i]]=years.count(years[i])\\r\\n    x=max(num.values())\\r\\n    for i in num:\\r\\n        if num.get(i)==x:\\r\\n            res.append(i)\\r\\n    return res\\r\\n    \\r\\ntop=most_prolific(Beatles_Discography)\\r\\ntopyear=int(max(top))\\r\\nprint(topyear)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6576683957223424",
+                "initial_code_files": [
+                  {
+                    "text": "",
+                    "name": "prolificyear.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347289,
+          "key": "7114184b-9319-4c67-8e8c-59b73bc49101",
+          "title": "复合数据结构",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7114184b-9319-4c67-8e8c-59b73bc49101",
+            "completed_at": "2018-02-09T15:19:46.047Z",
+            "last_viewed_at": "2018-09-27T09:06:37.502Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347107,
+              "key": "2a9fab41-5ccd-4a1c-bd1b-b5ec14721ef7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "字典词典\n================\n我们来回顾一下 `elements` 字典，\n\n```python\nelements = {'hydrogen': 1, 'helium': 2, 'carbon': 6}\n```\n\n该字典将元素名称（字符串）映射到其原子序号（整数）。但是如果想要存储关于每个元素的更多信息，如它们的重量和符号，会出现什么结果呢？可以通过调整字典，来将元素名称（字符串）映射到存储该数据集合的字典中：\n\n```python\nelements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}\n\n```\n\n可以采用与之前相同的方法，使用方括号或 `get` 方法查看该嵌套字典中关于条目的信息：\n\n```python\n>>> print(elements['helium'])\n{'number': 2, 'symbol': 'He', 'weight': 4.002602}\n>>> print(elements.get('unobtainium', 'There\\'s no such element!'))\nThere's no such element!\n```\n\n可以采用如下所示的方法从氦字典查找具体的信息：\n\n```python\n>>> print(elements['helium']['weight'])\n4.002602\n```\n这段代码首先在元素字典中查找关键字 \"helium\"，生成氦字典。第二个查询是 `['weight']`，然后再查找该氦字典中的关键字 \"weight” 即可查找氦的原子量。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347108,
+              "key": "75523930-a81b-4505-b62c-1ba90f8c635b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：在嵌套字典中添加值\n==============\n\n尝试使用嵌套字典。在 `elements` 字典的每个字典中添加另一个条目 'is_noble_gas'。插入新条目后，即可执行查找：\n\n```python\n>>> print(elements['hydrogen']['is_noble_gas'])\nFalse\n>>> print(elements['helium']['is_noble_gas'])\nTrue\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347110,
+              "key": "ef3364c2-6e2a-4b42-864b-37609377d7ce",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ef3364c2-6e2a-4b42-864b-37609377d7ce",
+                "completed_at": "2017-12-23T16:11:07.036Z",
+                "last_viewed_at": "2017-12-23T16:11:07.036Z",
+                "unstructured": "{\"elements.py\":\"elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H','is_noble_gas': False},\\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He','is_noble_gas': True}}\\nprint(elements['hydrogen']['is_noble_gas']\\n            \\n\\n\\n# todo: Add an 'is_noble_gas' entry to the hydrogen and helium dictionaries\\n# hint: helium is a noble gas, hydrogen isn't\\n#todo：在氢和氦字典中添加一个“is_noble_gas”条目\\n#＃提示：氦气是惰性气体，氢气不是\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6557026428780544",
+                "initial_code_files": [
+                  {
+                    "text": "elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},\n            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}\n\n# todo: Add an 'is_noble_gas' entry to the hydrogen and helium dictionaries\n# hint: helium is a noble gas, hydrogen isn't",
+                    "name": "elements.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 347111,
+              "key": "393afb0c-44a2-496e-8784-6e20dd2840f4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "数据集\n=========\n我们可以将一组数据视为数据元素的数据集合。在本课中，我们了解了 Python 为存储、访问和操作数据集提供了许多不同的数据结构。尤其是我们已经学习过的列表、集合和字典。\n\n在接下来的几个测验中，大家将有机会练习和查看列表、集合以及字典的属性。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347112,
+              "key": "89182409-7b47-4156-9b60-ab6684f9931c",
+              "title": "比较数据集与列表",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "89182409-7b47-4156-9b60-ab6684f9931c",
+                "completed_at": "2017-10-06T06:33:23.271Z",
+                "last_viewed_at": "2017-10-06T06:33:23.271Z",
+                "unstructured": "{\"selected_ids\":[\"a1490887946481\",\"a1490888012154\",\"a1490888039627\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "选中使用 Python 列表适用的数据集属性。",
+                "answers": [
+                  {
+                    "id": "a1490887847415",
+                    "text": "添加元素的顺序并不重要",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490887946481",
+                    "text": " 0 开始使用数字索引元素",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888012154",
+                    "text": "可排序",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888039627",
+                    "text": "用 `.append` 添加项",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888281097",
+                    "text": "用 `.add` 添加项",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347113,
+              "key": "a711729c-4292-4632-a753-4ea47ed34c63",
+              "title": "比较数据集与集合",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a711729c-4292-4632-a753-4ea47ed34c63",
+                "completed_at": "2017-12-07T16:54:45.868Z",
+                "last_viewed_at": "2017-12-07T16:54:45.868Z",
+                "unstructured": "{\"selected_ids\":[\"a1490888437123\",\"a1490888541874\",\"a1490888525322\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "查看使用 Python 集合适用的数据集属性。",
+                "answers": [
+                  {
+                    "id": "a1490888437123",
+                    "text": "元素的出现顺序可能不一致",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888499626",
+                    "text": "可以多次使用相同的条目",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490888525322",
+                    "text": "可变（可以更改）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888541874",
+                    "text": "用 `.add` 添加项",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888560568",
+                    "text": "可排序",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347114,
+              "key": "bae464fa-1675-415c-b796-fc97436481b8",
+              "title": "比较数据集与字典",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bae464fa-1675-415c-b796-fc97436481b8",
+                "completed_at": "2017-10-06T06:34:23.559Z",
+                "last_viewed_at": "2017-10-06T06:34:23.559Z",
+                "unstructured": "{\"selected_ids\":[\"a1490888886697\",\"a1490888934204\",\"a1490888820737\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "查看使用 Python 字典适用的汇总属性。",
+                "answers": [
+                  {
+                    "id": "a1490888820737",
+                    "text": "每个项包含两部分",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888872556",
+                    "text": "用 `.append` 添加项",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490888886697",
+                    "text": "元素的出现顺序可能不一致",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1490888904118",
+                    "text": "可排序",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1490888934204",
+                    "text": "可以嵌套",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 347115,
+              "key": "97c1d12c-a184-4849-a798-4536309c6825",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：飞行马戏团记录\n==================\n\n常规的马戏团每月出演两次或三次。将每个月每次的演出收入信息保存在列表中，以便按照演出顺序显示金额。几个月的数据全部收集在一个名为 `monthly_takings` 的字典中。下面是`monthly_takings`的字典：\n```\nmonthly_takings = {'January': [54, 63], 'February': [64, 60], 'March': [63, 49],\n                   'April': [57, 42], 'May': [55, 37], 'June': [34, 32],\n                   'July': [69, 41, 32], 'August': [40, 61, 40], 'September': [51, 62],\n                   'October': [34, 58, 45], 'November': [67, 44], 'December': [41, 58]}\n```\n\n在该练习中，编写一个函数 `total_takings`，计算马戏团一年的收入总和。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347116,
+              "key": "2f875a59-e351-4b3d-8455-0678f910df0b",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2f875a59-e351-4b3d-8455-0678f910df0b",
+                "completed_at": "2017-12-08T18:27:24.140Z",
+                "last_viewed_at": "2017-12-08T18:27:24.140Z",
+                "unstructured": "{\"circus.py\":\"monthly_takings = {'January': [54, 63], 'February': [64, 60], 'March': [63, 49],\\n                   'April': [57, 42], 'May': [55, 37], 'June': [34, 32],\\n                   'July': [69, 41, 32], 'August': [40, 61, 40], 'September': [51, 62],\\n                   'October': [34, 58, 45], 'November': [67, 44], 'December': [41, 58]}\\nres=0\\ndef total_takings(yearly_record):\\n    income=0\\n    for ele in monthly_takings:\\n        income+=sum(monthly_takings.get(ele))\\n    return income\\n    pass # TODO: Implemenent this function\\nres+=total_takings(monthly_takings)\\nprint (res)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6318961894490112",
+                "initial_code_files": [
+                  {
+                    "text": "def total_takings(monthly_takings):\n    pass # TODO: Implement this function",
+                    "name": "circus.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347290,
+          "key": "998cc146-378a-4545-8912-d0a94fe4a164",
+          "title": "问题解决能力",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "998cc146-378a-4545-8912-d0a94fe4a164",
+            "completed_at": "2017-12-23T16:08:37.305Z",
+            "last_viewed_at": "2018-09-27T09:42:59.444Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347117,
+              "key": "f9f8351d-12d2-4758-a8af-bd5c14f11225",
+              "title": "Problem Solving Skills",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "el9knzvU4TM",
+                "china_cdn_id": "el9knzvU4TM.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

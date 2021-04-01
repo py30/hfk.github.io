@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.669
+Você já lidou com a HTML
+
+00:00:02.703 --> 00:00:05.973
+numa página da Wikipédia
+com as ferramentas do seu navegador.
+
+00:00:06.006 --> 00:00:09.977
+Agora vamos ver como colocar
+a HTML no Python,
+
+00:00:10.010 --> 00:00:12.579
+para trabalharmos com ela
+programaticamente.
+
+00:00:12.613 --> 00:00:13.947
+Vou iniciar com uma busca
+
+00:00:13.981 --> 00:00:19.152
+por "solicitação python de página
+a partir de um URL".
+
+00:00:19.987 --> 00:00:23.957
+Certo. O primeiro link
+é da documentação do Python,
+
+00:00:23.991 --> 00:00:26.527
+o que é ótimo.
+Vou clicar para ver.
+
+00:00:27.160 --> 00:00:28.562
+Vejamos.
+
+00:00:28.595 --> 00:00:31.131
+Esta caixa amarela
+está destacada.
+
+00:00:31.164 --> 00:00:33.167
+"O pacote de solicitações
+é recomendado
+
+00:00:33.200 --> 00:00:36.603
+para uma interface de cliente HTTP
+de nível mais alto."
+
+00:00:36.637 --> 00:00:38.939
+Um nível mais alto é
+o que procuramos.
+
+00:00:38.972 --> 00:00:43.110
+Vamos simplificar nossa 1ª tentativa
+de obter uma página da web.
+
+00:00:43.143 --> 00:00:45.345
+Vou experimentar
+o pacote de solicitações.
+
+00:00:45.979 --> 00:00:50.083
+A documentação do pacote
+de solicitações é meio boba.
+
+00:00:50.117 --> 00:00:52.519
+Aqui diz que é
+"seguro para consumo humano".
+
+00:00:53.253 --> 00:00:55.489
+Passa confiança, certo?
+
+00:00:55.522 --> 00:00:58.358
+Aqui já temos um trecho
+de código para começarmos.
+
+00:00:58.392 --> 00:00:59.493
+Vou testá-lo.
+
+00:01:00.194 --> 00:01:03.163
+Como solicitações não fazem parte
+da biblioteca padrão,
+
+00:01:03.197 --> 00:01:06.033
+preciso instalá-las primeiro,
+usando o pip.
+
+00:01:06.500 --> 00:01:08.268
+"Pip3 install requests".
+
+00:01:08.869 --> 00:01:11.738
+Pronto. Está instalado.
+Ótimo!
+
+00:01:11.772 --> 00:01:16.109
+Agora vou rodar o interpretador
+para testar o exemplo.
+
+00:01:16.543 --> 00:01:19.079
+Vou copiar o formato
+deste código
+
+00:01:19.112 --> 00:01:21.315
+para obter a HTML
+da página da Wikipédia
+
+00:01:21.348 --> 00:01:23.116
+sobre o esquete do papagaio.
+
+00:01:23.150 --> 00:01:25.352
+Primeiro,
+importo as solicitações.
+
+00:01:25.385 --> 00:01:27.855
+Vou chamar a variável
+de "response", resposta,
+
+00:01:27.888 --> 00:01:30.924
+pois é mais descritiva
+que o "r" do exemplo.
+
+00:01:31.491 --> 00:01:36.096
+Response = requests.get
+
+00:01:36.430 --> 00:01:39.967
+e, entre parênteses,
+
+00:01:40.000 --> 00:01:44.371
+insiro o URL da página
+do esquete do papagaio morto.
+
+00:01:44.805 --> 00:01:49.743
+O código no exemplo mostra
+várias coisas que posso fazer,
+
+00:01:49.776 --> 00:01:54.081
+mas eu quero ver
+a HTML da página em si.
+
+00:01:54.114 --> 00:01:57.718
+Ela está no atributo "texto"
+da resposta.
+
+00:01:57.751 --> 00:01:59.419
+Vamos imprimi-la.
+
+00:02:02.589 --> 00:02:03.757
+Muito bem.
+
+00:02:04.725 --> 00:02:07.694
+Tem muito conteúdo
+nesta página.
+
+00:02:08.061 --> 00:02:11.398
+Reconheço algumas das tags
+com as quais lidamos.
+
+00:02:11.431 --> 00:02:13.800
+Tem uma tag anchor,
+
+00:02:13.834 --> 00:02:16.303
+tem uma div aqui,
+
+00:02:16.336 --> 00:02:19.339
+mas está um pouco difícil
+de ler isto aqui.
+
+00:02:19.373 --> 00:02:23.076
+Está mais difícil do que
+simplesmente olhar para a página.
+
+00:02:24.111 --> 00:02:26.580
+Parece ser muito texto,
+
+00:02:26.613 --> 00:02:31.952
+mas vamos ver que tipo
+de response.text ele é.
+
+00:02:35.722 --> 00:02:40.160
+Certo. É uma string que contém
+toda a HTML da página da Wikipédia.
+
+00:02:40.194 --> 00:02:41.195
+*END*
+

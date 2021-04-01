@@ -1,0 +1,305 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   迭代编程 III
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      维基百科网络爬虫案例研究
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 实战演练：维基百科爬虫.html">
+       01. 实战演练：维基百科爬虫
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 搭建基础.html">
+       02. 搭建基础
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 设计程序.html">
+       03. 设计程序
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 执行程序.html">
+       04. 执行程序
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 执行程序II.html">
+       05. 执行程序II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 执行程序 III.html">
+       06. 执行程序 III
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 迭代编程 I.html">
+       07. 迭代编程 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 迭代编程 II.html">
+       08. 迭代编程 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 迭代编程 III.html">
+       09. 迭代编程 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 收尾工作.html">
+       10. 收尾工作
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 总结.html">
+       11. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          09. 迭代编程 III
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="查找第一个链接：第三次尝试">
+          查找第一个链接：第三次尝试
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          思考
+         </p>
+        </h3>
+        <div>
+         <p>
+          <strong>
+           QUESTION:
+          </strong>
+         </p>
+         <p>
+          如何确保我们的代码只能查找到普通文章的链接，而不是链接到脚注、发音指南或其他奇怪的内容？实现这一点的方法不计其数，所以集思广益几种方法，并描述你认为是最好的解决方案。
+         </p>
+         <details>
+          <summary>
+           <strong>
+            ANSWER:
+           </strong>
+          </summary>
+          <p>
+           <p>
+            让我们看看，你的解决方案与我的有何不同。随时将自己的想法付诸实践！
+           </p>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          确保我们找到的链接可导向到维基百科文章的方法很多。我选择了一种懒人技术，该技术基于我最后一个问题的解决方案：我使用
+          <code>
+           find
+          </code>
+          方法的
+          <code>
+           recursive = False
+          </code>
+          选项：
+         </p>
+         <pre><code class="python language-python">content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
+for element in content_div.find_all("p", recursive=False):
+    if element.find("a", recursive=False):
+        first_relative_link = element.find("a", recursive=False).get('href')
+        break</code></pre>
+         <p>
+          这发挥作用的原因是 "特殊链接"（如脚注和发音键）似乎都包含在更多 div 标签中。由于这些特殊链接不是段落标签的直接后代，可以使用与之前相同的技术跳过这些链接。我这次使用
+          <code>
+           find
+          </code>
+          方法，而不是
+          <code>
+           find_all
+          </code>
+          ，原因是
+          <code>
+           find
+          </code>
+          可返回其查找到的第一个标签，而不是匹配标签的列表。
+         </p>
+         <p>
+          自己尝试这个代码，或创建自己的
+          <code>
+           find_first_link
+          </code>
+          实现函数。该函数始终有用吗？
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="10. 收尾工作.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 迭代编程 III')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

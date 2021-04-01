@@ -1,0 +1,465 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   迭代编程 II
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      维基百科网络爬虫案例研究
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 实战演练：维基百科爬虫.html">
+       01. 实战演练：维基百科爬虫
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 搭建基础.html">
+       02. 搭建基础
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 设计程序.html">
+       03. 设计程序
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 执行程序.html">
+       04. 执行程序
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 执行程序II.html">
+       05. 执行程序II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 执行程序 III.html">
+       06. 执行程序 III
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 迭代编程 I.html">
+       07. 迭代编程 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 迭代编程 II.html">
+       08. 迭代编程 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 迭代编程 III.html">
+       09. 迭代编程 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 收尾工作.html">
+       10. 收尾工作
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 总结.html">
+       11. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          08. 迭代编程 II
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="查找第一个链接：第二次尝试">
+          查找第一个链接：第二次尝试
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Ud1110 IntroPy L5 34 查找第一个链接 2
+         </p>
+        </h3>
+        <video controls="">
+         <source src="08. Ud1110 IntroPy L5 34 查找第一个链接 2-bsMtF-705EU.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="08. Ud1110 IntroPy L5 34 查找第一个链接 2-bsMtF-705EU.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="ar" src="08. Ud1110 IntroPy L5 34 查找第一个链接 2-bsMtF-705EU.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="08. Ud1110 IntroPy L5 34 查找第一个链接 2-bsMtF-705EU.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="true" kind="subtitles" label="en" src="08. Ud1110 IntroPy L5 34 查找第一个链接 2-bsMtF-705EU.en.vtt" srclang="en"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          子类与后代
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             在这些方法中，哪些可能有助于我们查找到想要的链接，而不是
+             <code>
+              mw-content-text
+             </code>
+             div 标签较远后代标签的链接？选择所有看似相关的方法。
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484089497037" name="347232" type="checkbox" value="a1484089497037"/>
+           <label for="a1484089497037">
+            <p>
+             <code>
+              extract
+             </code>
+             方法
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484089507636" name="347232" type="checkbox" value="a1484089507636"/>
+           <label for="a1484089507636">
+            <p>
+             <code>
+              find_all
+             </code>
+             方法
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484089508654" name="347232" type="checkbox" value="a1484089508654"/>
+           <label for="a1484089508654">
+            <p>
+             <code>
+              insert_after
+             </code>
+             方法
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484089509260" name="347232" type="checkbox" value="a1484089509260"/>
+           <label for="a1484089509260">
+            <p>
+             <code>
+              prettify
+             </code>
+             方法
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484089509846" name="347232" type="checkbox" value="a1484089509846"/>
+           <label for="a1484089509846">
+            <p>
+             <code>
+              children
+             </code>
+             方法
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <ul>
+           <li>
+            `find_all`方法
+           </li>
+           <li>
+            `children`方法
+           </li>
+          </ul>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="尝试新技术">
+          尝试新技术
+         </h1>
+         <p>
+          我重写了自己的代码，该代码这次使用
+          <code>
+           find_all
+          </code>
+          方法：
+         </p>
+         <pre><code class="python language-python">content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
+for element in content_div.find_all("p", recursive=False):
+    if element.a:
+        first_relative_link = element.a.get('href')
+        break</code></pre>
+         <p>
+          第一行代码查找到包含文章正文的 div。
+          <br/>
+          如果该标签是 div 的子类，则下一行在 div 中循环每个
+          <code>
+           &lt;p&gt;
+          </code>
+          。我们从
+          <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#recursive" target="_blank">
+           文档
+          </a>
+          了解到，"如果想让 Beautiful Soup 只考虑直接子类，可以按照recursive=False进行传递" 。
+         </p>
+         <p>
+          循环主体可以查看段落中是否存在
+          <code>
+           a
+          </code>
+          标签。如果这样，从链接中获取 url，并将其存储在
+          <code>
+           first_relative_link
+          </code>
+          中，然后结束循环。
+         </p>
+         <p>
+          注意：我也可以使用
+          <code>
+           children
+          </code>
+          方法编写代码。但循环主体将有所不同。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             尝试新测试文章中关于 html 的 Beautiful Soup 代码。有用吗？如果不行，你觉得出了什么问题？
+            </p>
+            <pre><code class="python language-python">content_div = soup.find(id="mw-content-text").find(class_="mw-parser-output")
+for element in content_div.find_all("p", recursive=False):
+    if element.a:
+        first_relative_link = element.a.get('href')
+        break</code></pre>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484090090620" name="347234" type="radio" value="a1484090090620"/>
+           <label for="a1484090090620">
+            <p>
+             是
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484090141003" name="347234" type="radio" value="a1484090141003"/>
+           <label for="a1484090141003">
+            <p>
+             否
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          否
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="排错">
+          排错
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Ud1110 IntroPy L5 37 排错
+         </p>
+        </h3>
+        <video controls="">
+         <source src="08. Ud1110 IntroPy L5 37 排错-X-GqfxYpaw0.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="08. Ud1110 IntroPy L5 37 排错-X-GqfxYpaw0.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="08. Ud1110 IntroPy L5 37 排错-X-GqfxYpaw0.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="true" kind="subtitles" label="en" src="08. Ud1110 IntroPy L5 37 排错-X-GqfxYpaw0.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="ar" src="08. Ud1110 IntroPy L5 37 排错-X-GqfxYpaw0.ar.vtt" srclang="ar"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="09. 迭代编程 III.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 迭代编程 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

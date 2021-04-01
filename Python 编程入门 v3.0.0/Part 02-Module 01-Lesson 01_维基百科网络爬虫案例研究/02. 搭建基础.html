@@ -1,0 +1,924 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   搭建基础
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      维基百科网络爬虫案例研究
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 实战演练：维基百科爬虫.html">
+       01. 实战演练：维基百科爬虫
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 搭建基础.html">
+       02. 搭建基础
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 设计程序.html">
+       03. 设计程序
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 执行程序.html">
+       04. 执行程序
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 执行程序II.html">
+       05. 执行程序II
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 执行程序 III.html">
+       06. 执行程序 III
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 迭代编程 I.html">
+       07. 迭代编程 I
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 迭代编程 II.html">
+       08. 迭代编程 II
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 迭代编程 III.html">
+       09. 迭代编程 III
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 收尾工作.html">
+       10. 收尾工作
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 总结.html">
+       11. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 搭建基础
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="网页如何运行？">
+          网页如何运行？
+         </h1>
+         <p>
+          网络爬虫是一个与网站进行交互的程序。网络爬虫用于创建搜索引擎索引和归档页面，但在我们的例子中用于探索维基百科。编写爬虫前，我们需要先了解网页的工作原理。特别是，需要了解一些 HTML。
+         </p>
+         <p>
+          如果你是一个热爱学习的网络开发人员，可能已经熟悉了 HTML。但如果不熟悉 HTML，也别担心！编写网络爬虫时，不需要了解太多 HTML。继续阅读要点概述。
+         </p>
+         <p>
+          HTML 或
+          <em>
+           超文本标记语言
+          </em>
+          是网页的源代码。HTML 文档是描述页面内容的文本文档。其包括文本内容、页面上图像和视频的 URL 以及关于内容排列和样式的信息。网页浏览器会收到原始 HTML，并相应提供格式整齐的多媒体网页。
+         </p>
+         <p>
+          我们来看一个简单页面的源码，了解一下如何构建 HTML，
+         </p>
+         <pre><code class="html language-html">&lt;title&gt;My Website&lt;/title&gt;
+&lt;div id="introduction"&gt;
+  &lt;p&gt;
+    Welcome to my website!
+  &lt;/p&gt;
+&lt;/div&gt;    
+&lt;div id="image-gallery"&gt;
+  &lt;p&gt;
+    This is my cat!
+    &lt;img src="cat.jpg" alt="Meow!"&gt;
+    &lt;a href="https://en.wikipedia.org/wiki/Cat"&gt;Learn more about cats!&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+         <p>
+          HTML 源代码由嵌套标签组成。第一个标签是标题标签，
+          <code>
+           &lt;title&gt;
+          </code>
+          和结束标签
+          <code>
+           &lt;/title&gt;
+          </code>
+          之间的文本用作页面标题。"
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt='样本页面，标题为 "我的网站"' class="img img-fluid" src="img/kitty.png"/>
+          <figcaption class="figure-caption">
+           <p>
+            样本页面，标题为 "我的网站"
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          HTML 源代码中的下一个标签是
+          <code>
+           &lt;div id="introduction"&gt;
+          </code>
+          。
+          <code>
+           div
+          </code>
+          是 "division" 的缩写，
+          <code>
+           id="introduction"
+          </code>
+          表示该页面的作者将这一部分标注为引言。
+         </p>
+         <p>
+          我们在该标签下面的几行中可看到
+          <code>
+           &lt;/div&gt;
+          </code>
+          。这是 div 的结束标签，表示该段落代码嵌套在 div 中:
+         </p>
+         <pre><code class="html language-html">&lt;p&gt;
+  欢迎来到我的网站！
+&lt;/p&gt;</code></pre>
+         <p>
+          <code>
+           p
+          </code>
+          是 "段落" 的缩写。
+          <code>
+           &lt;p&gt;
+          </code>
+          和其结束标签
+          <code>
+           &lt;/p&gt;
+          </code>
+          之间的文本是提供 HTML 时，显示在屏幕上的内容。可以将该段落称为 div 标签（嵌套在其中）的 "子类"。同样，div 是段落的 "父类"。总而言之，这种父类标签和子类标签的排列创建了一个树结构。
+         </p>
+         <p>
+          词汇注释：术语 "标签" 和 "元素" 密切相关，有时可互换使用。标签是一个 HTML 源码，而元素是在浏览器呈现标签后用户可以看到的可视化组件。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <figure class="figure">
+          <img alt="由嵌套标签组成的 HTML 文档树结构。" class="img img-fluid" src="img/trees.png"/>
+          <figcaption class="figure-caption">
+           <p>
+            由嵌套标签组成的 HTML 文档树结构。
+           </p>
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <p>
+          HTML 文档中的第二个 div 更复杂。它还有一个作为子类的段落标签，该段落标签有自己的子类，
+          <code>
+           img
+          </code>
+          和
+          <code>
+           a
+          </code>
+          。这两个子类标签嵌套在 div 标签内，成为 div 的后代标签。但它们不是 div 的子类，而是 'p` 标签的子类。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          识别父类标签与子类标签
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            请参阅上文 "我的网站" html 来回答该问题。
+            <br/>
+            <code>
+             image-gallery
+            </code>
+            div 里面有多少元素？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          识别父类标签与子类标签 II
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            这些标签中有多少是
+            <code>
+             image-gallery
+            </code>
+            的直接后代标签？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          识别父类标签与子类标签 III
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            一个标签有多少个父类标签？该数字对于每个 html 文档是一样的。
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="锚标签">
+          锚标签
+         </h1>
+         <p>
+          如需爬取网页，还需要了解一个标签类型，即锚标签。我们已经看到一个锚标签：
+         </p>
+         <pre><code class="html language-html">&lt;a href="https://en.wikipedia.org/wiki/Cat"&gt;Learn more about cats!&lt;/a&gt;</code></pre>
+         <p>
+          锚标签（用
+          <code>
+           &lt;a&gt;&lt;/a&gt;
+          </code>
+          表示，用于创建链接。此示例创建了这样一个链接：
+         </p>
+         <blockquote>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">
+            了解关于猫的更多内容！
+           </a>
+          </p>
+         </blockquote>
+         <p>
+          在
+          <code>
+           href
+          </code>
+          属性中指定链接的目的，开始和结束标签之间的文本即链接的文本。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="使用开发工具探索-html">
+          使用开发工具探索 HTML
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          使用开发工具探索 HTML
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. 使用开发工具探索 HTML-YWbCvLCBQrg.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="02. 使用开发工具探索 HTML-YWbCvLCBQrg.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="02. 使用开发工具探索 HTML-YWbCvLCBQrg.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="false" kind="subtitles" label="ar" src="02. 使用开发工具探索 HTML-YWbCvLCBQrg.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="02. 使用开发工具探索 HTML-YWbCvLCBQrg.pt-BR.vtt" srclang="pt-BR"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          试用开发人员工具
+         </p>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             自己试用开发人员工具。浏览任何维基百科的文章，并通过查看其 HTML 源码来回答该问题。
+            </p>
+            <p>
+             查找带有 `mw-content-text’ 的 div。该 div 的父类是什么类型的标签？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484079562685" name="347191" type="radio" value="a1484079562685"/>
+           <label for="a1484079562685">
+            <p>
+             <code>
+              div
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484079707125" name="347191" type="radio" value="a1484079707125"/>
+           <label for="a1484079707125">
+            <p>
+             <code>
+              b
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484079707785" name="347191" type="radio" value="a1484079707785"/>
+           <label for="a1484079707785">
+            <p>
+             <code>
+              p
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484079709267" name="347191" type="radio" value="a1484079709267"/>
+           <label for="a1484079709267">
+            <p>
+             <code>
+              body
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          `div`
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="使用-python-获取-html">
+          使用 Python 获取 HTML
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          使用 Python 获取 HTML
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. 使用 Python 获取 HTML-1Y_CZyKNWe4.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="02. 使用 Python 获取 HTML-1Y_CZyKNWe4.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="ar" src="02. 使用 Python 获取 HTML-1Y_CZyKNWe4.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="02. 使用 Python 获取 HTML-1Y_CZyKNWe4.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="02. 使用 Python 获取 HTML-1Y_CZyKNWe4.zh-CN.vtt" srclang="zh-CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="尝试自己请求">
+          尝试自己
+          <code>
+           请求
+          </code>
+         </h1>
+         <p>
+          现在该你尝试请求库。
+         </p>
+         <p>
+          首先去命令行安装具有
+          <code>
+           pip
+          </code>
+          的
+          <code>
+           requests
+          </code>
+         </p>
+         <pre><code>$ pip3 install requests</code></pre>
+         <p>
+          （根据 Python 安装，你可能需要使用
+          <code>
+           pip
+          </code>
+          ，而不是
+          <code>
+           pip3
+          </code>
+          ）
+         </p>
+         <p>
+          然后打开交互式 Python 解释器测试一些请求代码。这是此前视频的代码：
+         </p>
+         <pre><code class="python language-python">&gt;&gt;&gt; response = requests.get('https://en.wikipedia.org/wiki/Dead_Parrot_sketch')
+&gt;&gt;&gt; print(response.text)
+&gt;&gt;&gt; print(type(response.text))</code></pre>
+         <p>
+          将示例中的 url 替换为你自己选择的页面，以便在交互式 Python 解释器中对其进行测试，然后查看html。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="beautiful-soup">
+          Beautiful Soup
+         </h1>
+         <p>
+          我们现在已经掌握了如何制作网页请求和下载 html，接下来我们了解一下如何解析 HTML。由于 HTML 只是文本，我们可以使用已经了解的工具对其进行解析；循环和字符串方法。这将极具挑战性，HTML 是一种非常灵活的语言，这使其难以正确解析。但好的一点是之前的程序员已经为我们解决了这个问题。
+         </p>
+         <p>
+          此前，对于此类项目我经常使用 Beautiful Soup 库。根据其
+          <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">
+           文档
+          </a>
+          ：
+         </p>
+         <blockquote>
+          <p>
+           “Beautiful Soup 可解析你提供的任何内容，并为你遍历树材料。可以命令其'查找所有的链接'或’查找 classexternalLink 的所有链接'或'查找 url 与 "foo.com" 匹配的所有链接或'查找粗体文本的表格标题，然后将该文本发送给我。'"
+          </p>
+         </blockquote>
+         <p>
+          “这些示例听起来很像我们在某个 div 中查找第一个维基百科链接时遇到的问题！
+         </p>
+         <p>
+          我们来安装这个库并试试吧！可以使用 pip 安装最新版本的 Beautiful Soup：
+         </p>
+         <pre><code class="shell language-shell">$ pip3 install beautifulsoup4</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="beautiful-soup-演示">
+          Beautiful Soup 演示
+         </h1>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Beautiful Soup 演示
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. Beautiful Soup 演示-dk7ESZXLnk4.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="02. Beautiful Soup 演示-dk7ESZXLnk4.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="02. Beautiful Soup 演示-dk7ESZXLnk4.zh-CN.vtt" srclang="zh-CN"/>
+         <track default="false" kind="subtitles" label="ar" src="02. Beautiful Soup 演示-dk7ESZXLnk4.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="02. Beautiful Soup 演示-dk7ESZXLnk4.pt-BR.vtt" srclang="pt-BR"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="自己尝试-beautiful-soup">
+          自己尝试 Beautiful Soup
+         </h1>
+         <p>
+          安装 Beautiful Soup 并试试吧！在终端中打开一个交互式解释器，并在浏览器中浏览你所选择的网页。在页面中选择元素，并尝试用 Beautiful Soup 来选择这些元素！尝试打开浏览器的开发人员工具，这有助于了解 HTML 的建构方式。
+         </p>
+         <p>
+          浏览页面以及 Beautiful Soup，并回答以下问题。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             哪一项的计算结果为页面中第一段的所有锚标签（
+             <a>
+             </a>
+             ）列？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484080874232" name="347199" type="radio" value="a1484080874232"/>
+           <label for="a1484080874232">
+            <p>
+             <code>
+              soup.p.a
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484080887135" name="347199" type="radio" value="a1484080887135"/>
+           <label for="a1484080887135">
+            <p>
+             <code>
+              soup.find_all('p').find_all('a')
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484080887751" name="347199" type="radio" value="a1484080887751"/>
+           <label for="a1484080887751">
+            <p>
+             <code>
+              soup.p.find_all('a')
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484080888509" name="347199" type="radio" value="a1484080888509"/>
+           <label for="a1484080888509">
+            <p>
+             <code>
+              for p in soup.find_all('p'):     \n p.a
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          `soup.p.find_all('a')`
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <form>
+          <fieldset>
+           <legend>
+            <p>
+             如果一个 soup 对象的名称为
+             <code>
+              soup
+             </code>
+             ，那么什么代码将选择一个具有 id "image-gallery" 的 div 元素？
+            </p>
+           </legend>
+          </fieldset>
+          <div>
+           <input id="a1484083660182" name="347200" type="radio" value="a1484083660182"/>
+           <label for="a1484083660182">
+            <p>
+             <code>
+              soup.id.image-gallery
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484083679121" name="347200" type="radio" value="a1484083679121"/>
+           <label for="a1484083679121">
+            <p>
+             <code>
+              soup.div(id="image-gallery")
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484083679765" name="347200" type="radio" value="a1484083679765"/>
+           <label for="a1484083679765">
+            <p>
+             <code>
+              soup.get('div', id='image-gallery')
+             </code>
+            </p>
+           </label>
+          </div>
+          <div>
+           <input id="a1484083680377" name="347200" type="radio" value="a1484083680377"/>
+           <label for="a1484083680377">
+            <p>
+             <code>
+              soup.find(id="image-gallery")
+             </code>
+            </p>
+           </label>
+          </div>
+         </form>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          `soup.find(id="image-gallery")`
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 设计程序.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 搭建基础')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

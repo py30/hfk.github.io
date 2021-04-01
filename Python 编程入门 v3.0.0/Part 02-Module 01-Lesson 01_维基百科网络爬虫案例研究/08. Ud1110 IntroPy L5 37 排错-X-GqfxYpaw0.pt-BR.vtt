@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:04.000
+Testei o novo código
+para extrair links neste artigo
+
+00:00:04.033 --> 00:00:06.300
+sobre Yoshiharu Yamaguchi.
+
+00:00:06.333 --> 00:00:09.733
+Eu espero que o código
+encontre o link para Osaka,
+
+00:00:09.767 --> 00:00:12.500
+mas ele encontrou
+esta interrogação,
+
+00:00:12.533 --> 00:00:15.033
+que é um link
+para a página da Wikipédia
+
+00:00:15.067 --> 00:00:17.100
+sobre caracteres japoneses.
+
+00:00:17.133 --> 00:00:19.800
+Tecnicamente, o Beautiful Soup
+achou o link correto,
+
+00:00:19.833 --> 00:00:22.667
+porém, mais uma vez,
+não é isso que eu quero.
+
+00:00:22.700 --> 00:00:25.133
+Esse mesmo comportamento
+pode ocasionar outros erros.
+
+00:00:25.167 --> 00:00:29.633
+Se o primeiro link for para uma nota
+de rodapé ou citação, por exemplo,
+
+00:00:29.667 --> 00:00:31.867
+é o que o código encontrará.
+
+00:00:31.900 --> 00:00:36.200
+O que nós de fato queremos
+é o 1º link para um artigo,
+
+00:00:36.233 --> 00:00:37.900
+não para uma página de ajuda.
+
+00:00:37.933 --> 00:00:39.033
+Como faremos isso?
+
+00:00:39.067 --> 00:00:40.067
+*END*
+

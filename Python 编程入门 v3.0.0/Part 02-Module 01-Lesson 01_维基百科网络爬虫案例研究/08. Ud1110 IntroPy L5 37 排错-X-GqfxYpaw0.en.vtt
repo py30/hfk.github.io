@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.830
+I tried the new and improved link extraction code,
+
+00:00:02.830 --> 00:00:06.490
+on this article about Yoshiharu Yamaguchi.
+
+00:00:06.490 --> 00:00:10.650
+I expected the extraction code to find this link to Osaka, but instead,
+
+00:00:10.650 --> 00:00:13.576
+it found this little question mark which is actually a link
+
+00:00:13.576 --> 00:00:16.649
+to the Wikipedia page about Japanese character sets.
+
+00:00:16.649 --> 00:00:19.854
+Technically, BeautifulSoup found the right link.
+
+00:00:19.855 --> 00:00:22.859
+But once again, this is not what I really want.
+
+00:00:22.859 --> 00:00:25.294
+The same behavior can lead to other bugs too.
+
+00:00:25.295 --> 00:00:29.545
+If the first link in the article is a link to a footnote or a citation for example,
+
+00:00:29.545 --> 00:00:31.925
+that's what the link extractor will find.
+
+00:00:31.925 --> 00:00:33.465
+What we really want to do though,
+
+00:00:33.465 --> 00:00:36.400
+is to find what first link that's to an ordinary Wikipedia article,
+
+00:00:36.399 --> 00:00:39.000
+not to a help page. How can we do that?
+

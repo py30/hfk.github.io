@@ -1,0 +1,65 @@
+{
+  "data": {
+    "lesson": {
+      "id": 384452,
+      "key": "0f3159b3-4a63-4fdb-a1c7-362f5f52ddfe",
+      "title": "抓取豆瓣电影信息",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这个项目中, 你将会从豆瓣电影的网页中获取各个地区，各个类别的高评分电影，收集他们的名称，评分，电影页面的链接和电影海报的链接。最后在收集的数据进行统计。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": {
+        "key": "6519f4c0-83d3-41d7-b20f-fc8f184a8c66",
+        "version": "1.0.0",
+        "locale": "zh-cn",
+        "duration": 40320,
+        "semantic_type": "Project",
+        "title": "抓取豆瓣电影信息",
+        "description": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/best%20movie) 查看项目内容，提交要求和评审标准。",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1182",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": {
+          "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59b7999d_douban/douban.jpg",
+          "width": 400,
+          "height": 400
+        }
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 384448,
+          "key": "3df798eb-bc77-4f1a-b811-538b51971e24",
+          "title": "抓取豆瓣电影信息",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3df798eb-bc77-4f1a-b811-538b51971e24",
+            "completed_at": "2018-02-22T03:42:00.872Z",
+            "last_viewed_at": "2019-03-29T12:07:48.976Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 425320,
+              "key": "a4c20df1-dd5d-4590-b9cd-ede72a0b45a3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "请在项目 [Github 页面](https://github.com/udacity/cn-python-foundation/tree/master/best%20movie) 查看项目内容，提交要求和评审标准。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

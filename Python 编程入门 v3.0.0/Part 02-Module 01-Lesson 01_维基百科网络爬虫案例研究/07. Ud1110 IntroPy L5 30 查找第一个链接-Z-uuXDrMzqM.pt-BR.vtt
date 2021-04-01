@@ -1,0 +1,74 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:02.334
+Enquanto Charlie trabalhava
+no loop principal,
+
+00:00:02.367 --> 00:00:04.701
+trabalhei na função
+"encontrar 1º link".
+
+00:00:04.734 --> 00:00:08.200
+Essa cooperação não seria possível
+sem planejamento
+
+00:00:08.234 --> 00:00:10.567
+e sem desmembrar o problema
+em tarefas menores.
+
+00:00:10.968 --> 00:00:12.067
+Além disso, porém,
+
+00:00:12.100 --> 00:00:15.501
+Charlie teve que especificar como
+o código dela usaria minha função.
+
+00:00:16.033 --> 00:00:18.434
+Ela vai chamar a função
+por meio de uma string.
+
+00:00:18.467 --> 00:00:21.400
+Não sei como Charlie nomeou
+a variável dela,
+
+00:00:21.434 --> 00:00:24.601
+então vou me referir ao input
+desta função como "url".
+
+00:00:25.167 --> 00:00:28.000
+A função faz o que tem que fazer
+e retorna outra string.
+
+00:00:28.033 --> 00:00:31.834
+O valor retornado é o 1º link
+do artigo que passou pela função.
+
+00:00:32.100 --> 00:00:34.767
+O processo é como
+um contrato entre mim e Charlie.
+
+00:00:35.033 --> 00:00:38.767
+Se o argumento dela estiver correto
+e eu retornar o resultado certo,
+
+00:00:38.801 --> 00:00:40.734
+nosso programa funcionará
+corretamente.
+
+00:00:44.567 --> 00:00:47.498
+Assim posso implementar
+a função da maneira que preferir
+
+00:00:47.532 --> 00:00:50.267
+e a Charlie não precisa se preocupar
+com a junção dos códigos,
+
+00:00:50.300 --> 00:00:53.033
+pois já decidimos
+como o código dela chamará a função.
+
+00:00:53.067 --> 00:00:54.067
+*END*
+

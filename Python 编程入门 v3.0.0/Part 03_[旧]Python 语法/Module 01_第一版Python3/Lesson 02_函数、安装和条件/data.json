@@ -1,0 +1,1382 @@
+{
+  "data": {
+    "lesson": {
+      "id": 347315,
+      "key": "ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd",
+      "title": "函数、安装和条件",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在本课中，大家将在自己的计算机上安装 Python，学习如何定义函数，如何使用条件语句编写更详细的程序。此外还将学习如何将程序分解为可管理的部分，并将软件工程技能用于具体实践中。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd/347315/1516766739976/%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%89%E8%A3%85%E5%92%8C%E6%9D%A1%E4%BB%B6%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/ee5eb8d0-dc89-4b42-8feb-9fbe35a5fecd/347315/1516766727570/%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%89%E8%A3%85%E5%92%8C%E6%9D%A1%E4%BB%B6%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 347259,
+          "key": "2c21dcba-f074-4139-aec1-b8718aab312f",
+          "title": "欢迎回来！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2c21dcba-f074-4139-aec1-b8718aab312f",
+            "completed_at": "2018-02-11T15:50:46.800Z",
+            "last_viewed_at": "2018-09-27T09:53:59.867Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346958,
+              "key": "283bb325-f3de-4fdb-810e-bfe6dae1039f",
+              "title": "Ud1110 IntroPy L201 欢迎回来！",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "oCCMSsCc4Iw",
+                "china_cdn_id": "oCCMSsCc4Iw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 347261,
+          "key": "bcd75648-55c5-4634-873a-acdb308cb9c1",
+          "title": "定义函数 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bcd75648-55c5-4634-873a-acdb308cb9c1",
+            "completed_at": "2018-02-11T15:50:47.894Z",
+            "last_viewed_at": "2018-09-27T08:41:35.859Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346959,
+              "key": "8ce4f6e5-8f39-4066-a8b7-b1fa3ccb0674",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "圆柱体积函数\n=================\n我们以前使用过几种 Python 内置函数。现在，我们可以尝试自己编写函数。\n\n我们将编写一个计算圆柱体积的函数：圆柱的高乘以其半径的平方，再乘以 pi。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346960,
+              "key": "735575fb-40a1-483c-8081-cdf0b7296a24",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58d95b7b_intropy-l2-circular-cylinder-rh/intropy-l2-circular-cylinder-rh.svg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/735575fb-40a1-483c-8081-cdf0b7296a24",
+              "caption": "已标明圆柱的半径 (r) 和高 (h)。\n图片改编自 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Circular_cylinder_rh.svg)",
+              "alt": null,
+              "width": 425,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 346961,
+              "key": "c1b0f33d-d78d-4301-989a-c532d9ea37b7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面是一个计算圆柱体积的函数定义：\n\n```python\ndef cylinder_volume(height, radius):\n    pi = 3.14159\n    return height * pi * radius ** 2\n```\n\n在定义 `cylinder_volume` 函数后，可以按如下方法使用该函数：\n```python\n>>> cylinder_volume(10, 3)\n282.7431\n```\n\n现在我们来仔细分析一下这个函数的定义：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346962,
+              "key": "b82f6c96-d39b-4564-8114-2cc75e604e29",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "分析函数定义\n====================",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346963,
+              "key": "519a242c-53d3-4646-a5ae-901107d58f9c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58ebabc1_intropy-l1-elements-of-function-definition2/intropy-l1-elements-of-function-definition2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/519a242c-53d3-4646-a5ae-901107d58f9c",
+              "caption": "函数定义的元素",
+              "alt": null,
+              "width": 964,
+              "height": 522,
+              "instructor_notes": null
+            },
+            {
+              "id": 346964,
+              "key": "26c6a84c-1043-4d24-8e02-08cc9f683c5f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "函数头\n------------------------\n- **(1)** `def` 关键字表示以下代码即函数定义。\n- **(2)** `def` 后跟的是函数的名称，在这个例子中是 `cylinder_volume`。函数名称应该是一个单词，可使用下划线连接两个单词。\n- **(3)** 函数定义第一行的最后一个元素是函数所需的参数（函数名的命名规则与变量名相同）。函数的参数是调用函数时传入的值；在函数体中将使用这些参数。请用逗号隔开参数，并将它们放在一对括号中。如果编写一个不带参数的函数，应使用一对空括号 `()`。函数定义的第一行以冒号 `:` 结尾。\n\n下面是一个不带参数的函数示例：\n```python\ndef print_greeting():\n    print('Hello World!')\n```\n该函数将打印出 \"Hello World\"。由于这个函数没有参数，因此我们使用一对空括号。\n\n函数体\n---------------------\n- **(4)** 使用四个空格缩进函数体。函数体是函数发挥作用的载体。我们可以在函数体内引用参数变量，以及定义新的变量。在此定义的 `pi` 变量是一个局部变量，这意味着它只能在 `cylinder_volume` 函数的函数体中使用。在其他地方尝试访问该变量会导致错误。\n- **(5)** 使用 `return` 关键字可获取函数结果。`return` 之后的表达式值是函数的输出值。\n- **(6)** 在这个示例中，我们返回一个表达式（即圆柱体积的公式）的值。请注意，该表达式先计算 `radius ** 2`，这是因为在数学运算中，先计算乘方，再计算乘法。（有时为了避免混淆，在涉及大量运算的数学表达式中，你也可以添加括号，如 `height * pi * (radius ** 2)` 。）如果你不想在设置返回值时使用表达式，也可以提前在函数体中计算体积，然后将其存储在名为 `volume` 的变量中，这将使我们可以 `return volume`。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346965,
+              "key": "3886b3ec-9f15-4577-993c-c0e3d1a6f25e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：人口密度函数\n=============\n请编写一个名为 `population_density` 的函数，该函数有两个参数，`population` 和 `land_area`（以平方公里计），并返回一个根据这些值计算出的人口密度。下面的练习中有两个测试案例，你可以使用这两个案例验证自己的函数是否可用。编写函数后，请使用测试答案按钮测试代码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346966,
+              "key": "11203165-e55a-47d3-9cd6-567c319ea059",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "11203165-e55a-47d3-9cd6-567c319ea059",
+                "completed_at": "2017-12-01T12:05:58.941Z",
+                "last_viewed_at": "2018-03-28T11:58:03.244Z",
+                "unstructured": "{\"pop_density.py\":\"# todo: define a function named `population_density` that takes two arguments, \\n# `population` and `land_area` (in square kilometres), and returns a population \\n# density calculated from those values.\\n\\n# Your code goes here!\\ndef population_density(population,land_area):\\n    return population/land_area\\n    population_density(864816, 121.4)\\nprint (population_density)\\n\\n\\n\\n# Here are test cases to verify that your function works as expected:\\ntest1 = population_density(10, 1)\\nexpected_result1 = 10\\nprint(\\\"expected result: {}, actual result: {}\\\".format(expected_result1, test1))\\n\\ntest2 = population_density(864816, 121.4)\\nexpected_result2 = 7123.6902801\\nprint(\\\"expected result: {}..., actual result: {}\\\".format(expected_result2, test2))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6308877915258880",
+                "initial_code_files": [
+                  {
+                    "text": "# todo: define a function named `population_density` that takes two arguments, \n# `population` and `land_area` (in square kilometres), and returns a population \n# density calculated from those values.\n\n# Your code goes here!\n\n\n\n\n# Here are test cases to verify that your function works as expected:\ntest1 = population_density(10, 1)\nexpected_result1 = 10\nprint(\"expected result: {}, actual result: {}\".format(expected_result1, test1))\n\ntest2 = population_density(864816, 121.4)\nexpected_result2 = 7123.6902801\nprint(\"expected result: {}..., actual result: {}\".format(expected_result2, test2))",
+                    "name": "pop_density.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347263,
+          "key": "6f282eeb-c6fe-4ef3-a80b-c1fde200daeb",
+          "title": "定义函数 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6f282eeb-c6fe-4ef3-a80b-c1fde200daeb",
+            "completed_at": "2018-02-11T15:50:52.779Z",
+            "last_viewed_at": "2018-09-27T08:41:59.783Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346967,
+              "key": "36d0763c-8de7-4c75-804f-4d77e7a54099",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：人口密度函数\n=============\n下面是我的解决方案：\n```python\ndef population_density(population, land_area):\n    return population/land_area\n```\n\n此处函数体只有一行，原因是在代码不混乱的前提下，我个人偏向于保持函数简单。你也可以将计算语句和返回语句分为两行来编写函数。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346968,
+              "key": "bd7e8987-23b6-4d6f-9bfe-984bcd33405b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "缩进\n==========\n\n正如大家刚刚所见，缩进十分重要。这可以用来提醒我们 Python 函数体中存在什么代码、以及哪些代码在函数体之外。缩进不仅仅在函数定义中重要，在其他情况下也经常出现。在其他语言中，会使用 `{` 和 `}` 等符号表示代码块开始和结束位置，而在 Python 中，我们使用缩进来包含代码块。\n\n在 Python 中，缩进字符数通常是四个空格的倍数。请务必遵守此规定，因为更改缩进将会完全改变代码的含义。每位 Python 程序员都务必要遵循相同的缩进规定！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346969,
+              "key": "57bfbc6e-4435-4be4-8f2f-aa4efcc6bbaf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "记录函数\n=============\n函数有助于将程序分解成更小的块。这样不仅易于编写，而且函数可重复使用，也使读取更加容易。如果一个程序需要计算多个人口密度，那么该程序可以多次调用 `population_density`，而不需要频繁写出公式，这样更加简便。\n\n由于函数有可读名称，所以我们在运行时更容易读懂代码。虽然人口密度公式本身并不复杂，但一个命名清晰的函数显然更容易识别。\n\n还有一种便于读取函数的方法，即文档字符串（也称为 \"docstrings\"）。Docstrings 是一种用于解释函数目的以及使用方法的注释。下面是一个 population_density 函数，函数中包含一个 docstring：\n\n\n```python\ndef population_density(population, land_area):\n    \"\"\"Calculate the population density of an area.\n\n    population: int. The population of the area\n    land_area: int or float. This function is unit-agnostic, if you pass\n               in values in terms of square km or square miles the\n               function will return a density in those units.\n    \"\"\"\n    return population / land_area\n```\n\nDocstrings 外是三重引号，即 `\"\"\"`。docstring 字符串的第一行简要解释函数目的。如果你觉得这样的说明就够了，即可在此结束 docstring，单行 docstrings 也是完全可以的。但如果函数十分复杂，为了确保说明清晰，可以在一行总结后添加一段更详细的描述段落。\n\n另外一种 docstring 元素则用于解释函数参数。可以在此列出参数，说明参数目的以及参数类型。\n\ndocstring 的每一部分都是可选的，docstring 本身也是如此。但请记得，编写代码始终比阅读代码更加容易。如果能使合作伙伴（包括未来的你！）更易读懂你的代码，那么应该尽可能地为他人、为自己提供便利。\n\n你可以在 https://www.python.org/dev/peps/pep-0257/ 上阅读更详细的 docstring 规定解释。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346970,
+              "key": "33aa154a-dba7-45b1-be19-888ea9da4b55",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "一个不返回任何值的函数\n==================\n\n可以将函数想象为一台接收输入（参数），然后进行处理，最后输出结果（返回值）的小型机器。这是一个很好的比喻，但是不太确切。有一些函数根本不返回任何值，比如 `print`，：\n\n```python\n>>> return_value = print(\"I wish to register a complaint.\")\nI wish to register a complaint.\n>>> print(return_value)\nNone \n```\n`print` 在控制台上**显示**文本，但是我们看到的其**返回值**是 `None`。`None` 是 Python 中的一个特殊值，表示值的缺失。如果函数没有明确返回任何其他内容，则 `None` 是其默认返回值。\n\n我们来看一则示例。这是此前练习中用到的测试代码，我们将其编写为一组可复用的函数：\n\n```python\ndef print_testcase(expected_value, actual_value):\n    print(\"expected value: {}, actual value: {}\".format(expected_value, actual_value))\n```\n\n这个函数不像之前的示例，它没有返回语句，但它仍然是一个有效的函数。我们来试一下：\n\n```python\n>>> return_value = print_testcase(42, 42)\nexpected value: 42, actual value: 42\n```\n调用函数时，输出是 `print` 打印出的内容。但是给 `return_value` 的赋值是什么？我们可以用 `print` 打印\n `return_value` 来进行检查！\n\n```python\n>>> print(return_value)\nNone\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346971,
+              "key": "f66f9f37-c14e-46d5-9be4-8272fe18cde9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：`readable_timedelta`\n================\n\n请编写一个名为 `readable_timedelta` 的函数。该函数接收一个参数（一个整数型变量 `days`），并返回一个字符串，表示传入的天数有几星期零几天。例如，`readable_timedelta(10)` 应返回 `1 week(s) and 3 day(s).`。\n\n编写时请加上一个 docstring，用于说明该函数的目的。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346972,
+              "key": "31d1c9c7-adbb-424f-b824-996e05842b5d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "31d1c9c7-adbb-424f-b824-996e05842b5d",
+                "completed_at": "2017-12-01T12:17:15.437Z",
+                "last_viewed_at": "2018-03-29T12:34:51.547Z",
+                "unstructured": "{\"student.py\":\"# Write your code for readable_timedelta here.\\ndef readable_timedelta(days):\\n    \\\"\\\"\\\"Calculate a time named after week and day\\\"\\\"\\\"\\n    weeks = days//7\\n    remainder = days%7\\n    return \\\"{} week(s) and {} day(s).\\\" .format(weeks,day)\\n    readable_timedelta(13)\\nprint (readable_timedelta)\\n# Uncomment this function call to test it:\\n# print(readable_timedelta)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6468074837508096",
+                "initial_code_files": [
+                  {
+                    "text": "# Write your code for readable_timedelta here.\n\n\n# Uncomment this function call to test it:\n# print(readable_timedelta(10))",
+                    "name": "student.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347262,
+          "key": "a46a918c-cee7-4f8d-8831-766171b6efec",
+          "title": "定义函数 III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a46a918c-cee7-4f8d-8831-766171b6efec",
+            "completed_at": "2018-02-11T15:50:59.813Z",
+            "last_viewed_at": "2018-09-27T08:42:24.586Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346973,
+              "key": "ed47f225-e73b-49e0-95d1-7f7df343dd71",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：readable_timedelta\n==============\n\n```python\ndef readable_timedelta(days):\n    \"\"\"Print the number of weeks and days in a number of days.\"\"\"\n    #to get the number of weeks we use integer division\n    weeks = days // 7\n    #to get the number of days that remain we use %, the modulus operator\n    remainder = days % 7\n    return \"{} week(s) and {} day(s).\".format(weeks, remainder)\n```\n\n真棒！你编写出了你的第一个函数。接下来你将学习和编写更多的函数！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347264,
+          "key": "8c26d7e4-8178-40e6-b9e4-23a1b8d45868",
+          "title": "在电脑中安装 Python",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8c26d7e4-8178-40e6-b9e4-23a1b8d45868",
+            "completed_at": "2018-02-11T15:51:01.277Z",
+            "last_viewed_at": "2018-09-27T09:43:40.009Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "My-First-Script",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/June/593998ed_my-first-script/my-first-script.py"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 346974,
+              "key": "17dcbcc4-66bc-481a-afd2-67ded8c2af0b",
+              "title": "Ud1110 IntroPy L212 在电脑中安装 Python",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "P-Lr3WED7pg",
+                "china_cdn_id": "P-Lr3WED7pg.mp4"
+              }
+            },
+            {
+              "id": 346975,
+              "key": "c5961f2f-5950-427f-8b2f-a43546229ca0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 安装 Python 3\n\n我们正在使用最新版本的 Python，即 Python 3。尽管许多人仍在使用 Python 2，但它已不可再更新。为保证与 Python 后续更新更好的兼容性，我们建议使用 Python 3。\n\n完成此步骤时，需要使用命令行。我们将带着大家一步一步进行，若是你以前从未使用过命令行，也不必担心！如果想了解更多关于命令行的内容，我们将提供一个 [Shell 讲习班](http://www.udacity.com/course/shell-workshop--ud206) 课程，大家可以在此了解有关 Unix Shell 的更多内容。\n\n## 你的电脑里是否已安装 Python？\n\nMac OS X 和 Linux 通常已安装了 Python 2。我们不建议对此 Python 进行任何更改，因为部分操作系统使用 Python。但是单独安装 Python 3 不会对系统产生任何影响。\n\nWindows 系统通常未安装 Python，但你仍然可以在安装之前检查一下是否已安装。所以，第一步检查你是否已安装了Python 3。\n\n打开终端或命令行。在 Windows 中，可以通过转至 `run…`（运行），键入 `cmd`，然后按 `Enter`（回车键）即可出现命令提示符。\n\n出现新的终端或命令提示符时，键入\n```bash\n$ python --version\n```\n然后按 `Enter`（回车键）。\n\n你可能会收到一个类似于 `Python 2.7.9` 的响应。如果版本号以 3 开头，那么表示你已经安装了 Python 3！请勿重复安装 Python！又或者，你可能会看到一条错误消息 —— 别担心，尝试下一步即可。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346976,
+              "key": "e41a646d-bbc9-4078-9319-eafe19799aaf",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58de6aa0_intropt-l2-looking-for-python-big/intropt-l2-looking-for-python-big.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e41a646d-bbc9-4078-9319-eafe19799aaf",
+              "caption": "在 Mac 电脑中查找 Python",
+              "alt": null,
+              "width": 1000,
+              "height": 530,
+              "instructor_notes": null
+            },
+            {
+              "id": 346977,
+              "key": "59744ec7-0f48-435f-9857-7136435f68c0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如果此前的响应以 2 开头，或者如果出现某种错误消息，则表示没有找到 Python 3，所以可以尝试另一个命令：\n```bash\n$ python3 --version\n```\n然后按回车键。如果获得以 3 开头的 Python 版本号响应，那么说明你已安装了 Python 3！**不需要再次安装。**",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346978,
+              "key": "f1d1d662-47d2-4330-8cc9-ce5fd65367b5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58de6b21_intropy-looking-for-python3-big/intropy-looking-for-python3-big.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f1d1d662-47d2-4330-8cc9-ce5fd65367b5",
+              "caption": "在 Mac 电脑中查找 Python 3",
+              "alt": null,
+              "width": 1000,
+              "height": 530,
+              "instructor_notes": null
+            },
+            {
+              "id": 346979,
+              "key": "56ff2ef1-07d1-403d-a30d-553bb23aa229",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如果尚未安装 Python 3，你将收到一条错误消息。Mac 中，消息内容将是：`-bash: python3: command not found`，在 Linux 中将是 `The program 'python3' is not currently installed.`\n\nWindows 中的错误消息可能是 `'python3' is not recognized as an internal or external command, operable program or batch file.`（`'python3' 不是内部命令或外部命令，也不是可运行的程序或批处理文件。`）。在 Windows 中，如果收到此响应，则应检查是否可以通过其他方法找到已安装的 Python。在命令行中键入：\n\n```bash\n> dir C:\\py*\n```\n然后按回车。如果需要，将 `C` 盘替换为你认为 Python 可能安装在的驱动器。如果已安装 Python，这可能有助于你找到 Python 的安装位置。如果找到一个目录名称，如 `Python3`，表示你已经安装了 Python 3！跳过安装步骤，但请确保使用 [Python 文档中的说明](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) 将 Python 3 添加到 PATH 环境变量中。如果目录名称是 Python27 或类似名称，表示你已找到 Python 2，但仍然需要安装 Python 3。如果显示`File Not Found`（`找不到文件`），表示可能尚未安装任何 Python。\n\n如果在电脑中没有找到 Python 3，请立即安装一个！\n\n## 安装新的 Python\n前往 [Python 下载页面](https://www.python.org/downloads/)，为自己的操作系统找到以 3 开头的最新版本（例如 Python 3.5.2）。\n\n对于 Windows 和 Mac，我们发现直接从 Python 下载站点下载安装程序并运行是最简单的方法。如果使用 Linux，则 Python 下载页面将提供用于下载和构建的源代码。或者也可以使用安装工具（如 APT）安装 Python 3。\n\n如果使用 Windows，请确保在安装过程中注意选择`将 Python 3.5 添加到 PATH` 或`将 Python 添加到环境变量`，这将确保你可以从命令行提示符访问 Python。\n\n如果使用 Windows，且已安装 Python，那么需要将 Python 添加到 PATH。如果输入 `python`，这将提醒命令行运行 Python 3。如果未点击这个选项，或者进入下一阶段时并没有正确运行，请参考 [Python 文档中的说明](https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables) 将 Python 添加到 PATH 环境变量中。\n\n完成安装程序中的所有步骤或构建源代码后，即表示已完成安装 —— 你可以在自己的电脑上使用 Python 3！\n\n如果遇到问题，别担心。使用常用的帮助渠道，如 [论坛](http://discussions.youdaxue.com/)，获取所需帮助。同时，继续操作 —— 即使在此安装部分完成之后，大家仍然可以在教室里进行编程练习，所以继续学习吧！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346980,
+              "key": "f729c8bb-794e-4007-8dd5-0070a7b7fc89",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用新的 Python 测试一下！\n================\n现在已经安装了 Python 3，但我们还需确保它能够正常运行。\n\n打开一个新的终端或命令行（使用 `run`（运行），然后 `cmd`，使其出现在 Windows 中），然后键入 `python3`。如果一切顺利，可以看到这样的内容：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346981,
+              "key": "7c48ce7f-70ce-48b7-9058-f5c229634e14",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/January/586fe44b_python-in-terminal/python-in-terminal.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7c48ce7f-70ce-48b7-9058-f5c229634e14",
+              "caption": "终端窗口的屏幕截图",
+              "alt": null,
+              "width": 1126,
+              "height": 530,
+              "instructor_notes": null
+            },
+            {
+              "id": 346982,
+              "key": "84f5f9f0-bd0d-434e-8b60-0a386e40eaaf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "交互式解释器\n===================\n\n打开 Python 后，会看到一个提示，如下所示：\n```python\n>>>\n```\n这是 Python 交互式解释器！可以键入代码直接与其交互，然后按回车键，将在下一行显示输出。这是一个尝试 Python 短代码（如你已见过或编写的代码）的好方法。\n\n试一下吧！一次输入一行代码，并在每行后按回车键执行命令。\n\n```python\n>>> print(\"I've got my very own Python!\")\n```\n\n\n```python\n>>> print(type(455.2))\n```\n\n我们可以在交互式解释器中编写多行代码。例如，一旦开始定义一个函数，你就将看到提示符中会发生变化，表示这是一个延续行。定义函数时必须包含缩进。\n\n```python\n>>> def cylinder_volume(height,radius):\n...    pi = 3.14159\n...    return height * pi * radius ** 2\n```\n\n如果输入时出错，或忘记缩进函数体，你可能会发现 Python 交互式解释器会出现一个问题...编写代码并不容易！\n\n提示：在交互式解释器出现提示时，使用向上箭头按键（和向下箭头按键），循环执行当前命令。这对于重新运行或修改已尝试过的代码比较有用。\n\n但是，无法使用鼠标将光标移动到所需位置，必须使用箭头按键导航，才能在代码行中向前和向后移动光标，以进行编辑。你可以将文本复制到解释器中，但最好一次复制一行。\n\n好在交互式解释器并不是使用 Python 的唯一方法 —— 接下来，我们将讨论 Python 脚本以及如何运行这些脚本。\n\n如需退出 Python 交互式解释器，请使用命令 `exit()`，或者按下 `ctrl-D`（在 Windows 上按下 `ctrl-Z`，然后按回车键）。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346983,
+              "key": "fbd216c4-8d0f-480c-b1ea-1de1f6319204",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "运行 Python 脚本\n============\n\n替代交互式解释器的方法是运行 Python 脚本。Python 脚本就是带有 `.py` 扩展名的文本文件。Python 脚本需要包含正确的 Python 代码 —— 运行脚本意味着执行文件中包含的代码。\n\n在本页底部的辅助材料中下载文件 `my-first-script.py`，并将其移至计算机的适当目录。如果尚未设置一个学习目录，这可能是为方便你学习而进行目录设置的好时机。请将文件保存到想保存的地方。\n\n确保当前未登录交互式 Python 解释器（或如果已登录，按下 `ctrl-D`（在 Windows 中按 `ctrl-Z`，然后按 `Enter`）或者输入 `exit()` 命令即可退出）并且打开一个终端 / 命令提示符。\n\n使用 `cd` 命令移动到文件 `my-first-script.py` 所在文件夹。如果不熟悉终端 / 命令行中的导航，请查看适用于操作系统的说明 —— 原因是这些导航在不同的操作系统中可能略有不同。以下是一些常见操作系统的提示：[Windows](http://www.watchingthenet.com/how-to-navigate-through-folders-when-using-windows-command-prompt.html)、[Mac](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855) 和 [Linux](http://linuxcommand.org/lc3_lts0020.php)。如果使用的是 Mac 或 Linux，那么你可以查看 [Linux 命令行基础](https://cn.udacity.com/course/linux-command-line-basics--ud595) ，了解更多命令行技能。\n\n移动文件后，你就可以使用 `ls`（Mac 和 Linux）或 `dir`（Windows）来查看列出的文件名。\n\n现在可以运行脚本 `my-first-script.py` 了。出现终端 / 命令行提示符时，键入：\n```bash\n$ python3 my-first-script.py\n```\n如果一切正常，应该得到以下输出：\n```bash\nWelcome to this Python script, Udacity Student!\n```\n当输入 `python3` 后面不加文件名的时，会进入交互式 Python 解释器，你可以与其进行交互，或输入 `exit()` 或按 ctrl-D（或 ctrl-Z，然后按回车键）结束会话。当键入 `python3` 并在其后键入 python 脚本的文件名执行时，该脚本将运行，并且随即显示输出。代码完成运行并显示所有输出后，将重新出现终端 / 命令行提示符。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347265,
+          "key": "9a8a9282-12cb-4889-ab9d-be9d64fb739b",
+          "title": "Python 编程设置",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9a8a9282-12cb-4889-ab9d-be9d64fb739b",
+            "completed_at": "2018-02-11T15:51:12.978Z",
+            "last_viewed_at": "2018-11-16T20:15:37.992Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "my_first_script.py",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/January/586ff235_my-first-script/my-first-script.py"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 346984,
+              "key": "7bd8da93-46cf-498e-ade3-76da0f2b8279",
+              "title": "Ud1110 IntroPy L218 我的 Python 编程设置",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wrnov8J5zto",
+                "china_cdn_id": "wrnov8J5zto.mp4"
+              }
+            },
+            {
+              "id": 346985,
+              "key": "dff3df57-c4b5-45a7-90a4-0c77208508a1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "配置自己的 Python 编程设置\n=============\n大家可以在屏幕上看到我的设置，请你们花一点时间熟悉自己的电脑。如果想尝试某个文本编辑器，可以试试以下这些我们最喜欢的文本编辑器。\n\n\n### 对于 Mac：\n* [Atom](https://atom.io/)\n* [Sublime Text](http://www.sublimetext.com/)\n* [TextWrangler](http://www.barebones.com/products/textwrangler/)\n* [emacs](https://www.gnu.org/software/emacs/)\n* [vim](http://www.vim.org/)\n\n### 对于 Windows：\n* [Atom](https://atom.io/)\n* [Sublime Text](http://www.sublimetext.com/)\n* [Notepad++](https://notepad-plus-plus.org/)\n\n### 对于 Linux：\n* [Atom](https://atom.io/)\n* [Sublime Text](http://www.sublimetext.com/)\n* [emacs](https://www.gnu.org/software/emacs/)\n* [vim](http://www.vim.org/)\n\n将文本编辑器、终端 / 命令行和网络浏览器中的 Udacity 教室设置在自己的屏幕上，以便于不断迭代 Python 脚本。使用显示设置来找到你认为最舒服的显示方式，并查看是否可以找到一个“将 tab 转换为 4 个空格”的选项，该设置对 Python 缩进非常有用。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346986,
+              "key": "5c85a5ed-9d64-4ba2-818b-f40d7d6528b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "编辑 Python 脚本\n==================\n在文本编辑器中打开 `my-first-script.py` 并查看。\n\n编辑 `welcome_message()` 函数定义中的标准消息。保存编辑内容并在终端中运行：\n\n```bash\n$ python3 my-first-script.py\n```\n即可看到你的修改内容。\n\n接下来，尝试编辑传递给 `welcome_message()` 函数的参数。你想欢迎谁？\n\n通过在脚本中添加更多打印语句和更多函数，充分体验你在新编码环境中学到的内容！在脚本中填写注释，方便以后回顾时，可以查看自己执行了哪些操作。\n\n从现在开始，我们建议大家以此种方式尝试所有代码。将代码放入文本编辑器中的新文件（不要忘记添加一个 `.py` 扩展名），确保自己位于终端 / 命令行中的正确目录，然后开始运行！你可能会想为每个新的练习或想法创建一个新文件。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346987,
+              "key": "f5ba6efc-5fe5-43f4-9df6-e66df3af707e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "编写自己的脚本\n===================\n在文本编辑器中打开一个新的空文件，命名并保存在 Python 学习的文件位置。然后将以下代码编入其中。\n\n```python\nhow_many_snakes = 1\nsnake_string = \"\"\"\nWelcome to Python3!\n\n             ____\n            / . .\\\\\n            \\  ---<\n             \\  /\n   __________/ /\n-=:___________/\n\n<3, Philip and Charlie\n\"\"\"\n\n\nprint(snake_string * how_many_snakes)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346988,
+              "key": "17fcf04f-a6df-4d8e-8a6f-ec507912fe6f",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "17fcf04f-a6df-4d8e-8a6f-ec507912fe6f",
+                "completed_at": "2017-09-27T10:00:27.051Z",
+                "last_viewed_at": "2018-03-14T08:46:06.135Z",
+                "unstructured": "{\"answer\":\"Welcome to Python3!\\n\\n             ____\\n            / . .\\\\\\n            \\\\  ---<\\n             \\\\  /\\n   __________/ /\\n-=:___________/\\n\\n<3, Philip and Charlie\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "使用 Python 3 运行文件，并将输出填入练习框中。",
+                "matchers": [
+                  {
+                    "expression": "\\n?Welcome to Python3!\\n\\n             ____\\n            \\/ \\. \\.\\\\\\n            \\\\  ---<\\n             \\\\  \\/\\n   __________\\/ \\/\\n-=:___________\\/\\n\\n<3, Philip and Charlie\\n?"
+                  },
+                  {
+                    "expression": "\\n?Welcome to Python3!\\n\\n             ____\\n            \\/ \\. \\.\\\\\\\\\\n            \\\\  ---<\\n             \\\\  \\/\\n   __________\\/ \\/\\n-=:___________\\/\\n\\n<3, Philip and Charlie\\n?"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347266,
+          "key": "58b6ab9c-d283-4c00-bbe5-f8a518787088",
+          "title": "具有分支的代码 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "58b6ab9c-d283-4c00-bbe5-f8a518787088",
+            "completed_at": "2018-02-11T15:51:15.841Z",
+            "last_viewed_at": "2018-09-27T08:28:55.179Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346989,
+              "key": "dff8dce7-a8f9-4cf0-97d2-341364a24ba3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Python 中的 `if`\n=============\n\n具有分支的代码（在某种或某些条件下分支中的代码才能够执行），这类代码在许多编程情况下非常有用。我们使用**条件表达式**或 **`if` 语句**控制是否运行代码块。我们来看一下 Python 中条件表达式的示例。\n\n这是付费即用手机计费系统的一部分。客户可以设置一个到他们银行帐户的链接，在他们的电话信用余额低于阈值金额时，可以为手机充值额度，银行扣费。\n\n\n# 条件表达式分析",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346990,
+              "key": "0f06548f-1428-4978-8083-846cee3d3407",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58ebb099_intropy-l2-if-example/intropy-l2-if-example.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f06548f-1428-4978-8083-846cee3d3407",
+              "caption": "```python\nif phone_balance < 10:\n    phone_balance += 10\n   bank_balance -= 10\n```",
+              "alt": null,
+              "width": 656,
+              "height": 406,
+              "instructor_notes": null
+            },
+            {
+              "id": 346991,
+              "key": "4a795b2c-9e71-4531-9d77-1d7f72e496c5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "1. `if` 关键字表示此行是条件表达式。\n2. `if` 之后是 `phone_balance < 10`，即要检查的条件。这部分是**布尔表达式**  —— 一个计算结果为 `True` 或 `False` 的表达式。\n3. 条件表达式（或 \"`if` 语句\"）以冒号结尾。\n4. 该行后面是一个缩进的代码块，在此种情况中：\n```python\n    phone_balance += 10\n    bank_balance -= 10\n```\n如果布尔表达式的计算结果为 `True`，那么将执行该缩进的代码块。如果布尔表达式的计算结果为 `False`，则不会执行缩进的代码块。\n\n**布尔表达式**的值 —— 计算条件表达式的结果，等于 `True` 或 `False`，是运行代码时决定接下来会发生什么的部分。布尔表达式的一种常见格式是使用**比较运算符**，例如 >、<=、== 或 !=。在该示例中，如果 `phone_balance` 的值小于 10，则将执行缩进块中的代码。更复杂的布尔表达式也很有用。如果条件为数值，则可能需要检查值是否在一定范围内，或者甚至需要进行一些计算，以进行比较。\n\n```python\nif 18.5 <= weight_in_kg / (height_in_m)**2 < 25:\n    print(\"BMI is considered 'normal'.\")\n```\n\n但是不管简单或复杂，布尔表达式的值必须为 `True` 或 `False`，该值用于决定是否执行缩进块。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346992,
+              "key": "46b933e6-6929-4dd8-8a07-500ac27d08ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "具有更多分支的代码：`if`、`elif` 和 `else`\n===========\n\n有时候我们会想要：如果条件为真，则执行一项指令，如果条件为假，则执行另一项指令。如果 `if` 语句后的布尔表达式计算结果为 `True`，则运行其下的缩进代码块。我们可以使用 `else` 关键字来给出替代方法：如果布尔表达式是 `False`，应该执行的操作。\n\n此代码打印一则消息，表示一个整数（变量名为`number`）的奇偶性。\n```python\nif number % 2 == 0:\n    print(\"The number \" + str(number) + \" is even.\")\nelse:\n    print(\"The number \" + str(number) + \" is odd.\")\n```\n`else` 关键字后面总是跟一个冒号，不需要布尔表达式 —— `if` 语句后的布尔表达式计算结果为 `False` 时，即可运行。\n\n如果可能的情况超过两种，则将另外一个条件表达式与 `else` 条件一起使用将比较有用。Python 有一个特殊的关键字 `elif`（`else - if`的缩写），可处理此种情况。如果我们使用 `else`，而且 `else` 块中还有另一个 `if` 语句，就可以使用 `elif` 来省去多层代码块缩进。\n\n在该示例中，条件语句位于一个名为 `garden_calendar` 的函数中。\n```python\ndef garden_calendar(season):\n    if season == \"spring\":\n        print(\"time to plant the garden!\")\n    elif season == \"summer\":\n        print(\"time to water the garden!\")\n    elif season == \"autumn\" or season == \"fall\":\n        print(\"time to harvest the garden!\")\n    elif season == \"winter\":\n        print(\"time to stay indoors and drink tea!\")\n    else:\n        print(\"I don't recognize that season\")\n```\n\n与 `if` 一样，`elif` 语句也始终需要一个条件表达式。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346993,
+              "key": "dd8a1f9b-29f0-4230-8589-b7018c64d0f3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：按流程操作！\n============\n\n尝试运行以下使用 `if` 和 `else` 的代码。尝试不同的输入，并使用 `print` 查看输出。你可否按照逻辑流程找出哪些代码可以运行？如果不确定，请添加其他 `print`语句，以帮助你了解其原理。不论你是在开发新代码或试图理解已编写的代码，这都是一个好方法。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346994,
+              "key": "441c5170-44ae-4f8d-bd41-2d0c9ef009dd",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "441c5170-44ae-4f8d-bd41-2d0c9ef009dd",
+                "completed_at": "2017-10-07T05:55:28.275Z",
+                "last_viewed_at": "2018-09-27T08:22:30.439Z",
+                "unstructured": "{\"control_flow_playground.py\":\"#First Example - uncomment lines or change values to test the code\\nphone_balance = 7.62\\nbank_balance = 104.39\\n#phone_balance = 12.34\\n#bank_balance = 25\\nif phone_balance < 10:\\n    phone_balance += 10\\n    bank_balance -= 10\\nprint(phone_balance)\\nprint(bank_balance)\\n\\n#Second Example\\n\\n#change the number to experiment!\\nnumber = 145346334\\n#number = 5 #3 sir\\nif number % 2 == 0:\\n    print(\\\"The number \\\" + str(number) + \\\" is even.\\\")\\nelse:\\n    print(\\\"The number \\\" + str(number) + \\\" is odd.\\\")\\n\\n#Third Example \\n\\n#change the age to experiment with the pricing\\nage = 35\\n\\n#set the age limits for bus fares\\nfree_up_to_age = 4\\nchild_up_to_age = 18\\nsenior_from_age = 65\\n\\n#set bus fares\\nconcession_ticket = 1.25\\nadult_ticket = 2.50\\n\\n#ticket price logic\\nif age <= free_up_to_age:\\n    ticket_price = 0\\nelif age <= child_up_to_age:\\n    ticket_price = concession_ticket\\nelif age >= senior_from_age:\\n    ticket_price = concession_ticket\\nelse:\\n    ticket_price = adult_ticket\\nmessage = \\\"Somebody who is {} years old will pay ${} to ride the bus.\\\".format(age,ticket_price)\\nprint(message)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6379351550590976",
+                "initial_code_files": [
+                  {
+                    "text": "#First Example - uncomment lines or change values to test the code\nphone_balance = 7.62\nbank_balance = 104.39\n#phone_balance = 12.34\n#bank_balance = 25\nif phone_balance < 10:\n    phone_balance += 10\n    bank_balance -= 10\nprint(phone_balance)\nprint(bank_balance)\n\n#Second Example\n\n#change the number to experiment!\nnumber = 145346334\n#number = 5 #3 sir\nif number % 2 == 0:\n    print(\"The number \" + str(number) + \" is even.\")\nelse:\n    print(\"The number \" + str(number) + \" is odd.\")\n\n#Third Example \n\n#change the age to experiment with the pricing\nage = 35\n\n#set the age limits for bus fares\nfree_up_to_age = 4\nchild_up_to_age = 18\nsenior_from_age = 65\n\n#set bus fares\nconcession_ticket = 1.25\nadult_ticket = 2.50\n\n#ticket price logic\nif age <= free_up_to_age:\n    ticket_price = 0\nelif age <= child_up_to_age:\n    ticket_price = concession_ticket\nelif age >= senior_from_age:\n    ticket_price = concession_ticket\nelse:\n    ticket_price = adult_ticket\nmessage = \"Somebody who is {} years old will pay ${} to ride the bus.\".format(age,ticket_price)\nprint(message)",
+                    "name": "control_flow_playground.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 346995,
+              "key": "e0dfed42-dc06-46f1-a5e0-8185e39077ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：获得哪种奖励？\n=============\n在本次练习中，运行一个名为 `which_prize()` 的函数，该函数用于通知参赛者他们在游戏中根据积分所赢得的奖励。\n\n| Points | Prize |\n| --- | --- |\n| 0 - 50 | wooden rabbit|\n| 51 - 150 | No prize |\n| 151 - 180 | wafer-thin mint |\n| 181 - 200| penguin |\n\n`which_prize()` 的输入将是积分数（整数）。函数 `which_prize()` 应该返回文本`\"恭喜！你赢得了 [奖品名称]!\"`，如果他们赢得了奖品，还应包括奖品名称，如果没有获奖，文本内容应为`\"哦，亲爱的，这次没有奖品\"`。和往常一样，测试函数，检查一下它是否能正常执行",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346996,
+              "key": "9c7d7a4f-6c5d-40e9-9301-3499ee749594",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "9c7d7a4f-6c5d-40e9-9301-3499ee749594",
+                "completed_at": "2018-01-03T10:06:24.793Z",
+                "last_viewed_at": "2018-03-22T13:49:44.270Z",
+                "unstructured": "{\"which_prize.py\":\"def which_prize(points):\\n    if points <= 50:\\n        return \\\"congraulation!you got a wooden rabbit !\\\"\\n    elif points <=150 :\\n        return\\\"sorry !no prize!\\\"\\n    elif points <=180:\\n        return \\\"congraulation!you got a wafer-thin mint !\\\"\\n    elif points <= 200:\\n        return \\\"congraulation! you got a penguin !\\\"\\n    \\nprint(which_prize(90))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5223504715841536",
+                "initial_code_files": [
+                  {
+                    "text": "",
+                    "name": "which_prize.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347267,
+          "key": "90e16f83-95d3-4a82-8b0c-e8be86e94cac",
+          "title": "具有分支的代码 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "90e16f83-95d3-4a82-8b0c-e8be86e94cac",
+            "completed_at": "2018-02-11T15:51:18.916Z",
+            "last_viewed_at": "2018-09-27T08:24:50.632Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 346998,
+              "key": "10af409b-da50-4085-ba9e-446c3b3e4939",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：获得哪种奖励？\n=============\n以下是我们的执行解决方案：\n```python\ndef which_prize(points):\n    \"\"\"\n    Returns the prize-winning message, given a number of points\n    \"\"\"\n    if points <= 50:\n        return \"Congratulations! You have won a wooden rabbit!\"\n    elif points <= 150:\n        return \"Oh dear, no prize this time.\"\n    elif points <= 180:\n        return \"Congratulations! You have won a wafer-thin mint!\"\n    else:\n        return \"Congratulations! You have won a penguin!\"\n```\n我们根据积分数量的顺序逐个检查了每个案例，因为没有其他的奖励值了，因此我们使用 `else` 子句包括最后一个案例。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346997,
+              "key": "fb1c82e8-8389-466c-babb-06f10ebb66b3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "编写布尔表达式\n=============\n\n到目前为止，我们所看到的所有 `if` 和 `elif` 语句都紧跟一个检查单个条件的简单布尔表达式。然而，有些情况需要更复杂的条件。如果有太阳，又下着雨，那么可能会有彩虹！\n\n这里有一个比较复杂的案例。假使客户仍在促销邮件的收件人列表里同时位于可以享受折扣优惠的区域，我就给他发促销邮件。否则，我不会打扰他们。\n\n如需在条件表达式中检查此类复合条件，我们可以在 Python 中使用 [布尔运算](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not) - 如 `and`、`or` 以及 `not` 关键字 —— 组合较简单的布尔表达式。\n\n所以可将这些示例编入代码：\n\n```python\nif is_raining and is_sunny:\n    print(\"Is there a rainbow?\")\n```\n\n```python\nif (not do_not_email) and (location == \"USA\" or location == \"CAN\"):\n    send_email()\n```\n\n我们遵循常用的逻辑规则，使用 `and`、`or` 以及 `not` 组合和更改布尔表达式。组合所有布尔表达式后的最终结果用于确定是否运行缩进的 `if` 块中的代码。\n\n`and` 和 `or` 分别用于两个布尔表达式，一个在之前，一个在之后。\n当且仅当两个表达式*都为 `True` 时，`and` 给出的结果为 `True`，否则将为 `False`。\n\n如果两个表达式中至少有一个是 `True`，`or` 给出的结果为 `True` - 只有当两个表达式都为 `False` 时，结果才为 `False`。 （注意，如果两者都是 `True`，`or` 的结果将是 `True`）。\n\n布尔运算 `not` 用于在一个布尔运算中进行交换：所以 `not True` 是 `False`，反之亦然。\n\n对于真正复杂的条件，可能需要将 `and`、`or` 以及 `not` 组合在一起，如果需要使组合明确，可使用括号 `(` and `)`！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 346999,
+              "key": "f71820c7-146f-4890-8247-6973bd511b5b",
+              "title": "练习：计算组合布尔表达式",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f71820c7-146f-4890-8247-6973bd511b5b",
+                "completed_at": "2017-12-06T13:33:49.794Z",
+                "last_viewed_at": "2018-03-17T02:04:48.786Z",
+                "unstructured": "{\"answer_ids\":[\"a1483988809239\",\"a1483988971019\",\"a1483988964422\",\"a1483988821858\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "设想一下，一个空中交通管制程序可以跟踪三个变量：`altitude`、`speed` 和 `propulsion`，某一飞机具有以下变量值。\n\n```python\naltitude = 10000\nspeed = 250\npropulsion = \"Propeller\"\n```\n对于以下每个布尔表达式，求出结果是否为 `True` 或 `False`，并匹配正确的值。"
+                },
+                "concepts_label": "表达式",
+                "answers_label": "`True` 或 `False`",
+                "concepts": [
+                  {
+                    "text": "`altitude < 1000 and speed > 100`",
+                    "correct_answer": {
+                      "id": "a1483988685403",
+                      "text": "`False`"
+                    }
+                  },
+                  {
+                    "text": "`(propulsion == \"Jet\" or propulsion == \"Turboprop\") and speed < 300 and altitude > 20000`",
+                    "correct_answer": {
+                      "id": "a1483988809239",
+                      "text": "`False`"
+                    }
+                  },
+                  {
+                    "text": "`not (speed > 400 and propulsion == \"Propeller\")`",
+                    "correct_answer": {
+                      "id": "a1483988821858",
+                      "text": "`True`"
+                    }
+                  },
+                  {
+                    "text": "`(altitude > 500 and speed > 100) or not propulsion == \"Propeller\"`",
+                    "correct_answer": {
+                      "id": "a1483988836702",
+                      "text": "`True`"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1483988809239",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1483988685403",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1483988821858",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1483988971019",
+                    "text": "`False`"
+                  },
+                  {
+                    "id": "a1483988836702",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1483988968187",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1483988964422",
+                    "text": "`True`"
+                  },
+                  {
+                    "id": "a1483988976255",
+                    "text": "`False`"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 347268,
+          "key": "d2778762-9538-4a2c-8b36-448bcb68bfd6",
+          "title": "具有分支的代码 III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d2778762-9538-4a2c-8b36-448bcb68bfd6",
+            "completed_at": "2018-02-11T15:51:22.411Z",
+            "last_viewed_at": "2018-09-27T08:26:21.742Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347000,
+              "key": "26bd3127-42ec-42f3-b21a-49377220f83f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：计算组合的布尔表达式\n=========\n```python\naltitude < 1000 and speed > 100\n```\n`altitude < 1000` 是 `False`，所以我们甚至不需要检查第二个条件 - 整个表达式是 `False`。\n\n```python\n(propulsion == \"Jet\" or propulsion == \"Turboprop\") and speed < 300 and altitude > 20000\n```\n`propulsion == \"Jet\"` 是 `False`，`propulsion == \"Turboprop\"` 是 `False`，所以括号内的整个表达式是 `False`。该表达式与具有 `and` 的其他表达式组合，所以我们甚至不需要检查这些 - 整个表达式肯定是 `False`，原因是第一部分是 `False`。\n\n```python\nnot (speed > 400 and propulsion == \"Propeller\")\n```\n为了得出结果，我们首先要看括号内的表达式，然后应用 `not`。`speed> 400` 是 False，因为我们使用 `and`，这就使括号内的整个表达式为 `False`。应用 `not` 时正好相反，所以这个表达式是 `True`。\n\n```python\n(altitude > 500 and speed > 100) or not propulsion = \"Propeller\"\n```\n我们先看一下括号内的表达式。`altitude > 500` 是 `True`，而且 `speed` > `100`，所以括号内的表达式为 `True`。因此无论其他表达式的值如何，由于这些表达式通过 `or` 连接，所以整个表达式将为 `True`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347001,
+              "key": "8821f6cf-0f60-4e36-9db6-bbcc42dd258d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "布尔表达式的错误示例\n==============\n\n### 错误示例 1：\n```python\nif True:\n    print(\"This indented code will always get run.\")\n```\n\n虽然 `True` 是一个有效的布尔表达式，但由于它总是 `True`，所以在条件表达式中不起任何作用，因此缩进代码将始终运行。（想想，`if False:`，你还会这样编写吗？）\n\n### 错误示例 2：\n```python\nif is_cold or not is_cold:\n    print(\"The weather is either cold or not cold.\")\n```\n在这个例子中，`is_cold or not is_cold` 的结果将总是 `True`。（如果冷，那么 `is_cold` 将是 `True`，如果不冷，那么 `not is_cold` 将是 `True`。）这在条件表达式中不起任何作用，原因是缩进代码将始终运行！\n\n### 非布尔表达式示例 3：\n```python\nif castle == \"Camelot\" or \"Loimbard\":\n    attack(castle)\n```\n这不是一个布尔表达式，即使看起来像。这不是布尔表达式的原因是 `or` 右侧的表达式不是一个布尔表达式 - 而是一个字符串！虽然这段代码是有效的 Python，但在运行时不会出现错误。稍后我们将讨论当使用非布尔型对象代替布尔运算时会出现什么情况。\n\n### 正确示例 3：\n```python\ncastle == \"Camelot\" or castle == \"Loimbard\"\n```\n该表达式需要更多字符，但现在这是一个明确的布尔表达式 —— `or` 两侧的表达式正在进行检查。\n\n### 错误示例 4：\n```\nif ran_away == True:\n    print(\"Brave Sir Robin ran away!\")\n```\n这*是*一个有效的条件表达式，但是我们可以（并且应该）更简洁明了地表达条件。如果 `ran_away` 等于 `True`，那么它就是一个布尔表达式。我们可以使用以下代码使代码更具可读性：\n\n### 更好的示例 4：\n```\nif ran_away:\n    print(\"Brave Sir Robin ran away!\")\n```\n\n### 这些示例的启示： \n- `True` 和 `False` 都是布尔值，但不建议使用 `if True:` 或 `if False:`。 \n- 布尔运算符 `and`、`or` 以及 `not` 具有不同于它们常见含义的具体含义 - 不要陷入编写英文字面意义的陷阱，除非这些词也是有效的 Python！\n- 不要将布尔值变量与 `== True` 或 `== False` 比较 —— 避免这种比较，可提高代码的可读性。如果要检查布尔值是否为 `False`，可以使用 `not`，例如\n```python\nif not real_grail:\n    print(\"It's a grail-shaped beacon!\")\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347002,
+              "key": "798a7718-7288-4ca4-9fbb-3e79364d6feb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "具有多个可能返回值的函数\n===============\n\n在代码中使用分支结构的一个有趣应用是，可以创建定义中有多个 `return` 的函数！我们之前看到，调用一个函数最多会 `return` 一次（其中一些一次都没有）。\n但是，我们可以在函数定义中包含多个 `return` 语句。当函数运行时，只返回其中一个。\n\n通过使用条件语句，我们可以使代码可读性更强且更简洁。下面一起来看一个示例，我们认为运行函数时使用多个返回语句会更易读懂。\n\n```python\ndef punctuate(sentence, phrase_type):\n    \"\"\"\n    Create a punctuated sentence from a string. Defaults to an ordinary\n    sentence with a full stop.\n\n    sentence: string, the phrase that is to have punctuation added\n    phrase_type: string, defines what kind of sentence to create. \n                \"exclamation\", \"question\" and \"aside\" are known values.\n    \"\"\"\n    if phrase_type == \"exclamation\":\n        sentence_punct = sentence + \"!\"\n    elif phrase_type == \"question\":\n        sentence_punct = sentence + \"?\"\n    elif phrase_type == \"aside\":\n        sentence_punct = \"(\" + sentence + \".)\"\n    else:\n        sentence_punct = sentence + \".\"\n    return sentence_punct\n```\n\n在实现这个函数的过程中，我们根据所需的标点符号类型，在每种情况下都输入语句和适当标点符号来创建一个带有标点符号的语句。\n\n构建好带标题符号的语句后，此函数的大部分工作已经完成好了，但是我们等到 `return` 返回构建好的语句。\n\n一个替代方法是：\n```python\ndef punctuate2(sentence, phrase_type):\n    \"\"\"\n    Create a punctuated sentence from a string. Defaults to an ordinary\n    sentence with a full stop.\n\n    sentence: string, the phrase that is to have punctuation added\n    phrase_type: string, defines what kind of sentence to create. \n                \"exclamation\", \"question\" and \"aside\" are known values\n    \"\"\"\n    if phrase_type == \"exclamation\":\n        return sentence + \"!\"\n    elif phrase_type == \"question\":\n        return sentence + \"?\"\n    elif phrase_type == \"aside\":\n        return \"(\" + sentence + \")\"\n    else:\n        return sentence + \".\"\n```\n\n在这个版本中，`return` 语句在条件语句之后进入缩进块。因为此函数在每个条件分支中完成（而不是稍后）运行，所以我们可以在函数的输出（带有标点符号的语句）准备好时就 `return`，而不需要变量保持带有标点符号的语句，这样读起来更省事，不用跟踪回看。\n\n请注意，一旦开始在函数中执行 `return`，该函数将停止执行。这意味着大家看到的每个 `return` 都可能造成函数退出，我们要确保此函数运行后无其他后续操作。因此代码中的指令排序至关重要！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347003,
+              "key": "a326d319-b118-481f-b803-fa471fedac3b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：使用多个返回值编写自己的函数\n============\n`cylinder_surface_area` 函数用于计算实心或空心圆柱的表面积。`has_top_and_bottom` 参数是 `True` 或 `False` 取决于圆柱体是实心还是空心。实心圆柱体的表面积包括顶部和底部的面积\n\n重新构建该函数定义，使其在函数体中具有两个 `return` 语句。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347004,
+              "key": "745caafa-a8f0-4822-9747-cf2f056bb866",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "745caafa-a8f0-4822-9747-cf2f056bb866",
+                "completed_at": "2017-10-15T00:56:37.834Z",
+                "last_viewed_at": "2018-03-22T13:50:42.064Z",
+                "unstructured": "{\"cylinder_surface.py\":\"def cylinder_surface_area(radius, height, has_top_and_bottom):\\n    side_area = height * 6.28 * radius\\n    if has_top_and_bottom:\\n        top_area = 3.14 * radius ** 2\\n        return side_area + top_area*2\\n    else:\\n        return side_area\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6034787933487104",
+                "initial_code_files": [
+                  {
+                    "text": "def cylinder_surface_area(radius, height, has_top_and_bottom):\n    side_area = height * 6.28 * radius\n    if has_top_and_bottom:\n        top_area = 3.14 * radius ** 2\n        side_area += 2 * top_area\n    return side_area\n  ",
+                    "name": "cylinder_surface.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347270,
+          "key": "a81008be-fb28-4ca0-8956-83d14563889b",
+          "title": "具有分支的代码 IV",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a81008be-fb28-4ca0-8956-83d14563889b",
+            "completed_at": "2017-12-06T13:41:00.046Z",
+            "last_viewed_at": "2018-09-27T08:27:09.853Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347005,
+              "key": "9159db64-0598-4eb2-9ba3-a57e33e04505",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：用多个返回值编写自己的函数\n=========\n以下是我们重新编写的代码：\n\n```python\ndef cylinder_surface_area(radius, height, has_top_and_bottom):\n    side_area = height * 6.28 * radius\n    if has_top_and_bottom:\n        top_area = 3.14 * radius ** 2\n        return top_area*2 + side_area\n    else:\n        return side_area\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347006,
+              "key": "daf5b1b5-d3b6-4ff8-827b-6a91dfa8cda3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "非布尔对象的真值\n=========\n到目前为止，条件表达式的结构如下所示：\n\n```python\nif boolean_expression:\n    indented_code\n```\n我们已经看到的 `boolean_expression` 已经是计算结果布尔对象为 `True` 或 `False` 的表达式。\n\n如果我们在 `if` 语句中放置一些不是布尔值的其他对象代替布尔表达式，Python 将检查其是否为*真值*，并根据检查结果来决定是否运行缩进代码。\n\n在此种情况下，[Python 文档](https://docs.python.org/3/library/stdtypes.html#truth-value-testing\n) 列出了所有被认为是 `False` 的对象。（请勿担心，部分内容还暂未涉及，稍后将为大家介绍。）任何为 `0` 的数字、一个是 `None` 的对象或一个空字符串将具有 `False` 真值。任何未被列为具有真值 `False` 的对象将被视为 `True`。\n\n\n```python\nerrors = 3\nif errors:\n    print(\"There are \" + str(errors) + \" mistakes. Please correct.\")\nelse:\n    print(\"No mistakes here!\")\n```\n\n在这段代码中，`errors` 具有真值 `True`，因为它是一个非零数字，所以打印出错误信息。`if` 语句简洁明了。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347007,
+              "key": "5b821160-6277-4a90-ac8d-c5cb0d10e986",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：在 `which_prize()` 中使用对象的真值\n=============\n运用所学的关于真值的内容，重写以前的 [`which_prize()` 函数](58b6ab9c-d283-4c00-bbe5-f8a518787088)。\n以根据积分设置变量 `prize = None`，更改 `prize` 编写函数，然后根据是否获得 `prize` 使用另一个条件表达式返回消息。这将避免代码 `return` 部分多次重复。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347008,
+              "key": "2896d3d4-ea41-4eef-a95e-fba21274ad2d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "可以参考该函数之前的相关内容（[此处](58b6ab9c-d283-4c00-bbe5-f8a518787088)）开始编写。",
+              "user_state": {
+                "node_key": "2896d3d4-ea41-4eef-a95e-fba21274ad2d",
+                "completed_at": "2017-09-29T05:36:35.623Z",
+                "last_viewed_at": "2018-03-22T13:50:49.178Z",
+                "unstructured": "{\"which_prize2.py\":\"def which_prize(points):\\n    prize = None\\n    if points <= 50:\\n        prize = \\\"a wooden rabbit\\\"\\n    elif 151 <= points <= 180:\\n        prize = \\\"a wafer-thin mint\\\"\\n    elif 181 <= points <=200:\\n        prize = \\\"a penguin\\\"\\n    if prize:\\n        return \\\"Congratulations! You have won \\\" + prize + \\\"!\\\"\\n    else:\\n        return \\\"Oh dear, no prize this time.\\\"\\n\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4756409842532352",
+                "initial_code_files": [
+                  {
+                    "text": "",
+                    "name": "which_prize2.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347269,
+          "key": "2a5fc3c8-7f04-4f78-8fc5-d3460d5c7ff8",
+          "title": "具有分支的代码 V",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2a5fc3c8-7f04-4f78-8fc5-d3460d5c7ff8",
+            "completed_at": "2018-02-11T15:51:31.845Z",
+            "last_viewed_at": "2018-09-27T08:29:07.581Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347009,
+              "key": "9944c336-a5d9-4931-828e-7addeac16553",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：在 `which_prize()` 中使用对象的真值\n===========\n 我们的解决方案如下 —— 首先设置 `prize = None`，然后根据积分要求更新 `prize`。最后使用 `prize` 的真值打印出获得奖品或未获得奖品时的提示消息。\n```python\ndef which_prize2(points):\n    \"\"\"\n    Returns the number of prize-winning message, given a number of points\n    \"\"\"\n    prize = None\n    if points <0:\n        prize = None\n    if points <= 50:\n        prize = \"a wooden rabbit\"\n    elif 151 <= points <= 180:\n        prize = \"a wafer-thin mint\"\n    elif points >= 181:\n        prize = \"a penguin\"\n    if prize:\n        return \"Congratulations! You have won \" + prize + \"!\"\n    else:\n        return \"Oh dear, no prize this time.\"\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 347271,
+          "key": "06ee921c-2c03-4521-80da-f0b95b29ea78",
+          "title": "分解程序",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "06ee921c-2c03-4521-80da-f0b95b29ea78",
+            "completed_at": "2018-02-11T15:51:33.681Z",
+            "last_viewed_at": "2018-09-27T08:30:33.111Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347010,
+              "key": "18f04350-91c4-41f8-ac5b-e7c018399564",
+              "title": "Ud1110 IntroPy L237 Break Up Your Code Ideas",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qrp8r48BPUs",
+                "china_cdn_id": "qrp8r48BPUs.mp4"
+              }
+            },
+            {
+              "id": 347011,
+              "key": "f7214a18-6825-4747-9d8d-8226ee12f9a3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`scores_to_rating` 函数设计\n================\n\n让我们一起来构建一个新函数的结构。设想一下，你是一名消费者点评网站的程序员。用户提交他们对所用产品的评论和得分，你负责显示结果，以便引导消费者做出明智的选择。\n\n在本节中，我们将编写一个输入为五个分数的函数，并将分数相加，然后输出一个分值。\n\n由于最高和最低得分可能是异常值，而且偏离结果，所以我们在这五个分数中，取出中间的三个，舍弃最高和最低分数。\n\n然后取这三个中间分数的平均值。\n\n例如，如果分数是 1,2,2,4,4，那么我们取中间值 2，2 和 4，得出平均值为 2.6666666666。\n\n然后，我们将平均分数映射到如下所述的书面性评分中：\n\n| Average Score | Rating|\n|---|---|\n|0 <= score < 1 | Terrible |\n| 1 <= score < 2 | Bad |\n| 2 <= score < 3 | OK |\n| 3 <= score < 4 | Good |\n| 4 <= score <= 5 | Excellent|\n\n哦，输入的数据可能有些凌乱 —— 有时候是一个字符串，不一定是浮点数或整数。所以必要时应该检查和转换，以便于计算。\n\n听起来内容太多？不用担心，我们将引导大家逐步分解问题，然后再将这些步骤组合成一个解决方案。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347012,
+              "key": "ed70b8d8-4654-4a2c-ac1b-bfd5e3a58ef3",
+              "title": "思考",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ed70b8d8-4654-4a2c-ac1b-bfd5e3a58ef3",
+                "completed_at": "2017-09-29T06:47:59.443Z",
+                "last_viewed_at": "2017-09-29T06:47:59.443Z",
+                "unstructured": "{\"answer\":\"1 构造一个函数\\n2 设置条件\\n3 执行函数\\n4 条件判断\\n5 结束程序\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "将函数分解为 3-5 个步骤，并按照输入数据时的顺序将其写入文本框内。写的时候，也请写出每个步骤的输入和输出。我们不会为大家提供的答案打分，但之后我们将分享我们的思路。\n\n此问题没有标准答案，大胆试试吧！"
+              },
+              "answer": {
+                "text": "感谢你对于函数设计思路的分享！\n\n以下是我们思考的四个步骤：\n\n1. 取每个原始分数，并将它们转换成数字类型。  \n**输入：**以字符串 / 浮点数 / 整数形式输入分数。 **输出：**以浮点数或整数形式输出分数。   \n2. 在 5 个分数的集合中选择中间的 3 个值。  \n**输入：**以浮点数或整数形式输出 5 个分数。 **输出：**输出 3 个分数（类型相同）。\n3. 得出这三个分数的平均数。  \n**输入：** 以浮点数或整数形式输入 3 个分数 **输出：** 输出一个平均数（浮点数）。\n4. 选择平均分数的适当书面评论。\n**输入：**平均分为浮点数。 **输出：**以字符串的形式做出评论。\"",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 347272,
+          "key": "f4874914-ad98-41df-8bb5-971e6e41dd53",
+          "title": "搭建程序框架与构建程序",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f4874914-ad98-41df-8bb5-971e6e41dd53",
+            "completed_at": "2018-02-11T15:51:37.029Z",
+            "last_viewed_at": "2018-09-27T08:31:10.482Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347013,
+              "key": "8dd1b12d-51b6-44ac-b9e1-3fd62766b07b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "构建评分函数的框架\n=================\n\n我将运用之前写下的步骤创建函数一个函数的框架。这个框架并不是即建即用，而是将我们的想法一步步地付诸于实践。\n\n\n```python\ndef scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    # THE CODE GOES HERE!\n\n    return rating\n```\n\n上面只是关于这个函数目的的描述大致框架，包含此函数的输入、输出以及文档字符串。\n\n下面我将把步骤一一放入函数中。\n\n```python\ndef scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    #STEP 1 convert scores to numbers\n    score1 = convert_to_numeric(score1)\n    score2 = convert_to_numeric(score2)\n    score3 = convert_to_numeric(score3)\n    score4 = convert_to_numeric(score4)\n    score5 = convert_to_numeric(score5)\n\n    #STEP 2 find middle three scores\n    #how am I going to do this?\n\n    #STEP 3 take average of middle three scores\n    average_score = # (sum of the middle scores)/3\n\n    #STEP 4 turn average score into a rating\n    rating = score_to_rating_string(average_score)\n\n    return rating\n```\n通过在函数定义中添加这些步骤，我发现我们需要几个帮助函数：`convert_to_numeric` 和 `score_to_rating_string`。这两个函数未编写完整，但仍可以使用，而我应该尽快将框架和 docstrings 写出来。\n\n函数中有一个令人困惑之处，我不知道如何实现第 2 步，这意味着我们还不知道第 3 步的输入是什么。\n\n现在获取中间值似乎很麻烦（大家之后会了解一些可用的好工具），但是在第 3 步，我们只需要总得分，而不是具体分数。Python 具有适用于 `min()` 和 `max()` 的内置函数。\n\n```python\nsum_of_three_middle_scores = sum_of_all_five_scores - min(all five scores) - max(all five scores)\n```\n\n在思考框架那一步，将第 2 步和第 3 步分开比较好，但事实证明这在函数构建时会有问题 —— 如果我们合并这两个步骤，并且避免单独取出中间三个分数，函数的实现将会更简单。提前思考函数的构建有助于我们发现困难和制定解决方案，而我们现在只需稍作调整。这是 `scores_to_rating()` 函数新的构建框架。\n\n```python\ndef scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    #STEP 1 convert scores to numbers\n    score1 = convert_to_numeric(score1)\n    score2 = convert_to_numeric(score2)\n    score3 = convert_to_numeric(score3)\n    score4 = convert_to_numeric(score4)\n    score5 = convert_to_numeric(score5)\n\n    #STEP 2 and STEP 3 find the average of the middle three scores\n    average_score =  sum_of_middle_three(score1,score2,score3,score4,score5)/3\n\n    #STEP 4 turn average score into a rating\n    rating = score_to_rating_string(average_score)\n\n    return rating\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347014,
+              "key": "c067058b-2b67-4cbb-acb0-0f30aaf77335",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：搭建帮助函数的框架\n=============\n在本练习中，为 `scores_to_rating` 所需的帮助函数搭建框架。框架中应包括定义行，一个描述函数的 docstring 和一个返回语句。此阶段，没有必要实际加入函数中所含的任何代码。如果不构建帮助函数，解决方案就无法运行。 现在没问题了！\n\n需要搭建框架的函数：\n- 第 1 步：`convert_to_numeric`\n- 第 2、3 步：`sum_of_middle_three`\n- 第 4 步：`score_to_rating_string`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347015,
+              "key": "d8adc9e4-a2ba-4c5c-b2cd-caff721a9ef0",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "d8adc9e4-a2ba-4c5c-b2cd-caff721a9ef0",
+                "completed_at": "2018-02-07T05:13:45.288Z",
+                "last_viewed_at": "2018-03-19T01:11:02.971Z",
+                "unstructured": "{\"helper_functions.py\":\"def scores_to_rating(score1,score2,score3,score4,score5):\\n    \\\"\\\"\\\"\\n    Turns five scores into a rating by averaging the\\n    middle three of the five scores and assigning this average\\n    to a written rating.\\n   \\n    \\\"\\\"\\\"\\n    def convert_to_numeric(score):\\n\\n    converted_score = #convert the score\\n    return converted_score\\n\\n    def sum_of_middle_three(score1,score2,score3,score4,score5):\\n    \\\"\\\"\\\"\\n    Find the sum of the middle three numbers out of the five given.\\n    \\\"\\\"\\\"\\n    sum = #add them together and take away the max and min\\n    return sum\\n\\ndef score_to_rating_string(score):\\n    \\\"\\\"\\\"\\n    Convert the average score, which should be between 0 and 5, \\n    into a string rating.\\n    \\\"\\\"\\\"\\n    rating =\\n    return rating\\n\\ndef scores_to_rating(score1,score2,score3,score4,score5):\\n    \\\"\\\"\\\"\\n    Turns five scores into a rating by averaging the\\n    middle three of the five scores and assigning this average\\n    to a written rating.\\n    \\\"\\\"\\\" #STEP 1 convert scores to numbers\\n    score1 = convert_to_numeric(score1)\\n    score2 = convert_to_numeric(score2)\\n    score3 = convert_to_numeric(score3)\\n    score4 = convert_to_numeric(score4)\\n    score5 = convert_to_numeric(score5)\\n\\n    #STEP 2 and STEP 3 find the average of the middle three scores\\n    average_score =     \\n        sum_of_middle_three(score1,score2,score3,score4,score5)/3\\n\\n    #STEP 4 turn average score into a rating\\n    rating = score_to_rating_string(average_score)\\n\\n    return rating\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5528916619034624",
+                "initial_code_files": [
+                  {
+                    "text": "def scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    #STEP 1 convert scores to numbers\n    score1 = convert_to_numeric(score1)\n    score2 = convert_to_numeric(score2)\n    score3 = convert_to_numeric(score3)\n    score4 = convert_to_numeric(score4)\n    score5 = convert_to_numeric(score5)\n\n    #STEP 2 and STEP 3 find the average of the middle three scores\n    average_score =     \n        sum_of_middle_three(score1,score2,score3,score4,score5)/3\n\n    #STEP 4 turn average score into a rating\n    rating = score_to_rating_string(average_score)\n\n    return rating",
+                    "name": "helper_functions.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347273,
+          "key": "2ef4fa14-1728-4ada-81f3-7fb37eb39ff0",
+          "title": "创建程序段 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2ef4fa14-1728-4ada-81f3-7fb37eb39ff0",
+            "completed_at": "2018-02-11T15:51:44.243Z",
+            "last_viewed_at": "2018-09-27T08:32:13.507Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347016,
+              "key": "69aa4e53-ca3c-46b5-9964-9b0b0c78fc96",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：为帮助函数创建框架\n========\n这段代码实际上不会在此阶段运行，但是以下是我们既定的函数构建方法。\n\n```python\ndef convert_to_numeric(score):\n    \"\"\"\n    Convert the score to a numerical type.\n    \"\"\"\n    converted_score = #convert the score\n    return converted_score\n\ndef sum_of_middle_three(score1,score2,score3,score4,score5):\n    \"\"\"\n    Find the sum of the middle three numbers out of the five given.\n    \"\"\"\n    sum = #add them together and take away the max and min\n    return sum\n\ndef score_to_rating_string(score):\n    \"\"\"\n    Convert the average score, which should be between 0 and 5, \n    into a string rating.\n    \"\"\"\n    rating =\n    return rating\n\ndef scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    #STEP 1 convert scores to numbers\n    score1 = convert_to_numeric(score1)\n    score2 = convert_to_numeric(score2)\n    score3 = convert_to_numeric(score3)\n    score4 = convert_to_numeric(score4)\n    score5 = convert_to_numeric(score5)\n\n    #STEP 2 and STEP 3 find the average of the middle three scores\n    average_score =     \n        sum_of_middle_three(score1,score2,score3,score4,score5)/3\n\n    #STEP 4 turn average score into a rating\n    rating = score_to_rating_string(average_score)\n\n    return rating\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347017,
+              "key": "7cb369a8-1928-4bb6-94dd-aef825e6952a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：创建帮助函数 `convert_to_numeric`\n=======\n这个时候可以填写帮助函数的正文了。\n\n在该练习中，完成 `convert_to_numeric()` 函数。此函数的输入可以是字符串、整数或浮点数。`\"3\"`、`3` 以及 `3.0` 都是有效的输入。该函数应该返回一个浮点数。\n\n确保通过调用函数和打印输出，也可以是输出类型来测试该函数。从上一个练习开始你自己或我们的框架。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347018,
+              "key": "12eeb8a7-4b92-4be0-9ea0-80f1b7adcb8d",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "应使用在 [上一个练习](f4874914-ad98-41df-8bb5-971e6e41dd53) 中编写的框架。",
+              "user_state": {
+                "node_key": "12eeb8a7-4b92-4be0-9ea0-80f1b7adcb8d",
+                "completed_at": "2017-12-06T13:57:49.573Z",
+                "last_viewed_at": "2018-03-18T05:09:59.727Z",
+                "unstructured": "{\"convert_to_numeric.py\":\"def convert_to_numeric(score):\\n    return float(score)\\nprint(convert_to_numeric(3))\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5370997919318016",
+                "initial_code_files": [
+                  {
+                    "text": "",
+                    "name": "convert_to_numeric.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347274,
+          "key": "d5a5e19c-b249-4222-a066-4e642a1accd0",
+          "title": "创建程序段 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d5a5e19c-b249-4222-a066-4e642a1accd0",
+            "completed_at": "2018-02-11T15:51:49.587Z",
+            "last_viewed_at": "2018-09-27T08:33:15.063Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347019,
+              "key": "9904a9b9-3229-4432-a7c1-aeb645b6d76d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：创建帮助函数 `convert_to_numeric`\n==================\n这可以是一个非常短的函数：我们只是将分数转换为浮点数。\n\n```python\ndef convert_to_numeric(score):\n    \"\"\"\n    Convert the score to a float.\n    \"\"\"\n    converted_score = float(score)\n    return converted_score\n```\n\n编写此函数最简单的一个方法是：\n\n```python\ndef convert_to_numeric(score):\n    \"\"\"\n    Convert the score to a float.\n    \"\"\"\n    return float(score)\n```\n\n两种方式都完全可行！\n\n\n总而言之，在 `scores_to_rating()` 中跳过这个函数也是合理的，只需将其替换为\n```python\n    score1 = float(score1)\n    score2 = float(score2)\n        …\n``` \n因为运算非常简单，代码行内即可完成。\n但是，此时我们将问题分解并且运用帮助函数，而不是在 `scores_to_rating()` 中的解决，若将来输入中再加入一些其他复杂内容，我们也可以轻松搞定。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347020,
+              "key": "674f8ff6-d83e-4bfa-9d8b-38051ae43da8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：创建帮助函数 `sum_of_middle_three`\n===========\n\n现在是时候完成 `sum_of_middle_three` 这个函数了。确保使用打印语句测试该函数。可以根据之前编写的框架开始。你可以使用 `max()` 和 `min()` 查找最大值和最小值。`max()` 返回一组数字中的最大值，`min()` 返回最小值。例如：\n```python\nmax(1,2,3,4) #returns 4\nmin(1,2,3,4) #returns 1\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347023,
+              "key": "f847a31f-a1ea-425e-84b8-2060d9b1fb85",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f847a31f-a1ea-425e-84b8-2060d9b1fb85",
+                "completed_at": "2017-10-07T13:12:58.632Z",
+                "last_viewed_at": "2018-03-18T05:48:57.383Z",
+                "unstructured": "{\"size_of_middle_three.py\":\"def sum_of_middle_three(score1, score2, score3, score4, score5):\\n    max_score = max(score1, score2, score3, score4, score5)\\n    min_score = min(score1, score2, score3, score4, score5)\\n    sum_of_middle_three = score1 + score2 + score3 + score4 + score5 - max_score - min_score\\n    return sum_of_middle_three\\nprint(sum_of_middle_three(1, 3, 4, 3, 4))\\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5717772639272960",
+                "initial_code_files": [
+                  {
+                    "text": " ",
+                    "name": "size_of_middle_three.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347275,
+          "key": "a17b38c1-b45e-4877-b193-576c34bc9490",
+          "title": "创建程序段 III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a17b38c1-b45e-4877-b193-576c34bc9490",
+            "completed_at": "2018-02-11T15:51:56.032Z",
+            "last_viewed_at": "2018-09-27T08:38:38.518Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347021,
+              "key": "4ca0c4b7-2733-48e0-ae1c-9f85ced976ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：创建帮助函数 `size_of_middle_three`\n=======\n以下是我们实现这个函数的方法。\n```python\ndef sum_of_middle_three(score1,score2,score3,score4,score5):\n    \"\"\"\n    Find the sum of the middle three numbers out of the five given.\n    \"\"\"\n    max_score = max(score1,score2,score3,score4,score5)\n    min_score = min(score1,score2,score3,score4,score5)\n    sum = score1 + score2 + score3 + score4 + score5 - max_score - min_score\n    return sum\n```\n为了实现可读性，我们计算单独行上的最大值和最小值，然后将其从总得分中减掉。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347024,
+              "key": "f81d56d9-df43-4e89-9328-f9d0362ddbf6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：创建帮助函数 `score_to_rating_string`\n===========\n\n完成最后一个帮助函数 `score_to_rating_string` 的时间！下表指导大家如何将得分映射到评分。\n\n| Average Score | Rating|\n|---|---|\n|0 <= score < 1 | Terrible |\n| 1 <= score < 2 | Bad |\n| 2 <= score < 3 | OK |\n| 3 <= score < 4 | Good |\n| 4 <= score <= 5 | Excellent|\n\n需要单独检查和处理每个案例。但不要忘记使用一些打印语句来测试你的函数。可以回顾一下之前编写的框架。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347022,
+              "key": "32187144-e325-4a35-bcfd-78421727c5d7",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "32187144-e325-4a35-bcfd-78421727c5d7",
+                "completed_at": "2017-10-07T13:11:44.476Z",
+                "last_viewed_at": "2018-03-18T05:56:20.036Z",
+                "unstructured": "{\"score_to_rating_string.py\":\"def score_to_rating_string(score): \\n    Rating = None\\n    if 0 <= score <1:\\n        Rating = \\\"Terrible\\\"\\n    elif 1 <= score < 2:\\n        Rating = \\\"Bad\\\"\\n    elif 2<= score < 3:\\n        Rating = \\\"OK\\\"\\n    elif 3<= score <4:\\n        Rating = \\\"Good\\\"\\n    else:\\n        Rating = \\\"Excellent\\\"\\n    return Rating\\nprint(score_to_rating_string(3))\\n    \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4677678125940736",
+                "initial_code_files": [
+                  {
+                    "text": " ",
+                    "name": "score_to_rating_string.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347276,
+          "key": "c97ec7d3-5c6b-4bca-845b-513cf23c8fdd",
+          "title": "创建程序段 IV",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c97ec7d3-5c6b-4bca-845b-513cf23c8fdd",
+            "completed_at": "2018-02-11T15:50:24.637Z",
+            "last_viewed_at": "2018-09-27T08:39:28.856Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347025,
+              "key": "d0c0cae7-6736-47a7-bce4-5efc2a9e80ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习解决方案：构建帮助函数 `score_to_rating_string`\n=====\n\n我们按照以下方法编写此函数：\n```python\ndef score_to_rating_string(av_score):\n    \"\"\"\n    Convert the average score, which should be between 0 and 5, \n    into a rating.\n    \"\"\"\n    if av_score < 0:\n        rating = None\n    elif av_score < 1:\n        rating = \"Terrible\"\n    elif av_score < 2:\n        rating = \"Bad\"\n    elif av_score < 3:\n        rating = \"OK\"\n    elif av_score < 4:\n        rating = \"Good\"\n    elif av_score <= 5:\n        rating = \"Excellent\"\n    else:          #Using else at the end, every possible case gets caught\n        rating = None\n    if rating == None:\n        return \"Error: not in correct range.\"\n    else:\n        return rating\n```\n\n还有另外一个解决方案是，在实际运行中使用多个返回语句：针对每一个不同情况返回不同语句。在该解决方案中，使用 `else` 意味着这个函数始终可返回值。\n\n```python\ndef score_to_rating_string(av_score): \n    \"\"\"\n    Convert the average score, which should be between 0 and 5, \n    into a rating.\n    \"\"\"\n    if  av_score < 0:\n        return \"Error\"\n    elif av_score < 1:\n        return \"Terrible\"\n    elif av_score < 2:\n        return \"Bad\"\n    elif av_score < 3:\n        return \"OK\"\n    elif av_score < 4:\n        return \"Good\"\n    elif av_score <=5:\n        return \"Excellent\"\n    else:\n        return \"Error\"\n```\n你的解决方案与我们的比较有何差异？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347026,
+              "key": "2bbcada8-5e74-4260-82ef-2476fb0ce6c0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "练习：组合 `scores_to_rating` 函数\n==========\n\n先前所有帮助函数都构建得不错！现在可以将所有这些函数组合到一起，使其成为一个整体进行运行。\n\n在该编程练习中，将编写的每个帮助函数放入编码窗口，然后在编写函数 `scores_to_rating` 时使用。请注意，此函数以五个分数（可能不是数字）开始，取中间三个分数的平均值，并将该平均值转换为返回的书面评分。\n\n需要确保将一个函数的输出正确传递到 `scores_to_rating` 函数体的下一个输入。一次添加一个，同时还需添加有用的注释，而且调用 `print` 进进行测试，将有助于控制错误！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347027,
+              "key": "8a053a66-70b0-4ab0-98bb-f3513f229b59",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8a053a66-70b0-4ab0-98bb-f3513f229b59",
+                "completed_at": "2017-10-07T14:14:26.543Z",
+                "last_viewed_at": "2018-03-18T06:57:24.315Z",
+                "unstructured": "{\"scores_to_rating_final.py\":\"def scores_to_rating(score1,score2,score3,score4,score5):\\n    \\\"\\\"\\\"\\n    Turns five scores into a rating by averaging the\\n    middle three of the five scores and assigning this average\\n    to a written rating.\\n    \\\"\\\"\\\"\\n    #STEP 1 convert scores to numbers\\n    def convert_to_numeric(score1, score2, score3, score4, score5):\\n        return score_to_rating(float(score1), float(score2), float(score3), folat(score4), float(score5))\\n    #STEP 2 and STEP 3 find the average of the middle three scores\\n    def sum_of_middle_three(score1, score2, score3, score4, score5):\\n    max_score = max(score1, score2, score3, score4, score5)\\n    min_score = min(score1, score2, score3, score4, score5)\\n    sum_of_middle_three = score1 + score2 + score3 + score4 + score5 - max_score - min_score\\n        return sum_of_middle_three\\n\\n    average_score = sum_of_middle_three / 3   \\n    \\n    #STEP 4 turn average score into a rating\\n    def score_to_rating_string(score): \\n        Rating = None\\n        if 0 <= score <1:\\n            Rating = \\\"Terrible\\\"\\n        elif 1 <= score < 2:\\n            Rating = \\\"Bad\\\"\\n        elif 2<= score < 3:\\n            Rating = \\\"OK\\\"\\n        elif 3<= score <4:\\n            Rating = \\\"Good\\\"\\n        else:\\n            Rating = \\\"Excellent\\\"\\n        return Rating\\nprint(score_to_rating_string(3))\\n    \\n    \\n\\n \\n\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4981674434756608",
+                "initial_code_files": [
+                  {
+                    "text": " ",
+                    "name": "scores_to_rating_final.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 347278,
+          "key": "391e1ef5-3057-443a-80ab-4126da977ffe",
+          "title": "组合程序段",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "391e1ef5-3057-443a-80ab-4126da977ffe",
+            "completed_at": "2018-02-11T15:50:42.022Z",
+            "last_viewed_at": "2018-11-16T20:15:46.568Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 347028,
+              "key": "26a9246d-4009-479c-becd-b94314eb2243",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "测验解决方法：重组 `scores_to_rating`\n===============\n大家在分解问题、创建程序段以及重组程序段方面做得不错！将在下文分享我们的整体解决方案：\n```python\ndef convert_to_numeric(score):\n    \"\"\"\n    Convert the score to a float.\n    \"\"\"\n    converted_score = float(score)\n    return converted_score\n\ndef sum_of_middle_three(score1,score2,score3,score4,score5):\n    \"\"\"\n    Find the sum of the middle three numbers out of the five given.\n    \"\"\"\n    max_score = max(score1,score2,score3,score4,score5)\n    min_score = min(score1,score2,score3,score4,score5)\n    sum = score1 + score2 + score3 + score4 + score5 - max_score - min_score\n    return sum\n\n\ndef score_to_rating_string(av_score):\n    \"\"\"\n    Convert the average score, which should be between 0 and 5, \n    into a rating.\n    \"\"\"\n    if av_score < 1:\n        rating = \"Terrible\"\n    elif av_score < 2:\n        rating = \"Bad\"\n    elif av_score < 3:\n        rating = \"OK\"\n    elif av_score < 4:\n        rating = \"Good\"\n    else:          #Using else at the end, every possible case gets caught\n        rating = \"Excellent\"\n    return rating\n\n\ndef scores_to_rating(score1,score2,score3,score4,score5):\n    \"\"\"\n    Turns five scores into a rating by averaging the\n    middle three of the five scores and assigning this average\n    to a written rating.\n    \"\"\"\n    #STEP 1 convert scores to numbers\n    score1 = convert_to_numeric(score1)\n    score2 = convert_to_numeric(score2)\n    score3 = convert_to_numeric(score3)\n    score4 = convert_to_numeric(score4)\n    score5 = convert_to_numeric(score5)\n\n    #STEP 2 and STEP 3 find the average of the middle three scores\n    average_score = sum_of_middle_three(score1,score2,score3,score4,score5)/3\n\n    #STEP 4 turn average score into a rating\n    rating = score_to_rating_string(average_score)\n\n    return rating\n\n```\n如果还未重组，请打开文本编辑器，使用所有这些代码创建一个新的 `.py` 文件。使用 `print` 语句在底部添加一些测试用例（尝试不同的分数），并使用终端/命令行运行，查看其可否正常运行！这个函数完成得不错！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347029,
+              "key": "7e15d13d-6bc3-4f66-86c8-99206de6322a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "逐步创建函数\n=============\n我们回顾一下创建 `scores_to_rating()` 函数时的步骤\n1. 收集函数的要求，包括输入和输出\n2. 首先将该过程分成简单的语言，而不是代码。\n3. 创建执行每个步骤的函数框架，包括尚未定义的帮助函数。  \n    在这个阶段，调整步骤使编码更容易\n4. 创建帮助函数框架。\n5. 填写帮助函数的代码，测试其功能。\n6. 完成主函数的代码，调用每个帮助函数，并测试其功能。\n\n做得漂亮！今后每次创建程序时，都可以遵循相同的流程。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 347030,
+              "key": "762b329d-d42d-443b-9a92-f5764e6395c0",
+              "title": "Ud1110 IntroPy L250  End Of Lesson 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UhvyD_60esQ",
+                "china_cdn_id": "UhvyD_60esQ.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

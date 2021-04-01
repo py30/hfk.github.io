@@ -1,0 +1,254 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.600
+Agora vamos encontrar
+o 1º link num artigo.
+
+00:00:02.633 --> 00:00:05.133
+Talvez esta seja
+a parte mais difícil de programar,
+
+00:00:05.167 --> 00:00:07.467
+pois ainda não sei
+como vou fazê-la.
+
+00:00:07.500 --> 00:00:11.000
+O programador passa bastante tempo
+em busca de soluções existentes,
+
+00:00:11.033 --> 00:00:14.267
+seja em bibliotecas ou fóruns,
+como o Stack Overflow.
+
+00:00:14.300 --> 00:00:17.433
+A arte e o desafio
+da programação, porém,
+
+00:00:17.467 --> 00:00:19.500
+consistem em resolver
+problemas inéditos.
+
+00:00:19.533 --> 00:00:22.767
+E a única forma de resolvê-los
+é tentar.
+
+00:00:23.000 --> 00:00:26.167
+Vou achar o 1º link com a ferramenta
+de desenvolvedor do browser,
+
+00:00:26.200 --> 00:00:28.567
+depois vou tentar achá-lo
+com o Beautiful Soup.
+
+00:00:28.600 --> 00:00:31.533
+Aqui está um artigo aleatório
+sobre um senhor chamado McNeilly.
+
+00:00:31.567 --> 00:00:34.433
+O primeiro link nos leva
+para o artigo sobre a Irlanda.
+
+00:00:34.467 --> 00:00:37.133
+Vou inspecioná-lo
+com as ferramentas de desenvolvedor.
+
+00:00:37.167 --> 00:00:40.033
+Certo. O link está
+em tag anchor,
+
+00:00:40.067 --> 00:00:42.333
+numa tag de parágrafo,
+
+00:00:42.367 --> 00:00:44.567
+que está numa tag div.
+
+00:00:44.600 --> 00:00:48.933
+A tag div tem o ID
+mw-content-text.
+
+00:00:48.967 --> 00:00:50.400
+Quando eu destaco esta div,
+
+00:00:50.433 --> 00:00:52.700
+vejo que ele contém
+o texto do artigo,
+
+00:00:52.733 --> 00:00:56.133
+nada além disso, como a logo
+da Wikipédia ou os menus.
+
+00:00:56.167 --> 00:00:58.200
+Este parece o lugar certo
+para buscar os links.
+
+00:00:58.233 --> 00:01:00.567
+Vou tentar encontrá-lo
+com o Beautiful Soup.
+
+00:01:00.833 --> 00:01:04.133
+Vamos passar para o Terminal
+e iniciar o interpretador Python.
+
+00:01:04.167 --> 00:01:07.167
+Deixei o interpretador ao lado
+para fazer testes rápidos.
+
+00:01:07.200 --> 00:01:09.500
+Vou ter que fazer
+vários testes
+
+00:01:09.533 --> 00:01:12.133
+até encontrar a forma certa
+de usar o Beautiful Soup.
+
+00:01:12.167 --> 00:01:14.500
+Também posso testar
+escrevendo o programa
+
+00:01:14.533 --> 00:01:17.367
+e reescrevendo-o conforme
+eu faço alterações,
+
+00:01:17.400 --> 00:01:20.033
+mas eu prefiro esse
+fluxo de trabalho mais interativo.
+
+00:01:20.067 --> 00:01:23.000
+Primeiro, vamos importar
+as bibliotecas de que precisamos.
+
+00:01:23.033 --> 00:01:26.133
+Agora vamos baixar o artigo
+que está no navegador.
+
+00:01:26.167 --> 00:01:29.267
+Vou imprimir esta HTML para
+me certificar de que está correto.
+
+00:01:29.700 --> 00:01:32.067
+Ótimo!
+É o artigo da Wikipédia.
+
+00:01:32.100 --> 00:01:34.233
+É o artigo
+sobre o senhor McNeilly.
+
+00:01:34.267 --> 00:01:37.000
+Eu verifiquei,
+pois se eu tiver cometido um erro
+
+00:01:37.033 --> 00:01:38.600
+ou se tiver baixado
+o artigo errado,
+
+00:01:38.633 --> 00:01:40.100
+devo saber isso agora,
+
+00:01:40.133 --> 00:01:43.000
+não depois, quando será
+mais difícil solucionar o problema.
+
+00:01:43.033 --> 00:01:46.067
+Agora vou passar essa HTML
+pelo Beautiful Soup.
+
+00:01:46.100 --> 00:01:49.100
+Vamos achar
+aquela div nw-content-text.
+
+00:01:49.133 --> 00:01:51.300
+Para procurar uma tag
+a partir do ID,
+
+00:01:51.333 --> 00:01:53.767
+preciso usar o find,
+como no exemplo destacado.
+
+00:01:55.800 --> 00:01:58.033
+Não houve nenhum erro.
+Isso é bom.
+
+00:01:58.067 --> 00:02:02.767
+Agora procuro o 1º tag anchor no
+1º tag de parágrafo dentro da div.
+
+00:02:02.800 --> 00:02:06.633
+Pressiono "seta para cima"
+para voltar ao último comando
+
+00:02:06.667 --> 00:02:09.300
+e para que eu possa acrescentar
+comandos à série.
+
+00:02:10.700 --> 00:02:13.267
+Bacana! É o link para o artigo
+sobre a Irlanda,
+
+00:02:13.300 --> 00:02:14.700
+exatamente o que queríamos.
+
+00:02:14.733 --> 00:02:18.267
+Eu só quero o URL,
+não preciso da tag anchor.
+
+00:02:18.300 --> 00:02:20.000
+Não me lembro
+como fazer isso,
+
+00:02:20.033 --> 00:02:22.633
+então vou verificar
+a documentação do Beautiful Soup.
+
+00:02:23.800 --> 00:02:27.267
+Essa exata situação
+está na seção inicial.
+
+00:02:27.300 --> 00:02:30.633
+Parece que posso usar o método GET
+numa tag como num dicionário
+
+00:02:30.667 --> 00:02:33.200
+e "href" como chave de busca.
+
+00:02:33.233 --> 00:02:34.467
+Vamos testar.
+
+00:02:39.233 --> 00:02:41.300
+Ótimo. Aqui está o URL.
+
+00:02:41.333 --> 00:02:44.000
+Desta vez,
+sem nenhuma HTML em volta.
+
+00:02:44.033 --> 00:02:48.000
+Poderíamos colar este trecho
+de código no programa e pronto,
+
+00:02:48.033 --> 00:02:50.933
+mas seríamos
+péssimos programadores.
+
+00:02:50.967 --> 00:02:52.867
+Bons programadores
+testam o código.
+
+00:02:52.900 --> 00:02:55.333
+Sabemos que ele funcionou
+com um artigo.
+
+00:02:55.367 --> 00:02:57.300
+Será que funcionará
+com todos?
+
+00:02:57.333 --> 00:02:59.267
+Teste e descubra você mesmo.
+
+00:02:59.300 --> 00:03:03.367
+Vou disponibilizar este código
+para você colar no seu Terminal.
+
+00:03:03.400 --> 00:03:04.400
+*END*
+

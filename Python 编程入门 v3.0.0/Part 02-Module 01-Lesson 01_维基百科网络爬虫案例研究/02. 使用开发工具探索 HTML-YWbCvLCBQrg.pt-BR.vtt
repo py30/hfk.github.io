@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.033
+Vamos aplicar nosso conhecimento
+de HTML a uma página.
+
+00:00:03.067 --> 00:00:04.800
+Aqui está
+um artigo da Wikipédia.
+
+00:00:04.833 --> 00:00:07.167
+Vou usar meu navegador
+para ver o código-fonte.
+
+00:00:07.201 --> 00:00:08.600
+Estou usando o Google Chrome,
+
+00:00:08.633 --> 00:00:10.667
+mas cada navegador
+tem um botão para isso.
+
+00:00:10.700 --> 00:00:13.400
+Ele só deve estar
+num lugar diferente.
+
+00:00:13.433 --> 00:00:17.000
+Esta HTML não está
+tão organizada quanto a anterior.
+
+00:00:17.033 --> 00:00:18.211
+Diferentemente do Python,
+
+00:00:18.245 --> 00:00:21.667
+HTML não exige indentação
+ou organização.
+
+00:00:21.700 --> 00:00:24.600
+Descendo pela página,
+você verá tags conhecidas.
+
+00:00:24.633 --> 00:00:25.900
+Aqui tem um parágrafo,
+
+00:00:25.933 --> 00:00:28.533
+algumas divs e anchors.
+
+00:00:28.567 --> 00:00:31.300
+Vamos voltar para a versão
+renderizada da página.
+
+00:00:31.333 --> 00:00:35.367
+Muito bem. O 1º link
+é o artigo do grupo Monty Python.
+
+00:00:35.400 --> 00:00:37.600
+Vamos tentar encontrá-lo
+no código-fonte.
+
+00:00:37.633 --> 00:00:38.667
+Aqui está.
+
+00:00:38.701 --> 00:00:41.033
+Parece que o texto
+do artigo começa bem aqui.
+
+00:00:41.067 --> 00:00:43.167
+O link está dentro
+de uma tag parágrafo,
+
+00:00:43.200 --> 00:00:46.833
+mas eu não tenho como dizer
+se ela está dentro de outra tag.
+
+00:00:46.867 --> 00:00:49.967
+Há muita HTML desformatada
+para eu ler.
+
+00:00:50.001 --> 00:00:53.133
+Felizmente, os navegadores têm
+ferramentas para facilitar isso.
+
+00:00:53.167 --> 00:00:55.400
+Vou fechar esta aba
+de código-fonte
+
+00:00:55.433 --> 00:00:57.300
+e abrir as ferramentas
+de desenvolvedor.
+
+00:00:57.700 --> 00:01:00.167
+Elas não são exclusivas
+do Chrome,
+
+00:01:00.200 --> 00:01:02.467
+todo navegador
+possui algo parecido.
+
+00:01:02.500 --> 00:01:05.600
+Certo. Agora temos
+uma visão organizada da HTML.
+
+00:01:05.634 --> 00:01:08.533
+Clico com o botão direito no link
+e seleciono "inspecionar".
+
+00:01:08.567 --> 00:01:10.867
+A árvore de elementos
+no painel de ferramentas
+
+00:01:10.900 --> 00:01:13.633
+se expande para exibir a hierarquia
+de tags até o link.
+
+00:01:13.667 --> 00:01:15.867
+O 1º link é esta tag anchor
+
+00:01:15.900 --> 00:01:18.000
+dentro desta tag parágrafo
+
+00:01:18.033 --> 00:01:19.833
+dentro desta div.
+
+00:01:19.867 --> 00:01:23.333
+O ID da div
+é "mw-content-text".
+
+00:01:23.367 --> 00:01:26.567
+Esta div está dentro
+de uma série de divs.
+
+00:01:26.600 --> 00:01:29.467
+Excelente! Se a estrutura
+de todos os artigos for assim,
+
+00:01:29.500 --> 00:01:32.500
+conseguiremos usar
+esta informação para fazer o crawl.
+
+00:01:32.534 --> 00:01:33.534
+*END*
+

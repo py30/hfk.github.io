@@ -1,0 +1,69 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.434
+Agora que definimos
+o problema,
+
+00:00:02.468 --> 00:00:04.634
+conhecemos as bibliotecas
+que serão usadas
+
+00:00:04.667 --> 00:00:07.069
+e desmembramos o problema
+em partes menores,
+
+00:00:07.103 --> 00:00:08.686
+podemos começar a programar.
+
+00:00:08.720 --> 00:00:10.834
+Há outra vantagem
+em todo esse planejamento.
+
+00:00:10.868 --> 00:00:13.434
+Como definimos
+todas as partes do programa,
+
+00:00:13.467 --> 00:00:15.501
+podemos dividir o trabalho.
+
+00:00:15.535 --> 00:00:19.166
+Como somos dois, faz sentido
+criar duas grandes partes.
+
+00:00:19.501 --> 00:00:21.701
+Eu vou programar
+o loop principal.
+
+00:00:22.167 --> 00:00:24.968
+Esta parte do código
+lidará com a sequência do artigo,
+
+00:00:25.000 --> 00:00:27.033
+limitará a velocidade
+das solicitações
+
+00:00:27.067 --> 00:00:28.801
+e imprimirá
+o resultado do crawl.
+
+00:00:29.100 --> 00:00:32.100
+Eu vou programar as solicitações
+e a parte que acha os links.
+
+00:00:32.601 --> 00:00:35.400
+Definir cada parte
+vai facilitar nossa colaboração,
+
+00:00:35.434 --> 00:00:39.033
+mas talvez tenhamos que nos ajustar,
+caso aconteça um imprevisto.
+
+00:00:39.067 --> 00:00:41.666
+Vou começar com uma
+função de crawl contínuo.
+
+00:00:41.700 --> 00:00:42.701
+*END*
+

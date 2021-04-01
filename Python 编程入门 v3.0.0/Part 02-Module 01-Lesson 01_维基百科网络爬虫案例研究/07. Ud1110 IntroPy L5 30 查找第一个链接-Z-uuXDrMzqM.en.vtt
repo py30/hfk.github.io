@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.330
+While you and Charlie have been working on the main loop,
+
+00:00:02.330 --> 00:00:04.575
+I've been working on the find_first_link function.
+
+00:00:04.575 --> 00:00:07.710
+This collaboration wouldn't be possible if we hadn't planned things out ahead
+
+00:00:07.710 --> 00:00:11.105
+of time and broken the crawler down into smaller parts.
+
+00:00:11.105 --> 00:00:13.230
+Beyond that though, Charlie had to specify
+
+00:00:13.230 --> 00:00:16.054
+how her code would use the find_first_link function.
+
+00:00:16.054 --> 00:00:18.625
+Charlie will call the function by passing in a string.
+
+00:00:18.625 --> 00:00:21.420
+I don't know what variable names Charlie defined in her part of the program,
+
+00:00:21.420 --> 00:00:24.630
+so I'll just refer to this function's input as url.
+
+00:00:24.629 --> 00:00:27.778
+The function does its work and returns another string.
+
+00:00:27.778 --> 00:00:32.019
+The return value is the first link from the article that was passed into the function.
+
+00:00:32.020 --> 00:00:34.990
+This specification is like a contract between Charlie and me.
+
+00:00:34.990 --> 00:00:38.775
+If her code provides the correct argument and my code returns the correct result,
+
+00:00:38.774 --> 00:00:44.195
+then our program will work correctly.
+
+00:00:44.195 --> 00:00:48.439
+Likewise, I can implement the function however I like and Charlie doesn't have to
+
+00:00:48.439 --> 00:00:50.449
+worry about how it'll fit into her code because we've
+
+00:00:50.450 --> 00:00:53.000
+already agreed on how her code will call the function.
+
