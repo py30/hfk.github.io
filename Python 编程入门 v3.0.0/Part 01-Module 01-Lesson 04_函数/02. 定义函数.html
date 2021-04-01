@@ -1,0 +1,449 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   定义函数
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数.html">
+       02. 定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：定义函数.html">
+       03. 练习：定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 解决方案：定义函数.html">
+       04. 解决方案：定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量作用域.html">
+       05. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量作用域.html">
+       06. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 解决方案：变量作用域.html">
+       07. 解决方案：变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 文档.html">
+       08. 文档
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 练习：文档.html">
+       09. 练习：文档
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 解决方案：文档.html">
+       10. 解决方案：文档
+      </a>
+     </li>
+     <li class="">
+      <a href="11. Lambda 表达式.html">
+       11. Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：Lambda 表达式.html">
+       12. 练习：Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 解决方案：Lambda 表达式.html">
+       13. 解决方案：Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 【选修】迭代器和生成器.html">
+       14. 【选修】迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 【选修】练习：迭代器和生成器.html">
+       15. 【选修】练习：迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 【选修】解决方案：迭代器和生成器.html">
+       16. 【选修】解决方案：迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 总结.html">
+       17. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          02. 定义函数
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Definindo funções
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. Definindo funções-IP_tJYhynbc.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="02. Definindo funções-IP_tJYhynbc.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="02. Definindo funções-IP_tJYhynbc.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="02. Definindo funções-IP_tJYhynbc.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="02. Definindo funções-IP_tJYhynbc.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="定义函数">
+          定义函数
+         </h1>
+         <p>
+          函数定义示例：
+         </p>
+         <pre><code class="python language-python">def cylinder_volume(height, radius):
+    pi = 3.14159
+    return height * pi * radius ** 2</code></pre>
+         <p>
+          定义 cylinder_volume 函数后，我们可以如下所示地
+          <strong>
+           调用
+          </strong>
+          该函数。
+         </p>
+         <pre><code class="python language-python">cylinder_volume(10, 3)</code></pre>
+         <p>
+          函数定义包含几个重要部分。
+         </p>
+         <h3 id="函数头部">
+          函数头部
+         </h3>
+         <p>
+          我们从函数头部开始，即函数定义的第一行。
+         </p>
+         <ol>
+          <li>
+           函数头部始终以关键字
+           <code>
+            def
+           </code>
+           开始，表示这是函数定义。
+          </li>
+          <li>
+           然后是函数名称（在此例中是
+           <code>
+            cylinder_volume
+           </code>
+           ，因为函数名是要一个单词，所以需要用_进行连接），遵循的是和变量一样的命名规范。你可以在本页面下方回顾下命名规范。
+          </li>
+          <li>
+           名称之后是括号，其中可能包括用英文逗号分隔的参数（在此例中是
+           <code>
+            height
+           </code>
+           和
+           <code>
+            radius
+           </code>
+           ）。
+           <a href="https://stackoverflow.com/questions/3176310/difference-between-parameter-and-argument" target="_blank">
+            形参（或实参）
+           </a>
+           是当函数被调用时作为输入传入的值，用在函数主体中。如果函数没有参数，这些括号留空。
+          </li>
+          <li>
+           头部始终以英文冒号
+           <code>
+            :
+           </code>
+           结束。
+          </li>
+         </ol>
+         <h3 id="函数主体">
+          函数主体
+         </h3>
+         <p>
+          函数的剩余部分包含在主题中，也就是函数完成操作的部分。
+         </p>
+         <ol>
+          <li>
+           函数主体是在头部行之后缩进的代码。在此例中是定义 π 和返回体积的两行代码。
+          </li>
+          <li>
+           在此主体中，我们可以引用参数并定义新的变量，这些变量只能在这些缩进代码行内使用。
+          </li>
+          <li>
+           主体将经常包括
+           <code>
+            return
+           </code>
+           语句，用于当函数被调用时返回输出值。
+           <code>
+            return
+           </code>
+           语句包括关键字
+           <code>
+            return
+           </code>
+           ，然后是经过评估以获得函数输出值的表达式。如果没有
+           <code>
+            return
+           </code>
+           语句，函数直接返回 None（例如内置
+           <code>
+            print()
+           </code>
+           函数）。
+          </li>
+         </ol>
+         <h3 id="函数的命名规范">
+          函数的命名规范
+         </h3>
+         <p>
+          函数名称遵守和变量一样的命名规范。
+         </p>
+         <ol>
+          <li>
+           仅在函数名称中使用普通字母、数字和下划线。不能有空格，需要以字母或下划线开头。
+          </li>
+          <li>
+           <strong>
+            不能使用在 Python 中具有重要作用的保留字或内置标识符
+           </strong>
+           ，我们将在这门课程中学习这方面的知识。要了解 python 保留字列表，请参阅
+           <a href="https://pentangle.net/python/handbook/node52.html" target="_blank">
+            此处
+           </a>
+           。
+          </li>
+          <li>
+           尝试使用可以帮助读者了解函数作用的描述性名称。
+          </li>
+         </ol>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          Argumentos padrão
+         </p>
+        </h3>
+        <video controls="">
+         <source src="02. Argumentos padrão-cG6UfBZX2KI.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="02. Argumentos padrão-cG6UfBZX2KI.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="02. Argumentos padrão-cG6UfBZX2KI.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="02. Argumentos padrão-cG6UfBZX2KI.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="02. Argumentos padrão-cG6UfBZX2KI.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="默认参数">
+          默认参数
+         </h1>
+         <p>
+          我们可以向函数中添加默认参数，以便为在函数调用中未指定的参数提供默认值。
+         </p>
+         <pre><code class="python language-python">def cylinder_volume(height, radius=5):
+    pi = 3.14159
+    return height * pi * radius ** 2</code></pre>
+         <p>
+          在上述示例中，如果在函数调用中忽略了
+          <code>
+           radius
+          </code>
+          ，则将该参数设为 5。如果我们调用
+          <code>
+           cylinder_volume(10)
+          </code>
+          ，该函数将使用 10 作为高度，使用 5 作为半径。但是，如果调用
+          <code>
+           cylinder_volume(10, 7)
+          </code>
+          ，7 将覆盖默认的值 5。
+         </p>
+         <p>
+          此外注意，我们按照位置向参数传递值。可以通过两种方式传递值：按照位置和按照名称。下面两个函数的效果是一样的。
+         </p>
+         <pre><code class="python language-python">cylinder_volume(10, 7)  # pass in arguments by position
+cylinder_volume(height=10, radius=7)  # pass in arguments by name</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="03. 练习：定义函数.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 定义函数')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

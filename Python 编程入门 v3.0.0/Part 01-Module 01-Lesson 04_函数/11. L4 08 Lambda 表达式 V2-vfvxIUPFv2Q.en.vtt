@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.649 --> 00:00:08.435
+In Python, you can use lambda expressions to create anonymous functions.
+
+00:00:08.435 --> 00:00:12.040
+That is functions that don't have a name.
+
+00:00:12.039 --> 00:00:13.849
+They are very helpful for creating
+
+00:00:13.849 --> 00:00:17.725
+quick functions that aren't really needed later in your code.
+
+00:00:17.725 --> 00:00:23.025
+Later, we'll learn about higher order functions or functions that take in
+
+00:00:23.024 --> 00:00:28.469
+other functions as arguments where lambda expressions become especially useful.
+
+00:00:28.469 --> 00:00:33.804
+Let's compare the structure of a function and a lambda expression.
+
+00:00:33.804 --> 00:00:37.320
+Here is a simple function that doubles a number.
+
+00:00:37.320 --> 00:00:42.689
+It takes in a number x and returns x multiplied by two.
+
+00:00:42.689 --> 00:00:46.989
+Calling double three would return six.
+
+00:00:46.990 --> 00:00:50.079
+Here's the equivalent in a lambda expression.
+
+00:00:50.079 --> 00:00:54.799
+The lambda keyword is used to indicate that this is a lambda expression.
+
+00:00:54.799 --> 00:01:01.780
+Following lambda are one or more arguments for the anonymous function and then a colon.
+
+00:01:01.780 --> 00:01:09.349
+These are equivalent, similar to the way argument names in a function are arbitrary.
+
+00:01:09.349 --> 00:01:14.649
+Last is an expression that is evaluated and returned in this function.
+
+00:01:14.650 --> 00:01:19.670
+This is a lot like the expression you might see as a return statement in a function.
+
+00:01:19.670 --> 00:01:24.795
+With this structure, lambda expressions aren't ideal for complex functions,
+
+00:01:24.795 --> 00:01:28.900
+but can be very useful for short symbol functions.
+
+00:01:28.900 --> 00:01:32.400
+If you want to specify multiple arguments in a lambda function,
+
+00:01:32.400 --> 00:01:37.260
+you can include them before the colon separated by commas.
+
+00:01:37.260 --> 00:01:41.210
+Here's a lambda function that multiplies two numbers together.
+
+00:01:41.209 --> 00:01:43.229
+In the following quizzes,
+
+00:01:43.230 --> 00:01:48.000
+you'll get some practice using lambda functions and see how useful they can be. 
+

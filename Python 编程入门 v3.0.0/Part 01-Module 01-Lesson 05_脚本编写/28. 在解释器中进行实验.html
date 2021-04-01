@@ -1,0 +1,420 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   在解释器中进行实验
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      脚本编写
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 脚本.html">
+       01. 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 简介.html">
+       02. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 安装 Python.html">
+       03. 安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 方法 1：安装 Anaconda.html">
+       04. 方法 1：安装 Anaconda
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 方法 2：安装 Python.html">
+       05. 方法 2：安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 运行 Python 脚本.html">
+       06. 运行 Python 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 编程环境设置.html">
+       07. 编程环境设置
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 修改 Python 脚本.html">
+       08. 修改 Python 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 在脚本中接受原始输入.html">
+       09. 在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：在脚本中接受原始输入.html">
+       10. 练习：在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 解决方案：在脚本中接受原始输入.html">
+       11. 解决方案：在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 错误和异常.html">
+       12. 错误和异常
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 练习：错误和异常.html">
+       13. 练习：错误和异常
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 处理错误.html">
+       14. 处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 练习：处理错误.html">
+       15. 练习：处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 解决方案：处理错误.html">
+       16. 解决方案：处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 访问错误消息.html">
+       17. 访问错误消息
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 读写文件.html">
+       18. 读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 练习：读写文件.html">
+       19. 练习：读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 解决方案：读写文件.html">
+       20. 解决方案：读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 导入本地脚本.html">
+       21. 导入本地脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 标准库.html">
+       22. 标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 练习：标准库.html">
+       23. 练习：标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 解决方案：标准库.html">
+       24. 解决方案：标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 导入模块技巧.html">
+       25. 导入模块技巧
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：导入模块技巧.html">
+       26. 练习：导入模块技巧
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 第三方库.html">
+       27. 第三方库
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 在解释器中进行实验.html">
+       28. 在解释器中进行实验
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 在线资源.html">
+       29. 在线资源
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          28. 在解释器中进行实验
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          24 在解释器中进行实验 V2
+         </p>
+        </h3>
+        <video controls="">
+         <source src="28. 24 在解释器中进行实验 V2-hspPtnQwMPg.mp4" type="video/mp4"/>
+         <track default="true" kind="subtitles" label="en" src="28. 24 在解释器中进行实验 V2-hspPtnQwMPg.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="pt-BR" src="28. 24 在解释器中进行实验 V2-hspPtnQwMPg.pt-BR.vtt" srclang="pt-BR"/>
+         <track default="false" kind="subtitles" label="ar" src="28. 24 在解释器中进行实验 V2-hspPtnQwMPg.ar.vtt" srclang="ar"/>
+         <track default="false" kind="subtitles" label="zh-CN" src="28. 24 在解释器中进行实验 V2-hspPtnQwMPg.zh-CN.vtt" srclang="zh-CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="在解释器中进行实验">
+          在解释器中进行实验
+         </h1>
+         <p>
+          通过在终端里输入
+          <code>
+           python
+          </code>
+          启动 python 交互式解释器。你可以接着输入内容，直接与 Python 交互。这是每次实验和尝试一段 Python 代码的很棒工具。只需输入 Python 代码，输出将出现在下一行。
+         </p>
+         <pre><code>&gt;&gt;&gt; type(5.23)
+&lt;class 'float'&gt;</code></pre>
+         <p>
+          在解释器中，提示符窗口中最后一行的值将自动输出。如果有多行代码需要输出值，依然需要使用 print。
+         </p>
+         <p>
+          如果你开始定义函数，你将在提示符窗口中看到变化，表示这是可以继续的行。在定义函数时，你需要自己添加缩进。
+         </p>
+         <pre><code>&gt;&gt;&gt; def cylinder_volume(height, radius):
+...         pi = 3.14159
+...         return height * pi * radius ** 2</code></pre>
+         <p>
+          解释器的不足之处是修改代码比较麻烦。如果你在输入该函数时出现了拼写错误，或者忘记缩进函数的主体部分，无法使用鼠标将光标点到要点击的位置。需要使用箭头键在代码行中来回移动。有必要了解一些实用的快捷方式，例如移到一行的开头或结尾。
+         </p>
+         <p>
+          注意，我可以引用我在解释器中之前定义的任何对象！
+         </p>
+         <pre><code>&gt;&gt;&gt; cylinder_volume(10, 3)
+282.7431</code></pre>
+         <p>
+          一个实用技巧是在交互式提示符窗口中使用上下箭头键循环浏览最近的命令。这样可以重新运行或修改已经尝试的代码。
+         </p>
+         <p>
+          要退出 Python 交互式解释器，使用命令
+          <code>
+           exit()
+          </code>
+          或在 mac/linux 上按下
+          <code>
+           ctrl+D
+          </code>
+          ，在 windows 上按下
+          <code>
+           ctrl+Z
+          </code>
+          ，然后按下
+          <code>
+           Enter
+          </code>
+          键。
+         </p>
+         <h3 id="ipython">
+          IPython
+         </h3>
+         <p>
+          实际上有一个代替默认 python 交互式解释器的强大解释器 IPython，它具有很多其他功能。
+         </p>
+         <ul>
+          <li>
+           Tab 键补充完整
+          </li>
+          <li>
+           <code>
+            ?
+           </code>
+           ：关于对象的详细信息
+          </li>
+          <li>
+           <code>
+            !
+           </code>
+           ：执行系统 shell 命令
+          </li>
+          <li>
+           语法突出显示
+          </li>
+         </ul>
+         <p>
+          你可以在
+          <a href="https://ipython.org/ipython-doc/3/interactive/tutorial.html" target="_blank">
+           此处
+          </a>
+          查看更多其他功能！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="29. 在线资源.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('28. 在解释器中进行实验')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

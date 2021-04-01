@@ -1,0 +1,328 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   【选修】迭代器和生成器
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      函数
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 简介.html">
+       01. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 定义函数.html">
+       02. 定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 练习：定义函数.html">
+       03. 练习：定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 解决方案：定义函数.html">
+       04. 解决方案：定义函数
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 变量作用域.html">
+       05. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 变量作用域.html">
+       06. 变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 解决方案：变量作用域.html">
+       07. 解决方案：变量作用域
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 文档.html">
+       08. 文档
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 练习：文档.html">
+       09. 练习：文档
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 解决方案：文档.html">
+       10. 解决方案：文档
+      </a>
+     </li>
+     <li class="">
+      <a href="11. Lambda 表达式.html">
+       11. Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 练习：Lambda 表达式.html">
+       12. 练习：Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 解决方案：Lambda 表达式.html">
+       13. 解决方案：Lambda 表达式
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 【选修】迭代器和生成器.html">
+       14. 【选修】迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 【选修】练习：迭代器和生成器.html">
+       15. 【选修】练习：迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 【选修】解决方案：迭代器和生成器.html">
+       16. 【选修】解决方案：迭代器和生成器
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 总结.html">
+       17. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          14. 【选修】迭代器和生成器
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+         <p>
+          L4 10 迭代器和生成器 V2
+         </p>
+        </h3>
+        <video controls="">
+         <source src="14. L4 10 迭代器和生成器 V2-tYH8X4Zeh-0.mp4" type="video/mp4"/>
+         <track default="false" kind="subtitles" label="ar" src="14. L4 10 迭代器和生成器 V2-tYH8X4Zeh-0.ar.vtt" srclang="ar"/>
+         <track default="true" kind="subtitles" label="en" src="14. L4 10 迭代器和生成器 V2-tYH8X4Zeh-0.en.vtt" srclang="en"/>
+         <track default="false" kind="subtitles" label="BR" src="14. L4 10 迭代器和生成器 V2-tYH8X4Zeh-0.pt-BR.vtt" srclang="BR"/>
+         <track default="false" kind="subtitles" label="CN" src="14. L4 10 迭代器和生成器 V2-tYH8X4Zeh-0.zh-CN.vtt" srclang="CN"/>
+        </video>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="迭代器和生成器">
+          迭代器和生成器
+         </h1>
+         <p>
+          <strong>
+           迭代器
+          </strong>
+          是每次可以返回一个对象元素的对象，例如返回一个列表。我们到目前为止使用的很多内置函数（例如 enumerate）都会返回一个迭代器。
+         </p>
+         <p>
+          <strong>
+           迭代器
+          </strong>
+          是一种表示数据流的对象。这与列表不同，列表是可迭代对象，但不是迭代器，因为它不是数据流。
+         </p>
+         <p>
+          <strong>
+           生成器
+          </strong>
+          是使用函数创建迭代器的简单方式。也可以使用
+          <strong>
+           类
+          </strong>
+          定义迭代器，更多详情请参阅
+          <a href="https://docs.python.org/3/tutorial/classes.html#iterators" target="_blank">
+           此处
+          </a>
+          。
+         </p>
+         <p>
+          下面是一个叫做
+          <code>
+           my_range
+          </code>
+          的生成器函数，它会生成一个从 0 到 (x - 1) 的数字流。
+         </p>
+         <pre><code class="python language-python">def my_range(x):
+    i = 0
+    while i &lt; x:
+        yield i
+        i += 1</code></pre>
+         <p>
+          注意，该函数使用了 yield 而不是关键字 return。这样使函数能够一次返回一个值，并且每次被调用时都从停下的位置继续。关键字 yield 是将生成器与普通函数区分开来的依据。
+         </p>
+         <p>
+          注意，因为这段代码会返回一个迭代器，因此我们可以将其转换为列表或用 for 循环遍历它，以查看其内容。例如，下面的代码：
+         </p>
+         <pre><code class="python language-python">for x in my_range(5):
+    print(x)</code></pre>
+         <p>
+          输出：
+         </p>
+         <pre><code class="txt language-txt">0
+1
+2
+3
+4</code></pre>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="15. 【选修】练习：迭代器和生成器.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('14. 【选修】迭代器和生成器')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>

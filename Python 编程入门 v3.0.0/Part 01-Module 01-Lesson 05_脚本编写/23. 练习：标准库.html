@@ -1,0 +1,830 @@
+<!-- udacimak v1.4.0 -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   练习：标准库
+  </title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/plyr.css" rel="stylesheet"/>
+  <link href="../assets/css/katex.min.css" rel="stylesheet"/>
+  <link href="../assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+  <link href="../assets/css/styles.css" rel="stylesheet"/>
+  <link href="../assets/img/udacimak.png" rel="shortcut icon" type="image/png">
+  </link>
+ </head>
+ <body>
+  <div class="wrapper">
+   <nav id="sidebar">
+    <div class="sidebar-header">
+     <h3>
+      脚本编写
+     </h3>
+    </div>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled components">
+     <li class="">
+      <a href="01. 脚本.html">
+       01. 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="02. 简介.html">
+       02. 简介
+      </a>
+     </li>
+     <li class="">
+      <a href="03. 安装 Python.html">
+       03. 安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="04. 方法 1：安装 Anaconda.html">
+       04. 方法 1：安装 Anaconda
+      </a>
+     </li>
+     <li class="">
+      <a href="05. 方法 2：安装 Python.html">
+       05. 方法 2：安装 Python
+      </a>
+     </li>
+     <li class="">
+      <a href="06. 运行 Python 脚本.html">
+       06. 运行 Python 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="07. 编程环境设置.html">
+       07. 编程环境设置
+      </a>
+     </li>
+     <li class="">
+      <a href="08. 修改 Python 脚本.html">
+       08. 修改 Python 脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="09. 在脚本中接受原始输入.html">
+       09. 在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="10. 练习：在脚本中接受原始输入.html">
+       10. 练习：在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="11. 解决方案：在脚本中接受原始输入.html">
+       11. 解决方案：在脚本中接受原始输入
+      </a>
+     </li>
+     <li class="">
+      <a href="12. 错误和异常.html">
+       12. 错误和异常
+      </a>
+     </li>
+     <li class="">
+      <a href="13. 练习：错误和异常.html">
+       13. 练习：错误和异常
+      </a>
+     </li>
+     <li class="">
+      <a href="14. 处理错误.html">
+       14. 处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="15. 练习：处理错误.html">
+       15. 练习：处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="16. 解决方案：处理错误.html">
+       16. 解决方案：处理错误
+      </a>
+     </li>
+     <li class="">
+      <a href="17. 访问错误消息.html">
+       17. 访问错误消息
+      </a>
+     </li>
+     <li class="">
+      <a href="18. 读写文件.html">
+       18. 读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="19. 练习：读写文件.html">
+       19. 练习：读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="20. 解决方案：读写文件.html">
+       20. 解决方案：读写文件
+      </a>
+     </li>
+     <li class="">
+      <a href="21. 导入本地脚本.html">
+       21. 导入本地脚本
+      </a>
+     </li>
+     <li class="">
+      <a href="22. 标准库.html">
+       22. 标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="23. 练习：标准库.html">
+       23. 练习：标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="24. 解决方案：标准库.html">
+       24. 解决方案：标准库
+      </a>
+     </li>
+     <li class="">
+      <a href="25. 导入模块技巧.html">
+       25. 导入模块技巧
+      </a>
+     </li>
+     <li class="">
+      <a href="26. 练习：导入模块技巧.html">
+       26. 练习：导入模块技巧
+      </a>
+     </li>
+     <li class="">
+      <a href="27. 第三方库.html">
+       27. 第三方库
+      </a>
+     </li>
+     <li class="">
+      <a href="28. 在解释器中进行实验.html">
+       28. 在解释器中进行实验
+      </a>
+     </li>
+     <li class="">
+      <a href="29. 在线资源.html">
+       29. 在线资源
+      </a>
+     </li>
+     <li class="">
+      <a href="30. 总结.html">
+       30. 总结
+      </a>
+     </li>
+    </ul>
+    <ul class="sidebar-list list-unstyled CTAs">
+     <li>
+      <a class="article" href="../index.html">
+       Back to Home
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div id="content">
+    <header class="container-fluild header">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <div class="align-items-middle">
+         <button class="btn btn-toggle-sidebar" id="sidebarCollapse" type="button">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
+         </button>
+         <h1 style="display: inline-block">
+          23. 练习：标准库
+         </h1>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main class="container">
+     <div class="row">
+      <div class="col-12">
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：计算指数">
+          练习：计算指数
+         </h1>
+         <p>
+          该你来导入并使用
+          <code>
+           math
+          </code>
+          模块了。使用
+          <code>
+           math
+          </code>
+          模块计算
+          <code>
+           e
+          </code>
+          的 3 次幂，然后
+          <code>
+           print
+          </code>
+          答案。
+         </p>
+         <p>
+          请参阅
+          <a href="https://docs.python.org/3.6/library/math.html?highlight=math%20module#module-math" target="_blank">
+           math 模块的文档
+          </a>
+          ，找到你需要的函数！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="534205-expquiz-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#534205-expquiz-py" id="tab-534205-expquiz-py" role="tab">
+            expquiz.py
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-534205-expquiz-py" class="tab-pane active show" id="534205-expquiz-py" role="tabpanel">
+            <pre><code></code># print e to the power of 3 using the math module</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="练习：密码生成器">
+          练习：密码生成器
+         </h1>
+         <p>
+          写一个叫做
+          <code>
+           generate_password
+          </code>
+          的函数，该函数会从提供的单词文件中随机选择三个单词，并将它们连接成一个字符串。我们已经在起始代码中提供了从文件中读取数据的代码，你需要利用这些部分构建一个密码。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h4>
+          Start Quiz:
+         </h4>
+         <div>
+          <div class="nav nav-tabs nav-fill" id="question-tabs" role="tablist">
+           <a aria-controls="534206-password_generator-py" aria-selected="true" class="nav-item nav-link active show" data-toggle="tab" href="#534206-password_generator-py" id="tab-534206-password_generator-py" role="tab">
+            password_generator.py
+           </a>
+           <a aria-controls="534206-words-txt" aria-selected="false" class="nav-item nav-link" data-toggle="tab" href="#534206-words-txt" id="tab-534206-words-txt" role="tab">
+            words.txt
+           </a>
+          </div>
+          <div class="tab-content" id="question-tab-contents" style="padding: 20px 0;">
+           <div aria-labelledby="tab-534206-password_generator-py" class="tab-pane active show" id="534206-password_generator-py" role="tabpanel">
+            <pre><code></code># Use an import statement at the top
+
+word_file = "words.txt"
+word_list = []
+
+#fill up the word_list
+with open(word_file,'r') as words:
+	for line in words:
+		# remove white space and make everything lowercase
+		word = line.strip().lower()
+		# don't include words that are too long or too short
+		if 3 &lt; len(word) &lt; 8:
+			word_list.append(word)
+
+# Add your function generate_password here
+# It should return a string consisting of three random words 
+# concatenated together without spaces
+
+
+
+# test your function
+print(generate_password())</pre>
+           </div>
+           <div aria-labelledby="tab-534206-words-txt" class="tab-pane" id="534206-words-txt" role="tabpanel">
+            <pre><code></code>Alice
+was
+beginning
+to
+get
+very
+tired
+of
+sitting
+by
+her
+sister
+bank
+having
+nothing
+Once
+twice
+she
+had
+peeped
+into
+the
+book
+her
+sister
+was
+reading
+but
+it
+had
+no
+pictures
+or
+conversations
+in
+it
+and
+what
+is
+the
+use
+of
+a
+book
+thought
+Alice
+without
+pictures
+or
+conversations</pre>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="探索标准库">
+          探索标准库
+         </h1>
+         <p>
+          在下面的练习中，请输入解决每个问题的模块名称。注意，大小写很重要！标准库中的每个模块都是全小写形式。
+          <a href="https://docs.python.org/3/library/" target="_blank">
+           你可以在此处浏览库文档
+          </a>
+          。
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          哪个模块 ？(1)
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            哪个模块可以告诉你当前时间和日期？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          哪个模块？(2)
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            哪个模块具有更改当前工作目录的方法？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          哪个模块？(3)
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            哪个模块可以将逗号分隔 (.csv) 文件中的每行数据读取到 Python 中？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          哪个模块？(4)
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            哪个模块可以帮助我们从 zip 文件中提取所有文件？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+         <p>
+          哪个模块？(5)
+         </p>
+        </h3>
+        <div>
+         <div>
+          <p>
+           <strong>
+            QUESTION:
+           </strong>
+           <p>
+            哪个模块可以显示代码的运行时间？
+           </p>
+          </p>
+          <div class="" form-group"="">
+           <label for="answer">
+            <strong>
+             ANSWER:
+            </strong>
+           </label>
+           <textarea class="form-control" id="answer"></textarea>
+          </div>
+         </div>
+         <details>
+          <summary>
+           <strong>
+            SOLUTION:
+           </strong>
+          </summary>
+          <p>
+           <i>
+            NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer
+           </i>
+          </p>
+         </details>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+       <div class="ud-atom">
+        <h3>
+        </h3>
+        <div>
+         <h1 id="我们的推荐模块">
+          我们的推荐模块
+         </h1>
+         <p>
+          Python 标准库包含大量模块！为了帮助你熟悉那些实用的模块，我们在下面筛选了一些我们推荐的 Python 标准库模块并解释为何我们喜欢使用它们！
+         </p>
+         <ul>
+          <li>
+           <a href="https://docs.python.org/3/library/csv.html" target="_blank">
+            <code>
+             csv
+            </code>
+           </a>
+           ：对于读取 csv 文件来说非常便利
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/collections.html" target="_blank">
+            <code>
+             collections
+            </code>
+           </a>
+           ：常见数据类型的实用扩展，包括
+           <code>
+            OrderedDict
+           </code>
+           、
+           <code>
+            defaultdict
+           </code>
+           和
+           <code>
+            namedtuple
+           </code>
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/random.html" target="_blank">
+            <code>
+             random
+            </code>
+           </a>
+           ：生成假随机数字，随机打乱序列并选择随机项
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/string.html" target="_blank">
+            <code>
+             string
+            </code>
+           </a>
+           ：关于字符串的更多函数。此模块还包括实用的字母集合，例如
+           <code>
+            string.digits
+           </code>
+           （包含所有字符都是有效数字的字符串）。
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/re.html" target="_blank">
+            <code>
+             re
+            </code>
+           </a>
+           ：通过正则表达式在字符串中进行模式匹配
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/math.html" target="_blank">
+            <code>
+             math
+            </code>
+           </a>
+           ：一些标准数学函数
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/os.html" target="_blank">
+            <code>
+             os
+            </code>
+           </a>
+           ：与操作系统交互
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/os.path.html" target="_blank">
+            <code>
+             os.path
+            </code>
+           </a>
+           ：
+           <code>
+            os
+           </code>
+           的子模块，用于操纵路径名称
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/sys.html" target="_blank">
+            <code>
+             sys
+            </code>
+           </a>
+           ：直接使用 Python 解释器
+          </li>
+          <li>
+           <a href="https://docs.python.org/3/library/json.html" target="_blank">
+            <code>
+             json
+            </code>
+           </a>
+           ：适用于读写 json 文件（面向网络开发）
+          </li>
+         </ul>
+         <p>
+          希望你能用上这些模块！
+         </p>
+        </div>
+       </div>
+       <div class="divider">
+       </div>
+      </div>
+      <div class="col-12">
+       <p class="text-right">
+        <a class="btn btn-outline-primary mt-4" href="24. 解决方案：标准库.html" role="button">
+         Next Concept
+        </a>
+       </p>
+      </div>
+     </div>
+    </main>
+    <footer class="footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-12">
+        <p class="text-center">
+         udacity2.0 If you need the newest courses Plase add me wechat: udacity6
+        </p>
+       </div>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script src="../assets/js/jquery-3.3.1.min.js">
+  </script>
+  <script src="../assets/js/plyr.polyfilled.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="../assets/js/katex.min.js">
+  </script>
+  <script>
+   // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('23. 练习：标准库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+ </body>
+</html>
